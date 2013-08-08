@@ -1,0 +1,72 @@
+# robots.txt for http://scootergrisen.dk
+# æøåÆØÅ UTF-8 uden BOM
+
+Sitemap: http://scootergrisen.dk/sitemap.xml
+
+User-agent: *
+
+Allow: /
+
+Disallow: /wp/
+Disallow: /nv/
+Disallow: /scooterhjemmeside/rodekassen_efterlyst.php
+Disallow: /scooterhjemmeside/download/thansenalarm_brugermanual.pdf
+Disallow: /scooterhjemmeside/download/madass_servicemanual_2.pdf
+Disallow: /scooterhjemmeside/download/02022013haynes.zip
+Disallow: /htmlgrisen/
+Disallow: /phpgrisen/
+Disallow: /htmlgrisen
+Disallow: /phpgrisen
+Disallow: /scooterhjemmeside/usenet.php
+Disallow: /scooterhjemmeside/motor_andet.php
+Disallow: /scooterhjemmeside/download/cpi_olivercity_eldiagram_cdi_generator.pdf
+Disallow: /scooterhjemmeside/tilfeldig.php
+Disallow: /scooterhjemmeside/2takt_motorolie.php
+Disallow: /scooterhjemmeside/2takt_karburator.php
+Disallow: /scooterhjemmeside/2takt_tendror.php
+Disallow: /scooterhjemmeside/motor_introduktion.php
+Disallow: /spas/
+Disallow: /scooterhjemmeside/specielt_sym.php
+Disallow: /scooterhjemmeside/specielt_2taktscootere.php
+Disallow: /scooterhjemmeside/specielt_elektriskescootere.php
+Disallow: /scooterhjemmeside/tending.php
+Disallow: /scooterhjemmeside/elektrisk.php
+Disallow: /scooterhjemmeside/motor.php
+Disallow: /scooterhjemmeside/specielt_pgo.php
+Disallow: /scooterhjemmeside/specielt_cpi.php
+Disallow: /usenet/
+Disallow: /*&start=0
+Disallow: /scooterhjemmeside/upload.php
+Disallow: /hjemmesideskolen/
+Disallow: /playwebgl/
+Disallow: /udvikleren/
+Disallow: /scooterhjemmeside/regnrad.php
+Disallow: /scooterhjemmeside/sommerrad.php
+Disallow: /scooterhjemmeside/download/fejlfinding_dansk_1.pdf
+Disallow: /scooterhjemmeside/download/fejlfinding_dansk_2.pdf
+Disallow: /scooterhjemmeside/download/fejlfinding_dansk_3.pdf
+Disallow: /scooterhjemmeside/download/fejlfinding_dansk_4.pdf
+Disallow: /scooterhjemmeside/download/fejlfinding_dansk_5.pdf
+Disallow: /scooterhjemmeside/download/fejlfinding_dansk_6.pdf
+Disallow: /scooterhjemmeside/sogningerfejlbesog.php
+Disallow: /scooterhjemmeside/statestik.php
+Disallow: /scooterhjemmeside/test.php
+Disallow: /scooterhjemmeside/download/uploadede_filer/
+Disallow: /scooterhjemmeside/skabeloner/
+Disallow: /scooterhjemmeside/skabeloner/scootergallerivideoiderbackup/
+Disallow: /scooterhjemmeside/hentfil.php
+Disallow: /scooterhjemmeside/visfil.php
+Disallow: /scooterhjemmeside/visinternetside.php
+Disallow: /test/
+Disallow: /todo.txt
+Disallow: /info.txt
+Disallow: /scooterhjemmeside/download/baotian_bt50qt_servicemanual_tysk.pdf
+Disallow: /scooterhjemmeside/download/dialog/hent/download/baotian_bt50qt_servicemanual_tysk.pdf
+Disallow: /scooterhjemmeside/ros.php
+Disallow: /scooterhjemmeside/service_fejlfinding.php
+Disallow: /scooterhjemmeside/transmission.php
+Disallow: /scooterhjemmeside/elektriskscooter_rekkevidde.php
+Disallow: /scooterhjemmeside/download/HD-Ghost-Quick-Guide-EnglishWEB.pdf
+Disallow: /scooterhjemmeside/download/dialog/hent/download/HD-Ghost-Quick-Guide-EnglishWEB.pdf
+
+Allow: /scooterhjemmeside/php/rss.php

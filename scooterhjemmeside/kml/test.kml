@@ -1,0 +1,2440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+
+<Document>
+
+   <name>Scooter/knallert-steder i Danmark</name>
+   <atom:author>
+      <atom:name>Scootergrisen</atom:name>
+   </atom:author>
+   <atom:link href="http://scootergrisen.dk/scooterhjemmeside/kml/1.php" />
+   <description><![CDATA[Butikker, værksteder, forhandlere og andre steder som kan have interesse.
+
+Da der er mange steder på kortet bliver alle stederne ikke vist samtidig. Nederst på listen kan du skifte side for at se flere steder.
+
+Kontakt mig hvis du kender et sted som skal med på kortet eller hvis du har en rettelse til stederne hvis adressen er forkert, stedet er lukket eller noget :
+
+http://scootergrisen.dk/scooterhjemmeside/kontakt.php]]></description>
+
+   <Style id="style1">
+      <IconStyle>
+         <Icon>
+            <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+         </Icon>
+      </IconStyle>
+   </Style>
+
+   <Placemark>
+      <name>Scootergården (SGNC)</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Vordingborgvej 16<br>4773 Stensved<br>http://www.sgnc.dk<br><br><br>id : 1]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,023283958435,54,995330810547,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Billigscooter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Roholmsvej 15<br>2620 Albertslund<br>http://billigscooter.dk<br><br><br>id : 2]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,359857559204,55,667247772217,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Lykke Cykler og Motor ApS</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Holbækvej 8<br>4330 Hvalsø<br>http://www.lykkecykler-motor.dk<br><br><br>id : 3]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,861996650696,55,596458435059,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scootcar</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Nyholms alle 3<br>2610 Rødovre<br>http://www.scootcar.dk<br><br><br>id : 4]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,444977760315,55,670818328857,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Køhler Knallerter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Vasevej 107<br>3460 Birkerød<br>http://www.koehler-knallerter.dk<br><br><br>id : 5]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,434975624084,55,827487945557,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Friis Jensen Biler I/S</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Holebyvej 34<br>4894 Øster Ulslev<br>http://www.friisjensenbiler.dk<br><br><br>id : 6]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,626006126404,54,696758270264,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>2 Hjuls Centeret ApS</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[<br>Nykøbing sjælland<br><br><br><br>id : 7]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,661646842957,55,929721832275,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Søborg Mc</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Generatorvej 33<br>2730 Herlev<br>http://søborgmc.dk/<br><br><br>id : 8]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,46186542511,55,729804992676,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Jesper?s Cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Søndergade 4<br>Viby Sjælland<br>http://www.jesperscykler.dk<br><br><br>id : 9]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,024305343628,55,548934936523,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>AutoCentro A/S</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Færgevej 17<br>4970 Rødby<br>http://autocentro.dk<br><br><br>id : 10]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,360202789307,54,661563873291,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Fensmark Cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[<br>Holmegaard<br><br><br><br>id : 11]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,796379089355,55,280666351318,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Mc-teknik</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[<br>Helsingør<br><br><br><br>id : 12]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,592658042908,56,034591674805,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>daxshoppen.dk</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Skalbakken 17<br>2720 Vanløse<br>http://www.daxshoppen.dk<br><br><br>id : 13]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,484697341919,55,693099975586,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scooterspeed</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[<br><br><br>Stedet er lukket<br><br>id : 14]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,451292991638,55,760349273682,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>MC-Nord Bornholm</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Store Torvegade 98<br>3700 Rønne<br>http://www.mc-nord.dk<br><br><br>id : 15]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>14,703791618347,55,110710144043,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Dans Værksted</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[<br>Frederikshavn<br><br><br><br>id : 16]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,521352767944,57,452789306641,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scooterworld</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Ole Rømers Vej 12<br>8670 Låsby<br>http://www.scooterworld.dk<br><br><br>id : 17]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,8170728683472,56,151245117188,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scooter Center</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Amager Landevej 275<br>2770 Kastrup<br><br><br><br>id : 18]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,629985809326,55,614818572998,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Kimergård Cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Torvegade 34<br>4640 Faxe<br>http://www.kimergaard.dk + http://www.speed-up.dk + http://www.hebo-racing.dk<br><br><br>id : 19]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,119411468506,55,259143829346,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>MSP Tuning Aps</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Roholmsvej 15<br>2620 Albertslund<br>http://www.msp-tuning.dk<br>Er flyttet til Baldershøj 36A 2635 Ishøj<br><br>id : 20]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,360138893127,55,667304992676,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Gerts Scooterservice (gammel adresse)</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Hovedgade 42<br>Snogebæk 3730 Nexø<br>http://www.gertsscooterservice.dk<br>Flyttet til Rønnevej 111 Nylars 3720 Åkirkeby<br><br>id : 21]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>15,112194061279,55,023788452148,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scootergården (Århus)</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Karupvej 1<br>8000 Århus C<br>http://www.scootergaarden.dk<br><br><br>id : 22]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,179905891418,56,155410766602,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scootercenter - Stenløse</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Frydensbergvej 31<br>3660 Stenløse<br>http://www.scooter-center.dk<br><br><br>id : 23]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,201441764832,55,773921966553,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>NP motor</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Rødlersvej 9<br>4733 Tappernøje<br>http://npmotor.dk<br><br><br>id : 24]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,981497764587,55,163764953613,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Århus scooter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Klostergade 74<br>8000 Århus C<br>http://www.aarhusscooter.dk<br><br><br>id : 25]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,203289031982,56,158611297607,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Speedline A/S</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[<br><br><br>Se også : http://www.speed-meet.dk<br><br>id : 26]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,9579439163208,56,052947998047,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Hjørringvej 143B<br>9900 Frederikshavn<br>http://www.thansen.dk<br><br><br>id : 27]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,508149147034,57,446346282959,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Sæbyvej 12<br>9800 Hjørring<br>http://www.thansen.dk<br><br><br>id : 28]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,012007713318,57,447601318359,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Østergade 46<br>9700 Brønderslev<br>http://www.thansen.dk<br><br><br>id : 29]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,9491939544678,57,264675140381,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Løven 5<br>9200 Aalborg<br>http://www.thansen.dk<br><br><br>id : 30]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,8723878860474,57,00146484375,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Industrivej 2<br>7700 Thisted<br>http://www.thansen.dk<br><br><br>id : 31]]></description>
+      <styleUrl>#style34</styleUrl>
+      <Point>
+         <coordinates>8,7072772979736,56,962837219238,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Vestre Boulevard 29B<br>9600 Aars<br>http://www.thansen.dk<br><br><br>id : 32]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,5023651123047,56,812362670898,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Thurøvej 17<br>9500 Hobro<br>http://www.thansen.dk<br><br><br>id : 33]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,8056297302246,56,62646484375,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Holstebrovej 76<br>7800 Skive<br>http://www.thansen.dk<br><br><br>id : 34]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,0036430358887,56,569633483887,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Skous Gade 3<br>7620 Lemvig<br>http://www.thansen.dk<br><br><br>id : 35]]></description>
+      <styleUrl>#style28</styleUrl>
+      <Point>
+         <coordinates>8,310998916626,56,551540374756,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Fælledvej 1<br>7600 Struer<br>http://www.thansen.dk<br><br><br>id : 36]]></description>
+      <styleUrl>#style33</styleUrl>
+      <Point>
+         <coordinates>8,5816850662231,56,479686737061,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Holstebrovej 81C<br>8800 Viborg<br>http://www.thansen.dk<br><br><br>id : 37]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,3654642105103,56,445457458496,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Marsvej 47<br>8960 Paderup<br>http://www.thansen.dk<br><br><br>id : 38]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,060447692871,56,428638458252,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Nyholmvej 17<br>7500 Holstebro<br>http://www.thansen.dk<br><br><br>id : 39]]></description>
+      <styleUrl>#style198</styleUrl>
+      <Point>
+         <coordinates>8,6219339370728,56,376781463623,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Rugvænget 8<br>8500 Grenaa<br>http://www.thansen.dk<br><br><br>id : 40]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,875609397888,56,395709991455,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Gåseagervej 8<br>8250 Egå<br>http://www.thansen.dk<br><br><br>id : 41]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,28050994873,56,214019775391,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Anelystparken 26<br>8381 Tilst<br>http://www.thansen.dk<br><br><br>id : 42]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,099753379822,56,182750701904,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Silkeborgvej 43<br>8000 Århus C<br>http://www.thansen.dk<br><br><br>id : 43]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,179957389832,56,156036376953,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Håndværkervej 8A<br>8600 Silkeborg<br>http://www.thansen.dk<br><br><br>id : 44]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,5378284454346,56,184436798096,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Saturnvej 4B<br>7430 Ikast<br>http://www.thansen.dk<br><br><br>id : 45]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,1443147659302,56,136749267578,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Silkeborgvej 80A<br>7400 Herning<br>http://www.thansen.dk<br><br><br>id : 46]]></description>
+      <styleUrl>#style4</styleUrl>
+      <Point>
+         <coordinates>8,9926309585571,56,133052825928,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Skaadsmosevej 10<br>6950 Ringkøbing<br>http://www.thansen.dk<br><br><br>id : 47]]></description>
+      <styleUrl>#style57</styleUrl>
+      <Point>
+         <coordinates>8,2756156921387,56,085498809814,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Jægervej 9<br>6900 Skjern<br>http://www.thansen.dk<br><br><br>id : 48]]></description>
+      <styleUrl>#style17</styleUrl>
+      <Point>
+         <coordinates>8,5144529342651,55,952545166016,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Ladegårdsbakken 16<br>8660 Skanderborg<br>http://www.thansen.dk<br><br><br>id : 49]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,9376764297485,56,047393798828,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Rådhusgade 94<br>8300 Odder<br>http://www.thansen.dk<br><br><br>id : 50]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,15242099762,55,982418060303,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Ove Jensens Alle 11A<br>8700 Horsens<br>http://www.thansen.dk<br><br><br>id : 51]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,8489637374878,55,857761383057,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Trehøjevej 14<br>7200 Grindsted<br>http://www.thansen.dk<br><br><br>id : 52]]></description>
+      <styleUrl>#style65</styleUrl>
+      <Point>
+         <coordinates>8,898699760437,55,763870239258,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Damhaven 3B<br>7100 Vejle<br>http://www.thansen.dk<br><br><br>id : 53]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,5298156738281,55,704437255859,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Toftegårdsvej 1<br>6800 Varde<br>http://www.thansen.dk<br><br><br>id : 54]]></description>
+      <styleUrl>#style118</styleUrl>
+      <Point>
+         <coordinates>8,4924192428589,55,608203887939,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Vejlevej 137<br>7000 Fredericia<br>http://www.thansen.dk<br><br><br>id : 55]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,7077922821045,55,568347930908,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Egtved Alle 3D<br>6000 Kolding<br>http://www.thansen.dk<br><br><br>id : 56]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,4611682891846,55,516120910645,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Østre Gjesingvej 23A<br>6715 Esbjerg<br>http://www.thansen.dk<br><br><br>id : 57]]></description>
+      <styleUrl>#style146</styleUrl>
+      <Point>
+         <coordinates>8,4572706222534,55,507881164551,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Bygnaf 9<br>6100 Haderslev<br>http://www.thansen.dk<br><br><br>id : 58]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,4963407516479,55,25207901001,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Kometvej 4<br>6230 Rødekro<br>http://www.thansen.dk<br><br><br>id : 59]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,3632545471191,55,0700340271,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Langebro 42<br>6200 Aabenraa<br>http://www.thansen.dk<br><br><br>id : 60]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,4163875579834,55,036296844482,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Nørremarksvej 29<br>6270 Tønder<br>http://www.thansen.dk<br><br><br>id : 61]]></description>
+      <styleUrl>#style201</styleUrl>
+      <Point>
+         <coordinates>8,8611392974854,54,946067810059,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Grundtvigs Alle 186<br>6400 Sønderborg<br>http://www.thansen.dk<br><br><br>id : 62]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,8101625442505,54,921901702881,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Sønder Ringvej 35<br>6000 Kolding<br>http://www.thansen.dk<br><br><br>id : 63]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,4771223068237,55,472736358643,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Aabro Fald 8<br>7900 Nykøbing Mors<br>http://www.thansen.dk<br><br><br>id : 64]]></description>
+      <styleUrl>#style24</styleUrl>
+      <Point>
+         <coordinates>8,8332757949829,56,790271759033,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Stensgårdvej 1<br>5500 Middelfart<br>http://www.thansen.dk<br><br><br>id : 65]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,7692108154297,55,510486602783,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Dalvænget 18<br>5610 Assens<br>http://www.thansen.dk<br><br><br>id : 66]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,9109344482422,55,259838104248,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Grønløkkevej 9<br>5000 Odense<br>http://www.thansen.dk<br><br><br>id : 67]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,366555213928,55,395278930664,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Gørtlervej 11<br>5220 Odense<br>http://www.thansen.dk<br><br><br>id : 68]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,427691459656,55,380756378174,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Vestergade 167<br>5700 Svendborg<br>http://www.thansen.dk<br><br><br>id : 69]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,589283943176,55,064693450928,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Frisengårdsvej 7<br>5800 Nyborg<br>http://www.thansen.dk<br><br><br>id : 70]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,791723251343,55,317371368408,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Mellemgade 18A<br>5600 Faaborg<br>http://www.thansen.dk<br><br><br>id : 71]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,242520332336,55,096824645996,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Håndværkervej 80<br>4000 Roskilde<br>http://www.thansen.dk<br><br><br>id : 72]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,123970985413,55,641902923584,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Banegårdsvej 23<br>2600 Glostrup<br>http://www.thansen.dk<br><br><br>id : 73]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,401159286499,55,663959503174,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Artillerivej 151<br>2300 København S<br>http://www.thansen.dk<br><br><br>id : 74]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,567128181458,55,653671264648,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Skovgårdsvej 23<br>3200 Helsinge<br>http://www.thansen.dk<br><br><br>id : 75]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,176074028015,56,022037506104,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Klostermosevej 123<br>3000 Helsingør<br>http://www.thansen.dk<br><br><br>id : 76]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,566583633423,56,02876663208,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Industrivej 1A<br>3300 Frederiksværk<br>http://www.thansen.dk<br><br><br>id : 77]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,006677627563,55,978652954102,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Gefionsvej 20<br>3400 Hillerød<br>http://www.thansen.dk<br><br><br>id : 78]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,268227577209,55,93238067627,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Askelundsvej 2C<br>3600 Frederikssund<br>http://www.thansen.dk<br><br><br>id : 79]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,075602531433,55,844207763672,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Rosenkæret 43<br>2860 Søborg<br>http://www.thansen.dk<br><br><br>id : 80]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,485683441162,55,738891601562,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Virkeholm 6<br>2730 Herlev<br>http://www.thansen.dk<br><br><br>id : 81]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,420601844788,55,72448348999,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Sandbækvej 3<br>2610 Rødovre<br>http://www.thansen.dk<br><br><br>id : 82]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,430987358093,55,693302154541,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Kirstinehøj 31B<br>2770 Kastrup<br>http://www.thansen.dk<br><br><br>id : 83]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,612306594849,55,616142272949,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Gammel Køge Landevej 77<br>2500 Valby<br>http://www.thansen.dk<br><br><br>id : 84]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,510814666748,55,652900695801,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Industridalen 1<br>2635 Ishøj<br>http://www.thansen.dk<br><br><br>id : 85]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,33787727356,55,620994567871,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Fabriksparken 18<br>2600 Glostrup<br>http://www.thansen.dk<br><br><br>id : 86]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,388038635254,55,684772491455,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Frejasvej 28<br>4300 Holbæk<br>http://www.thansen.dk<br><br><br>id : 87]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,672923088074,55,703845977783,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Stejlhøj 36<br>4400 Kalundborg<br>http://www.thansen.dk<br><br><br>id : 88]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,129995346069,55,678329467773,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Industrivej 4<br>4180 Sorø<br>http://www.thansen.dk<br><br><br>id : 89]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,565111160278,55,444618225098,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Industriparken 4<br>4100 Ringsted<br>http://www.thansen.dk<br><br><br>id : 90]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,792032241821,55,432594299316,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Kinavej 5<br>4200 Slagelse<br>http://www.thansen.dk<br><br><br>id : 91]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,328266143799,55,38846206665,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Theilgaards Vej 4<br>4600 Køge<br>http://www.thansen.dk<br><br><br>id : 92]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,185752868652,55,47859954834,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Grønlandsgade<br>4690 Haslev<br>http://www.thansen.dk<br><br><br>id : 93]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,938688278198,55,32922744751,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Motalavej 145<br>4220 Korsør<br>http://www.thansen.dk<br><br><br>id : 94]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,141092300415,55,349708557129,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Holsted Park 8C<br>4700 Næstved<br>http://www.thansen.dk<br><br><br>id : 95]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,779623985291,55,250328063965,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Krondrevet 1<br>4760 Vordingborg<br>http://www.thansen.dk<br><br><br>id : 96]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,894558906555,55,018547058105,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Kirunavej 3<br>4900 Nakskov<br>http://www.thansen.dk<br><br><br>id : 97]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,157940864563,54,823471069336,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Werner Larsens Vej 2A<br>4930 Maribo<br>http://www.thansen.dk<br><br><br>id : 98]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,517309188843,54,780876159668,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Kystvejen 13<br>4800 Nykøbing Falster<br>http://www.thansen.dk<br><br><br>id : 99]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,850643157959,54,758937835693,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Østre Ringvej 2<br>3700 Rønne<br>http://www.thansen.dk<br><br><br>id : 100]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>14,7300157547,55,093048095703,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>T Hansen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Roskildevej 537<br>2605 Brøndby<br>http://www.thansen.dk<br><br><br>id : 101]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,421094894409,55,667701721191,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Skyteam Danmark</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Thinggyden 2<br>5631 Ebberup<br>http://www.skyteam-dk.dk<br><br><br>id : 102]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,9843349456787,55,249481201172,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Fri Cykler og Have I/S</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[<br>Assens<br><br><br><br>id : 103]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,912467956543,55,259757995605,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scooterland</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[K. Christensens Vej 5<br>9200 Aalborg<br>http://www.scooterland.dk<br><br><br>id : 104]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,894829750061,57,013092041016,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Dansk Cykel &amp; Knallert Museum</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[<br><br>http://www.dckm.dk<br><br><br>id : 105]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,684678077698,55,355907440186,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Pers Cykler Odense ApS</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[<br><br><br><br><br>id : 106]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,370985984802,55,394676208496,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Dans Værksted</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[<br><br><br><br><br>id : 107]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,521352767944,57,452789306641,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Victor Cykler/ Ulrik Harring Clemmensen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[<br><br><br><br><br>id : 108]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,394816398621,55,411823272705,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>MC hjørnet</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Krakasvej 9<br>3400 Hillerød<br>http://www.mchjoernet.dk<br>Butikken er flyttet til Hillerød Gamle adresse: Roskildevej 46 2000 Frederiksberg http://www.mchjoernet.dk<br><br>id : 109]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,512727737427,55,672306060791,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scooter city</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Hillerødgade 30<br>2200 København N<br>http://www.scootercity.dk<br><br><br>id : 110]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,537139892578,55,696907043457,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scooter city</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Rugvænget 23<br>2630 Tåstrup<br>http://www.scootercity.dk<br><br><br>id : 111]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,288460731506,55,649700164795,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scooter city (lukket)</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Maglegårdsvej 7<br>4000 Roskilde<br>http://www.scootercity.dk<br><br><br>id : 112]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,078973770142,55,628421783447,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scooter city</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Falkevej 4<br>4600 Køge<br>Måske http://www.scootercity.dk ?<br><br><br>id : 113]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,180282592773,55,473262786865,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Frihjul (Rafnsson Cykler &amp; Scooter ApS)</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Røde Mellemvej 16<br>2300 København<br><br><br><br>id : 114]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,593228340149,55,652450561523,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Jupiter cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Hovedvejen 182<br>2600 Glostrup<br><br><br><br>id : 115]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,386602401733,55,665405273438,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Jupiter cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Jernbanepladsen 67<br>2800 Kongens Lyngby<br><br><br><br>id : 116]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,50072479248,55,769500732422,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Jupiter cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Amagerbrogade 197<br>2300 København S<br><br><br><br>id : 117]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,612686157227,55,650478363037,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Jupiter cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Lygten 2B<br>2400 København<br><br><br><br>id : 118]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,537914276123,55,702793121338,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Jupiter cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Tagensvej 43<br>2200 København<br>http://jupitercykler.dk<br><br><br>id : 119]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,553226470947,55,699691772461,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Jupiter cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Hvidovrevej 137<br>2650 Hvidovre<br>http://www.jupitercykler.dk<br><br><br>id : 120]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,474427223206,55,653869628906,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Jupiter cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Mørkhøjvej 225<br>2730 Herlev<br><br><br><br>id : 121]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,472453117371,55,726360321045,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Jakobs smedie</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Præstegårdsvænget 3B<br>7755 Bedsted<br>http://www.jakobssmedie.dk<br><br><br>id : 122]]></description>
+      <styleUrl>#style38</styleUrl>
+      <Point>
+         <coordinates>8,3902149200439,56,818599700928,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Vespa parts</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Langelandsvej 45<br>2000 Frederiksberg<br>http://www.vespaparts.dk + http://www.retroscooter.dk<br><br><br>id : 123]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,530925750732,55,686153411865,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Buhl Jensen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Gormsgade 14-16<br>7100 Vejle<br>http://www.buhljensen.dk<br>Har eget værksted<br><br>id : 124]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,5361967086792,55,715087890625,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Vejle cykel central</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Gormsgade 6<br>7100 Vejle<br>http://www.vejlecyklecentral.dk<br>Har eget værksted<br><br>id : 125]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,5369253158569,55,714508056641,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Lindved knallertcenter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Agersbølvej 1<br>7100 Vejle<br>http://www.lindvedknallertcenter.dk<br>Har eget værksted<br><br>id : 126]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,5791664123535,55,792953491211,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scooter gården</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Nygyde 4<br>5642 Millinge<br>http://scooter-g%C3%A5rden.dk<br><br><br>id : 127]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,204191207886,55,134243011475,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Tempo cykler &amp; knallerter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Ringstedvej 11<br>4000 Roskilde<br>http://www.tempocykler.dk<br><br><br>id : 128]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,071140289307,55,632629394531,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Touringshop.dk</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Vibeholmsvej 24<br>2605 Brøndby<br>http://www.touringshop.dk<br><br><br>id : 129]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,417510986328,55,66588973999,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Vollerup 2 hjul center</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Mommarkvej 46<br>6400 Sønderborg<br>http://www.vollerup2hjul.dk<br><br><br>id : 130]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,8615856170654,54,924156188965,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Roberts MC</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Smedevænget 34<br>6430 Nordborg<br>http://www.robertsmc.dk<br><br><br>id : 131]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,8594360351562,54,991691589355,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Dansk motor company APS</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Gammel Køge landevej 166<br>2500 valby<br>http://www.danskmotorco.dk<br>Stedet er lukket<br><br>id : 132]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,50492477417,55,647308349609,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Fri cykler Agerskov</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Hovedgaden 31<br>6534 Agerskov<br>http://www.agerskovcykler.dk<br><br><br>id : 133]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,1340484619141,55,130023956299,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Hansen scooter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Kjellerupvej 33<br>8620 Kjellerup<br>http://www.hansensmc.dk<br><br><br>id : 134]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,4244546890259,56,335178375244,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Næstved MC værksted</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Farimagsvej 18-20<br>4700 Næstved<br>http://www.naestvedmcvaerksted.dk<br><br><br>id : 135]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,764327049255,55,232704162598,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Sigurd Cordes</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Industrivej 7<br>6630 Rødding<br>http://cordes.dk<br><br><br>id : 136]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,0505075454712,55,374061584473,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>DTN scooter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Sankt Jørgensbjerg 46<br>4400 Kalundborg<br>http://www.dtn-scooter.dk<br><br><br>id : 137]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,102023124695,55,680728912354,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Køge MC og båd center</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Falkevej 38<br>4600 Køge<br>http://www.mc-center.dk<br><br><br>id : 138]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,169986724854,55,473304748535,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Kværndrup cykel og knallert forretning</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Nyborgvej 1<br>5772 Kværndrup<br><br><br><br>id : 139]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,524912834167,55,17866897583,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Enghave motor</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Enghavevej 16<br>1674 København V<br>http://www.enghavemotor.dk<br><br><br>id : 140]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,545638084412,55,67008972168,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Nordbornholms cykelforretning</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Pilegade 1<br>3770 Allinge<br>http://www.nordbornholmscykelforretning.dk<br><br><br>id : 141]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>14,8021068573,55,276062011719,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Bikecenter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Gaabensevej 114<br>4800 Nykøbing Falster<br>http://www.bikecenter.dk<br><br><br>id : 142]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,867348670959,54,782089233398,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Fri cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Københavnsvej 137<br>4600 Køge<br>http://www.fricykler-4600.dk<br><br><br>id : 143]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,187985420227,55,485778808594,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Fri cykler - Tårsvej Cykelbørs</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Tårsvej 57<br>4900 Nakskov<br>http://www.fricykler.dk<br><br><br>id : 144]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,125554084778,54,837516784668,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>J.L. Cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Kæpgårdsvej 7<br>4840 Nørre Alslev<br>http://www.jl-cykler.dk<br><br><br>id : 145]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,882848739624,54,898567199707,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Lykke Cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Adelgade 40<br>4720 Præstø<br>http://www.lykkecykler.dk<br><br><br>id : 146]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,040549278259,55,121509552002,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>BikX</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Snedkervænget 6<br>4700 Næstved<br>http://www.bikx.dk + http://onwheels.dk<br><br><br>id : 147]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,772431373596,55,193500518799,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Sostack</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Østergade 53<br>6230 Rødekro<br>http://sostack.dk<br><br><br>id : 148]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,3480615615845,55,070785522461,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>PP Cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Amager Centret 110<br>2300 København S<br>http://www.ppcykler.dk<br><br><br>id : 149]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,604727745056,55,662517547607,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Stjerneborg Cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Amagerbrogade 163<br>2300 København S<br>http://www.stjerneborg-cykler.dk<br>Butikken er lukket<br><br>id : 150]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,610974311829,55,654205322266,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scoot.dk</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Hvidsværmervej 119<br>2610 Rødovre<br>http://www.scoot.dk<br><br><br>id : 151]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,442716598511,55,697429656982,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Dragør Cykel &amp; Motorservice</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[A.P. Møllers Allé 7<br>2791 Dragør<br><br><br><br>id : 152]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,660676002502,55,601329803467,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scooter Hjørnet</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Søborg Hovedgade 1<br>2870 københavn<br>http://www.scooterhjoernet.dk<br><br><br>id : 153]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,524767875671,55,727638244629,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Midtsjællands knallertservice</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Pedersborg Torv 8<br>4180 Sorø<br>http://www.knallertservice.dk<br><br><br>id : 154]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,5580701828,55,452995300293,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Cykelsmeden</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Hovedgaden 14<br>4571 Grevinge<br><br><br><br>id : 155]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,551201820374,55,799587249756,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Midtfyns cykel og knallertforretning</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Østre Ringvej 26<br>5750 Ringe<br><br><br><br>id : 156]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,48360824585,55,237682342529,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Fjellerup cykel og knallertfforretning</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Kløvmosevej 9<br>5856 Ryslinge<br><br><br><br>id : 157]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,56386756897,55,235134124756,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Hemme cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Storegade 36<br>6700 Esbjerg<br>http://www.hemmecykler.dk<br><br><br>id : 158]]></description>
+      <styleUrl>#style121</styleUrl>
+      <Point>
+         <coordinates>8,4674263000488,55,47163772583,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Videbæk scooter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Søndergade 10<br>6920 Videbæk<br><br><br><br>id : 159]]></description>
+      <styleUrl>#style199</styleUrl>
+      <Point>
+         <coordinates>8,6316242218018,56,090381622314,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Børkop cykelforretning</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Vestergade 17<br>7080 Børkop<br>http://www.boerkopcykler.dk<br><br><br>id : 160]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,6468677520752,55,643516540527,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Cykel &amp; autobørsen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Søndermarken 3<br>7361 Ejstrupholm<br>http://www.cykelogautoboersen.dk<br><br><br>id : 161]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,2974586486816,55,982089996338,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Skovs cykler og knallerter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Bredgade 63<br>7400 Herning<br>http://www.skovs-cykler.dk<br><br><br>id : 162]]></description>
+      <styleUrl>#style182</styleUrl>
+      <Point>
+         <coordinates>8,9674367904663,56,136337280273,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Østbyens cykel &amp; knallertcenter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Østerbakken 62<br>7700 Thisted<br><br><br><br>id : 163]]></description>
+      <styleUrl>#style116</styleUrl>
+      <Point>
+         <coordinates>8,7064685821533,56,956771850586,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Cykel og scooter smeden</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Thorstedvej 62<br>7700 Thisted<br>http://www.scootersmeden.dk<br><br><br>id : 164]]></description>
+      <styleUrl>#style168</styleUrl>
+      <Point>
+         <coordinates>8,6665687561035,56,96053314209,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>J R auto &amp; scooter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Glaspustervej 1<br>7730 Hanstholm<br><br><br><br>id : 165]]></description>
+      <styleUrl>#style36</styleUrl>
+      <Point>
+         <coordinates>8,6222133636475,57,115989685059,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Hurup cykel &amp; knallertcenter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Bredgade 74-76<br>7760 Hurup Thy<br><br><br><br>id : 166]]></description>
+      <styleUrl>#style42</styleUrl>
+      <Point>
+         <coordinates>8,4242124557495,56,748294830322,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>B O cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Gasværksvej 3-7<br>7900 Nykøbing Mors<br>http://www.b-o-cykler.dk<br><br><br>id : 167]]></description>
+      <styleUrl>#style88</styleUrl>
+      <Point>
+         <coordinates>8,8525133132935,56,793479919434,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>LP Cykler &amp; Maskiner</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Nørrealle 5<br>8400 Ebeltoft<br><br><br><br>id : 168]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,681479454041,56,201194763184,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Galten Knallert &amp; Cykelværksted</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Smedeskovvej 24<br>8464 Galten<br><br><br><br>id : 169]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,909351348877,56,159015655518,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Mønsted Cykelforretning</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Bredgade 20<br>8800 Viborg<br><br><br><br>id : 170]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,1888904571533,56,445392608643,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Kjær?s Cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Halvej 2<br>8961 Allingåbro<br><br><br><br>id : 171]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,323803901672,56,464149475098,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Auning Cykelforretning</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Centervej 21C<br>8963 Auning<br><br><br><br>id : 172]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,372675895691,56,431125640869,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Sæby Scooter &amp; Cross Center</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Fallavej 4<br>9300 Sæby<br><br><br><br>id : 173]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,494824409485,57,325584411621,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Jammerbugten?s Scooter &amp; MC</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Fredensvej 2<br>9460 Brovst<br><br><br><br>id : 174]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,5238018035889,57,095985412598,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>JG Scooter &amp; Motorservice</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Ringvejen 6<br>9560 Hadsund<br><br><br><br>id : 175]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,106168746948,56,726516723633,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Cykel &amp; Scooterhuser</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Østergade 8<br>9460 Brovst<br>http://www.cykelscooterhuset.dk<br><br><br>id : 176]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,5243549346924,57,097358703613,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Mønsted cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Bredgade 20<br>8800 Viborg<br>http://www.monstedcykler.dk<br><br><br>id : 177]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,1888904571533,56,445392608643,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>RH Cross Service</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Vonsildvej 34<br>6000 Kolding<br>http://www.rhcross.dk<br><br><br>id : 178]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,4762516021729,55,456108093262,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Minimotor</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Industrivej 1<br>6000 Kolding<br>http://www.minimotor.dk<br><br><br>id : 179]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,4726362228394,55,470764160156,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Struck?s MC</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Holmevej 6<br>6240 Løgumkloster<br>http://www.struck.dk<br><br><br>id : 180]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,0392255783081,55,000045776367,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Glejbjerg Motorservice</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Boldingvej 11<br>6752 Glejbjerg<br>http://www.glejbjerg-motorservice.dk<br><br><br>id : 181]]></description>
+      <styleUrl>#style158</styleUrl>
+      <Point>
+         <coordinates>8,8125953674316,55,555103302002,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>KS Motor A/S</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Jens Grøns Vej 23<br>7100 Vejle<br>http://www.ks-motor.dk<br><br><br>id : 182]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,5704698562622,55,677211761475,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Midtjydsk MC</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Neptunvej 10<br>7430 Ikast<br>http://www.midtjydskmc.dk<br><br><br>id : 183]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,141658782959,56,13752746582,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Vesterbro Cykler &amp; Knallertcenter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Saxogade 111<br>1662 København V<br><br><br><br>id : 184]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,551671028137,55,666591644287,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Powerscooter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Gammel Køge Landevej 660<br>2660 Brøndby Strand<br>http://powerscooter.dk<br>(Nu hedder det vist cykel pitten. Ved ikke om de har noget med scootere at gøre mere)<br><br>id : 185]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,429445266724,55,618045806885,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Italian bike store</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Ålekistevej 184<br>2720 Vanløse<br>http://www.haasum.dk<br><br><br>id : 186]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,48065662384,55,693016052246,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Københavns auto</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Gammel Køge Landevej 384<br>2650 Hvidovre<br>http://www.kbh-auto.dk<br><br><br>id : 187]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,477553367615,55,626556396484,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Knallertbiksen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Håndværkerbyen 15 A<br>2670 Greve<br>http://www.knallertbiksen.dk<br><br><br>id : 188]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,29391002655,55,59056854248,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Gårde autoservice</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Svanehøjvej 19<br>6870 Ølgod<br>http://www.gaardeautoservice.dk<br><br><br>id : 189]]></description>
+      <styleUrl>#style139</styleUrl>
+      <Point>
+         <coordinates>8,6162672042847,55,763130187988,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Bikes4You</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Vestergade 54<br>5492 Vissenbjerg<br>http://www.bikes4you.dk<br><br><br>id : 190]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,120651245117,55,387641906738,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>JMC knallerter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Lavgade 2<br>6100 Haderslev<br>http://www.jmcknallerter.dk<br><br><br>id : 191]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,4880123138428,55,248626708984,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scooter-Shoppen A/S</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Høegh Guldbergs Gade 1<br>8700 Horsens<br>http://www.scooter-shoppen.dk<br><br><br>id : 192]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,8550691604614,55,859321594238,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scooter-Shoppen A/S</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Gammelgårdsvej 7<br>7130 Juelsminde<br>http://www.scooter-shoppen.dk<br><br><br>id : 193]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,9711389541626,55,711349487305,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Tarp Cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Tarp byvej 32<br>6715 Esbjerg N<br>http://www.tarpcykler.dk<br><br><br>id : 194]]></description>
+      <styleUrl>#style90</styleUrl>
+      <Point>
+         <coordinates>8,4586248397827,55,527183532715,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>West import</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Ormhøjgårdvej 1<br>8700 Horsens<br>http://www.west-import.dk<br><br><br>id : 195]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,8358631134033,55,843589782715,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Køge Autocenter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Københavnsvej 245<br>4600 Køge<br>http://www.koge-autocenter.dk<br><br><br>id : 196]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,198719024658,55,504104614258,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Vordingborg mc center</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Algade 7<br>4760 Vordingborg<br>http://www.vomc.dk<br><br><br>id : 197]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,902344703674,55,012760162354,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Vi Cykler (tidligere Kaj pryds)</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Bygaden 74<br>5953 Tranekær<br>http://www.kajpryds.dk<br>Butikken er solgt og har skiftet navn til Vi Cykler<br><br>id : 198]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,802903175354,54,960525512695,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Bro cykel og knallertforretning</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Møllesøvej 6<br>5970 Ærøskøbing<br><br><br><br>id : 199]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,419961929321,54,838878631592,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Thy scooter lager</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Hvarregårdsvej 1<br>7700 Thisted<br>http://www.scooterbutikken.dk<br><br><br>id : 200]]></description>
+      <styleUrl>#style131</styleUrl>
+      <Point>
+         <coordinates>8,6340465545654,56,99955368042,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Jarvis cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Vesterø Havnegade 29<br>9940 Læsø<br>http://www.jarvis-laesoe.dk<br>Jeg er ikke sikker på dette sted overhovedet har noget med scootere at gøre men der er muligvis scooter udlejning.<br><br>id : 201]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,923600196838,57,291526794434,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Cykel service</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Venusvej 4<br>7000 Fredericia<br>http://www.cykelservice.dk<br><br><br>id : 202]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,7226829528809,55,567604064941,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Sigma Mc</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Balstrupvej 92<br>4100 Ringsted<br>http://sigma-mc.dk<br><br><br>id : 203]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,812962532043,55,434940338135,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Hilmars cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Adelgade 51<br>4880 Nysted<br>http://www.hilmars-audio.dk<br><br><br>id : 204]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,728924751282,54,666660308838,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>MC hjørnet</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Krakasvej 9<br>3400 Hillerød<br>http://www.mchjoernet.dk<br><br><br>id : 205]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,26371383667,55,930130004883,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Ringsted motor</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Roskildevej 236<br>4100 Ringsted<br>http://www.ringsted-motor.com<br><br><br>id : 206]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,807490348816,55,4641456604,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>?</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Hovedgaden 22<br>4270 Høng<br><br><br><br>id : 207]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,288071632385,55,5090675354,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>?</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Adelers Alle 2<br>4540 Fårevejle<br><br><br><br>id : 208]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,439887046814,55,803188323975,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>?</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Tårnborgvej 2<br>4220 Korsør<br><br><br><br>id : 209]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,142020225525,55,332233428955,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>El-drive 1 ?</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Vestergade 14C<br>4850 Stubbekøbing<br>http://www.el-drive.dk<br>Butikken er lukket<br><br>id : 210]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,040755271912,54,89049911499,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>El-drive 2 ?</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Vestergade 15A<br>4230 Skælskør<br><br><br><br>id : 211]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,289401054382,55,254104614258,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Cykelbixen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Nykøbingvej 64<br>4840 Nørre Alslev<br>http://www.cykelbixen.dk<br><br><br>id : 212]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,858609199524,54,885864257812,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Racing Shop</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Agtrupvej 45<br>6000 Kolding<br>http://www.racingshop.dk<br><br><br>id : 213]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,4740562438965,55,483211517334,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Storm cykler</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Kochsgade 51<br>5000 Odense C<br>http://stormcykler.dk<br><br><br>id : 214]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,402763366699,55,404781341553,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Kurt?s scootere &amp; knallerter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Bernstorffsvej 2<br>5000 Odense<br>http://www.kurtscooter.dk<br><br><br>id : 215]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,396923065186,55,389873504639,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Bruun-Larsen &amp; søn</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Vesterbro 29-31<br>5000 Odense C<br>http://www.bruun-larsen.dk<br><br><br>id : 216]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,377243995667,55,393817901611,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Heines MC</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Stubbekøbingvej 44<br>4800 Nykøbing Falster<br>http://www.heines-mc.dk<br><br><br>id : 217]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,870013237,54,776035308838,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Cymo Centret ApS</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Banegårdsvej 3-5<br>9500 Hobro<br>http://www.cymo-centret.dk<br><br><br>id : 218]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,7924966812134,56,64302444458,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Hellested cykelforretning</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Bygaden 48<br>Hellested 4652 Hårlev<br>http://www.hellestedcykler.dk<br><br><br>id : 219]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,251620292664,55,329532623291,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>midtfyns mc- og autoreparation A/S</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Erhvervsvangen 6<br>5792 Årslev<br>http://www.midtfyns-mc.dk<br><br><br>id : 220]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,465635299683,55,305805206299,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Den gamle smedie</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Smedegade 36<br>8305 Samsø<br>http://www.dengamlesmedie.webbyen.dk<br><br><br>id : 221]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,595184326172,55,83113861084,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Claus May motorcykel center</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Møllebakken 18<br>5690 Tommerup<br>http://www.clausmaymc.dk<br><br><br>id : 222]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,20304775238,55,324184417725,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>MSP Tuning Aps</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Roskildevej 342 Kld<br>Taastrup<br>http://www.msp-tuning.dk<br>Er flyttet til Baldershøj 36A 2635 Ishøj<br><br>id : 223]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,303941726685,55,65843963623,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>MSP Tuning Aps</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Baldershøj 36A<br>2635 Ishøj<br>http://www.msp-tuning.dk<br><br><br>id : 224]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,316610336304,55,615940093994,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Cykel pedersen</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Brogade 31<br>5700 Svendborg<br>http://www.cykelpedersen.dk<br><br><br>id : 225]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,611406326294,55,05846786499,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scooter Martin (gammel adresse)</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Skovsbovej 1<br>Sdr. Longelse 5900 Rudkøbing<br>http://www.scootermartin.dk<br>Er flyttet til Spodsbjergvej 147 b 5900 Rudkøbing<br><br>id : 226]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,778304100037,54,904636383057,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scooter Martin (ny adresse)</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Spodsbjergvej 147 b<br>5900 Rudkøbing<br>http://www.scootermartin.dk<br><br><br>id : 227]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,735653877258,54,934898376465,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>BB Motor</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Håndværkervej 7<br>4652 Hårlev<br>http://www.bbmotor.dk<br><br><br>id : 228]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>12,228613853455,55,342533111572,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>RacingShop</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Agtrupvej 45<br>6000 Kolding<br>http://www.racingshop.dk<br><br><br>id : 229]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,4740390777588,55,48323059082,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Scoot-R</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Vesterborgvej 3B<br>4953 Vesterborg<br>http://www.scoot-r.dk<br><br><br>id : 230]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,281175613403,54,84595489502,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Motorgården A/S</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Mosevangen 12<br>9230 Svenstrup<br>http://motorgaarden-mc.dk<br><br><br>id : 231]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,8572463989258,56,979194641113,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Special Motorcykler Aps</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Kaolinvej12<br>9220 Aalborg Øst<br>http://www.specialmc.dk<br><br><br>id : 232]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,9707727432251,57,055492401123,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Gerts Scooterservice</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Rønnevej 111<br>Nylars 3720 Åkirkeby<br>http://www.gertsscooterservice.dk<br><br><br>id : 233]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>14,830394744873,55,071266174316,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Hepi Service</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Rullegårdsvej 4<br>9940 Læsø<br><br><br><br>id : 234]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,990624427795,57,25830078125,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Bojes Auto &amp; Knallerter</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Mygdalvej 6<br>Asdal 9850 Hirtshals<br>http://www.bojes-auto.webbyen.dk<br><br><br>id : 235]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,029215812683,57,5491065979,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>G.S. Carlsen &amp; Søn</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Barfredsvej 82 - 84<br>9900 Frederikshavn<br>http://www.gsc-biler.dk<br><br><br>id : 236]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,531977653503,57,445053100586,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Biltema Aalborg</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Stenbukken 21<br>9200 Aalborg SV<br>http://biltema.dk<br><br><br>id : 237]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,8686876296997,56,996479034424,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Biltema Horsens</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Høegh Guldbergs Gade 15<br>Horsens<br>http://biltema.dk<br><br><br>id : 238]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,8509893417358,55,853805541992,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Biltema Rødekro</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Kometvej 6<br>Rødekro<br>http://biltema.dk<br><br><br>id : 239]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>9,3625240325928,55,069702148438,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Biltema Odense</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Risingsvej 61<br>5000 Odense C<br>http://biltema.dk<br><br><br>id : 240]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>10,422698974609,55,402446746826,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+   <Placemark>
+      <name>Biltema Næstved</name>
+      <Snippet>x</Snippet>
+      <description><![CDATA[Vestergårdsvej 28<br>4700 Næstved<br>http://biltema.dk<br><br><br>id : 241]]></description>
+      <styleUrl>#style1</styleUrl>
+      <Point>
+         <coordinates>11,790932655334,55,253963470459,0.000000</coordinates>
+      </Point>
+   </Placemark>
+
+</Document>
+
+</kml>

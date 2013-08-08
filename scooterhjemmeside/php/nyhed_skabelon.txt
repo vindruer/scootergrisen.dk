@@ -1,0 +1,70 @@
+dag den .  2013
+' => '
+'.nyhed(array(
+
+ 'nye køretøjer' => ''
+.galleriholder(array(
+    galleri('scooter', '', '', '')
+   ,galleri('scooter', '', '', '')
+   ,galleri('scooter', '', '', '')
+   ,galleri('scooter', '', '', '')
+   ,galleri('scooter', '', '', '')
+   ,galleri('scooter', '', '', '')
+   ,galleri('scooter', '', '', '')
+   ,galleri('scooter', '', '', '')
+   ,galleri('scooter', '', '', '')
+   ,galleri('scooter', '', '', '')
+   ,galleri('scooter', '', '', '')
+))
+
+,'nævneværdige ændringer og nyt indhold' => ''
+ .ahref('', '').'
+'.ahref('', '').'
+'.ahref('', '').'
+'.ahref('', '').'
+'.ahref('', '').'
+'.ahref('', '').'
+'.ahref('', '').'
+'.ahref('', '').'
+'.ahref('', '').'
+'.ahref('', '').'
+'.ahref('', '').'
+'
+
+,'nye filer' => ''
+.visfil('1', 'scooterhjemmeside/download/')
+.visfil('1', 'scooterhjemmeside/download/')
+.visfil('1', 'scooterhjemmeside/download/')
+.visfil('1', 'scooterhjemmeside/download/')
+.visfil('1', 'scooterhjemmeside/download/')
+.visfil('1', 'scooterhjemmeside/download/')
+.visfil('1', 'scooterhjemmeside/download/')
+.visfil('1', 'scooterhjemmeside/download/')
+.visfil('1', 'scooterhjemmeside/download/')
+.visfil('1', 'scooterhjemmeside/download/')
+.visfil('1', 'scooterhjemmeside/download/')
+.visfil('1', 'scooterhjemmeside/download/')
+.visfil('1', 'scooterhjemmeside/download/')
+
+,'nye links' => ''
+.galleriholder(array(
+    galleri('link', '', '', '')
+   ,galleri('link', '', '', '')
+   ,galleri('link', '', '', '')
+   ,galleri('link', '', '', '')
+   ,galleri('link', '', '', '')
+   ,galleri('link', '', '', '')
+   ,galleri('link', '', '', '')
+   ,galleri('link', '', '', '')
+   ,galleri('link', '', '', '')
+   ,galleri('link', '', '', '')
+   ,galleri('link', '', '', '')
+))
+
+,'andet' => '
+
+'
+
+))
+
+,'

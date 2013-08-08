@@ -1,0 +1,2428 @@
+@charset "UTF-8";
+
+/*           Cascadeing Style Sheet for http: //scootergrisen.dk/            */
+
+/* -------------------------------- KOMMENTAR ------------------------------ */
+
+/* -------------------------------- CSS KODE ------------------------------- */
+
+html {
+   overflow-y: scroll;
+   background: #fff;
+}
+
+body {
+   width: 100%;
+   padding: 0;
+   margin: 0 auto;
+}
+
+.colmask {
+   position: relative;  /* This fixes the IE7 overflow hidden bug and stops the layout jumping out of place */
+   clear: both;
+   float: left;
+   width: 100%;           /* width of whole page */
+   overflow: hidden;     /* This chops off any overhanging divs */  /* skyld i volumekontrol popup cutoff 1 */
+}
+
+.rightmenu .colleft{ /* .colleft står langt ude til venstre */
+   float: left;
+   width: 200%;
+   margin-left: -200px;
+   position: relative;
+   right: 100%;
+}
+
+.colleft {
+   float: left;
+   width: 200%;
+   margin-left: -200px;
+   position: relative;
+   right: 100%;
+}
+
+.rightmenu .col1wrap{ /* .col1wrap står lidt ude til venstre */
+   float: left;
+   width: 50%;
+   position: relative;
+   left: 50%;
+}
+
+.rightmenu .col1top,
+.rightmenu .col1 {
+   overflow: hidden; /* skyld i volumekontrol popup cutoff 2 */
+}
+
+.rightmenu .col1top {
+   margin-left: 205px;
+}
+
+.rightmenu .col1 {
+   margin-left: 210px;
+}
+
+.rightmenu .col2top,
+.rightmenu .col2 {
+   float: right;
+   width: 180px;
+   position: relative;
+   left: 190px;
+}
+
+.bredcentercontent {
+   width: 100%;
+}
+
+body > footer {
+   clear: both;
+   float: left;
+   width: 100%;
+}
+
+img {
+   border: 0;
+}
+
+#footertekst, #footertekst a {
+   text-align: center;
+}
+
+#loggetind_pa_den_harde_made {
+   background: orange;
+}
+
+.javascriptogflashikkeaktiv, #globaltopbesked, #sidetopbesked {
+   border: 1px solid #000;
+   padding: 10px;
+   font-family: consolas, "lucida console", monospace;
+   font-style: normal;
+}
+
+.javascriptogflashikkeaktiv, #globaltopbesked, #sidetopbesked,
+.javascriptogflashikkeaktiv a, #globaltopbesked a, #sidetopbesked a {
+   color: #FF5335;
+   background: #1D181F;
+}
+
+.javascriptogflashikkeaktiv, #globaltopbesked {
+   margin: 10px;
+}
+
+#sidetopbesked {
+   margin-bottom: 10px;
+}
+
+#globaltopbesked, #sidetopbesked {
+   text-align: center;
+}
+
+#globaltopbesked a:hover,
+#globaltopbesked a:link,
+#globaltopbesked a:visited {
+   color: #0f0;
+}
+
+#reklameholder {
+   white-space: nowrap;
+   text-align: center;
+   border: 1px solid #888;
+   padding: 4px;
+   margin: 0 10px;
+   background: #FEC631;
+}
+
+#reklameholder a {
+   color: darkblue;
+}
+
+#reklamebaggrund {
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   padding: 5px 10px;
+}
+
+#reklame {
+   display: inline;
+}
+
+#reklame img {
+   text-align: center;
+   margin: 5px auto;
+   vertical-align: bottom;
+}
+
+#reklameoverskrift {
+   white-space: nowrap;
+   padding: 0;
+   margin: 0 auto;
+   color: #000;
+   text-align: center;
+}
+
+#reklamemindreskrift {
+   margin-left: 8em;
+}
+
+#overhovedlogoholder {
+   margin: 5px 0;
+   padding-top: 0;
+   white-space: nowrap;
+}
+
+#overhovedlogoholder a {
+   color: #000;
+   text-decoration: none;
+}
+
+.smaikoner {
+   display: block;
+   float: left;
+   margin-left: 5px;
+}
+
+.smaikonerlink {
+   float: left;
+   display: block;
+   padding: 2px;
+   margin-right: 5px;
+   border: 3px solid transparent;
+}
+
+.smaikoner span,
+.smaikonerlink {
+   vertical-align: middle;
+}
+
+.smaikoneraktuelikona a {
+   border-color: #00007f; /* fallback farve når rgba ikke virker */
+   border-color: rgba(0,0,255,0.5);
+   background: #7f7fc8; /* fallback farve når rgba ikke virker */
+   background: rgba(0,0,255,0.25);
+}
+
+.smaikonerlink:hover {
+   border-color: #4B4BEA; /* fallback farve når rgba ikke virker */
+   border-color: rgba(0,0,255,0.5);
+   background: #9696D6; /* fallback farve når rgba ikke virker */
+   background: rgba(0,0,255,0.25);
+}
+
+.highslidenoget {
+   width: 187px;
+   text-align: center;
+   margin: 2px;
+   padding-top: 4px;
+   padding-bottom: 4px;
+   color: #000;
+   background: #fff;
+   border: 1px solid #fff;
+   float: left;
+}
+
+.highslidenoget a, .highslidenoget a {
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   display: block;
+}
+
+.scootermodel, .producent {
+   width: 187px;
+   text-align: center;
+   margin: 2px;
+   padding-top: 4px;
+   padding-bottom: 4px;
+   color: #000;
+   background: #fff;
+   border: 1px solid #fff;
+   float: left;
+}
+
+.producent {
+   width: 90px;
+}
+
+.scootermodel:hover, .producent:hover {
+   border-color: #000;
+}
+
+.scootermodel a, .producent a {
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   display: block;
+}
+
+.scootermodel > a img, .producent > a img {
+   margin: 0;
+   padding: 0;
+   display: block;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.scootermodel > a img {
+   width: 180px;
+   height: 160px;
+}
+
+.producent > a img {
+   width: 90px;
+   height: 67px;
+}
+
+#overskriftholder {
+   position: relative;
+   min-width: 30px;
+}
+
+.overskriftfordatacenter {
+   text-decoration: none;
+   color: #000;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   padding-bottom: 10px;
+   margin: 0;
+   font-weight: bold;
+}
+
+.sidelinkikonholder {
+   float: left;
+   clear: both;
+}
+
+.sidelinkikon {
+   float: left;
+   padding-top: 3px; /* lav lidt plads så ikon og tekst står midt ud for hinanden */
+}
+
+.counterosv {
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+.chartcounter img {
+   text-align: center;
+   vertical-align: bottom;
+   margin: 5px;
+
+   margin: 0 5px 5px 5px;
+   vertical-align: top;
+/*
+   -o-transition: all 0.5s ease-in-out;
+   -webkit-transition: all 0.5s ease-in-out;
+   transition: all 0.5s ease-in-out;
+   -o-transform-origin: right bottom;
+   -webkit-transform-origin: right bottom;
+   transform-origin: right bottom;
+*/
+}
+/*
+.chartcounter img:hover {
+   -o-transform: scale(2);
+   -webkit-transform: scale(2);
+   -ms-transform: scale(2);
+   transform: scale(2);
+}
+*/
+.uniholder {
+   width: 180px;
+   overflow: hidden;
+}
+
+.uniindhold {
+   padding-left: 5px;
+   padding-right: 5px;
+   padding-bottom: 5px;
+   background: white;
+}
+
+.uniindhold, .lillelink a {
+   font-family: verdana, sans-serif;
+   color: #000;
+   overflow: hidden;
+}
+
+.unioverskrift {
+   border-bottom: 0 solid #aaa;
+   color: #000;
+   padding: 5px;
+   font-family: verdana, sans-serif;
+   font-weight: bold;
+   text-align: center;
+}
+
+.lillelink {
+   overflow: hidden;
+}
+
+.lillelink a {
+   text-decoration: none;
+   text-overflow: ellipsis;
+   display: block;
+   padding: 2px;
+}
+
+.lillelink a:focus {
+   color: #fff;
+   border: 0 solid #000;
+   background: #888;
+}
+
+.lillelink a:hover {
+   background: #929BB1;
+   color: white;
+}
+
+.lillelink, .sidelinkikon {
+   margin-top: 0;
+}
+
+.afsnit_overskrift {
+   color: #333;
+   font-family: palatino, "big caslon medium", corbel, serif;
+   margin-left: 10px;
+   letter-spacing: 0.1em;
+   border-bottom: 2px dotted #aaa;
+}
+
+.afsnit_data {
+   margin: 30px 0 30px 30px;
+}
+
+.fillisteholder {
+   margin: auto;
+}
+
+.filholder {
+   margin: 0 auto;
+   text-align: center;
+   overflow: hidden;
+   min-width: 450px;
+}
+
+.filholdersub {
+   border: 1px solid transparent;
+   padding: 2px;
+   font-family: consolas, "lucida console", monospace;
+}
+
+.filholder a {
+   text-decoration: none;
+}
+
+div > .filholder:nth-of-type(2n) {
+   /*background: #f8f8f8;*/
+   background: rgba(255, 255, 255, 0.2);
+}
+
+div > .filholder:nth-of-type(2n+1) {
+   /*background: #e8eae9;*/
+   background: rgba(255, 255, 255, 0.1);
+}
+
+.filholdersub a {
+   display: block;
+}
+
+.filholdersub:hover {
+   /*border: 1px solid #bbb;*/
+   border: 1px solid rgba(255, 255, 255, 0.4);
+   /*background: #ddd;*/
+   background: rgba(255, 255, 255, 0.3);
+}
+
+.manualholder {
+   float: left;
+}
+
+.filhojreholder {
+   float: right;
+}
+
+.upload_ikonholder {
+   text-align: center;
+   float: left;
+   padding-left: 7px;
+   padding-right: 7px;
+}
+
+.abngemdialogikonholder {
+   display: block;
+   float: right;
+   width: 30px;
+}
+
+.upload_ikon {
+   text-align: center;
+   display: block;
+}
+
+.upload_filnavnholder {
+/*   display: inline;*/
+   float: left;
+}
+
+.upload_filnavn {
+   text-align: left;
+   display: block;
+   overflow: hidden;
+}
+
+.upload_brugermanual, .upload_servicemanual, .upload_eldiagram, .upload_reservedele {
+   text-align: center;
+   width: 20px;
+   display: block;
+}
+
+.upload_brugermanualfarve, .upload_servicemanualfarve, .upload_eldiagramfarve, .upload_reservedelefarve {
+   font-weight: bold;
+}
+
+.upload_brugermanualfarve {
+   color: #00A600;
+}
+
+.upload_servicemanualfarve {
+   color: #F80202;
+}
+
+.upload_eldiagramfarve {
+   color: #D39840;
+}
+
+.upload_reservedelefarve {
+   color: #4B84FF;
+}
+
+.upload_filstorrelseholder {
+   float: left;
+}
+
+.upload_filstorrelse {
+   display: block;
+   text-align: right;
+   width: 95px;
+   overflow: hidden;
+   white-space: nowrap;
+   padding-right: 5px;
+   float: left;
+}
+
+#opdaterlink {
+   border-right: 0;
+   margin: 0;
+   padding: 10px;
+   bottom: 0;
+   left: 0;
+   position: fixed;
+   z-index: 20;
+   white-space: nowrap;
+}
+
+#opdaterlink img {
+   width: 27px;
+   height: 27px;
+}
+
+#gatiltoplink {
+   border-right: 0;
+   margin: 0;
+   padding: 10px;
+   bottom: 0;
+   right: 0;
+   position: fixed;
+   z-index: 20;
+   white-space: nowrap;
+}
+
+#gatiltoplink img {
+   width: 27px;
+   height: 27px;
+}
+
+#gatilfejllink {
+   border-right: 0;
+   margin: 0;
+   padding: 3px;
+   top: 20px;
+   right: 200px;
+   position: fixed;
+   z-index: 20;
+   white-space: nowrap;
+}
+
+#gatilfejllink img {
+   width: 27px;
+   height: 27px;
+}
+
+.flash {
+   padding: 0;
+   margin: 0;
+   border: 0 solid #000;
+}
+
+.visdelflash {
+   display: block;
+   text-align: center;
+   margin: 20px auto;
+}
+
+.visdelflashoverskrift {
+   display: block;
+   text-align: center;
+   margin: 20px auto;
+}
+
+.sideoverskriftholder {
+   font-family: palatino, "big caslon medium", corbel, serif;
+   margin: 0 10px 10px 10px;
+   padding: 10px;
+   text-decoration: none;
+   color: white;
+   position: relative;
+   text-shadow: 1px 1px 1px #7c7c7c; /* fallback farve når rgba ikke virker */
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.sideoverskriftlogo {
+   float: left;
+   margin-right: 10px;
+   perspective: 150px;
+   -o-perspective: 150px;
+   -webkit-perspective: 150px;
+}
+
+.sideoverskriftlogobillede {
+   display: block;
+   -webkit-transform: rotatex(-15deg) rotatey(15deg);
+   -ms-transform: rotatex(-15deg) rotatey(15deg);
+   -o-transform: rotatex(-15deg) rotatey(15deg);
+   transform: rotatex(-15deg) rotatey(15deg);
+   box-shadow: -5px 5px 3px -5px rgba(0, 255, 255, 0.5), 5px -5px 3px -5px rgba(255, 255, 0, 0.5);
+}
+
+.overskrifttitlemetadescriptionholder {
+   margin-left: 84px; /* bredden på billedet */
+}
+
+.title {
+   text-overflow: ellipsis;
+   overflow: hidden;
+   color: #202020;
+   color: #dddddd;
+   margin: 0;
+   padding: 0;
+   font-weight: bold;
+   font-family: palatino, "big caslon medium", corbel, serif; /* for at fonten skal se rigtig ud i forum */
+}
+
+.metadescription {
+   text-overflow: ellipsis;
+   overflow: hidden;
+   color: #202020;
+   color: #dddddd;
+   margin: 0;
+   padding: 0;
+   margin-top: 5px;
+   font-weight: normal;
+   font-family: palatino, "big caslon medium", corbel, serif; /* for at fonten skal se rigtig ud i forum */
+}
+
+.sideindholddel, .sideindholddeludenoverskrift {
+   font-family: verdana, sans-serif;
+   padding: 0 10px 1px;
+   clear: both;
+}
+
+.sideindholddel {
+   padding-bottom: 10px;
+   margin-bottom: 10px;
+   background: #fff;
+}
+
+.sideindholddeludenoverskrift {
+   padding: 0;
+   margin-bottom: 10px;
+}
+
+.delbilled {
+   display: block;
+   text-align: center;
+   margin: 20px auto;
+}
+
+.delbilled img {
+   vertical-align: bottom;
+}
+
+#aktuelside, #aktuelside a, #aktuelside a:visited, #aktuelside a:active, #aktuelside a:hover {
+   color: #fff;
+   background: #000;
+}
+
+.fejlbeskedholder {
+   color: #000;
+   margin: 10px;
+   overflow: hidden;
+   font-family: consolas, fixed;
+}
+
+.fejlbeskedoverskrift {
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   letter-spacing: 2px;
+   background: #d00;
+   color: #fff;
+   font-weight: bold;
+   border: 1px solid #aaa;
+   padding: 3px;
+   text-align: center;
+}
+
+.fejlbesked {
+   border: 1px solid #aaa;
+   background: #444;
+   color: #fff;
+   padding: 3px;
+}
+
+.ikon16x16 {
+   vertical-align: middle;
+   display: inline;
+}
+
+#orphussendrettelse {
+   margin: 10px;
+   padding: 10px;
+   background: #D4D0C8;
+   border: 1px solid #000;
+}
+
+.lidtpladslodret {
+   display: block;
+   height: 10px;
+   clear: both;
+}
+
+.megetlidtpladslodret {
+   display: block;
+   height: 5px;
+   clear: both;
+}
+
+.lidtpladsvandret {
+   display: inline;
+   margin-left: 10px;
+}
+
+.noscript {
+   background: red;
+   color: #fff;
+   border: 1px solid #000;
+   display: none;
+}
+
+.clearnul {
+   clear: both;
+   height: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+.konholder {
+   border: 0 solid #000;
+}
+
+.kondeloverskrift {
+   color: #fff;
+   background: #aaa;
+   font-weight: bold;
+   padding: 4px;
+}
+
+.kona, .konb, .konc, .kond, .kone {
+   display: inline;
+}
+
+.kona {
+   width: 150px;
+   float: left;
+   font-weight: bold;
+}
+
+.konb {
+   width: 30px;
+   float: left;
+   text-align: center;
+}
+
+.konc {
+   width: 100px;
+   float: left;
+}
+
+.kond {
+   width: 50px;
+   float: left;
+   text-align: center;
+}
+
+.kone {
+   width: 180px;
+   float: left;
+}
+
+.fonttal {
+   font-family: consolas, monospace;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+.redigerholder {
+   text-align: center;
+}
+/*
+.redigertextarea {
+   font-family: consolas, monospace;
+   margin: 0;
+   padding: 0;
+   white-space: pre;
+   overflow-x: scroll;
+   overflow-y: scroll;
+   border: 10px dotted red;
+}
+
+.optionfarvea {
+   background: #fdf;
+}
+
+.optionfarveb {
+   background: #dff;
+}
+
+.optionfarvec {
+   background: #ffd;
+}
+*/
+.kodeord_bogstav {
+   width: 2em;
+   height: 2em;
+   border: 1px solid #000;
+   margin: 2px;
+   vertical-align: bottom; /* retter pixels margin fejl i safari og firefox */
+}
+
+.sogetekst {
+   width: 110px;
+}
+
+form {
+   margin: 0;
+   padding: 0;
+}
+
+.formholder {
+   width: 698px;
+   margin: 10px auto;
+   padding: 5px;
+   color: #000;
+}
+
+.formholder fieldset {
+   margin: 5px;
+   padding: 5px;
+   border: 1px solid #aaa;
+   padding-left: 10px;
+   box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2), inset -2px 0 2px rgba(255, 255, 255, 0.4), inset 0 -2px 2px rgba(255, 255, 255, 0.4), inset 2px 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.formholder legend {
+   padding: 0 5px 5px 5px;
+   font-weight: bold;
+   color: #444;
+/*   text-shadow: 1px 1px 1px #7c7c7c; /* fallback farve når rgba ikke virker */
+/*   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);*/
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   border-top: 1px solid #aaa;
+   border-left: 1px solid #aaa;
+   border-right: 1px solid #aaa;
+   box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.7);
+}
+
+.formholder fieldset, .formholder legend {
+   background: #ddd;
+}
+
+.formoverskrift {
+   padding-top: 10px;
+   padding-bottom: 0;
+   white-space: nowrap;
+   margin-bottom: 20px;
+   text-align: center;
+   font-weight: bold;
+}
+
+.labelholderleft, .labelholderright {
+   width: 300px;
+   float: left;
+   margin-top: 3px;
+   margin-right: 5px;
+   clear: both;
+}
+
+.labelholderleft {
+   text-align: left;
+}
+
+.labelholderright {
+   text-align: right;
+}
+
+.inputtext {
+   color: #036;
+   font-family: consolas, "lucida console", monospace;
+   margin: 0;
+   padding: 5px;
+   border: 1px solid #999;
+}
+
+.inputknap {
+   font-family: consolas, "lucida console", monospace;
+   margin: 0;
+   padding: 2px;
+   overflow: visible;
+}
+
+.inputradio {
+   color: #036;
+   font-family: consolas, "lucida console", monospace;
+   margin: 0;
+   padding: 2px;
+   width: 16px;
+   height: 16px;
+   vertical-align: middle;
+}
+
+.inputtextarea {
+   font-family: consolas, "lucida console", monospace;
+   color: #036;
+   margin: 0;
+   padding: 5px;
+   overflow: visible;
+   border: 1px solid #999;
+}
+
+.inputtext, .inputtextarea {
+   background: #fff url(../billeder/ikoner/inputbaggrund.png) repeat-x left top;
+}
+
+.inputselect {
+   background: #fff;
+   color: #036;
+   font-family: consolas, "lucida console", monospace;
+   margin: 0;
+   padding: 2px;
+   border: 1px solid #999;
+}
+
+.inputselect option {
+   background: #fff;
+   color: #036;
+   font-family: consolas, "lucida console", monospace;
+}
+
+.inputimage {
+   color: #036;
+   font-family: consolas, "lucida console", monospace;
+   margin: 0;
+   padding: 0;
+   vertical-align: middle; /* fix - ellers hopper billedet lidt op*/
+}
+
+.gemknap {
+   background: red;
+   border-color: red;
+   font-weight: bold;
+   color: #fff;
+}
+
+.inputtext,
+.inputknap,
+.inputradio,
+.inputtextarea,
+.inputselect,
+.inputselect option,
+.gemknap {
+   font-size: small;
+}
+
+.inputtext:focus,
+.inputknap:focus,
+.inputradio:focus,
+.inputtextarea:focus,
+.inputselect:focus,
+.inputselect option:focus,
+.gemknap:focus {
+   border-color: #000;
+}
+
+#underholdningholder {
+   width: 711px;
+   margin: 0 auto;
+}
+
+#underholdningmenuholder {
+   margin-bottom: 5px;
+}
+
+#underholdningpilvenstre a {
+   float: left;
+   background: url(../billeder/ikoner/pilvenstre3.png) no-repeat top left;
+   width: 33px;
+   height: 37px;
+}
+
+#underholdningpilvenstre a:hover {
+   background-position: -33px 0;
+}
+
+#underholdningbeskrivelseholder {
+   float: left;
+   width: 645px;
+   text-align: center;
+   padding-top: 7px; /* midlertidig løsning fordi kan ikke finde ud af at centere i midten lodret */
+}
+
+#underholdningpilhojre a {
+   float: left;
+   background: url(../billeder/ikoner/pilhojre3.png) no-repeat top left;
+   width: 33px;
+   height: 37px;
+}
+
+#underholdningpilhojre a:hover {
+   background-position: -33px 0;
+}
+
+#underholdningindhold {
+   margin: auto;
+   padding: 0;
+}
+
+#underholdningindhold img {
+   text-align: center;
+   margin: 0 auto;
+   display: block;
+}
+
+.video {
+   background: #000 url(../billeder/ikoner/flashbaggrund.gif) no-repeat center center;
+   color: #fff;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+}
+
+.besogoverskrift {
+   border-bottom: 1px solid #ddd;
+   overflow: hidden;
+}
+
+.besogholder {
+   float: left;
+   overflow: hidden;
+   width: 900px;
+}
+
+.besoga {
+   float: left;
+   width: 150px;
+}
+
+.besogb {
+   float: left;
+   width: 370px;
+}
+
+.besogc {
+   float: left;
+   width: 210px;
+}
+
+.besogd {
+   float: left;
+   width: 150px;
+}
+
+.stjerne {
+   vertical-align: middle;
+   margin-right: 10px;
+}
+
+.listeholder {
+   border: 0 solid #080;
+}
+
+.listeprik {
+   background: url(../billeder/ikoner/prik_orange.png) no-repeat left center;
+   float: left;
+   padding-left: 40px;
+   margin-top: 7px;
+   margin-bottom: 7px;
+}
+
+.listetekst {
+   float: left;
+}
+
+.nogetkodenogetholder {
+   margin: 10px 0;
+}
+
+.kode {
+   border-width: 1px;
+   border-style: solid;
+   border-color: #B2B2B2 #000 #000 #B2B2B2;
+   padding: 10px;
+   margin: 1em 0;
+   overflow-x: auto;
+   overflow-y: visible;
+   color: #000;
+   background: #e1e1e1;
+}
+
+.kode, code, .attribut {
+   font-family: consolas, "dina", "dejavu sans mono", "courier new", "lucida console", verdana, sylfaen, Vrinda, monospace;
+}
+
+.kode_php {
+   color: #000;
+   background: #1B2426;
+}
+
+.kode_html {
+   color: #eee;
+   background: #1B2426;
+}
+
+.kode_plain {
+   color: #eee;
+   background: #1B2426;
+}
+
+.htmlkodehighlight_tag {
+   color: #37A8ED;
+}
+
+.htmlkodehighlight_attribut {
+   color: #E5C138;
+}
+
+.attribut {
+   color: #D0681B;
+}
+
+.tag {
+   color: #1684E2;
+}
+
+.htmlkodehighlight_value {
+   color: #80FF80;
+}
+
+.markeralt {
+   margin-right: 0;
+   margin-bottom: 5px;
+   float: right;
+}
+
+.nowrap {
+   white-space: nowrap;
+}
+
+.outputb {
+   background: #E1E1E1;
+   color: #000;
+}
+
+.midt {
+   border-bottom: 2px solid #000;
+   background: #ccc;
+   color: #000;
+   white-space: nowrap;
+   margin-bottom: 10px;
+}
+
+.midtbrowser {
+   background: #888;
+   margin-bottom: 10px;
+}
+
+.galleriholder {
+   margin-left: auto;
+   margin-right: auto;
+   clear: both;
+}
+
+.citatholder {
+   border: 1px solid #DBDBCE;
+   color: #222;
+   background: #EBEADD;
+   margin-top: 1em;
+}
+
+.citat {
+   margin-left: 6px;
+   margin-top: 8px;
+   padding: 10px 20px 20px 20px;
+   background: url(../billeder/ikoner/citat.png) no-repeat left top;
+}
+
+.tableholder {
+   margin: 1em auto;
+   overflow-x: auto; /* så bredde tabeller kan scrolle vandret på smalle skærme */
+   border-spacing: 0;
+}
+
+.tableholderselvetablenogetfindetnytnavn {
+   margin: 0 auto;
+   border: 5px solid #333762;
+   padding: 0;
+   border-spacing: 0;
+   border-collapse: separate;
+}
+
+.tableholder .tableoverskrift,
+.tableholder .tableoverskriftone {
+   border-bottom: 5px solid #333762;
+   background: #333762;
+   color: #eee;
+   font-weight: bold;
+}
+
+.tableholder .tableunderskrift {
+   background: #333762;
+   color: #eee;
+   font-weight: bold;
+   text-align: center;
+}
+
+.tableholder tr:nth-child(even) {
+   /*background: #f8f8f8;*/
+   background: rgba(255, 255, 255, 0.2);
+}
+
+.tableholder tr:nth-child(odd) {
+   /*background: #e8eae9;*/
+   background: rgba(255, 255, 255, 0.1);
+}
+
+.tableholder td {
+   font-family: verdana;
+   vertical-align: top;
+}
+
+.fejlstatusholder {
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.fejlstatuskode {
+   font-weight: bold;
+   margin-bottom: 5px;
+}
+
+.fejlstatustekst {
+   font-weight: bold;
+   margin-bottom: 5px;
+}
+
+.inputinline {
+   margin-left: 2px;
+   margin-right: 2px;
+}
+
+.inputblock {
+   margin-bottom: 5px;
+}
+
+.kategorilinkholder a {
+   display: block;
+   border: 1px solid transparent;
+   text-decoration: none;
+}
+
+.kategorilinkvalgt a {
+   color: #fff;
+   background: #666;
+   border: 1px solid #666;
+}
+
+.kategorilinkholder a:hover {
+   color: #fff;
+   background: #666;
+   border-color: #000;
+}
+
+.sogspecialbeskedholder {
+   border: 5px outset #000;
+   margin: 10px;
+   width: 550px;
+}
+
+.sogspecialbeskedoverskrift {
+   border-bottom: 5px dashed #eee;
+   color: #fff;
+   background: #60a0a0;
+   margin: 0;
+   padding: 5px;
+   text-align: center;
+}
+
+.sogspecialbeskedindhold {
+   padding: 10px;
+   background: #eee;
+}
+
+.musiklinkikon {
+   width: 12px;
+   height: 12px;
+   float: left;
+   padding-top: 4px; /* lav lidt plads så ikon og tekst står midt ud for hinanden */
+   margin-right: 4px;
+}
+
+.musiklinkikonb,
+.videolinkikonb {
+   width: 16px;
+   height: 16px;
+   float: left;
+}
+
+button {
+   padding: 0;
+   margin: 2px 0;
+   vertical-align: bottom;
+}
+
+button img {
+   display: block;
+}
+
+.srt {
+   background: #fff;
+   background: rgba(255, 255, 255, 0.5);
+   color: #000;
+   font-weight: bold;
+   font-family: consolas, monospace;
+   font-size: 140%;
+   padding: 10px;
+}
+
+
+
+/* dropdown menu start */
+
+.dropdownmenu {
+   position: relative;
+   z-index: 10;
+   padding-left: 10px;
+   padding-right: 10px;
+   background: #B29C85;
+   box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.4), inset -2px 0 2px rgba(0, 0, 0, 0.2), inset 0 -2px 2px rgba(0, 0, 0, 0.2), inset 2px 0 2px rgba(255, 255, 255, 0.4);
+   margin: 10px 10px 0 10px;
+   font-family: tahoma, verdana, sans-serif;
+}
+
+.dropdownmenu .sub {
+   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAJCAIAAACe+MrKAAAABnRSTlMA/wD/AP83WBt9AAAACXBIWXMAAAsSAAALEgHS3X78AAAAJ0lEQVR42mNgAIP/SADEQROFspBFkSRhoqimoBuBpgrdLKzKUUwEAMzKa5UodiyuAAAAAElFTkSuQmCC") right center no-repeat;
+   display: block;
+   cursor: pointer;
+}
+
+.dropdownmenu ul {
+   padding: 0;
+   margin: 0;
+   list-style-type: none;
+   z-index: 11; /* så dropdown kommer over eventuel underliggende ting */
+}
+
+.dropdownmenu li {
+   position: relative;
+   float: left;
+}
+
+.dropdownmenu a {
+   display: block;
+   font-size: 11px;
+   text-decoration: none;
+   height: 31px;
+   border: 0 solid #2C5463;
+   padding-left: 10px;
+   padding-right: 10px;
+   line-height: 29px;
+   cursor: pointer;
+}
+
+.ulpunktb,
+.ulpunktc {
+   border: 1px solid #4D637A;
+   cursor: pointer;
+   background: #ddd;
+}
+
+.ulpunkta ul {
+   position: absolute;
+   top: 31px;
+   left: 0;
+   width: 160px;
+}
+
+ul.ulpunktc {
+   left: 160px;
+   top: -1px; /* eventuel border skal trækkes fra her */
+   width: 160px;
+}
+
+.ulpunktb a {
+   height: auto;
+   line-height: 1em;
+   padding: 5px 10px;
+   width: 140px;
+}
+
+.dropdownmenu li a {
+   color: #000;
+}
+
+.dropdownmenu li:hover > a {
+   color: white;
+   background: #3B424C;
+}
+
+.ulpunkta li:hover > a,
+.ulpunktb li:hover > a,
+.ulpunktc li:hover > a {
+   color: white;
+   background: #3B424C;
+}
+
+.ulpunkta > li:hover > a {
+   /* øverst menu punkt */
+   box-shadow: inset 2px 0 2px rgba(0, 0, 0, 0.5), inset 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.ulpunktb,
+.ulpunkta:hover .ulpunktc {
+   display: none;
+}
+
+.ulpunkta li:hover > ul,
+.ulpunkta li:hover .ulpunktb li:hover .ulpunktc {
+   display: block;
+}
+
+/* dropdown menu slut */
+
+
+
+.tagetafunderbillede {
+   display: block;
+   text-align: center;
+   margin-right: auto;
+   margin-left: auto;
+}
+
+.nyloginindhold {
+   position: absolute;
+   top: 6px;
+   right: 16px;
+}
+
+.nyloginindhold label {
+   margin-right: 5px;
+}
+
+.nyloginindhold input {
+   font-size: small;
+   vertical-align: middle;
+   float: right;
+   margin: 0;
+   padding: 0;
+}
+
+.nyloginindhold a {
+   color: white;
+}
+
+.loginhoverform {
+   display: none;
+   background: gray;
+   padding: 2px;
+   border: 1px solid #000;
+}
+
+.loginhover:hover .loginhoverform {
+   display: block;
+}
+
+.flag {
+   text-align: center;
+}
+
+.flag a {
+   margin-left: 2px;
+   margin-right: 2px;
+   /* der skal ikke være så meget margin (kun 2 px fordi google translate tilføjer fejlagtigt ekstra margin */
+}
+
+.adminnoget input {
+   font-family: consolas, monospace;
+   font-size: small;
+   border: 1px outset #000;
+}
+
+.fjernbetjeningknapper button {
+   margin-left: 5px;
+   margin-right: 5px;
+}
+
+.fjernbetjeningknapper button:first-child {
+   margin-left: 0;
+}
+
+.fjernbetjeningknapper button:last-child {
+   margin-right: 0;
+}
+
+.linkknapholder {
+   text-align: center;
+}
+
+.linkknapholder a {
+   width: 30%;
+   text-align: center;
+   font-weight: bold;
+   text-decoration: none;
+}
+
+.linkknap a {
+   display: block;
+   margin: 0 auto;
+   text-transform: uppercase;
+   padding: 1em;
+   line-height: 2em;
+}
+
+.linkknap a,
+.linkknap a:link,
+.linkknap a:visited {
+   color: #FFFFFF;
+}
+
+.linkknap a:hover {
+   background: #4D63fA;
+   background-image: linear-gradient(180deg, #4D63fA 0%, #3B42bC 100%);
+   text-decoration: underline;
+}
+
+.linkknapholder2 {
+   text-align: center;
+   white-space: nowrap;
+}
+
+.linkknapholder2 a {
+   text-align: center;
+   font-weight: bold;
+   background: #4D637A;
+   text-decoration: none;
+}
+
+.linkknap2 a {
+   padding: 5px;
+   text-transform: uppercase;
+   background-image: linear-gradient(180deg, #4D637A 0%, #3B424C 100%);
+}
+
+.linkknap2 a,
+.linkknap2 a:link,
+.linkknap2 a:visited {
+   color: #FFFFFF;
+}
+
+.linkknap2 a:hover {
+   background: #929BB1;
+   box-shadow: 2px 2px 1px 0 rgba(146,155,177,0.3);
+   background-image: linear-gradient(180deg, #4D63fA 0%, #3B42bC 100%);
+   text-decoration: underline;
+}
+
+
+
+.toolbar { /* Syntaxhighlighter ? i øverste højre hjørne */
+   display: none;
+}
+
+.doraemonhasspokenitholder {
+}
+
+.doraemonhasspokenitbilledholder {
+   float: left;
+}
+
+.doraemonhasspokenit {
+   background: lightgreen;
+   background: rgba(0, 0, 0, 0.3);
+   border: 1px solid #000;
+   padding: 1em;
+   margin-left: 138px; /* billede bredde + margin */
+   vertical-align: top;
+   box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.25);
+}
+
+.clearboth {
+   clear: both;
+}
+
+.borderradius5px {
+   border-radius: 5px;
+}
+
+/* ---------------------------- TEST OMRÅDE -------------------------------- */
+
+.menuikon {
+   vertical-align: middle;
+   margin-right: 5px;
+}
+
+.spotlysholderholder {
+   border: 1px solid #888;
+   padding: 4px;
+   margin: 0 10px;
+}
+
+.spotlysholderholderb {
+   margin: 0 auto;
+   width: 800px;
+}
+
+.spotlysholderholderb a,
+.spotlysholderholderb a:visited,
+.spotlysholderholderb a:active {
+   color: #222;
+}
+
+.spotlysholder {
+   text-align: center;
+   width: 180px;
+   float: left;
+   margin: 4px;
+   font-family: verdana, sans-serif;
+   padding: 5px;
+   background: #ddd;
+   text-decoration: none;
+   border: 1px solid #888;
+}
+
+.spotlysholder:hover {
+   background: #ccc;
+   text-decoration: underline;
+   border-color: black;
+}
+
+.spotlyoverskrift {
+   font-weight: bold;
+   font-family: consolas,"lucida console",consolas,monospace;
+}
+
+.spotlysbillede {
+   margin: 5px auto;
+   vertical-align: bottom;
+}
+
+.high {
+   font-family: consolas, "dina", "dejavu sans mono", "courier new", "lucida console", verdana, sylfaen, Vrinda, monospace;
+   font-weight: bold;
+}
+
+.videoafspillerholder {
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+}
+
+.videomaxholder {
+   float: left;
+   max-width: 550px;
+}
+
+.sogeform {
+   float: left;
+}
+
+.sogeform input {
+   font-family: consolas, "lucida console", monospace;
+   font-size: 11px;
+}
+
+.sogesogefelt {
+   width: 141px;
+   padding-right: 32px;
+   /*position: absolute;*/
+}
+
+.sogesogesubmit {
+   color: #036;
+   margin: 0;
+   padding: 0;
+   border: 0;
+   border-left: none;
+   border-top-left-radius: 0;
+   border-bottom-left-radius: 0;
+   width: 16px;
+   height: 16px;
+   background: url(../billeder/ikoner/forstorrelsesglas2.png) no-repeat center center;
+   /*position: relative;*/
+   left: 157px;
+   margin-left: -21px;
+   vertical-align: middle;
+}
+
+.logudknap {
+   width: 16px;
+   height: 16px;
+   background: url(../billeder/ikoner/logout.png) no-repeat center center;
+   margin: 2px;
+   padding: 0;
+   border-width: 0;
+   border-color: #777;
+}
+
+.logindknap {
+   width: 16px;
+   height: 16px;
+   background: url(../billeder/ikoner/login.png) no-repeat center center;
+   margin: 0;
+   padding: 0;
+   border-width: 0;
+   border-color: #555;
+}
+
+.orphusholder {
+   text-align: center;
+   margin-top: 10px;
+}
+
+.adskillerafenslags {
+   border-left: 1px dotted #888; /* fallback farve når rgba ikke virker */
+   border-left: 1px dotted rgba(0, 0, 0, 0.5);
+   margin: 0 10px;
+}
+
+.redigerbesked {
+   padding: 10px;
+   text-align: left;
+}
+
+.fejlbeskedfrafunktion {
+   font-weight: bold;
+   color: #aaa;
+}
+
+.displaynone {
+   display: none;
+}
+
+.stemop, .stemned {
+   display: block;
+   margin: 0 auto;
+   width: 40px;
+   height: 27px;
+}
+
+.stemop {
+   background: url(../billeder/ikoner/sort_up2.png) no-repeat top left;
+}
+
+.stemned {
+   background: url(../billeder/ikoner/sort_down2.png) no-repeat top left;
+}
+
+.stemop:hover {
+   background-position: 0 -27px;
+}
+
+.stemned:hover {
+   background-position: 0 -27px;
+}
+
+.stemop:active {
+   background-position: 0 -54px;
+}
+
+.stemned:active {
+   background-position: 0 -54px;
+}
+
+.stemtalholder {
+   margin: 5px auto;
+   text-align: center;
+   width: 40px;
+   border: 1px solid #777;
+   box-shadow: 1px 1px 1px -0.5px rgba(0, 0, 0, 0.2);
+   text-shadow: 1px 1px 0 #000, -1px -1px 0 #777, 1px -1px 0 #777, -1px 1px 0 #000;
+   font-weight: bold;
+   color: white;
+   background: #ccc;
+}
+
+.stemmeterholder {
+   margin: 5px auto;
+   border: 1px solid #777;
+}
+
+.ratemeter {
+   display: block;
+   width: 100%;
+   height: 20px;
+}
+
+.harstemt {
+   text-align: center;
+   margin: 0 auto;
+}
+
+.fontsize_xxsmall {
+   font-size: xx-small;
+}
+
+.fontsize_xsmall {
+   font-size: x-small;
+}
+
+.fontsize_small {
+   font-size: small;
+}
+
+.fontsize_medium {
+   font-size: medium;
+}
+
+.fontsize_large {
+   font-size: large;
+}
+
+.fontsize_xlarge {
+   font-size: x-large;
+}
+
+.fontsize_xxlarge {
+   font-size: xx-large;
+}
+
+.bold {
+   font-weight: bold;
+}
+
+.fontsize_smaller {
+   font-size: smaller;
+}
+
+.fontsize_larger {
+   font-size: larger;
+}
+
+.underline {
+   text-decoration: underline;
+}
+
+.baggrundlinear1 {
+   background: #445263;
+   background-image: linear-gradient(180deg, #4D637A 0%, #3B424C 100%);
+   box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.4), inset -2px 0 2px rgba(0, 0, 0, 0.2), inset 0 -2px 2px rgba(0, 0, 0, 0.2), inset 2px 0 2px rgba(255, 255, 255, 0.4);
+}
+
+.baggrundlinear2 {
+   background: #99AABA;
+   background-image: linear-gradient(180deg, #859CB2 0%, #B3BDC4 100%);
+   box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.4), inset -2px 0 2px rgba(0, 0, 0, 0.2), inset 0 -2px 2px rgba(0, 0, 0, 0.2), inset 2px 0 2px rgba(255, 255, 255, 0.4);
+}
+
+.baggrundlinearogskygge1 {
+   background: #445263;
+   background-image: linear-gradient(180deg, #4D637A 0%, #3B424C 100%);
+   box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.4), inset -2px 0 2px rgba(0, 0, 0, 0.2), inset 0 -2px 2px rgba(0, 0, 0, 0.2), inset 2px 0 2px rgba(255, 255, 255, 0.4),
+               2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+               /*2px 2px 2px 0 rgba(64,77,108,0.3);*/
+}
+
+.baggrundlinearogskygge2 {
+   background: #445263;
+   background-image: linear-gradient(180deg, #4D637A 0%, #3B424C 100%);
+   box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.4), inset -2px 0 2px rgba(0, 0, 0, 0.2), inset 0 -2px 2px rgba(0, 0, 0, 0.2), inset 2px 0 2px rgba(255, 255, 255, 0.4),
+               20px 20px 4px 0 rgba(64,77,108,0.3);
+}
+
+.bordertype1 {
+   border: 1px solid #7c7c7c; /* fallback farve når rgba ikke virker */
+   border: 1px solid rgba(0,0,0,0.5);
+}
+
+.socialmedieholder {
+   text-align: center;
+   vertical-align: top;
+   margin: 5px;
+}
+
+.thumbnailtekst {
+   color: #000;
+   text-align: center;
+   font-weight: normal;
+   white-space: nowrap;
+   overflow: hidden;
+   margin: 0;
+   padding: 0;
+}
+
+.thumbnailtekst a {
+   margin: 0;
+   color: #000;
+   padding-top: 3px;
+}
+
+.thumbnailtekst a:hover,
+.thumbnailtekst a:link,
+.thumbnailtekst a:visited {
+   color: #000;
+}
+
+.stjernenoget {
+   border: 1px solid #000;
+   background: pink;
+   color: black;
+   font-weight: bold;
+   padding: 0px 5px;
+}
+
+.tasteturknap {
+   margin: 1px 5px;
+   padding: 0 5px;
+   color: #222;
+   background: #eee;
+   border: 1px solid #000;
+}
+
+.border1pxsolidblack {
+   border: 1px solid black;
+}
+
+
+
+/* ---------------------------- BREDDE TILPASNING FOR MOBILE ENHEDER OG LIGNENDE -------------------------------- */
+
+@media
+screen and (max-device-width: 960px),
+screen and (max-width: 960px) {
+
+   .linkknap {
+      font-size: x-small;
+   }
+
+   .bordertype1 {
+      border: none;
+   }
+
+   .sideoverskriftholder {
+      margin-left: 0;
+      margin-right: 0;
+      border-radius: 0;
+      box-shadow: none;
+   }
+
+   .dropdownmenu {
+      margin: 0;
+      padding: 0;
+      border-radius: 0;
+      box-shadow: none;
+      border: none;
+      /*padding-right: 240px; /* Bredden på en menu så submenu ikke er uden for skærmen */
+   }
+
+   .holdernoget .rightmenu .col2 {
+      display: none;
+   }
+
+   body > footer {
+      /*display: none;*/
+   }
+
+   #footertekst {
+      display: none;
+   }
+
+   .title {
+      font-size: medium;
+   }
+
+   .metadescription {
+      font-size: small;
+   }
+
+   .nyloginindhold {
+      display: none;
+   }
+
+   .holdernoget .rightmenu .colleft {
+      float: left;
+      width: 100%;
+      margin-left: 0;
+      position: relative;
+      right: 0;
+   }
+
+   .holdernoget .rightmenu .col1wrap {
+      float: left;
+      width: 100%;
+      position: relative;
+      left: 0;
+   }
+
+   .holdernoget .rightmenu .col1 {
+      margin: 0 10px;
+   }
+
+   .formholder {
+      width: inherit;
+   }
+
+   .labelholderleft, .labelholderright {
+      width: auto;
+      float: inherit;
+   }
+
+   .filmliste {
+      font-size: xx-small;
+   }
+
+   .kode {
+      font-size: x-small;
+   }
+
+   .filmliste img {
+      height: 50px;
+   }
+
+   .filholdersub {
+      font-size: x-small;
+   }
+
+   audio,
+   canvas,
+   video,
+   .video,
+   .video object,
+   object,
+   #flashholder {
+      width: 100% !IMPORTANT;
+      margin: 0 !IMPORTANT;
+      padding: 0 !IMPORTANT;
+      max-width: 100% !IMPORTANT;
+   }
+
+   .delbilled img {
+      max-width: 100%;
+      height: auto !IMPORTANT; /* behold aspect ratio */
+   }
+
+   .fjernbetjeningknapper button {
+      margin-left: 1px;
+      margin-right: 1px;
+   }
+
+   .en_eller_anden_besked_overst_pa_siden {
+      margin-bottom: 10px !IMPORTANT;
+   }
+
+   .scooterbilledholder img {
+      max-width: 100%;
+      height: auto !IMPORTANT; /* behold aspect ratio */
+   }
+
+}
+
+
+
+@media
+screen and (max-device-width: 540px),
+screen and (max-width: 540px) {
+
+   .linkknapholder a {
+      width: 90%;
+   }
+
+   .sideoverskriftholder {
+      margin: 0;
+   }
+
+	.dropdownmenu li {
+		float: none;
+	}
+
+   .holdernoget .rightmenu .col1 {
+      margin: 0;
+   }
+
+   .sideoverskriftlogo {
+      display: none;
+   }
+
+   .smaikoner {
+      display: none;
+   }
+
+   .overskrifttitlemetadescriptionholder {
+      margin-left: 0;
+   }
+
+   .inputtext,
+   .inputknap,
+   .inputradio,
+   .inputtextarea,
+   .inputselect,
+   .inputselect option,
+   body .sideindholddel,
+   body .sideindholddel .tag,
+   body .sideindholddel .attribut,
+   .dropdownmenu a,
+   .linkknap a,
+   .tableholder .tag,
+   .tableholder .attribut,
+   .thumbnailtekst,
+   .sideindholddel,
+   .javascriptogflashikkeaktiv, #globaltopbesked, #sidetopbesked,
+   body > footer
+   {
+      font-size: xx-small;
+   }
+
+   .title {
+      font-size: small;
+   }
+
+   .metadescription {
+      font-size: x-small;
+   }
+
+   body .overskriftfordatacenter {
+      font-size: medium;
+   }
+
+   .sideindholddel,
+   .javascriptogflashikkeaktiv, #globaltopbesked, #sidetopbesked {
+      margin: 0;
+      border-radius: 0;
+      border: 0;
+      border-bottom: 1px dotted #7c7c7c;
+   }
+
+   .delbilled img {
+      max-width: 100%;
+      height: auto !IMPORTANT; /* behold aspect ratio */
+   }
+
+   .tableholderselvetablenogetfindetnytnavn {
+      border-width: 1px;
+      padding: 0;
+      border-radius: 0;
+      width: auto !IMPORTANT;
+   }
+
+   .tableholder img {
+      width: 16px !IMPORTANT;
+      height: 16px !IMPORTANT;
+   }
+
+   .filmliste {
+      border: 0 !IMPORTANT;
+   }
+
+   .filmliste td {
+      padding: 0 !IMPORTANT; /* highslide billede kommer til at poppe op fra midten af siden i stedet for hvor billedet er */
+      margin: 0 !IMPORTANT;
+   }
+
+   .producent {
+      width: 43px !IMPORTANT;
+   }
+
+   .producent > a img {
+      width: 43px !IMPORTANT;
+      height: auto !IMPORTANT;
+   }
+
+   .scootermodel {
+      width: 94px !IMPORTANT;
+   }
+
+   .scootermodel > a img, .highslidenoget > a img {
+      width: 90px !IMPORTANT;
+      height: 80px !IMPORTANT;
+   }
+
+   .highslidenoget {
+      width: 93px !IMPORTANT;
+   }
+
+   .filholder {
+      min-width: 100% !IMPORTANT;
+   }
+
+   #underholdningholder {
+      width: auto !IMPORTANT;
+   }
+
+   #underholdningpilvenstre a {
+      display: none; /* nødløsning */
+   }
+
+   #underholdningbeskrivelseholder {
+      width: auto !IMPORTANT;
+   }
+
+   #underholdningpilhojre a {
+      display: none; /* nødløsning */
+   }
+
+   #spasholder {
+      margin: 0 !IMPORTANT;
+   }
+
+   .lillevideothumnlink {
+      width: 71px !IMPORTANT;
+      height: 53px !IMPORTANT;
+   }
+
+   .en_eller_anden_besked_overst_pa_siden {
+      display: none;
+   }
+
+   .xcolleft {
+      width: 100px !IMPORTANT;
+   }
+
+   .xcolright {
+      margin-left: 100px !IMPORTANT;
+
+   }
+
+   .xcolunder {
+      margin-bottom: 0 !IMPORTANT;
+      border-bottom: 0px solid #aaa !IMPORTANT;
+      padding-bottom: 0 !IMPORTANT;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+   }
+
+   .xcolunder:last-child {
+      border-bottom: 1px solid #aaa !IMPORTANT;
+   }
+
+   .overskriftfordatascooter {
+      font-size: small;
+      border-top-right-radius: 0 !IMPORTANT;
+      border-top-left-radius: 0 !IMPORTANT;
+   }
+
+   body {
+      margin-bottom: 42px !IMPORTANT;
+   }
+
+}
+
+/* KUN SCOOOTERHJEMMESIDE HERUNDER ----------------------------------------------------------------------------------------------------------------------*/
+
+.fejlfinding_a {
+   border: 1px solid #000;
+   margin-bottom: 10px;
+   padding: 3px;
+   text-align: center;
+   font-weight: bold;
+   background: #ddd;
+}
+
+.fejlfinding_b {
+   border: 1px solid #000;
+   padding: 3px;
+}
+
+.fejlfinding_etogtoholder {
+   text-align: center;
+}
+
+.fejlfinding_et {
+   border: 1px solid #000;
+   width: 45%;
+   float: left;
+   background: #ddd;
+   padding: 3px;
+}
+
+.fejlfinding_to {
+   width: 45%;
+   float: right;
+   background: #ddd;
+   padding: 3px;
+   border: 1px solid #000;
+}
+
+.fejlfinding_c {
+   margin-bottom: 10px;
+   width: 45%;
+   height: 200px;
+   float: left;
+   padding: 3px;
+}
+
+.fejlfinding_d {
+   margin-bottom: 10px;
+   width: 45%;
+   float: right;
+   padding: 3px;
+}
+
+.scooterfarve {
+   color: #222;
+   float: left;
+   width: 1em;
+   height: 1em;
+   border: 1px solid #888;
+   text-align: center;
+   border-radius: 1em;
+   margin: 1px;
+}
+
+.scooterfarveefter {
+   padding-right: .5em;
+}
+
+.xcols {
+   color: #222;
+   margin: 0;
+   padding: 5px 10px 5px 20px;
+   background: #eee;
+   border-left: 1px solid #aaa;
+   border-right: 1px solid #aaa;
+}
+
+.xcols a:link, .filholder a:link, .xcols a:hover, .filholder a:hover {
+   color: #2c67bf;
+}
+
+.xcols a:visited, .filholder a:visited {
+   color: #2c67bf;
+}
+
+.xcolleft, .xcolright {
+   display: block;
+}
+
+.xcolleft {
+   float: left;
+   width: 200px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.xcolright {
+   margin-left: 200px; /* i stedet for at floate 2 <span> eller <div> kan man lave begge til display: block og floate den første og give en margin-left til den anden i samme bredde som den første */
+}
+
+.xcolunder {
+   margin-bottom: 10px;
+   border-left: 1px solid #aaa;
+   border-right: 1px solid #aaa;
+   border-bottom: 1px solid #aaa;
+   background: #eee;
+   padding-bottom: 5px;
+   border-bottom-right-radius: 5px;
+   border-bottom-left-radius: 5px;
+}
+
+.overskriftfordatascooter {
+   background: #ddd;
+   color: #444;
+   border-top: 1px solid #aaa;
+   border-left: 1px solid #aaa;
+   border-right: 1px solid #aaa;
+   border-bottom: 1px solid #aaa;
+   text-align: left;
+   padding: 3px;
+   padding-left: 10px;
+   white-space: nowrap;
+   margin: 0;
+   clear: both;
+   font-weight: bold;
+   border-top-right-radius: 5px;
+   border-top-left-radius: 5px;
+}
+
+.scooterbilledholder {
+   text-align: center;
+   margin: 0;
+   padding: 20px 0 10px;
+   clear: both;
+}
+
+.en_eller_anden_besked_overst_pa_siden {
+   margin: 10px 10px 0 10px;
+   /*color: black;*/
+}
+
+.en_eller_anden_besked_overst_pa_siden a {
+   color: black; /* for at set skal ses rigtgt ud i forum */
+   text-decoration: underline; /* for at set skal ses rigtgt ud i forum */
+}
+
+.en_eller_anden_besked_overst_pa_siden a:link {
+   color: #0000EE; /* for at set skal ses rigtgt ud i forum */
+}
+
+.en_eller_anden_besked_overst_pa_siden a:visited {
+   color: #551A8B; /* for at set skal ses rigtgt ud i forum */
+}
+
+/* KUN SCOOOTERHJEMMESIDE HEROVER ----------------------------------------------------------------------------------------------------------------------*/
+
+
+/* NYT vvvvvv ----------------------------------------------------------------------------------------------------------------------*/
+
+.menugenvej {
+   border: 1px solid #aaa;
+   padding: 2px;
+   color: #222;
+   background: #ddd;
+   white-space: nowrap;
+}
