@@ -80,7 +80,7 @@ array('220', 'http://www.youtube.com/watch?v=lqUzZGthUVU', '', 'Rock´N`Roll Cam
 array('219', 'http://www.youtube.com/watch?v=qhP9vhJdZs4', '', 'Nye regler for knallert 2013', '9'),
 array('218', 'http://www.scootergalleri.dk/vid_vis.aspx?VideoID=106161', '', 'Lidt kørsel i Nordsjælland [GOPRO 3]', '9+10'),
 array('217', 'http://www.youtube.com/watch?v=pN8_2htp2xQ', '', 'Station 2 - Knallerter i Augustenborg', '9+10+14'),
-array('216', 'http://www.youtube.com/watch?v=sc3AuW2TWq0', '', 'Politiet stopper scootergrisen', '9+10'),
+array('216', 'http://www.youtube.com/watch?v=sc3AuW2TWq0', '', 'police stops scooter for speeding', '9+10'),
 array('215', 'http://www.youtube.com/watch?v=mHELyMmBoJI', '', 'Sportsmoto + Brønderslev Cykel og Scooter', '9'),
 array('214', 'http://www.youtube.com/watch?v=pSa-DqSPuv8', '', 'VeloSolex Rally 2012', '9+14'),
 array('213', 'http://www.youtube.com/watch?v=fspSffcdN-Y', '', 'Snow + winther tire front + worn "slick" tire back = Fun', '9+10+15'),
