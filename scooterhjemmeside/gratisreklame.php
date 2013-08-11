@@ -20,7 +20,7 @@ function visreklamer(){
 
       foreach($reklamer as $reklame){
 
-         $indhold .= ahref($reklame[1], visbilled('1', 'reklamer/' . $reklame[2], 'Klik på billedet for at gå til ' . $reklame[0], false, false));
+         $indhold .= ahref($reklame[1], visbilled('1', 'reklamer/' . $reklame[2], mb_ucfirst($GLOBALS['setup']['l_gratisreklame_klikpabilledet']) . ' ' . $reklame[0], false, false));
          $indhold .= lidtplads('lodret');
          $indhold .= "\r\n";
 

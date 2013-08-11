@@ -1,8 +1,92 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
 require_once('./php/grundleggendeopsetning.php');
-require_once('./php/language/da.php');
-$setup['languageinuse'] = 'da';
+
+////////////////////////////////////
+
+if(isset($_COOKIE)){
+
+   if(count($_COOKIE) && isset($_COOKIE[$setup['cookienavn_language']])){
+
+      $setup['languageselectedbyuser'] = $_COOKIE[$setup['cookienavn_language']];
+
+   }
+
+}
+
+function detectlanguage(){
+
+   $langcode = explode(",", $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+
+   foreach($langcode as $value){
+
+      if(strpos($value, ';')){
+
+         $value = strstr($value, ';', true);
+
+      }
+
+      switch(mb_strtolower($value)){
+
+         case "da" :
+         case "da-dk" :
+            return 'da';
+            break;
+
+         case "en" :
+         case "en-uk" :
+         case "en-us" :
+            return 'en';
+            break;
+
+      }
+   
+   }
+
+   return 'da'; // standard
+
+}
+
+function velgsprog($sprog){
+
+   switch(mb_strtolower($sprog)){
+   
+      case 'da' :
+      case 'da_dk' :
+         return './php/language/da.php';
+         break;
+   
+      case 'en' :
+      case 'en_uk' :
+      case 'en_us' :
+         return './php/language/en.php';
+         break;
+   
+      default :
+         return './php/language/en.php';
+         break;
+   
+   }
+
+}
+
+if(isset($setup['languageselectedbyuser'])){
+
+   $sprogkode = $setup['languageselectedbyuser'];
+
+}else{
+
+   $sprogkode = detectlanguage();
+
+}
+
+
+$sprogfil = velgsprog($sprogkode);
+$setup['languageinuse'] = $sprogkode;
+
+require_once($sprogfil);
+
+////////////////////////////////////
 
 $setup['en_eller_anden_besked_overst_pa_siden'] = '';
 
@@ -25,7 +109,7 @@ $setup['onerrorfilnavn']         = "onerror.txt";
 $setup['sessionmappe']           = "$setup[tempfuld]/sessions";
 $setup['vinsogninger']           = "vinsogninger.txt";
 
-$setup['vissprog']               = 0;
+$setup['vissprog']               = 1;
 $setup['visreklame']             = 1;
 $setup['visspotlys']             = 1;
 $setup['counterogsocialemedier'] = 1;
@@ -40,23 +124,23 @@ $setup['googlesiteverification'] = 'JzPPj-CChB7SYIK756n4ZUdRFaRaQAJd9UNm2AuXQHc'
 $setup['msvalidate']             = '3F759ED51FA4F6FB8F2962FF0C1FD4A2';
 
 $setup['smaikoner'] = array(
-    array('gå til forummet', 'http://scootergrisen.dk/forum/', 'ikoner/ikon_forum.png', '52', '16')
-   ,array('nyheder', 'nyheder.php', 'ikoner/ikon_nyheder.png', '16', '16')
-   ,array('skriv en besked til mig som laver hjemmesiden', 'kontakt.php', 'ikoner/ikon_kontakt.png', '16', '16')
-   ,array('introduktion', 'introduktion.php', 'ikoner/ikon_introduktion.png', '16', '16')
-   ,array('kast terningen og besøg en tilfældig side på scootergrisen', 'tilfeldig.php', 'ikoner/ikon_tilfeldig.png', '16', '16')
-   ,array('download', 'download.php', 'ikoner/go_down.png', '16', '16')
-   ,array('typegodkendelser', 'typegodkendelser.php', 'ikoner/ikon_typegodkendelser.png', '16', '16')
-   ,array('teoriprøve for lille knallert', 'teoriprove.php', 'ikoner/ikon_teoriprove.png', '16', '16')
-   ,array('begrænsninger', 'begrensninger.php', 'ikoner/ikon_begrensninger.png', '16', '16')
-   ,array('galleri', 'galleri.php', 'ikoner/ikon_galleri.png', '16', '16')
-   ,array('kamera', 'kamera.php', 'ikoner/ikon_kamera.png', '16', '16')
-   ,array('VIN checker', 'vinchecker.php', 'ikoner/ikon_vinchecker.png', '38', '16')
-   ,array('links', 'links.php', 'ikoner/ikon_links.png', '16', '16')
-   ,array('steder i danmark', 'stederidanmark.php', 'ikoner/ikon_stederidanmark.png', '16', '16')
-   ,array('billeder fra gaden', 'billederfragaden.php', 'ikoner/ikon_billederfragaden.png', '16', '16')
-   // til om vinteren ,array('vinterråd', 'vinterrad.php', 'ikoner/ikon_vinterrad.png', '16', '16')
-   ,array('karburator', 'karburator.php', 'ikoner/ikon_karburator.png', '16', '16')
+    array($setup['l_smaikoner_forum'], 'http://scootergrisen.dk/forum/', 'ikoner/ikon_forum.png', '52', '16')
+   ,array($setup['l_smaikoner_nyheder'], 'nyheder.php', 'ikoner/ikon_nyheder.png', '16', '16')
+   ,array($setup['l_smaikoner_kontakt'], 'kontakt.php', 'ikoner/ikon_kontakt.png', '16', '16')
+   ,array($setup['l_smaikoner_introduktion'], 'introduktion.php', 'ikoner/ikon_introduktion.png', '16', '16')
+   ,array($setup['l_smaikoner_tilfeldig'], 'tilfeldig.php', 'ikoner/ikon_tilfeldig.png', '16', '16')
+   ,array($setup['l_smaikoner_download'], 'download.php', 'ikoner/go_down.png', '16', '16')
+   ,array($setup['l_smaikoner_typegodkendelser'], 'typegodkendelser.php', 'ikoner/ikon_typegodkendelser.png', '16', '16')
+   ,array($setup['l_smaikoner_teoriprove'], 'teoriprove.php', 'ikoner/ikon_teoriprove.png', '16', '16')
+   ,array($setup['l_smaikoner_begrensninger'], 'begrensninger.php', 'ikoner/ikon_begrensninger.png', '16', '16')
+   ,array($setup['l_smaikoner_galleri'], 'galleri.php', 'ikoner/ikon_galleri.png', '16', '16')
+   ,array($setup['l_smaikoner_kamera'], 'kamera.php', 'ikoner/ikon_kamera.png', '16', '16')
+   ,array($setup['l_smaikoner_vinchecker'], 'vinchecker.php', 'ikoner/ikon_vinchecker.png', '38', '16')
+   ,array($setup['l_smaikoner_links'], 'links.php', 'ikoner/ikon_links.png', '16', '16')
+   ,array($setup['l_smaikoner_stederidanmark'], 'stederidanmark.php', 'ikoner/ikon_stederidanmark.png', '16', '16')
+   ,array($setup['l_smaikoner_billederfragaden'], 'billederfragaden.php', 'ikoner/ikon_billederfragaden.png', '16', '16')
+   // til om vinteren ,array($setup['l_smaikoner_vinterrad'], 'vinterrad.php', 'ikoner/ikon_vinterrad.png', '16', '16')
+   ,array($setup['l_smaikoner_karburator'], 'karburator.php', 'ikoner/ikon_karburator.png', '16', '16')
 );
 
 $setup['top_random_billeder'] = array(
@@ -259,48 +343,48 @@ $setup['spotlys'] = array(
    array(
        '/scooterhjemmeside/begrensninger.php'
       ,'/scooterhjemmeside/billeder/spotlys/begrensninger.gif'
-      ,'begrænsninger'
-      ,'kan fjernes hvis du vil køre hurtigere eller længere på literen'
+      ,$setup['l_spotlys_begrensninger']
+      ,$setup['l_spotlys_begrensninger_description']
    ), array(
        '/scooterhjemmeside/teoriprove.php'
       ,'/scooterhjemmeside/billeder/spotlys/teoriprove.gif'
-      ,'prøv teoriprøven'
-      ,'for lille knallert og se hvor lidt fejl du kan få'
+      ,$setup['l_spotlys_teoriprove']
+      ,$setup['l_spotlys_teoriprove_description']
    ), array(
        '/scooterhjemmeside/karburator.php'
       ,'/scooterhjemmeside/billeder/spotlys/karburator.png'
-      ,'karburator'
-      ,'er en af de bedste sider på hele hjemmesiden, hvis ikke den bedste'
+      ,$setup['l_spotlys_karburator']
+      ,$setup['l_spotlys_karburator_description']
    ), array(
        '/scooterhjemmeside/vinchecker.php'
       ,'/scooterhjemmeside/billeder/spotlys/vinchecker.gif'
-      ,'check stelnummer'
-      ,'tager imod stelnumre på 17 cifre og giver dig tilgengæld info om scooteren (måske)'
+      ,$setup['l_spotlys_vinchecker']
+      ,$setup['l_spotlys_vinchecker_description']
 //   ), array(
 //       '/scooterhjemmeside/vinterrad.php'
 //      ,'/scooterhjemmeside/billeder/spotlys/vinterrad.png'
-//      ,'vinterråd'
-//      ,'handler om at holde varmen, fastfrosset låse, motorer der er sværre at starte og visir der dugger'
+//      ,$setup['l_spotlys_vinterrad']
+//      ,$setup['l_spotlys_vinterrad_description']
    ), array(
        '/scooterhjemmeside/lyd.php'
       ,'/scooterhjemmeside/billeder/spotlys/underholdninglyd.gif'
-      ,'lyt til musik+lyd'
-      ,'med blandt andet<br><span class="bold" style="font-family: consolas, monospace;">L Ron Harald</span><br><span class="bold" style="font-family: consolas, monospace;">Zanger Rinus</span><br>og<br><span class="bold" style="font-family: consolas, monospace;">Halløj i betalingsringen</span>'
+      ,$setup['l_spotlys_lyd']
+      ,$setup['l_spotlys_lyd_description']
    ), array(
        '/scooterhjemmeside/billederfragaden.php'
       ,'/scooterhjemmeside/billeder/spotlys/billederfragaden.gif'
-      ,'billeder fra gaden'
-      ,'er billeder jeg primært selv har taget af scootere og lidt andre køretøjer jeg har set køre rundt'
+      ,$setup['l_spotlys_billederfragaden']
+      ,$setup['l_spotlys_billederfragaden_description']
    ), array(
        '/forum/'
       ,'/scooterhjemmeside/billeder/spotlys/forum.png'
-      ,'forum'
-      ,'er stedet hvor vi skriver med hinanden om scootere/knallerter'
+      ,$setup['l_spotlys_forum']
+      ,$setup['l_spotlys_forum_description']
    ), array(
        '/scooterhjemmeside/stederidanmark.php'
       ,'/scooterhjemmeside/billeder/spotlys/stederidanmark.png'
-      ,'steder i danmark'
-      ,'er et kort hvor du kan finde butikker, værksteder og forhandlere af scootere og reservedele (nu med sorterbar tabel med alle stederne)'
+      ,$setup['l_spotlys_stederidanmark']
+      ,$setup['l_spotlys_stederidanmark_description']
    )
 );
 
@@ -312,289 +396,289 @@ $setup['menu'] = array(
 
       // billed2616 = midlertidigt billede
 
-     'hovedmenu' => array(
-       'forum'                => array($setup['domain'] . '/forum/'                          => 'her kan du snakke med andre om scootere/knallerter og alt muligt andet', 'thumbnail' => 'billed3238.jpg')
-      ,'forsiden'             => array($setup['domain']                                      => 'gå til forsiden', 'thumbnail' => 'forsiden.jpg')
-      ,'start'                => array($kort . '/' . 'start.php'                             => 'her kan du se alle menupunkterne med billeder så det er lettere at forstår hvad de forskellige sider handler om', 'thumbnail' => '.jpg')
-      ,'nyheder'              => array($kort . '/' . 'nyheder.php'                           => 'her kan du se hvad der er blevet tilføjet/ændret på hjemmesiden for nyligt', 'thumbnail' => 'billed3233.jpg')
-      ,'introduktion'         => array($kort . '/' . 'introduktion.php'                      => 'her kan du lære mere om hjemmesiden og hvordan du bruger den', 'thumbnail' => 'billed3240.jpg')
-      ,'gratis reklame'       => array($kort . '/' . 'gratisreklame.php'                     => 'få en gratis reklame på hjemmesiden', 'thumbnail' => 'billed3730.jpg')
-      ,'download'             => array($kort . '/' . 'download.php'                          => 'her kan du downloade manualer, eldiagrammer og lignende', 'thumbnail' => 'billed3234.jpg')
-      ,'links'                => array($kort . '/' . 'links.php'                             => 'her kan du se links til danske scooter/knallert sider, forhandlere, producenter, forsikringsselvskaber', 'thumbnail' => 'billed3236.jpg')
-      ,'tilfældig'            => array($kort . '/' . 'tilfeldig.php'                         => 'besøg en tilfældig side på hjemmesiden. Hvem ved måske finder du noget spændende', 'thumbnail' => 'billed3237.jpg')
-      ,'todo'                 => array($kort . '/' . 'todo.php'                              => 'følg med i hver der skal sket i fremtiden på hjemmesiden', 'thumbnail' => 'todo.jpg')
-      ,'kontakt'              => array($kort . '/' . 'kontakt.php'                           => 'skriv en besked til mig som laver hjemmesiden', 'thumbnail' => 'billed3239.jpg')
+     $setup['l_m_hovedmenu'] => array(
+       $setup['l_m_hovedmenu_forum']                => array($setup['domain'] . '/forum/'                          => $setup['l_m_hovedmenu_forum_description'], 'thumbnail' => 'billed3238.jpg')
+      ,$setup['l_m_hovedmenu_forsiden']             => array($setup['domain']                                      => $setup['l_m_hovedmenu_forsiden_description'], 'thumbnail' => 'forsiden.jpg')
+      ,$setup['l_m_hovedmenu_start']                => array($kort . '/' . 'start.php'                             => $setup['l_m_hovedmenu_start_description'], 'thumbnail' => 'billed2616.jpg')
+      ,$setup['l_m_hovedmenu_nyheder']              => array($kort . '/' . 'nyheder.php'                           => $setup['l_m_hovedmenu_nyheder_description'], 'thumbnail' => 'billed3233.jpg')
+      ,$setup['l_m_hovedmenu_introduktion']         => array($kort . '/' . 'introduktion.php'                      => $setup['l_m_hovedmenu_introduktion_description'], 'thumbnail' => 'billed3240.jpg')
+      ,$setup['l_m_hovedmenu_gratisreklame']        => array($kort . '/' . 'gratisreklame.php'                     => $setup['l_m_hovedmenu_gratisreklame_description'], 'thumbnail' => 'billed3730.jpg')
+      ,$setup['l_m_hovedmenu_download']             => array($kort . '/' . 'download.php'                          => $setup['l_m_hovedmenu_download_description'], 'thumbnail' => 'billed3234.jpg')
+      ,$setup['l_m_hovedmenu_links']                => array($kort . '/' . 'links.php'                             => $setup['l_m_hovedmenu_links_description'], 'thumbnail' => 'billed3236.jpg')
+      ,$setup['l_m_hovedmenu_tilfeldig']            => array($kort . '/' . 'tilfeldig.php'                         => $setup['l_m_hovedmenu_tilfeldig_description'], 'thumbnail' => 'billed3237.jpg')
+      ,$setup['l_m_hovedmenu_todo']                 => array($kort . '/' . 'todo.php'                              => $setup['l_m_hovedmenu_todo_description'], 'thumbnail' => 'todo.jpg')
+      ,$setup['l_m_hovedmenu_kontakt']              => array($kort . '/' . 'kontakt.php'                           => $setup['l_m_hovedmenu_kontakt_description'], 'thumbnail' => 'billed3239.jpg')
 
-   ),'oplysninger' => array(
-       'benzin'                     => array($kort . '/' . 'benzin.php'                      => 'forklare hvor benzin kommer fra, hvad det er lavet af og tilsat, oktan, additiver, benzinforbrug, kør længere på literen, alternativer til benzin', 'thumbnail' => 'billed2258.jpg')
-      ,'bøger og blade'             => array($kort . '/' . 'bogerogblade.php'                => 'bøger og blade som handler om scootere og reservedele', 'thumbnail' => 'billed2259.jpg')
-      ,'elektricitet og elektronik' => array($kort . '/' . 'elektricitetogelektronik.php'    => 'forklaring af volt, ampere, ohm, watt og elektronik komponenter', 'thumbnail' => 'billed2972.jpg')
-      ,'forsikring'                 => array($kort . '/' . 'forsikring.php'                  => 'forklare hvad ansvarsforsikring, kaskoforsikring, selvrisiko betyder. Forsikringsbevis, telefonnumre, forsikringsselskaber', 'thumbnail' => 'billed2260.jpg')
-      ,'køb af scooter'             => array($kort . '/' . 'kobafscooter.php'                => 'råd til køb af ny eller brugt scooter, hjemmesider hvor du kan købe og sælge', 'thumbnail' => 'billed2290.jpg')
-      ,'love og regler'             => array($kort . '/' . 'loveogregler.php'                => 'hvilken regler der gælder når man køre på scooter, hvornår man kan få bøder og hvad man må og ikke må', 'thumbnail' => 'billed2614.jpg')
-      ,'motorolie, gearolie, hydrauliskolie'                       => array($kort . '/' . 'olie.php'                        => 'forklare hvor olie kommer fra, motorolie, gearolie, forgaffelolie, viskositet, temperaturområder', 'thumbnail' => 'billed2261.jpg')
-      ,'omregn og udregn'           => array($kort . '/' . 'omregn.php'                      => 'konverter mellem forskellige enheder, omregn benzinforbrug, enheder og forkortelser, omregn tilspændingsmoment, omregn dæktryk, udregn forbrændingskammervolume og slagvolume, udregn kompressionsforhold', 'thumbnail' => 'billed2262.jpg')
-      ,'ordbog'                     => array($kort . '/' . 'ordbog.php'                      => 'forklaring af diverse forkortelser og ord', 'thumbnail' => 'billed2615.jpg')
-      ,'registrering'               => array($kort . '/' . 'registrering.php'                => 'nummerplade, stelnummer, motornummer, fabrikationsplade, komponentmærkningsskilt, typeattest, anmeldelse til registrering', 'thumbnail' => 'billed2263.jpg')
-      ,'sammenlign 2 takt, 4 takt og elektrisk' => array($kort . '/' . 'sammenlign.php'       => 'sammenlign bezinforbrug, støj, forurening, lugt gener, olieskift for scootere med 2 takt, 4 takt eller elektrisk motor', 'thumbnail' => 'billed3255.jpg')
-      ,'smørelse og væsker'         => array($kort . '/' . 'smorelse.php'                    => 'bremsevæske, karburatorvæske, kobberfedt, kølervæske, låseolie, silikonefedt, rustbeskyttelse', 'thumbnail' => 'billed2264.jpg')
-      ,'steder i danmark'           => array($kort . '/' . 'stederidanmark.php'              => 'danmarkskort med butikker, værksteder, forhandlere, importører og andre intersante steder', 'thumbnail' => 'billed2291.jpg')
-      ,'teoriprøve'                 => array($kort . '/' . 'teoriprove.php'                  => 'spørgsmål der tester din viden om at køre på scooter i trafikken', 'thumbnail' => 'billed2382.jpg')
-      ,'tilkøring'                  => array($kort . '/' . 'tilkoring.php'                   => 'råd til tilkøring af ny scooter eller nye motordele', 'thumbnail' => 'billed2292.jpg')
-      ,'typegodkendelser'           => array($kort . '/' . 'typegodkendelser.php'            => 'typegodkendelser til diverse scooter modeller', 'thumbnail' => 'billed2265.jpg')
-      ,'VIN checker'                => array($kort . '/' . 'vinchecker.php'                  => 'indtast et 17 cifret stelnummer og se måske data om scooteren så som producent og årgang', 'thumbnail' => 'billed3241.jpg')
-      ,'vinterråd'                  => array($kort . '/' . 'vinterrad.php'                   => 'råd som primært er brugbare om vinteren', 'thumbnail' => 'billed2271.jpg')
-      ,'værktøj'                    => array($kort . '/' . 'verktoj.php'                     => 'multimeter, skydelære, mikrometerskrue, universalholder, søgerblade, stroboskoplampe, momentnøgle', 'thumbnail' => 'billed2267.jpg')
+   ),$setup['l_m_oplysninger'] => array(
+       $setup['l_m_oplysninger_benzin']                     => array($kort . '/' . 'benzin.php'                      => $setup['l_m_oplysninger_benzin_description'], 'thumbnail' => 'billed2258.jpg')
+      ,$setup['l_m_oplysninger_bogerogblade']               => array($kort . '/' . 'bogerogblade.php'                => $setup['l_m_oplysninger_bogerogblade_description'], 'thumbnail' => 'billed2259.jpg')
+      ,$setup['l_m_oplysninger_elektricitetogelektronik']   => array($kort . '/' . 'elektricitetogelektronik.php'    => $setup['l_m_oplysninger_elektricitetogelektronik_description'], 'thumbnail' => 'billed2972.jpg')
+      ,$setup['l_m_oplysninger_forsikring']                 => array($kort . '/' . 'forsikring.php'                  => $setup['l_m_oplysninger_forsikring_description'], 'thumbnail' => 'billed2260.jpg')
+      ,$setup['l_m_oplysninger_kobafscooter']               => array($kort . '/' . 'kobafscooter.php'                => $setup['l_m_oplysninger_kobafscooter_description'], 'thumbnail' => 'billed2290.jpg')
+      ,$setup['l_m_oplysninger_loveogregler']               => array($kort . '/' . 'loveogregler.php'                => $setup['l_m_oplysninger_loveogregler_description'], 'thumbnail' => 'billed2614.jpg')
+      ,$setup['l_m_oplysninger_olie']                       => array($kort . '/' . 'olie.php'                        => $setup['l_m_oplysninger_olie_description'], 'thumbnail' => 'billed2261.jpg')
+      ,$setup['l_m_oplysninger_omregn']                     => array($kort . '/' . 'omregn.php'                      => $setup['l_m_oplysninger_omregn_description'], 'thumbnail' => 'billed2262.jpg')
+      ,$setup['l_m_oplysninger_ordbog']                     => array($kort . '/' . 'ordbog.php'                      => $setup['l_m_oplysninger_ordbog_description'], 'thumbnail' => 'billed2615.jpg')
+      ,$setup['l_m_oplysninger_registrering']               => array($kort . '/' . 'registrering.php'                => $setup['l_m_oplysninger_registrering_description'], 'thumbnail' => 'billed2263.jpg')
+      ,$setup['l_m_oplysninger_sammenlign']                 => array($kort . '/' . 'sammenlign.php'                  => $setup['l_m_oplysninger_sammenlign_description'], 'thumbnail' => 'billed3255.jpg')
+      ,$setup['l_m_oplysninger_smorelse']                   => array($kort . '/' . 'smorelse.php'                    => $setup['l_m_oplysninger_smorelse_description'], 'thumbnail' => 'billed2264.jpg')
+      ,$setup['l_m_oplysninger_stederidanmark']             => array($kort . '/' . 'stederidanmark.php'              => $setup['l_m_oplysninger_stederidanmark_description'], 'thumbnail' => 'billed2291.jpg')
+      ,$setup['l_m_oplysninger_teoriprove']                 => array($kort . '/' . 'teoriprove.php'                  => $setup['l_m_oplysninger_teoriprove_description'], 'thumbnail' => 'billed2382.jpg')
+      ,$setup['l_m_oplysninger_tilkoring']                  => array($kort . '/' . 'tilkoring.php'                   => $setup['l_m_oplysninger_tilkoring_description'], 'thumbnail' => 'billed2292.jpg')
+      ,$setup['l_m_oplysninger_typegodkendelser']           => array($kort . '/' . 'typegodkendelser.php'            => $setup['l_m_oplysninger_typegodkendelser_description'], 'thumbnail' => 'billed2265.jpg')
+      ,$setup['l_m_oplysninger_vinchecker']                 => array($kort . '/' . 'vinchecker.php'                  => $setup['l_m_oplysninger_vinchecker_description'], 'thumbnail' => 'billed3241.jpg')
+      ,$setup['l_m_oplysninger_vinterrad']                  => array($kort . '/' . 'vinterrad.php'                   => $setup['l_m_oplysninger_vinterrad_description'], 'thumbnail' => 'billed2271.jpg')
+      ,$setup['l_m_oplysninger_verktoj']                    => array($kort . '/' . 'verktoj.php'                     => $setup['l_m_oplysninger_verktoj_description'], 'thumbnail' => 'billed2267.jpg')
 
-   ),'scooterens dele' => array(
+   ),$setup['l_m_scooterensdele'] => array(
        array(
-         '2 takt motor' => array(
-             'de 2 takter'          => array($kort . '/' . '2takt_de2takter.php'             => 'animation hvor man kan se hvordan de 2 takter virker i en 2 takt motor', 'thumbnail' => 'billed3242.jpg')
-            ,'motortyper'           => array($kort . '/' . '2takt_motortyper.php'            => 'billeder af nogen 2 takt motortyper', 'thumbnail' => 'billed3734.jpg')
-            ,'reed valve'           => array($kort . '/' . '2takt_reedvalve.php'             => 'info om den ventil der sidder under indsugningsstudsen', 'thumbnail' => 'billed3258.jpg')
-            ,'topstykke og cylinder'=> array($kort . '/' . '2takt_topstykkeogcylinder.php'   => 'lidt info om topstykke og cylinder på en 2 takt motor', 'thumbnail' => 'billed3260.jpg')
-            ,'stempel'              => array($kort . '/' . '2takt_stempel.php'               => 'lidt info om stempel og stempelringe på en 2 takt motor', 'thumbnail' => 'billed3261.jpg')
-            ,'olietank'             => array($kort . '/' . '2takt_olietank.php'              => 'olietankens placering, oliefilter, oliemåler, kontrollampe', 'thumbnail' => 'billed3263.jpg')
-            ,'oliepumpe'            => array($kort . '/' . '2takt_oliepumpe.php'             => 'geardrevetoliepumpe, akseldrevetoliepumpe, kabelbetjentoliepumpe, automatisk centrifugaloliepumpe, kabelsplitter', 'thumbnail' => 'billed3264.jpg')
-            ,'DITech'               => array($kort . '/' . 'specielt_ditech.php'             => 'et direkte indsprøjtningssystem hvor benzinen sprøjtes ind i motoren i stedet for at bruge en karburator. Findes på Aprilia SR og Scarabeo', 'thumbnail' => 'billed2665.jpg')
-         ),'4 takt motor' => array(
-             'de 4 takter'          => array($kort . '/' . 'motor_de4takter.php'             => 'lær om 4 takt motorens fire takter som motoren gentager igen og igen når den køre', 'thumbnail' => 'billed3289.jpg')
-            ,'motortyper'           => array($kort . '/' . 'motor_motortyper.php'            => 'se forskellige 4 takt motortyper og lær hvad 139QMA og 139FMB-B betyder', 'thumbnail' => 'billed3290.jpg')
-            ,'knastaksel'           => array($kort . '/' . 'motor_knastaksel.php'            => 'knastaksel har knaster som trykker ned på ventilerne så de åbner', 'thumbnail' => 'knastaksel.jpg')
-            ,'topstykke og cylinder'=> array($kort . '/' . 'motor_topstykkeogcylinder.php'   => 'lær om 4 takt motorens topstykke og cylinder som er meget anderledes fra en 2 takt motor', 'thumbnail' => 'billed3292.jpg')
-            ,'ventiler'             => array($kort . '/' . 'motor_ventiler.php'              => 'lær om 4 takt motorens ventiler som står for at lukke benzin og luft ind motoren og lukke udstødningsgasser ud af motoren', 'thumbnail' => 'billed3291.jpg')
-            ,'forbrændingskammer'   => array($kort . '/' . 'motor_forbrendingskammer.php'    => 'se forbrændingskammeret i en 4 takt motor', 'thumbnail' => 'billed3293.jpg')
-            ,'stempel'              => array($kort . '/' . 'motor_stempel.php'               => 'se stempel og stempelringe i en 4 takt motor', 'thumbnail' => 'billed3294.jpg')
-            ,'krumtap'              => array($kort . '/' . 'motor_krumtap.php'               => 'lær om krumtap som laver stemplets frem og tilbage bevægelser om til roterende bevægelser', 'thumbnail' => 'motor_krumtap.jpg')
-            ,'svinghjul'            => array($kort . '/' . 'motor_svinghjul.php'             => 'lær om svinghjulet som blandt andet står for at holde motoren i gang mellem hver takt', 'thumbnail' => 'billed3312.jpg')
-            ,'knastkædestrammer'    => array($kort . '/' . 'motor_knastkedestrammer.php'     => 'knastkædestrammeren står for at holde kæden tilpas stram mellem krumtapakslen og topstykkets vippearmsaksel', 'thumbnail' => 'billed3296.jpg')
-            ,'oliepumpe'            => array($kort . '/' . 'motor_oliepumpe.php'             => 'oliepumpen i en 4 takt motor står for at pumpe motorolien fra bunden af motoren op til topstykket og lejerne så motoren smørres og køles', 'thumbnail' => 'billed3297.jpg')
-            ,'pakdåse'              => array($kort . '/' . 'motor_pakdase.php'               => 'pakdåser holder tæt blandt andet mellem krumtapakslen og motorblokken så motorolien ikke kan komme ud', 'thumbnail' => 'billed3298.jpg')
-            ,'motorblok'            => array($kort . '/' . 'motor_motorblok.php'             => 'noget om motorblok delene som er de store dele hvor alle de andre dele samme i og som holder olien', 'thumbnail' => 'motorblok.jpg')
-         ),'elektrisk' => array(
-             'automatisk choker'    => array($kort . '/' . 'karburator.php#automatisk_choker'=> 'se hvordan den automatiske choker på karburatoren virker', 'thumbnail' => 'billed3266.jpg')
-            ,'batteri'              => array($kort . '/' . 'elektrisk_batteri.php'           => 'forklaring af scooterens starterbatteri som findes på benzindrevne scootere', 'thumbnail' => 'billed3267.jpg')
-            ,'benzinmåler'          => array($kort . '/' . 'benzintank.php#benzinmaler'      => 'forklaring af benzinmåleren som sidder i benzintanken', 'thumbnail' => 'billed3268.jpg')
-            ,'el diagrammer'        => array($kort . '/' . 'elektrisk_eldiagrammer.php'      => 'forklaring af hvor de kan finde el diagrammer til scootere', 'thumbnail' => 'billed3269.jpg')
-            ,'kontakter'            => array($kort . '/' . 'elektrisk_kontakter.php'         => 'bremsekontakt, støttebenskontakt, tændingslås', 'thumbnail' => 'billed3270.jpg')
-            ,'lambdasonde'          => array($kort . '/' . 'elektrisk_lambdasonde.php'       => 'lambasonder er en ilt måler som sidder i udstødningen', 'thumbnail' => 'billed3271.jpg')
-            ,'lys'                  => array($kort . '/' . 'elektrisk_lys.php'               => 'pære, fatningstyper og blinklysrelæ', 'thumbnail' => 'billed3272.jpg')
-            ,'modstande'            => array($kort . '/' . 'elektrisk_modstande.php'         => 'modstande som bruges i forbindelse med forlyset og den automatiske choker', 'thumbnail' => 'billed3273.jpg')
-            ,'horn'                 => array($kort . '/' . 'elektrisk_horn.php'              => 'den der siger dyt', 'thumbnail' => 'billed3274.jpg')
-            ,'sikring'              => array($kort . '/' . 'elektrisk_sikring.php'           => 'glassikring, fladsikringer og sikringsholdere', 'thumbnail' => 'billed3275.jpg')
-            ,'spoler'               => array($kort . '/' . 'elektrisk_spoler.php'            => 'generator, ladespole, lysspole, exciterspole, pickup, tændspole og andre spoler', 'thumbnail' => 'billed3276.jpg')
-            ,'spændingsregulator'   => array($kort . '/' . 'elektrisk_spendingsregulator.php'=> 'står for at lave generatorens vækselstrøm om til jævnstrøm og samtidig begrænsningen spændingen', 'thumbnail' => 'billed3277.jpg')
-            ,'starter'              => array($kort . '/' . 'elektrisk_starter.php'           => 'startermotor og starterrelæ', 'thumbnail' => 'billed3278.jpg')
-            ,'stel forbindelse'     => array($kort . '/' . 'elektrisk_stelforbindelse.php'   => 'ledninger som forbinder batteri med scooterens stel og motorblokken', 'thumbnail' => 'billed3279.jpg')
-            ,'tænding'              => array($kort . '/' . 'elektrisk_tending.php'           => 'forklaring af hvordan pickupen sender signal til CDI boksen som bestemmer hvornår tændrøret skal give gnist alt efter hvor mange o/min motoren køre med', 'thumbnail' => 'billed3280.jpg')
-            ,'ur'                   => array($kort . '/' . 'elektrisk_ur.php'                => 'uret på instrumentpanelet', 'thumbnail' => 'billed3281.jpg')
-         ),'elektrisk scooter' => array(
-             'batteri'              => array($kort . '/' . 'elektriskscooter_batteri.php'          => 'batterityper, volt, Ah, Wh, vægt', 'thumbnail' => 'billed3244.jpg')
-            ,'controller'           => array($kort . '/' . 'elektriskscooter_controller.php'       => 'controlleren indeholder elektronikken der sender strøm til motoren', 'thumbnail' => 'billed3245.jpg')
-            ,'motor'                => array($kort . '/' . 'elektriskscooter_motor.php'            => 'motortyper og forklaring af hall sensor', 'thumbnail' => 'billed3246.jpg')
-            ,'oplader'              => array($kort . '/' . 'elektriskscooter_oplader.php'          => 'batterioplader som bruges til at oplade batterierne i en elektrisk scooter', 'thumbnail' => 'billed3243.jpg')
-            ,'Battery Management System' =>array($kort . '/' . 'elektriskscooter_bms.php'          => 'et system af elektronik som overvåger opladningen/afladningen af batteriene', 'thumbnail' => 'billed3247.jpg')
-            ,'DC til DC konverter'  => array($kort . '/' . 'elektriskscooter_dctildckonverter.php' => 'elektronik som lave batterienes spænding om til 12 volt så strømmen kan bruges til 12 volt pære, blinklysrelæ og horn', 'thumbnail' => 'billed3248.jpg')
-            ,'instrumentpanel'      => array($kort . '/' . 'elektriskscooter_instrumentpanel.php'  => 'billeder af diverse elektriske scooteres instrumentpaneler', 'thumbnail' => 'billed3249.jpg')
-            ,'gashåndtag'           => array($kort . '/' . 'elektriskscooter_gashandtag.php'       => 'forskellige typer af gashåndtag til elektriske scootere', 'thumbnail' => 'billed3250.jpg')
-            ,'knapper'              => array($kort . '/' . 'elektriskscooter_knapper.php'          => 'hornknapper, kørselsmodeknap, boostknap', 'thumbnail' => 'billed3251.jpg')
-            ,'problemer'            => array($kort . '/' . 'elektriskscooter_problemer.php'        => 'her skriver jeg om de problemer som folk typisk har med elektriske scootere efterhånden som jeg kender til dem. Der er ikke så mange der har en elektrisk scooter så der er endnu ikke så mange problemer at skrive om', 'thumbnail' => 'billed3243.jpg')
-            ,'filer'                => array($kort . '/' . 'elektriskscooter_filer.php'            => 'manualer, eldigrammer og andre filer til elektriske scootere', 'thumbnail' => 'billed3253.jpg')
-            ,'videoer'              => array($kort . '/' . 'elektriskscooter_videoer.php'          => 'her samler jeg diverse videoer om elektriske scootere så man kan lære noget om dem', 'thumbnail' => 'billed3254.jpg')
-         ),'luftfilter og udstødning' => array(
-             'luftfilter'           => array($kort . '/' . 'luftfilter.php'                       => 'info om luftfilteret og slangerne forbundet til luftfilteret', 'thumbnail' => 'billed3288.jpg')
-            ,'luftfiltertyper'      => array($kort . '/' . 'luftfilter_luftfiltertyper.php'       => 'info om forskellige luftfiltertyper som vådt papir, tørt papir og svamp', 'thumbnail' => 'billed3287.jpg')
-            ,'kulstof beholder'     => array($kort . '/' . 'luftfilter_kulstofbeholder.php'       => 'info om kulstoftbeholderen som findes på et mindre andre scootere som står for at opsuge benzindampe for senere at suge dampene ind i motoren', 'thumbnail' => 'billed3286.jpg')
-            ,'sekundært luft indsugnings system' => array($kort . '/' . 'luftfilter_sekundertluftindsugningssystem.php' => 'systemet suger ekstra luft ind i udstødningen så katalysatoren bedre at omdanne udstødningsgasserne', 'thumbnail' => 'billed3282.jpg')
-            ,'udstødning'           => array($kort . '/' . 'udstodning.php'                       => 'lidt info om udstødninger og tværsnit gennem en udstødning så man kan se den inden i', 'thumbnail' => 'billed3283.jpg')
-            ,'katalysator'          => array($kort . '/' . 'udstodning_katalysator.php'           => 'katalysatoren er et metal net der sidder i udstødningen som omdanne skadelige stoffer til mindre skadelige stoffer', 'thumbnail' => 'billed3284.jpg')
-            ,'euro emissions standarder' => array($kort . '/' . 'udstodning_euroemission.php'     => 'se hvor meget af forskellige stoffer der må udledes under forskellige euro emission standarder', 'thumbnail' => 'billed3285.jpg')
-         ),'transmission' => array(
-             'variator'             => array($kort . '/' . 'transmission_variator.php'            => 'variatoren er et automatisk trinløst gear så man ikke skal skifte gear selv. Det findes på de fleste scootere', 'thumbnail' => 'billed3300.jpg')
-            ,'forreste remskiver'   => array($kort . '/' . 'transmission_forresteremskiver.php'   => 'lær om de forreste remskiver hvor rullerne er', 'thumbnail' => 'billed3301.jpg')
-            ,'kilerem'              => array($kort . '/' . 'transmission_kilerem.php'             => 'lær om kileremmen som køre på remskiverne', 'thumbnail' => 'billed3731.jpg')
-            ,'bagerste remskiver'   => array($kort . '/' . 'transmission_bagersteremskiver.php'   => 'lær om de bagerste remskiver hvor koblingen er', 'thumbnail' => 'billed3732.jpg')
-            ,'reduktionsgear'       => array($kort . '/' . 'transmission_reduktionsgear.php'      => 'lær om reduktionsgearet som nedsætter variatorens hastighed og sidder mellem variatoren og baghjulsakslen', 'thumbnail' => 'billed3304.jpg')
-            ,'andet'                => array($kort . '/' . 'transmission_andet.php'               => 'andet info om transmissionen som ikke passer til de andre sider', 'thumbnail' => 'billed3305.jpg')
+         $setup['l_m_scooterensdele_2taktmotor'] => array(
+             $setup['l_m_scooterensdele_2taktmotor_de2takter']                   => array($kort . '/' . '2takt_de2takter.php'             => $setup['l_m_scooterensdele_2taktmotor_de2takter_description'], 'thumbnail' => 'billed3242.jpg')
+            ,$setup['l_m_scooterensdele_2taktmotor_motortyper']                  => array($kort . '/' . '2takt_motortyper.php'            => $setup['l_m_scooterensdele_2taktmotor_motortyper_description'], 'thumbnail' => 'billed3734.jpg')
+            ,$setup['l_m_scooterensdele_2taktmotor_reedvalve']                   => array($kort . '/' . '2takt_reedvalve.php'             => $setup['l_m_scooterensdele_2taktmotor_reedvalve_description'], 'thumbnail' => 'billed3258.jpg')
+            ,$setup['l_m_scooterensdele_2taktmotor_topstykkeogcylinder']         => array($kort . '/' . '2takt_topstykkeogcylinder.php'   => $setup['l_m_scooterensdele_2taktmotor_topstykkeogcylinder_description'], 'thumbnail' => 'billed3260.jpg')
+            ,$setup['l_m_scooterensdele_2taktmotor_stempel']                     => array($kort . '/' . '2takt_stempel.php'               => $setup['l_m_scooterensdele_2taktmotor_stempel_description'], 'thumbnail' => 'billed3261.jpg')
+            ,$setup['l_m_scooterensdele_2taktmotor_olietank']                    => array($kort . '/' . '2takt_olietank.php'              => $setup['l_m_scooterensdele_2taktmotor_olietank_description'], 'thumbnail' => 'billed3263.jpg')
+            ,$setup['l_m_scooterensdele_2taktmotor_oliepumpe']                   => array($kort . '/' . '2takt_oliepumpe.php'             => $setup['l_m_scooterensdele_2taktmotor_oliepumpe_description'], 'thumbnail' => 'billed3264.jpg')
+            ,$setup['l_m_scooterensdele_2taktmotor_ditech']                      => array($kort . '/' . 'specielt_ditech.php'             => $setup['l_m_scooterensdele_2taktmotor_ditech_description'], 'thumbnail' => 'billed2665.jpg')
+         ),$setup['l_m_scooterensdele_4taktmotor'] => array(
+             $setup['l_m_scooterensdele_4taktmotor_de4takter']                   => array($kort . '/' . 'motor_de4takter.php'             => $setup['l_m_scooterensdele_4taktmotor_de4takter_description'], 'thumbnail' => 'billed3289.jpg')
+            ,$setup['l_m_scooterensdele_4taktmotor_motortyper']                  => array($kort . '/' . 'motor_motortyper.php'            => $setup['l_m_scooterensdele_4taktmotor_motortyper_description'], 'thumbnail' => 'billed3290.jpg')
+            ,$setup['l_m_scooterensdele_4taktmotor_knastaksel']                  => array($kort . '/' . 'motor_knastaksel.php'            => $setup['l_m_scooterensdele_4taktmotor_knastaksel_description'], 'thumbnail' => 'knastaksel.jpg')
+            ,$setup['l_m_scooterensdele_4taktmotor_topstykkeogcylinder']         => array($kort . '/' . 'motor_topstykkeogcylinder.php'   => $setup['l_m_scooterensdele_4taktmotor_topstykkeogcylinder_description'], 'thumbnail' => 'billed3292.jpg')
+            ,$setup['l_m_scooterensdele_4taktmotor_ventiler']                    => array($kort . '/' . 'motor_ventiler.php'              => $setup['l_m_scooterensdele_4taktmotor_ventiler_description'], 'thumbnail' => 'billed3291.jpg')
+            ,$setup['l_m_scooterensdele_4taktmotor_forbrendingskammer']          => array($kort . '/' . 'motor_forbrendingskammer.php'    => $setup['l_m_scooterensdele_4taktmotor_forbrendingskammer_description'], 'thumbnail' => 'billed3293.jpg')
+            ,$setup['l_m_scooterensdele_4taktmotor_stempel']                     => array($kort . '/' . 'motor_stempel.php'               => $setup['l_m_scooterensdele_4taktmotor_stempel_description'], 'thumbnail' => 'billed3294.jpg')
+            ,$setup['l_m_scooterensdele_4taktmotor_krumtap']                     => array($kort . '/' . 'motor_krumtap.php'               => $setup['l_m_scooterensdele_4taktmotor_krumtap_description'], 'thumbnail' => 'motor_krumtap.jpg')
+            ,$setup['l_m_scooterensdele_4taktmotor_svinghjul']                   => array($kort . '/' . 'motor_svinghjul.php'             => $setup['l_m_scooterensdele_4taktmotor_svinghjul_description'], 'thumbnail' => 'billed3312.jpg')
+            ,$setup['l_m_scooterensdele_4taktmotor_knastkedestrammer']           => array($kort . '/' . 'motor_knastkedestrammer.php'     => $setup['l_m_scooterensdele_4taktmotor_knastkedestrammer_description'], 'thumbnail' => 'billed3296.jpg')
+            ,$setup['l_m_scooterensdele_4taktmotor_oliepumpe']                   => array($kort . '/' . 'motor_oliepumpe.php'             => $setup['l_m_scooterensdele_4taktmotor_oliepumpe_description'], 'thumbnail' => 'billed3297.jpg')
+            ,$setup['l_m_scooterensdele_4taktmotor_pakdase']                     => array($kort . '/' . 'motor_pakdase.php'               => $setup['l_m_scooterensdele_4taktmotor_pakdase_description'], 'thumbnail' => 'billed3298.jpg')
+            ,$setup['l_m_scooterensdele_4taktmotor_motorblok']                   => array($kort . '/' . 'motor_motorblok.php'             => $setup['l_m_scooterensdele_4taktmotor_motorblok_description'], 'thumbnail' => 'motorblok.jpg')
+         ),$setup['l_m_scooterensdele_elektrisk'] => array(
+             $setup['l_m_scooterensdele_elektrisk_karburator']                   => array($kort . '/' . 'karburator.php#automatisk_choker'=> $setup['l_m_scooterensdele_elektrisk_karburator_description'], 'thumbnail' => 'billed3266.jpg')
+            ,$setup['l_m_scooterensdele_elektrisk_elektrisk_batteri']            => array($kort . '/' . 'elektrisk_batteri.php'           => $setup['l_m_scooterensdele_elektrisk_elektrisk_batteri_description'], 'thumbnail' => 'billed3267.jpg')
+            ,$setup['l_m_scooterensdele_elektrisk_benzintank']                   => array($kort . '/' . 'benzintank.php#benzinmaler'      => $setup['l_m_scooterensdele_elektrisk_benzintank_description'], 'thumbnail' => 'billed3268.jpg')
+            ,$setup['l_m_scooterensdele_elektrisk_elektrisk_eldiagrammer']       => array($kort . '/' . 'elektrisk_eldiagrammer.php'      => $setup['l_m_scooterensdele_elektrisk_elektrisk_eldiagrammer_description'], 'thumbnail' => 'billed3269.jpg')
+            ,$setup['l_m_scooterensdele_elektrisk_elektrisk_kontakter']          => array($kort . '/' . 'elektrisk_kontakter.php'         => $setup['l_m_scooterensdele_elektrisk_elektrisk_kontakter_description'], 'thumbnail' => 'billed3270.jpg')
+            ,$setup['l_m_scooterensdele_elektrisk_elektrisk_lambdasonde']        => array($kort . '/' . 'elektrisk_lambdasonde.php'       => $setup['l_m_scooterensdele_elektrisk_elektrisk_lambdasonde_description'], 'thumbnail' => 'billed3271.jpg')
+            ,$setup['l_m_scooterensdele_elektrisk_elektrisk_lys']                => array($kort . '/' . 'elektrisk_lys.php'               => $setup['l_m_scooterensdele_elektrisk_elektrisk_lys_description'], 'thumbnail' => 'billed3272.jpg')
+            ,$setup['l_m_scooterensdele_elektrisk_elektrisk_modstande']          => array($kort . '/' . 'elektrisk_modstande.php'         => $setup['l_m_scooterensdele_elektrisk_elektrisk_modstande_description'], 'thumbnail' => 'billed3273.jpg')
+            ,$setup['l_m_scooterensdele_elektrisk_elektrisk_horn']               => array($kort . '/' . 'elektrisk_horn.php'              => $setup['l_m_scooterensdele_elektrisk_elektrisk_horn_description'], 'thumbnail' => 'billed3274.jpg')
+            ,$setup['l_m_scooterensdele_elektrisk_elektrisk_sikring']            => array($kort . '/' . 'elektrisk_sikring.php'           => $setup['l_m_scooterensdele_elektrisk_elektrisk_sikring_description'], 'thumbnail' => 'billed3275.jpg')
+            ,$setup['l_m_scooterensdele_elektrisk_elektrisk_spoler']             => array($kort . '/' . 'elektrisk_spoler.php'            => $setup['l_m_scooterensdele_elektrisk_elektrisk_spoler_description'], 'thumbnail' => 'billed3276.jpg')
+            ,$setup['l_m_scooterensdele_elektrisk_elektrisk_spendingsregulator'] => array($kort . '/' . 'elektrisk_spendingsregulator.php'=> $setup['l_m_scooterensdele_elektrisk_elektrisk_spendingsregulator_description'], 'thumbnail' => 'billed3277.jpg')
+            ,$setup['l_m_scooterensdele_elektrisk_elektrisk_starter']            => array($kort . '/' . 'elektrisk_starter.php'           => $setup['l_m_scooterensdele_elektrisk_elektrisk_starter_description'], 'thumbnail' => 'billed3278.jpg')
+            ,$setup['l_m_scooterensdele_elektrisk_elektrisk_stelforbindelse']    => array($kort . '/' . 'elektrisk_stelforbindelse.php'   => $setup['l_m_scooterensdele_elektrisk_elektrisk_stelforbindelse_description'], 'thumbnail' => 'billed3279.jpg')
+            ,$setup['l_m_scooterensdele_elektrisk_elektrisk_tending']            => array($kort . '/' . 'elektrisk_tending.php'           => $setup['l_m_scooterensdele_elektrisk_elektrisk_tending_description'], 'thumbnail' => 'billed3280.jpg')
+            ,$setup['l_m_scooterensdele_elektrisk_elektrisk_ur']                 => array($kort . '/' . 'elektrisk_ur.php'                => $setup['l_m_scooterensdele_elektrisk_elektrisk_ur_description'], 'thumbnail' => 'billed3281.jpg')
+         ),$setup['l_m_scooterensdele_elektriskscooter'] => array(
+             $setup['l_m_scooterensdele_elektriskscooter_batteri']               => array($kort . '/' . 'elektriskscooter_batteri.php'          => $setup['l_m_scooterensdele_elektriskscooter_batteri_description'], 'thumbnail' => 'billed3244.jpg')
+            ,$setup['l_m_scooterensdele_elektriskscooter_controller']            => array($kort . '/' . 'elektriskscooter_controller.php'       => $setup['l_m_scooterensdele_elektriskscooter_controller_description'], 'thumbnail' => 'billed3245.jpg')
+            ,$setup['l_m_scooterensdele_elektriskscooter_motor']                 => array($kort . '/' . 'elektriskscooter_motor.php'            => $setup['l_m_scooterensdele_elektriskscooter_motor_description'], 'thumbnail' => 'billed3246.jpg')
+            ,$setup['l_m_scooterensdele_elektriskscooter_oplader']               => array($kort . '/' . 'elektriskscooter_oplader.php'          => $setup['l_m_scooterensdele_elektriskscooter_oplader_description'], 'thumbnail' => 'billed3243.jpg')
+            ,$setup['l_m_scooterensdele_elektriskscooter_bms']                   => array($kort . '/' . 'elektriskscooter_bms.php'              => $setup['l_m_scooterensdele_elektriskscooter_bms_description'], 'thumbnail' => 'billed3247.jpg')
+            ,$setup['l_m_scooterensdele_elektriskscooter_dctildckonverter']      => array($kort . '/' . 'elektriskscooter_dctildckonverter.php' => $setup['l_m_scooterensdele_elektriskscooter_dctildckonverter_description'], 'thumbnail' => 'billed3248.jpg')
+            ,$setup['l_m_scooterensdele_elektriskscooter_instrumentpanel']       => array($kort . '/' . 'elektriskscooter_instrumentpanel.php'  => $setup['l_m_scooterensdele_elektriskscooter_instrumentpanel_description'], 'thumbnail' => 'billed3249.jpg')
+            ,$setup['l_m_scooterensdele_elektriskscooter_gashandtag']            => array($kort . '/' . 'elektriskscooter_gashandtag.php'       => $setup['l_m_scooterensdele_elektriskscooter_gashandtag_description'], 'thumbnail' => 'billed3250.jpg')
+            ,$setup['l_m_scooterensdele_elektriskscooter_knapper']               => array($kort . '/' . 'elektriskscooter_knapper.php'          => $setup['l_m_scooterensdele_elektriskscooter_knapper_description'], 'thumbnail' => 'billed3251.jpg')
+            ,$setup['l_m_scooterensdele_elektriskscooter_problemer']             => array($kort . '/' . 'elektriskscooter_problemer.php'        => $setup['l_m_scooterensdele_elektriskscooter_problemer_description'], 'thumbnail' => 'billed3243.jpg')
+            ,$setup['l_m_scooterensdele_elektriskscooter_filer']                 => array($kort . '/' . 'elektriskscooter_filer.php'            => $setup['l_m_scooterensdele_elektriskscooter_filer_description'], 'thumbnail' => 'billed3253.jpg')
+            ,$setup['l_m_scooterensdele_elektriskscooter_videoer']               => array($kort . '/' . 'elektriskscooter_videoer.php'          => $setup['l_m_scooterensdele_elektriskscooter_videoer_description'], 'thumbnail' => 'billed3254.jpg')
+         ),$setup['l_m_scooterensdele_luftfilterogudstodning'] => array(
+             $setup['l_m_scooterensdele_luftfilterogudstodning_luftfilter']      => array($kort . '/' . 'luftfilter.php'                       => $setup['l_m_scooterensdele_luftfilterogudstodning_luftfilter_description'], 'thumbnail' => 'billed3288.jpg')
+            ,$setup['l_m_scooterensdele_luftfilterogudstodning_luftfiltertyper'] => array($kort . '/' . 'luftfilter_luftfiltertyper.php'       => $setup['l_m_scooterensdele_luftfilterogudstodning_luftfiltertyper_description'], 'thumbnail' => 'billed3287.jpg')
+            ,$setup['l_m_scooterensdele_luftfilterogudstodning_kulstofbeholder'] => array($kort . '/' . 'luftfilter_kulstofbeholder.php'       => $setup['l_m_scooterensdele_luftfilterogudstodning_kulstofbeholder_description'], 'thumbnail' => 'billed3286.jpg')
+            ,$setup['l_m_scooterensdele_luftfilterogudstodning_sekundertluftindsugningssystem'] => array($kort . '/' . 'luftfilter_sekundertluftindsugningssystem.php' => $setup['l_m_scooterensdele_luftfilterogudstodning_sekundertluftindsugningssystem_description'], 'thumbnail' => 'billed3282.jpg')
+            ,$setup['l_m_scooterensdele_luftfilterogudstodning_udstodning']      => array($kort . '/' . 'udstodning.php'                       => $setup['l_m_scooterensdele_luftfilterogudstodning_udstodning_description'], 'thumbnail' => 'billed3283.jpg')
+            ,$setup['l_m_scooterensdele_luftfilterogudstodning_katalysator']     => array($kort . '/' . 'udstodning_katalysator.php'           => $setup['l_m_scooterensdele_luftfilterogudstodning_katalysator_description'], 'thumbnail' => 'billed3284.jpg')
+            ,$setup['l_m_scooterensdele_luftfilterogudstodning_euroemission']    => array($kort . '/' . 'udstodning_euroemission.php'          => $setup['l_m_scooterensdele_luftfilterogudstodning_euroemission_description'], 'thumbnail' => 'billed3285.jpg')
+         ),$setup['l_m_scooterensdele_transmission'] => array(
+             $setup['l_m_scooterensdele_transmission_variator']                  => array($kort . '/' . 'transmission_variator.php'            => $setup['l_m_scooterensdele_transmission_variator_description'], 'thumbnail' => 'billed3300.jpg')
+            ,$setup['l_m_scooterensdele_transmission_forresteremskiver']         => array($kort . '/' . 'transmission_forresteremskiver.php'   => $setup['l_m_scooterensdele_transmission_forresteremskiver_description'], 'thumbnail' => 'billed3301.jpg')
+            ,$setup['l_m_scooterensdele_transmission_kilerem']                   => array($kort . '/' . 'transmission_kilerem.php'             => $setup['l_m_scooterensdele_transmission_kilerem_description'], 'thumbnail' => 'billed3731.jpg')
+            ,$setup['l_m_scooterensdele_transmission_bagersteremskiver']         => array($kort . '/' . 'transmission_bagersteremskiver.php'   => $setup['l_m_scooterensdele_transmission_bagersteremskiver_description'], 'thumbnail' => 'billed3732.jpg')
+            ,$setup['l_m_scooterensdele_transmission_reduktionsgear']            => array($kort . '/' . 'transmission_reduktionsgear.php'      => $setup['l_m_scooterensdele_transmission_reduktionsgear_description'], 'thumbnail' => 'billed3304.jpg')
+            ,$setup['l_m_scooterensdele_transmission_andet']                     => array($kort . '/' . 'transmission_andet.php'               => $setup['l_m_scooterensdele_transmission_andet_description'], 'thumbnail' => 'billed3305.jpg')
          )
       )
-      ,'affjedring'                 => array($kort . '/' . 'affjedring.php'                  => 'teleskop forgaffel, svingarm, fjeder, støddæmper, forspænding', 'thumbnail' => 'billed2232.jpg')
-      ,'begrænsninger'              => array($kort . '/' . 'begrensninger.php'               => 'begrænsninger gør så scooteren ikke kan køre så hurtigt. Se hvordan begrænsningerne sidder og hvordan de fjernes', 'thumbnail' => 'billed2233.jpg')
-      ,'benzintank'                 => array($kort . '/' . 'benzintank.php'                  => 'benzindæksel, benzinfilter, benzinhane, benzinmåler', 'thumbnail' => 'billed2234.jpg')
-      ,'bremser'                    => array($kort . '/' . 'bremser.php'                     => 'skivebremse og tromlebremse, caliper, stempel, abs, bremsekontakt', 'thumbnail' => 'billed2235.jpg')
-      ,'brændstofindsprøjtning'     => array($kort . '/' . 'brandstofindsprojtning.php'           => 'direkte og indirekte indsprøjtning, ECU, injector, gasspjældshus', 'thumbnail' => 'billed2236.jpg')
-      ,'dæk'                        => array($kort . '/' . 'dek.php'                         => 'dækkoder, diagonal, radial, belastningindex, hastighedsindex, slange, slangeløst, ventil, fælg, dækmønstre', 'thumbnail' => 'billed2237.jpg')
-      ,'karburator'                 => array($kort . '/' . 'karburator.php'                  => 'CV og slide karburator, dyser, venturi, blandingsskrue, accelerator pumpe, air cut off valve, nåleventil, tomgangskredsløb, automatisk choker', 'thumbnail' => 'billed2239.jpg')
-      ,'kickstarter'                => array($kort . '/' . 'kickstarter.php'                 => 'kickstarterarm, kickstarteraksel, gribehjul', 'thumbnail' => 'billed2240.jpg')
-      ,'køling'                     => array($kort . '/' . 'koling.php'                      => 'passiv luftkøling, tvunget blæsekøling, væskekøling, oliekøler', 'thumbnail' => 'billed2241.jpg')
-      ,'lejer'                      => array($kort . '/' . 'lejer.php'                       => 'dekodning af bogstaver og tal på lejer', 'thumbnail' => 'billed2613.jpg')
-      ,'reservedelstegninger'       => array($kort . '/' . 'reservedelstegninger.php'        => 'eksploderet tegninger af scooterens dele', 'thumbnail' => 'billed2244.jpg')
-      ,'sidespejle'                 => array($kort . '/' . 'sidespejle.php'                  => 'noget om sidespejle', 'thumbnail' => 'sidespejle.jpg')
-      ,'speedometer'                => array($kort . '/' . 'speedometer.php'                 => 'speedometerdrev, speedometer, kilometertæller, speedometerkabel', 'thumbnail' => 'billed2245.jpg')
-      ,'starterdrev'                => array($kort . '/' . 'starterdrev.php'                 => 'starterdrevet er den del som først drejes rundt af startermotoren', 'thumbnail' => 'billed2246.jpg')
-      ,'støtteben'                  => array($kort . '/' . 'stotteben.php'                   => 'centerstøtteben, sidestøtteben', 'thumbnail' => 'billed2247.jpg')
-      ,'tændrør'                    => array($kort . '/' . 'tendror.php'                     => 'tændrørs koder, varmeværdi, champion, ngk, denso, champion, bosch, torch, tændrørstyper, tændrørshætte, iridium, gnist', 'thumbnail' => 'billed2250.jpg')
+      ,$setup['l_m_scooterensdele_affjedring']              => array($kort . '/' . 'affjedring.php'                  => $setup['l_m_scooterensdele_affjedring_description'], 'thumbnail' => 'billed2232.jpg')
+      ,$setup['l_m_scooterensdele_begrensninger']           => array($kort . '/' . 'begrensninger.php'               => $setup['l_m_scooterensdele_begrensninger_description'], 'thumbnail' => 'billed2233.jpg')
+      ,$setup['l_m_scooterensdele_benzintank']              => array($kort . '/' . 'benzintank.php'                  => $setup['l_m_scooterensdele_benzintank_description'], 'thumbnail' => 'billed2234.jpg')
+      ,$setup['l_m_scooterensdele_bremser']                 => array($kort . '/' . 'bremser.php'                     => $setup['l_m_scooterensdele_bremser_description'], 'thumbnail' => 'billed2235.jpg')
+      ,$setup['l_m_scooterensdele_brandstofindsprojtning']  => array($kort . '/' . 'brandstofindsprojtning.php'      => $setup['l_m_scooterensdele_brandstofindsprojtning_description'], 'thumbnail' => 'billed2236.jpg')
+      ,$setup['l_m_scooterensdele_dek']                     => array($kort . '/' . 'dek.php'                         => $setup['l_m_scooterensdele_dek_description'], 'thumbnail' => 'billed2237.jpg')
+      ,$setup['l_m_scooterensdele_karburator']              => array($kort . '/' . 'karburator.php'                  => $setup['l_m_scooterensdele_karburator_description'], 'thumbnail' => 'billed2239.jpg')
+      ,$setup['l_m_scooterensdele_kickstarter']             => array($kort . '/' . 'kickstarter.php'                 => $setup['l_m_scooterensdele_kickstarter_description'], 'thumbnail' => 'billed2240.jpg')
+      ,$setup['l_m_scooterensdele_koling']                  => array($kort . '/' . 'koling.php'                      => $setup['l_m_scooterensdele_koling_description'], 'thumbnail' => 'billed2241.jpg')
+      ,$setup['l_m_scooterensdele_lejer']                   => array($kort . '/' . 'lejer.php'                       => $setup['l_m_scooterensdele_lejer_description'], 'thumbnail' => 'billed2613.jpg')
+      ,$setup['l_m_scooterensdele_reservedelstegninger']    => array($kort . '/' . 'reservedelstegninger.php'        => $setup['l_m_scooterensdele_reservedelstegninger_description'], 'thumbnail' => 'billed2244.jpg')
+      ,$setup['l_m_scooterensdele_sidespejle']              => array($kort . '/' . 'sidespejle.php'                  => $setup['l_m_scooterensdele_sidespejle_description'], 'thumbnail' => 'sidespejle.jpg')
+      ,$setup['l_m_scooterensdele_speedometer']             => array($kort . '/' . 'speedometer.php'                 => $setup['l_m_scooterensdele_speedometer_description'], 'thumbnail' => 'billed2245.jpg')
+      ,$setup['l_m_scooterensdele_starterdrev']             => array($kort . '/' . 'starterdrev.php'                 => $setup['l_m_scooterensdele_starterdrev_description'], 'thumbnail' => 'billed2246.jpg')
+      ,$setup['l_m_scooterensdele_stotteben']               => array($kort . '/' . 'stotteben.php'                   => $setup['l_m_scooterensdele_stotteben_description'], 'thumbnail' => 'billed2247.jpg')
+      ,$setup['l_m_scooterensdele_tendror']                 => array($kort . '/' . 'tendror.php'                     => $setup['l_m_scooterensdele_tendror_description'], 'thumbnail' => 'billed2250.jpg')
 
-   ),'service' => array(
+   ),$setup['l_m_service'] => array(
        array(
-         'fejlfinding' => array(
-          'introduktion'            => array($kort . '/' . 'service_fejlfinding_introduktion.php'           => 'start her hvis du skal fejlfinde problemer på en scooter', 'thumbnail' => 'billed3447.jpg')
-         ,'benzintank'              => array($kort . '/' . 'service_fejlfinding_benzintank.php'             => 'test benzinhanen og benzinmåleren i benzintanken', 'thumbnail' => 'billed3306.jpg')
-         ,'bremser'                 => array($kort . '/' . 'service_fejlfinding_bremser.php'                => 'problemer med skivebremser og tromlebremser', 'thumbnail' => 'billed3726.jpg')
-         ,'elektrisk'               => array($kort . '/' . 'service_fejlfinding_elektrisk.php'              => 'fejlfinding af de fleste elektriske dele på scootere', 'thumbnail' => 'billed2278.jpg')
-         ,'karburator'              => array($kort . '/' . 'service_fejlfinding_karburator.php'             => 'fejlfind den automatiske choker, karburator, karburatorvarmer, mager/fed blanding', 'thumbnail' => 'billed3307.jpg')
-         ,'kendte problemer'        => array($kort . '/' . 'service_fejlfinding_kendteproblemer.php'        => 'her skriver jeg om nogen af de kendte problemer og løsninger jeg har hørt om', 'thumbnail' => 'billed3729.jpg')
-         ,'luftfilter og udstødning'=> array($kort . '/' . 'service_fejlfinding_luftfilterogudstodning.php' => 'sekundært luftfilter, røg', 'thumbnail' => 'billed3727.jpg')
-         ,'motor'                   => array($kort . '/' . 'service_fejlfinding_motor.php'                  => 'kompression, olie', 'thumbnail' => 'billed3308.jpg')
-         ,'starter'                 => array($kort . '/' . 'service_fejlfinding_starter.php'                => 'startermotor, starterrelæ', 'thumbnail' => 'billed3309.jpg')
-         ,'styretøj'                => array($kort . '/' . 'service_fejlfinding_styretoj.php'               => 'problemer med at dreje, hjul der hopper, affjedring', 'thumbnail' => 'billed3728.jpg')
-         ,'transmission'            => array($kort . '/' . 'service_fejlfinding_transmission.php'           => 'problemer med at køre, op af bakke, kilerem', 'thumbnail' => 'billed3310.jpg')
+         $setup['l_m_service_fejlfinding'] => array(
+          $setup['l_m_service_fejlfinding_introduktion']             => array($kort . '/' . 'service_fejlfinding_introduktion.php'           => $setup['l_m_service_fejlfinding_introduktion_description'], 'thumbnail' => 'billed3447.jpg')
+         ,$setup['l_m_service_fejlfinding_benzintank']               => array($kort . '/' . 'service_fejlfinding_benzintank.php'             => $setup['l_m_service_fejlfinding_benzintank_description'], 'thumbnail' => 'billed3306.jpg')
+         ,$setup['l_m_service_fejlfinding_bremser']                  => array($kort . '/' . 'service_fejlfinding_bremser.php'                => $setup['l_m_service_fejlfinding_bremser_description'], 'thumbnail' => 'billed3726.jpg')
+         ,$setup['l_m_service_fejlfinding_elektrisk']                => array($kort . '/' . 'service_fejlfinding_elektrisk.php'              => $setup['l_m_service_fejlfinding_elektrisk_description'], 'thumbnail' => 'billed2278.jpg')
+         ,$setup['l_m_service_fejlfinding_karburator']               => array($kort . '/' . 'service_fejlfinding_karburator.php'             => $setup['l_m_service_fejlfinding_karburator_description'], 'thumbnail' => 'billed3307.jpg')
+         ,$setup['l_m_service_fejlfinding_kendteproblemer']          => array($kort . '/' . 'service_fejlfinding_kendteproblemer.php'        => $setup['l_m_service_fejlfinding_kendteproblemer_description'], 'thumbnail' => 'billed3729.jpg')
+         ,$setup['l_m_service_fejlfinding_luftfilterogudstodning']   => array($kort . '/' . 'service_fejlfinding_luftfilterogudstodning.php' => $setup['l_m_service_fejlfinding_luftfilterogudstodning_description'], 'thumbnail' => 'billed3727.jpg')
+         ,$setup['l_m_service_fejlfinding_motor']                    => array($kort . '/' . 'service_fejlfinding_motor.php'                  => $setup['l_m_service_fejlfinding_motor_description'], 'thumbnail' => 'billed3308.jpg')
+         ,$setup['l_m_service_fejlfinding_starter']                  => array($kort . '/' . 'service_fejlfinding_starter.php'                => $setup['l_m_service_fejlfinding_starter_description'], 'thumbnail' => 'billed3309.jpg')
+         ,$setup['l_m_service_fejlfinding_styretoj']                 => array($kort . '/' . 'service_fejlfinding_styretoj.php'               => $setup['l_m_service_fejlfinding_styretoj_description'], 'thumbnail' => 'billed3728.jpg')
+         ,$setup['l_m_service_fejlfinding_transmission']             => array($kort . '/' . 'service_fejlfinding_transmission.php'           => $setup['l_m_service_fejlfinding_transmission_description'], 'thumbnail' => 'billed3310.jpg')
          )
       )
-      ,'affjedring'                 => array($kort . '/' . 'service_affjedring.php'          => 'fyld olie i forgaffelrør', 'thumbnail' => 'billed2965.jpg')
-      ,'bremser'                    => array($kort . '/' . 'service_bremser.php'             => 'kontroller bremsevæske niveau, udluftning af hydrauliske bremser', 'thumbnail' => 'billed2275.jpg')
-      ,'dæk'                        => array($kort . '/' . 'service_dek.php'                 => 'lap dæk og slange', 'thumbnail' => 'billed2276.jpg')
-      ,'elektrisk'                  => array($kort . '/' . 'service_elektrisk.php'           => 'kontrollere batteriet, oplad og ibrugtagning af nye batterier', 'thumbnail' => 'billed2277.jpg')
-      ,'forlygte'                   => array($kort . '/' . 'service_forlygte.php'            => 'justere forlygten', 'thumbnail' => 'billed2279.jpg')
-      ,'kabler'                     => array($kort . '/' . 'service_kabler.php'              => 'juster gaskablet og smør det', 'thumbnail' => 'billed2280.jpg')
-      ,'karburator'                 => array($kort . '/' . 'service_karburator.php'          => 'justere karburatorens tomgang, blandingsskrue og svømmer højde', 'thumbnail' => 'billed2281.jpg')
-      ,'køling'                     => array($kort . '/' . 'service_koling.php'              => 'kontrol, blanding, udluftning, dræning af kølervæske', 'thumbnail' => 'billed2966.jpg')
-      ,'luftfilter og udstødning'   => array($kort . '/' . 'service_luftfilter.php'          => 'rens luftfilter, tøm drænslange, slib og mal udstødning', 'thumbnail' => 'billed2282.jpg')
-      ,'motor'                      => array($kort . '/' . 'service_motor.php'               => 'montering af stempelringe', 'thumbnail' => 'billed2325.jpg')
-      ,'olie'                       => array($kort . '/' . 'service_olie.php'                => 'skift motorolie og gearolie', 'thumbnail' => 'billed2283.jpg')
-      ,'serviceskemaer'             => array($kort . '/' . 'service_serviceskemaer.php'      => 'serviceskemaer fra forskellige scootere', 'thumbnail' => 'billed2284.jpg')
-      ,'tilspændingsmoment'         => array($kort . '/' . 'service_tilspendingsmoment.php'  => 'læs hvor meget de forskellige skruer, bolte, møtrikker skal spændes med en momentnøgle', 'thumbnail' => 'billed2285.jpg')
-      ,'transmission'               => array($kort . '/' . 'service_transmission.php'        => 'kontrollere transmissions dele for slid', 'thumbnail' => 'billed2286.jpg')
-      ,'tænding'                    => array($kort . '/' . 'service_tending.php'             => 'kontrollere tændingstiming med en stroboskoplampe', 'thumbnail' => 'billed2287.jpg')
-      ,'tændrør'                    => array($kort . '/' . 'service_tendror.php'             => 'juster elektrode afstand og se på tændrøret om der er problemer med motoren, montering og se liste med tændrør på forskellige scooter modeller', 'thumbnail' => 'billed2288.jpg')
-      ,'ventiler'                   => array($kort . '/' . 'service_ventiler.php'            => 'juster ventiler og se ventil spillerum for forskellige scootere', 'thumbnail' => 'billed2289.jpg')
+      ,$setup['l_m_service_affjedring']                              => array($kort . '/' . 'service_affjedring.php'          => $setup['l_m_service_affjedring_description'], 'thumbnail' => 'billed2965.jpg')
+      ,$setup['l_m_service_bremser']                                 => array($kort . '/' . 'service_bremser.php'             => $setup['l_m_service_bremser_description'], 'thumbnail' => 'billed2275.jpg')
+      ,$setup['l_m_service_dek']                                     => array($kort . '/' . 'service_dek.php'                 => $setup['l_m_service_dek_description'], 'thumbnail' => 'billed2276.jpg')
+      ,$setup['l_m_service_elektrisk']                               => array($kort . '/' . 'service_elektrisk.php'           => $setup['l_m_service_elektrisk_description'], 'thumbnail' => 'billed2277.jpg')
+      ,$setup['l_m_service_forlygte']                                => array($kort . '/' . 'service_forlygte.php'            => $setup['l_m_service_forlygte_description'], 'thumbnail' => 'billed2279.jpg')
+      ,$setup['l_m_service_kabler']                                  => array($kort . '/' . 'service_kabler.php'              => $setup['l_m_service_kabler_description'], 'thumbnail' => 'billed2280.jpg')
+      ,$setup['l_m_service_karburator']                              => array($kort . '/' . 'service_karburator.php'          => $setup['l_m_service_karburator_description'], 'thumbnail' => 'billed2281.jpg')
+      ,$setup['l_m_service_koling']                                  => array($kort . '/' . 'service_koling.php'              => $setup['l_m_service_koling_description'], 'thumbnail' => 'billed2966.jpg')
+      ,$setup['l_m_service_luftfilter']                              => array($kort . '/' . 'service_luftfilter.php'          => $setup['l_m_service_luftfilter_description'], 'thumbnail' => 'billed2282.jpg')
+      ,$setup['l_m_service_motor']                                   => array($kort . '/' . 'service_motor.php'               => $setup['l_m_service_motor_description'], 'thumbnail' => 'billed2325.jpg')
+      ,$setup['l_m_service_olie']                                    => array($kort . '/' . 'service_olie.php'                => $setup['l_m_service_olie_description'], 'thumbnail' => 'billed2283.jpg')
+      ,$setup['l_m_service_serviceskemaer']                          => array($kort . '/' . 'service_serviceskemaer.php'      => $setup['l_m_service_serviceskemaer_description'], 'thumbnail' => 'billed2284.jpg')
+      ,$setup['l_m_service_tilspendingsmoment']                      => array($kort . '/' . 'service_tilspendingsmoment.php'  => $setup['l_m_service_tilspendingsmoment_description'], 'thumbnail' => 'billed2285.jpg')
+      ,$setup['l_m_service_transmission']                            => array($kort . '/' . 'service_transmission.php'        => $setup['l_m_service_transmission_description'], 'thumbnail' => 'billed2286.jpg')
+      ,$setup['l_m_service_tending']                                 => array($kort . '/' . 'service_tending.php'             => $setup['l_m_service_tending_description'], 'thumbnail' => 'billed2287.jpg')
+      ,$setup['l_m_service_tendror']                                 => array($kort . '/' . 'service_tendror.php'             => $setup['l_m_service_tendror_description'], 'thumbnail' => 'billed2288.jpg')
+      ,$setup['l_m_service_ventiler']                                => array($kort . '/' . 'service_ventiler.php'            => $setup['l_m_service_ventiler_description'], 'thumbnail' => 'billed2289.jpg')
 
-   ),'tilbehør / Ekstra udstyr' => array(
+   ),$setup['l_m_tilbehorekstraudstyr'] => array(
        array(
-           'batterioplader' => array(
-             'CTEK XS 800'                => array($kort . '/' . 'specielt_ctekxs800.php'          => 'lær om battiopladeren CTEK XS 800', 'thumbnail' => 'billed3311.jpg')
-            ,'OptiMate 4'                 => array($kort . '/' . 'specielt_optimate4.php'          => 'lær om battiopladeren OptiMate 4', 'thumbnail' => 'billed2257.jpg')
+           $setup['l_m_tilbehorekstraudstyr_batterioplader'] => array(
+             $setup['l_m_tilbehorekstraudstyr_batterioplader_ctekxs800']                 => array($kort . '/' . 'specielt_ctekxs800.php'          => $setup['l_m_tilbehorekstraudstyr_batterioplader_ctekxs800_description'], 'thumbnail' => 'billed3311.jpg')
+            ,$setup['l_m_tilbehorekstraudstyr_batterioplader_optimate4']                 => array($kort . '/' . 'specielt_optimate4.php'          => $setup['l_m_tilbehorekstraudstyr_batterioplader_optimate4_description'], 'thumbnail' => 'billed2257.jpg')
          )
       )
-      ,'tyverisikring (låse og alarmer)'              => array($kort . '/' . 'tyverisikring.php'               => 'låsetyper og råd til beskyttelse af din scooter mod tyveri, alarmer gsm, gprs, gps sporing, tyvens værktøj', 'thumbnail' => 'billed2266.jpg')
-      ,'omformer (12VDC til 220VAC)'                   => array($kort . '/' . 'specielt_omformer.php'           => 'speciel side om omformer som kan lave scooterens 12 volt jævnstrøm om til 220 volt vækselstrøm', 'thumbnail' => 'billed2971.jpg')
-      ,'LED (diode lys)'            => array($kort . '/' . 'elektrisk_led.php'               => 'lidt info om LED som er lys jeg prøvede at sætte på min scooter', 'thumbnail' => 'billed3655.jpg')
-      ,'fartbegrænser'              => array($kort . '/' . 'fartbegrenser.php'               => 'elektronik der kan nedsætte scooterens topfart eventuelt slå til og fra med en kontakt', 'thumbnail' => 'fartbegrenser.jpg')
-      ,'malossi multivar'           => array($kort . '/' . 'malossimultivar.php'             => 'kit til transmissionen', 'thumbnail' => 'billed3440.jpg')
-      ,'big bore kit'               => array($kort . '/' . 'bigborekit.php'                  => 'cylinder med større boring', 'thumbnail' => 'billed3654.jpg')
-      ,'indsprøjtningskit'          => array($kort . '/' . 'indsprojtningskit.php'           => 'lav en motor med karburator om til en motor med indsprøjtning med et kit', 'thumbnail' => 'billed3655.jpg')
-      ,'kamera'                     => array($kort . '/' . 'kamera.php'                      => 'info om kameraer som kan monteres på hjelmen så man kan optage når man køre', 'thumbnail' => 'billed3441.jpg')
+      ,$setup['l_m_tilbehorekstraudstyr_tyverisikring']              => array($kort . '/' . 'tyverisikring.php'               => $setup['l_m_tilbehorekstraudstyr_tyverisikring_description'], 'thumbnail' => 'billed2266.jpg')
+      ,$setup['l_m_tilbehorekstraudstyr_omformer']                   => array($kort . '/' . 'specielt_omformer.php'           => $setup['l_m_tilbehorekstraudstyr_omformer_description'], 'thumbnail' => 'billed2971.jpg')
+      ,$setup['l_m_tilbehorekstraudstyr_led']                        => array($kort . '/' . 'elektrisk_led.php'               => $setup['l_m_tilbehorekstraudstyr_led_description'], 'thumbnail' => 'billed3655.jpg')
+      ,$setup['l_m_tilbehorekstraudstyr_fartbegrenser']              => array($kort . '/' . 'fartbegrenser.php'               => $setup['l_m_tilbehorekstraudstyr_fartbegrenser_description'], 'thumbnail' => 'fartbegrenser.jpg')
+      ,$setup['l_m_tilbehorekstraudstyr_malossimultivar']            => array($kort . '/' . 'malossimultivar.php'             => $setup['l_m_tilbehorekstraudstyr_malossimultivar_description'], 'thumbnail' => 'billed3440.jpg')
+      ,$setup['l_m_tilbehorekstraudstyr_bigborekit']                 => array($kort . '/' . 'bigborekit.php'                  => $setup['l_m_tilbehorekstraudstyr_bigborekit_description'], 'thumbnail' => 'billed3654.jpg')
+      ,$setup['l_m_tilbehorekstraudstyr_indsprojtningskit']          => array($kort . '/' . 'indsprojtningskit.php'           => $setup['l_m_tilbehorekstraudstyr_indsprojtningskit_description'], 'thumbnail' => 'billed3655.jpg')
+      ,$setup['l_m_tilbehorekstraudstyr_kamera']                     => array($kort . '/' . 'kamera.php'                      => $setup['l_m_tilbehorekstraudstyr_kamera_description'], 'thumbnail' => 'billed3441.jpg')
 
-   ),'specielt' => array(
+   ),$setup['l_m_specielt'] => array(
        array(
-           'rodekassen' => array(
-             'andet'                      => array($kort . '/' . 'rodekassen_andet.php'            => 'diverse emner som endnu ikke er færdig skrevet', 'thumbnail' => 'billed2967.jpg')
-            ,'elektrisk arbejde'          => array($kort . '/' . 'elektrisk_arbejde.php'           => 'lodning, krympeflex, sikringer, opladere, løse stik til CDI boks og sådan noget', 'thumbnail' => 'billed3655.jpg')
-            ,'slid kan øge tophastigheden'=> array($kort . '/' . 'slidkanogetophastigheden.php'    => 'noget om at slid i variatoren måske kan øge scooterens topfart', 'thumbnail' => 'slidkanogetophastigheden.jpg')
-            ,'forsøg på at finde ud af hvordan man får nummerplade på købt brugt scooter uden papir'              => array($kort . '/' . 'forsogpaatfindeudafhvordanmanfarnummerpladepakobtbrugtscooterudenpapir.php'               => 'her prøver jeg og finde ud af hvordan man får nummerplade på en scooter man har købt brugt uden papir', 'thumbnail' => 'forsogpaatfindeudafhvordanmanfarnummerpladepakobtbrugtscooterudenpapir.jpg')
-            ,'nummerplade generator'      => array($kort . '/' . 'nummerplade.php'                 => '', 'thumbnail' => 'nummerplade.jpg')
+           $setup['l_m_specielt_rodekassen']  => array(
+             $setup['l_m_specielt_rodekassen_andet']                       => array($kort . '/' . 'rodekassen_andet.php'            => $setup['l_m_specielt_rodekassen_andet_description'], 'thumbnail' => 'billed2967.jpg')
+            ,$setup['l_m_specielt_rodekassen_elektriskarbejde']            => array($kort . '/' . 'elektrisk_arbejde.php'           => $setup['l_m_specielt_rodekassen_elektriskarbejde_description'], 'thumbnail' => 'billed3655.jpg')
+            ,$setup['l_m_specielt_rodekassen_slidkanogetophastigheden']    => array($kort . '/' . 'slidkanogetophastigheden.php'    => $setup['l_m_specielt_rodekassen_slidkanogetophastigheden_description'], 'thumbnail' => 'slidkanogetophastigheden.jpg')
+            ,$setup['l_m_specielt_rodekassen_forsogpaatfindeudafhvordanmanfarnummerpladepakobtbrugtscooterudenpapir']               => array($kort . '/' . 'forsogpaatfindeudafhvordanmanfarnummerpladepakobtbrugtscooterudenpapir.php'               => $setup['l_m_specielt_rodekassen_forsogpaatfindeudafhvordanmanfarnummerpladepakobtbrugtscooterudenpapir_description'], 'thumbnail' => 'forsogpaatfindeudafhvordanmanfarnummerpladepakobtbrugtscooterudenpapir.jpg')
+            ,$setup['l_m_specielt_rodekassen_nummerplade']                 => array($kort . '/' . 'nummerplade.php'                 => $setup['l_m_specielt_rodekassen_nummerplade_description'], 'thumbnail' => 'nummerplade.jpg')
          )
       )
-      ,'ATV'                        => array($kort . '/' . 'atv.php'                         => 'her samler jeg info om ATV (All Terain Vehicle) så er der måske nogen der kan bruge det', 'thumbnail' => 'billed3442.jpg')
-      ,'brændselscelle'             => array($kort . '/' . 'brandselscelle.php'              => 'lær om brændselscelle teknologi', 'thumbnail' => 'billed2273.jpg')
+      ,$setup['l_m_specielt_rodekassen_atv']                               => array($kort . '/' . 'atv.php'                         => $setup['l_m_specielt_rodekassen_atv_description'], 'thumbnail' => 'billed3442.jpg')
+      ,$setup['l_m_specielt_rodekassen_brandselscelle']                    => array($kort . '/' . 'brandselscelle.php'              => $setup['l_m_specielt_rodekassen_brandselscelle_description'], 'thumbnail' => 'billed2273.jpg')
 
-   ),'scootermærker' => array(
-       'galleri'                    => array($kort . '/' . 'galleri.php'                       => 'her kan du se en oversigt over alle scootermærker og billeder af scooterne', 'thumbnail' => 'billed3444.jpg')
+   ),$setup['l_m_scootermerker'] => array(
+       $setup['l_m_scootermerker_galleri']                            => array($kort . '/' . 'galleri.php'                       => $setup['l_m_scootermerker_galleri_description'], 'thumbnail' => 'billed3444.jpg')
       ,array(
-           'A - B - C - D' => array(
-             'a2b'                        => array($kort . '/' . 'altoma2b.php'                    => 'se A2B' . $scootergentag, 'logo' => 'logo_a2b')
-            ,'adly'                       => array($kort . '/' . 'altomadly.php'                   => 'se Adly' . $scootergentag, 'logo' => 'logo_adly')
-            ,'agm'                        => array($kort . '/' . 'altomagm.php'                    => 'se AGM' . $scootergentag, 'logo' => 'logo_agm')
-            ,'amp'                        => array($kort . '/' . 'altomamp.php'                    => 'se Amp' . $scootergentag, 'logo' => 'logo_amp')
-            ,'apollo'                     => array($kort . '/' . 'altomapollo.php'                 => 'se Apollo' . $scootergentag, 'logo' => 'logo_apollo')
-            ,'aprilia'                    => array($kort . '/' . 'altomaprilia.php'                => 'se Aprilia' . $scootergentag, 'logo' => 'logo_aprilia')
-            ,'atala'                      => array($kort . '/' . 'altomatala.php'                  => 'se Atala' . $scootergentag, 'logo' => 'logo_atala')
-            ,'avanti'                     => array($kort . '/' . 'altomavanti.php'                 => 'se Avanti' . $scootergentag, 'logo' => 'logo_avanti')
-            ,'baotian'                    => array($kort . '/' . 'altombaotian.php'                => 'se Baotian' . $scootergentag, 'logo' => 'logo_baotian')
-            ,'beta'                       => array($kort . '/' . 'altombeta.php'                   => 'se Beta' . $scootergentag, 'logo' => 'logo_beta')
-            ,'busetto'                    => array($kort . '/' . 'altombusetto.php'                => 'se Busetto' . $scootergentag, 'logo' => 'logo_busetto')
-            ,'cpi'                        => array($kort . '/' . 'altomcpi.php'                    => 'se CPI' . $scootergentag, 'logo' => 'logo_cpi')
-            ,'derbi'                      => array($kort . '/' . 'altomderbi.php'                  => 'se Derbi' . $scootergentag, 'logo' => 'logo_derbi')
-         ),'E - F - G - H - I' => array(
-             'e-max'                      => array($kort . '/' . 'altomemax.php'                   => 'se E-max' . $scootergentag, 'logo' => 'logo_emax')
-            ,'earthenergy'                => array($kort . '/' . 'altomearthenergy.php'            => 'se Earthenergy' . $scootergentag, 'logo' => 'logo_earthenergy')
-            ,'ebretti'                    => array($kort . '/' . 'altomebretti.php'                => 'se Ebretti' . $scootergentag, 'logo' => 'logo_ebretti')
-            ,'ego'                        => array($kort . '/' . 'altomego.php'                    => 'se eGO' . $scootergentag, 'logo' => 'logo_ego')
-            ,'evt'                        => array($kort . '/' . 'altomevt.php'                    => 'se EVT' . $scootergentag, 'logo' => 'logo_evt')
-            ,'eton'                       => array($kort . '/' . 'altometon.php'                   => 'se E-ton' . $scootergentag, 'logo' => 'logo_eton')
-            ,'generic'                    => array($kort . '/' . 'altomgeneric.php'                => 'se Generic' . $scootergentag, 'logo' => 'logo_generic')
-            ,'giantco'                    => array($kort . '/' . 'altomgiantco.php'                => 'se Giantco' . $scootergentag, 'logo' => 'logo_giantco')
-            ,'Giantco E-Buddy'            => array($kort . '/' . 'specielt_giantcoebuddy.php'      => 'om den elektriske scooter Giantco E-Buddy', 'logo' => 'logo_giantco_ebuddy')
-            ,'gilera'                     => array($kort . '/' . 'altomgilera.php'                 => 'se Gilera' . $scootergentag, 'logo' => 'logo_gilera')
-            ,'govecs'                     => array($kort . '/' . 'altomgovecs.php'                 => 'se Govecs' . $scootergentag, 'logo' => 'logo_govecs')
-            ,'hero majestic'              => array($kort . '/' . 'altomheromajestic.php'           => 'se Hero majestic' . $scootergentag, 'logo' => 'logo_heromajestic')
-            ,'honda'                      => array($kort . '/' . 'altomhonda.php'                  => 'se Honda' . $scootergentag, 'logo' => 'logo_honda')
-            ,'italjet'                    => array($kort . '/' . 'altomitaljet.php'                => 'se Italjet' . $scootergentag, 'logo' => 'logo_italjet')
-         ),'J - K - L - M - N' => array(
-             'jincheng'                   => array($kort . '/' . 'altomjincheng.php'               => 'se Jincheng' . $scootergentag, 'logo' => 'logo_jincheng')
-            ,'jinlun'                     => array($kort . '/' . 'altomjinlun.php'                 => 'se Jinlun' . $scootergentag, 'logo' => 'logo_jinlun')
-            ,'keeway'                     => array($kort . '/' . 'altomkeeway.php'                 => 'se Keeway' . $scootergentag, 'logo' => 'logo_keeway')
-            ,'kinroad'                    => array($kort . '/' . 'altomkinroad.php'                => 'se Kinroad' . $scootergentag, 'logo' => 'logo_kinroad')
-            ,'kreidler'                   => array($kort . '/' . 'altomkreidler.php'               => 'se Kreidler' . $scootergentag, 'logo' => 'logo_kreidler')
-            ,'kymco'                      => array($kort . '/' . 'altomkymco.php'                  => 'se Kymco' . $scootergentag, 'logo' => 'logo_kymco')
-            ,'Kymco Super 8'              => array($kort . '/' . 'specielt_kymcosuper8.php'        => 'her har jeg skrevet om nogen af de problemer jeg har haft med denne model', 'logo' => 'logo_kymco_super8')
-            ,'lifan'                      => array($kort . '/' . 'altomlifan.php'                  => 'se Lifan' . $scootergentag, 'logo' => 'logo_lifan')
-            ,'longjia (VGA)'              => array($kort . '/' . 'altomlongjia.php'                => 'se Longjia' . $scootergentag, 'logo' => 'logo_longjia')
-            ,'luyuan'                     => array($kort . '/' . 'altomluyuan.php'                 => 'se Luyuan' . $scootergentag, 'logo' => 'logo_luyuan')
-            ,'lynx'                       => array($kort . '/' . 'altomlynx.php'                   => 'se Lynx' . $scootergentag, 'logo' => 'logo_lynx')
-            ,'nicom'                      => array($kort . '/' . 'altomnicom.php'                  => 'se Nicom' . $scootergentag, 'logo' => 'logo_nicom')
-            ,'nordic e-bike'              => array($kort . '/' . 'altomnordicebike.php'            => 'se Nordic e-bike' . $scootergentag, 'logo' => 'logo_nordicebike')
-            ,'malaguti'                   => array($kort . '/' . 'altommalaguti.php'               => 'se Malaguti' . $scootergentag, 'logo' => 'logo_malaguti')
-            ,'motor mania'                => array($kort . '/' . 'altommotormania.php'             => 'se Motor Mania' . $scootergentag, 'logo' => 'logo_motormania')
-            ,'norsjö'                     => array($kort . '/' . 'altomnorsjo.php'                 => 'se Norsjö' . $scootergentag, 'logo' => 'logo_norsjo')
-         ),'O - P - Q - R - S' => array(
-             'peugeot'                    => array($kort . '/' . 'altompeugeot.php'                => 'se Peugeot' . $scootergentag, 'logo' => 'logo_peugeot')
-            ,'Peugeot E-Vivacity'         => array($kort . '/' . 'specielt_peugeotevivacity.php'   => 'om den elektriske scooter Peugeot E-Vivacity som dog ikke har været solgt i danmark', 'logo' => 'logo_peugeot_evivacity')
-            ,'pgo'                        => array($kort . '/' . 'altompgo.php'                    => 'se PGO' . $scootergentag, 'logo' => 'logo_pgo')
-            ,'piaggio'                    => array($kort . '/' . 'altompiaggio.php'                => 'se Piaggio' . $scootergentag, 'logo' => 'logo_piaggio')
-            ,'puch'                       => array($kort . '/' . 'altompuch.php'                   => 'se Puch' . $scootergentag, 'logo' => 'logo_puch')
-            ,'qingqi'                     => array($kort . '/' . 'altomqingqi.php'                 => 'se Qingqi' . $scootergentag, 'logo' => 'logo_qingqi')
-            ,'regal raptor'               => array($kort . '/' . 'altomregalraptor.php'            => 'se Regal raptor' . $scootergentag, 'logo' => 'logo_regalraptor')
-            ,'rieju'                      => array($kort . '/' . 'altomrieju.php'                  => 'se Rieju' . $scootergentag, 'logo' => 'logo_rieju')
-            ,'romet'                      => array($kort . '/' . 'altomromet.php'                  => 'se Romet' . $scootergentag, 'logo' => 'logo_romet')
-            ,'sachs'                      => array($kort . '/' . 'altomsachs.php'                  => 'se Sachs' . $scootergentag, 'logo' => 'logo_sachs')
-            ,'secma'                      => array($kort . '/' . 'altomsecma.php'                  => 'se Secma' . $scootergentag, 'logo' => 'logo_secma')
-            ,'scoopie'                    => array($kort . '/' . 'altomscoopie.php'                => 'se Scoopie' . $scootergentag, 'logo' => 'logo_scoopie')
-            ,'skyteam'                    => array($kort . '/' . 'altomskyteam.php'                => 'se Skyteam' . $scootergentag, 'logo' => 'logo_skyteam')
-            ,'solex'                      => array($kort . '/' . 'altomsolex.php'                  => 'se Solex' . $scootergentag, 'logo' => 'logo_solex')
-            ,'suzuki'                     => array($kort . '/' . 'altomsuzuki.php'                 => 'se Suzuki' . $scootergentag, 'logo' => 'logo_suzuki')
-            ,'swap'                       => array($kort . '/' . 'altomswap.php'                   => 'se SWAP' . $scootergentag, 'logo' => 'logo_swap')
-            ,'sym'                        => array($kort . '/' . 'altomsym.php'                    => 'se Sym' . $scootergentag, 'logo' => 'logo_sym')
-         ),'T - U - V - W - X - Y - Z' => array(
-             'texas'                      => array($kort . '/' . 'altomtexas.php'                  => 'se Texas' . $scootergentag, 'logo' => 'logo_texas')
-            ,'tgb'                        => array($kort . '/' . 'altomtgb.php'                    => 'se TGB' . $scootergentag, 'logo' => 'logo_tgb')
-            ,'tms'                        => array($kort . '/' . 'altomtms.php'                    => 'se TMS' . $scootergentag, 'logo' => 'logo_tms')
-            ,'tomos'                      => array($kort . '/' . 'altomtomos.php'                  => 'se Tomos' . $scootergentag, 'logo' => 'logo_tomos')
-            ,'trilet'                     => array($kort . '/' . 'altomtrilet.php'                 => 'se Trilet' . $scootergentag, 'logo' => 'logo_trilet')
-            ,'varg'                       => array($kort . '/' . 'altomvarg.php'                   => 'se Varg' . $scootergentag, 'logo' => 'logo_varg')
-            ,'vespa'                      => array($kort . '/' . 'altomvespa.php'                  => 'se Vespa' . $scootergentag, 'logo' => 'logo_vespa')
-            ,'xingyue'                    => array($kort . '/' . 'altomxingyue.php'                => 'se Xingyue' . $scootergentag, 'logo' => 'logo_xingyue')
-            ,'yamaha'                     => array($kort . '/' . 'altomyamaha.php'                 => 'se Yamaha' . $scootergentag, 'logo' => 'logo_yamaha')
-            ,'yamasaki'                   => array($kort . '/' . 'altomyamasaki.php'               => 'se Yamasaki' . $scootergentag, 'logo' => 'logo_yamasaki')
-            ,'yiben'                      => array($kort . '/' . 'altomyiben.php'                  => 'se Yiben' . $scootergentag, 'logo' => 'logo_yiben')
-            ,'zhenhua'                    => array($kort . '/' . 'altomzhenhua.php'                => 'se Zhenhua' . $scootergentag, 'logo' => 'logo_zhenhua')
-            ,'zongshen'                   => array($kort . '/' . 'altomzongshen.php'               => 'se Zongshen' . $scootergentag, 'logo' => 'logo_zongshen')
+           $setup['l_m_scootermerker_1'] => array(
+             $setup['l_m_scootermerker_1_a2b']                        => array($kort . '/' . 'altoma2b.php'                    => $setup['l_m_scootermerker_1_a2b_description'], 'logo' => 'logo_a2b')
+            ,$setup['l_m_scootermerker_1_adly']                       => array($kort . '/' . 'altomadly.php'                   => $setup['l_m_scootermerker_1_adly_description'], 'logo' => 'logo_adly')
+            ,$setup['l_m_scootermerker_1_agm']                        => array($kort . '/' . 'altomagm.php'                    => $setup['l_m_scootermerker_1_agm_description'], 'logo' => 'logo_agm')
+            ,$setup['l_m_scootermerker_1_amp']                        => array($kort . '/' . 'altomamp.php'                    => $setup['l_m_scootermerker_1_amp_description'], 'logo' => 'logo_amp')
+            ,$setup['l_m_scootermerker_1_apollo']                     => array($kort . '/' . 'altomapollo.php'                 => $setup['l_m_scootermerker_1_apollo_description'], 'logo' => 'logo_apollo')
+            ,$setup['l_m_scootermerker_1_aprilia']                    => array($kort . '/' . 'altomaprilia.php'                => $setup['l_m_scootermerker_1_aprilia_description'], 'logo' => 'logo_aprilia')
+            ,$setup['l_m_scootermerker_1_atala']                      => array($kort . '/' . 'altomatala.php'                  => $setup['l_m_scootermerker_1_atala_description'], 'logo' => 'logo_atala')
+            ,$setup['l_m_scootermerker_1_avanti']                     => array($kort . '/' . 'altomavanti.php'                 => $setup['l_m_scootermerker_1_avanti_description'], 'logo' => 'logo_avanti')
+            ,$setup['l_m_scootermerker_1_baotian']                    => array($kort . '/' . 'altombaotian.php'                => $setup['l_m_scootermerker_1_baotian_description'], 'logo' => 'logo_baotian')
+            ,$setup['l_m_scootermerker_1_beta']                       => array($kort . '/' . 'altombeta.php'                   => $setup['l_m_scootermerker_1_beta_description'], 'logo' => 'logo_beta')
+            ,$setup['l_m_scootermerker_1_busetto']                    => array($kort . '/' . 'altombusetto.php'                => $setup['l_m_scootermerker_1_busetto_description'], 'logo' => 'logo_busetto')
+            ,$setup['l_m_scootermerker_1_cpi']                        => array($kort . '/' . 'altomcpi.php'                    => $setup['l_m_scootermerker_1_cpi_description'], 'logo' => 'logo_cpi')
+            ,$setup['l_m_scootermerker_1_derbi']                      => array($kort . '/' . 'altomderbi.php'                  => $setup['l_m_scootermerker_1_derbi_description'], 'logo' => 'logo_derbi')
+         ),$setup['l_m_scootermerker_2'] => array(
+             $setup['l_m_scootermerker_2_emax']                       => array($kort . '/' . 'altomemax.php'                   => $setup['l_m_scootermerker_2_emax_description'], 'logo' => 'logo_emax')
+            ,$setup['l_m_scootermerker_2_earthenergy']                => array($kort . '/' . 'altomearthenergy.php'            => $setup['l_m_scootermerker_2_earthenergy_description'], 'logo' => 'logo_earthenergy')
+            ,$setup['l_m_scootermerker_2_ebretti']                    => array($kort . '/' . 'altomebretti.php'                => $setup['l_m_scootermerker_2_ebretti_description'], 'logo' => 'logo_ebretti')
+            ,$setup['l_m_scootermerker_2_ego']                        => array($kort . '/' . 'altomego.php'                    => $setup['l_m_scootermerker_2_ego_description'], 'logo' => 'logo_ego')
+            ,$setup['l_m_scootermerker_2_evt']                        => array($kort . '/' . 'altomevt.php'                    => $setup['l_m_scootermerker_2_evt_description'], 'logo' => 'logo_evt')
+            ,$setup['l_m_scootermerker_2_eton']                       => array($kort . '/' . 'altometon.php'                   => $setup['l_m_scootermerker_2_eton_description'], 'logo' => 'logo_eton')
+            ,$setup['l_m_scootermerker_2_generic']                    => array($kort . '/' . 'altomgeneric.php'                => $setup['l_m_scootermerker_2_generic_description'], 'logo' => 'logo_generic')
+            ,$setup['l_m_scootermerker_2_giantco']                    => array($kort . '/' . 'altomgiantco.php'                => $setup['l_m_scootermerker_2_giantco_description'], 'logo' => 'logo_giantco')
+            ,$setup['l_m_scootermerker_2_giantcoebuddy']              => array($kort . '/' . 'specielt_giantcoebuddy.php'      => $setup['l_m_scootermerker_2_giantcoebuddy_description'], 'logo' => 'logo_giantco_ebuddy')
+            ,$setup['l_m_scootermerker_2_gilera']                     => array($kort . '/' . 'altomgilera.php'                 => $setup['l_m_scootermerker_2_gilera_description'], 'logo' => 'logo_gilera')
+            ,$setup['l_m_scootermerker_2_govecs']                     => array($kort . '/' . 'altomgovecs.php'                 => $setup['l_m_scootermerker_2_govecs_description'], 'logo' => 'logo_govecs')
+            ,$setup['l_m_scootermerker_2_heromajestic']               => array($kort . '/' . 'altomheromajestic.php'           => $setup['l_m_scootermerker_2_heromajestic_description'], 'logo' => 'logo_heromajestic')
+            ,$setup['l_m_scootermerker_2_honda']                      => array($kort . '/' . 'altomhonda.php'                  => $setup['l_m_scootermerker_2_honda_description'], 'logo' => 'logo_honda')
+            ,$setup['l_m_scootermerker_2_italjet']                    => array($kort . '/' . 'altomitaljet.php'                => $setup['l_m_scootermerker_2_italjet_description'], 'logo' => 'logo_italjet')
+         ),$setup['l_m_scootermerker_3'] => array(
+             $setup['l_m_scootermerker_3_jincheng']                   => array($kort . '/' . 'altomjincheng.php'               => $setup['l_m_scootermerker_3_jincheng_description'], 'logo' => 'logo_jincheng')
+            ,$setup['l_m_scootermerker_3_jinlun']                     => array($kort . '/' . 'altomjinlun.php'                 => $setup['l_m_scootermerker_3_jinlun_description'], 'logo' => 'logo_jinlun')
+            ,$setup['l_m_scootermerker_3_keeway']                     => array($kort . '/' . 'altomkeeway.php'                 => $setup['l_m_scootermerker_3_keeway_description'], 'logo' => 'logo_keeway')
+            ,$setup['l_m_scootermerker_3_kinroad']                    => array($kort . '/' . 'altomkinroad.php'                => $setup['l_m_scootermerker_3_kinroad_description'], 'logo' => 'logo_kinroad')
+            ,$setup['l_m_scootermerker_3_kreidler']                   => array($kort . '/' . 'altomkreidler.php'               => $setup['l_m_scootermerker_3_kreidler_description'], 'logo' => 'logo_kreidler')
+            ,$setup['l_m_scootermerker_3_kymco']                      => array($kort . '/' . 'altomkymco.php'                  => $setup['l_m_scootermerker_3_kymco_description'], 'logo' => 'logo_kymco')
+            ,$setup['l_m_scootermerker_3_kymcosuper8']                => array($kort . '/' . 'specielt_kymcosuper8.php'        => $setup['l_m_scootermerker_3_kymcosuper8_description'], 'logo' => 'logo_kymco_super8')
+            ,$setup['l_m_scootermerker_3_lifan']                      => array($kort . '/' . 'altomlifan.php'                  => $setup['l_m_scootermerker_3_lifan_description'], 'logo' => 'logo_lifan')
+            ,$setup['l_m_scootermerker_3_longjia']                    => array($kort . '/' . 'altomlongjia.php'                => $setup['l_m_scootermerker_3_longjia_description'], 'logo' => 'logo_longjia')
+            ,$setup['l_m_scootermerker_3_luyuan']                     => array($kort . '/' . 'altomluyuan.php'                 => $setup['l_m_scootermerker_3_luyuan_description'], 'logo' => 'logo_luyuan')
+            ,$setup['l_m_scootermerker_3_lynx']                       => array($kort . '/' . 'altomlynx.php'                   => $setup['l_m_scootermerker_3_lynx_description'], 'logo' => 'logo_lynx')
+            ,$setup['l_m_scootermerker_3_nicom']                      => array($kort . '/' . 'altomnicom.php'                  => $setup['l_m_scootermerker_3_nicom_description'], 'logo' => 'logo_nicom')
+            ,$setup['l_m_scootermerker_3_nordicebike']                => array($kort . '/' . 'altomnordicebike.php'            => $setup['l_m_scootermerker_3_nordicebike_description'], 'logo' => 'logo_nordicebike')
+            ,$setup['l_m_scootermerker_3_malaguti']                   => array($kort . '/' . 'altommalaguti.php'               => $setup['l_m_scootermerker_3_malaguti_description'], 'logo' => 'logo_malaguti')
+            ,$setup['l_m_scootermerker_3_motormania']                 => array($kort . '/' . 'altommotormania.php'             => $setup['l_m_scootermerker_3_motormania_description'], 'logo' => 'logo_motormania')
+            ,$setup['l_m_scootermerker_3_norsjo']                     => array($kort . '/' . 'altomnorsjo.php'                 => $setup['l_m_scootermerker_3_norsjo_description'], 'logo' => 'logo_norsjo')
+         ),$setup['l_m_scootermerker_4'] => array(
+             $setup['l_m_scootermerker_4_peugeot']                    => array($kort . '/' . 'altompeugeot.php'                => $setup['l_m_scootermerker_4_peugeot_description'], 'logo' => 'logo_peugeot')
+            ,$setup['l_m_scootermerker_4_peugeotevivacity']           => array($kort . '/' . 'specielt_peugeotevivacity.php'   => $setup['l_m_scootermerker_4_peugeotevivacity_description'], 'logo' => 'logo_peugeot_evivacity')
+            ,$setup['l_m_scootermerker_4_pgo']                        => array($kort . '/' . 'altompgo.php'                    => $setup['l_m_scootermerker_4_pgo_description'], 'logo' => 'logo_pgo')
+            ,$setup['l_m_scootermerker_4_piaggio']                    => array($kort . '/' . 'altompiaggio.php'                => $setup['l_m_scootermerker_4_piaggio_description'], 'logo' => 'logo_piaggio')
+            ,$setup['l_m_scootermerker_4_puch']                       => array($kort . '/' . 'altompuch.php'                   => $setup['l_m_scootermerker_4_puch_description'], 'logo' => 'logo_puch')
+            ,$setup['l_m_scootermerker_4_qingqi']                     => array($kort . '/' . 'altomqingqi.php'                 => $setup['l_m_scootermerker_4_qingqi_description'], 'logo' => 'logo_qingqi')
+            ,$setup['l_m_scootermerker_4_regalraptor']                => array($kort . '/' . 'altomregalraptor.php'            => $setup['l_m_scootermerker_4_regalraptor_description'], 'logo' => 'logo_regalraptor')
+            ,$setup['l_m_scootermerker_4_rieju']                      => array($kort . '/' . 'altomrieju.php'                  => $setup['l_m_scootermerker_4_rieju_description'], 'logo' => 'logo_rieju')
+            ,$setup['l_m_scootermerker_4_romet']                      => array($kort . '/' . 'altomromet.php'                  => $setup['l_m_scootermerker_4_romet_description'], 'logo' => 'logo_romet')
+            ,$setup['l_m_scootermerker_4_sachs']                      => array($kort . '/' . 'altomsachs.php'                  => $setup['l_m_scootermerker_4_sachs_description'], 'logo' => 'logo_sachs')
+            ,$setup['l_m_scootermerker_4_secma']                      => array($kort . '/' . 'altomsecma.php'                  => $setup['l_m_scootermerker_4_secma_description'], 'logo' => 'logo_secma')
+            ,$setup['l_m_scootermerker_4_scoopie']                    => array($kort . '/' . 'altomscoopie.php'                => $setup['l_m_scootermerker_4_scoopie_description'], 'logo' => 'logo_scoopie')
+            ,$setup['l_m_scootermerker_4_skyteam']                    => array($kort . '/' . 'altomskyteam.php'                => $setup['l_m_scootermerker_4_skyteam_description'], 'logo' => 'logo_skyteam')
+            ,$setup['l_m_scootermerker_4_solex']                      => array($kort . '/' . 'altomsolex.php'                  => $setup['l_m_scootermerker_4_solex_description'], 'logo' => 'logo_solex')
+            ,$setup['l_m_scootermerker_4_suzuki']                     => array($kort . '/' . 'altomsuzuki.php'                 => $setup['l_m_scootermerker_4_suzuki_description'], 'logo' => 'logo_suzuki')
+            ,$setup['l_m_scootermerker_4_swap']                       => array($kort . '/' . 'altomswap.php'                   => $setup['l_m_scootermerker_4_swap_description'], 'logo' => 'logo_swap')
+            ,$setup['l_m_scootermerker_4_sym']                        => array($kort . '/' . 'altomsym.php'                    => $setup['l_m_scootermerker_4_sym_description'], 'logo' => 'logo_sym')
+         ),$setup['l_m_scootermerker_5'] => array(
+             $setup['l_m_scootermerker_5_texas']                      => array($kort . '/' . 'altomtexas.php'                  => $setup['l_m_scootermerker_5_texas_description'], 'logo' => 'logo_texas')
+            ,$setup['l_m_scootermerker_5_tgb']                        => array($kort . '/' . 'altomtgb.php'                    => $setup['l_m_scootermerker_5_tgb_description'], 'logo' => 'logo_tgb')
+            ,$setup['l_m_scootermerker_5_tms']                        => array($kort . '/' . 'altomtms.php'                    => $setup['l_m_scootermerker_5_tms_description'], 'logo' => 'logo_tms')
+            ,$setup['l_m_scootermerker_5_tomos']                      => array($kort . '/' . 'altomtomos.php'                  => $setup['l_m_scootermerker_5_tomos_description'], 'logo' => 'logo_tomos')
+            ,$setup['l_m_scootermerker_5_trilet']                     => array($kort . '/' . 'altomtrilet.php'                 => $setup['l_m_scootermerker_5_trilet_description'], 'logo' => 'logo_trilet')
+            ,$setup['l_m_scootermerker_5_varg']                       => array($kort . '/' . 'altomvarg.php'                   => $setup['l_m_scootermerker_5_varg_description'], 'logo' => 'logo_varg')
+            ,$setup['l_m_scootermerker_5_vespa']                      => array($kort . '/' . 'altomvespa.php'                  => $setup['l_m_scootermerker_5_vespa_description'], 'logo' => 'logo_vespa')
+            ,$setup['l_m_scootermerker_5_xingyue']                    => array($kort . '/' . 'altomxingyue.php'                => $setup['l_m_scootermerker_5_xingyue_description'], 'logo' => 'logo_xingyue')
+            ,$setup['l_m_scootermerker_5_yamaha']                     => array($kort . '/' . 'altomyamaha.php'                 => $setup['l_m_scootermerker_5_yamaha_description'], 'logo' => 'logo_yamaha')
+            ,$setup['l_m_scootermerker_5_yamasaki']                   => array($kort . '/' . 'altomyamasaki.php'               => $setup['l_m_scootermerker_5_yamasaki_description'], 'logo' => 'logo_yamasaki')
+            ,$setup['l_m_scootermerker_5_yiben']                      => array($kort . '/' . 'altomyiben.php'                  => $setup['l_m_scootermerker_5_yiben_description'], 'logo' => 'logo_yiben')
+            ,$setup['l_m_scootermerker_5_zhenhua']                    => array($kort . '/' . 'altomzhenhua.php'                => $setup['l_m_scootermerker_5_zhenhua_description'], 'logo' => 'logo_zhenhua')
+            ,$setup['l_m_scootermerker_5_zongshen']                   => array($kort . '/' . 'altomzongshen.php'               => $setup['l_m_scootermerker_5_zongshen_description'], 'logo' => 'logo_zongshen')
          )
       )
-      ,'andre mærker'               => array($kort . '/' . 'altomandre.php'                  => 'på denne side er der en blanding af forskellige scootermærker', 'thumbnail' => 'billed3445.jpg')
-      ,'3 hjulet scootere'          => array($kort . '/' . 'specielt_3hjuletscootere.php'    => 'se hvilken 3 hjulet scootere man kan få lær om de dele som bakgear, differentialgear og parkeringsbremse', 'thumbnail' => 'billed2252.jpg')
-      ,'fremtidens scootere'        => array($kort . '/' . 'fremtidensscootere.php'          => 'se hvilke scooter modeller der måske sælges i danmark i fremtiden', 'thumbnail' => 'billed2274.jpg')
-      ,'galleri for modeller som mangler data'  => array($kort . '/' . 'galleri_manglerdata.php'                 => 'galleri til modeller der mangler data. Hjælp gerne med data, billeder, filer osv hvis du kan', 'thumbnail' => 'billed3446.jpg')
-      ,'modeller som mangler data'  => array($kort . '/' . 'manglerdata.php'                 => 'der mangler data på disse modeller. Hjælp gerne med data, billeder, filer osv hvis du kan', 'thumbnail' => 'billed3446.jpg')
-      ,'modeller med 2 takt motor'  => array($kort . '/' . '2takt_modellermed2taktmotor.php' => 'et forsøg på at lave en liste med alle de 2 takt scootere som har kunne fås i danmark', 'thumbnail' => 'billed3265.jpg')
-      ,'elektriske scootere'        => array($kort . '/' . 'elektriskescootere.php'          => 'side kun med elektriske scootere så man kan se hvilke modeller har kan eller har kunne fås i danmark eller som er set i danmark', 'thumbnail' => 'elektriskescootere.jpg')
+      ,$setup['l_m_scootermerker_altomandre']                  => array($kort . '/' . 'altomandre.php'                  => $setup['l_m_scootermerker_altomandre_description'], 'thumbnail' => 'billed3445.jpg')
+      ,$setup['l_m_scootermerker_specielt_3hjuletscootere']    => array($kort . '/' . 'specielt_3hjuletscootere.php'    => $setup['l_m_scootermerker_specielt_3hjuletscootere_description'], 'thumbnail' => 'billed2252.jpg')
+      ,$setup['l_m_scootermerker_fremtidensscootere']          => array($kort . '/' . 'fremtidensscootere.php'          => $setup['l_m_scootermerker_fremtidensscootere_description'], 'thumbnail' => 'billed2274.jpg')
+      ,$setup['l_m_scootermerker_galleri_manglerdata']         => array($kort . '/' . 'galleri_manglerdata.php'                 => $setup['l_m_scootermerker_galleri_manglerdata_description'], 'thumbnail' => 'billed3446.jpg')
+      ,$setup['l_m_scootermerker_manglerdata']                 => array($kort . '/' . 'manglerdata.php'                 => $setup['l_m_scootermerker_manglerdata_description'], 'thumbnail' => 'billed3446.jpg')
+      ,$setup['l_m_scootermerker_2takt_modellermed2taktmotor'] => array($kort . '/' . '2takt_modellermed2taktmotor.php' => $setup['l_m_scootermerker_2takt_modellermed2taktmotor_description'], 'thumbnail' => 'billed3265.jpg')
+      ,$setup['l_m_scootermerker_elektriskescootere']          => array($kort . '/' . 'elektriskescootere.php'          => $setup['l_m_scootermerker_elektriskescootere_description'], 'thumbnail' => 'elektriskescootere.jpg')
 
-   ),'underholdning' => array(
-       'billeder'                   => array($kort . '/' . 'billeder.php'                    => 'billeder fra internettet. En del af dem er sjove', 'thumbnail' => 'billed2268.jpg')
-      ,'billeder fra gaden'         => array($kort . '/' . 'billederfragaden.php'             => 'billeder af scootere, knallert og andre køretøjer der kørende rundt på cykelstier og veje', 'thumbnail' => 'billed3725.jpg')
-      ,'videoer'                    => array($kort . '/' . 'videoer.php'                     => 'videoer fra internettet', 'thumbnail' => 'billed2269.jpg')
-      ,'spil'                       => array($kort . '/' . 'spil.php'                        => 'spil med scootere', 'thumbnail' => 'billed3733.jpg')
-      ,'lyd'                        => array($kort . '/' . 'lyd.php'                         => 'lyd som har noget med scootere at gøre', 'thumbnail' => 'billed2617.jpg')
+   ),$setup['l_m_underholdning'] => array(
+       $setup['l_m_underholdning_billeder']                    => array($kort . '/' . 'billeder.php'                    => $setup['l_m_underholdning_billeder_description'], 'thumbnail' => 'billed2268.jpg')
+      ,$setup['l_m_underholdning_billederfragaden']            => array($kort . '/' . 'billederfragaden.php'            => $setup['l_m_underholdning_billederfragaden_description'], 'thumbnail' => 'billed3725.jpg')
+      ,$setup['l_m_underholdning_videoer']                     => array($kort . '/' . 'videoer.php'                     => $setup['l_m_underholdning_videoer_description'], 'thumbnail' => 'billed2269.jpg')
+      ,$setup['l_m_underholdning_spil']                        => array($kort . '/' . 'spil.php'                        => $setup['l_m_underholdning_spil_description'], 'thumbnail' => 'billed3733.jpg')
+      ,$setup['l_m_underholdning_lyd']                         => array($kort . '/' . 'lyd.php'                         => $setup['l_m_underholdning_lyd_description'], 'thumbnail' => 'billed2617.jpg')
 
    )
 

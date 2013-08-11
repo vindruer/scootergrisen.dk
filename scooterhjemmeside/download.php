@@ -21,6 +21,8 @@ PDF filer kan åbnes med '.ahref('http://get.adobe.com/reader/', 'Adobe Reader')
 ZIP filer kan åbnes med '.ahref('http://www.7-zip.org/', '7-zip').'.
 
 Se under '.ahref('typegodkendelser.php', 'typegodkendelser').' for download af typegodkendelser.
+
+Hvis du ikke kan finde det du søger her på siden så prøv de links jeg samler i forum emnet '.ahref('http://scootergrisen.dk/forum/viewtopic.php?f=4&t=898', 'Hjemmesider med manualer').'.
 '
 
 ,'

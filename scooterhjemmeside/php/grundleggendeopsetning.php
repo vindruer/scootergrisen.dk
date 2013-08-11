@@ -46,7 +46,7 @@ if($setup['loggetind']){
 
 }else{
 
-   error_reporting(0); // skjul fejlbeskeder for brugerne
+   error_reporting(-1); // skjul fejlbeskeder for brugerne
    ini_set('display_startup_errors', 'off');
    ini_set('display_errors', false);
    ini_set('html_errors', 'false');
@@ -103,28 +103,12 @@ if($setup['roden'] == "C:/Users/Administrator/Desktop/scootergrisen.dk"){
 
 
 
-$keywords = array(
-   'scootergrisen'
+$setup['keywords'] = array(
+   ''
 );
 
 
 
-// phpBB login :
-/*
-define('IN_PHPBB', true);
-define('PHPBB_ROOT_PATH', './forum/');
+$setup['cookienavn_language'] = 'language';
 
-$phpbb_root_path = $setup['roden'] . '/forum/';
-
-$phpEx = substr(strrchr(__FILE__, '.'), 1);
-include($phpbb_root_path . 'common.' . $phpEx);
-include($phpbb_root_path . 'includes/functions_display.' . $phpEx);
-
-// Start session management
-
-$user->session_begin();
-$auth->acl($user->data);
-
-$setup['user'] = $user;
-*/
 ?>

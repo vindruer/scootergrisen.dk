@@ -1275,7 +1275,7 @@ onsdag den 2. Februar 2011
 '.nyhed(array(
 
 'nævneværdige ændringer og nyt indhold' => ''
- .ahref('tilfeldig.php', 'Tilfældig').' (Viser en tilfældig side. Måske finder du noget interessant)
+ .ahref('tilfeldig.php', 'Tilfældig side').' (Viser en tilfældig side. Måske finder du noget interessant)
 '.ahref('teoriprove.php', 'Teoriprøve').' (Online teoriprøve for lille knallert)
 '.ahref('videoer.php', 'Videoer').' (Tilføjet en del nye videoer. Nu kan man også se videoer fra scootergalleri)
 '.ahref('spil.php', 'Spil').'
@@ -1638,7 +1638,7 @@ Nye links :
     galleri('link', 'http://www.ampelectro.com', 'www.ampelectro.com', 'amp electro', '', '', '', '')
    ,galleri('link', 'http://www.yndgaardauto.dk', 'www.yndgaardauto.dk', 'yndgaard auto og MC - Service', '', '', '', '')
    ,galleri('link', 'http://www.agmscooters.com', 'www.agmscooters.com', 'AGM', '', '', '', '')
-   ,galleri('link', 'http://www.kreidler.dk/', 'www.kreidler.dk', 'kreidler DK', '', '', '', '')
+//   ,galleri('link', 'http://www.kreidler.dk/', 'www.kreidler.dk', 'kreidler DK', '', '', '', '')
    ,galleri('link', 'http://www.norsjo.com/', 'www.norsjo.com', 'norsjö', '', '', '', '')
 //   ,galleri('link', 'http://www.mopedmanager.dk', 'www.mopedmanager.dk', 'mopedmanager', '', '', '', '')
    ,galleri('link', 'http://www.vespa-klub-danmark.dk/', 'www.vespa-klub-danmark.dk', 'vespa klub danmark', '', '', '', '')

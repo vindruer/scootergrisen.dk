@@ -880,9 +880,9 @@ Ser eventuelt forum emnet '.ahref('http://scootergrisen.dk/forum/viewtopic.php?f
       ,'producent'         => ens('producent', '', '', '', '')
       ,'andet'             => ens('andet', 'analogt speedometer', '
 Dyse 4 mm 88 Versus 4-t vandkølet
-Hoveddyse std. Versus 4-t vandkølet
+Hoveddyse std. Versus 4-t vandkølet : http://www.thansen.dk/product.asp?c=9413662671&n=-833826165&pn=-664175331
 Afstandsskive ved variom. Versus 4-t : http://www.thansen.dk/product.asp?c=9318069051&n=-833826164&pn=-664164605
-Bøsning for variomaticskål Versus 4-t http://www.thansen.dk/product.asp?c=9318069051&n=-833826164&pn=-664165263
+Bøsning for variomaticskål Versus 4-t : http://www.thansen.dk/product.asp?c=9318069051&n=-833826164&pn=-664165263
 stator : 12 stjernet 1 spole (hvid + rød/(rød/gul?))
 pickup : blå/hvid + rød
 ', '', '')

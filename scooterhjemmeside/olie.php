@@ -192,7 +192,7 @@ Altså hvor tyndtflydende/tyktflydende olien er.
 
 For eksempel : SAE 50 eller SAE 10W-40.
 
-W = Winther = Vinter = olien er egnet til brug om vinteren.
+W = Winter = Vinter = olien er egnet til brug om vinteren.
 
 
 

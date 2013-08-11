@@ -145,7 +145,7 @@ producenter
 ,array('http://www.honda.com/', 'www.honda.com', 'honda')
 ,array('http://www.honda-mc.dk', 'www.honda-mc.dk', 'honda DK')
 ,array('http://www.kreidler.net/', 'www.kreidler.net', 'kreidler')
-,array('http://www.kreidler.dk/', 'www.kreidler.dk', 'kreidler DK')
+//Domain hosted by DanDomain - Webhotel - Dome - E-handel - Webdesign ,array('http://www.kreidler.dk/', 'www.kreidler.dk', 'kreidler DK')
 ,array('http://www.kymco.com/', 'www.kymco.com', 'kymco')
 ,array('http://www.kymco.dk/', 'www.kymco.dk', 'kymco DK')
 //,array('http://lynxscooters.webtemplet.dk', 'lynxscooters.webtemplet.dk', 'lynx scooters DK')
@@ -212,7 +212,7 @@ andet
 ,array('http://www.knallerten.dk', 'www.knallerten.dk', 'knallerten.dk')
 // Internal Server Error ,array('http://www.mopedmanager.dk', 'www.mopedmanager.dk', 'mopedmanager')
 //webhotel abonnement udløbet ,array('http://www.n50.dk/', 'n50.dk', 'puch Grand Prix og Monza')
-,array('http://ricambi.dk/', 'ricambi.dk', 'Ricambi Vespa Spare Parts')
+//Vores forretning er pt lukket ned. Vi arbejder på en webshop som gør bestillingen hurtigere og nemmere. ,array('http://ricambi.dk/', 'ricambi.dk', 'Ricambi Vespa Spare Parts')
 ,array('http://www.sikkertrafik.dk', 'www.sikkertrafik.dk', 'sikkertrafik')
 ,array('http://www.scootzone.dk', 'www.scootzone.dk', 'scootzone')
 ,array('http://suzukidm50.dk/', 'suzukidm50.dk', 'Suzuki DM50')
@@ -249,8 +249,8 @@ køb og salg
 ,'
 benzinselskaber
 ' => array(
- array('http://www.1-2-3.dk', 'www.1-2-3.dk', array('123 benzin', 'statoil detailhandel'))
-,array('http://www.f24.dk', 'www.f24.dk', array('F24', 'kuwait petroleum'))
+//flyttet til statoil.dk array('http://www.1-2-3.dk', 'www.1-2-3.dk', array('123 benzin', 'statoil detailhandel'))
+ array('http://www.f24.dk', 'www.f24.dk', array('F24', 'kuwait petroleum'))
 ,array('http://www.haahrbenzin.dk', 'www.haahrbenzin.dk', array('haahr benzin', 'privat ejet'))
 ,array('http://www.jet.dk', 'www.jet.dk', array('jet', 'conocophillips'))
 ,array('http://www.metax.dk', 'www.metax.dk', array('metax/shell express', 'shell'))

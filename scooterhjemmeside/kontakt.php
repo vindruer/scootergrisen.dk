@@ -26,7 +26,7 @@ $databasecenter = array(
 '
 kontakt formular
 ' => '
-' . viskontakt(true, 'skriv en besked til mig som laver hjemmesiden') . '
+' . viskontakt(true, $GLOBALS['setup']['l_contactme_c']) . '
 '
 
 ,'

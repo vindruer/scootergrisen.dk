@@ -282,7 +282,7 @@ function opdaternoget(afspillerid, muteknapid, mutebilledeid, volumestatusid) {
    } else {
 
       xxx_muteknap.title = 'Mute';
-      xxx_volumestatus.innerHTML = xxx_afspiller.volume.toFixed(1) * 100 + ' %';
+      xxx_volumestatus.innerHTML = (xxx_afspiller.volume * 100).toFixed(0) + ' %';
       xxx_mutebillede.src = '/' + datamappe + '/billeder/afspiller/afspiller_volume_unmuted.png';
       xxx_mutebillede.title = 'Mute';
 

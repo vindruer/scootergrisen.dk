@@ -188,7 +188,12 @@ function bygsiden(
       if(array_key_exists($emnerpasidenoverskrift, $databaseright)){
 
          array_shift($metakeys); // slet
-         $metakeys = array_merge(array_keys($databaseright[$emnerpasidenoverskrift]), $metakeys);
+
+         if(is_array($databaseright[$emnerpasidenoverskrift])){
+
+            $metakeys = array_merge(array_keys($databaseright[$emnerpasidenoverskrift]), $metakeys);
+
+         }
 
       }
 
@@ -408,110 +413,6 @@ background-image: url(/' . $GLOBALS['setup']['datamappe'] . '/' . $filnavn . ');
          $indhold .= dropdownmenu($menuer);
          $indhold .= titlebar($title, $metadescription);
          $indhold .= smaikonerbar($smaikoner);
-
-if($GLOBALS['setup']['datamappe'] == 'netkoder'){
-
-   $language_en_uk = 'php/language.php?language=en_UK';
-   $language_da_dk = 'php/language.php?language=da_DK';
-
-   $indhold .= ''
-      . '<script type="text/javascript">' . "\r\n"
-      . 'if (window.addEventListener) {' . "\r\n"
-
-      . '   function opdaterfuldskermknap() {' . "\r\n"
-      . '      opdaterfullscreenknapbillede(\'global_fullscreentoggleknap\', \'global_fullscreentoggleknap_img\');' . "\r\n"
-      . '   }' . "\r\n"
-
-      . '   window.addEventListener(\'load\', function(){' . "\r\n"
-
-      . '      if(document.addEventListener) {' . "\r\n"
-
-      . '         document.addEventListener("mozfullscreenchange", opdaterfuldskermknap, false);' . "\r\n"
-      . '         document.addEventListener("webkitfullscreenchange", opdaterfuldskermknap, false);' . "\r\n"
-      . '         document.addEventListener("MSFullscreenChange", opdaterfuldskermknap, false);' . "\r\n"
-      . '         document.addEventListener("fullscreenchange", opdaterfuldskermknap, false);' . "\r\n"
-
-      . '      }' . "\r\n"
-
-      . '   }, false);' . "\r\n"
-
-      . '}' . "\r\n"
-      . '</script>' . "\r\n"
-
-      . '<style>' . "\r\n"
-      . '#global_fullscreentoggleknap{' . "\r\n"
-      . '   float: right;' . "\r\n"
-      . '   vertical-align: middle; margin-left: 10px;' . "\r\n"
-      . '} ' . "\r\n"
-      . '#global_fullscreentoggleknap_img{' . "\r\n"
-      . '   vertical-align: middle;' . "\r\n"
-      . '} ' . "\r\n"
-      . '</style>' . "\r\n"
-      ;
-
-//array_search
-//$setup['menu']
-
-$indhold .= '';
-
-   $indhold .= ''
-      . '<div class="ekstraundersmaikoner fontsize_small" style="background-color: rgba(255, 255, 255, 0.6); padding: 1em; border-radius: 5px;">'
-      ;
-
-if($GLOBALS['setup']['vissprog']){
-
-   $indhold .= ''
-      . '<button id="global_fullscreentoggleknap" class="displaynone" onclick="global_togglefullscreen();" title="' . mb_ucfirst($GLOBALS['setup']['button_fullscreentoggle']) . '">'
-      . visbilled('2', 'afspiller/afspiller_fuldskerm.png', mb_ucfirst($GLOBALS['setup']['button_fullscreentoggle']), false, null, null, 'id="global_fullscreentoggleknap_img"', null, '20', '20')
-      . '</button>'
-      ;
-
-   $indhold .= ''
-      . mb_ucfirst($GLOBALS['setup']['l_changelanguage_try'])
-      . lidtplads('vandret')
-      . mb_ucfirst($GLOBALS['setup']['l_changelanguage'])
-      . ' : '
-      . '<span style="white-space: nowrap;">'
-      . lidtplads('vandret')
-      . ahref($language_en_uk, visbilled('2', 'ikoner/united_kingdom_great_britain.png', $GLOBALS['setup']['l_flag_english'], '', null, null, 'class="ikon16x16"', null, '16', '16'))
-      . lidtplads('vandret')
-      . ' | '
-      . lidtplads('vandret')
-      . ahref($language_da_dk, visbilled('2', 'ikoner/denmark.png', $GLOBALS['setup']['l_flag_dansk'], '', null, null, 'class="ikon16x16"', null, '16', '16'))
-      . lidtplads('vandret')
-      . ' | '
-      . lidtplads('vandret')
-      . '<a href="/' . $GLOBALS['setup']['datamappe'] . '/php/language.php?language=">' . mb_ucfirst($GLOBALS['setup']['l_changelanguage_automatic']) . '</a>'
-      . '</span>'
-      ;
-
-   if(isset($GLOBALS['setup']['languageinuse'])){
-
-      $indhold .= ''
-         . lidtplads('vandret')
-         . ' | '
-         . lidtplads('vandret')
-         . '<span style="white-space: nowrap;">'
-         . mb_ucfirst($GLOBALS['setup']['l_changelanguage_current'])
-         . ' : '
-         . '<span class="fontsize_small bold">'
-         . $GLOBALS['setup']['languageinuse']
-         . '</span>'
-         . '</span>'
-         ;
-
-   }
-
-}
-
-   $indhold .= ''
-      . clearboth()
-      . '</div>'."\r\n"
-      . "\r\n"
-      ;
-
-}
-
          $indhold .= '   </div>'."\r\n";
          $indhold .= '   </div>'."\r\n";
          $indhold .= "\r\n";
@@ -713,13 +614,13 @@ function titlebar($title, $metadescription){
 
          . '         <div id="loginhoverform" class="loginhoverform bordertype2 borderradius5px displaynone">'."\r\n"
          . '            <form method="post" action="/' . $GLOBALS['setup']['datamappe'] . '/' . 'statestik.php" enctype="multipart/form-data" name="loginhoverformular">'."\r\n"
-         . '               <div><input type="submit" name="login" value="Logind" class="inputknap fontsize_xsmall"></div>'."\r\n"
-         . '               <div><input type="button" name="login" value="Luk" class="inputknap fontsize_xsmall" style="margin-right: .5em;" onClick="visskjulloginformular(0, \'loginhoverform\', \'loginhover\');"></div>'."\r\n"
+         . '               <div><input type="submit" name="login" value="' . mb_ucfirst($GLOBALS['setup']['l_knap_login']) . '" class="inputknap fontsize_xsmall"></div>'."\r\n"
+         . '               <div><input type="button" name="login" value="' . mb_ucfirst($GLOBALS['setup']['l_knap_luk']) . '" class="inputknap fontsize_xsmall" style="margin-right: .5em;" onClick="visskjulloginformular(0, \'loginhoverform\', \'loginhover\');"></div>'."\r\n"
          . '               <div class="megetlidtpladslodret clearboth"></div>'."\r\n"
          . '               <input type="hidden" name="funktion" value="login">'."\r\n"
-         . '               <div><label>Brugernavn: <input type="text" name="login_brugernavn" size="15" value="" placeholder="Brugernavn" class="inputtext fontsize_xsmall borderradius5px"></label></div>'."\r\n"
+         . '               <div><label>' . mb_ucfirst($GLOBALS['setup']['l_login_username']) . ': <input type="text" name="login_brugernavn" size="15" value="" placeholder="Brugernavn" class="inputtext fontsize_xsmall borderradius5px"></label></div>'."\r\n"
          . '               <div class="megetlidtpladslodret clearboth"></div>'."\r\n"
-         . '               <div><label>Kodeord: <input type="password" name="bareetfelt" size="15" value="" placeholder="Kodeord" class="inputtext fontsize_xsmall borderradius5px"></label></div>'."\r\n"
+         . '               <div><label>' . mb_ucfirst($GLOBALS['setup']['l_login_password']) . ': <input type="password" name="bareetfelt" size="15" value="" placeholder="Kodeord" class="inputtext fontsize_xsmall borderradius5px"></label></div>'."\r\n"
          . '            </form>'."\r\n"
          . '         </div>'."\r\n"
          ;
@@ -729,7 +630,7 @@ function titlebar($title, $metadescription){
       $indhold .= ''
          . '<div class="loginhoverform bordertype2 borderradius5px">'."\r\n"
          . formbox('0', '', '', $_SERVER["PHP_SELF"], 'post', '', ''
-            . '<div style="float: left;">Du er logget ind</div>'
+            . '<div style="float: left;">' . mb_ucfirst($GLOBALS['setup']['l_login_youareloggedin']) . '</div>'
             . input('0', 'hidden', 'funktion', 'logud')
             . input('0', 'button', '1', '*', '', '', '', 'kodeord_bogstav logudknap inputknap fontsize_0 fontfamily_2', 'onfocus="blur();" onclick="form.submit();"')
          )
@@ -1018,6 +919,7 @@ function dropdownmenu($leftcontentmenuer){
 function breadcrumbs(){
 
    $indhold = '';
+   $nogetindhold = '';
    $GLOBALS['setup']['breadcrumbs'] = array();
    
    foreach($GLOBALS['setup']['menu'] as $keya => $valuea){
@@ -1070,6 +972,111 @@ function breadcrumbs(){
 
    }
 
+
+
+if($GLOBALS['setup']['lokalt']){
+
+   $language_en_uk         = $GLOBALS['setup']['domainogdatamappe'] . '/php/language.php?language=en_UK';
+   $language_da_dk         = $GLOBALS['setup']['domainogdatamappe'] . '/php/language.php?language=da_DK';
+   $language_da_automatisk = $GLOBALS['setup']['domainogdatamappe'] . '/php/language.php?language=';
+
+   $nogetindhold .= ''
+      . '<script type="text/javascript">' . "\r\n"
+      . 'if (window.addEventListener) {' . "\r\n"
+
+      . '   function opdaterfuldskermknap() {' . "\r\n"
+      . '      opdaterfullscreenknapbillede(\'global_fullscreentoggleknap\', \'global_fullscreentoggleknap_img\');' . "\r\n"
+      . '   }' . "\r\n"
+
+      . '   window.addEventListener(\'load\', function(){' . "\r\n"
+
+      . '      if(document.addEventListener) {' . "\r\n"
+
+      . '         document.addEventListener("mozfullscreenchange", opdaterfuldskermknap, false);' . "\r\n"
+      . '         document.addEventListener("webkitfullscreenchange", opdaterfuldskermknap, false);' . "\r\n"
+      . '         document.addEventListener("MSFullscreenChange", opdaterfuldskermknap, false);' . "\r\n"
+      . '         document.addEventListener("fullscreenchange", opdaterfuldskermknap, false);' . "\r\n"
+
+      . '      }' . "\r\n"
+
+      . '   }, false);' . "\r\n"
+
+      . '}' . "\r\n"
+      . '</script>' . "\r\n"
+
+      . '<style>' . "\r\n"
+      . '#global_fullscreentoggleknap{' . "\r\n"
+      . '   float: right;' . "\r\n"
+      . '   vertical-align: middle; margin-left: 10px;' . "\r\n"
+      . '} ' . "\r\n"
+      . '#global_fullscreentoggleknap_img{' . "\r\n"
+      . '   vertical-align: middle;' . "\r\n"
+      . '} ' . "\r\n"
+      . '</style>' . "\r\n"
+      ;
+
+//array_search
+//$setup['menu']
+
+if($GLOBALS['setup']['vissprog']){
+
+   $nogetindhold .= ''
+      . '<button style="float: right; margin: 0; padding: 0;" id="global_fullscreentoggleknap" class="visibilityhidden" onclick="global_togglefullscreen();" title="' . mb_ucfirst($GLOBALS['setup']['button_fullscreentoggle']) . '">'
+      . visbilled('2', 'afspiller/afspiller_fuldskerm.png', mb_ucfirst($GLOBALS['setup']['button_fullscreentoggle']), false, null, null, 'id="global_fullscreentoggleknap_img"', null, '20', '20')
+      . '</button>'
+      ;
+
+   $nogetindhold .= ''
+      //. '<span class="ekstraundersmaikoner fontsize_small" style="background-color: rgba(255, 255, 255, 0.6); padding: 1em; border-radius: 5px; float: right;">'
+      . '<span style="float: right; margin-right: 10px;">'
+      ;
+
+   $nogetindhold .= ''
+      . mb_ucfirst($GLOBALS['setup']['l_changelanguage_try'])
+      . lidtplads('vandret')
+      . mb_ucfirst($GLOBALS['setup']['l_changelanguage'])
+      . ' : '
+      . '<span style="white-space: nowrap;">'
+      . lidtplads('vandret')
+      . ahref($language_en_uk, visbilled('2', 'ikoner/united_kingdom_great_britain.png', $GLOBALS['setup']['l_flag_english'], '', null, null, 'class="ikon16x16"', null, '16', '16'))
+      . lidtplads('vandret')
+      . ahref($language_da_dk, visbilled('2', 'ikoner/denmark.png', $GLOBALS['setup']['l_flag_dansk'], '', null, null, 'class="ikon16x16"', null, '16', '16'))
+      . lidtplads('vandret')
+      . ahref(
+         $language_da_automatisk
+         ,mb_ucfirst($GLOBALS['setup']['l_changelanguage_automatic'])
+         ,'alt="Choose language from the browsers preferences" title="Choose language from the browsers preferences"'
+        )
+      . '</span>'
+      ;
+
+   if(isset($GLOBALS['setup']['languageinuse'])){
+
+      $nogetindhold .= ''
+         . lidtplads('vandret')
+         . ' | '
+         . lidtplads('vandret')
+         . '<span style="white-space: nowrap;">'
+         . mb_ucfirst($GLOBALS['setup']['l_changelanguage_current'])
+         . ' : '
+         . $GLOBALS['setup']['languageinuse']
+         . '</span>'
+         ;
+
+   }
+
+   $nogetindhold .= ''
+      . '</span>'."\r\n"
+      . clearboth()
+      . "\r\n"
+      ;
+
+}
+
+}
+
+
+
    $tegnb = '<span style="color: rgba(255, 255, 255, 0.4);" class="bold">&#187;</span>';
    $tegn = '<span style="color: rgba(255, 255, 255, 0.5);" class="bold">/</span>';
 
@@ -1082,6 +1089,7 @@ function breadcrumbs(){
       . '<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">'
       . implode(" $tegn ", $GLOBALS['setup']['breadcrumbs'])
       . '</span>'
+      . $nogetindhold
       . '</div>' . "\r\n"
       . "\r\n"
       ;
@@ -1352,12 +1360,12 @@ function visfootertag($visreklame = true, $visspotlys = true, $viscounterogsocia
             . '   <div id="reklamebaggrund">'
             . "\r\n"
             . "\r\n"
-            . '      <div id="reklameoverskrift" class="fontsize_small">Gratis reklame for ' . ahref($reklamer[$tilfeldigreklame][1], mb_ucfirst($reklamer[$tilfeldigreklame][0])) . ' <span id="reklamemindreskrift" class="fontsize_smaller">'.ahref('gratisreklame.php', 'Læs hvordan du kan få din egen reklame her gratis').'</span></div>'
+            . '      <div id="reklameoverskrift" class="fontsize_small">' . mb_ucfirst($GLOBALS['setup']['l_gratisreklamefor']) . ' ' . ahref($reklamer[$tilfeldigreklame][1], mb_ucfirst($reklamer[$tilfeldigreklame][0])) . ' <span id="reklamemindreskrift" class="fontsize_smaller">'.ahref('gratisreklame.php', mb_ucfirst($GLOBALS['setup']['l_gratisreklame_fadinegenreklame'])).'</span></div>'
             . "\r\n"
             . "\r\n"
             . '      <div id="reklame">'
             . "\r\n"
-            . '         '.ahref($reklamer[$tilfeldigreklame][1], visbilled('1', 'reklamer/' . $reklamer[$tilfeldigreklame][2], 'Klik på billedet for at gå til ' . $reklamer[$tilfeldigreklame][0], '', null, null, null, null, null, null, null, true))
+            . '         '.ahref($reklamer[$tilfeldigreklame][1], visbilled('1', 'reklamer/' . $reklamer[$tilfeldigreklame][2], mb_ucfirst($GLOBALS['setup']['l_gratisreklame_klikpabilledet']) . ' ' . $reklamer[$tilfeldigreklame][0], '', null, null, null, null, null, null, null, true))
             . "\r\n"
             . '      </div>'
             . "\r\n"
