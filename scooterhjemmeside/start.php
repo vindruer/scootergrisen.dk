@@ -118,7 +118,7 @@ foreach($leftcontentmenuer as $menuoverskrift => $menudata){
 
             }else{
 
-               $thumb = 'billed3232.jpg'; // tomt billede
+               $thumb = '_tom.jpg'; // tomt billede
 
             }
 

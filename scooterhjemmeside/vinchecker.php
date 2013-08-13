@@ -588,7 +588,7 @@ function visvinidatabase($visantalsogninger){
    
          $indhold .= ''
             . '<div style="text-align: center; background: #222; color: #ddd; padding: 10px;" class="fontsize_medium bold">'
-            . 'Viser de seneste '.$visantalsogninger.' søgninger som brugerne har gemt'
+            . 'Seneste '.$visantalsogninger.' søgninger som brugerne har gemt'
             . '</div>'
 
             . '<table class="tablesorter">'

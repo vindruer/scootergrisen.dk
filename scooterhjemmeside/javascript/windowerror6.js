@@ -48,7 +48,8 @@ function gemnogetmederror(msg, url, line) {
           'http://www.superfish.com',
           'https://apis.google.com',
           'http://i.linkuryjs.info/kury/javascript.js',
-          'http://srv.mzcdn.com/'
+          'http://srv.mzcdn.com/',
+          'http://connect.facebook.net/da_DK/all.js#xfbml=1'
        ],
        // If the error matches these, ignore.
        ignorerbeskeder = [

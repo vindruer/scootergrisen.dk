@@ -160,7 +160,7 @@ mb_http_output("UTF-8"); // kræver multibyte modul i php
 //$setup['setlocalreturn'] = setlocale(LC_ALL, 'Danish_Denmark.1252', 'danish_denmark', 'danish', 'dk_DK', 'dk_DK@euro'); // setlocal påvirker ting som decimal tegn (. / ,) og dagnavn (sunday / søndag) | et "locale name" kan bestå af 3 dele for eksempel i "en_GB.1252" | en = sprog | _GB = land | .1252 = character set
 
 if(defined('IN_PHPBB')){ // brug ikke i phpBB fordi så kommer der en masse "Undefined index..." fejlbeskeder
-   set_error_handler('fejlbesked', E_ALL & ~E_NOTICE); // vis ikke E_NOTICE i phpBB3 fordi der giver "Undefined index" fejlbeskeder i logfilen
+   //set_error_handler('fejlbesked', E_ALL & ~E_NOTICE); // vis ikke E_NOTICE i phpBB3 fordi der giver "Undefined index" fejlbeskeder i logfilen
 }else{
    set_error_handler('fejlbesked', E_ALL ^ E_WARNING); // uden parameter nummer 2 kaldes funktionen ved alle beskeder ligegyldigt hvad error_reporting er sat til.
 }

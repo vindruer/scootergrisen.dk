@@ -3,6 +3,15 @@
 $data = array(
 
 '
+tirsdag den 13. August 2013
+' => '
+Kildekoden til scootergrisen.dk er nu på '.ahref('https://github.com/scootergrisen/scootergrisen.dk', 'GitHub').'.
+Nu kan du hjælpe med at forbedre koden bag hjemmesiden.
+Kildekoden er primært skrevet i HTML, CSS, Javascript og PHP.
+Jeg har tilføjet et ikon nederst på hver side hvor du kan gå til kildekoden på GitHub for den viste side.
+'
+
+,'
 mandag den 5. August 2013
 ' => '
 '.nyhed(array(

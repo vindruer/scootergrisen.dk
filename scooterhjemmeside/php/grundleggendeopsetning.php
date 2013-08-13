@@ -46,7 +46,7 @@ if($setup['loggetind']){
 
 }else{
 
-   error_reporting(-1); // skjul fejlbeskeder for brugerne
+   error_reporting(0); // skjul fejlbeskeder for brugerne
    ini_set('display_startup_errors', 'off');
    ini_set('display_errors', false);
    ini_set('html_errors', 'false');

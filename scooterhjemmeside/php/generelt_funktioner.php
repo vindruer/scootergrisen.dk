@@ -805,13 +805,17 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
 
    $indhold .= ''
       . '   <link rel="stylesheet" href="/' . $GLOBALS['setup']['datamappe'] . '/css/theme.default.css">'."\r\n"
+      . '   <link rel="stylesheet" href="/' . $GLOBALS['setup']['datamappe'] . '/css/theme.blue.css">'."\r\n"
+      . '   <style>'."\r\n"
+      . '      .tablesorter-blue { margin: 0; }'."\r\n"
+      . '   </style>'."\r\n"
       . '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/jquery-1.8.2.min.js"></script>'."\r\n"
       . '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/jquery.tablesorter.js"></script>'."\r\n"
       //. '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/jquery.tablesorter.widgets.js"></script>'."\r\n" // tablesorter widgets (optional)
       . "\r\n"
       . '   <script type="text/javascript">'."\r\n"
       . "\r\n"
-      . '   $(function(){'."\r\n"
+      . '   $(document).ready(function() {'."\r\n"
       . "\r\n"
       . '      // these default equivalents were obtained from a table of equivalents'."\r\n"
       . '      // provided by sugar.js sorting alogrithms: http://sugarjs.com/sorting'."\r\n"
@@ -825,6 +829,7 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
       . '      };'."\r\n"
       . "\r\n"
       . '      $(\'table\').tablesorter({'."\r\n"
+      . '         theme          : \'blue\','."\r\n"
       . '         widgets        : [\'zebra\', \'columns\'],'."\r\n"
       . '         usNumberFormat : false,'."\r\n"
       . '         sortReset      : true,'."\r\n"
@@ -874,13 +879,22 @@ function dropdownmenu($leftcontentmenuer){
                      'oplysninger'
                      ,'scooterens dele'
                      ,'service'
+                     ,'tilbehør og udstyr'
                      ,'specielt'
-                     ,'fremtiden'
-                     ,'rodekassen'
-                     //,'underholdning'
                      ,'programmer'
-                     ,'test sider'
+                     ,'rodekassen'
+                     ,'os'
+                     ,'hardware'
                      ,'specielle filer'
+                     //,'underholdning'
+
+                     ,'information'
+                     ,'things on scooter'
+
+                     ,'accessories and equipment'
+                     ,'special'
+                     //,'scooter brands'
+                     //,'entertainment'
                   );
 
    foreach($sorterdemher as $value){
@@ -974,7 +988,7 @@ function breadcrumbs(){
 
 
 
-if($GLOBALS['setup']['lokalt']){
+if(1){
 
    $language_en_uk         = $GLOBALS['setup']['domainogdatamappe'] . '/php/language.php?language=en_UK';
    $language_da_dk         = $GLOBALS['setup']['domainogdatamappe'] . '/php/language.php?language=da_DK';
@@ -3981,7 +3995,7 @@ function box($breddearray, $tekstarray, $kodeibunden = ''){
    $tekstarrayhead = array_shift($tekstarray); // tag og fjern den først som til overskriften
 
    $indhold .= '   <!--ignore-->'."\r\n";
-   $indhold .= '   <table class="tableholder tablesorter borderradius5px" style="width: ' . $totalbredde . 'px; margin: 1em auto;">'."\r\n";
+   $indhold .= '   <table class="tableholder tablesorter" style="width: ' . $totalbredde . 'px; margin: 1em auto;">'."\r\n";
 
    $indhold .= '      <thead>'."\r\n";
    $indhold .= '         <tr>'."\r\n";
@@ -7894,7 +7908,7 @@ function vissogningeridatabase($visantalsogninger){
 
          $indhold .= ''
             . '<div style="text-align: center; background: #222; color: #ddd; padding: 10px;" class="fontsize_medium bold">'
-            . 'Viser de seneste '.$visantalsogninger.' søgninger'
+            . 'Seneste '.$visantalsogninger.' søgninger'
             . '</div>'
 
             . '<table class="tablesorter">'
