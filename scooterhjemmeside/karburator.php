@@ -725,7 +725,7 @@ galleriholder(array(
    ,galleri('highslide', '', 'billed2865.jpg', array('gaskabel gashåndtag ende', 'ende som sidder på karburator'))
    ,galleri('highslide', '', 'billed2867.jpg', array('gaskabel karburator ende plastik rør i bøjet rør tæt på', 'gevindet på det bøjede rør er fladt på et bestemt sted'))
    ,galleri('highslide', '', 'billed2873.jpg', array('cv karburator fra siden hvor gaskablet monteres', ''))
-   ,galleri('highslide', '', 'billed2877.jpg', array('karburator i kymco super 8 LEJ2-IT', ''))
+   ,galleri('highslide', '', 'billed2877.jpg', array('karburator i kymco super 8 4T LEJ2-IT', ''))
    ,galleri('highslide', '', 'billed2866.jpg', array('gaskabel karburator ende dele skubbet til side', ''))
    ,galleri('highslide', '', 'billed2868.jpg', array('gaskabel karburator ende gummi beskytter tæt på', 'gummidut gør at snavs og lignende ikke kan komme ind i kablet'))
    ,galleri('highslide', '', 'billed2869.jpg', array('gaskabel karburator ende gummi beskytter tæt på', 'her ses hvordan gummidutten skal sidde'))
@@ -781,7 +781,7 @@ Shengwey PZ19
 Delkin PD18J
 HUALUNG PZ16A
 GURTNER PY12
-Kymco (på min Kymco Super 8 sidder en karburator i Keihin CV stilen men det er vist Kymco der har lavet den).
+Kymco (på min Kymco Super 8 4T sidder en karburator i Keihin CV stilen men det er vist Kymco der har lavet den).
 
 Nogen gange står der ikke noget mærke men bare typen :
 

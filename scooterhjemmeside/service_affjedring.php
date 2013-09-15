@@ -17,8 +17,8 @@ olie i forgaffelrør
 Der skal være en bestemt mængde olie i forgaffelrørene.
 Og der skal være lige meget i hvert rør.
 
-'.afsnit('Kymco Super 8','
-Ifølge Kymco Super 8 servicemanualen kan man bruge motorolie i støddæmper rørene.
+'.afsnit('Kymco Super 8 4T','
+Ifølge Kymco Super 8 4T servicemanualen kan man bruge motorolie i støddæmper rørene.
 I manualen kaldes olien for SS#8.
 Og der skal fyldes 0,097 liter ± 0,001 liter i hvert rør (97 cc ± 1 cc).
 ').'

@@ -26,13 +26,13 @@ scootere
    ,galleri('highslide', '', 'billed1596.jpg', array('AGM Retro'))
    ,galleri('highslide', '', 'billed1597.jpg', array('Kymco Agility'))
    ,galleri('highslide', '', 'billed1598.jpg', array('Piaggio Vespa S'))
-   ,galleri('highslide', '', 'billed1599.jpg', array('Kymco Super 8'))
+   ,galleri('highslide', '', 'billed1599.jpg', array('Kymco Super 8 4T'))
    ,galleri('highslide', '', 'billed1600.jpg', array('CPI GTR'))
    ,galleri('highslide', '', 'billed1601.jpg', array('Peugeot Speedfight'))
    ,galleri('highslide', '', 'billed1602.jpg', array('Kymco Super Fever ZX50'))
    ,galleri('highslide', '', 'billed1603.jpg', array('Piaggio Vespa ET2'))
    ,galleri('highslide', '', 'billed1604.jpg', array('PGO T-Rex'))
-   ,galleri('highslide', '', 'billed1605.jpg', array('Kymco Super 8'))
+   ,galleri('highslide', '', 'billed1605.jpg', array('Kymco Super 8 4T'))
    ,galleri('highslide', '', 'billed1618.jpg', array('TMS S3 hos Jem og fix'))
    ,galleri('highslide', '', 'billed1619.jpg', array('Giantco Stealth'))
    ,galleri('highslide', '', 'billed1620.jpg', array('PGO T-Rex eller Big Max'))
@@ -90,7 +90,7 @@ scootere
    ,galleri('highslide', '', 'billed1704.jpg', array('ukendt model'))
    ,galleri('highslide', '', 'billed1705.jpg', array('Peugeot Speedfight'))
    ,galleri('highslide', '', 'billed1706.jpg', array('Honda Zoomer'))
-   ,galleri('highslide', '', 'billed1707.jpg', array('Kymco Super 8'))
+   ,galleri('highslide', '', 'billed1707.jpg', array('Kymco Super 8 4T'))
    ,galleri('highslide', '', 'billed1708.jpg', array('Gilera Stalker'))
    ,galleri('highslide', '', 'billed1710.jpg', array('Yamaha Neos'))
    ,galleri('highslide', '', 'billed1711.jpg', array('Måske en AGM Bella (ret må man da kalde en grøn scooter)'))
@@ -280,6 +280,14 @@ andet
    ,galleri('highslide', '', 'billed1590.jpg', array('Reklame scootere'))
 ))
 .'
+'
+
+,'
+kopiering af billederne
+' => '
+Jeg (scootergrisen) har selv taget næsten alle billederne på denne side.
+Hvis du skulle have lyst til at kopierne billederne og bruge dem til et eller andet som i en avis, på din hjemmeside eller hvad det måtte være så må du gerne det. Du behøver ikke spørge først.
+Du må gerne skrive hvor du har billedet fra ('.ahref('http://scootergrisen.dk/', 'scootergrisen.dk').') men du behøver ikke.
 '
 
 );

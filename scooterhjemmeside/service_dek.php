@@ -14,13 +14,13 @@ $databasecenter = array(
 skift slangeløst dæk
 ' => '
 Hvis hjulet er monteret fra siden (typisk for baghjul) så hold hårdt på bremsen og skru møtrikken af.
-'.visbilled('1', 'billed2193.jpg', 'kymco super 8 afmontering af baghjul stor gaffelnøgle', false, true).'
+'.visbilled('1', 'billed2193.jpg', 'kymco super 8 4T afmontering af baghjul stor gaffelnøgle', false, true).'
 Hvis der sidder en klips/split gennem møtrikken så fjern den før du skruer på møtrikken.
 '.visbilled('1', 'billed2460.jpg', 'møtrik med split', false, true).'
 Hvis hjulet er monteret med bolt og møtrik (typisk for forhjul) så brug en ringnøgle til at holde bolten fast og en skralde til at skrue møtrikken af.
-'.visbilled('1', 'billed2980.jpg', 'kymco super 8 afmontering af forhjul', false, true).'
+'.visbilled('1', 'billed2980.jpg', 'kymco super 8 4T afmontering af forhjul', false, true).'
 Fjern hjulet fra scooteren.
-'.visbilled('1', 'billed2183.jpg', 'kymco super 8 baghjul afmonteret', false, true).'
+'.visbilled('1', 'billed2183.jpg', 'kymco super 8 4T baghjul afmonteret', false, true).'
 Slangeløse dæk sidder godt fast fordi der er en forhøjning på fælgkanten.
 '.visbilled('1', 'billed2313.jpg', 'fælgkant forhøjning', false, true).'
 Jeg stod og hoppede på dækket men det var ikke nok.
@@ -45,7 +45,7 @@ Brug igen dækjern til at vippe med.
 '.visbilled('1', 'billed2191.jpg', 'afmontering af slangeløst dæk med dækjern', false, true).'
 Mine dækjern er ikke så store men jeg brugte en hammer til at vippe med.
 '.visbilled('1', 'billed2192.jpg', 'afmontering af slangeløst dæk med dækjern', false, true).'
-'.visbilled('1', 'billed2314.jpg', 'kymco super 8 bagfælg', false, true).'
+'.visbilled('1', 'billed2314.jpg', 'kymco super 8 4T bagfælg', false, true).'
 
 Så skal vi have fat i det nye slangeløse dæk.
 '.visbilled('1', 'billed2181.jpg', 'horng fortune 130/70-14 tubeless', false, true).'
@@ -73,7 +73,7 @@ Så skruer man ventilen i og pumper dækket op til korrekt dæktryk.
 
 Og vupti nyt dæk på.
 '.visbilled('1', 'billed2202.jpg', 'nyt dæk monteret', false, true).'
-'.visbilled('1', 'billed2201.jpg', 'kymco super 8 bagfra med nyt dæk', false, true).'
+'.visbilled('1', 'billed2201.jpg', 'kymco super 8 4T bagfra med nyt dæk', false, true).'
 '
 
 ,'
@@ -269,9 +269,9 @@ Hvis du ikke kan finde hullet kan du gøre følgende.
 '.visflash('0', 'http://www.youtube.com/watch?v=3wLJn7xJth0', 'gør dækket vådt med vand og kig efter små bobler', true).'
 
 Sæt scooteren på centerstøtteben udover et trin og sæt noget tungt på fodbrættet sådan at scooteren ikke kan vælter bagover.
-'.visbilled('1', 'billed1234.jpg', 'kymco super 8 find hul i dæk med en spand vand', false, true).'
+'.visbilled('1', 'billed1234.jpg', 'kymco super 8 4T find hul i dæk med en spand vand', false, true).'
 Bagenden kan så bevæges op og ned så det passer med spanden.
-'.visbilled('1', 'billed1235.jpg', 'kymco super 8 find hul i dæk med en spand vand', false, true).'
+'.visbilled('1', 'billed1235.jpg', 'kymco super 8 4T find hul i dæk med en spand vand', false, true).'
 '.visflash('0', 'http://www.youtube.com/watch?v=I0vq_PZC_Do', 'ved at holde dækket nede i spanden med vand vil man kunne se luftbobler komme op der hvor hullet er', true).'
 Når hullet er fundet og lappet kan man igen checke om der kommer bobler op ved lapningen og andre steder.
 
@@ -340,7 +340,7 @@ Den tunge del af hjulet peger ned og man sætter små vægte på den modsatte ø
 ,'
 afmonter baghjul
 ' => '
-Her vil jeg afmontere baghjulet på min Kymco Super 8 med dobbelt støddæmper.
+Her vil jeg afmontere baghjulet på min Kymco Super 8 4T med dobbelt støddæmper.
 
 Fjern udstødningen.
 

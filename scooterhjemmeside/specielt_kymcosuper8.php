@@ -4,26 +4,26 @@ require_once('./php/opsetning_scooterhjemmeside.php');
 require_once('./php/generelt_funktioner.php');
 require_once('./php/scooterhjemmeside_funktioner.php');
 
-$title = "Kymco Super 8";
-$overskrift = "Kymco Super 8";
-$metadescription = "ting jeg har oplevet på min Kymco Super 8, fejl, defekter";
+$title = "Kymco Super 8 4T";
+$overskrift = "Kymco Super 8 4T";
+$metadescription = "ting jeg har oplevet på min Kymco Super 8 4T, fejl, defekter";
 
 $databasecenter = array(
 
 '
 introduktion
 ' => '
-Her på siden vil jeg skrive om nogen ting jeg har oplevet på min Kymco Super 8.
+Her på siden vil jeg skrive om nogen ting jeg har oplevet på min Kymco Super 8 4T.
 
 Specielt de problemer jeg har haft.
-'.visbilled('1', 'billed2226.jpg', 'kymco super 8', false, true).'
-Hvis du kigger på mange af de andre sider på hjemmesiden så kan du se mange billeder fra Kymco Super 8 hvis der er en eller anden del du vil se hvordan ser ud og sådan.
+'.visbilled('1', 'billed2226.jpg', 'kymco super 8 4T', false, true).'
+Hvis du kigger på mange af de andre sider på hjemmesiden så kan du se mange billeder fra Kymco Super 8 4T hvis der er en eller anden del du vil se hvordan ser ud og sådan.
 '
 
 ,'
 lys kontrol boks
 ' => '
-Lys kontrol boksen er en underlig boks som findes på Kymco Super 8.
+Lys kontrol boksen er en underlig boks som findes på Kymco Super 8 4T.
 '.visbilled('1', 'billed0256.jpg', 'lys kontrol boks kymco TYC-D401', false, true).'
 Det ligner en CDI boks men det er det ikke.
 '.visbilled('1', 'billed0854.jpg', 'lys kontrol boks kymco TYC-D401', false, true).'
@@ -66,7 +66,7 @@ Når lys kontrol boksen modtager dette puls signal så tændes forlyset.
 Hvis lys kontrol boksen ikke modtager dette signal så vil forlyset ikke kunne lyse.
 Jeg har målt +1,6 til +2,0 volt jævnstrøm på ledningen fra CDI boksen.
 
-Jeg har haft nogle problemer på min Kymco Super 8 som bare slukker forlyset (både kort og langtlys) og efter noget tid tænder det så igen og slukker igen efter noget tid.
+Jeg har haft nogle problemer på min Kymco Super 8 4T som bare slukker forlyset (både kort og langtlys) og efter noget tid tænder det så igen og slukker igen efter noget tid.
 
 Grunden til dette er fordi CDI boksen er defekt og kun nogle gange laver det pulserende signal som lys kontrol boksen skal bruge for at tænde forlyset.
 Strømmen til positionslyset går ikke igennem lys kontrol boksen så positionslyset påvirkes ikke.
@@ -82,7 +82,7 @@ Der er en anden bruger som har haft nøjagtigt det samme problem og hans CDI bok
 
 '.afsnit('adskilt','
 Der er en bruger som har taget nogle billeder og fortalt hvad boksen indeholder af elektronik.
-'.visbilled('1', 'billed1183.jpg', 'kymco super 8 lys kontrol boks skilt ad', false, true).'
+'.visbilled('1', 'billed1183.jpg', 'kymco super 8 4T lys kontrol boks skilt ad', false, true).'
 
 '.afsnit('indeholder følgende elektronik','
 1 effektmodstand - for strømmåling
@@ -96,11 +96,11 @@ En bunke andre komponenter.
 ').'
 
 Her er stikket og ledningen loddet af.
-'.galleriholder(array(galleri('highslidestandard', 'billed1184.jpg', 'billed1184.jpg', 'kymco super 8 lys kontrol boks skilt ad'))). '
-'.visbilled('1', 'billed1185.jpg', 'kymco super 8 lys kontrol boks skilt ad', false, true).'
+'.galleriholder(array(galleri('highslidestandard', 'billed1184.jpg', 'billed1184.jpg', 'kymco super 8 4T lys kontrol boks skilt ad'))). '
+'.visbilled('1', 'billed1185.jpg', 'kymco super 8 4T lys kontrol boks skilt ad', false, true).'
 
 Hvorfor sidder der 2 modstande mellem batteriets terminaler som konstant bruger cirka 1,5 mA fra batteriet ?
-'.visbilled('1', 'billed1214.jpg', 'kymco super 8 lys kontrol boks skilt ad', false, true).'
+'.visbilled('1', 'billed1214.jpg', 'kymco super 8 4T lys kontrol boks skilt ad', false, true).'
 '.visbilled('1', 'billed1786.jpg', 'omg kat', false, true).'
 
 '.afsnit('kommentar fra scootergrisen','
@@ -141,7 +141,7 @@ Her er nogen billeder fra en bruger hvor boksen var revnet bag på også ligner 
 ,'
 lys kontrol boks modifikation
 ' => '
-Grundet det dårlige design i forbindelse med forlyset på Kymco Super 8 har jeg undersøgt hvordan man kan få lavet forlyset så det bare virker og man ikke skal tænke på om det nu er tændt eller slukket (fordi CDI boksen ikke altid laver signal til lys kontrol boksen).
+Grundet det dårlige design i forbindelse med forlyset på Kymco Super 8 4T har jeg undersøgt hvordan man kan få lavet forlyset så det bare virker og man ikke skal tænke på om det nu er tændt eller slukket (fordi CDI boksen ikke altid laver signal til lys kontrol boksen).
 
 De fleste scootere har så vidt jeg ved kun 1 forpære men denne scooter har 2 forpære på 35/35 watt hver.
 Forlyset alene bruge altså 70 watt. Hvilket er en strømstyrke på cirka 5,8 ampere (70 watt / 12 volt).
@@ -159,7 +159,7 @@ Indtil videre har jeg fundet 3 forskellige løsninger
 Fjern lys kontrol boksen helt fra scooteren.
 Kortslut den blå/sorte og blå ledning.
 Kortslut den hvide/sorte og hvide ledning.
-'.visbilled('1', 'billed2320.jpg', 'kymco super 8 lys kontrol boks stik kortslutning', false, true).'
+'.visbilled('1', 'billed2320.jpg', 'kymco super 8 4T lys kontrol boks stik kortslutning', false, true).'
 Udskift 7 amperes sikringen som sidder på sorte ledninger med en 15 amperes sikring.
 Hvis det ikke kan lade sig gøre at få en glas sikring på 15 ampere så monter en sikringsholder til fladesikringer.
 '.visbilled('1', 'billed2366.jpg', 'sikringsholder og sikring på 15 ampere', false, true).'
@@ -173,14 +173,14 @@ Det skulle klart være den bedste løsning.
 Jeg har ikke selv prøvet det men der er flere brugere som har gjort det og skrevet at det virker.
 
 Lys kontrol boksen fjernes også monteres de 2 relæ som vist her.
-'.galleriholder(array(galleri('highslidestandard', 'billed2786.jpg', 'billed2786.jpg', '2 relæ i stedet for lys kontrol boks kymco super 8'))). '
+'.galleriholder(array(galleri('highslidestandard', 'billed2786.jpg', 'billed2786.jpg', '2 relæ i stedet for lys kontrol boks kymco super 8 4T'))). '
 Her er nogen billeder fra en bruger som har skiftet lys kontrol boksen ud med 2 relæ ('.ahref('http://www.biltema.dk/da/Bil---MC/Bilreservedele/Elsystem/Rela/', 'kan købes i biltema').').
-'.visbilled('1', 'billed3310.jpg', '2 relæ i stedet for lys kontrol boks kymco super 8', false, true).'
-'.visbilled('1', 'billed3311.jpg', '2 relæ i stedet for lys kontrol boks kymco super 8', false, true).'
-'.visbilled('1', 'billed3308.jpg', '2 relæ i stedet for lys kontrol boks kymco super 8', false, true).'
-'.visbilled('1', 'billed3309.jpg', '2 relæ i stedet for lys kontrol boks kymco super 8', false, true).'
-'.visbilled('1', 'billed3312.jpg', '2 relæ i stedet for lys kontrol boks kymco super 8', false, true).'
-'.visbilled('1', 'billed3313.jpg', '2 relæ i stedet for lys kontrol boks kymco super 8', false, true).'
+'.visbilled('1', 'billed3310.jpg', '2 relæ i stedet for lys kontrol boks kymco super 8 4T', false, true).'
+'.visbilled('1', 'billed3311.jpg', '2 relæ i stedet for lys kontrol boks kymco super 8 4T', false, true).'
+'.visbilled('1', 'billed3308.jpg', '2 relæ i stedet for lys kontrol boks kymco super 8 4T', false, true).'
+'.visbilled('1', 'billed3309.jpg', '2 relæ i stedet for lys kontrol boks kymco super 8 4T', false, true).'
+'.visbilled('1', 'billed3312.jpg', '2 relæ i stedet for lys kontrol boks kymco super 8 4T', false, true).'
+'.visbilled('1', 'billed3313.jpg', '2 relæ i stedet for lys kontrol boks kymco super 8 4T', false, true).'
 '.visbilled('1', 'billed3314.jpg', 'relæ tegning', false, true).'
 ').'
 '
@@ -191,9 +191,9 @@ ledningsnet
 Reservedelsnummer på ledningsnet.
 '.visbilled('1', 'billed1878.jpg', 'kymco 32100-lej2-e00 ledningsnet', false, true).'
 Stik fra ledningsnettet til baglygten.
-'.visbilled('1', 'billed1876.jpg', 'kymco super 8 baglygtestik', false, true).'
+'.visbilled('1', 'billed1876.jpg', 'kymco super 8 4T baglygtestik', false, true).'
 Stik fra baglygten med baglys og blinklys.
-'.visbilled('1', 'billed1877.jpg', 'kymco super 8 baglygtestik', false, true).'
+'.visbilled('1', 'billed1877.jpg', 'kymco super 8 4T baglygtestik', false, true).'
 '
 
 ,'
@@ -224,7 +224,7 @@ På et tidspunkt er sikringen blevet så varm at den har smeltet hul i sikringsh
 
 Her ses en af gangene hvor sikringen er holdt op med at virke.
 I stedet for at smelte hurtigt så har sikringen været varm i lang tid og har virket også efter måske nogle måneders brug så er den blevet defekt.
-'.visbilled('1', 'billed2675.jpg', 'defekt sikring fra kymco super 8', false, true).'
+'.visbilled('1', 'billed2675.jpg', 'defekt sikring fra kymco super 8 4T', false, true).'
 Jeg tror at Kymco er kommet til at bytte om på en 7 og 10 amperes sikring eller også skulle de begge havde været 10 amperes sikringer.
 Efter at have byttet 7 ampers sikringen ud med en 10 amperes sikring så virker det fint og der er ikke noget problem med at sikringen bliver for varm.
 '
@@ -244,24 +244,24 @@ bagerste støddæmpere
 ' => '
 Personligt syns jeg at den bagerste affjedring er alt for hård.
 
-Der er 2 støddæmpere og fjedre bag på Kymco Super 8 hvor der på de fleste 50 cm³ scootere kun er 1 så måske det er derfor den er så hård i affjedringen.
+Der er 2 støddæmpere og fjedre bag på Kymco Super 8 4T hvor der på de fleste 50 cm³ scootere kun er 1 så måske det er derfor den er så hård i affjedringen.
 
 Hvis jeg køre lange ture så får jeg ondt i ryggen på grund af den hårde affjedring også er det ikke specielt rart at køre på huller i vejen og lignende.
 
-Efter jeg har haft min Kymco Super 8 i cirka 3 år ser det ud til at min venstre støddæmper er blevet utæt.
-'.visbilled('1', 'billed2781.jpg', 'støddæmper utæt kymco super 8', false, true).'
+Efter jeg har haft min Kymco Super 8 4T i cirka 3 år ser det ud til at min venstre støddæmper er blevet utæt.
+'.visbilled('1', 'billed2781.jpg', 'støddæmper utæt kymco super 8 4T', false, true).'
 Det ser ud til at den er utæt der hvor stempelstangen går ind i inderrøret.
 Det ser i hvert fald vådt ud her.
-'.visbilled('1', 'billed2782.jpg', 'støddæmper utæt kymco super 8', false, true).'
+'.visbilled('1', 'billed2782.jpg', 'støddæmper utæt kymco super 8 4T', false, true).'
 Og så er væsken løbet ned ad støddæmperen og her kan man se at bolten ser våd ud og der er lidt vådt øverst på motorblokken.
-'.visbilled('1', 'billed2784.jpg', 'støddæmper utæt kymco super 8', false, true).'
+'.visbilled('1', 'billed2784.jpg', 'støddæmper utæt kymco super 8 4T', false, true).'
 Nu hvor den ene støddæmper blev utæt vil jeg prøve hvordan det er at køre uden støddæmpere.
 Altså kun med fjedre.
 
 Så jeg borede et hul nederst på hver støddæmper for at få olien/væsken ud.
-'.visbilled('1', 'billed2783.jpg', 'støddæmper med boret hul kymco super 8', false, true).'
+'.visbilled('1', 'billed2783.jpg', 'støddæmper med boret hul kymco super 8 4T', false, true).'
 Jeg prøvede at suge olien op med toilet papir men det flød ikke frit ud af sig selv.
-'.visbilled('1', 'billed2785.jpg', 'støddæmper med boret hul kymco super 8', false, true).'
+'.visbilled('1', 'billed2785.jpg', 'støddæmper med boret hul kymco super 8 4T', false, true).'
 Men skal presse på scooterens bagende en masse gange får at pumpe væsken ud.
 
 Jeg brugte et 7 mm bor.

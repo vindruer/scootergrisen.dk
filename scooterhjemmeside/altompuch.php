@@ -19,7 +19,8 @@ Puch skulle være importeret af O.E.Andersen.
 
 Se også '.ahref('http://www.puchklub.dk/', 'puchklub.dk').' og '.ahref('http://www.puchvenner.dk/', 'puchvenner.dk').'.
 
-
+Reservedele :
+'.ahref('http://www.facykler.dk/', 'facykler.dk').'
 '
 
 );

@@ -29,6 +29,10 @@ et udpluk af danske sider og forum
 ,array('http://knallertforum.dk/', 'knallertforum.dk', 'KnallertForum.dk')
 ,array('http://knallertsider.dk/', 'knallertsider.dk', 'knallertsider.dk')
 ,array('http://www.knallert-scooter.dk/', 'www.knallert-scooter.dk', 'knallert-scooter.dk')
+,array('http://www.puchvenner.dk/forum/', 'www.puchvenner.dk_forum', 'puchvenner.dk forum')
+,array('http://suzukidm50.dk/', 'suzukidm50.dk', 'Suzuki DM50')
+,array('http://www.sd-racing.dk/', 'www.sd-racing.dk', 'SD-Racing')
+,array('http://www.facebook.com/scootergrisen', 'www.facebook.com_scootergrisen', 'fanside på facebook')
 )
 
 ,'
@@ -103,10 +107,8 @@ forhandlere
 ,array('http://www.italianbikestore.dk/', 'www.italianbikestore.dk', 'italian bike store')
 ,array('http://www.midtjydskmc.dk', 'www.midtjydskmc.dk', 'midtjydsk MC')
 ,array('http://shop.yamahafs1.dk', 'shop.yamahafs1.dk', 'yamaha FS1.dk')
-,array('http://scootershop.dk/', 'scootershop.dk', 'Asnæs Importen')
+,array('http://scootershop.dk/', 'scootershop.dk', 'scootershop.dk Asnæs Importen')
 ,array('http://www.mchns.dk/', 'www.mchns.dk', 'MC hjørnet nordsjælland') // http://www.mchjoernet.dk/ viderestiller til http://www.mchns.dk/
-,array('http://www.tante-paula.de/', 'www.tante-paula.de', 'Tante Paula DE')
-,array('http://www.tantepaula.dk/', 'www.tantepaula.dk', 'Tante Paula DK')
 ,array('http://www.mc-center.dk/', 'www.mc-center.dk', 'Køge MC og båd center')
 ,array('http://www.scooterdele.dk/', 'www.scooterdele.dk', 'Scooterdele.dk')
 ,array('http://scooter-power.dk/', 'scooter-power.dk', 'Scooter-power.dk')
@@ -179,6 +181,9 @@ producenter
 ,array('http://www.pgdanmark.dk/', 'www.pgdanmark.dk', 'vespa DK')
 ,array('http://www.tomos.si/', 'www.tomos.si', 'tomos IS')
 ,array('http://www.luyuan.cn/', 'www.luyuan.cn', 'luyuan CN')
+,array('http://www.tante-paula.de/', 'www.tante-paula.de', 'Tante Paula DE')
+,array('http://www.tantepaula.dk/', 'www.tantepaula.dk', 'Tante Paula DK')
+,array('http://www.longjia.com.cn/', 'www.longjia.com.cn', 'Longjia COM CN')
 )
 
 ,'
@@ -196,6 +201,9 @@ udenlandske
 ,array('http://scootercommunity.com.au', 'scootercommunity.com.au', 'scooter community')
 ,array('http://www.scootertherapy.com/advicepage1.html', 'www.scootertherapy.com', 'scooter therapy')
 // for skod agtig. Ligner at den er blevet efterlagt og halvt overtaget med reklamer og links der ikke virker ,array('http://visforvoltage.org', 'visforvoltage.org', 'v is for voltage')
+,array('http://www.scooterforum.se/', 'www.scooterforum.se', 'scooter forum.se')
+,array('http://scooterdoctors.egetforum.com/', 'scooterdoctors.egetforum.com', 'NYA Scooter Doctors')
+,array('http://www.mopedportalen.com/forum/', 'www.mopedportalen.com', 'MopedPortalen')
 )
 
 ,'
@@ -215,7 +223,6 @@ andet
 //Vores forretning er pt lukket ned. Vi arbejder på en webshop som gør bestillingen hurtigere og nemmere. ,array('http://ricambi.dk/', 'ricambi.dk', 'Ricambi Vespa Spare Parts')
 ,array('http://www.sikkertrafik.dk', 'www.sikkertrafik.dk', 'sikkertrafik')
 ,array('http://www.scootzone.dk', 'www.scootzone.dk', 'scootzone')
-,array('http://suzukidm50.dk/', 'suzukidm50.dk', 'Suzuki DM50')
 ,array('http://www.suzuki-fz50.dk', 'www.suzuki-fz50.dk', 'suzuki FZ50')
 ,array('http://www.vespa-klub-danmark.dk/', 'www.vespa-klub-danmark.dk', 'vespa klub danmark')
 ,array('http://www.vespaonline.dk/', 'www.vespaonline.dk', 'vespaonline.dk')
@@ -226,6 +233,7 @@ andet
 ,array('http://www.k50.dk/', 'www.k50.dk', 'K50')
 ,array('http://trehjul.dk/', 'trehjul.dk', 'BumbleBees')
 ,array('http://www.solex3800.dk/', 'www.solex3800.dk', 'solex3800.dk')
+,array('http://www.puchmaxiklubfaxe.dk/', 'www.puchmaxiklubfaxe.dk', 'puch maxi klub faxe')
 )
 
 ,'

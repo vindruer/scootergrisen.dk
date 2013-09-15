@@ -165,7 +165,7 @@ $databasecenter = array(
       ,'pris'              => ens('pris', '10995', '', '', '')
       ,'hastighed'         => ens('hastighed', '45', '', '', '')
       ,'farver'            => ens('farver', 'hvid-sort', '', '', '')
-      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', 'http://www.waypoint.dk/sw1349.asp', '', '', '')
 
    ),'motor'               => array(
        'motormodel'        => ens('motormodel', 'KG10', '', '', '(måske KG10DB)')
@@ -305,7 +305,7 @@ $databasecenter = array(
       ,'pris'              => ens('pris', '10995', '', '', '')
       ,'hastighed'         => ens('hastighed', '45', '', '', '')
       ,'farver'            => ens('farver', 'hvid-sort', '', '', '')
-      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', 'http://www.waypoint.dk/sw1349.asp', '', '', '')
 
    ),'motor'               => array(
        'motormodel'        => ens('motormodel', 'KG10', '', '', '(måske KG10DD)')
@@ -720,15 +720,15 @@ $databasecenter = array(
    ),'generelt'            => array(
        'model'             => ens('model', 'kymco people', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
-      ,'scootertype'       => ens('scootertype', '', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'B1', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '12995', '', '', '')
       ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', 'sølv', '', '', '')
-      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', 'http://www.waypoint.dk/sw1349.asp', '', '', '')
 
    ),'motor'               => array(
-       'motormodel'        => ens('motormodel', '', '', '', '')
+       'motormodel'        => ens('motormodel', 'BA10A eller BA10D', '', '', '')
       ,'motortype'         => ens('motortype', '2 takt', '', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
       ,'volume'            => ens('volume', '49,5', '', '', '')
@@ -761,8 +761,8 @@ $databasecenter = array(
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '', '', '', 'aluminium')
-      ,'fælgbag'           => ens('fælg', '', '', '', 'aluminium')
+       'fælgfor'           => ens('fælg', '1.60', '16', '', 'aluminium')
+      ,'fælgbag'           => ens('fælg', '2.15', '16', '', 'aluminium')
       ,'dækfor'            => ens('dæk1', '80', '80', '16', '')
       ,'dækbag'            => ens('dæk1', '100', '80', '16', '')
       ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
@@ -820,7 +820,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'RFBB1004091000', 'RFBB10040A1000 (lille)', '', '')
+      ,'stelnummer'        => ens('stelnummer', 'RFBB1004091000', 'RFBB10040A1000 (lille)', 'RFBB1__20 (E13437)', '')
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '95,5', '', '', '')
@@ -839,26 +839,26 @@ $databasecenter = array(
       ,'andet'             => ens('andet', '', '', '', '')
 
    ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+       'begrænstransmis'   => ens('begrænstransmis', '', 'Afstandsbøsning mellem forreste remskivehalvdele med brystbredde 11,0 mm.', 'afstandsskive mellem forreste remskivehalvdele med en tykkelse på 8,0 mm.', '')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
-      ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
+      ,'begrænskarburator' => ens('begrænskarburator', '', 'Begrænset løft af stempel i karburator, ved at der er monteret en bøsning over stempel ø13 x 10 mm.', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
-      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
-      ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
+      ,'begrænsudstødning' => ens('begrænsudstødning', '', 'Resonatorrør påsvejset forreste udstødningsrør ø23 x 200 mm.', 'Resonatorrør påsvejst forreste udstødningsrør ø25 x 270 mm eller ø23 x 200 mm', '')
+      ,'begrænsstelnum'    => ens('begrænsstelnum', '', 'Tegn 8 og 9 i stelnummeret er 40 og angiver den maksimale hastighed = 30 km/t', 'tegn nr 8 og 9 (2 og 0) i stelnummeret (VIN-mærkning) angiver version og hastighed, 45 km/t.', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 
    )
 
-),'kymcosuper8' => array(
+),'kymcosuper84t' => array(
 
      'specielt'            => array(
-       'besked'            => ens('besked', 'Se også '.ahref('specielt_kymcosuper8.php', 'Specielt for Kymco Super 8').'.', '', '', '')
+       'besked'            => ens('besked', 'Se også '.ahref('specielt_kymcosuper8.php', 'Specielt for Kymco Super 8 4T').'.', '', '', '')
 
    ),'generelt'            => array(
-       'model'             => ens('model', 'kymco super 8', '', '', '')
+       'model'             => ens('model', 'kymco super 8 4T', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
       ,'scootertype'       => ens('scootertype', 'CK50QT-6', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
@@ -980,15 +980,155 @@ $databasecenter = array(
 
    ),'begrænsninger'       => array(
        'begrænstransmis'   => ens('begrænstransmis', '', '9,0 mm bred forhøjning på gliderør mellem forreste remskiver', '4,5 mm bred forhøjning på gliderør mellem forreste remskiver', '')
-      ,'begrænstænding'    => ens('begrænstænding', '', 'ja', '', 'begrænsning kan fjernes ved at afmonter en af de lilla/røde ledninger på CDI stikket.<br>' . visbilled('1', 'billed0166.jpg', 'Kymco Super 8 CDI stik ubegrænset'))
+      ,'begrænstænding'    => ens('begrænstænding', '', 'ja', '', 'begrænsning kan fjernes ved at afmonter en af de lilla/røde ledninger på CDI stikket.<br>' . visbilled('1', 'billed0166.jpg', 'Kymco Super 8 4T CDI stik ubegrænset') . '<br>' . ahref('http://www.youtube.com/watch?v=fDGauzkqaDA', 'Video - Fjern begræsning på CDI boks'))
       ,'begrænskarburator' => ens('begrænskarburator', '', 'standard begrænset hoveddyse : K80 / ubegrænset hoveddyse : K82', '', '')
-      ,'begrænsluftfilter' => ens('begrænsluftfilter', '', 'tragt på indersiden af luftfilterkassen :<br>' . visbilled('1', 'billed2323.jpg', 'Kymco Super 8 tragt i luftfilterkasse'), '', false)
+      ,'begrænsluftfilter' => ens('begrænsluftfilter', '', 'tragt på indersiden af luftfilterkassen :<br>' . visbilled('1', 'billed2323.jpg', 'Kymco Super 8 4T tragt i luftfilterkasse'), '', false)
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
       ,'begrænsruller'     => ens('begrænsruller', '', 'standard : 6,5 gram', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
       ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
       ,'begrænsstelnum'    => ens('begrænsstelnum', '', 'Tegn 7 er 1 og angiver den maksimale hastighed = 30 km/t.<br>Tegn 7 er "1" / "4" og angiver den maksimale hastighed = 30 km/t.', 'Tegn 7 er "0" / "3" og angiver den maksimale hastighed = 45 km/t.<br>Tegn 8 og 9 er "0" og angiver den maksimale hastighed = 45 km/t.', '')
-      ,'begrænsandet'      => ens('begrænsandet', '', 'Standard koblingstrykfjeder har blå maling på', '', '')
+      ,'begrænsandet'      => ens('begrænsandet', '', 'Standard koblingstrykfjeder har blå malingsplet på', '', '')
+
+   )
+
+),'kymcosuper82t' => array(
+
+     'specielt'            => array(
+       'besked'            => ens('besked', 'Billeder er af en 4 takt. Mangler et korrekt billede<br>'.ahref('http://kymco.dk/Default.aspx?ID=27').'<br>'.ahref('http://www.kymco.com/product/overview.asp?MotorCTID=B5EF6E8B-B72D-4FF8-AEF7-93E9F9824668').'', '', '', '')
+
+   ),'generelt'            => array(
+       'model'             => ens('model', 'kymco super 8 2T', '', '', '')
+      ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
+      ,'scootertype'       => ens('scootertype', '', '', '', '')
+      ,'varianter'         => ens('varianter', '', '', '', '')
+      ,'pris'              => ens('pris', '12995', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30', '', '', '')
+      ,'farver'            => ens('farver', 'hvid-sort rød-hvid-sort blå-hvid-sort', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', 'http://www.waypoint.dk/sw1349.asp', '', '', '')
+
+   ),'motor'               => array(
+       'motormodel'        => ens('motormodel', 'KF10AA', '', '', '')
+      ,'motortype'         => ens('motortype', '2 takt', '', '', '')
+      ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
+      ,'volume'            => ens('volume', '49,5', '', '', '')
+      ,'køling'            => ens('køling', '', '', '', '')
+      ,'boring'            => ens('boring', '', '', '', '')
+      ,'slaglængde'        => ens('slaglængde', '', '', '', '')
+      ,'ventiler'          => ens('ventiler', '', '', '', '')
+      ,'ventiljustering'   => ens('ventiljustering', '', '', '', '')
+      ,'kompression'       => ens('kompression', '', '', '', '')
+      ,'tomgang'           => ens('tomgang', '', '', '', '')
+      ,'nomieffektogheste' => ens('nomieffektogheste', '', '', '', '')
+      ,'maxeffektogheste'  => ens('maxeffektogheste', '2,5', 'kw', '', '(ifølge 30 km/t typegodkendelse)') . ens('maxeffektogheste', '3,4', 'hk', '6500', '(ifølge kymco.dk)')
+      ,'moment'            => ens('moment', '', '', '', '')
+      ,'karburator'        => ens('karburator', '', '', '', '')
+      ,'brændstof indsp..' => ens('brændstof indsp..', '', '', '', '')
+      ,'smøring'           => ens('smøring', '', '', '', '')
+      ,'tændrør'           => ens('tændrør', '', '', '', '')
+
+   ),'dimensioner'         => array(
+       'længde'            => ens('længde', '1955', '', '', '')
+      ,'bredde'            => ens('bredde', '750', '', '', '')
+      ,'højde'             => ens('højde', '', '', '', '')
+      ,'sædehøjde'         => ens('sædehøjde', '', '', '', '')
+      ,'frihøjde'          => ens('frihøjde', '', '', '', '')
+      ,'akselafstand'      => ens('akselafstand', '', '', '', '')
+
+   ),'brændstof'           => array(
+       'benzin'            => ens('benzin', '', '', '', '')
+      ,'benzintank'        => ens('benzintank', '6', '', '', '(i følge kymco.dk)')
+      ,'forbrug'           => ens('forbrug', '', '', '', '')
+
+   ),'hjul'                => array(
+       'fælgfor'           => ens('fælg', '3.00', '14', '', 'aluminium')
+      ,'fælgbag'           => ens('fælg', '3.00', '14', '', 'aluminium')
+      ,'dækfor'            => ens('dæk1', '120', '70', '14', '(i følge 30 km/t typegodkendelse)') . ens('dæk1', '100', '80', '14', '(i følge kymco.dk)')
+      ,'dækbag'            => ens('dæk1', '120', '80', '14', '')
+      ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
+      ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
+      ,'affjedringfor'     => ens('affjedringfor', '', '', '', '')
+      ,'affjedringbag'     => ens('affjedringbag', '', '', '', '')
+      ,'bremserfor'        => ens('bremser', 'skive', '250', '', '')
+      ,'bremserbag'        => ens('bremser', '', '', '', '')
+      ,'eger'              => ens('eger', '', '', '')
+      ,'castervinkel'      => ens('castervinkel', '', '', '')
+      ,'efterløb'          => ens('efterløb', '', '', '')
+      ,'drejevinkel'       => ens('drejevinkel', '', '', '', '')
+      ,'venderadius'       => ens('venderadius', '', '', '', '')
+
+   ),'elektrisk'           => array(
+       'starterbatteri'    => ens('starterbatteri', '', '', '', '')
+      ,'batterispec1'      => ens('batterispec1', '', '', '', '')
+      ,'batterispec2'      => ens('batterispec2', '', '', '', '')
+      ,'batterivægt'       => ens('batterivægt', '', '', '', '')
+      ,'batterilevetid'    => ens('batterilevetid', '', '', '', '')
+      ,'generator'         => ens('generator', '', '', '', '')
+      ,'sikring'           => ens('sikring', '', '', '', '')
+      ,'tændingssystem'    => ens('tændingssystem', '', '', '', '')
+      ,'elstart'           => ens('elstart', 'ja', '', '', '')
+      ,'kickstart'         => ens('kickstart', 'ja', '', '', '')
+      ,'lysfor'            => ens('lys', '', '', '', 'halogen')
+      ,'lysbagbremse'      => ens('lys', '', '', '', '')
+      ,'lysbag'            => ens('lys', '', '', '', '')
+      ,'lysbremse'         => ens('lys', '', '', '', '')
+      ,'lyspositions'      => ens('lys', '', '', '', '')
+      ,'lysblink'          => ens('lys', '', '', '', '')
+      ,'lyskontrolblink'   => ens('lys', '', '', '', '')
+      ,'lyskontrollangt'   => ens('lys', '', '', '', '')
+      ,'lysnummerplade'    => ens('lys', '', '', '', '')
+      ,'lysinstrument'     => ens('lys', '', '', '', '')
+      ,'oplader'           => ens('oplader', '', '', '', '')
+      ,'ladetid'           => ens('ladetid', '', '', '', '')
+      ,'rækkevidde'        => ens('rækkevidde', '', '', '', '')
+      ,'controller'        => ens('controller', '', '', '', '')
+
+   ),'olie og væsker'      => array(
+       'motor'             => ens('olie', '', '', '', '')
+      ,'gear'              => ens('olie', '', '', '', '')
+      ,'forgaffel'         => ens('olie', '', '', '', '')
+      ,'kølervæske'        => ens('kølervæske', '', '', '', '')
+
+   ),'transmission'        => array(
+       'transmissiontype'  => ens('transmissiontype', 'cvt', '', '', '')
+      ,'kobling'           => ens('kobling', '', '', '', '')
+      ,'antalgear'         => ens('antalgear', '', '', '', '')
+      ,'gearratio'         => ens('gearratio', '', '', '', '')
+      ,'tandhjulfor'       => ens('tandhjulfor', '', '', '', '')
+      ,'tandhjulbag'       => ens('tandhjulbag', '', '', '', '')
+      ,'reduktionsratio'   => ens('reduktionsratio', '', '', '', '')
+
+   ),'ekstra'              => array(
+       'stel'              => ens('stel', '', '', '', '')
+      ,'stelnummer'        => ens('stelnummer', '', '', '', '')
+      ,'udstødning'        => ens('udstødning', '', '', '', '')
+      ,'euroemission'      => ens('euroemission', '', '', '', '')
+      ,'vægttør'           => ens('vægttør', '', '', '', '')
+      ,'vægtkørerklar'     => ens('vægtkørerklar', '', '', '', '')
+      ,'vægttotal'         => ens('vægttotal', '', '', '', '')
+      ,'bæreevne'          => ens('bæreevne', '', '', '', '')
+      ,'luftfiltertype'    => ens('luftfiltertype', '', '', '', '')
+      ,'stigeevne'         => ens('stigeevne', '', '', '', '')
+      ,'medfølger'         => ens('medfølger', '', '', '', '')
+      ,'bremsevæske'       => ens('bremsevæske', '', '', '', '')
+      ,'støj'              => ens('støj', '', '', '', '')
+      ,'bagagevolume'      => ens('bagagevolume', '', '', '', '')
+      ,'bakgear'           => ens('bakgear', '', '', '', '')
+      ,'importør'          => ens('importør', '', '', '', '')
+      ,'producent'         => ens('producent', '', '', '', '')
+      ,'andet'             => ens('andet', '', '', '', '')
+
+   ),'begrænsninger'       => array(
+       'begrænstransmis'   => ens('begrænstransmis', '', '11 mm bøsning Ml. variatorhalvdele', '', '')
+      ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
+      ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
+      ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
+      ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
+      ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
+      ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
+      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
+      ,'begrænsstelnum'    => ens('begrænsstelnum', '', 'Tegn nr. 8 og 9 i stelnummeret = 1/0 der angiver maksimal hastighed = 30 km/t.', '', '')
+      ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 
    )
 
@@ -1000,15 +1140,15 @@ $databasecenter = array(
    ),'generelt'            => array(
        'model'             => ens('model', 'kymco super 9', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
-      ,'scootertype'       => ens('scootertype', '', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'S1', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '13995', '', '', '')
-      ,'hastighed'         => ens('hastighed', '45', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
-      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', 'http://www.waypoint.dk/sw1349.asp', '', '', '')
 
    ),'motor'               => array(
-       'motormodel'        => ens('motormodel', '', '', '', '')
+       'motormodel'        => ens('motormodel', 'SH10A (væskekølet) SH10B (væskekølet) SF10 SF10E SF10F (luftkølet) SF10L', '', '', '')
       ,'motortype'         => ens('motortype', '2 takt', '', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
       ,'volume'            => ens('volume', '', '', '', '')
@@ -1119,14 +1259,14 @@ $databasecenter = array(
       ,'andet'             => ens('andet', '', '', '', '')
 
    ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+       'begrænstransmis'   => ens('begrænstransmis', '', 'Afstandsbøsning mellem forreste remskivehalvdele med brystbredde 10,0 mm.', 'Afstandsskive mellem forreste remskivehalvdele med en tykkelse på 7,0 eller 8,0 eller 9,0 mm.', '')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
-      ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
+      ,'begrænskarburator' => ens('begrænskarburator', '', 'Begrænset løft af stempel i karburator, ved at der er monteret en bøsning over stempel ø13 x 10 mm.', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
-      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
+      ,'begrænsudstødning' => ens('begrænsudstødning', '', 'Resonatorrør påsvejset forreste udstødningsrør ø23 x 270 mm.', 'Resonatorrør påsvejst forreste udstødningsrør ø 22 mm, længde 155 eller 270 eller 300 mm.', '')
       ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 
@@ -1140,15 +1280,15 @@ $databasecenter = array(
    ),'generelt'            => array(
        'model'             => ens('model', 'kymco vitality', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
-      ,'scootertype'       => ens('scootertype', '', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'U3', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '9995', '10995', '', '')
       ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', 'sort hvid', '', '', '')
-      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', 'http://www.waypoint.dk/sw1349.asp', '', '', '')
 
    ),'motor'               => array(
-       'motormodel'        => ens('motormodel', '', '', '', '')
+       'motormodel'        => ens('motormodel', 'SF10', '', '', '')
       ,'motortype'         => ens('motortype', '2 takt', '', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
       ,'volume'            => ens('volume', '49,5', '', '', '')
@@ -1181,8 +1321,8 @@ $databasecenter = array(
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '', '12', '', 'aluminium')
-      ,'fælgbag'           => ens('fælg', '', '12', '', 'aluminium')
+       'fælgfor'           => ens('fælg', '3.00', '12', '', 'aluminium')
+      ,'fælgbag'           => ens('fælg', '3.50', '12', '', 'aluminium')
       ,'dækfor'            => ens('dæk1', '120', '70', '12', '')
       ,'dækbag'            => ens('dæk1', '130', '70', '12', '')
       ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
@@ -1259,7 +1399,7 @@ $databasecenter = array(
       ,'andet'             => ens('andet', '', '', '', '')
 
    ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+       'begrænstransmis'   => ens('begrænstransmis', '', '11 mm afstandsbøsning Ml. forr. variatorhalvdele', '8 mm afstandsbøsning Ml. forr. variatorhalvdele<br>Afstandsbøsning med afstandsstykke på 4,5 mm mellem forreste remskivehalvdele.', '')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
@@ -1267,7 +1407,7 @@ $databasecenter = array(
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
       ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
-      ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
+      ,'begrænsstelnum'    => ens('begrænsstelnum', '', 'Tegn nummer 8 og 9 er "5" og "0", og angiver den maksimale hastighed = 30 km/t.', 'Tegn nummer 8 og 9 er "00" og angiver den maksimale hastighed = 45 km/t.', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 
    )
@@ -1287,13 +1427,15 @@ $databaseright = array(
    ,'agility el diagram'                => 'kymco_agility_eldiagram.pdf'
    ,'like eldiagram'                    => 'kymco_like_eldiagram.pdf'
    ,'like servicemanual'                => 'kymco_like_servicemanual.pdf'
-   ,'super 8 brugermanual'              => 'kymco_super8_brugermanual.pdf'
-   ,'super 8 servicemanual'             => 'kymco_super8_servicemanual.pdf'
-   ,'super 8 reservedele'               => 'kymco_super8_reservedele.pdf'
-   ,'super 8 el diagram'                => 'kymco_super8_eldiagram.pdf'
+   ,'super 8 4T brugermanual'           => 'kymco_super8_4t_brugermanual.pdf'
+   ,'super 8 4T servicemanual'          => 'kymco_super8_4t_servicemanual.pdf'
+   ,'super 8 4T reservedele'            => 'kymco_super8_4t_reservedele.pdf'
+   ,'super 8 4T el diagram'             => 'kymco_super8_4t_eldiagram.pdf'
+   ,'super 8 2T servicemanual'          => 'kymco_super8_2t_servicemanual.pdf'
    ,'super 9 servicemanual'             => 'kymco_super9_servicemanual.pdf'
    ,'super 9 reservedele'               => 'kymco_super9_reservedele.pdf'
-   ,'vitality servicemanual'            => 'kymco_vitality_reservedele.pdf'
+   ,'vitality servicemanual'            => 'kymco_vitality_servicemanual.pdf'
+   ,'vitality reservedele'              => 'kymco_vitality_reservedele.pdf'
    ,'ZX servicemanual'                  => 'kymco_zx_servicemanual.pdf'
    ,'kymco katalog 2012'                => 'kymco_katalog_2012.pdf'
    ,'kymco VIN (stelnummer) forklaring' => 'kymco_vin_forklaring.jpg'
@@ -1307,34 +1449,50 @@ $databaseright = array(
    ,'agility Carry 45 km/t E19686 (e4*2002/24*2602)'     => 'typegodkendelser/Kymco%20Agility%20Carry%20%28E19686%29%20udstedt%2022-03-2012.pdf'
    ,'agility Delivery 45 km/t E19687 (e4*2002/24*2602)'  => 'typegodkendelser/Kymco%20Agility%20Delivery%20%28E19687%29%20udstedt%2022-03-2012.pdf'
    ,'like 30 km/t E19643 (e4*2002/24*2230)'          => 'typegodkendelser/Kymco%20Like%2050%20%28E19643%29%20udstedt%2021-02-2012.pdf'
-   ,'super 8 30 km/t E16491 (e4*2002/24*1464)'       => 'typegodkendelser/Kymco%20Super%208%20%28E16491%29%20udstedt%2007-08-2007.pdf'
-   ,'super 8 30 km/t E17686 (e4*2002/24*1464)'       => 'typegodkendelser/Kymco%20Super%208%20%28E17686%29%20udstedt%2019-06-2009.pdf'
-   ,'super 8 45 km/t E16472 (e4*2002/24*1464) 2'     => 'typegodkendelser/Kymco%20Super%208%20%28E16472%29%20udstedt%2015-06-2007.pdf'
-   ,'super 8 45 km/t E17687 (e4*2002/24*1464) 2'     => 'typegodkendelser/Kymco%20Super%208%20%28E17687%29%20udstedt%2019-06-2009.pdf'
-/*
-   ,'super 9 45 km/t typegodkendelse E12187 (e4*92/61*0074)'     => 'typegodkendelser/Kymco%20Super%209%20%28E12187%29%20udstedt%2012-09-2002.pdf'
-Afstandsskive mellem forreste remskivehalvdele med en tykkelse på 9,0 mm.
-
-Resonatorrør påsvejst forreste udstødningsrør, variant 1: ø 22 mm, længde 300 mm,
-variant 2: ø 22 mm, længde 155 mm, variant 3: ø 22 mm, længde 270 mm.
-
-   ,'super 9 45 km/t typegodkendelse E13539 (e4*92/61*0074)'     => 'typegodkendelser/Kymco%20Super%209%20%28E13539%29%20udstedt%2007-07-2004.pdf'
-Afstandsskive med brystbredde på 7,0 mm mellem forreste remskivehalvdele og resonatorrør
-
-påsvejst forreste udstødningsrør: ø 22 x 155 mm.
-
-   ,'super 9 45 km/t typegodkendelse E14691 (e4*92/61*0074)'     => 'typegodkendelser/Kymco%20Super%209%20%28E14691%29%20udstedt%2025-11-2005.pdf'
-Variant 1: Afstandsskive med brystbredde på 7,0 mm mellem forreste remskivehalvdele og resonatorrør påsvejst forreste udstødningsrør: ø 22 x 155 mm.
-Variant 2: Afstandsskive med brystbredde på 8,0 mm mellem forreste remskivehalvdele og resonatorrør påsvejst forreste udstødningsrør: ø 22 x 270 mm.
-
-   ,'super 9  km/t typegodkendelse E15383 (e4*92/61*0074)'     => 'typegodkendelser/Kymco%20Super%209%20%28E15383%29%20udstedt%2016-05-2006.pdf'
-Afstandsbøsning mellem forreste remskivehalvdele med brystbredde 10,0 mm. Resonatorrør påsvejset forreste
-
-udstødningsrør ø23 x 270 mm. Begrænset løft af stempel i karburator, ved at der er monteret en bøsning over stempel ø13 x 10 mm.
-*/
-
+   ,'super 8 4T 30 km/t E16491 (e4*2002/24*1464)'       => 'typegodkendelser/Kymco%20Super%208%20%28E16491%29%20udstedt%2007-08-2007.pdf'
+   ,'super 8 4T 30 km/t E17686 (e4*2002/24*1464)'       => 'typegodkendelser/Kymco%20Super%208%20%28E17686%29%20udstedt%2019-06-2009.pdf'
+   ,'super 8 4T 45 km/t E16472 (e4*2002/24*1464) 2'     => 'typegodkendelser/Kymco%20Super%208%20%28E16472%29%20udstedt%2015-06-2007.pdf'
+   ,'super 8 4T 45 km/t E17687 (e4*2002/24*1464) 2'     => 'typegodkendelser/Kymco%20Super%208%20%28E17687%29%20udstedt%2019-06-2009.pdf'
+   ,'super 8 2T (KF10AA) 30 km/t E20670 (e4*2002/24*2143)'     => 'typegodkendelser/Kymco%20Super%208%2050%20%28E20670%29%20udstedt%2029-08-2013.pdf'
+   ,'super 9 S1 (SF10L) 30 km/t typegodkendelse E15383 (e4*92/61*0074)'     => 'typegodkendelser/Kymco%20Super%209%20%28E15383%29%20udstedt%2016-05-2006.pdf'
+   ,'super 9 S1 (SH10A SH10B SF10) 45 km/t typegodkendelse E12187 (e4*92/61*0074)'     => 'typegodkendelser/Kymco%20Super%209%20%28E12187%29%20udstedt%2012-09-2002.pdf'
+   ,'super 9 S1 (SF10F) 45 km/t typegodkendelse E13539 (e4*92/61*0074)'     => 'typegodkendelser/Kymco%20Super%209%20%28E13539%29%20udstedt%2007-07-2004.pdf'
+   ,'super 9 S1 (SF10F SF10E) 45 km/t typegodkendelse E14691 (e4*92/61*0074)'     => 'typegodkendelser/Kymco%20Super%209%20%28E14691%29%20udstedt%2025-11-2005.pdf'
    ,'vitality U3 45 km/t typegodkendelse E17725 (e4*2002/24*0283)'                => 'typegodkendelser/Kymco%20Vitality%20%28E17725%29%20udstedt%2013-07-2009.pdf'
    ,'vitality U3 30 km/t typegodkendelse E18007 (e4*2002/24*0283)'                => 'typegodkendelser/Kymco%20Vitality%20%28E18007%29%20udstedt%2016-02-2010.pdf'
+   ,'people 45 km/t typegodkendelse E11957 (e4*92/61*0013)'                => 'typegodkendelser/Kymco%20People%20%28E11957%29%20udstedt%2022-04-2002.pdf'
+   ,'people 45 km/t typegodkendelse E13437 (e4*92/61*0013)'                => 'typegodkendelser/Kymco%20People%2050%20%28E13437%29%20udstedt%2024-05-2004.pdf'
+   ,'people 30 km/t typegodkendelse E15382 (e4*92/61*0013/A)'              => 'typegodkendelser/Kymco%20People%2050%20%28E15382%29%20udstedt%2016-05-2006.pdf'
+//   ,'K12 typegodkendelse S8627 (tom)'              => 'typegodkendelser/Kymco%20K12%20%28S8627%29%20udstedt%2017-10-1997.pdf'
+
+   ,'ZX Fever 45 km/t typegodkendelse E11808 (e1*92/61*00080)'              => 'typegodkendelser/Kymco%20Fever%20ZX%20%28E11808%29%20udstedt%2005-02-2002.pdf'
+   ,'ZX Fever 45 km/t typegodkendelse E13439 (e1*92/61*00080)'              => 'typegodkendelser/Kymco%20ZX50%20Fever%20%28E13439%29%20udstedt%2025-05-2004.pdf'
+   ,'ZX Fever 30 km/t typegodkendelse E15381 (e1*92/61*00080/C)'              => 'typegodkendelser/Kymco%20ZX50%20Fever%20%28E15381%29%20udstedt%2016-05-2006.pdf'
+/*
+ZX Fever
+30:
+Afstandsbøsning mellem forreste remskivehalvdele med brystbredde 10,0 mm.
+Resonatorrør påsvejset forreste udstødningsrør ø23 x 200 mm.
+Begrænset løft af stempel i karburator, ved at der er monteret en bøsning over stemplet ø13 x 10 mm.
+Udstødningsrøret indvendige diameter ved flange er reduceret til ø12 mm.
+Tegn 8 og 9 i stelnummeret er AA og angiver den maksimale hastighed = 30 km/t
+45:
+RFBSC10AS
+SC10AS
+elektronisk TCI tændingsmodul mærket SUTAI CKCXJK
+afstandsskive mellem forreste variomatic halvdele med en tykkelse på 7,0 mm.
+45:
+RFBSC10AW
+tegn nr 8 og 9 (A og W) i stelnummeret (VIN-mærkning) angiver version og hastighed, 45 km/t.
+Resonatorrør påsvejst forreste udstødningsrør ø23 x 200 mm
+afstandsbøsning mellem forreste remskivehalvdele med en tykkelse på 6,5 mm
+forsnævring i forreste udstødningsrør ved monteringsflangen, med en lysning på ø 12,0 mm.
+*/
+
+   ,'Kymco B&W 50 S8 45 km/t E12182 (e4*92/61*0126)'            => 'typegodkendelser/Kymco%20B%26W%2050%20%28E12182%29%20udstedt%2010-09-2002.pdf'
+   ,'Kymco Cobra SF Racer Exclusive Cross 45 km/t E12179 (e4*92/61*0103)'            => 'typegodkendelser/Kymco%20Cobra%20%28E12179%29%20udstedt%2010-09-2002.pdf'
+   ,'Kymco Filly LX S2 45 km/t E12163 (e4*92/61*0104)'            => 'typegodkendelser/Kymco%20Filly%20LX%20%28E12163%29%20udstedt%2004-09-2002.pdf'
+   ,'Kymco YUP50 S6 45 km/t E11733 (e4*92/61*0112)'            => 'typegodkendelser/Kymco%20YUP50%20%28E11733%29%20udstedt%2021-12-2001.pdf'
 
 )
 

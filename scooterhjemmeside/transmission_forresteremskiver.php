@@ -97,7 +97,7 @@ Rullernes vægt kan også kombineres hvis man bruger 3 af en vægt og 3 af en an
 For eksempel hvis man bruge 3 styks 5,5 gram og 3 styks 6,0 gram så skulle det svarer til at man brugte 6 styks 5,75 gram.
 
 '.afsnit('Rullernes størrelse','
-Rullerne til min Kymco Super 8 er på 16 mm i diameter og 13 mm på den anden led.
+Rullerne til min Kymco Super 8 4T er på 16 mm i diameter og 13 mm på den anden led.
 Det er vist en meget almindelig rulle størrelse men de forskellige scooter modeller kan bruge andre størrelser.
 ').'
 

@@ -13,17 +13,19 @@ $databasecenter = array(
 '
 horn
 ' => '
-Her ses hornet fra en Kymco Super 8.
-'.visbilled('1', 'billed0724.jpg', 'horn kymco super 8', false, true).'
+Her ses hornet fra en Kymco Super 8 4T.
+'.visbilled('1', 'billed0724.jpg', 'horn kymco super 8 4T', false, true).'
 Den lille skrue bag på hornet bruges til at "tune" hornet.
 Hvis hornet ikke siger dyt kan det være fordi skruen ikke er indstillet rigtigt.
 
 Horn knappen sidder gerne på venstre side af styret og aktiveres med venstre tommelfinger.
-'.visbilled('1', 'billed3351.jpg', 'kontakter på kymco super 8', false, true).'
+'.visbilled('1', 'billed3351.jpg', 'kontakter på kymco super 8 4T', false, true).'
 
 Når man trykker hornknappen ind forbindelses hornet med batteriet og hornet siger "dyyyt".
 
-Se også '.ahref('elektriskscooter_knapper.php', 'Elektrisk scooter - Knapper').' hvor nogen elektriske scootere har 2 knapper til horn da el starter knappen ikke bruges til en starter motor.
+På elektriske scootere uden startermotor kan starter knappen også bruges som horn og på nogle modeller kan der være forskel på lydstyrken på de to knapper.
+Så kan man bruge den ene knap med lav lydstyrke til cyklister og fodhænger så de ikke bliver så bange hvis man er lige bag dem.
+Se '.ahref('elektriskscooter_knapper.php', 'Elektrisk scooter - Knapper').'
 '
 
 );

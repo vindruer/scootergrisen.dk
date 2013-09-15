@@ -88,10 +88,12 @@ knastakselleje
 ' => '
 Her ses et knastakselleje fra en Kymco Super 8.
 På lejet står 16002C3 CHINA KJ NTN.
-'.visbilled('1', 'billed2624.jpg', 'knastakselleje fra kymco super 8 16002C3 china kj ntn', false, true).'
+'.visbilled('1', 'billed2624.jpg', 'knastakselleje fra kymco super 8 4T 16002C3 china kj ntn', false, true).'
 Jeg ved ikke hvad det første 1 tal står for.
 6002 betyder at lejet har en indvendig diameter på 15 mm og en udvendig diameter på 32 mm og en bredde på 9 mm.
 C3 betyder at lejet har et større radialt slør.
+
+NTN er vist en producent som fremstiller lejer.
 '
 
 ,'

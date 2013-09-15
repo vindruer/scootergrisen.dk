@@ -218,7 +218,7 @@ På den står "IRF530 I*R 649P 24 2L".
 Her ses en IC kreds som de kaldes.
 IC står for integrated circuit (integreret kredsløb på dansk) og kan indeholde mange transistorer.
 IC kredse kaldes også for chips og microchip.
-'.visbilled('1', 'billed1144.jpg', 'IC kreds fra kymco super 8 CDI boks', false, true).'
+'.visbilled('1', 'billed1144.jpg', 'IC kreds fra kymco super 8 4T CDI boks', false, true).'
 Det står "KA7500C XG32A".
 
 The KA7500C is used for the control circuit of the pulse-width modulation switching regulator. The KA7500C consists of 5V reference voltage circuit, two error amplifiers, flip flop, an output control circuit, a PWM comparator, a dead-time comparator and an oscillator. 
@@ -226,13 +226,13 @@ The KA7500C is used for the control circuit of the pulse-width modulation switch
 This device can be operated in the switching frequency of 1kHz to 300kHz. The precision of voltage reference (VREF) is improved up to ±1% with trimming. This provides a better output voltage regulation. The operating temperature range is (-25°C to +85°C)
 
 Her ses en PIC som er en IC kreds.
-'.visbilled('1', 'billed1151.jpg', 'PIC fra kymco super 8 CDI boks', false, true).'
+'.visbilled('1', 'billed1151.jpg', 'PIC fra kymco super 8 4T CDI boks', false, true).'
 M-logoet viser at chippen er lavet af et firma der hedder Microchip Technology Incorporated.
 Det er en QTP (Quick Turn Programming) hvilket betyder at den er programmeret fra fabrikken.
 Det sidste C i PIC16C indikere at sletning af data skal ske med ultraviolet lys, men da der ikke er noget vindue over chippen kan der kun skrives til chippen 1 gang.
 Hvis der havde stået F i stedet for har den flash hvilket betyder at den kan slettes elektronik.
 Den har 4 A/D konvertere og et PWM modul.
-Den har ingen flash/EEPROM hukommelse og kan derfor ikke gemme data, når strømmen afbrydes og kan derfor ikke gemme data om antal omdrejninger. Derfor kan den ikke være programmeret til at blive defekt efter et bestemt stykke tid, som jeg havde en mistanke om, da forlyset på 2 kymco super 8 begyndte at slukke efter cirka 2 år på begge scootere.
+Den har ingen flash/EEPROM hukommelse og kan derfor ikke gemme data, når strømmen afbrydes og kan derfor ikke gemme data om antal omdrejninger. Derfor kan den ikke være programmeret til at blive defekt efter et bestemt stykke tid, som jeg havde en mistanke om, da forlyset på 2 kymco super 8 4T begyndte at slukke efter cirka 2 år på begge scootere.
 Der står vistnok "PIC16C716-20/P 0709135" også er der muligvis en cirkel med GS til sidst.
 På printpladen er den angivet med et U.
 '.visfil('1', 'scooterhjemmeside/download/elektronik_pic16c712_716.pdf').'
@@ -243,7 +243,7 @@ Her ses en elektrolyt kondensator.
 Den er på 35 Volt og 1000 µF.
 
 Her ses en kondensator som skulle være den der aflades til tændspolen.
-'.visbilled('1', 'billed1152.jpg', 'kondensator i kymco super 8 CDI boks', false, true).'
+'.visbilled('1', 'billed1152.jpg', 'kondensator i kymco super 8 4T CDI boks', false, true).'
 På printpladen er den angivet med C hvilket vist nok betyder kondensator.
 Jeg syns der står 155K på den hvis det giver mening.
 Det betyder 155nF (nano Farad) som er dens kapacitet.

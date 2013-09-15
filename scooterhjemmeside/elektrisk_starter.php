@@ -14,13 +14,13 @@ $databasecenter = array(
 starter motor
 ' => '
 Her ses en starter motor.
-'.visbilled('1', 'billed0697.jpg', 'kymco super 8 starter motor', false, true).'
+'.visbilled('1', 'billed0697.jpg', 'kymco super 8 4T starter motor', false, true).'
 Her ses en starter motor monteret i motorblokken og 2 ledninger som har forbindelse til starterrelæet.
 '.visbilled('1', 'billed0120.jpg', 'starter motor', false, true).'
 Her ses en starter motor som er monteret i bunden af motoren.
 '.visbilled('1', 'billed2693.jpg', 'startermotor monteret i bunden af motoren', false, true).'
 Her ses tænderne fra start motoren.
-'.visbilled('1', 'billed0969.jpg', 'kymco super 8 starter motor tandhjul', false, true).'
+'.visbilled('1', 'billed0969.jpg', 'kymco super 8 4T starter motor tandhjul', false, true).'
 Her ses børsterne og det sted hvor børsterne har kontakt med rotoren.
 '.visbilled('1', 'billed0698.jpg', 'starter motor kommutator børster', false, true).'
 Her ses den ene børste som har kontakt med 2 af felterne på kommutatoren.

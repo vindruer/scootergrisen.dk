@@ -21,7 +21,7 @@ Tilkøring vil sige at køre roligt de første cirka 1000 km og ikke køre lange
 
 Hvis man sætter ny cylinder, stempel, stempelringe eller krumtap i en brugt motor så skal delene også tilkøres.
 
-Dette eksempel stammer fra Kymco Super 8 manualerne og giver en ide om tilkøring men antal km kan variere fra manual til manual.
+Dette eksempel stammer fra Kymco Super 8 4T manualerne og giver en ide om tilkøring men antal km kan variere fra manual til manual.
 Skyteam Dax brugermanualen skriver for eksempel at tilkørslen er 1600 km.
 
 '.afsnit('Generelle råd ved tilkøring','

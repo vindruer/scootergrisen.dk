@@ -7,6 +7,10 @@ User-agent: *
 
 Allow: /
 
+Disallow: /scooterhjemmeside/rodekassen_varme.php
+Disallow: /scooterhjemmeside/rodekassen_skjolde.php
+Disallow: /forum/images/
+Disallow: /forum/download/file.php?avatar=*
 Disallow: /wp/
 Disallow: /nv/
 Disallow: /scooterhjemmeside/rodekassen_efterlyst.php

@@ -1139,7 +1139,9 @@ $databaseright = array(
    ,'dax servicemanual'                => 'honda_dax_servicemanual.pdf'
    ,'dax servicemanual 2'              => 'honda_dax_servicemanual_2.pdf'
    ,'dax el diagram (skyteam)'         => 'honda_dax_eldiagram.pdf'
+   ,'dax (ST50s AB26-100) reservedele' => 'honda_dax_reservedele.pdf'
    ,'dax motor reservedele'            => 'honda_dax_motor_reservedele.pdf'
+   ,'sfx reservedele'                  => 'honda_sfx_reservedele.pdf'
    ,'zoomer servicemanual'             => 'honda_zoomer_servicemanual.pdf'
 
 ),'typegodkendelser' => array(

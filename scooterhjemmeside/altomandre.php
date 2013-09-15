@@ -720,7 +720,7 @@ $databasecenter = array(
 
    ),'generelt'            => array(
        'model'             => ens('model', 'pexma', '', '', '')
-      ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
+      ,'ogsåkaldet'        => ens('ogsåkaldet', 'Kangda Zongsshen KD50QT-4', '', '', '')
       ,'scootertype'       => ens('scootertype', 'KD50QT-4', 'PM50QT-4', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
@@ -762,10 +762,10 @@ $databasecenter = array(
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '3,50', '10', '', 'aluminium')
-      ,'fælgbag'           => ens('fælg', '3,50', '10', '', 'aluminium')
-      ,'dækfor'            => ens('dæk1', '', '', '', '')
-      ,'dækbag'            => ens('dæk1', '', '', '', '')
+       'fælgfor'           => ens('fælg', '3,50 eller 2.15', '10', '', 'aluminium')
+      ,'fælgbag'           => ens('fælg', '3,50 eller 2.15', '10', '', 'aluminium')
+      ,'dækfor'            => ens('dæk1', '3.00', '10', '', '')
+      ,'dækbag'            => ens('dæk1', '3.00', '10', '', '')
       ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
       ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
       ,'affjedringfor'     => ens('affjedringfor', 'teleskopgaffel', '', '', '')
@@ -842,7 +842,7 @@ $databasecenter = array(
    ),'begrænsninger'       => array(
        'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
-      ,'begrænskarburator' => ens('begrænskarburator', 'åbning af gasspjæld', '', '', '')
+      ,'begrænskarburator' => ens('begrænskarburator', '', 'åbning af gasspjæld', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
@@ -1241,7 +1241,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'LXEGD14026E000219', 'LXEGD14036E000228 (NE499 E15464-01)', '', '')
+      ,'stelnummer'        => ens('stelnummer', 'LXEGD14026E000219', 'LXEGD14036E000228 (NE499 E15464-01)', 'LXEGD14026E000219 (stor NN544 E15464-01)', '')
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '', '', '', '')
@@ -1416,7 +1416,7 @@ $databasecenter = array(
 ),'strangerxfight' => array(
 
      'specielt'            => array(
-       'besked'            => ens('besked', '', '', '', '')
+       'besked'            => ens('besked', 'måske samme som yiying sampra', '', '', '')
 
    ),'generelt'            => array(
        'model'             => ens('model', 'stranger x-fight', '', '', '')
@@ -2440,6 +2440,43 @@ $databaseright = array(
    ,'HUONIAO RMC HN50QT-K 30 km/t E17168 (e4*2002/24*1599)' => 'typegodkendelser/HUONIAO%20RMC%20HN50QT-K%20%28E17168%29%20udstedt%2014-07-2008.pdf'
    ,'HUONIAO RMC HN50QT-K 45 km/t E17169 (e4*2002/24*1599)' => 'typegodkendelser/HUONIAO%20RMC%20HN50QT-K%20%28E17169%29%20udstedt%2014-07-2008.pdf'
    ,'Sinski MC02A (GD140) 45 km/t E15464 (e4*2002/24*0583)' => 'typegodkendelser/Sinski%20MC02A%20%28E15464%29%20udstedt%2001-06-2006.pdf'
+
+   ,'Kangda Zongsshen KD50QT-4 30 km/t E15387 (e11*2002/24*0187)'            => 'typegodkendelser/Kangda%20Zongsshen%20%28E15387%29%20udstedt%2016-05-2006.pdf'
+
+   ,'Baoxin TWS Scooty BX 45 km/t S8194'            => 'typegodkendelser/Baoxin%20TWS%20Scooty%20%28S8194%29%20udstedt%2020-03-1997.pdf'
+
+   ,'Black`n Roll S4800D km/t E15545 (e2*2002/24*0014)'            => 'typegodkendelser/Black%60n%20Roll%20S4800D%20%28E15545%29%20udstedt%2015-06-2006.pdf'
+
+   ,'Branson BS49 45 km/t E12244 (e4*92/61*0144)'            => 'typegodkendelser/Branson%20BS49%20%28E12244%29%20udstedt%2007-10-2002.pdf'
+
+   ,'Cagiva Cucciolo P3 45 km/t A9790'            => 'typegodkendelser/Cagiva%20Cucciolo%20%28A9790%29%20udstedt%2026-03-1999.pdf'
+
+   ,'Chun Lan CL50KT 45 km/t S9891'            => 'typegodkendelser/Chun%20Lan%20-%20%28S9891%29%20udstedt%2010-06-1999.pdf'
+   ,'Chun Lan Starway CL50QT 45 km/t E10592 (e4*92/61*0015)'            => 'typegodkendelser/Chunlan%20Starway%20%28E10592%29%20udstedt%2016-05-2000.pdf'
+
+   ,'Di Blasi R7E 45 km/t E10124 (e1*92/61*0034)'            => 'typegodkendelser/Di%20Blasi%20-%20%28E10124%29%20udstedt%2009-09-1999.pdf'
+
+   ,'FYM FY50QT 45 km/t E14783 (e4*2002/24*0336)'            => 'typegodkendelser/FYM%20-%20%28E14783%29%20udstedt%2005-01-2006.pdf'
+
+   ,'Huatian JL50QT-16 (JL50QT-6 / HT50QT-16) 40 km/t E16497 (e11*2002/24*0359)'            => 'typegodkendelser/Huatian%20-%20%28E16497%29%20udstedt%2007-08-2007.pdf'
+
+   ,'Hyosung Sense C 45 km/t E12156 (e4*92/61*0033)'            => 'typegodkendelser/Hyosung%20-%20%28E12156%29%20udstedt%2030-08-2002.pdf'
+   ,'Hyosung Prima C 45 km/t E12157 (e4*92/61*0034)'            => 'typegodkendelser/Hyosung%20-%20%28E12157%29%20udstedt%2030-08-2002.pdf'
+   ,'Hyosung SB-50 CA1 45 km/t S8235'            => 'typegodkendelser/Hyosung%20SB-50%20%28S8235%29%20udstedt%2025-06-1997.pdf'
+   ,'Hyosung SF50 C 45 km/t A9998'            => 'typegodkendelser/Hyosung%20SF50%20%28A9998%29%20udstedt%2016-06-1999.pdf'
+
+   ,'Kalkhoff Pro Connect S Dame 40 km/t E18300 (e1*2002/24*0444)'            => 'typegodkendelser/Kalkhoff%20Pro%20Connect%20S%20Dame%20%28E18300%29%20udstedt%2029-06-2010.pdf'
+   ,'Kalkhoff Pro Connect S Dame 40 km/t E18301 (e1*2002/24*0444)'            => 'typegodkendelser/Kalkhoff%20Pro%20Connect%20S%20Dame%20%28E18301%29%20udstedt%2029-06-2010.pdf'
+   ,'Kalkhoff Pro Connect S Herre 40 km/t E18299 (e1*2002/24*0431)'            => 'typegodkendelser/Kalkhoff%20Pro%20Connect%20S%20Herre%20%28E18299%29%20udstedt%2029-06-2010.pdf'
+   ,'Kalkhoff Pro Connect S Herre 40 km/t E18302 (e1*2002/24*0431)'            => 'typegodkendelser/Kalkhoff%20Pro%20Connect%20S%20Herre%20%28E18302%29%20udstedt%2029-06-2010.pdf'
+
+   ,'Motorhispania Furia FU01 45 km/t S10373'            => 'typegodkendelser/Motorhispania%20Furia%20%28S10373%29%20udstedt%2007-03-2000.pdf'
+
+   ,'Oxygen OX04 44 km/t E16546 (e11*2002/24*0522)'            => 'typegodkendelser/Oxygen%20-%20%28E16546%29%20udstedt%2012-09-2007.pdf'
+
+   ,'Siamoto Birdie 50 BR10 45 km/t E9937 (e9*92/61*0011)'            => 'typegodkendelser/Siamoto%20Birdie%2050%20%28E9937%29%20udstedt%2015-06-1999.pdf'
+
+   ,'Wangye Superbyke WY50QT-16A Trend 45 km/t E15969 (e4*2002/24*1104)'            => 'typegodkendelser/Wangye%20Superbyke%20%28E15969%29%20udstedt%2023-11-2006.pdf'
 
 )
 

@@ -6,7 +6,7 @@ require_once('./php/scooterhjemmeside_funktioner.php');
 
 $title = "elektriske scootere";
 $overskrift = "elektriske scootere";
-$metadescription = "oversigt af elektriske scootere er eller har været i danmark";
+$metadescription = "oversigt med elektriske scootere som findes i danmark";
 
 $databasecenter = array(
 

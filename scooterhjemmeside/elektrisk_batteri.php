@@ -19,13 +19,13 @@ Hvis du leder efter information om batterier til elektriske scootere så se '.ah
 Scooterens batteri sidder gerne midt i scooteren eller bagerst under sædet.
 
 Her er der 2 skruer som skal fjernes først.
-'.visbilled('1', 'billed1972.jpg', 'kymco super 8 batteri dæksel', false, true).'
+'.visbilled('1', 'billed1972.jpg', 'kymco super 8 4T batteri dæksel', false, true).'
 Låget kan vippes op med en flad skruetrækker.
-'.visbilled('1', 'billed1976.jpg', 'kymco super 8 batteri dæksel', false, true).'
+'.visbilled('1', 'billed1976.jpg', 'kymco super 8 4T batteri dæksel', false, true).'
 Her ses batteriet.
 Den røde ledning er monteret på plus (+) terminalen.
 Den grønne ledning er monteret på minus (-) terminalen som er stelforbindelsen.
-'.visbilled('1', 'billed1978.jpg', 'kymco super 8 batteri dæksel', false, true).'
+'.visbilled('1', 'billed1978.jpg', 'kymco super 8 4T batteri dæksel', false, true).'
 På denne scooter sidder batteriet bagerst under sædet.
 Her er ledningen på minus (-) terminalen sort.
 '.visbilled('1', 'billed2374.jpg', 'pgo batteri rum', false, true).'
@@ -38,7 +38,7 @@ Begge typer er bly-syre batterier.
 
 '.afsnit('vedligeholdelsesfrit bly-syre batteri','
 Kan kendes på at der ikke er nogen påfyldningsskruer.
-'.visbilled('1', 'billed2308.jpg', 'kymco super 8 vedligeholdelsesfrit batteri YTX7A-BS KY D410', false, true).'
+'.visbilled('1', 'billed2308.jpg', 'kymco super 8 4T vedligeholdelsesfrit batteri YTX7A-BS KY D410', false, true).'
 På vedligeholdelsesfrie batterier kan der stå MF eller "Maintenance Free".
 Betegnes også VRLA (Valve Regulated Lead Acid) eller SLA (Sealed Lead Acid).
 VRLA, SLA, AGM og MF referer allesammen til vedligeholdelsesfrie batterier.

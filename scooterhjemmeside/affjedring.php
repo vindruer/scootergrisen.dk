@@ -148,7 +148,7 @@ Komplet gaffelben.
 Fjern den lange fjeder.
 '.visbilled('1', 'billed1503.jpg', 'forgaffel', false, true).'
 Mål den lange fjeder.
-På Kymco Super 8 skal fjederen være 226,5 mm.
+På Kymco Super 8 4T skal fjederen være 226,5 mm.
 På Kymco Agility skal fjederen være 206,4 mm.
 På Honda Zoomer skal fjederen minimum være 125,9 mm.
 På Yamaha Giggle skal fjederen minimum være 198,2 mm.
@@ -249,7 +249,7 @@ På engelsk kaldes den "engine hanger". Motor ophæng på dansk.
 '.visbilled('1', 'billed0117.jpg', 'led mellem stel og motor', false, true).'
 De 2 fjedre på leddet bruges når man sætter scooteren på centerstøtteben for at dæmpe stødet mod stellet.
 '.visbilled('1', 'billed1242.jpg', 'led mellem stel og motor', false, true).'
-'.visbilled('1', 'billed2622.jpg', 'kymco super 8 motor og stel', false, true).'
+'.visbilled('1', 'billed2622.jpg', 'kymco super 8 4T motor og stel', false, true).'
 Mellem leddet og motoren sidder 2 gummi bøsninger.
 
 Her ses en gummibøsning hvor leddet er forbundet til motorblokken.
@@ -325,8 +325,8 @@ Rørne er gerne lavet i stål.
 
 Her ses et stel som vistnok kaldes et underbone stel.
 '.visbilled('1', 'billed0999.jpg', 'stel', false, true).'
-Her ses stellet fra Kymco Super 8.
-'.visbilled('1', 'billed1243.jpg', 'Kymco Super 8 stel', false, true).'
+Her ses stellet fra Kymco Super 8 4T.
+'.visbilled('1', 'billed1243.jpg', 'Kymco Super 8 4T stel', false, true).'
 Her ses stellet fra Baotian BT50QT-9.
 '.visbilled('1', 'billed3329.jpg', 'Baotian BT50QT-9 stel', false, true).'
 På stellet monteres så plastik skjoldene og alle de andre dele.

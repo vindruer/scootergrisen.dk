@@ -18,15 +18,15 @@ Reduktionsgearet sidder helt bagerst på motorblokken.
 Reduktionsgearet består af aksler med tandhjul der forbinder koblingsklokken med baghjulet.
 '.visbilled('1', 'billed0568.jpg', 'reduktionsgear', false, true).'
 '.visbilled('1', 'billed1244.jpg', 'reduktionsgear', false, true).'
-'.visbilled('1', 'billed0570.jpg', 'kymco super 8 reduktionsgear', false, true).'
+'.visbilled('1', 'billed0570.jpg', 'kymco super 8 4T reduktionsgear', false, true).'
 
 Reduktionsgearet gør så baghjulet ikke drejer så hurtigt rundt.
 
-Her ses reduktionsgearet fra Kymco Super 8.
-'.visbilled('1', 'billed0569.jpg', 'kymco super 8 reduktionsgear', false, true).'
-'.visbilled('1', 'billed2635.jpg', 'kymco super 8 reduktionsgear', false, true).'
+Her ses reduktionsgearet fra Kymco Super 8 4T.
+'.visbilled('1', 'billed0569.jpg', 'kymco super 8 4T reduktionsgear', false, true).'
+'.visbilled('1', 'billed2635.jpg', 'kymco super 8 4T reduktionsgear', false, true).'
 Gearolien ligger i bunden og samles op af tandhjulene når de drejer rundt og smører vel så også kuglelejerne.
-'.visbilled('1', 'billed2639.jpg', 'kymco super 8 reduktionsgear', false, true).'
+'.visbilled('1', 'billed2639.jpg', 'kymco super 8 4T reduktionsgear', false, true).'
 
 Her ses reduktionsgearet fra Kymco Agility.
 '.

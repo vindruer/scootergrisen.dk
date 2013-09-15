@@ -6,9 +6,9 @@ require_once('./php/scooterhjemmeside_funktioner.php');
 
 $setup['nogetikon']               = 'ikoner/ikon_teoriprove2.png';
 
-$title = "teoriprøve";
-$overskrift = "teoriprøve";
-$metadescription = "online udgaven af den gamle knallert teoriprøven som de 15-17 årige fik tidligere når de skulle have knallertbevis";
+$title = "teoriprøve til lille knallert (den gamle teoriprøve)";
+$overskrift = "teoriprøve til lille knallert (den gamle teoriprøve)";
+$metadescription = "online udgaven af den gamle knallert teoriprøve som de 15-17 årige tidligere fik når de skulle have knallertbevis";
 
 $GLOBALS['setup']['head'] = '
 <style type="text/css">
@@ -744,6 +744,9 @@ if($vis_introduktion){
                . 'Vær opmærksom på at der kan være fejl så stol ikke automatisk på alt så du måske kommer til at gøre noget forkert i trafikken.'
                . "\r\n"
                . "\r\n"
+               . 'Teoriprøven bruger cookies/sessions til at gemme svarene mellem sideskift.'
+               . "\r\n"
+               . "\r\n"
                . 'Held og lykke.'
                . "\r\n"
                . "\r\n"
@@ -949,7 +952,7 @@ if($vis_introduktion){
 
    $xxx .= 'Efter den 19. Januar 2013 får man et kørekort i AM kategoriet i stedet for et knallertbevis.' . "\r\n";
    $xxx .= "\r\n";
-   $xxx .= 'Følgende information gælder derfor ikke mere.';
+   $xxx .= 'Følgende information gælder derfor ikke længere.';
    $xxx .= "\r\n";
    $xxx .= "\r\n";
    $xxx .= "\r\n";
@@ -1067,7 +1070,7 @@ $databasecenter = array(
 teoriprøve for lille knallert
 ' => '
 '.$yyy.'
-<div class="bold" style="background: darkred; color: white; text-align: center; padding: 10px;">Den 19. Januar 2013 kom der nye regler i forbindelse med teoriundervisning og kørekort.<br>Det betyder at denne teoriprøve ikke længere er den samme som den man vil skulle tage når man skal til teoriundervisning.<br>Læs mere i forummet emnet '.ahref('http://scootergrisen.dk/forum/viewtopic.php?f=4&t=956', 'De nye regler om knallertundervisning (fra 19. Januar 2013)', 'style="color: pink;"').'<br><br>Prøv også '.ahref('http://www.sikkertrafik.dk/Site/Knallertteori.aspx', 'Klar til Knallert', 'style="color: pink;"').' hvor du kan teste om du er klar til den nye teoriprøve.</div>
+<div class="bold borderradius5px" style="background: darkred; color: white; text-align: center; padding: 10px;">Den 19. Januar 2013 kom der nye regler i forbindelse med teoriundervisning og kørekort.<br>Det betyder at denne teoriprøve ikke længere er den samme som den man får når man skal til teoriundervisning.<br>Læs mere i forummet emnet '.ahref('http://scootergrisen.dk/forum/viewtopic.php?f=4&t=956', 'De nye regler om knallertundervisning (fra 19. Januar 2013)', 'style="color: pink;"').'<br><br>Prøv også '.ahref('http://www.sikkertrafik.dk/Site/Knallertteori.aspx', 'Klar til Knallert', 'style="color: pink;"').' hvor du kan teste om du er klar til den nye teoriprøve.</div>
 '
 
 );

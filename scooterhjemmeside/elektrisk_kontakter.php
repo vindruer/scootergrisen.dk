@@ -13,7 +13,7 @@ $databasecenter = array(
 '
 kontakter
 ' => '
-Her ses kontakterne på en Kymco Super 8.
+Her ses kontakterne på en Kymco Super 8 4T.
 '.visbilled('1', 'billed0401.jpg', 'kontakter kortlys langtlys blinklys horn positionslys tænd sluk starter knap', false, true).'
 På langtlys/kortlyst vælgeren står der PASSING som åbenbart bruges i nogle lande til at give et blinke med det langelys for at vise at man har tænkt sig at overhale.
 Når man trykker ned hvor der står PASSING så kommer knappen selv op igen.
@@ -46,7 +46,7 @@ tændingslås
 ' => '
 Tændingslåsen er der hvor du sætter nøglen i og drejer får du starter motoren.
 
-Her ses tændingslåsen på en Kymco Super 8.
+Her ses tændingslåsen på en Kymco Super 8 4T.
 '.visbilled('1', 'billed0402.jpg', 'tændingslås', false, true).'
 Ved LOCK og OFF position bliver CDI og pickup forbundet med stelforbindelsen.
 

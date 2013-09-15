@@ -30,37 +30,38 @@ $indhold_placemark = '';
 $oversigtindhold = '';
 
 $style_og_ikoner = array(
-    'style1'  => 'http://maps.gstatic.com/mapfiles/ms2/micons/orange-dot.png'
+    'style1'  => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
    ,'style2'  => '/scooterhjemmeside/billeder/kml/thansen4.gif'
    //,'style2'  => '/scooterhjemmeside/billeder/kml/dut.png'
    ,'style3'  => '/scooterhjemmeside/billeder/kml/biltema.gif'
    ,'style4'  => '/scooterhjemmeside/billeder/kml/jupiter.png'
-   ,'style5'  => '/scooterhjemmeside/billeder/kml/enghavemotor.png'
-   ,'style6'  => '/scooterhjemmeside/billeder/kml/scoot.png'
-   ,'style7'  => '/scooterhjemmeside/billeder/kml/kohlerknallerter.png'
-   ,'style8'  => '/scooterhjemmeside/billeder/kml/mchjornet.png'
-   ,'style9'  => '/scooterhjemmeside/billeder/kml/scooterhjornet.png'
-   ,'style10' => '/scooterhjemmeside/billeder/kml/italianbikestore.png'
-   ,'style11' => '/scooterhjemmeside/billeder/kml/daxshoppen.png'
-   ,'style12' => '/scooterhjemmeside/billeder/kml/scootcar.png'
-   ,'style13' => '/scooterhjemmeside/billeder/kml/touringshop.png'
-   ,'style14' => '/scooterhjemmeside/billeder/kml/bbmotor.png'
-   ,'style15' => '/scooterhjemmeside/billeder/kml/vespaparts.png'
-   ,'style16' => '/scooterhjemmeside/billeder/kml/midtsjellandsknallertservice.png'
-   ,'style17' => '/scooterhjemmeside/billeder/kml/danskcykelogknallertmuseum.png'
-   ,'style18' => '/scooterhjemmeside/billeder/kml/ringstedmotor.png'
-   ,'style19' => '/scooterhjemmeside/billeder/kml/knallertbiksen.png'
-   ,'style20' => '/scooterhjemmeside/billeder/kml/npmotor.png'
-   ,'style21' => '/scooterhjemmeside/billeder/kml/lykkecykler.png'
-   ,'style22' => '/scooterhjemmeside/billeder/kml/hellestedcykelforretning.png'
-   ,'style23' => '/scooterhjemmeside/billeder/kml/kimergardcykler.png'
+   ,'style5'  => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style6'  => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style7'  => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style8'  => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style9'  => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style10' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style11' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style12' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style13' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style14' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style15' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style16' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style17' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style18' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style19' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style20' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style21' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style22' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style23' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
    ,'style24' => '/scooterhjemmeside/billeder/kml/fribikeshop.png'
-   ,'style25' => '/scooterhjemmeside/billeder/kml/kogemcogbadcenter.png'
-   ,'style26' => '/scooterhjemmeside/billeder/kml/nordbornholmscykelforretning.png'
-   ,'style27' => '/scooterhjemmeside/billeder/kml/mcnord.png'
-   ,'style28' => '/scooterhjemmeside/billeder/kml/gertsscooterservice.png'
-   ,'style29' => '/scooterhjemmeside/billeder/kml/westimport.png'
-   ,'style30' => '/scooterhjemmeside/billeder/kml/speedline.png'
+   ,'style25' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style26' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style27' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style28' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style29' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style30' => 'http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+   ,'style31'  => 'http://maps.google.com/mapfiles/marker_grey.png'
    );
 
 foreach($style_og_ikoner as $key => $value){
@@ -104,15 +105,20 @@ if ($db->connect_errno > 0) {
             $lat = str_replace(',', '.', $lat);
             $lng = str_replace(',', '.', $lng);
 
-            ($hjemmeside == '')
-               ? $linkeventuelt = ''
-               : $linkeventuelt = ahref($hjemmeside, rtrim(str_replace('http://', '', $hjemmeside), '/')) . '<br>';
+            $description = '';
+
+            if($adresse != ''){  $description .= '<div>' . mb_ucfirst($adresse) . '</div>'; }
+            if($postnummer != '' && $by != ''){ $description .= '<div>' . $postnummer . ' ' . mb_ucfirst($by) . '</div>'; }
+            if($hjemmeside != ''){   $description .= '<div>' . ahref($hjemmeside, rtrim(str_replace('http://', '', $hjemmeside), '/')) . '</div>'; }
+            if($besked != ''){   $description .= '<div>' . mb_ucfirst($besked) . '</div>'; }
+            if($type != ''){     $description .= '<div>' . mb_ucfirst($type) . '</div>'; }
+            if($id != ''){       $description .= '<div class="description_id">' . 'ID nummer : ' . $id  . '</div>'; }
 
             $indhold_placemark .= ''
                . '   <Placemark>' . "\r\n"
                . '      <name>' . mb_ucfirst($navn) . '</name>' . "\r\n"
                . '      <Snippet>' . 'x' . '</Snippet>' . "\r\n"
-               . '      <description><![CDATA[' . mb_ucfirst($adresse) . '<br>' . $postnummer . ' ' . mb_ucfirst($by) . '<br>' . $linkeventuelt . mb_ucfirst($besked) . '<br>' . mb_ucfirst($type) . '<br>' . 'ID nummer : ' . $id . ']]></description>' . "\r\n"
+               . '      <description><![CDATA[' . $description . ']]></description>' . "\r\n"
                . '      <styleUrl>' . $style . '</styleUrl>' . "\r\n"
                . '      <Point>' . "\r\n"
                . '         <coordinates>' . $lat . ',' . $lng . '' . '</coordinates>' . "\r\n"
@@ -210,7 +216,7 @@ INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, 
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('2 Hjuls Centeret ApS','Jupitervej 7','4500','Nykøbing sjælland','http://www.sayjes.dk/','#style1','11.661647','55.929722','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Søborg Mc','Generatorvej 33','2730','Herlev','http://søborgmc.dk/','#style1','12.461865','55.729805','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Jespers Cykler','Søndergade 4','4130','Viby Sjælland','http://www.jesperscykler.dk','#style1','12.024305','55.548935','','');
-INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('AutoCentro A/S','Færgevej 17','4970','Rødby','http://autocentro.dk','#style1','11.360203','54.661564','','');
+INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('AutoCentro A/S','Færgevej 17','4970','Rødby','http://autocentro.dk','#style1','11.360203','54.661564','Har ikke knallerter mere','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Fensmark Cykler','Stenskovvej 25B','4684','Holmegaard (Fensmark)','','#style1','11.796379','55.280666','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Mc-teknik','Gurrevej 56','3000','Helsingør','http://www.atmcteknik.dk/','#style1','12.592658','56.034592','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('daxshoppen.dk','Skalbakken 17','2720','Vanløse','http://www.daxshoppen.dk','#style11','12.484697','55.693100','','');
@@ -218,12 +224,12 @@ INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, 
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Dans Værksted','Århusgade 32','9900','Frederikshavn','http://www.dansverksted.dk/','#style1','10.521353','57.452789','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Scooterworld','Ole Rømers Vej 12','8670','Låsby','http://www.scooterworld.dk','#style1','9.817073','56.151245','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Scooter Center','Amager Landevej 275','2770','Kastrup','','#style1','12.629986','55.614819','','');
-INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Kimergård Cykler','Torvegade 34','4640','Faxe','http://www.kimergaard.dk','#style23','12.119411','55.259144','http://www.speed-up.dk http://www.hebo-racing.dk er holdt op med scootere. har kun cykler','');
+INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Kimergård Cykler','Torvegade 34','4640','Faxe','http://www.kimergaard.dk','#style23','12.119411','55.259144','http://www.speed-up.dk http://www.hebo-racing.dk er holdt op med scootere','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Gerts Scooterservice (gammel adresse)','Hovedgade 42','3730','Nexø (Snogebæk)','http://www.gertsscooterservice.dk','#style28','15.112194','55.023788','Flyttet til Rønnevej 111 Nylars 3720 Åkirkeby','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Gerts Scooterservice','Rønnevej 111','3720','Åkirkeby (Nylars)','http://www.gertsscooterservice.dk','#style28','14.830395','55.071268','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Scootergården (Århus)','Karupvej 1','8000','Århus C','http://www.scootergaarden.dk','#style1','10.179906','56.155411','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Scootercenter - Stenløse','Frydensbergvej 31','3660','Stenløse','http://www.scooter-center.dk','#style1','12.201442','55.773922','','');
-INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('NP motor','Rødlersvej 9','4733','Tappernøje','http://npmotor.dk','#style20','11.981498','55.163765','','');
+INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('NP motor','Rødlersvej 9','4733','Tappernøje','http://npmotor.dk','#style20','11.983009','55.164396','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Århus scooter','Klostergade 74','8000','Århus C','http://www.aarhusscooter.dk','#style1','10.203289','56.158611','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Speedline A/S','Sverigesvej 19','8660','Skanderborg','http://www.speedline.dk/','#style30','9.957944','56.052948','http://www.speed-meet.dk/','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('T Hansen','Hjørringvej 143B','9900','Frederikshavn','http://www.thansen.dk','#style2','10.508149','57.446346','','');
@@ -314,7 +320,7 @@ INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, 
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Jupiter cykler','Mørkhøjvej 225','2730','Herlev','http://jupitercykler.dk','#style4','12.472453','55.726360','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Scooter city','Hillerødgade 30','2200','København N','http://www.scootercity.dk','#style1','12.537140','55.696907','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Scooter city','Rugvænget 23','2630','Tåstrup','http://www.scootercity.dk','#style1','12.288461','55.649700','','');
-INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Scooter city (lukket)','Maglegårdsvej 7','4000','Roskilde','http://www.scootercity.dk','#style1','12.078974','55.628422','','');
+INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Scooter city (lukket)','Maglegårdsvej 7','4000','Roskilde','http://www.scootercity.dk','#style31','12.078974','55.628422','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Scooter city','Falkevej 4','4600','Køge','http://www.scootercity.dk','#style1','12.180283','55.473263','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Skyteam Danmark','Thinggyden 2','5631','Ebberup','http://www.skyteam-dk.dk','#style1','9.984335','55.249481','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Scooterland','K. Christensens Vej 5','9200','Aalborg','http://www.scooterland.dk','#style1','9.894830','57.013092','','');
@@ -332,7 +338,7 @@ INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, 
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Touringshop.dk','Vibeholmsvej 24','2605','Brøndby','http://www.touringshop.dk','#style13','12.417511','55.665890','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Vollerup 2 hjul center','Mommarkvej 46','6400','Sønderborg','http://www.vollerup2hjul.dk','#style1','9.861586','54.924156','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Roberts MC','Smedevænget 34','6430','Nordborg','http://www.robertsmc.dk','#style1','9.859436','54.991692','','');
-INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Dansk motor company APS','Gammel Køge landevej 166','2500','valby','http://www.danskmotorco.dk','#style1','12.504925','55.647308','Stedet er lukket','');
+INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Dansk motor company APS','Gammel Køge landevej 166','2500','valby','http://www.danskmotorco.dk','#style31','12.504925','55.647308','Stedet er lukket','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Hansen scooter','Kjellerupvej 33','8620','Kjellerup','http://www.hansensmc.dk','#style1','9.424455','56.335178','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Næstved MC værksted','Farimagsvej 18-20','4700','Næstved','http://www.naestvedmcvaerksted.dk','#style1','11.764327','55.232704','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Sigurd Cordes','Industrivej 7','6630','Rødding','http://cordes.dk','#style1','9.050508','55.374062','','');
@@ -341,13 +347,13 @@ INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, 
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Kværndrup cykel og knallert forretning','Nyborgvej 1','5772','Kværndrup','','#style1','10.524913','55.178669','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Enghave motor','Enghavevej 16','1674','København V','http://www.enghavemotor.dk','#style5','12.545638','55.670090','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Nordbornholms cykelforretning','Pilegade 1','3770','Allinge','http://www.nordbornholmscykelforretning.dk','#style26','14.802107','55.276062','','');
-INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Bikecenter','Gaabensevej 114','4800','Nykøbing Falster','http://www.bikecenter.dk','#style1','11.867349','54.782089','','');
+INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Bikecenter','Gaabensevej 114','4800','Nykøbing Falster','http://www.bikecenter.dk','#style31','11.867349','54.782089','Butikke er lukket','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('J.L. Cykler','Kæpgårdsvej 7','4840','Nørre Alslev','http://www.jl-cykler.dk','#style1','11.882849','54.898567','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Lykke Cykler','Adelgade 40','4720','Præstø','http://www.lykkecykler.dk','#style1','12.040549','55.121510','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('BikX','Snedkervænget 6','4700','Næstved','http://www.bikx.dk','#style1','11.772431','55.193501','http://onwheels.dk','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Sostack','Østergade 53','6230','Rødekro','http://sostack.dk','#style1','9.348062','55.070786','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('PP Cykler','Amager Centret 110','2300','København S','http://www.ppcykler.dk','#style1','12.604728','55.662518','','');
-INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Stjerneborg Cykler','Amagerbrogade 163','2300','København S','http://www.stjerneborg-cykler.dk','#style1','12.610974','55.654205','Butikken er lukket','');
+INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Stjerneborg Cykler','Amagerbrogade 163','2300','København S','http://www.stjerneborg-cykler.dk','#style31','12.610974','55.654205','Butikken er lukket','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Scoot.dk','Hvidsværmervej 119','2610','Rødovre','http://www.scoot.dk','#style6','12.442717','55.697430','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Dragør Cykel & Motorservice','A.P. Møllers Allé 7','2791','Dragør','http://dragørcykler.dk/','#style1','12.660676','55.601330','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Scooter Hjørnet','Søborg Hovedgade 1','2870','københavn','http://www.scooterhjoernet.dk','#style9','12.524768','55.727638','','');
@@ -382,7 +388,7 @@ INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, 
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('KS Motor A/S','Jens Grøns Vej 23','7100','Vejle','http://www.ks-motor.dk','#style1','9.570470','55.677212','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Midtjydsk MC','Neptunvej 10','7430','Ikast','http://www.midtjydskmc.dk','#style1','9.141659','56.137527','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Vesterbro Cykler & Knallertcenter','Saxogade 111','1662','København V','','#style1','12.551671','55.666592','','');
-INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Powerscooter','Gammel Køge Landevej 660','2660','Brøndby Strand','http://powerscooter.dk','#style1','12.429445','55.618046','(Skiftede navn til cykel pitten som også er lukket)','');
+INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Powerscooter','Gammel Køge Landevej 660','2660','Brøndby Strand','http://powerscooter.dk','#style31','12.429445','55.618046','(Skiftede navn til cykel pitten som også er lukket)','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Italian bike store','Ålekistevej 184','2720','Vanløse','http://www.haasum.dk','#style1','12.480657','55.693016','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Københavns auto','Gammel Køge Landevej 384','2650','Hvidovre','http://www.kbh-auto.dk','#style1','12.477553','55.626556','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Knallertbiksen','Håndværkerbyen 15 A','2670','Greve','http://www.knallertbiksen.dk','#style19','12.293910','55.590569','','');
@@ -408,7 +414,7 @@ INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, 
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('høng cykler & knallerter','Hovedgaden 22','4270','Høng','http://www.hongcykler.dk/','#style1','11.288072','55.509068','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('scootershop.dk V/Asnæs importen ApS','Adelers Alle 2','4540','Fårevejle','http://scootershop.dk/','#style1','11.439887','55.803188','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('cykel centret','Tårnborgvej 2','4220','Korsør','http://cykel-centret.dk/','#style1','11.142020','55.332233','','');
-INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('El-drive','Vestergade 14C','4850','Stubbekøbing','http://www.el-drive.dk','#style1','12.040755','54.890499','Butikken er lukket','');
+INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('El-drive','Vestergade 14C','4850','Stubbekøbing','http://www.el-drive.dk','#style31','12.040755','54.890499','Butikken er lukket','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Finns cykler','Vestergade 15A','4230','Skælskør','http://finns-cykler.dk/','#style1','11.289401','55.254105','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Cykelbixen','Nykøbingvej 64','4840','Nørre Alslev','http://www.cykelbixen.dk','#style1','11.858609','54.885864','','');
 INSERT INTO stederidanmark (navn, adresse, postnummer, `by`, hjemmeside, style, lat, lng, besked, type) VALUES ('Racing Shop','Agtrupvej 45','6000','Kolding','http://www.racingshop.dk','#style1','9.474056','55.483212','','');

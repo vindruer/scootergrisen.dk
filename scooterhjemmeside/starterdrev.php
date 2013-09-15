@@ -90,7 +90,7 @@ Starterkoblingen kan holdes med begge hænder også skal man kun kunne dreje i d
 ,'
 egne erfaringer
 ' => '
-På min Kymco Super 8 var ringen i variatorskjoldet røget ud på et tidspunkt.
+På min Kymco Super 8 4T var ringen i variatorskjoldet røget ud på et tidspunkt.
 Ringen var åbenbart røget ud engang hvor variatordækslet har været taget af.
 '.visbilled('1', 'billed0695.jpg', 'variatordæksel starterdrev ring mangler', false, true).'
 Fordi der ikke var nogen ring så hang starterdrevets ende lidt lavere end normalt og det var altså nok til at tænderne på den yderste remskive kunne ramme starterdrevet og det kunne man høre som en raslen.

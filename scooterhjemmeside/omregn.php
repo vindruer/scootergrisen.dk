@@ -156,7 +156,7 @@ forbrændingskammer volume
 Forbrændingskammer volumen = slagvolume / (kompression - 1).
 '.visbilled('1', 'billed0155.jpg', 'cylinder volume', false, true).'
 
-Kymco Super 8 har en motor volume på 49,5 cm³ og et kompressionsforhold på 11:1.
+Kymco Super 8 4T har en motor volume på 49,5 cm³ og et kompressionsforhold på 11:1.
 49,5 cm³ / (11 - 1) = 4,95 cm³.
 Forbrændingskammeret har altså en volume på 4,95 cm³.
 

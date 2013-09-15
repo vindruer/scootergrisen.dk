@@ -33,10 +33,10 @@ Kymco Agility
 '
 
 ,'
-Kymco Super 8
+Kymco Super 8 4T
 ' => '
-'.visbilled('1', 'billed1103.jpg', 'kymco super 8 service skema', false, true).'
-'.visbilled('1', 'billed1726.jpg', 'kymco super 8 engine oil klistermærke på blæser skjold', false, true).'
+'.visbilled('1', 'billed1103.jpg', 'kymco super 8 4T service skema', false, true).'
+'.visbilled('1', 'billed1726.jpg', 'kymco super 8 4T engine oil klistermærke på blæser skjold', false, true).'
 '
 
 ,'

@@ -147,46 +147,46 @@ Giantco Sprint
 '
 
 ,'
-Kymco Super 8
+Kymco Super 8 4T
 ' => ''
 .galleriholder(array(
-    galleri('highslide', '', 'billed0830.jpg', array('Kymco Super 8', 'motorblok', '', ''))
-   ,galleri('highslide', '', 'billed0831.jpg', array('Kymco Super 8', 'topstykke', '', ''))
-   ,galleri('highslide', '', 'billed0832.jpg', array('Kymco Super 8', 'cylinder', 'stempel', 'krumtap'))
-   ,galleri('highslide', '', 'billed0833.jpg', array('Kymco Super 8', 'motorblok højreside dæksel', '', ''))
-   ,galleri('highslide', '', 'billed0834.jpg', array('Kymco Super 8', 'variator', '', ''))
-   ,galleri('highslide', '', 'billed0835.jpg', array('Kymco Super 8', 'startermotor', 'oliepumpe', ''))
-   ,galleri('highslide', '', 'billed0836.jpg', array('Kymco Super 8', 'blæserdæksel', 'generator', ''))
-   ,galleri('highslide', '', 'billed0837.jpg', array('Kymco Super 8', 'reduktionsgear', '', ''))
-   ,galleri('highslide', '', 'billed0838.jpg', array('Kymco Super 8', 'karburator', '', ''))
+    galleri('highslide', '', 'billed0830.jpg', array('kymco super 8 4T', 'motorblok', '', ''))
+   ,galleri('highslide', '', 'billed0831.jpg', array('kymco super 8 4T', 'topstykke', '', ''))
+   ,galleri('highslide', '', 'billed0832.jpg', array('kymco super 8 4T', 'cylinder', 'stempel', 'krumtap'))
+   ,galleri('highslide', '', 'billed0833.jpg', array('kymco super 8 4T', 'motorblok højreside dæksel', '', ''))
+   ,galleri('highslide', '', 'billed0834.jpg', array('kymco super 8 4T', 'variator', '', ''))
+   ,galleri('highslide', '', 'billed0835.jpg', array('kymco super 8 4T', 'startermotor', 'oliepumpe', ''))
+   ,galleri('highslide', '', 'billed0836.jpg', array('kymco super 8 4T', 'blæserdæksel', 'generator', ''))
+   ,galleri('highslide', '', 'billed0837.jpg', array('kymco super 8 4T', 'reduktionsgear', '', ''))
+   ,galleri('highslide', '', 'billed0838.jpg', array('kymco super 8 4T', 'karburator', '', ''))
 
-   ,galleri('highslide', '', 'billed1048.jpg', array('Kymco Super 8', 'forlys', '', ''))
-   ,galleri('highslide', '', 'billed1049.jpg', array('Kymco Super 8', 'speedometer', '', ''))
-   ,galleri('highslide', '', 'billed1050.jpg', array('Kymco Super 8', 'styr', 'styr skjold', ''))
-   ,galleri('highslide', '', 'billed1051.jpg', array('Kymco Super 8', 'bremse (master cylinder)', 'caliper', ''))
-   ,galleri('highslide', '', 'billed1052.jpg', array('Kymco Super 8', 'front skjolde', '', ''))
-   ,galleri('highslide', '', 'billed1053.jpg', array('Kymco Super 8', 'styrlejer', 'for affjedring', ''))
-   ,galleri('highslide', '', 'billed1054.jpg', array('Kymco Super 8', 'forhjul', '', ''))
-   ,galleri('highslide', '', 'billed1055.jpg', array('Kymco Super 8', 'baghjul', '', ''))
-   ,galleri('highslide', '', 'billed1056.jpg', array('Kymco Super 8', 'sæde', '', ''))
+   ,galleri('highslide', '', 'billed1048.jpg', array('kymco super 8 4T', 'forlys', '', ''))
+   ,galleri('highslide', '', 'billed1049.jpg', array('kymco super 8 4T', 'speedometer', '', ''))
+   ,galleri('highslide', '', 'billed1050.jpg', array('kymco super 8 4T', 'styr', 'styr skjold', ''))
+   ,galleri('highslide', '', 'billed1051.jpg', array('kymco super 8 4T', 'bremse (master cylinder)', 'caliper', ''))
+   ,galleri('highslide', '', 'billed1052.jpg', array('kymco super 8 4T', 'front skjolde', '', ''))
+   ,galleri('highslide', '', 'billed1053.jpg', array('kymco super 8 4T', 'styrlejer', 'for affjedring', ''))
+   ,galleri('highslide', '', 'billed1054.jpg', array('kymco super 8 4T', 'forhjul', '', ''))
+   ,galleri('highslide', '', 'billed1055.jpg', array('kymco super 8 4T', 'baghjul', '', ''))
+   ,galleri('highslide', '', 'billed1056.jpg', array('kymco super 8 4T', 'sæde', '', ''))
 
-   ,galleri('highslide', '', 'billed1057.jpg', array('Kymco Super 8', 'benzintank', '', ''))
-   ,galleri('highslide', '', 'billed1058.jpg', array('Kymco Super 8', 'batteri', '', ''))
-   ,galleri('highslide', '', 'billed1059.jpg', array('Kymco Super 8', 'midter skjolde', 'hjelm rum', ''))
-   ,galleri('highslide', '', 'billed1060.jpg', array('Kymco Super 8', 'luftfilter', '', ''))
-   ,galleri('highslide', '', 'billed1061.jpg', array('Kymco Super 8', 'udstødning', '', ''))
-   ,galleri('highslide', '', 'billed1062.jpg', array('Kymco Super 8', 'støtteben', 'kickstarter arm', ''))
-   ,galleri('highslide', '', 'billed1063.jpg', array('Kymco Super 8', 'bag affjedring', '', ''))
-   ,galleri('highslide', '', 'billed1064.jpg', array('Kymco Super 8', 'for blinklys', '', ''))
-   ,galleri('highslide', '', 'billed1065.jpg', array('Kymco Super 8', 'baglys', 'bagskærme', ''))
+   ,galleri('highslide', '', 'billed1057.jpg', array('kymco super 8 4T', 'benzintank', '', ''))
+   ,galleri('highslide', '', 'billed1058.jpg', array('kymco super 8 4T', 'batteri', '', ''))
+   ,galleri('highslide', '', 'billed1059.jpg', array('kymco super 8 4T', 'midter skjolde', 'hjelm rum', ''))
+   ,galleri('highslide', '', 'billed1060.jpg', array('kymco super 8 4T', 'luftfilter', '', ''))
+   ,galleri('highslide', '', 'billed1061.jpg', array('kymco super 8 4T', 'udstødning', '', ''))
+   ,galleri('highslide', '', 'billed1062.jpg', array('kymco super 8 4T', 'støtteben', 'kickstarter arm', ''))
+   ,galleri('highslide', '', 'billed1063.jpg', array('kymco super 8 4T', 'bag affjedring', '', ''))
+   ,galleri('highslide', '', 'billed1064.jpg', array('kymco super 8 4T', 'for blinklys', '', ''))
+   ,galleri('highslide', '', 'billed1065.jpg', array('kymco super 8 4T', 'baglys', 'bagskærme', ''))
 
-   ,galleri('highslide', '', 'billed1066.jpg', array('Kymco Super 8', 'ledningsnet', '', ''))
-   ,galleri('highslide', '', 'billed1067.jpg', array('Kymco Super 8', 'stel', '', ''))
-   ,galleri('highslide', '', 'billed1068.jpg', array('Kymco Super 8', 'sekundært luftfilter', '', ''))
-   ,galleri('highslide', '', 'billed1069.jpg', array('Kymco Super 8', 'klistermærker', '', ''))
+   ,galleri('highslide', '', 'billed1066.jpg', array('kymco super 8 4T', 'ledningsnet', '', ''))
+   ,galleri('highslide', '', 'billed1067.jpg', array('kymco super 8 4T', 'stel', '', ''))
+   ,galleri('highslide', '', 'billed1068.jpg', array('kymco super 8 4T', 'sekundært luftfilter', '', ''))
+   ,galleri('highslide', '', 'billed1069.jpg', array('kymco super 8 4T', 'klistermærker', '', ''))
 ))
 .'
-'.visfil('1', 'scooterhjemmeside/download/kymco_super8_reservedele.pdf').'
+'.visfil('1', 'scooterhjemmeside/download/kymco_super8_4t_reservedele.pdf').'
 '
 
 ,'

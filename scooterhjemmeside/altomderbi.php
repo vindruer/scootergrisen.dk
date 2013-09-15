@@ -832,8 +832,8 @@ $databasecenter = array(
       ,'tændrør'           => ens('tændrør', '', '', '', '')
 
    ),'dimensioner'         => array(
-       'længde'            => ens('længde', '1900', '', '', '') . ens('længde', '2030-2035', '', '', '(i følge typegodkendelserne)')
-      ,'bredde'            => ens('bredde', '805', '', '', '') . ens('bredde', '840', '', '', '(i følge typegodkendelse 2004)') . ens('bredde', '780', '', '', '(i følge typegodkendelse 2000 2002)') . ens('bredde', '830', '', '', '(i følge typegodkendelse 2002)')
+       'længde'            => ens('længde', '1900', '', '', '') . ens('længde', '2030-2085', '', '', '(i følge typegodkendelserne)')
+      ,'bredde'            => ens('bredde', '805', '', '', '') . ens('bredde', '840', '', '', '(i følge typegodkendelse 2004)') . ens('bredde', '780', '', '', '(i følge typegodkendelse 2000 2002)') . ens('bredde', '830', '', '', '(i følge typegodkendelse 2002 + 2013)')
       ,'højde'             => ens('højde', '', '', '', '')
       ,'sædehøjde'         => ens('sædehøjde', '875', '', '', '')
       ,'frihøjde'          => ens('frihøjde', '', '', '', '')
@@ -845,9 +845,9 @@ $databasecenter = array(
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '', '', '', '') . ' eller ' . ens('fælg', '1.60', '21', '', '')
-      ,'fælgbag'           => ens('fælg', '1.85', '18', '', '(ser ud til at være fra 2006 og frem)') . ' eller ' . ens('fælg', '2.15', '18', '', '(ser ud til at være op til 2004')
-      ,'dækfor'            => ens('dæk1', '80', '90', '21', '')
+       'fælgfor'           => ens('fælg', '2.50', '21', '', '') . ' eller ' . ens('fælg', '1.60', '21', '', '')
+      ,'fælgbag'           => ens('fælg', '3.50', '18', '', '(2013 typegodkendelse)') . ' eller ' . ens('fælg', '1.85', '18', '', '(ser ud til at være fra 2006 og frem)') . ' eller ' . ens('fælg', '2.15', '18', '', '(ser ud til at være op til 2004')
+      ,'dækfor'            => ens('dæk1', '90', '90', '21', '') . ' eller ' . ens('dæk1', '80', '90', '21', '')
       ,'dækbag'            => ens('dæk1', '110', '80', '18', '')
       ,'dæktrykfor'        => ens('dæktryk', '1,0', 'kgcm2', '', '(1 person)') . ens('dæktryk', '1,1', 'kgcm2', '', '(2 personer)')
       ,'dæktrykbag'        => ens('dæktryk', '1,2', 'kgcm2', '', '(1 person)') . ens('dæktryk', '1,3', 'kgcm2', '', '(2 personer)')
@@ -1268,6 +1268,7 @@ $databaseright = array(
    ,'senda R + SM 45 km/t E15764 (e9*2002/24*0001) 2006'    => 'typegodkendelser/Derbi%20Senda%20%28E15764%29%20udstedt%2013-09-2006.pdf'
    ,'senda R + SM 45 km/t E16711 (e9*2002/24*0001) 2007'    => 'typegodkendelser/Derbi%20Senda%20%28E16711%29%20udstedt%2016-11-2007.pdf'
    ,'senda R + SM 45 km/t E18246 (e9*2002/24*0001) 2010'    => 'typegodkendelser/Derbi%20Senda%20%28E18246%29%20udstedt%2028-05-2010.pdf'
+   ,'senda R 30 km/t E20647 (e11*2002/24*1050) 2013'        => 'typegodkendelser/Derbi%20Senda%20R%20%28E20647%29%20udstedt%2019-08-2013.pdf'
    ,'senda R 45 km/t E20400 (e11*2002/24*1050) 2013'        => 'typegodkendelser/Derbi%20Senda%20R%20%28E20400%29%20udstedt%2009-04-2013.pdf'
 
 )

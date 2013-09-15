@@ -367,10 +367,10 @@ Så vidt jeg ved er dæk mønstrets primære opgave at lede vand væk.
 
 Et helt glat dæk uden dæk mønstre har bedre kontakt med vejen når vejen er tør men køre man med helt glatte dæk i regnvejr ville man lettere miste kontakten med vejen og vælte.
 
-Her ses et dæk på en Kymco Super 8.
-'.visbilled('1', 'billed0057.jpg', 'dæk mønstre kymco super 8', false, true).'
+Her ses et dæk på en Kymco Super 8 4T.
+'.visbilled('1', 'billed0057.jpg', 'dæk mønstre kymco super 8 4T', false, true).'
 Her ses et brugt sheng shin 120/80-14 og et nyt horng fortune 130/70-14 med det mønster de kalder 952.
-'.visbilled('1', 'billed2222.jpg', 'dæk mønstre kymco super 8 cheng shin tire 120/80-14 horng fortune motorcycle tire 130/70-14 8pr 952', false, true).'
+'.visbilled('1', 'billed2222.jpg', 'dæk mønstre kymco super 8 4T cheng shin tire 120/80-14 horng fortune motorcycle tire 130/70-14 8pr 952', false, true).'
 '
 
 ,'

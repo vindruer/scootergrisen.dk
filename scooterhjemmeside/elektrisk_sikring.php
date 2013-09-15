@@ -23,8 +23,8 @@ Her ses en glassikring på 7 ampere.
 '.visbilled('1', 'billed0398.jpg', '7 ampere sikring', false, true).'
 Sikringen ligger i en holder.
 '.visbilled('1', 'billed0860.jpg', 'sikring sikringsholder', false, true).'
-På Kymco Super 8 findes 3 sikringer.
-'.visbilled('1', 'billed1039.jpg', 'sikring sikringsholder kymco super 8', false, true).'
+På Kymco Super 8 4T findes 3 sikringer.
+'.visbilled('1', 'billed1039.jpg', 'sikring sikringsholder kymco super 8 4T', false, true).'
 Sikringen indeholder en metal tråd på en bestemt tykkelse.
 Jo tykkere tråd, jo flere ampere kan sikringen tåle.
 

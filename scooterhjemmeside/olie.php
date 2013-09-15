@@ -404,7 +404,7 @@ box(array('260', '150', '80', '60', '120')
 )
 .'
 Castrol\'s 1 liter dunk har en smal indbygget tragt som passer ned i hullet ved oliepinden og gør det meget lettere at fylde olie på i forhold til de andre dunke hvor man skal bruge en tragt.
-'.visbilled('1', 'billed0786.jpg', 'motorolie påfyldning kymco super 8', false, true).'
+'.visbilled('1', 'billed0786.jpg', 'motorolie påfyldning kymco super 8 4T', false, true).'
 Hvis man køber en dunk med smal indbygget traget så kan man bruge den igen ved at fylde andre olier på fra dunke som ikke har smal tragt. Kan anbefales.
 
 Da jeg kørte med Shell Helix Plus olien kom der et hvidt lag på næsen af tændrøret som jeg har læst muligvis stammer fra additiver som er tilsat olien.

@@ -258,7 +258,7 @@ COcor = 2,57
 ').'
 PPM = Parts Per Million = dele per million.
 
-I servicemanualen til Kymco Super 8 står der at udstødningen ved tomgang normalt indeholder 2-3 % CO og maksimum 700 ppm HC.
+I servicemanualen til Kymco Super 8 4T står der at udstødningen ved tomgang normalt indeholder 2-3 % CO og maksimum 700 ppm HC.
 
 Den sidste måling hvor motoren er varm passer meget godt med de tal der står i manualen.
 

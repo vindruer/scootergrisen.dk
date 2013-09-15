@@ -35,9 +35,9 @@ Læg mærke til hvordan nærlysets glødetråd er krakeleret og fjernlys glødet
 Her ses forskellen på kortlys og langtlys.
 '.visbilled('1', 'animation0006.gif', 'kortlys langtlys', false, true).'
 Kortlys.
-'.visbilled('1', 'billed2321.jpg', 'kymco super 8 kort lys', false, true).'
+'.visbilled('1', 'billed2321.jpg', 'kymco super 8 4T kort lys', false, true).'
 Langtlys.
-'.visbilled('1', 'billed2322.jpg', 'kymco super 8 langt lys', false, true).'
+'.visbilled('1', 'billed2322.jpg', 'kymco super 8 4T langt lys', false, true).'
 Når det langelys er valgt tænde langtlys indikatoren på indtrumentpanelet.
 '.visbilled('1', 'billed2343.jpg', 'langtlys indikator', false, true).'
 
@@ -64,11 +64,11 @@ Når pæren er farvet behøver lygten ikke at være det.
 Her ses fatningen.
 '.visbilled('1', 'billed1815.jpg', 'blinklys fatning', false, true).'
 Her ses bagskjoldene og baglygten indefra.
-'.visbilled('1', 'billed1869.jpg', 'kymco super 8 baglygte bagskjolde', false, true).'
+'.visbilled('1', 'billed1869.jpg', 'kymco super 8 4T baglygte bagskjolde', false, true).'
 Her ses at baglygtens plastik er farvet rød og gul.
 Så behøver pærenes glas ikke at være farvet.
-'.visbilled('1', 'billed1874.jpg', 'kymco super 8 baglygte', false, true).'
-'.visbilled('1', 'billed1888.jpg', 'kymco super 8 baglygte blinklys', false, true).'
+'.visbilled('1', 'billed1874.jpg', 'kymco super 8 4T baglygte', false, true).'
+'.visbilled('1', 'billed1888.jpg', 'kymco super 8 4T baglygte blinklys', false, true).'
 Her kan man se hvordan den ene stift på pærens sokkel sidder i fatningen. 
 '.visbilled('1', 'billed1870.jpg', 'blinklyspære 12V 10W', false, true).'
 På siden af pærens sokkel sidder 2 stifter lidt forskudt som gør at pæren kun kan monteres på én måde.
@@ -85,12 +85,12 @@ Kun baglys glødetråden er tændt.
 '.visbilled('1', 'billed0058.jpg', 'baglys bremselys pære baglys tændt', false, true).'
 Her ses baglyset og nummerpladelyset i mørke.
 Bremselyset er ikke tændt.
-'.visbilled('1', 'billed2507.jpg', 'kymco super 8 baglys og nummerplade lys i mørke', false, true).'
+'.visbilled('1', 'billed2507.jpg', 'kymco super 8 4T baglys og nummerplade lys i mørke', false, true).'
 Her ses baglygten indefra.
-'.visbilled('1', 'billed1889.jpg', 'kymco super 8 baglygte', false, true).'
+'.visbilled('1', 'billed1889.jpg', 'kymco super 8 4T baglygte', false, true).'
 Baglys pæren kan tages ud inde ved at dreje på fatningen.
-'.visbilled('1', 'billed1890.jpg', 'kymco super 8 baglygte', false, true).'
-'.visbilled('1', 'billed1875.jpg', 'kymco super 8 baglygte', false, true).'
+'.visbilled('1', 'billed1890.jpg', 'kymco super 8 4T baglygte', false, true).'
+'.visbilled('1', 'billed1875.jpg', 'kymco super 8 4T baglygte', false, true).'
 På baglys pærens sokkel sidder 2 stifer som er forskudt i højden sådan at pæren kun kan monteres på én måde i fatningen.
 '.visbilled('1', 'billed1891.jpg', 'baglyspære og holder', false, true).'
 '.visbilled('1', 'billed1879.jpg', 'baglyspæreholder', false, true).'
@@ -106,14 +106,14 @@ Når der bremses lyser begge glødetråde.
 Bremselysets glødetråd lyser en del kraftigere end baglysets glødetråd.
 '.visbilled('1', 'billed0162.jpg', 'baglys bremselys pære glødetråde 5 watt 21 watt', false, true).'
 Her ses en 12 volt 5 watt positionslys pære som sidder i bunden af forlygten.
-'.visbilled('1', 'billed0060.jpg', 'positionslys kymco super 8', false, true).'
+'.visbilled('1', 'billed0060.jpg', 'positionslys kymco super 8 4T', false, true).'
 Positionslyset kan tændes selvom motoren ikke køre så andre kan se scooteren hvis man for eksempel holder et mørkt sted om natten og motoren ikke kan starte og man dermed ikke kan tænde for forlyset.
 Positionslyset kan også tændes hvis forlys pæren er sprunget så man i det mindste har lidt forlys på indtil man får skiftet forlys pæren.
 
 Her ses nummerpladelyset.
-'.visbilled('1', 'billed0061.jpg', 'nummerpladelys kymco super 8', false, true).'
-'.visbilled('1', 'billed1881.jpg', 'nummerpladelys kymco super 8', false, true).'
-'.visbilled('1', 'billed1882.jpg', 'nummerpladelys kymco super 8', false, true).'
+'.visbilled('1', 'billed0061.jpg', 'nummerpladelys kymco super 8 4T', false, true).'
+'.visbilled('1', 'billed1881.jpg', 'nummerpladelys kymco super 8 4T', false, true).'
+'.visbilled('1', 'billed1882.jpg', 'nummerpladelys kymco super 8 4T', false, true).'
 '.visbilled('1', 'billed1880.jpg', 'pære holder og ledning', false, true).'
 Holderen er lavet af silikone og er blødt.
 '.visbilled('1', 'billed1883.jpg', 'pære og silikoneholder', false, true).'

@@ -159,16 +159,16 @@ $databasecenter = array(
 
    ),'generelt'            => array(
        'model'             => ens('model', 'hooper fourious', '', '', '')
-      ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
-      ,'scootertype'       => ens('scootertype', '', '', '', '')
+      ,'ogsåkaldet'        => ens('ogsåkaldet', 'qingqi', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'ZF50QT-20', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
    ),'motor'               => array(
-       'motormodel'        => ens('motormodel', '', '', '', '')
+       'motormodel'        => ens('motormodel', 'ZF1E39QMB ZF1E39QMB-1', '', '', '')
       ,'motortype'         => ens('motortype', '', '', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
       ,'volume'            => ens('volume', '', '', '', '')
@@ -260,7 +260,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', '', '', '', '')
+      ,'stelnummer'        => ens('stelnummer', 'LB7', '', '', '')
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '', '', '', '')
@@ -280,14 +280,14 @@ $databasecenter = array(
 
    ),'begrænsninger'       => array(
        'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
-      ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
+      ,'begrænstænding'    => ens('begrænstænding', '', 'Elektronisk', 'Elektronisk', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
       ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
-      ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
+      ,'begrænsstelnum'    => ens('begrænsstelnum', '', 'Tegn nr. 8 er et "B" og angiver den maksimale hastighed = 30 km/t.', 'Tegn nr. 8 er et "A" og angiver den maksimale hastighed = 45 km/t.', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 
    )
@@ -300,15 +300,15 @@ $databasecenter = array(
    ),'generelt'            => array(
        'model'             => ens('model', 'hooper leo', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', 'qingqi', '', '', '')
-      ,'scootertype'       => ens('scootertype', '', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'QM50T-10R-2', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
    ),'motor'               => array(
-       'motormodel'        => ens('motormodel', '', '', '', '')
+       'motormodel'        => ens('motormodel', 'H1E41QM-BA', '', '', '')
       ,'motortype'         => ens('motortype', '', '', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
       ,'volume'            => ens('volume', '', '', '', '')
@@ -400,7 +400,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'LV7AKFA00AA690299 (lille knallert XM7301)', 'LV7AKFA00AA690137 (lille knallert)', '', '')
+      ,'stelnummer'        => ens('stelnummer', 'LV7AKFA00AA690299 (lille knallert XM7301)', 'LV7AKFA00AA690137 (lille knallert)', 'LV7', '')
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '', '', '', '')
@@ -420,7 +420,7 @@ $databasecenter = array(
 
    ),'begrænsninger'       => array(
        'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
-      ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
+      ,'begrænstænding'    => ens('begrænstænding', '', 'Elektronisk', 'Elektronisk', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
@@ -718,23 +718,29 @@ $databaseright = array(
 //'emner på siden' => array()
 
 'download' => array(
-//   ,'' => ''
+    'Qingqi QM50QT-6 brugermanual'      => 'qingqi_qm50qt6_brugermanual.pdf'
+   ,'Qingqi QM50QT-6 servicemanual'     => 'qingqi_qm50qt6_brugerservice.pdf'
 
 ),'typegodkendelser' => array(
-    'hooper one 30 km/t E18109 (e4*2002/24*1358)' => 'typegodkendelser/HOOPER%20ONE%2030%20%28E18109%29%20udstedt%2009-04-2010.pdf'
-   ,'hooper one 45 km/t E18110 (e4*2002/24*1358)' => 'typegodkendelser/HOOPER%20ONE%2045%20%28E18110%29%20udstedt%2009-04-2010.pdf'
-   ,'FIZZ 30 km/t E18109 (e4*2002/24*1358)'    => 'typegodkendelser/QINGQI%20FIZZ%20%28E18109%29%20udstedt%2009-04-2010.pdf'
-   ,'FIZZ 45 km/t E18110 (e4*2002/24*1358)'    => 'typegodkendelser/QINGQI%20FIZZ%20%28E18110%29%20udstedt%2009-04-2010.pdf'
-   ,' km/t E18151 ()'                => 'typegodkendelser/Hooper%20Fourious%20%28E18151%29%20udstedt%2016-04-2010%281%29.pdf'
-   ,' km/t E18294 ()'                => 'typegodkendelser/Hooper%20Fourious%2030%20%28E18294%29%20udstedt%2010-06-2010%281%29.pdf'
-   ,'AG (LAEAGZ4605G070019) 45 km/t E14271 (e4*2002/21*0368)'      => 'typegodkendelser/Qingqi%20-%20%28E14271%29%20udstedt%2013-05-2005.pdf'
-   ,'QM50QGY 45 km/t E14810 (e4*2002/24*0477)' => 'typegodkendelser/Qingqi%20QM50QGY%20%28E14810%29%20udstedt%2013-01-2006.pdf'
-   ,' km/t E18139 ()'                => 'typegodkendelser/HOOPER%20LEO%20%28E18139%29%20udstedt%2015-04-2010.pdf'
-   ,' km/t E18140 ()'                => 'typegodkendelser/HOOPER%20LEO%20%28E18140%29%20udstedt%2015-04-2010.pdf'
-   ,' km/t E18294 ()'                => 'typegodkendelser/Hooper%20Fourious%2030%20%28E18294%29%20udstedt%2010-06-2010%281%29.pdf'
-   ,' km/t E18151 ()'                => 'typegodkendelser/Hooper%20Fourious%20%28E18151%29%20udstedt%2016-04-2010%281%29.pdf'
-   ,' km/t E17684 ()'                => 'typegodkendelser/QINGQI%20RMC-E%2050%20Racing%20Rep.%20%28E17684%29%20udstedt%2017-06-2009.pdf'
-   ,' km/t E17682 ()'                => 'typegodkendelser/Qingqi%20RMC-G50%20El%20Ninjo%20%28E17682%29%20udstedt%2017-06-2009.pdf'
+    'Hooper one 30 km/t E18109 (e4*2002/24*1358)' => 'typegodkendelser/HOOPER%20ONE%2030%20%28E18109%29%20udstedt%2009-04-2010.pdf'
+   ,'Hooper one 45 km/t E18110 (e4*2002/24*1358)' => 'typegodkendelser/HOOPER%20ONE%2045%20%28E18110%29%20udstedt%2009-04-2010.pdf'
+   ,'Hooper Fourious (ZF50QT-20) 30 km/t E18294 (e1*2002/24*0461)'                => 'typegodkendelser/Hooper%20Fourious%2030%20%28E18294%29%20udstedt%2010-06-2010%281%29.pdf'
+   ,'Hooper Fourious (ZF50QT-20) 45 km/t E18151 (e1*2002/24*0461)'                => 'typegodkendelser/Hooper%20Fourious%20%28E18151%29%20udstedt%2016-04-2010%281%29.pdf'
+   ,'Hooper Leo (QM50T-10R-2) 30 km/t E18140 (e4*2002/24*1924)'                => 'typegodkendelser/HOOPER%20LEO%20%28E18140%29%20udstedt%2015-04-2010.pdf'
+   ,'Hooper Leo (QM50T-10R-2) 30 km/t E18151 (e4*2002/24*1924)'                => 'typegodkendelser/Hooper%20Fourious%20%28E18151%29%20udstedt%2016-04-2010%281%29.pdf'
+   ,'Hooper Leo (QM50T-10R-2) 45 km/t E18139 (e4*2002/24*1924)'                => 'typegodkendelser/HOOPER%20LEO%20%28E18139%29%20udstedt%2015-04-2010.pdf'
+   ,'Qingqi Fizz 30 km/t E18109 (e4*2002/24*1358)'    => 'typegodkendelser/QINGQI%20FIZZ%20%28E18109%29%20udstedt%2009-04-2010.pdf'
+   ,'Qingqi Fizz 45 km/t E18110 (e4*2002/24*1358)'    => 'typegodkendelser/QINGQI%20FIZZ%20%28E18110%29%20udstedt%2009-04-2010.pdf'
+   ,'(måske peugeotvclic ?) qingqi AG (LAEAGZ4605G070019) 45 km/t E14271 (e4*2002/21*0368)'      => 'typegodkendelser/Qingqi%20-%20%28E14271%29%20udstedt%2013-05-2005.pdf'
+      // Mellem forreste remskivehalvdele er monteret en afstandsbøsning med en brystbredde på 6,0 mm
+   ,'QM50QGY (LAEGTZ40) (3 gear manuel) 45 km/t E14810 (e4*2002/24*0477)' => 'typegodkendelser/Qingqi%20QM50QGY%20%28E14810%29%20udstedt%2013-01-2006.pdf'
+      // Hastighedsbegrænsning: Bøsning i indsugning, diameter ø 8,0 mm.
+   ,'qingqi (måske kreidler?) RMC-E 50 Racing Rep. (QM50T-10A(B)) 45 km/t E17684 (e4*2002/24*0980)'                => 'typegodkendelser/QINGQI%20RMC-E%2050%20Racing%20Rep.%20%28E17684%29%20udstedt%2017-06-2009.pdf'
+      // H1E41QMB-A
+      // CDI boks U. dæksel bag fodplade
+   ,'qingqi (måske kreidler?) RMC-G50 El Ninjo (QM50T-10R) 45 km/t E17682 (e4*2002/24*1924)'                => 'typegodkendelser/Qingqi%20RMC-G50%20El%20Ninjo%20%28E17682%29%20udstedt%2017-06-2009.pdf'
+      // H1E41QMB-A
+      // CDI boks U. dæksel bag fodplade
 
 )
 

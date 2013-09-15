@@ -453,7 +453,7 @@ $databasecenter = array(
       ,'nomieffektogheste' => ens('nomieffektogheste', '', '', '', '')
       ,'maxeffektogheste'  => ens('maxeffektogheste', '2,2', 'kw', '7500')
       ,'moment'            => ens('moment', '2,9-3,8', 'nm', '5000-7000')
-      ,'karburator'        => ens('karburator', 'PZ18J', '', '')
+      ,'karburator'        => ens('karburator', 'PZ18J / PD19J12', '', '')
       ,'brændstof indsp..' => ens('brændstof indsp..', '', '', '')
       ,'smøring'           => ens('smøring', '', '', '')
       ,'tændrør'           => ens('tændrør', 'NGK C7HSA', '', '')
@@ -805,7 +805,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'L82TCAP98A1', 'L82TCAP94A1 L82TCAP97A1 L82TCAP94A1000 L82TCAP91A1000 (lille knallert)', 'L82TCAP93A1 L82TCAP95A1004 (lille knallert) L82TCAP90A1003969 (lille)', '')
+      ,'stelnummer'        => ens('stelnummer', 'L82TCAP98A1', 'L82TCAP94A1 L82TCAP97A1 L82TCAP94A1000 L82TCAP91A1000 (lille knallert)', 'L82TCAP93A1 L82TCAP95A1004 (lille knallert) L82TCAP90A1003969 (lille)', 'stor (L82TCAP96A1009078)')
       ,'udstødning'        => ens('udstødning', 'med katalysator', '', '')
       ,'euroemission'      => ens('euroemission', '2', '', '')
       ,'vægttør'           => ens('vægttør', '79', '', '')
@@ -825,9 +825,9 @@ $databasecenter = array(
 
    ),'begrænsninger'       => array(
        'begrænstransmis'   => ens('begrænstransmis', '', '9,0 mm bøsning mellem forreste remskiver', '', '')
-      ,'begrænstænding'    => ens('begrænstænding', '', 'ja', '', '')
-      ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
-      ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
+      ,'begrænstænding'    => ens('begrænstænding', '', 'ja', '', 'sort ledning går ud fra variatorskjoldet, kan afmonteres ved lyserød ledning nær tændrøret')
+      ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '(standard hoveddyse skulle være 79)')
+      ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', 'tragt på indersiden af luftfilterkasse')
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
@@ -1009,6 +1009,10 @@ $databaseright = array(
    ,'sprint 45 km/t E16621 (e4*2002/24*1058)'   => 'typegodkendelser/TMS%20Sprint%20%28E16621%29%20udstedt%2017-10-2007.pdf'
    ,'Z2 45 km/t E16677 (e4*2002/24*1358)'       => 'typegodkendelser/TMS%20Z2%20%28E16677%29%20udstedt%2006-11-2007.pdf'
    ,'Z2 30 km/t E16893 (e4*2002/24*1358)'       => 'typegodkendelser/TMS%20Z2%20%28E16893%29%20udstedt%2005-02-2008.pdf'
+
+   ,'TMS 10V QM50T-10V 45 km/t E16678 (e4*2002/24*1230)'            => 'typegodkendelser/TMS%2010V%20%28E16678%29%20udstedt%2006-11-2007.pdf'
+   ,'TMS Motard 50cc S3 43 km/t E17698 (e9*2002/24*0294)'            => 'typegodkendelser/TMS%20Motard%2050cc%20%28E17698%29%20udstedt%2029-06-2009.pdf'
+   ,'TMS S3 50cc 45 BT49QT-9d 45 km/t E18293 (e9*2002/24*1398)'            => 'typegodkendelser/TMS%20S3%2050cc%2045%20%28E18293%29%20udstedt%2009-06-2010.pdf'
 
 )
 

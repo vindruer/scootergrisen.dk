@@ -4,7 +4,7 @@ require_once('./php/opsetning_scooterhjemmeside.php');
 require_once('./php/generelt_funktioner.php');
 require_once('./php/scooterhjemmeside_funktioner.php');
 
-$setup['sidetopbesked'] = 'Denne side var ret stor og tog lang tid at indlæse.<br><br>Derfor har jeg delt siden op på flere mindre sider som er hurtigere at indlæse.<br><br>Brug menuen som hedder '.menugenvej(array('Scooterens dele', 'Elektrisk')).'...';
+$setup['sidetopbesked'] = mb_ucfirst($GLOBALS['setup']['l_sidetopbesked_dennesidevarretstor']) . ' ' . menugenvej(array(mb_ucfirst($GLOBALS['setup']['l_m_scooterensdele']), mb_ucfirst($GLOBALS['setup']['l_m_scooterensdele_elektrisk']))) . ' ...';
 
 $title = "siden er blevet delt op";
 $overskrift = "siden er blevet delt op";

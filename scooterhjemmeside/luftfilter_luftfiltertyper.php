@@ -15,7 +15,7 @@ luftfilter typer
 ' => '
 '.afsnit('vådt papir typen','
 Lavet af vådt papir med lim som er bukket for at opnå en større overflade.
-'.visbilled('1', 'billed1526.jpg', 'luftfilterkasse luftfilter af papirtypen kymco super 8', false, true).'
+'.visbilled('1', 'billed1526.jpg', 'luftfilterkasse luftfilter af papirtypen kymco super 8 4T', false, true).'
 '.visbilled('1', 'billed3352.jpg', 'nyt luftfilter i pose', false, true).'
 Beregnet til at blive udskiftet med et nyt filter frem for at blive ved med at rense og genbruge det.
 Kan ikke rengøres så godt med trykluft på grund af limen.

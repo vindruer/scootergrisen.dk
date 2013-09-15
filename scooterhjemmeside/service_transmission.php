@@ -22,7 +22,7 @@ Her måles en brugt kilerem.
 Jeg har målt min brugte kilerem til at være mellem 16,10 til 16,45 mm bred afhængigt af hvor man måler.
 
 Sammenlign med data fra scooterens servicemanual.
-Kileremmen på Kymco Super 8 skal minimum være 16,5 mm.
+Kileremmen på Kymco Super 8 4T skal minimum være 16,5 mm.
 Er den smallere bør den udskiftes.
 
 Undersøg også kileremmen for skader som revner.
@@ -47,7 +47,7 @@ Belægningen slides ikke lige meget over det hele.
 Jeg vil mene man skal måle midt på belægningen.
 '.visbilled('1', 'billed0757.jpg', 'kobling belægning tykkelse', false, true).'
 Sammenlign med data fra scooterens servicemanual.
-Koblingsbelægningen på Kymco Super 8 skal minimum være 1,5 mm.
+Koblingsbelægningen på Kymco Super 8 4T skal minimum være 1,5 mm.
 Er en af belægningerne tyndere end minimum så bør alle koblingsbakkerne udskiftes.
 Alle koblingsbakkerne bør udskiftes sammen så de er lige tykke.
 '
@@ -60,7 +60,7 @@ Mål den indre diameter på koblingsklokken.
 Mål inden i koblingsklokken hvor slidet er og ikke ved kanten hvor der ikke har været noget slid.
 '.visbilled('1', 'billed0857.jpg', 'koblingsklokken', false, true).'
 Sammenlign med data fra scooterens servicemanual.
-Koblingsklokken på Kymco Super 8 skal maksimalt være 107,5 mm.
+Koblingsklokken på Kymco Super 8 4T skal maksimalt være 107,5 mm.
 Er koblingsklokkens indre diameter større bør den udskiftes.
 
 Læg mærke til at koblingsklokken indre diameter slides større så de 107,5 mm er altså maksimum.
@@ -72,7 +72,7 @@ koblingstrykfjeder
 Mål koblingstrykfjederens længde i afslappet tilstand.
 '.visbilled('1', 'billed0759.jpg', 'koblingtrykfjeder længde', false, true).'
 Sammenlign med data fra scooterens servicemanual.
-Koblingstrykfjederen på Kymco Super 8 skal minimum være 97 mm.
+Koblingstrykfjederen på Kymco Super 8 4T skal minimum være 97 mm.
 Er fjederen kortere bør den udskiftes.
 '
 
@@ -97,7 +97,7 @@ De brugte ruller her er målt til at være følgende på det smalleste punkt må
 Rullernes bredeste punkt er desuden målt til max 16.30 mm hvilket nok er deres mål fra ny.
 
 Sammenlign med data fra scooterens servicemanual.
-Rullerne på Kymco Super 8 skal minimum være 15,4 mm.
+Rullerne på Kymco Super 8 4T skal minimum være 15,4 mm.
 Er en af rullerne smallere end minimum bør alle rullerne udskiftes.
 
 Hvis rullerne er slidte kan det være en god ide at udskifte dem selvom de ikke er slidt under minimum.
@@ -174,7 +174,7 @@ data
 ' => '
 Kig i scooterens servicemanual for at finde ud af hvor meget de enkelte dele må være slidt før de bør udskiftes..
 
-Her er data for Kymco Super 8 50 cm³.
+Her er data for Kymco Super 8 4T 50 cm³.
 '.
 box(array('250', '150', '150')
    ,array(

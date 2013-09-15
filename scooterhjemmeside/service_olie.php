@@ -20,7 +20,7 @@ Stop motoren.
 
 Vent 2-3 minutter så olien kan falde til ro.
 Skru oliepinden ud.
-'.visbilled('1', 'billed0613.jpg', 'oliepind i kymco super 8 motor', false, true).'
+'.visbilled('1', 'billed0613.jpg', 'oliepind i kymco super 8 4T motor', false, true).'
 Tør oliepinden med en klud og sæt den tilbage i hullet UDEN at dreje den.
 Tag oliepinden op og se olieniveauet på pinden.
 
@@ -107,7 +107,7 @@ Nogle scootere har vistnok en oliepind så man let kan kontrollere gearolie nive
 
 På nogle scootere skal man fylde gearolie op til kanten af påfyldningshullet og på den måde finder man det rette niveau.
 
-På min Kymco Super 8 er der ikke nogle oliepind ved gearolien og man skal heller ikke fylde op til kanten af påfyldningshullet.
+På min Kymco Super 8 4T er der ikke nogle oliepind ved gearolien og man skal heller ikke fylde op til kanten af påfyldningshullet.
 Hvis man vil kontroller mængden af gearolie så kan man dræne alt olien i et målebære og på den måde finde ud af om der er den korrekte mængde olie i.
 '
 

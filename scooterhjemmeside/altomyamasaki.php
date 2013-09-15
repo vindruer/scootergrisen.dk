@@ -168,7 +168,7 @@ $databasecenter = array(
       ,'forhandlere'       => ens('forhandlere', 'http://www.bikedanmark.dk/2008/5.htm', '', '', '')
 
    ),'motor'               => array(
-       'motormodel'        => ens('motormodel', '', '', '', '')
+       'motormodel'        => ens('motormodel', '139FMB', '', '', '')
       ,'motortype'         => ens('motortype', '4 takt', '', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
       ,'volume'            => ens('volume', '', '', '', '')
@@ -182,7 +182,7 @@ $databasecenter = array(
       ,'nomieffektogheste' => ens('nomieffektogheste', '', '', '', '')
       ,'maxeffektogheste'  => ens('maxeffektogheste', '2-4', 'hk', '8000', '')
       ,'moment'            => ens('moment', '', '', '', '')
-      ,'karburator'        => ens('karburator', '', '', '', '')
+      ,'karburator'        => ens('karburator', 'SHENGWEY PZ19', '', '', '')
       ,'brændstof indsp..' => ens('brændstof indsp..', '', '', '', '')
       ,'smøring'           => ens('smøring', '', '', '', '')
       ,'tændrør'           => ens('tændrør', '', '', '', '')
@@ -201,10 +201,10 @@ $databasecenter = array(
       ,'forbrug'           => ens('forbrug', '50', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '', '', '', '')
-      ,'fælgbag'           => ens('fælg', '', '', '', '')
-      ,'dækfor'            => ens('dæk2', '2.75', '21', '', '')
-      ,'dækbag'            => ens('dæk2', '4.10', '18', '', '')
+       'fælgfor'           => ens('fælg', '1.40', '21', '', '(ikke sikkert på det er korrekt)')
+      ,'fælgbag'           => ens('fælg', '2.15', '18', '', '(ikke sikkert på det er korrekt)')
+      ,'dækfor'            => ens('dæk2', '2.75', '21', '', '(ikke sikkert på det er korrekt)')
+      ,'dækbag'            => ens('dæk2', '4.10', '18', '', '(ikke sikkert på det er korrekt)')
       ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
       ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
       ,'affjedringfor'     => ens('affjedringfor', '', '', '', '')
@@ -252,10 +252,10 @@ $databasecenter = array(
    ),'transmission'        => array(
        'transmissiontype'  => ens('transmissiontype', '', '', '', '')
       ,'kobling'           => ens('kobling', '', '', '', '')
-      ,'antalgear'         => ens('antalgear', '4', '', '', '')
+      ,'antalgear'         => ens('antalgear', '4', 'manuel', '', '')
       ,'gearratio'         => ens('gearratio', '', '', '', '')
-      ,'tandhjulfor'       => ens('tandhjulfor', '', '', '', '')
-      ,'tandhjulbag'       => ens('tandhjulbag', '', '', '', '')
+      ,'tandhjulfor'       => ens('tandhjulfor', '12', '', '', '(på både 30 og 45 km/t)')
+      ,'tandhjulbag'       => ens('tandhjulbag', '50', '', '', '(på både 30 og 45 km/t)')
       ,'reduktionsratio'   => ens('reduktionsratio', '', '', '', '')
 
    ),'ekstra'              => array(
@@ -280,7 +280,7 @@ $databasecenter = array(
 
    ),'begrænsninger'       => array(
        'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
-      ,'begrænstænding'    => ens('begrænstænding', '', 'ja', 'ja', '')
+      ,'begrænstænding'    => ens('begrænstænding', '', 'Elektronisk i CDI boks', 'Elektronisk i CDI boks', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
@@ -452,7 +452,10 @@ $databaseright = array(
    ,'YM50-8 45 km/t E17647 (e4*2002/24*2090)'    => 'typegodkendelser/Yamasaki%20Bike%2045%20%28E17647%29%20udstedt%2020-05-2009.pdf'
    ,'YM50-8 45 km/t E19326 (e4*2002/24*2716)'    => 'typegodkendelser/Yamasaki%20MC%2045%20%28E19326%29%20udstedt%2024-08-2011.pdf'
 
-)                      
+   ,'Yamasaki YM50GYS 30 km/t E18164 (e4*2002/24*1223)'            => 'typegodkendelser/Yamasaki%20-%20%28E18164%29%20udstedt%2021-04-2010.pdf'
+   ,'Yamasaki YM50GYS 45 km/t E18163 (e4*2002/24*1223)'            => 'typegodkendelser/Yamasaki%20-%20%28E18163%29%20udstedt%2020-04-2010.pdf'
+
+)
 
 );
 

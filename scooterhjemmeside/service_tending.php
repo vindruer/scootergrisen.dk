@@ -75,7 +75,7 @@ Ved tomgang (1700 o/min) skal hakket pege på linien ved F mærket.
 Ved "full advance" (6000 o/min) og derover skal hakket pege mellem de 2 sidste mærker.
 ').'
 
-'.afsnit('Eksempel fra Kymco Super 8','
+'.afsnit('Eksempel fra Kymco Super 8 4T','
 Ved tomgang (1700 o/min) skal hakket pege på linien ved F mærket og krumtapakslen er her drejet 13 grader før TDC.
 Ved "full advance" (3800 o/min) og derover skal hakket pege mellem de 2 sidste mærker og krumtapakslen er her 28 grader før TDC.
 ').'

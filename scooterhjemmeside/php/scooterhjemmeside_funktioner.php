@@ -1823,4 +1823,64 @@ function kemiskformel($data){
 
 
 
+function motortypetable(){
+
+   $indhold = '';
+
+$indhold .= ''.
+box(array('80', '170', '270')
+   ,array(
+       array('tegn'      ,'beskrivelse', 'muligheder')
+      ,array('ZS'        ,'producent', 
+'[blank]
+APL = Zhejiang Apollo
+BD = Benda fada
+BN = (AGM/Fosti/Motor Mania)
+BT = Baotian
+BT = Benzhou
+CK = Kymco
+DD = Dadyw
+FY = Feiying/fym/huanan (Sachs)
+HS = Hsun
+HT = Huatian
+HY = Jiangmen Giantco
+JC = Jincheng
+JL = JinLun
+KW = Keeway
+LB = Lingben/Longbo ? (Texas)
+LC = Jincheng
+LF = Lifan
+LJ = Longjia
+SL = Sanli
+XS = (Peugeot Tweet 4T/Sym)
+XT = Kinroad
+YB = Yiben (danscooter)
+YM = Yamasaki
+YY = Yiying
+ZN = Zhongshen/znen
+ZS = Zhongshen
+ZS = Zongshen
+ZY = Jiangmen
+QJ = ? QJIANG.KEEWAY.LEONE
+QM = qingqi ? (peugeot v-clic LAE)
+')
+      ,array('1'         ,'antal cylindre', '1')
+      ,array('P'         ,'layout', '[blank]<br>V<br>P (horisontal ?)<br>D (vertical geely)')
+      ,array('E'         ,'takt', '[blank] = 4 takt<br>E = 2 takt')
+      ,array('39'        ,'cylinder boring i mm', '38 eller 39 eller 40 (for cirka 50 cm³)')
+      ,array('Q'         ,'køling', '[blank] = væskekølet<br>F = passiv vindkølet<br>Q = tvunget blæsekølet<br>Y = oliekølet')
+      ,array('M'         ,'brug af motor', 'M = Motorcykel<br>A = Automobil (bil)')
+      ,array('B'         ,'slagvolume (cm³)', 'A = under 50 (lang motorblok)<br>B = 50 (kort motorblok)<br>C = 60<br>D = 70<br>E = 80<br>F = 90<br>G = 100<br>H = 110<br>I = 125<br>J = 150<br>K = 170/175<br>L = 200<br>M = 250<br>N = 300<br>O = <br>P = 350<br>Q = 400<br>R = 500<br>S = 600<br>T = 650<br>U = 700<br>V = 750<br>W = 800<br>X = 900<br>Y = 1000<br>YG = 1100<br>YL >= 1200<br>')
+      ,array('-3'        ,'design version', 'kan for eksempel være at monteringspunktet til støddæmperen er placeret et andet sted')
+   )
+)
+.'
+';
+
+   return $indhold;
+
+}
+
+
+
 ?>

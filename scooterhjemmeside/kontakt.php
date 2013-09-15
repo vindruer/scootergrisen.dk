@@ -8,7 +8,7 @@ $setup['nogetikon']               = 'ikoner/ikon_kontakt2.png';
 
 $title = "kontakt";
 $overskrift = "kontakt";
-$metadescription = "skriv til mig som laver scootergrisen";
+$metadescription = "skriv en besked til mig som laver scootergrisen.dk";
 
 $GLOBALS['setup']['head'] = '
 <style type="text/css">

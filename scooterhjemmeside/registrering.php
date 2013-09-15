@@ -22,6 +22,7 @@ bemærk
 ' => '
 Den måde man køber sin nummerplade er for nylig lavet om.
 Hvor man før kun kunne købe sin nummerplade hos skat skal man i fremtiden købe nummerplade hos en synshal eller en forhandler som er godkendt til at sælge dem.
+Jeg har endnu ikke så meget info om dette da jeg ikke selv har prøvet det.
 '
 
 ,'
@@ -32,23 +33,25 @@ En lille knallert som højst må køre 30 km/t kan have en gul nummerplade med 2
 Når der sælges en ny 30 km/t scooter så skal der monteres en gul nummerplade.
 Det gælder dog ikke for 30 km/t invalideknallert (med 3 hjul).
 
-Køber man en brugt 30 km/t scooter er det ikke altid der er nummerplade på. Det kommer an på hvornår scooteren blev solgt første gang fra fabriksny af.
-En 30 km/t scooter der er solgt fra ny før 1. Juli 2006 har ikke nummerplade og skal ikke have det monteret selvom den sælges senere.
+Køber man en brugt 30 km/t scooter er det ikke altid der skal være nummerplade på. Det kommer an på hvornår scooteren blev solgt første gang fra fabriksny af.
+En 30 km/t scooter der er solgt fra ny før 1. Juli 2006 har ikke nummerplade og skal ikke have nummerplade selvom den sælges senere.
 
 Fra '.ahref('download/vejledning_om_syn_af_koretojer.pdf', 'vejledning_om_syn_af_koretojer.pdf').' :
 '.citat('
-Stk. 3. En lille knallert skal kun registreres, hvis den er erhvervet som fabriksny
+En lille knallert skal kun registreres, hvis den er erhvervet som fabriksny
 den 1. juli 2006 eller senere. En invalideknallert skal ikke registreres.
 ').'
 
-En 30 km/t nummerplade koster 590,- kroner og kan købes hos skat.
-Tidligere kostede det kun 90 kroner for en nummerplade til en lille knallert men det er vist lavet om.
+En gul nummerplade til lille knallert koster 590,- kroner.
+Tidligere kostede det kun 90 kroner for en nummerplade til en lille knallert som skulle købes hos skat men det er lavet om.
 
 Kigge man på nummerpladen lige på eller tager et billede af nummerpladen med blitz lige på så kan man se nogle symboler med et øje i en hånd.
-'.visbilled('1', 'billed1253.jpg', '30 km/t nummerplade symbol med øje i hånd', false, true).'
-Jeg går ud fra at symbolerne er til for at sikre sig mod hjemmelavede nummerplader ligesom der er vandmærker i pengesedler.
+Jeg går ud fra at symbolerne er til for at sikre sig mod hjemmelavede nummerplader.
+Læs mere om symbolet som vist kaldes argusøje : '.ahref('http://www.denstoredanske.dk/Sprog,_religion_og_filosofi/Religion_og_mystik/Guder_i_antik_litteratur/Argos').'.
+'.visbilled('1', 'billed1253.jpg', '30 km/t nummerplade med argusøje symbol øje i hånd', false, true).'
 
-Tallene går fra 5500 til 9999.
+Bogstaverne på gul nummerplade til lille knallert starter fra VB.
+Tallene på gul nummerplade til lille knallert går fra 5500 til 9999.
 '
 
 ,'
@@ -56,9 +59,9 @@ nummerplade til stor knallert
 ' => '
 En stor knallert som højst må køre 45 km/t har en hvid nummerplade med 2 bogstaver, 3 tal og en rød ramme.
 '.visbilled('1', 'billed0092.jpg', '45 km/t nummerplade', false, true).'
-En 45 km/t nummerplade koster 590,- kroner og kan købes hos skat.
+En 45 km/t nummerplade koster 590,- kroner.
 
-Tallene går fra 001 til 699.
+Tallene på hvid nummerplade til stor knallert går fra 001 til 699.
 '
 
 ,'
@@ -82,13 +85,15 @@ Her ses et VIN. De to stjerner i starteren og slutning er ikke en del af VIN.
 
 Stelnummeret kan ofte ses ved at fjerne et stykke plastik over fodbrættet.
 '.visbilled('1', 'billed0348.jpg', 'stelnummer', false, true).'
-VIN står også på fabrikationspladen som ofte kan være at finde på højre eller venstre side af scooteren midt på hvis man kigger fra siden eller nede fra.
+VIN står også på fabrikationspladen.
 
 Stelnummeret kan nogle gange bruges til at finde ud af om scooteren er godkendt som 30 km/t eller 45 km/t scooter ved at sammenligne med scooterens typegodkendelse.
 
 VIN indeholder ikke (eller sjældent ?) bogstaverne i, o og q (I, O og Q) da de kan læses forkert som 1 (et) og 0 (nul).
 
-Her er en forklaring på hvad tegn nummer 1 til 17 betyder.
+Brug '.ahref('vinchecker.php', 'VIN checker').' til at dekode VIN og måske få nogle oplysninger om scooteren.
+
+Her er en forklaring på hvad tegn nummer 1 til 17 i VIN betyder.
 '.
 box(array('100', '200', '200')
    ,array(
@@ -401,15 +406,24 @@ box(array('120', '400')
 '
 
 ,'
+VIN checker
+' => '
+Prøv at indtast et VIN (17 cifret stelnummer) i '.ahref('vinchecker.php', 'VIN checkeren').' og måske kan du få oplysninger så som producent og årgang.
+'
+
+,'
 motornummer
 ' => '
-Motornummeret kan ofte ses under variatordækslet ved støttebenet.
+Motornummerets placering er forskellig afhængig af motortypen.
+
+På mange 4 takt 50 cm³ motorer (GY6, 139QM) står motornummeret under variatordækslet ved støttebenet.
 '.visbilled('1', 'billed0349.jpg', 'motornummer', false, true).'
 Motornummeret er de tal som står mellem stjernerne nederst.
 '.visbilled('1', 'billed1613.jpg', 'BT139QMA motortype og motornummer', false, true).'
-På nogle scootere står motornummeret ved baghjulet omkring støddæmperen hvis man kigger oppe fra.
+
+På nogle 2 takt motortyper står motornummeret ved baghjulet omkring støddæmperen hvis man kigger oppe fra.
 '.visbilled('1', 'billed0156.jpg', 'motornummer', false, true).'
-Eller bagfra.
+Eller hvis man ser på motoren bagfra.
 '.visbilled('1', 'billed0026.jpg', 'motornummer', false, true).'
 '.visbilled('1', 'billed2434.jpg', 'motornummer på pgo', false, true).'
 '
@@ -425,8 +439,8 @@ Fabrikationspladen indeholder info om producent, typegodkendelsesnummer, stelnum
 ,'
 komponentmærkningsskilt
 ' => '
-Under sædet ved benzintanken sidder dette klistermærke på min Kymco Super 8 (30 km/t).
-'.visbilled('1', 'billed0079.jpg', 'komponentmærkningsskilt kymco super 8 klistermærke', false, true).'
+Under sædet ved benzintanken sidder dette klistermærke på min Kymco Super 8 4T (30 km/t).
+'.visbilled('1', 'billed0079.jpg', 'komponentmærkningsskilt kymco super 8 4T klistermærke', false, true).'
 Det kaldes et komponentmærkningsskilt i typegodkendelsen.
 
 Det giver oplysninger om blandt andet luftfilter, udstødning og remskiver.
@@ -444,16 +458,16 @@ Her ses endnu et komponentmærkningsskilt.
 ,'
 typeattest
 ' => '
-Så vidt jeg forstår er en typeattest et stykke papir som scooter importøren underskriver og sender til scooter butikken når butikken køber en scooter af importøren.
+Så vidt jeg forstår er en typeattest et stykke papir som importøren af køretøjet underskriver og sender til scooter butikken når butikken køber en scooter af importøren.
 
 Butikken underskriver typeattesten når scooteren sælges og giver det til den der køber scooteren.
 
-Så vidt jeg ved skal man så aflevere typeattesten når man går til skat og køber nummerpladen.
-
 Her ses en typeattest.
-'.visbilled('1', 'billed0827.jpg', 'typeattest', false, true).'
+'.visbilled('1', 'billed0827.jpg', 'færdselsstyrelsen typeattest for motordrevet køretøj Kymco Super 8 4T CK50QT-6', false, true).'
 
 Læg mærke til der står nederst at forhandleren erklærer at scooteren er fabriksny, klargjort efter fabrikantens anvisninger og er i forskriftsmæssig stand.
+
+På typeattesten står typegodkendelsesnummer og typeanmeldelsesnummer. De kan bruges til at finde ud af hvilken typegodkendelse der passer til scooteren.
 '
 
 ,'
@@ -462,6 +476,8 @@ registreringsattest
 Den gang jeg købte min scooter mener jeg ikke at jeg fik nogen registreringsattest.
 
 Jeg har ikke helt styr på hvordan det forgår med registreringsattest.
+
+Der fås vist kun registeringsattest til de køretøjer som skal have nummerplade på. Så de fås vist ikke til lille knallert solgt fra ny før 1. Juli 2006 eller til lille invalideknallert som ikke skal have nummerplade på.
 
 Men her er en midlertidig registreringsattest som man vist får hos synshallen/forhandleren.
 '.visbilled('1', 'billed3467.jpg', 'midlertidig registreringsattest', false, true).'
@@ -481,9 +497,13 @@ anmeldelse til registrering MO 2A
 Her ses "Anmeldelse til syn og/eller registrering af motorkørertøjer m.v.".
 Også kaldet MO 2A.
 '.visbilled('1', 'billed0828.jpg', 'anmeldelse til syn og/eller registrering af motorkørertøjer m.v.', false, true).'
+
+'.afsnit('Den gang jeg købte nummerplade hos skat forgik det sådan her','
 Noget af papiret udfyldes i butikken og når man aflevere papiret hos skat så udfylder de den øverste del (forbeholdt for motorkontoret) med blandt andet nummerplade nummer.
 
 Man får en kopi af papiret.
+').'
+Idag er det noget lavet om.
 '
 
 ,'
@@ -491,7 +511,7 @@ typegodkendelse
 ' => '
 Se '.ahref('typegodkendelser.php', 'typegodkendelser').'.
 
-Typegodkendelsesnummeret på min Kymco Super 8 hedder "e4*2002/24*1464" (det står på fabrikationspladen).
+Typegodkendelsesnummeret på min Kymco Super 8 4T hedder "e4*2002/24*1464" (det står på fabrikationspladen).
 
 Typeanmeldelsesnummeret er "E 16491" (det står i typeattesten).
 
@@ -506,20 +526,17 @@ Før år 2000 cirka starter typeanmeldelsesnummeret med S (Der er nogle få hvor
 
 Starter typeanmeldelsesnummeret med E så har scooteren et EF-typegodkendelsesnummer i stil med "e11*2002/24*1234".
 Starter typeanmeldelsesnummeret med S eller A eller G så har scooteren ikke et EF-typegodkendelsesnummer.
-'
 
-,'
-VIN checker
-' => '
-Prøv at indtast et 17 cifret stelnummer i '.ahref('vinchecker.php', 'VIN checkeren').' og måske kan du få oplysninger så som producent og årgang.
+Da 30 km/t invalideknallerter med 3 hjul ikke skal registeres så findes der vist ikke nogen typegodkendelser til dem.
 '
 
 ,'
 statestik
 ' => '
-På '.high('http://www.mclf.dk/statistikmff/').' kunne man se noget statestik om nyregisteret scootere og hvilke modeller der er solgt, hvor mange og hvor i landet de er solgt. Men siden er vist lukket.
+På '.high('http://www.mclf.dk/statistikmff/').' kunne man tidligere se noget statestik om nyregisteret scootere og hvilke modeller der er solgt, hvor mange og hvor i landet de er solgt.
+Men siden er lukket nu.
 
-Her er eksempler på data sorteret efter hvilke modeller der sælges flest af.
+Jeg fik dog downloadet noget data og her er eksempler på data sorteret efter hvilke modeller der sælges flest af.
 
 Lille knallerter : Uge 1 - 31 (2012)
 '.
@@ -650,11 +667,11 @@ Jeg ved det endnu ikke men samler info om det har...
 
 
 COC står for Certificate Of Conformity.
-Certificate Of Conformity kaldes vist også typegodkendelse eller homologation.
+Certificate Of Conformity kaldes vist også homologation eller EU-overensstemmelsesattest.
 
-COC er et stykke papir der vist er lavet af producenten af køretøjet.
+COC er et stykke papir der udstedes af producenten af køretøjet.
 COC skulle være et bevis på at køretøjet er CE godkendt.
-Det vil sige at det laver op til diverse minimum regler for det land det skal sælges i.
+Det vil sige at det lever op til diverse minimum regler for det land det skal sælges i.
 
 Jeg fik dog ikke noget COC papir da jeg købte min scooter fra ny.
 

@@ -247,7 +247,7 @@ $databasecenter = array(
    ),'generelt'            => array(
        'model'             => ens('model', 'sym DD', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
-      ,'scootertype'       => ens('scootertype', '', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'FT05W', '', '', '')
       ,'varianter'         => ens('varianter', 'sym DD IIF ?', '', '', '')
       ,'pris'              => ens('pris', '8999', '', '', '')
       ,'hastighed'         => ens('hastighed', '30', '', '', '')
@@ -255,7 +255,7 @@ $databasecenter = array(
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
    ),'motor'               => array(
-       'motormodel'        => ens('motormodel', '', '', '', '')
+       'motormodel'        => ens('motormodel', 'ER', '', '', '')
       ,'motortype'         => ens('motortype', '2 takt', '', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
       ,'volume'            => ens('volume', '', '', '', '')
@@ -288,8 +288,8 @@ $databasecenter = array(
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '', '', '', '')
-      ,'fælgbag'           => ens('fælg', '', '', '', '')
+       'fælgfor'           => ens('fælg', '2.15', '10', '', '')
+      ,'fælgbag'           => ens('fælg', '2.15', '10', '', '')
       ,'dækfor'            => ens('dæk1', '90', '90', '10', '')
       ,'dækbag'            => ens('dæk1', '90', '90', '10', '')
       ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
@@ -361,20 +361,20 @@ $databasecenter = array(
       ,'støj'              => ens('støj', '', '', '', '')
       ,'bagagevolume'      => ens('bagagevolume', '', '', '', '')
       ,'bakgear'           => ens('bakgear', '', '', '', '')
-      ,'importør'          => ens('importør', '', '', '', '')
+      ,'importør'          => ens('importør', 'Thomas Møller Pedersen A/S', '', '', '')
       ,'producent'         => ens('producent', '', '', '', '')
       ,'andet'             => ens('andet', '', '', '', '')
 
    ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+       'begrænstransmis'   => ens('begrænstransmis', '', 'Bøsning 6 mm i forr. variator', '', '')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
-      ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
-      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
-      ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
+      ,'begrænsindsug'     => ens('begrænsindsug', '', 'bøsning ø7,5 mm i indsugningsmanifold', '', '')
+      ,'begrænsudstødning' => ens('begrænsudstødning', '', 'resonansrør forr. udstødning', '', '')
+      ,'begrænsstelnum'    => ens('begrænsstelnum', '', 'Tegn 12 i stelnummeret er 2 og angiver den maksimale hastighed = 30 km/t', '', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 
    )
@@ -805,16 +805,16 @@ $databasecenter = array(
    ),'generelt'            => array(
        'model'             => ens('model', 'sym jet euro x', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
-      ,'scootertype'       => ens('scootertype', 'BL05W', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'BL05W', 'G5J', 'G5J (jet euro)', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '9999 for sym jet euro')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
    ),'motor'               => array(
-       'motormodel'        => ens('motormodel', '', '', '', '')
-      ,'motortype'         => ens('motortype', '', '', '', '')
+       'motormodel'        => ens('motormodel', 'sanyang BC', '', '', '')
+      ,'motortype'         => ens('motortype', '2 takt', '', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
       ,'volume'            => ens('volume', '', '', '', '')
       ,'køling'            => ens('køling', '', '', '', '')
@@ -846,10 +846,10 @@ $databasecenter = array(
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '', '', '', '')
-      ,'fælgbag'           => ens('fælg', '', '', '', '')
-      ,'dækfor'            => ens('dæk1', '', '', '', '')
-      ,'dækbag'            => ens('dæk1', '', '', '', '')
+       'fælgfor'           => ens('fælg', '3.50', '12', '', '')
+      ,'fælgbag'           => ens('fælg', '3.50', '12', '', '')
+      ,'dækfor'            => ens('dæk1', '120', '70', '12', '')
+      ,'dækbag'            => ens('dæk1', '130', '70', '12', '')
       ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
       ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
       ,'affjedringfor'     => ens('affjedringfor', '', '', '', '')
@@ -905,7 +905,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', '', '', '', '')
+      ,'stelnummer'        => ens('stelnummer', 'RFGBL05W', '', '', '')
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '', '', '', '')
@@ -919,20 +919,20 @@ $databasecenter = array(
       ,'støj'              => ens('støj', '', '', '', '')
       ,'bagagevolume'      => ens('bagagevolume', '', '', '', '')
       ,'bakgear'           => ens('bakgear', '', '', '', '')
-      ,'importør'          => ens('importør', '', '', '', '')
+      ,'importør'          => ens('importør', 'Thomas Møller Pedersen A/S', 'Itago A/S', '', '')
       ,'producent'         => ens('producent', '', '', '', '')
       ,'andet'             => ens('andet', '', '', '', '')
 
    ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+       'begrænstransmis'   => ens('begrænstransmis', '', 'Bøsning 9,2 mm Forreste variator', 'afstandsbøsning mellem forreste remskivehalvdele med en brystbredde på 5,0 mm.', '')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
-      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
-      ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
+      ,'begrænsudstødning' => ens('begrænsudstødning', '', 'resonansrør ø22 x 260 Forreste udstødning', 'Resonatorrør påsvejst forreste udstødningsrør ø22 x 260 mm', '')
+      ,'begrænsstelnum'    => ens('begrænsstelnum', '', 'Tegn 12 i stelnummeret er 2 og angiver den maksimale hastighed = 30 km/t', '', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 
    )
@@ -945,15 +945,15 @@ $databasecenter = array(
    ),'generelt'            => array(
        'model'             => ens('model', 'sym jet sport x', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
-      ,'scootertype'       => ens('scootertype', 'BK05W', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'BK05W', 'G5J (IIFN2)', '', '')
       ,'varianter'         => ens('varianter', 'sym jet sport X SR', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
    ),'motor'               => array(
-       'motormodel'        => ens('motormodel', '', '', '', '')
+       'motormodel'        => ens('motormodel', 'BC', '', '', '')
       ,'motortype'         => ens('motortype', '', '', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
       ,'volume'            => ens('volume', '', '', '', '')
@@ -1059,20 +1059,20 @@ $databasecenter = array(
       ,'støj'              => ens('støj', '', '', '', '')
       ,'bagagevolume'      => ens('bagagevolume', '', '', '', '')
       ,'bakgear'           => ens('bakgear', '', '', '', '')
-      ,'importør'          => ens('importør', '', '', '', '')
+      ,'importør'          => ens('importør', 'Itago A/S', '', '', '')
       ,'producent'         => ens('producent', '', '', '', '')
       ,'andet'             => ens('andet', '', '', '', '')
 
    ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+       'begrænstransmis'   => ens('begrænstransmis', '', '5,5 mm bøsning i variator.', 'Bøsning Ø10,4 mm i forreste variator.', '')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
-      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
-      ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
+      ,'begrænsudstødning' => ens('begrænsudstødning', '', 'Bøsning Ø7,5 mm i resonansrør', 'Resonansrør i udstødning.', '')
+      ,'begrænsstelnum'    => ens('begrænsstelnum', '', 'Tegn 12 i stelnummeret er 2 og angiver den maksimale hastighed = 30 km/t', 'Tegn 12 i stelnummeret er "5" og angiver den maksimale hastighed = 45 km/t.', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 
    )
@@ -1969,6 +1969,19 @@ $databaseright = array(
    ,'symphony SR 45 km/t E19366 (e4*2002/24*2468)'   => 'typegodkendelser/SYM%20Symphony%20SR%2050%20%28E19366%29%20udstedt%2027-09-2011.pdf'
    ,'tonik 30 km/t E18910 (e4*2002/24*2583)'         => 'typegodkendelser/SYM%20Tonik%2050%20%28E18910%29%20udstedt%2003-02-2011.pdf'
    ,'tonik 45 km/t E19111 (e4*2002/24*2583)'         => 'typegodkendelser/SYM%20Tonik%2050%20%28E19111%29%20udstedt%2017-05-2011.pdf'
+
+
+
+   ,'Sym Jet G050J6 45 km/t S8172'            => 'typegodkendelser/Sanyang%20Sym%20Jet%2050%20%28S8172%29%20udstedt%2029-05-1997.pdf'
+   ,'Sym DD FT05W 30 km/t E15352 (e1*92/61*00127)'            => 'typegodkendelser/SYM%20DD50%20%28E15352%29%20udstedt%2010-05-2006.pdf'
+   ,'Sym Jet BL05W6 45 km/t E12049 (e1*92/61*00015)'            => 'typegodkendelser/Sym%20Jet%2050%20%28E12049%29%20udstedt%2011-06-2002.pdf'
+      ,'Sym Jet Euro G5J 30 km/t E19371 (e1*92/61*0015)'            => 'typegodkendelser/SYM%20Jet%20Euro%2050%20%28E19371%29%20udstedt%2027-09-2011.pdf'
+      ,'Sym Jet Euro X BL05W 45 km/t E14185 (e1*92/61*00015)'            => 'typegodkendelser/SYM%20JET%20EURO%20X%2050%20%28E14185%29%20udstedt%2018-04-2005.pdf'
+      ,'Sym Jet Euro X G5J 30 km/t E15353 (e1*92/61*00015)'            => 'typegodkendelser/SYM%20Jet%20Euro%20X%2050%20%28E15353%29%20udstedt%2010-05-2006.pdf'
+      ,'Sym Jet Sport X G5J 30 km/t E16483 (e1*92/61*00015/13)'            => 'typegodkendelser/SYM%20Jet%20SportX%20%28E16483%29%20udstedt%2002-07-2007.pdf'
+      ,'Sym Jet Sport X G5J 45 km/t E16624 (e1*92/61*00015/13)'            => 'typegodkendelser/SYM%20Jet%20SportX%20%28E16624%29%20udstedt%2018-10-2007.pdf'
+   ,'Sym Jungle GA05W6 45 km/t S9406'            => 'typegodkendelser/Sym%20Jungle50%20%28S9406%29%20udstedt%2026-10-1998.pdf'
+   ,'Sym Super Fancy G050H6 45 km/t S8171'            => 'typegodkendelser/SYM%20Super%20Fancy%20%28S8171%29%20udstedt%2001-05-1997.pdf'
 
 )
 

@@ -278,10 +278,10 @@ Her ses en scooter efter tyveri.
 
 Ratlåsen blev ødelagt ved at dreje styret.
 4 skruer blev fjernet.
-'.visbilled('1', 'billed0683.jpg', 'kymco super 8 stjålet og brudt op ved tændingslås', false, true).'
+'.visbilled('1', 'billed0683.jpg', 'kymco super 8 4T stjålet og brudt op ved tændingslås', false, true).'
 Der blev banket hul ind til tændingsstikket som blev afmonteret.
 Tyvene har åbenbart forsøgt at starte scooteren uden nøgle.
-'.visbilled('1', 'billed0684.jpg', 'kymco super 8 stjålet og brudt op ved tændingslås', false, true).'
+'.visbilled('1', 'billed0684.jpg', 'kymco super 8 4T stjålet og brudt op ved tændingslås', false, true).'
 '
 
 ,'
@@ -311,16 +311,16 @@ tændingslås
 ,'
 sædelås
 ' => '
-'.visbilled('1', 'billed1896.jpg', 'kymco super 8 sædelås', false, true).'
-'.visbilled('1', 'billed1895.jpg', 'kymco super 8 sædelås', false, true).'
-'.visbilled('1', 'billed1864.jpg', 'kymco super 8 sædelås', false, true).'
-'.visbilled('1', 'billed1860.jpg', 'kymco super 8 sædelås', false, true).'
-'.visbilled('1', 'billed1865.jpg', 'kymco super 8 sædelås adskildt', false, true).'
-'.visbilled('1', 'billed1866.jpg', 'kymco super 8 sædelås', false, true).'
+'.visbilled('1', 'billed1896.jpg', 'kymco super 8 4T sædelås', false, true).'
+'.visbilled('1', 'billed1895.jpg', 'kymco super 8 4T sædelås', false, true).'
+'.visbilled('1', 'billed1864.jpg', 'kymco super 8 4T sædelås', false, true).'
+'.visbilled('1', 'billed1860.jpg', 'kymco super 8 4T sædelås', false, true).'
+'.visbilled('1', 'billed1865.jpg', 'kymco super 8 4T sædelås adskildt', false, true).'
+'.visbilled('1', 'billed1866.jpg', 'kymco super 8 4T sædelås', false, true).'
 
-'.visbilled('1', 'billed1863.jpg', 'kymco super 8 sædelås', false, true).'
-'.visbilled('1', 'billed1861.jpg', 'kymco super 8 sædelås', false, true).'
-'.visbilled('1', 'billed1862.jpg', 'kymco super 8 sædelås', false, true).'
+'.visbilled('1', 'billed1863.jpg', 'kymco super 8 4T sædelås', false, true).'
+'.visbilled('1', 'billed1861.jpg', 'kymco super 8 4T sædelås', false, true).'
+'.visbilled('1', 'billed1862.jpg', 'kymco super 8 4T sædelås', false, true).'
 '
 
 ,'

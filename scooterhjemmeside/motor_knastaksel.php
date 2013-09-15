@@ -6,7 +6,7 @@ require_once('./php/scooterhjemmeside_funktioner.php');
 
 $title = "knastaksel - 4 takt motor";
 $overskrift = "knastaksel - 4 takt motor";
-$metadescription = "knastaksel billeder fra en 4 takt scooter motor fra Kymco Super 8 og Kymco Agility";
+$metadescription = "knastaksel billeder fra en 4 takt scooter motor fra Kymco Super 8 4T og Kymco Agility";
 
 $databasecenter = array(
 
@@ -15,10 +15,10 @@ knastaksel billeder
 ' => '
 '
 .galleriholder(array(
-    galleri('highslide', '', 'billed3836.jpg', array('knastakselholder', 'Kymco Super 8'))
-   ,galleri('highslide', '', 'billed3839.jpg', array('knastakselholder', 'Kymco Super 8'))
-   ,galleri('highslide', '', 'billed3837.jpg', array('knastaksel i topstykke', 'Kymco Super 8'))
-   ,galleri('highslide', '', 'billed3838.jpg', array('topstykke', 'Kymco Super 8'))
+    galleri('highslide', '', 'billed3836.jpg', array('knastakselholder', 'Kymco Super 8 4T'))
+   ,galleri('highslide', '', 'billed3839.jpg', array('knastakselholder', 'Kymco Super 8 4T'))
+   ,galleri('highslide', '', 'billed3837.jpg', array('knastaksel i topstykke', 'Kymco Super 8 4T'))
+   ,galleri('highslide', '', 'billed3838.jpg', array('topstykke', 'Kymco Super 8 4T'))
    ,galleri('highslide', '', 'billed3842.jpg', array('knastaksel i topstykke', 'Kymco Agility'))
    ,galleri('highslide', '', 'billed3841.jpg', array('knastaksel i topstykke', 'Kymco Agility'))
    ,galleri('highslide', '', 'billed3845.jpg', array('topstykke, knastkæde, knastaksel og knastakselholder med vippearme', 'Kymco Agility'))
@@ -30,7 +30,7 @@ knastaksel billeder
    ,galleri('highslide', '', 'billed3833.jpg', array('2 styk knastaksler', 'Kymco Agility'))
    ,galleri('highslide', '', 'billed3834.jpg', array('2 styk knastaksler', 'Kymco Agility'))
    ,galleri('highslide', '', 'billed3835.jpg', array('2 styk knastaksler', 'Kymco Agility. hullerne på tandhjulet bruges når knastkæden skal sættes på så krumtapakslen og knastakslen kommer til at køre korrekt samme så ventilerne åbne og lukker på de rigtige tidspunkter'))
-   ,galleri('highslide', '', 'billed3840.jpg', array('16002C3 CHINA KJ NTN', 'Kymco Super 8'))
+   ,galleri('highslide', '', 'billed3840.jpg', array('16002C3 CHINA KJ NTN', 'Kymco Super 8 4T'))
    ,galleri('highslide', '', 'billed3847.jpg', array('16002C3 CHINA JW', 'Kymco Agility'))
    ,galleri('highslide', '', 'billed3849.jpg', array('16002C3 CHINA JW NTN', 'Kymco Agility'))
    ,galleri('highslide', '', 'billed3846.jpg', array('16002 C3 JAPAN 2005.08.27 10', 'Kymco Agility'))

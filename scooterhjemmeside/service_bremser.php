@@ -22,7 +22,7 @@ Bremsevæske niveauet skal mindst være op til LOWER/MIN mærket.
 
 Minimums niveauet er ofte midt i glasset.
 
-Her ses bremsevæskebeholderen på Kymco Super 8 som ikke har noget minimums mærke.
+Her ses bremsevæskebeholderen på Kymco Super 8 4T som ikke har noget minimums mærke.
 '.visbilled('1', 'billed0130.jpg', 'bremsevæskebeholder kymco super 8', false, true).'
 
 Hvis der ikke er noget minimumsmærke så tror jeg godt man kan gå ud fra at minimumsnivauet er midt i glasset.

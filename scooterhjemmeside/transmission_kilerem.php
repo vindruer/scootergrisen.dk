@@ -38,7 +38,7 @@ Nogen gange er der af en eller anden grund ikke angivet nogen vinkel.
 Her står 729 x 17,5.
 '.visbilled('1', 'billed1580.jpg', 'kilerem endurance 729x17,5', false, true).'
 
-På kileremmen på min Kymco Super 8 står et reservedelsnummer i stedet for størrelse.
+På kileremmen på min Kymco Super 8 4T står et reservedelsnummer i stedet for størrelse.
 Her står Kymco 23100-KEB7-9000 Bando.
 '.visbilled('1', 'billed1491.jpg', 'kilerem kymco bando', false, true).'
 Her ses det mere tydeligt på en ny kilerem.
@@ -67,9 +67,9 @@ box(array('200', '150', '180', '140')
       ,array('CPI Popcorn',                    '788-17-28',             '24107G02F000',            '')
       ,array('Kymco Agility',                  '',                      '23100-KEB7-9000',         'reservedelsmanual')
       ,array('Kymco Agility',                  '654-18,0-30-8,5',       '',                        'set på nettet')
-      ,array('Kymco Super 8',                  '',                      '23100-KEB7-900',          'reservedelsmanual')
-      ,array('Kymco Super 8',                  '',                      '23100-KEB7-9000',         'set på kilerem')
-      ,array('Kymco Super 8',                  '654-18,0-30-8,5',       '23100-KEB7-9000',         'siden findes ikke mere')
+      ,array('Kymco Super 8 4T',               '',                      '23100-KEB7-900',          'reservedelsmanual')
+      ,array('Kymco Super 8 4T',               '',                      '23100-KEB7-9000',         'set på kilerem')
+      ,array('Kymco Super 8 4T',               '654-18,0-30-8,5',       '23100-KEB7-9000',         'siden findes ikke mere')
       ,array('Texas Chili',                    '',                      '408023',                  'reservedelsmanual')
       ,array('Texas Flash X30 2008',           '',                      '403905',                  'reservedelsmanual')
       ,array('Texas Flash 30-4',               '',                      '403905',                  'reservedelsmanual')

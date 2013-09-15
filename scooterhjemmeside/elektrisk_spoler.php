@@ -68,7 +68,7 @@ Her kan man se forskellen på hvordan en generator med 1 spole og 2 spoler kan s
 Statorens spoler er forbundet med spændingsregulatoren.
 '.visbilled('1', 'billed0285.jpg', 'generator cd batteri spændingsregulator', false, true).'
 '.visbilled('1', 'billed0277.jpg', 'generator spændingsregulator batteri tegning', false, true).'
-Generatoren på en Kymco Super 8 har en kapacitet på 144 watt ved 5000 o/min.
+Generatoren på en Kymco Super 8 4T har en kapacitet på 144 watt ved 5000 o/min.
 Det vil sige at generatoren maksimalt kan levere 144 watt til alt elektrisk udstyr på scooteren.
 Hvis der er et større forbrug vil det gå ud over batteri opladningen.
 

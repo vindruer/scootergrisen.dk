@@ -23,6 +23,22 @@ Jeg har prøvet at gætte koden til 50cc 4t_engine v4.8(2008-7-12) og nåede til
 ,'
 T Hansen scooter priser gennem tiden
 ' => '
+12-09-2013 (vga mover sat ned til 9.999,-) :
+
+   VGA MOVER 30 km/t Tilbud Varenr.: 73300100000 VGA MOVER 30 km/t Sammenlign Kr. 9.999,00
+   VGA Mover 45 km/t Tilbud Varenr.: 73300100050 VGA Mover 45 km/t Sammenlign Kr. 9.999,00
+   VGA Versus 30 km/t 2-takt sort Varenr.: 73250100000 VGA Versus 30 km/t 2-takt sort Sammenlign Kr. 6.999,00
+   VGA Versus 30 km/t 4-takt vandkølet sort NYHED Varenr.: 73250100001 VGA Versus 30 km/t 4-takt vandkølet sort Sammenlign Kr. 8.999,00
+   VGA Versus 45 km/t 2-takt sort Varenr.: 73250100050 VGA Versus 45 km/t 2-takt sort Sammenlign Kr. 6.999,00
+   VGA Versus 45 km/t 4-takt vandkølet sort NYHED Varenr.: 73250100051 VGA Versus 45 km/t 4-takt vandkølet sort Sammenlign Kr. 8.999,00
+   VGA Grido 30 km/t sort/rød/grøn ITALY Varenr.: 73200100001 VGA Grido 30 km/t sort/rød/grøn ITALY Sammenlign Kr. 7.999,00
+   VGA Grido 45 km/t sort/hvid Restsalg Varenr.: 73200100050 VGA Grido 45 km/t sort/hvid Sammenlign Før Kr. 7.999,00 Kr. 6.999,00
+   VGA Grido 45 km/t sort/rød/grøn ITALY Varenr.: 73200100051 VGA Grido 45 km/t sort/rød/grøn ITALY Sammenlign Kr. 7.999,00
+   VGA Digita 30 km/t Sort Dellorto Varenr.: 73100100001 VGA Digita 30 km/t Sort Dellorto Sammenlign Kr. 6.499,00
+   VGA Digita 45 km/t sort Dellorto Varenr.: 73100100051 VGA Digita 45 km/t sort Dellorto Sammenlign Kr. 6.499,00
+   VGA Digita 30 km/t sort PAKKETILBUD Tilbud Varenr.: 73100100049 VGA Digita 30 km/t sort PAKKETILBUD Sammenlign Før Kr. 7.497,00 Kr. 5.997,00
+   VGA Digita 45 km/t sort PAKKETILBUD Tilbud Varenr.: 73100100099 VGA Digita 45 km/t sort PAKKETILBUD Sammenlign Før Kr. 7.497,00 Kr. 5.997,00
+
 25-07-2013 (nyhed : versus 4 takt) :
 
    VGA MOVER 30 km/t Varenr.: 73300100000 VGA MOVER 30 km/t Sammenlign VGA MOVER 30 km/t Kr. 13.999,00 Kr. 13.999,00

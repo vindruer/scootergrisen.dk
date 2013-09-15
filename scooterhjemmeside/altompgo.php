@@ -16,7 +16,7 @@ $databasecenter_b = array(
 Om PGO
 ' => '
 '.visbilled('1', 'billed2379.jpg', 'PGO scooters logo', false, null, null, null, true).'
-PGO er ifølge importøren '.ahref('http://www.c-reinhardt.dk/', 'C. Reinhardt A/S').' danmarks mest solgte scooter mærke selvom T Hansen påstår det samme om Giantco.
+PGO er ifølge importøren '.ahref('http://www.c-reinhardt.dk/', 'C. Reinhardt A/S').' danmarks mest solgte scooter mærke selvom T Hansen påstod det samme om Giantco.
 De skriver i PGO scooter katalogerne at PGO Hot og PGO Big Max er de mest solgte scootere i danmark.
 '
 
@@ -154,6 +154,24 @@ PGO - HOT 50 PMPS lille knallert :
    RFVPMPS22A1219
    RFVPMPS22A1218
    RFVPMPS22A1219
+'
+
+,'
+PGO CDI
+' => '
+På en PGO CDI kan stå følgende.
+'.citat('
+SR-03B
+E9
+07.05
+').'
+SR-03B står for ?
+E9 betyder måske at den er ubegrænset og lavere tal betyder måske at den er begrænset mere og mere jo lavere tallet er.
+07.05 er nok måned og år for hvornår den er lavet (Juli 2005).
+
+På SR-03B er der stik med max 6 ben hvor der er 5 ben i.
+
+CDI boksen kan sidder lige over bagdækket og under højre stelrør.
 '
 
 );

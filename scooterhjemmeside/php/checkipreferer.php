@@ -25,6 +25,10 @@ function checkip(){
             break;
 
          // dobbelt besøg på samme sekund med refere fra .ru sider mest
+         case '46.118.126.194' :
+         case '46.118.126.194' :
+         case '193.106.136.60' :
+         case '46.119.118.152' :
          case '37.115.112.210' :
          case '213.110.133.221' :
          case '178.137.128.238' :

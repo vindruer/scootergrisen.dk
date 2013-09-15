@@ -5,36 +5,36 @@ require_once('./php/opsetning_scooterhjemmeside.php');
 
 if(isset($_GET) && isset($_GET['language'])){
 
-      switch($_GET['language']){
+   switch($_GET['language']){
 
-         case 'da' :
-         case 'da_DK' :
-            $cookieverdi = 'da_DK';
-            break;
+      case 'da' :
+      case 'da_DK' :
+         $cookieverdi = 'da_DK';
+         break;
 
-         case 'en' :
-         case 'en_UK' :
-            $cookieverdi = 'en_UK';
-            break;
+      case 'en' :
+      case 'en_UK' :
+         $cookieverdi = 'en_UK';
+         break;
 
-         case '' :
-            $cookieverdi = ''; // slet cookie
-            break;
+      case '' :
+         $cookieverdi = ''; // slet cookie
+         break;
 
-         default :
-            $cookieverdi = 'en_UK';
-            break;
+      default :
+         $cookieverdi = 'en_UK';
+         break;
 
-      }
+   }
 
-      setcookie($setup['cookienavn_language'], $cookieverdi, 0, "/") || trigger_error("cookie blev ikke sendt");
+   setcookie($setup['cookienavn_language'], $cookieverdi, 0, "/") || trigger_error("cookie blev ikke sendt");
 
-      if(isset($_SERVER['HTTP_REFERER'])){
+   if(isset($_SERVER['HTTP_REFERER'])){
 
-         header("location: " . $_SERVER['HTTP_REFERER']);
-         exit;
+      header("location: " . $_SERVER['HTTP_REFERER']);
+      exit;
 
-      }
+   }
 
 }else{
 
@@ -47,7 +47,7 @@ if(isset($_GET) && isset($_GET['language'])){
 
    <meta charset="utf-8">
    <title>Vælg sprog</title>
-   <meta name="description" content="Brugen til at skifte mellem sprog på hjemmesiden">
+   <meta name="description" content="Bruges til at skifte sprog på hjemmesiden">
 
    <style type="text/css">
 
@@ -63,7 +63,8 @@ if(isset($_GET) && isset($_GET['language'])){
 
 <body>
 
-<h1>Brug "' . $_SERVER['SCRIPT_NAME'] . '?language=XX" til at vælge sprog</h1>
+<h1>Brug "' . basename($_SERVER['SCRIPT_NAME']) . '?language=XX" for at skfite sprog</h1>
+<h1>Use "' . basename($_SERVER['SCRIPT_NAME']) . '?language=XX" to change language</h1>
 
 </body>
 

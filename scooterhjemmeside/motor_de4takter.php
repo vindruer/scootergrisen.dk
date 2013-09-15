@@ -27,7 +27,7 @@ En 4 takt motor med karburator gentager følgende 4 takter igen og igen når den
 '.afsnit('de 4 takter','
 1. Indsugning - Benzin og luft suges ind.
 2. Kompression - Benzin og luft presses sammen.
-3. Forbrænding - Benzin og luft antændes af tændrøret.
+3. Forbrænding - Benzin og luft antændes af gnist fra tændrøret.
 4. Udstødning - Gasserne sendes videre til udstødningen.
 ').'
 '.visbilled('1', 'animation0002.gif', '4 takt motor princip', false, true).'

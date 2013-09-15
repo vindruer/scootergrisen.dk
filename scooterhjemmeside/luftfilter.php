@@ -27,11 +27,11 @@ Her er svampen taget ud.
 '.visbilled('1', 'billed2654.jpg', 'peugeot buxy luftfilterkasse luftfilter element svamp', false, true).'
 
 Her ses et luftfilter med vådt papir element.
-'.visbilled('1', 'billed1525.jpg', 'kymco super 8 luftfilterkasse luftfilter', false, true).'
+'.visbilled('1', 'billed1525.jpg', 'kymco super 8 4T luftfilterkasse luftfilter', false, true).'
 Her ses en splittet luftfilterkasse.
-'.visbilled('1', 'billed0441.jpg', 'kymco super 8 luftfilter splittet tegning', false, true).'
+'.visbilled('1', 'billed0441.jpg', 'kymco super 8 4T luftfilter splittet tegning', false, true).'
 Her ses luftfilterkassens tilslutninger.
-'.visbilled('1', 'billed0009.jpg', 'kymco super 8 luftfiltkassens tilslutninger', false, true).'
+'.visbilled('1', 'billed0009.jpg', 'kymco super 8 4T luftfiltkassens tilslutninger', false, true).'
 
 Luftfilteret kan indeholde et lille separat rum med en svamp.
 Dette lille rum er tilsluttet ventildækslet gennem en slange så krumtaphuset kan ånde så der ikke opstår tryk/vakuum som ville kunne nedsætte motorens ydelse.
@@ -53,21 +53,21 @@ På denne 139FMB motor er der en slange bagerst på motoren så "blow-by gas" ba
 '.galleriholder(array(galleri('highslidestandard', 'billed3023.jpg', 'billed3023.jpg', '139FMB motor'))). '
 Slangen kaldes crankvase breather tube på engelsk.
 
-'.visbilled('1', 'billed1492.jpg', 'kymco super 8 luftfilterkasse', false, true).'
+'.visbilled('1', 'billed1492.jpg', 'kymco super 8 4T luftfilterkasse', false, true).'
 Gennem det lille hul suges dampe fra "blow-by gas" igen ind til karburatoren.
-'.visbilled('1', 'billed1493.jpg', 'kymco super 8 luftfilterkasse', false, true).'
+'.visbilled('1', 'billed1493.jpg', 'kymco super 8 4T luftfilterkasse', false, true).'
 I bunden kan man se lidt olie som er kommet fra slangen på ventildækslet.
-'.visbilled('1', 'billed1494.jpg', 'kymco super 8 luftfilterkasse', false, true).'
+'.visbilled('1', 'billed1494.jpg', 'kymco super 8 4T luftfilterkasse', false, true).'
 
 Her ses drænslange.
 Drænslangen er gennemsigtig så man kan se om der er noget inden i.
 '.visbilled('1', 'billed0482.jpg', 'drænslange fra luftfilter', false, true).'
 
 Den sidste øverste slange på luftfilteret er forbundet med reduktionsgear rummet hvor gearolien er så der ikke opstår tryk eller vakuum i rummet.
-'.visbilled('1', 'billed1489.jpg', 'kymco super 8 udluftningsslange til reduktionsgear', false, true).'
-'.visbilled('1', 'billed3748.jpg', 'kymco super 8 udluftningsslange til reduktionsgear', false, true).'
-'.visbilled('1', 'billed1487.jpg', 'kymco super 8 udluftningsslange til reduktionsgear', false, true).'
-'.visbilled('1', 'billed1488.jpg', 'kymco super 8 hul i luftfilterkasse til udluftningsslange til reduktionsgear', false, true).'
+'.visbilled('1', 'billed1489.jpg', 'kymco super 8 4T udluftningsslange til reduktionsgear', false, true).'
+'.visbilled('1', 'billed3748.jpg', 'kymco super 8 4T udluftningsslange til reduktionsgear', false, true).'
+'.visbilled('1', 'billed1487.jpg', 'kymco super 8 4T udluftningsslange til reduktionsgear', false, true).'
+'.visbilled('1', 'billed1488.jpg', 'kymco super 8 4T hul i luftfilterkasse til udluftningsslange til reduktionsgear', false, true).'
 
 På indsugningskanalen mellem luftfilterkassen og karburatoren kan der sidde en prop.
 Jeg tror det er meningen at man så kan måle lufthastigheden eller på anden måde måle luften i forbindelse med at måle udstødningsgasserne for at finde ud af om forbrændingen foregår optimalt.

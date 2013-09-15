@@ -1097,12 +1097,16 @@ $databaseright = array(
 
 'download' => array(
     'diverse dyser til Piaggio, Gilera og Vespa'   => 'dyser_piaggio_gilera_vespa.png'
+   ,'DNA reservedele'                              => 'gilera_dna_reservedele.pdf'
    ,'ICE brugermanual (finsk)'                     => 'gilera_ice_brugermanual.pdf'
    ,'RCR SMT brugermanual (finsk)'                 => 'gilera_rcr_smt_brugermanual.pdf'
+   ,'RCR reservedele'                              => 'gilera_rcr_reservedele.pdf'
+   ,'SMT reservedele'                              => 'gilera_smt_reservedele.pdf'
    ,'runner Purejet brugermanual'                  => 'gilera_runner_purejet_brugermanual.pdf'
    ,'runner servicemanual tysk'                    => 'gilera_runner_servicemanual_tysk.pdf'
    ,'runner SP brugermanual (finsk)'               => 'gilera_runner_sp_brugermanual.pdf'
    ,'runner SP (ZAPC461) reservedele'              => 'gilera_runner_sp_zapc461_reservedele.pdf'
+   ,'runner reservedele'                           => 'gilera_runner_reservedele.zip'
    ,'stalker brugermanual'                         => 'gilera_stalker_brugermanual.pdf'
 
 ),'typegodkendelser' => array(

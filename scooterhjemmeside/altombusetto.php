@@ -169,7 +169,7 @@ $databaseright = array(
     'ZQTD-388-2 25 km/t E18267 (e4*2002/24*2531)'         => 'typegodkendelser/Busetto%20ZQTD-388-2%20%28E18267%29%20udstedt%2002-06-2010.pdf'
    ,'ZQTD-388-2 45 km/t E18266 (e4*2002/24*2531)'         => 'typegodkendelser/Busetto%20ZQTD-388-2%20%28E18266%29%20udstedt%2002-06-2010.pdf'
 
-)                      
+)
 
 );
 

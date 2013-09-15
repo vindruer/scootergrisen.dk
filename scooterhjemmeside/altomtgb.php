@@ -728,7 +728,7 @@ $databasecenter = array(
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
    ),'motor'               => array(
-       'motormodel'        => ens('motormodel', '', '', '', '')
+       'motormodel'        => ens('motormodel', 'GH5', '', '', '')
       ,'motortype'         => ens('motortype', '2 takt', '', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
       ,'volume'            => ens('volume', '49', '', '', '')
@@ -761,10 +761,10 @@ $databasecenter = array(
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '', '', '', '')
-      ,'fælgbag'           => ens('fælg', '', '', '', '')
-      ,'dækfor'            => ens('dæk1', '130', '60', '13', '')
-      ,'dækbag'            => ens('dæk1', '130', '60', '13', '')
+       'fælgfor'           => ens('fælg', '3.00', '13', '', '') . ' eller ' . ens('fælg', '3.00', '12', '', '')
+      ,'fælgbag'           => ens('fælg', '3.00', '13', '', '') . ' eller ' . ens('fælg', '3.00', '12', '', '')
+      ,'dækfor'            => ens('dæk1', '130', '60', '13', '') . ' eller ' . ens('dæk1', '120', '70', '12', '')
+      ,'dækbag'            => ens('dæk1', '130', '60', '13', '') . ' eller ' . ens('dæk1', '120', '70', '12', '')
       ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
       ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
       ,'affjedringfor'     => ens('affjedringfor', '', '', '', '')
@@ -820,7 +820,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', '', '', '', '')
+      ,'stelnummer'        => ens('stelnummer', 'RFC', '', '', '')
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '95', '', '', '')
@@ -834,12 +834,12 @@ $databasecenter = array(
       ,'støj'              => ens('støj', '', '', '', '')
       ,'bagagevolume'      => ens('bagagevolume', '', '', '', '')
       ,'bakgear'           => ens('bakgear', '', '', '', '')
-      ,'importør'          => ens('importør', '', '', '', '')
+      ,'importør'          => ens('importør', 'C. Reinhardt A/S', '', '', '')
       ,'producent'         => ens('producent', '', '', '', '')
       ,'andet'             => ens('andet', '', '', '', '')
 
    ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+       'begrænstransmis'   => ens('begrænstransmis', '', '7,7 mm bøsnig Ml. forr. variatorhalvdele', '', '')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
@@ -847,7 +847,7 @@ $databasecenter = array(
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
       ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
-      ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
+      ,'begrænsstelnum'    => ens('begrænsstelnum', '', 'Tegn nr. 7 er "3" og angiver den maksimale hastighed til 30 km/t.', '', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 
    )
@@ -1056,6 +1056,8 @@ $databaseright = array(
    ,'Trigger (XL9___M01__310) (2 takt motor : TGB GA5) 45 km/t E11697 (e4*92/61*0096)'       => 'typegodkendelser/Trigger%2050%20%28E11697%29%20udstedt%2029-11-2001.pdf'
 
    //,'Sættevogn ? det er vist en fejl'         => 'typegodkendelser/TGB%20101R%20%28E16892%29%20udstedt%2004-02-2008.pdf'
+
+   ,'TGB (bullet ?) BM1 30 km/t E19895 (e4*2002/24*0421)'            => 'typegodkendelser/TGB%20-%20%28E19895%29%20udstedt%2002-08-2012.pdf'
 
 )
 

@@ -33,15 +33,9 @@ if(file_exists($filtodo)){
 $databasecenter = array(
 
 '
-todo.txt
-' => '
-'.$todokode.'
-'
-
-,'
 målsætning
 ' => '
-'.afsnit('1000 besøg per dag','
+'.afsnit('1000 besøg i gennemsnit per dag på chart.dk','
 Kunne godt tænke mig at kommer op på 1000 besøg om dagen på '.ahref('http://chart.dk/', 'chart.dk').' hvor det er tager som gennemsnittet af en uge.
 Bare for at det kunne da være sjov.
 ').'
@@ -53,23 +47,34 @@ Lav konkurrence hvor man kan vinde Haynes 4768 eller en batterioplader eller nog
 ,'
 brugerne skriver der mangler...
 ' => '
-'.citat('starterrelæ honda vision 1998').'
-'.citat('baghjulslør udskiftning af leje').'
-'.citat('adresse til fabrikksalg fra india og kina.').'
-'.citat('sideskjold').'
-'.citat('moment for at spænne topstykke og knæstterne efter udskriftning af vintiller').'
-'.citat('I mangler noget om honda melody mini :)').'
+'
+.citat('scooter Lifan 300, brukarmanual etc')
+.citat('starterrelæ honda vision 1998')
+.citat('baghjulslør udskiftning af leje')
+.citat('adresse til fabrikksalg fra india og kina.')
+.citat('sideskjold')
+.citat('moment for at spænne topstykke og knæstterne efter udskriftning af vintiller')
+.citat('I mangler noget om honda melody mini :)')
+.'
 '
 
 ,'
 brugerne vil gerne have info om...
 ' => '
-yamaha neos 4t begrænsniger
-kan ikke finde diagram og tændings indstilling af pgo comet årg 05
-info om indsugnings forstærkere :)
-2 takt
-skjolde
-tuning
+'
+.citat('yamaha neos 4t begrænsniger')
+.citat('kan ikke finde diagram og tændings indstilling af pgo comet årg 05')
+.citat('info om indsugnings forstærkere :)')
+.citat('2 takt')
+.citat('skjolde')
+.citat('tuning')
+.'
+'
+
+,'
+todo.txt
+' => '
+'.$todokode.'
 '
 
 );

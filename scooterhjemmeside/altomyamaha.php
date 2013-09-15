@@ -857,15 +857,15 @@ $databasecenter = array(
    ),'generelt'            => array(
        'model'             => ens('model', 'yamaha jog', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
-      ,'scootertype'       => ens('scootertype', 'SC50', 'SC50M', '', '')
-      ,'varianter'         => ens('varianter', '', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'SC50', 'SC50M', 'SA48', '')
+      ,'varianter'         => ens('varianter', 'yamaha jog', 'yamaha jog r', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
       ,'hastighed'         => ens('hastighed', '', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
    ),'motor'               => array(
-       'motormodel'        => ens('motormodel', '', '', '', '')
+       'motormodel'        => ens('motormodel', 'A132E (SA48)', '', '', '')
       ,'motortype'         => ens('motortype', '2 takt', '', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
       ,'volume'            => ens('volume', '', '', '', '')
@@ -879,7 +879,7 @@ $databasecenter = array(
       ,'nomieffektogheste' => ens('nomieffektogheste', '', '', '', '')
       ,'maxeffektogheste'  => ens('maxeffektogheste', '', '', '', '')
       ,'moment'            => ens('moment', '', '', '', '')
-      ,'karburator'        => ens('karburator', '', '', '', '')
+      ,'karburator'        => ens('karburator', 'PY12', '', '', '')
       ,'brændstof indsp..' => ens('brændstof indsp..', '', '', '', '')
       ,'smøring'           => ens('smøring', '', '', '', '')
       ,'tændrør'           => ens('tændrør', '', '', '', '')
@@ -898,10 +898,10 @@ $databasecenter = array(
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '', '', '', '')
-      ,'fælgbag'           => ens('fælg', '', '', '', '')
-      ,'dækfor'            => ens('dæk1', '', '', '', '')
-      ,'dækbag'            => ens('dæk1', '', '', '', '')
+       'fælgfor'           => ens('fælg', '2.75', '12', '', '')
+      ,'fælgbag'           => ens('fælg', '3.00', '12', '', '')
+      ,'dækfor'            => ens('dæk1', '110', '70', '12', '')
+      ,'dækbag'            => ens('dæk1', '130', '70', '12', '')
       ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
       ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
       ,'affjedringfor'     => ens('affjedringfor', '', '', '', '')
@@ -957,7 +957,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'VTLSA22E000001', '', '', '')
+      ,'stelnummer'        => ens('stelnummer', 'VTLSA22E000001', 'VG5', '', '')
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '', '', '', '')
@@ -971,12 +971,12 @@ $databasecenter = array(
       ,'støj'              => ens('støj', '', '', '', '')
       ,'bagagevolume'      => ens('bagagevolume', '', '', '', '')
       ,'bakgear'           => ens('bakgear', '', '', '', '')
-      ,'importør'          => ens('importør', '', '', '', '')
+      ,'importør'          => ens('importør', 'Yamaha Motor Scandinavia AB', '', '', '')
       ,'producent'         => ens('producent', '', '', '', '')
       ,'andet'             => ens('andet', '', '', '', '')
 
    ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+       'begrænstransmis'   => ens('begrænstransmis', '', '', 'Bøsning Ml. forr. remskivedele', '')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
@@ -1696,8 +1696,10 @@ $databaseright = array(
 
 'download' => array(
     'Aerox (YQ50 / YQ50L) brugermanual'                  => 'yamaha_aerox_brugermanual.pdf'
+   ,'Aerox (YQ50 \'97) servicemanual'                    => 'yamaha_aerox_servicemanual.pdf'
    ,'BWS (CW50RS) brugermanual'                          => 'yamaha_bws_brugermanual.pdf'
    ,'BWS naked 12 R (CW50 / CW50L / CW50N) brugermanual' => 'yamaha_bws_naked_brugermanual.pdf'
+   ,'BWS (YW50AP) servicemanual'                         => 'yamaha_bws_servicemanual.pdf'
    ,'Crypton (T105E/SE) brugermanual'                    => 'yamaha_crypton_brugermanual.pdf'
    ,'EC-03 brugermanual'                                 => 'yamaha_ec03_brugermanual.pdf'
    ,'Giggle (XF50E) brugermanual'                        => 'yamaha_giggle_brugermanual.pdf'
@@ -1763,6 +1765,8 @@ $databaseright = array(
    ,'WHY SA03 45 km/t A9843'                => 'typegodkendelser/Yamaha%20WHY%20%28A9843%29%20udstedt%2004-05-1999.pdf'
 
    //tom ,'16 km/t A9156'                => 'typegodkendelser/Yamaha%20TZR50%20%28A9156%29%20udstedt%2014-05-1998.pdf'
+
+   ,'Yamaha (måske Jog R ?) CS50 SA48 45 km/t E19894 (e13*2002/24*0576)'            => 'typegodkendelser/Yamaha%20CS50%20%28E19894%29%20udstedt%2002-08-2012.pdf'
 
 )
 

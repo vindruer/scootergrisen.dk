@@ -15,7 +15,7 @@ $databasecenter = array(
 'piaggioape' => array(
 
      'specielt'            => array(
-       'besked'            => ens('besked', 'Fra Januar 2012 kan denne model også fås som lille knallert (det vil sige enten 25 eller 30 km/t).', 'Som lille knallert skal den ikke have nummerplade da den har 3 hjul og bruges som invalideknallert så man vil nok ikke se dem med gul nummerplade', ''.kontaktmig(1).' gerne hvis du kan fortælle hvordan det er at køre på cykelstier med denne model eller har billeder af det.', 'dataen er lidt rodet for denne model da der er mange udgaver og størrelser og sådan. '.kontaktmig(1).' gerne hvis du kan hjælpe med at gøre dataen mere præcis.<br><br>Her er nogen links til sider om Ape : '.ahref('http://trehjul.dk/', 'trehjul.dk').', '.ahref('http://ape50.dk/', 'ape50.dk').'<br><br>I følge '.ahref('http://buchberg-mc.dk/butikken/produkter/piaggio-ape', 'buchberg-mc.dk').' findes Ape ikke som 30 km/t (men som 25 km/t)')
+       'besked'            => ens('besked', 'Fra Januar 2012 kan denne model også fås som lille knallert (det vil sige enten 25 eller 30 km/t).', 'Som lille knallert skal den ikke have nummerplade da den har 3 hjul og bruges som invalideknallert så man vil nok ikke se dem med gul nummerplade', ''.kontaktmig(1).' gerne hvis du kan fortælle hvordan det er at køre på cykelstier med denne model eller har billeder af det.', 'dataen er lidt rodet for denne model da der er mange udgaver og størrelser og sådan. '.kontaktmig(1).' gerne hvis du kan hjælpe med at gøre dataen mere præcis.<br><br>Her er nogen links til sider om Ape : '.ahref('http://trehjul.dk/', 'trehjul.dk').', '.ahref('http://ape50.dk/', 'ape50.dk').'<br><br>I følge '.ahref('http://buchberg-mc.dk/butikken/produkter/piaggio-ape', 'buchberg-mc.dk').' findes Ape ikke som 30 km/t (men som 25 km/t)<br>'.ahref('http://ape50.dk/index.php/ofte-stillede-sporgsmal.html', 'Ofte stillede spørgsmål').'')
 
    ),'generelt'            => array(
        'model'             => ens('model', 'piaggio ape', '', '', '')
@@ -1561,6 +1561,13 @@ $databaseright = array(
    ,'New Zip C25 2T C251M / 4T C252M / 2T (euro 2) C259M 45 km/t E10648 (e3*92/61*0020)'       => 'typegodkendelser/Piaggio%20New%20Zip%20%28E10648%29%20udstedt%2019-06-2000.pdf'
 
    //tom   ,'km/t E ()'       => 'typegodkendelser/Piaggio%20NRG%20%28A9207%29%20udstedt%2015-06-1998.pdf'
+
+   ,'Piaggio C42 Liberty / Liberty S 45 km/t E15940 (e11*2002/24*0107)'            => 'typegodkendelser/Piaggio%20%20%28E15940%29%20udstedt%2016-11-2006.pdf'
+//Liberty (ZAPC421) C421M 5,5 mm bøsning Forreste variator
+//Liberty S (ZAPC42405) C426M 6,0 mm bøsning forreste variator
+//Liberty S (ZAPC42501) C426M 6,0 mm bøsning forreste variator
+//Tegn nummer 7 i stelnummeret er 1, 2, 4 eller 5 og angiver den maksimale hastighed = 45 km/t.
+//PHV17,5
 
 )
 

@@ -8,7 +8,7 @@ $setup['nogetikon']               = 'ikoner/ikon_vinchecker.png';
 
 $title = "VIN checker";
 $overskrift = "VIN checker";
-$metadescription = "check et 17 cifret stelnummer fra en scooter og se om du kan få nogen oplysninger ud af det som årgang, mærke og model";
+$metadescription = "indtast et 17 cifret stelnummer fra en scooter/knallert og se om du kan få oplysninger som procudent, årgang, mærke og model";
 
 $GLOBALS['setup']['head'] = '
 <style type="text/css">
@@ -588,7 +588,7 @@ function visvinidatabase($visantalsogninger){
    
          $indhold .= ''
             . '<div style="text-align: center; background: #222; color: #ddd; padding: 10px;" class="fontsize_medium bold">'
-            . 'Seneste '.$visantalsogninger.' søgninger som brugerne har gemt'
+            . 'Seneste '.$visantalsogninger.' søgninger'
             . '</div>'
 
             . '<table class="tablesorter">'
@@ -664,15 +664,17 @@ PRIMARY KEY (`id`)
          $stmtd->bind_param('sss', $vin, $kommentartilvin, $tid);
          $stmtd->execute();
 
-         if($stmtd->affected_rows == -1){
+         if($stmtd->affected_rows != -1){
+
+            //$indhold .= '<div>Ser ud til søgningen blev gemt i databasen</div>';
+
+         }else{
 
             trigger_error('Fejl ! Ser ud til der gik noget galt ved forsøg på adgang til database');
 
          }
 
          $stmtd->close();
-
-         $indhold .= '<div>Ser ud til søgningen blev gemt i databasen</div>';
 
       }else{
       
@@ -701,7 +703,7 @@ function vincheckdigitchecker(){
 
    $vinliste = array(
        'LT50QT-29' => 'LLMTCB2954L053104' // LT50QT-29
-      ,'Kymco Super 8, 50 ccm, 30 km/t' => 'LC2U7010072600558'
+      ,'Kymco Super 8 4T, 50 ccm, 30 km/t' => 'LC2U7010072600558'
       ,'VGA Digita' => 'L4HDEBBP8B6000746'
       ,'Keeway Hurricane' => 'TSYTAB2'
       ,'Keeway Focus 45 km/t' => 'TSYTABMP16C'
@@ -766,8 +768,8 @@ var_dump($vin);
        'Velkommen til den meget experimentale knap-så-fantastiske VIN Checker.'
       . "\r\n" . "\r\n"
       .'Her kan du <span style="text-decoration: underline;">måske</span> få information om en scooter/knallert ud fra det <span class="bold">17 cifret stelnummer</span> (kaldet VIN) som findes på nyere modeller.' . "\r\n" . "\r\n"
-      .'Se eventuelt også ' . ahref('registrering.php#stelnummer', 'Registrering#stelnummer') . "\r\n" . "\r\n"
-      .'Hvis du har et stelnummer fra en gammel knallert som ikke er på 17 tegn så kan du ikke bruge det her.' . "\r\n"
+      .'Hvis du har et stelnummer fra en gammel knallert som ikke er på 17 tegn så kan du ikke bruge det her.' . "\r\n" . "\r\n"
+      .'Se eventuelt også ' . ahref('registrering.php#stelnummer', 'Registrering#stelnummer') . "\r\n"
    );
 
    $indhold .= lidtplads('lodret');
@@ -814,8 +816,8 @@ var_dump($vin);
    $indhold .= ''
       . formbox('1', '', 'VIN checker', $_SERVER['PHP_SELF'], 'post', '', ''
          . input('0', 'hidden', 'funktion', 'vincheckdigitchecker')
-         . input('1', 'text', 'vin', $vin, '33', 'Indtast scooterens VIN (17 tegn)', 'fejl_sogetekst', '', 'list="vinliste" title="Skriv et VIN (stelnummer) på 17 tegn og brug kun tegnene 0-9 og a-z eller A-Z."', '', '20')
-         . input('1', 'text', 'kommentartilvin', $kommentartilvin, '33', 'eventuelt kommentar', 'fejl_kommentartilvin', '', 'title="Skriv eventuelt til kommentar som for eksempel hvis du ved noget om hvad scooter stelnummeret passer til så jeg kan forbedre VIN checkeren"', '', '')
+         . input('1', 'text', 'vin', $vin, '33', 'Indtast scooter/knallert VIN (17 tegn)', 'fejl_sogetekst', '', 'list="vinliste" title="Skriv et VIN (stelnummer) på 17 tegn og brug kun tegnene 0-9 og a-z eller A-Z."', '', '20')
+         . input('1', 'text', 'kommentartilvin', $kommentartilvin, '33', 'skriv eventuelt en kommentar', 'fejl_kommentartilvin', '', 'title="Skriv eventuelt til kommentar som for eksempel hvis du ved noget om hvad scooter stelnummeret passer til så jeg kan forbedre VIN checkeren"', '', '')
          // placeholder="" pattern="[0-9a-zA-Z]{17}"
          . $dataliste
          . input('1', 'checkbox', 'skalgrisenbliveklogere', '', '', 'Gem til scootergrisen', 'blablablacheckbox', '', $sidstetilstand)
@@ -908,7 +910,7 @@ var_dump($vin);
 
 
             $indhold .= 'Antal tegn : ' . vinlengde($vinarray) . '<br>';
-            $indhold .= 'Tegn (a-zA-Z0-9) : ' . fasdasdfafasdfdaf($vin) . '<br>';
+            $indhold .= 'Tegn ([a-z][A-Z][0-9]) : ' . fasdasdfafasdfdaf($vin) . '<br>';
 
             if(count($vinarray) == 17){
 
@@ -1000,10 +1002,7 @@ var_dump($vin);
          if(count($vinarray) == 17){
          if(isset($vinarray[8])){
 
-            $indhold .= '<div style="background: #6cc; padding: 0; border: 1px outset #6aa;" class="borderradius5px">';
-            $indhold .= '<div style="background: #6cc; padding: 0; border: 2px inset #6cc;" class="borderradius5px">';
-            $indhold .= '<div style="background: #6cc; padding: 0; border: 3px dashed #6bb;" class="borderradius5px">';
-            $indhold .= '<div style="background: #6cc; padding: 0; border: 2px dashed #6aa;" class="borderradius5px">';
+            $indhold .= '<div style="background: #6cc; padding: 0; border: 2px dashed #6aa; padding: 1em;" class="borderradius5px">';
             $indhold .= '<h3 style="margin: auto; text-align: center;">Test af kontroltegn (tegn nummer 9 i VIN) for at se om VIN er gyldigt</h3>';
             $indhold .= '<h5 style="margin: auto; text-align: center;">...af en eller anden grund validere mange VIN ikke selvom de er rigtige...</h5>';
             $indhold .= '<br>';
@@ -1138,9 +1137,6 @@ var_dump($vin);
 
             }
 
-            $indhold .= '</div>';
-            $indhold .= '</div>';
-            $indhold .= '</div>';
             $indhold .= '</div>';
 
          }else{
@@ -1983,7 +1979,7 @@ C = Changzhou city, ROC
          $nogetandet = array(
             array(
                 array('kymco agility', '', 'Tegn 8 og 9 i stelnummeret er 30 el. 60 og angiver den maksimale hastighed = 30 km/t', '', '')
-               ,array('kymco super 8', '', 'Tegn 7 er 1 og angiver den maksimale hastighed = 30 km/t.<br>Tegn 7 er "1" / "4" og angiver den maksimale hastighed = 30 km/t.', 'Tegn 7 er "0" / "3" og angiver den maksimale hastighed = 45 km/t.<br>Tegn 8 og 9 er "0" og angiver den maksimale hastighed = 45 km/t.', '')
+               ,array('kymco super 8 4T', '', 'Tegn 7 er 1 og angiver den maksimale hastighed = 30 km/t.<br>Tegn 7 er "1" / "4" og angiver den maksimale hastighed = 30 km/t.', 'Tegn 7 er "0" / "3" og angiver den maksimale hastighed = 45 km/t.<br>Tegn 8 og 9 er "0" og angiver den maksimale hastighed = 45 km/t.', '')
             )
          );
          break;
@@ -3809,7 +3805,7 @@ H = ?
    $indhold .= '<br>';
    $indhold .= '<table class="vincheckerekstrainformation borderradius5px">';
 
-   $indhold .= '<tr><td style="text-align: left;">' . 'Tegn nummer' . '</td><td style="text-align: left;">' . 'Betydning' . '</td><td style="text-align: left;">' . 'Eksempel' . '</td></tr>';
+   $indhold .= '<tr><th style="text-align: left;">' . 'Tegn nummer' . '</th><th style="text-align: left;">' . 'Betydning' . '</th><th style="text-align: left;">' . 'Eksempel' . '</th></tr>';
 
    foreach($valuea as $valueb){
 
@@ -4048,7 +4044,7 @@ function behandlvin($data){
          // muligvis problem med æøå
          $lande_regex = ''
          // afrika
-         . '(?P<sydamerika>a[a-h])' // skal det være sydafrika ?
+         . '(?P<sydafrika>a[a-h])'
          . '|(?P<iverykysten>a[j-n])'
          . '|(?P<angola>b[a-e])'
          . '|(?P<kenya>b[f-k])'
@@ -5110,14 +5106,15 @@ L4S
 ,'
 links til andre VIN checkere og andet info
 ' => '
-'.ahref('https://motorregister.skat.dk/dmr-front/appmanager/skat/dmr?_nfpb=true&_nfpb=true&_pageLabel=vis_koeretoej_side&_nfls=false', 'motorregister.skat.dk').'
-'.ahref('http://nummerplade.billigbilpleje.dk/', 'nummerplade.billigbilpleje.dk').'
-'.ahref('http://selvbetjening.trafikstyrelsen.dk/', 'selvbetjening.trafikstyrelsen.dk').' (ved nogle kan man se synsrapporter (nok kun 45 km/t))
-'.ahref('http://www.analogx.com/contents/vinview.htm', 'VIN View /// AnalogX').'
-'.ahref('http://www.fstyr.biltorvet.dk/WebForm1.aspx', 'fstyr.biltorvet.dk').' (her finder jeg typegodkendelser)
-'.ahref('http://www.nummerplade.net/', 'nummerplade.net').'
-'.ahref('http://www.nrpl.dk/', 'nrpl.dk').'
-'.ahref('ftp://ftp.nhtsa.dot.gov/mfrmail/', 'ftp.nhtsa.dot.gov').'
+'.ahref('https://motorregister.skat.dk/dmr-front/appmanager/skat/dmr?_nfpb=true&_nfpb=true&_pageLabel=vis_koeretoej_side&_nfls=false', 'motorregister.skat.dk').' (søg på både nummerplade og stelnummer)
+'.ahref('http://selvbetjening.trafikstyrelsen.dk/', 'selvbetjening.trafikstyrelsen.dk').' (søg på både nummerplade og stelnummer) (ved nogle kan man se synsrapporter (nok kun 45 km/t))
+'.ahref('http://www.fstyr.biltorvet.dk/WebForm1.aspx', 'fstyr.biltorvet.dk').' (find typegodkendelser ud fra stelnummer, finder dog sjældent noget)
+
+'.ahref('http://www.nummerplade.net/', 'nummerplade.net').' (søg på både nummerplade og stelnummer)
+'.ahref('http://nummerplade.billigbilpleje.dk/', 'nummerplade.billigbilpleje.dk').' (søg på nummerplade)
+
+'.ahref('http://www.analogx.com/contents/vinview.htm', 'AnalogX VIN View').' (VIN checker)
+'.ahref('http://www.nrpl.dk/', 'nrpl.dk').' ("Privat website om danske nummerplader og deres historie")
 '
 
 ,'
@@ -5126,11 +5123,16 @@ data
 Data i VIN checkeren stammer fra diverse filer, programmer, '.ahref('typegodkendelser.php', 'typegodkendelser').' og de VIN som brugerne har indsendt her på siden.
 
 Her er nogen af de filer jeg har hentet info fra til VIN checkeren.
-'.visfil('1', 'scooterhjemmeside/download/vindecoding.zip').'
+
+'
+.visfil('1', 'scooterhjemmeside/download/vindecoding.zip')
+.visfil('1', 'scooterhjemmeside/download/piaggio_catalogue_of_spare_parts.zip')
+.'
+'.ahref('ftp://ftp.nhtsa.dot.gov/mfrmail/', 'ftp.nhtsa.dot.gov').' (her har jeg fundet en del info om at dekode stelnumre)
 '
 
 ,'
-gemte VIN
+VIN søgninger
 ' => '
 '.visvinidatabase(30).'
 '

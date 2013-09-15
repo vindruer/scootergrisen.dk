@@ -3,8 +3,161 @@
 $data = array(
 
 '
-tirsdag den 13. August 2013
+søndag den 15. September 2013
 ' => '
+Scootergrisen har fået en '.ahref('https://www.facebook.com/scootergrisen', 'fan-side på facebook').'.
+Den er ikke lavet af mig men fan-siden kan hjælpe med at udsprede kendskabet til hjemmesiden så endnu flere kan få glæde af indholdet.
+
+På det sidste har jeg lavet nogen '.ahref('http://www.youtube.com/user/scootergrisen/videos', 'videoer på youtube').' hvor jeg køre rundt forskellige steder på scooter.
+Se for eksempel '.ahref('http://www.youtube.com/watch?v=G1FQhKEYty8', 'turen over storestrømsbroen på scooter').'.
+
+Jeg har lavet om på menuen øverst på hjemmesiden.
+Alle typer køretøjer er nu flyttet i Køretøjer (scootermærker) menuen.
+Værkstedet (service) menuen skal fremover indeholde alle de ting der har med servicering af scooteren af gøre, værktøj, olie, elektrisk arbejde, osv.
+Dokumenter menuen indeholder Manualer, el diagrammer, reservedele, osv (download) og typegodkendelser.
+Billeder fra gaden er lagt ind på billeder siden (kan findes i underholdning menuen).
+
+Nye køretøjer :
+'.ahref('altomkymco.php#kymcosuper82t', 'Kymco Super 8 2T').'.
+
+Nye sider :
+'.ahref('nummerplade.php', 'Nummerplade billede generator').' kan lave et billede som ligner en nummerplade til en lille knallert eller stor knallert.
+Du kan for eksempel bruge billedet som avatar i forummet.
+
+Nye Manualer, el diagrammer, reservedele, osv :
+'.ahref('download/kymco_vitality_servicemanual.pdf', 'kymco_vitality_servicemanual.pdf').'
+'.ahref('download/kymco_super8_2t_servicemanual.pdf', 'kymco_super8_2t_servicemanual.pdf').'
+'.ahref('download/vespa_lx_2t_servicemanual.pdf', 'vespa_lx_2t_servicemanual.pdf').'
+'.ahref('download/peugeot_workshop_manual_50_cc_engine_horizontal_cylinder_i_a_e_exhaust_air_injection.pdf', 'peugeot_workshop_manual_50_cc_engine_horizontal_cylinder_i_a_e_exhaust_air_injection.pdf').'
+'.ahref('download/peugeot_workshop_manual_50_cc_engine_horizontal_liquid-cooled_cylinder.pdf', 'peugeot_workshop_manual_50_cc_engine_horizontal_liquid-cooled_cylinder.pdf').'
+'.ahref('download/yamaha_aerox_servicemanual.pdf', 'yamaha_aerox_servicemanual.pdf').'
+'.ahref('download/yamaha_bws_servicemanual.pdf', 'yamaha_bws_servicemanual.pdf').'
+
+Jeg har gennemsøgt '.ahref('http://www.fstyr.biltorvet.dk/WebForm1.aspx', 'færdselsstyrelsens typegodkendelser').' måned for måned og fundet en masse typegodkendelser jeg ikke tidligere har kunne finde.
+
+Nye typegodkendelser :
+'.ahref('download/typegodkendelser/AGM%20-%20%28E18202%29%20udstedt%2017-05-2010.pdf', 'AGM Vintage KF50 45 km/t E18202 (e11*2002/24*0913)').'
+'.ahref('download/typegodkendelser/AGM%20-%20%28E18203%29%20udstedt%2017-05-2010.pdf', 'AGM Vintage KF50 25 km/t E18203 (e11*2002/24*0913)').'
+'.ahref('download/typegodkendelser/Aprilia%20-%20%28E15586%29%20udstedt%2027-06-2006.pdf', 'Aprilia SX50 / RX50 PV D50B 45 km/t 15586 (e11*2002/24*0441)').'
+'.ahref('download/typegodkendelser/Aprilia%20-%20%28E16301%29%20udstedt%2029-03-2007.pdf', 'Aprilia SX50 / RX50 PV D50C2 30 km/t 16301 (e11*2002/24*0441)').'
+'.ahref('download/typegodkendelser/Aprilia%20-%20%28E18241%29%20udstedt%2028-05-2010.pdf', 'Aprilia SX50 (B) / RX50 (E) PV 30 km/t E18241 (e11*2002/24*0441)').'
+'.ahref('download/typegodkendelser/Aprilia%20-%20%28E18245%29%20udstedt%2028-05-2010.pdf', 'Aprilia SX50 (0) / RX50 (A) PV 45 km/t E18245 (e11*2002/24*0441)').'
+'.ahref('download/typegodkendelser/Aprilia%20Area%2051%20%28S9265%29%20udstedt%2008-07-1998.pdf', 'Aprilia Area 51 MY (AO) 44 km/t S9265').'
+'.ahref('download/typegodkendelser/Aprilia%20Classic%2050%20%28S9712%29%20udstedt%2022-03-1999.pdf', 'Aprilia Classic 50 LP (vandkølet) 45 km/t S9712').'
+'.ahref('download/typegodkendelser/Aprilia%20Rally%20%28E12680%29%20udstedt%2021-05-2003.pdf', 'Aprilia Rally TM 45 km/t E12680 (e11*92/61*0084)').'
+'.ahref('download/typegodkendelser/Aprilia%20Rally%2050%20%28E15472%29%20udstedt%2001-06-2006.pdf', 'Aprilia Rally 50 TM A/00 / B/00 25 og 30 km/t (e11*62/61*0084)').'
+'.ahref('download/typegodkendelser/Aprilia%20Rally%20LC%20%28S9133%29%20udstedt%2006-05-1998.pdf', 'Aprilia Rally LC MD 45 km/t S9133').'
+'.ahref('download/typegodkendelser/Aprilia%20RX%2050%20%28E12016%29%20udstedt%2027-05-2002.pdf', 'Aprilia RX 50 ST 45 km/t E12016 (e11*2000/7*00044)').'
+'.ahref('download/typegodkendelser/Aprilia%20Sportcity%2050%20%28E17641%29%20udstedt%2018-05-2009.pdf', 'Aprilia Sportcity 50 SB (A/00 - 2t) 45 km/t E17641 (e11*2002/24*0666)').'
+'.ahref('download/typegodkendelser/BAOTIAN%20%20%28E16873%29%20udstedt%2022-01-2008.pdf', 'Baotian BT49QT-9d30 30 km/t E16873 (e4*2002/24*1398)').'
+'.ahref('download/typegodkendelser/BAOTIAN%20-%20%28E16717%29%20udstedt%2019-11-2007.pdf', 'Baotian BT49QT-9 BT49QT-9S BT49QT-9D30 BT49QT-9R3 BT49QT-903 9F3 30 km/t E16717 (e4*2002/24*1398)').'
+'.ahref('download/typegodkendelser/Baotian%20BT49QT%20%28E19116%29%20udstedt%2023-05-2011.pdf', 'Baotian BT49QT 11A 25 km/t E19116 (e4*2002/24*1424)').'
+'.ahref('download/typegodkendelser/Baotian%20BT49QT%20%28E19117%29%20udstedt%2023-05-2011.pdf', 'Baotian BT49QT 20C Diablo 25 km/t E19117 (e4*2002/24*1824)').'
+'.ahref('download/typegodkendelser/Baotian%20BT49QT%20%28E19118%29%20udstedt%2023-05-2011.pdf', 'Baotian BT49QT 20C 25 km/t E19118 (e4*2002/24*1824)').'
+'.ahref('download/typegodkendelser/Baotian%20BT49QT%20%28E19119%29%20udstedt%2023-05-2011.pdf', 'Baotian BT49QT 11A 25 km/t E19119 (e4*2002/24*1424)').'
+'.ahref('download/typegodkendelser/Baotian%20Retro%20%28E18182%29%20udstedt%2023-04-2010.pdf', 'Baotian BT49QT-11da Retro 30 km/t E18182 (e4*2002/24*1010)').'
+'.ahref('download/typegodkendelser/Baoxin%20TWS%20Scooty%20%28S8194%29%20udstedt%2020-03-1997.pdf', 'Baoxin TWS Scooty BX 45 km/t S8194').'
+'.ahref('download/typegodkendelser/Batioan%20-%20%28E16626%29%20udstedt%2018-10-2007.pdf', 'Batioan QT50-12D30 30 km/t E16626 (e4*2002/24*1397)').'
+'.ahref('download/typegodkendelser/Benzhou%20YY50QT-A%20%28E15543%29%20udstedt%2014-06-2006.pdf', 'Benzhou YY50QT-A (måske Yiying sampra ?) 25 km/t E15543 (e4*2002/24*1090)').'
+'.ahref('download/typegodkendelser/Black%60n%20Roll%20S4800D%20%28E15545%29%20udstedt%2015-06-2006.pdf', 'Black`n Roll S4800D km/t E15545 (e2*2002/24*0014)').'
+'.ahref('download/typegodkendelser/Branson%20BS49%20%28E12244%29%20udstedt%2007-10-2002.pdf', 'Branson BS49 45 km/t E12244 (e4*92/61*0144)').'
+'.ahref('download/typegodkendelser/Cagiva%20Cucciolo%20%28A9790%29%20udstedt%2026-03-1999.pdf', 'Cagiva Cucciolo P3 45 km/t A9790').'
+'.ahref('download/typegodkendelser/Chun%20Lan%20-%20%28S9891%29%20udstedt%2010-06-1999.pdf', 'Chun Lan CL50KT 45 km/t S9891').'
+'.ahref('download/typegodkendelser/Chunlan%20Starway%20%28E10592%29%20udstedt%2016-05-2000.pdf', 'Chun Lan Starway CL50QT 45 km/t E10592 (e4*92/61*0015)').'
+'.ahref('download/typegodkendelser/Daelim%20S-Five%20%28E11650%29%20udstedt%2023-10-2001.pdf', 'Daelim S-Five SE1 45 km/t E11650 (e11*92/61*00037)').'
+'.ahref('download/typegodkendelser/Di%20Blasi%20-%20%28E10124%29%20udstedt%2009-09-1999.pdf', 'Di Blasi R7E 45 km/t E10124 (e1*92/61*0034)').'
+'.ahref('download/typegodkendelser/DONGFANG%20V-30%20%28E15931%29%20udstedt%2009-11-2006.pdf', 'Dongfang V-30 DF50QT 30 km/t E15931 (e4*2002/24*1077)').'
+'.ahref('download/typegodkendelser/FYM%20-%20%28E14783%29%20udstedt%2005-01-2006.pdf', 'FYM FY50QT 45 km/t E14783 (e4*2002/24*0336)').'
+'.ahref('download/typegodkendelser/Huatian%20-%20%28E16497%29%20udstedt%2007-08-2007.pdf', 'Huatian JL50QT-16 (JL50QT-6 / HT50QT-16) 40 km/t E16497 (e11*2002/24*0359)').'
+'.ahref('download/typegodkendelser/Hyosung%20-%20%28E12156%29%20udstedt%2030-08-2002.pdf', 'Hyosung Sense C 45 km/t E12156 (e4*92/61*0033)').'
+'.ahref('download/typegodkendelser/Hyosung%20-%20%28E12157%29%20udstedt%2030-08-2002.pdf', 'Hyosung Prima C 45 km/t E12157 (e4*92/61*0034)').'
+'.ahref('download/typegodkendelser/Hyosung%20SB-50%20%28S8235%29%20udstedt%2025-06-1997.pdf', 'Hyosung SB-50 CA1 45 km/t S8235').'
+'.ahref('download/typegodkendelser/Hyosung%20SF50%20%28A9998%29%20udstedt%2016-06-1999.pdf', 'Hyosung SF50 C 45 km/t A9998').'
+'.ahref('download/typegodkendelser/Kalkhoff%20Pro%20Connect%20S%20Dame%20%28E18300%29%20udstedt%2029-06-2010.pdf', 'Kalkhoff Pro Connect S Dame 40 km/t E18300 (e1*2002/24*0444)').'
+'.ahref('download/typegodkendelser/Kalkhoff%20Pro%20Connect%20S%20Dame%20%28E18301%29%20udstedt%2029-06-2010.pdf', 'Kalkhoff Pro Connect S Dame 40 km/t E18301 (e1*2002/24*0444)').'
+'.ahref('download/typegodkendelser/Kalkhoff%20Pro%20Connect%20S%20Herre%20%28E18299%29%20udstedt%2029-06-2010.pdf', 'Kalkhoff Pro Connect S Herre 40 km/t E18299 (e1*2002/24*0431)').'
+'.ahref('download/typegodkendelser/Kalkhoff%20Pro%20Connect%20S%20Herre%20%28E18302%29%20udstedt%2029-06-2010.pdf', 'Kalkhoff Pro Connect S Herre 40 km/t E18302 (e1*2002/24*0431)').'
+'.ahref('download/typegodkendelser/Kangda%20Zongsshen%20%28E15387%29%20udstedt%2016-05-2006.pdf', 'Kangda Zongsshen KD50QT-4 30 km/t E15387 (e11*2002/24*0187)').'
+'.ahref('download/typegodkendelser/Kinroad%20-%20Xin%20Tian%20XT%2050%20Q%20%28E14196%29%20udstedt%2019-04-2005.pdf', 'Kinroad-Xintian XT50Q LBXPCBLA 45 km/t E14196 (e4*2002/24*0381)').'
+'.ahref('download/typegodkendelser/Kinroad-xintian%20-%20%28E16982%29%20udstedt%2022-02-2008.pdf', 'Kinroad-Xintian XT50Q-A 27 km/t E16982 (e4*2002/24*1135)').'
+'.ahref('download/typegodkendelser/Kreidler%20Galactica%202.0%2050%20DD%20%28E19123%29%20udstedt%2026-05-2011.pdf', 'Kreidler Galactica 2.0 50 DD SG 30 km/t E19123 (e9*2002/24*0336)').'
+'.ahref('download/typegodkendelser/Kreidler%20Galactica%202.0%2050%20DD%20%28E19124%29%20udstedt%2026-05-2011.pdf', 'Kreidler Galactica 2.0 50 DD SG 45 km/t E19124 (e9*2002/24*0336)').'
+'.ahref('download/typegodkendelser/Kreidler%20Hiker%202.0%2050%20DD%20S%20%28E19125%29%20udstedt%2026-05-2011.pdf', 'Kreidler Hiker 2.0 50 DD S SG 30 km/t E19125 (e9*2002/24*0336)').'
+'.ahref('download/typegodkendelser/Kreidler%20Hiker%202.0%2050%20DD%20S%20%28E19126%29%20udstedt%2026-05-2011.pdf', 'Kreidler Hiker 2.0 50 DD S SG 45 km/t E19126 (e9*2002/24*0336)').'
+'.ahref('download/typegodkendelser/Kreidler%20Jigger%2050%20%28E17784%29%20udstedt%2028-08-2009.pdf', 'Kreidler Jigger 50 GY 45 km/t E17784 (e9*2002/24*0354)').'
+'.ahref('download/typegodkendelser/Kreidler%20Jigger50%20%28E17785%29%20udstedt%2028-08-2009.pdf', 'Kreidler Jigger50 GY 30 km/t E17785 (e9*2002/24*0354)').'
+'.ahref('download/typegodkendelser/Kreidler%20RMC-E-50%20Hiker%20%28E17783%29%20udstedt%2028-08-2009.pdf', 'Kreidler RMC-E-50 Hiker SG 30 km/t E17783 (e9*2002/24*0336)').'
+'.ahref('download/typegodkendelser/Kreidler%20RMC-E-50%20Hiker%20Sport%20%28E17683%29%20udstedt%2017-06-2009.pdf', 'Kreidler RMC-E-50 Hiker Sport SG 45 km/t E17683 (e9*2002/24*0336)').'
+'.ahref('download/typegodkendelser/Kreidler%20RMC-E-50%20Hiker%20Sport%20%28E17741%29%20udstedt%2016-07-2009.pdf', 'Kreidler RMC-E-50 Hiker Sport SG 30 km/t E17741 (e9*2002/24*0336)').'
+'.ahref('download/typegodkendelser/Kreidler%20RMC-H-50%20Galactia%20%28E17763%29%20udstedt%2013-08-2009.pdf', 'Kreidler RMC-H-50 Galactia NB 45 km/t E17763 (e9*2002/24*0348)').'
+'.ahref('download/typegodkendelser/Kreidler%20RMC-H-50%20Galactia%20%28E17764%29%20udstedt%2013-08-2009.pdf', 'Kreidler RMC-H-50 Galactia NB 30 km/t E17764 (e9*2002/24*0348)').'
+'.ahref('download/typegodkendelser/Kymco%20B%26W%2050%20%28E12182%29%20udstedt%2010-09-2002.pdf', 'Kymco B&W 50 S8 45 km/t E12182 (e4*92/61*0126)').'
+'.ahref('download/typegodkendelser/Kymco%20Cobra%20%28E12179%29%20udstedt%2010-09-2002.pdf', 'Kymco Cobra SF Racer Exclusive Cross 45 km/t E12179 (e4*92/61*0103)').'
+'.ahref('download/typegodkendelser/Kymco%20Filly%20LX%20%28E12163%29%20udstedt%2004-09-2002.pdf', 'Kymco Filly LX S2 45 km/t E12163 (e4*92/61*0104)').'
+'.ahref('download/typegodkendelser/Kymco%20YUP50%20%28E11733%29%20udstedt%2021-12-2001.pdf', 'Kymco YUP50 S6 45 km/t E11733 (e4*92/61*0112)').'
+'.ahref('download/typegodkendelser/Macal%20PJ%2050%20%28E17611%29%20udstedt%2001-04-2009.pdf', 'Macal City PJ50 TC 45 km/t E17611 (e4*2002/24*1332)').'
+'.ahref('download/typegodkendelser/Motorhispania%20Furia%20%28S10373%29%20udstedt%2007-03-2000.pdf', 'Motorhispania Furia FU01 45 km/t S10373').'
+'.ahref('download/typegodkendelser/Oxygen%20-%20%28E16546%29%20udstedt%2012-09-2007.pdf', 'Oxygen OX04 44 km/t E16546 (e11*2002/24*0522)').'
+'.ahref('download/typegodkendelser/Piaggio%20%20%28E15940%29%20udstedt%2016-11-2006.pdf', 'Piaggio C42 Liberty / Liberty S 45 km/t E15940 (e11*2002/24*0107)').'
+'.ahref('download/typegodkendelser/Sanyang%20Sym%20Jet%2050%20%28S8172%29%20udstedt%2029-05-1997.pdf', 'Sym Jet G050J6 45 km/t S8172').'
+'.ahref('download/typegodkendelser/Siamoto%20Birdie%2050%20%28E9937%29%20udstedt%2015-06-1999.pdf', 'Siamoto Birdie 50 BR10 45 km/t E9937 (e9*92/61*0011)').'
+'.ahref('download/typegodkendelser/Simson%20Albatros%2050%20%28E11485%29%20udstedt%2025-07-2001.pdf', 'Simson Albatros 50 D00 45 km/t E11485 (e1*92/61*00089)').'
+'.ahref('download/typegodkendelser/SYM%20DD50%20%28E15352%29%20udstedt%2010-05-2006.pdf', 'Sym DD FT05W 30 km/t E15352 (e1*92/61*00127)').'
+'.ahref('download/typegodkendelser/Sym%20Jet%2050%20%28E12049%29%20udstedt%2011-06-2002.pdf', 'Sym Jet BL05W6 45 km/t E12049 (e1*92/61*00015)').'
+'.ahref('download/typegodkendelser/SYM%20Jet%20Euro%2050%20%28E19371%29%20udstedt%2027-09-2011.pdf', 'Sym Jet Euro G5J 30 km/t E19371 (e1*92/61*0015)').'
+'.ahref('download/typegodkendelser/SYM%20JET%20EURO%20X%2050%20%28E14185%29%20udstedt%2018-04-2005.pdf', 'Sym Jet Euro X BL05W 45 km/t E14185 (e1*92/61*00015)').'
+'.ahref('download/typegodkendelser/SYM%20Jet%20Euro%20X%2050%20%28E15353%29%20udstedt%2010-05-2006.pdf', 'Sym Jet Euro X G5J 30 km/t E15353 (e1*92/61*00015)').'
+'.ahref('download/typegodkendelser/SYM%20Jet%20SportX%20%28E16483%29%20udstedt%2002-07-2007.pdf', 'Sym Jet Sport X G5J 30 km/t E16483 (e1*92/61*00015/13)').'
+'.ahref('download/typegodkendelser/SYM%20Jet%20SportX%20%28E16624%29%20udstedt%2018-10-2007.pdf', 'Sym Jet Sport X G5J 45 km/t E16624 (e1*92/61*00015/13)').'
+'.ahref('download/typegodkendelser/Sym%20Jungle50%20%28S9406%29%20udstedt%2026-10-1998.pdf', 'Sym Jungle GA05W6 45 km/t S9406').'
+'.ahref('download/typegodkendelser/SYM%20Super%20Fancy%20%28S8171%29%20udstedt%2001-05-1997.pdf', 'Sym Super Fancy G050H6 45 km/t S8171').'
+'.ahref('download/typegodkendelser/TGB%20-%20%28E19895%29%20udstedt%2002-08-2012.pdf', 'TGB (bullet ?) BM1 30 km/t E19895 (e4*2002/24*0421)').'
+'.ahref('download/typegodkendelser/TMS%2010V%20%28E16678%29%20udstedt%2006-11-2007.pdf', 'TMS 10V QM50T-10V 45 km/t E16678 (e4*2002/24*1230)').'
+'.ahref('download/typegodkendelser/TMS%20Motard%2050cc%20%28E17698%29%20udstedt%2029-06-2009.pdf', 'TMS Motard 50cc S3 43 km/t E17698 (e9*2002/24*0294)').'
+'.ahref('download/typegodkendelser/TMS%20S3%2050cc%2045%20%28E18293%29%20udstedt%2009-06-2010.pdf', 'TMS S3 50cc 45 BT49QT-9d 45 km/t E18293 (e9*2002/24*1398)').'
+'.ahref('download/typegodkendelser/Transportel%201200%20Combi%20%28E15199%29%20udstedt%2016-03-2006.pdf', 'Transportel 1200 Combi 12 20 km/t E15199 (e5*2002/24*0005)').'
+'.ahref('download/typegodkendelser/Wangye%20Superbyke%20%28E15969%29%20udstedt%2023-11-2006.pdf', 'Wangye Superbyke WY50QT-16A Trend 45 km/t E15969 (e4*2002/24*1104)').'
+'.ahref('download/typegodkendelser/Yamaha%20CS50%20%28E19894%29%20udstedt%2002-08-2012.pdf', 'Yamaha (måske Jog R ?) CS50 SA48 45 km/t E19894 (e13*2002/24*0576)').'
+'.ahref('download/typegodkendelser/Yamasaki%20-%20%28E18163%29%20udstedt%2020-04-2010.pdf', 'Yamasaki YM50GYS 45 km/t E18163 (e4*2002/24*1223)').'
+'.ahref('download/typegodkendelser/Yamasaki%20-%20%28E18164%29%20udstedt%2021-04-2010.pdf', 'Yamasaki YM50GYS 30 km/t E18164 (e4*2002/24*1223)').'
+'
+
+,'
+lørdag den 31. August 2013
+' => '
+Jeg samler mere info om forskellige '.ahref('2takt_motortyper.php', '2 takt motortyper').' og '.ahref('motor_motortyper.php', '4 takt motortyper').'. Hvis det er noget du kan hjælpe med så '.kontaktmig().' gerne.
+'.ahref('fartbegrenser.php', 'Fartbegrænser').' har fået lidt mere info.
+
+Nye links :
+'.ahref('http://www.puchmaxiklubfaxe.dk/', 'www.puchmaxiklubfaxe.dk').' (musik advarsel)
+'.ahref('http://www.sd-racing.dk/', 'www.sd-racing.dk').' (har købt stalkerzone\'s indhold)
+'.ahref('http://www.longjia.com.cn/', 'www.longjia.com.cn').'
+'.ahref('http://www.scooterforum.se/', 'www.scooterforum.se').'
+'.ahref('http://scooterdoctors.egetforum.com/', 'scooterdoctors.egetforum.com').'
+'.ahref('http://www.mopedportalen.com/forum/', 'www.mopedportalen.com/forum/').'
+
+Nye download filer :
+'.ahref('download/a2b_metro_servicemanual.pdf', 'a2b_metro_servicemanual.pdf').'
+'.ahref('download/gilera_smt_reservedele.pdf', 'gilera_smt_reservedele.pdf').'
+'.ahref('download/gilera_rcr_reservedele.pdf', 'gilera_rcr_reservedele.pdf').'
+'.ahref('download/gilera_dna_reservedele.pdf', 'gilera_dna_reservedele.pdf').'
+'.ahref('download/gilera_runner_reservedele.zip', 'gilera_runner_reservedele.zip').'
+'.ahref('download/honda_dax_reservedele.pdf', 'honda_dax_reservedele.pdf').'
+'.ahref('download/honda_sfx_reservedele.pdf', 'honda_sfx_reservedele.pdf').'
+'.ahref('download/qingqi_qm50qt6_brugermanual.pdf', 'qingqi_qm50qt6_brugermanual.pdf').'
+'.ahref('download/qingqi_qm50qt6_servicemanual.pdf', 'qingqi_qm50qt6_servicemanual.pdf').'
+'.ahref('download/speedotronic%20Drehzahlbegrenzer%20Doublecheck-Triplecheck%20Einbauanleitung.pdf', 'speedotronic Drehzahlbegrenzer Doublecheck-Triplecheck Einbauanleitung.pdf').' (til fartbegrænser)
+'.ahref('download/tomos_classicxl_reservedele.pdf', 'tomos_classicxl_reservedele.pdf').'
+'
+
+,'
+onsdag den 14. August 2013
+' => '
+For at gøre hjemmesiden mere engelsk-venlig har jeg gjort nogen ændringer.
+Et nyt engelsk forum kaldet '.ahref('http://scootergrisen.dk/forum/viewforum.php?f=17', 'Talk about anything in english').' er oprettet i '.forummet().' også har jeg aktiveret den engelske sprogpakke til forummet.
+Derudover har jeg oversat hjemmesidens dropdownmenu og andre dele af navigationen på hjemmesiden sådan at dem der kan læse engelsk men ikke dansk i det mindste kan navigere rundt på hjemmesiden selvom selve indholdet på de enkelte sider ikke er oversat og formodentligt ikke bliver det.
+Du kan skifte til engelsk ved at trykke på flaget øverst på hjemmeside.
+
 Kildekoden til scootergrisen.dk er nu på '.ahref('https://github.com/scootergrisen/scootergrisen.dk', 'GitHub').'.
 Nu kan du hjælpe med at forbedre koden bag hjemmesiden.
 Kildekoden er primært skrevet i HTML, CSS, Javascript og PHP.
@@ -105,7 +258,7 @@ lørdag den 1. Juni 2013
 ))
 
 ,'nævneværdige ændringer og nyt indhold' => ''
-.'Nye billeder af adskildt Kymco Agility motor fra '.ahref('http://scootergrisen.dk/forum/viewtopic.php?f=3&t=1302', 'GY6 4-takt renovering').'. Tak til Kymconørden for de fine billeder. Jeg har fordelt billeder på de forskellige sider i menuen '.menugenvej(array('Scooterens dele', '4 takt motor')).' også har jeg oprette den nye side '.ahref('motor_motorblok.php', 'Motorblok').' hvor jeg også har brugt nogen af billederne.
+.'Nye billeder af adskildt Kymco Agility motor fra '.ahref('http://scootergrisen.dk/forum/viewtopic.php?f=3&t=1302', 'GY6 4-takt renovering').'. Tak til Kymconørden for de fine billeder. Jeg har fordelt billeder på de forskellige sider i menuen '.menugenvej(array(mb_ucfirst($GLOBALS['setup']['l_m_scooterensdele']), mb_ucfirst($GLOBALS['setup']['l_m_scooterensdele_4taktmotor']))).' også har jeg oprette den nye side '.ahref('motor_motorblok.php', 'Motorblok').' hvor jeg også har brugt nogen af billederne.
 
 Har tilføjet '.ahref('galleri.php#puch', 'Puch i Galleri').' og lavet om på '.ahref('altompuch.php', 'Puch').' så manualerne osv nu er ude til højre under download.
 Jeg mangler dog nogen gode Puch billeder. '.kontaktmig(1).' gerne eller skriv i '.forummet().' hvis du har nogen gode Puch billeder. Gerne i høj opløsning med hvid baggrund og så orginal som mulig.
@@ -1364,7 +1517,7 @@ Da der er mange som har søgt efter PGO og spurgt om jeg ikke har noget om PGO s
 '.ahref('speedometer.php', 'Speedometer').'
 '.ahref('service_dek.php', 'Service af dæk').'
 '.ahref('service_motor.php', 'Service af motor').'
-'.ahref('specielt_kymcosuper8.php', 'Specielt for Kymco Super 8').'
+'.ahref('specielt_kymcosuper8.php', 'Specielt for Kymco Super 8 4T').'
 '.ahref('typegodkendelser.php', 'Typegodkendelser').'
 '.ahref('service_elektrisk.php', 'Service af elektrisk').' (ny video)
 '

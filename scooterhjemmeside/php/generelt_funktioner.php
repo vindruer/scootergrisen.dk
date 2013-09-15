@@ -395,6 +395,8 @@ if (0){
 
 //echo '<input value="' . basename($filnavn) . '">'. "<br>\r\n";
 //echo visbilled('1', basename($filnavn)) . "<br>\r\n";
+$altdetoversteekstra = '';
+/*
          $altdetoversteekstra = ' style="
 background-image: url(/' . $GLOBALS['setup']['datamappe'] . '/' . $filnavn . ');
  background-position: center bottom;
@@ -403,10 +405,12 @@ background-image: url(/' . $GLOBALS['setup']['datamappe'] . '/' . $filnavn . ');
  background-size: auto 100%;
  background-size: 100% auto;
 "';
+*/
 //         $altdetoversteekstra = '';
 
          $indhold .= '   <div' . $altdetoversteekstra . ' class="altdetoverste bordertype5 borderradius5pxbottom margintype6">'."\r\n";
-         $indhold .= '   <div style="background: rgba(0, 0, 0, 0.5);">'."\r\n";
+         //$indhold .= '   <div class="borderradius5pxbottom" style="background: rgba(0, 0, 0, 0.5);">'."\r\n";
+         $indhold .= '   <div class="altdetoversteb borderradius5pxbottom">'."\r\n";
          //$indhold .= '   <div>'."\r\n";
          $indhold .= "\r\n";
          $indhold .= breadcrumbs();
@@ -815,11 +819,12 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
       . "\r\n"
       . '   <script type="text/javascript">'."\r\n"
       . "\r\n"
-      . '   $(document).ready(function() {'."\r\n"
+      //. '   $(document).ready(function() {'."\r\n"
+      . '   jQuery(document).ready(function() {'."\r\n"
       . "\r\n"
       . '      // these default equivalents were obtained from a table of equivalents'."\r\n"
       . '      // provided by sugar.js sorting alogrithms: http://sugarjs.com/sorting'."\r\n"
-      . '      $.tablesorter.characterEquivalents = {'."\r\n"
+      . '      jQuery.tablesorter.characterEquivalents = {'."\r\n"
       . '         "za" : "\u00e6;", // æ'."\r\n"
       . '         "zb" : "\u00f8;", // ø'."\r\n"
       . '         "zc" : "\u00e5;", // å'."\r\n"
@@ -828,7 +833,7 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
       . '         "ZC" : "\u00c5;"  // Å'."\r\n"
       . '      };'."\r\n"
       . "\r\n"
-      . '      $(\'table\').tablesorter({'."\r\n"
+      . '      jQuery(\'table\').tablesorter({'."\r\n"
       . '         theme          : \'blue\','."\r\n"
       . '         widgets        : [\'zebra\', \'columns\'],'."\r\n"
       . '         usNumberFormat : false,'."\r\n"
@@ -838,8 +843,9 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
       . '         sortLocaleCompare : true,'."\r\n"
       . '         // if false, upper case sorts BEFORE lower case'."\r\n"
       . '         ignoreCase : true'."\r\n"
-      . '         });'."\r\n"
       . '      });'."\r\n"
+      . "\r\n"
+      . '   });'."\r\n"
       . "\r\n"
       . '   </script>'."\r\n"
       . "\r\n"
@@ -993,14 +999,17 @@ if(1){
    $language_en_uk         = $GLOBALS['setup']['domainogdatamappe'] . '/php/language.php?language=en_UK';
    $language_da_dk         = $GLOBALS['setup']['domainogdatamappe'] . '/php/language.php?language=da_DK';
    $language_da_automatisk = $GLOBALS['setup']['domainogdatamappe'] . '/php/language.php?language=';
-
+/*
    $nogetindhold .= ''
       . '<script type="text/javascript">' . "\r\n"
-      . 'if (window.addEventListener) {' . "\r\n"
 
-      . '   function opdaterfuldskermknap() {' . "\r\n"
-      . '      opdaterfullscreenknapbillede(\'global_fullscreentoggleknap\', \'global_fullscreentoggleknap_img\');' . "\r\n"
-      . '   }' . "\r\n"
+      . 'function opdaterfuldskermknap() {' . "\r\n"
+
+      . '   opdaterfullscreenknapbillede(\'global_fullscreentoggleknap\', \'global_fullscreentoggleknap_img\');' . "\r\n"
+
+      . '}' . "\r\n"
+
+      . 'if (window.addEventListener) {' . "\r\n"
 
       . '   window.addEventListener(\'load\', function(){' . "\r\n"
 
@@ -1016,6 +1025,7 @@ if(1){
       . '   }, false);' . "\r\n"
 
       . '}' . "\r\n"
+
       . '</script>' . "\r\n"
 
       . '<style>' . "\r\n"
@@ -1028,18 +1038,19 @@ if(1){
       . '} ' . "\r\n"
       . '</style>' . "\r\n"
       ;
+*/
 
 //array_search
 //$setup['menu']
 
 if($GLOBALS['setup']['vissprog']){
-
+/*
    $nogetindhold .= ''
       . '<button style="float: right; margin: 0; padding: 0;" id="global_fullscreentoggleknap" class="visibilityhidden" onclick="global_togglefullscreen();" title="' . mb_ucfirst($GLOBALS['setup']['button_fullscreentoggle']) . '">'
       . visbilled('2', 'afspiller/afspiller_fuldskerm.png', mb_ucfirst($GLOBALS['setup']['button_fullscreentoggle']), false, null, null, 'id="global_fullscreentoggleknap_img"', null, '20', '20')
       . '</button>'
       ;
-
+*/
    $nogetindhold .= ''
       //. '<span class="ekstraundersmaikoner fontsize_small" style="background-color: rgba(255, 255, 255, 0.6); padding: 1em; border-radius: 5px; float: right;">'
       . '<span style="float: right; margin-right: 10px;">'
@@ -1096,13 +1107,13 @@ if($GLOBALS['setup']['vissprog']){
 
    $indhold .= ''
       . '      '
-      . '<div class="breadcrumbs fontsize_xsmall">'
+      . '<div class="breadcrumbs fontsize_xsmall" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">'
       //. mb_ucfirst($GLOBALS['setup']['l_youarehere'])
-      . ahref('http://' . $_SERVER['SERVER_NAME'], $_SERVER['SERVER_NAME'])
+
+      . ahref('http://' . $_SERVER['SERVER_NAME'], '<span itemprop="title">' . $_SERVER['SERVER_NAME'] . '</span>', 'itemprop="url"')
+
       . ' ' . $tegn . ' '
-      . '<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">'
       . implode(" $tegn ", $GLOBALS['setup']['breadcrumbs'])
-      . '</span>'
       . $nogetindhold
       . '</div>' . "\r\n"
       . "\r\n"
@@ -1502,7 +1513,6 @@ function visfootertekst($visrightcontent = true, $visfooter = true){
       //  sidst er opdateret
       if(
          $_SERVER['SCRIPT_NAME'] != '/' . $GLOBALS['setup']['datamappe'] . '/' . 'nyheder.php'
-      && $_SERVER['SCRIPT_NAME'] != '/' . $GLOBALS['setup']['datamappe'] . '/' . 'nyhedsarkiv.php'
       ){
 
          $filnavn = $GLOBALS['setup']['roden'] . $_SERVER['SCRIPT_NAME'];
@@ -1538,9 +1548,10 @@ function visfootertekst($visrightcontent = true, $visfooter = true){
    $bidder[] = ahref('http://www.youtube.com/user/scootergrisen', visbilled('2', 'ikoner/youtube.png', mb_ucfirst($GLOBALS['setup']['language_youtubechannel']), '', null, false, null, null, '16', '16', null, true, null, null, 'vertical-align: middle;'), '');
 
    $bidder[] = ''
-      . '<span id="octocatlinkholder">'
+      //. '<span id="octocatlinkholder">'
       . ahref($githublink, visbilled('2', 'ikoner/blacktocat-16.png', mb_ucfirst($GLOBALS['setup']['language_github']), '', null, false, null, null, '16', '16', null, true, null, null, 'vertical-align: middle;'))
-      . '</span>';
+      //. '</span>';
+      ;
 
    $bidder[] = ''
       . '<span class="flag">'
@@ -1835,7 +1846,6 @@ function visslut($visrightcontent = true, $visdinkommentar = true){
       //  sidst er opdateret
       if(
          $_SERVER['SCRIPT_NAME'] != '/' . $GLOBALS['setup']['datamappe'] . '/' . 'nyheder.php'
-      && $_SERVER['SCRIPT_NAME'] != '/' . $GLOBALS['setup']['datamappe'] . '/' . 'nyhedsarkiv.php'
       ){
 
          $filnavn = $GLOBALS['setup']['roden'] . $_SERVER['SCRIPT_NAME'];
@@ -2896,7 +2906,7 @@ function galleri(
          $indhold .= '<div class="producent borderradius5px">';
 
          $indhold .= ahref($filurl
-            , visbilled('1', 'logoer/' . $sidelink . '.png', 'Gå til &quot;' . mb_ucfirst($tekst) . '&quot; siden', false, null, null, null, null, '90', '67')
+            , visbilled('1', 'logoer/' . $sidelink, 'Gå til &quot;' . mb_ucfirst($tekst) . '&quot; siden', false, null, null, null, null, '90', '67')
             );
 
          $indhold .= '</div>';
@@ -4387,7 +4397,7 @@ function visflash(
       //* For MP3 audio: file=mp3:song.mp3 (with mp3: prefix).
       //* For AAC audio: file=mp4:song.aac (with mp4: prefix).
 
-      $flashvarsarray[] = 'stretching=exactfit'; // none | uniform | fill | exactfit
+      $flashvarsarray[] = 'stretching=uniform'; // none | uniform | fill | exactfit
       //$flashvarsarray[] = 'height=380';
       //$flashvarsarray[] = 'width=640';
       $flashvarsarray[] = 'frontcolor=0xE0E2E3';
@@ -4520,7 +4530,7 @@ function visflash(
       //* For MP3 audio: file=mp3:song.mp3 (with mp3: prefix).
       //* For AAC audio: file=mp4:song.aac (with mp4: prefix).
 
-      $flashvarsarray[] = 'stretching=exactfit'; // none | uniform | fill | exactfit
+      $flashvarsarray[] = 'stretching=uniform'; // none | uniform | fill | exactfit
       //$flashvarsarray[] = 'height=380';
       //$flashvarsarray[] = 'width=640';
       $flashvarsarray[] = 'frontcolor=0xE0E2E3';
@@ -6392,7 +6402,6 @@ function vissogeresultater(){
                || $v[0] == "specielt_elektriskescootere.php"
                || $v[0] == "transmission.php"
                || $v[0] == "ratingoversigt.php"
-               || $v[0] == "nyhedsarkiv.php"
                || $v[0] == "windows7.php"
                || $v[0] == "kode_mysql.php"
                || $v[0] == "kode_ge​t.php"
@@ -7915,12 +7924,12 @@ function vissogningeridatabase($visantalsogninger){
 
             . '<thead>'
             . '<tr>'
-            . '<th>id</th>'
-            . '<th>tid</th>'
-            . '<th>ip</th>'
-            . '<th>søgetekst</th>'
-            . '<th>referer</th>'
-            . '<th>antal fundne sider</th>'
+            . '<th>Id</th>'
+            . '<th>Tid</th>'
+            . '<th>IP</th>'
+            . '<th>Søgetekst</th>'
+            . '<th>Referer</th>'
+            . '<th>Fundne sider</th>'
             . '</tr>'
             . '</thead>'
 

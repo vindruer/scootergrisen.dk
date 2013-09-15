@@ -15,7 +15,7 @@ stelforbindelse
 ' => '
 Her ses stelforbindelsen til motoren.
 Det er den grønne ledning under en af de skruer som holder startermotoren.
-'.visbilled('1', 'billed3032.jpg', 'kymco super 8 motor stelforbindelse', false, true).'
+'.visbilled('1', 'billed3032.jpg', 'kymco super 8 4T motor stelforbindelse', false, true).'
 Der er også en stelforbindelse på stellet... som jeg mangler billede af.
 
 Ledningen på motorblok og stel er forbundet med batteriets minus (-) terminal.

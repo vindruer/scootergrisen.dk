@@ -136,6 +136,12 @@ Derfor gælder det om at forstøve benzinen mest mulighed i luften for at få en
 '
 
 ,'
+tankning
+' => '
+'.visflash('0', "http://www.youtube.com/watch?v=_Oc0sIkZSEA", 'at tanke benzin på scooter', true).'
+'
+
+,'
 hvor kommer benzin fra ?
 ' => '
 Benzin er en del af råolie.
@@ -269,7 +275,7 @@ LPG brænder meget rent og indeholder derfor ikke så mange skadelige udstødnin
 ,'
 benzinforbrug
 ' => '
-Her er benzinforbruget for min Kymco Super 8 - 50 cm³ - 30 km/t.
+Her er benzinforbruget for min Kymco Super 8 4T - 50 cm³ - 30 km/t.
 Benzintanken rummer 5,5 liter.
 <div id="benzinforbrugkodeholder"></div>
 <script type="text/javascript">visforbrugtabel();</script>

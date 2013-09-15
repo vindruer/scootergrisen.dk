@@ -14,7 +14,7 @@ $databasecenter = array(
 introduktion
 ' => '
 Her findes råd der specielt er brugbare om vinteren.
-'.visbilled('1', 'billed1165.jpg', 'kymco super 8 med sne på', false, true).'
+'.visbilled('1', 'billed1165.jpg', 'kymco super 8 4T med sne på', false, true).'
 Hvis du har et vinterråd så '.kontaktmig().' gerne.
 '
 
@@ -324,33 +324,33 @@ galleriholder(array(
 Håndtagene med varme fås med en indre diameter på (22 mm) 7/8 tomme eller (25,6 mm) 1 tomme.
 Længden på håndtagene variere fra 125 til 135 mm.
 
-Her ses styr og håndtag på Kymco Super 8.
+Her ses styr og håndtag på kymco super 8 4T.
 Det højre håndtag (gashåndtaget) sidder fast på en plastik cylinder hvor gaskablets ende er monteret.
 Det venstre håndtag sidder fast direkte på styret.
 '.
 galleriholder(array(
-    galleri('highslide', '', 'billed0024.jpg', array('kymco super 8 styr og håndtag', ''))
+    galleri('highslide', '', 'billed0024.jpg', array('kymco super 8 4T styr og håndtag', ''))
 ))
 .'
 
 Den sorte plastik del og den gennemsigtige plastik del kan hives fra hinanden.
 '.
 galleriholder(array(
-    galleri('highslide', '', 'billed0721.jpg', array('kymco super 8 gashåndtag', ''))
-   ,galleri('highslide', '', 'billed1250.jpg', array('kymco super 8 gashåndtag', ''))
+    galleri('highslide', '', 'billed0721.jpg', array('kymco super 8 4T gashåndtag', ''))
+   ,galleri('highslide', '', 'billed1250.jpg', array('kymco super 8 4T gashåndtag', ''))
 ))
 .'
 
 Her ses den indre diameter af den hårde plastik cylinder fra gashåndtaget. 22 mm.
 '.
 galleriholder(array(
-    galleri('highslide', '', 'billed0719.jpg', array('kymco super 8 gashåndtag', ''))
+    galleri('highslide', '', 'billed0719.jpg', array('kymco super 8 4T gashåndtag', ''))
 ))
 .'
 Her ses den indre diameter af den bløde plastik del fra gashåndtaget. 25,6 mm.
 '.
 galleriholder(array(
-    galleri('highslide', '', 'billed0720.jpg', array('kymco super 8 gashåndtag', ''))
+    galleri('highslide', '', 'billed0720.jpg', array('kymco super 8 4T gashåndtag', ''))
 ))
 .'
 

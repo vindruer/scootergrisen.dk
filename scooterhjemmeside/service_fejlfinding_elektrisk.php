@@ -13,7 +13,7 @@ $databasecenter = array(
 '
 tændspole, tændrørskabel og tændrørshætte
 ' => '
-Ohm værdierne her stammer fra Kymco Super 8 og er ikke nødvendigvis de samme på andre scooter modeller.
+Ohm værdierne her stammer fra Kymco Super 8 4T og er ikke nødvendigvis de samme på andre scooter modeller.
 Check scooterens servicemanual for de rigtige ohm værdier.
 
 Fjern de 2 små ledninger fra tændspolens.
@@ -121,7 +121,7 @@ Mål ohm værdien mellem de 2 ledninger som kommer fra statoren og sammenligne m
 Her måles 1,4 Ω på en helt ny stator.
 '.visbilled('1', 'billed3384.jpg', 'statorspole ohm måling', false, true).'
 
-På Kymco Super 8 skal man kunne måle en modstand på 0,1-1,0 Ω mellem de 2 lednigner fra generatoren ifølge servicemanualen. Men det lader til en måling på 1,4 Ω også er god.
+På Kymco Super 8 4T skal man kunne måle en modstand på 0,1-1,0 Ω mellem de 2 lednigner fra generatoren ifølge servicemanualen. Men det lader til en måling på 1,4 Ω også er god.
 '.visbilled('1', 'billed0898.jpg', 'generator data kymco super 8', false, true).'
 Under 2 Ω (set i Generic Ideo servicemanual, grøn/rød - motorblok).
 
@@ -208,8 +208,8 @@ Drej en lille smule på gashåndtaget for at få motoren til at køre i hurtig t
 Volt niveauet skal gerne være mellem 13-16 volt jævnstræm afhængig af scooteren.
 Tænd for scooterens lys og bemærk om volt niveauet bliver lavere. Det skal ikke blive lavere af betydning.
 
-På Kymco Super 8 skal man kunne måle 14-15 volt ved 5000 omdrejninger/minuttet.
-'.visbilled('1', 'billed2555.jpg', 'kymco super 8 spændingsregulator data', false, true).'
+På Kymco Super 8 4T skal man kunne måle 14-15 volt ved 5000 omdrejninger/minuttet.
+'.visbilled('1', 'billed2555.jpg', 'kymco super 8 4T spændingsregulator data', false, true).'
 Se i scooterens servicemanual for de præcise data.
 ').'
 
@@ -304,10 +304,10 @@ Det er muligvis for at undgå at motoren skal gå ud at spændingsregulatoren sk
 ').'
 
 '.afsnit('forlyset slukker og tænder af sig selv','
-Kymco Super 8 ejere har haft problemer hvor de 2 forlys pære har slukket og tændt af sig selv.
+Kymco Super 8 4T ejere har haft problemer hvor de 2 forlys pære har slukket og tændt af sig selv.
 Det skyldes af lys kontrol boksen ikke altid får signal fra CDI boksen.
 Fejlen ligger i CDI boksen som af en eller anden grund ikke altid laver dette signal.
-Problemer har for 2 kymco super 8 ejere kommet efter cirka 20 måneder fra scooteren blev købt fra ny.
+Problemer har for 2 kymco super 8 4T ejere kommet efter cirka 20 måneder fra scooteren blev købt fra ny.
 Problemet kan rettes ved at købe en ny CDI boks.
 ').'
 '

@@ -2357,7 +2357,19 @@ obs City er med skivebremse for og bag,
    // 3.50 x 12 130/60 - 13
    ,'BT49QT-20A 45 km/t E19807 (e4*2002/24*1824)'    => 'typegodkendelser/Baotian%20BT49QT-20%20%28E19807%29%20udstedt%2012-06-2012.pdf'
 
-)
+
+
+   ,'BT49QT-9 BT49QT-9S BT49QT-9D30 BT49QT-9R3 BT49QT-903 9F3 30 km/t E16717 (e4*2002/24*1398)'            => 'typegodkendelser/BAOTIAN%20-%20%28E16717%29%20udstedt%2019-11-2007.pdf'
+   ,'BT49QT-9d30 30 km/t E16873 (e4*2002/24*1398)'            => 'typegodkendelser/BAOTIAN%20%20%28E16873%29%20udstedt%2022-01-2008.pdf'
+   ,'BT49QT 11A 25 km/t E19116 (e4*2002/24*1424)'            => 'typegodkendelser/Baotian%20BT49QT%20%28E19116%29%20udstedt%2023-05-2011.pdf'
+   ,'BT49QT 20C Diablo 25 km/t E19117 (e4*2002/24*1824)'            => 'typegodkendelser/Baotian%20BT49QT%20%28E19117%29%20udstedt%2023-05-2011.pdf'
+   ,'BT49QT 20C 25 km/t E19118 (e4*2002/24*1824)'            => 'typegodkendelser/Baotian%20BT49QT%20%28E19118%29%20udstedt%2023-05-2011.pdf'
+   ,'BT49QT 11A 25 km/t E19119 (e4*2002/24*1424)'            => 'typegodkendelser/Baotian%20BT49QT%20%28E19119%29%20udstedt%2023-05-2011.pdf'
+   ,'BT49QT-11da Retro 30 km/t E18182 (e4*2002/24*1010)'            => 'typegodkendelser/Baotian%20Retro%20%28E18182%29%20udstedt%2023-04-2010.pdf'
+
+   ,'Batioan QT50-12D30 30 km/t E16626 (e4*2002/24*1397)'            => 'typegodkendelser/Batioan%20-%20%28E16626%29%20udstedt%2018-10-2007.pdf'
+
+   )
 
 );
 

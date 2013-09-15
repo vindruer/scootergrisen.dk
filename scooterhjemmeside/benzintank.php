@@ -14,12 +14,12 @@ $databasecenter = array(
 benzintank
 ' => '
 Her ses en benzintank.
-'.visbilled('1', 'billed1851.jpg', 'kymco super 8 benzintank', false, true).'
+'.visbilled('1', 'billed1851.jpg', 'kymco super 8 4T benzintank', false, true).'
 I bunden af denne benzintank er der svejset en studs på hvor benzinslangen monteres.
-'.visbilled('1', 'billed1845.jpg', 'kymco super 8 benzintank studs', false, true).'
-'.visbilled('1', 'billed1846.jpg', 'kymco super 8 benzintank studs', false, true).'
+'.visbilled('1', 'billed1845.jpg', 'kymco super 8 4T benzintank studs', false, true).'
+'.visbilled('1', 'billed1846.jpg', 'kymco super 8 4T benzintank studs', false, true).'
 Igennem hullet til benzinmåleren kan vi se bunden af benzintanken hvor studsen ses.
-'.visbilled('1', 'billed1848.jpg', 'kymco super 8 benzintank inderside studs', false, true).'
+'.visbilled('1', 'billed1848.jpg', 'kymco super 8 4T benzintank inderside studs', false, true).'
 På nogle benzintanke er der i stedet for en studs svejset et gevind i bunden af benzintanken hvor man skruer benzinhanen fast.
 '
 
@@ -52,7 +52,7 @@ På bagsiden af instrumentpanelet er der 3 lange skruer som har forbindelse indt
 Den sorte ledning er fra batteriets + terminal når tændingslåsen er på ON.
 Den blå/hvide og gul/hvide går begge til benzinmåleren i benzintanken.
 '.visbilled('1', 'billed2352.jpg', 'instrumentpanel bagside benzinviser', false, true).'
-'.visbilled('1', 'billed2353.jpg', 'Kymco Super 8 instrumentpanel', false, true).'
+'.visbilled('1', 'billed2353.jpg', 'kymco super 8 4T instrumentpanel', false, true).'
 Modstand har 4 farveringe (rød grøn sort guld) hvilket efter hvad jeg kan finde frem til er 25 Ω ± 5%.
 '.visbilled('1', 'billed2346.jpg', 'benzinviser', false, true).'
 '.visbilled('1', 'billed2347.jpg', 'benzinviser', false, true).'
@@ -73,11 +73,11 @@ benzinmåler
 Her ses en benzinmåler monteret i en benzintank.
 '.visbilled('1', 'billed1767.jpg', 'benzinmåler på benzintank og stik', false, true).'
 Her er benzinmåleren taget op.
-'.visbilled('1', 'billed1847.jpg', 'kymco super 8 benzintank benzinmåler afmonteret', false, true).'
+'.visbilled('1', 'billed1847.jpg', 'kymco super 8 4T benzintank benzinmåler afmonteret', false, true).'
 Benzinmåleren har en svømmer som flyder oven på benzinen samt 2 variable modstande som ændre ohm værdi i takt med at benzinen og dermed svømmeren bevæger sig op og ned.
 
 Her ses benzinmåleren.
-'.visbilled('1', 'billed1849.jpg', 'kymco super 8 benzinmåler', false, true).'
+'.visbilled('1', 'billed1849.jpg', 'kymco super 8 4T benzinmåler', false, true).'
 Stikket har 3 ledninger.
 Den ene ledning er stelforbindelse.
 De 2 andre ledninger går til benzinmåleren på instrumtpanelet som får 12 volt fra batteriets + (plus) terminal når tændingslåsen er drejet til ON.
@@ -85,12 +85,12 @@ De 2 andre ledninger går til benzinmåleren på instrumtpanelet som får 12 vol
 Hvorfor der er 2 variable modstande i stedet for kun 1 modstand ved jeg ikke men måske er det for at opnå større præcision eller stabilitet.
 
 Her ses benzinmåleren i sin laveste og højeste position.
-'.visbilled('1', 'billed1850.jpg', 'kymco super 8 benzinmåler', false, true).'
-'.visbilled('1', 'billed2225.jpg', 'kymco super 8  benzinviser instrumentpanel', false, true).'
+'.visbilled('1', 'billed1850.jpg', 'kymco super 8 4T benzinmåler', false, true).'
+'.visbilled('1', 'billed2225.jpg', 'kymco super 8 4T benzinviser instrumentpanel', false, true).'
 
-'.visbilled('1', 'billed2360.jpg', 'kymco super 8 benzinmåler', false, true).'
-'.visbilled('1', 'billed2361.jpg', 'kymco super 8 benzinmåler modstand', false, true).'
-'.visbilled('1', 'billed2362.jpg', 'kymco super 8 benzinmåler fjeder der glider i modstand', false, true).'
+'.visbilled('1', 'billed2360.jpg', 'kymco super 8 4T benzinmåler', false, true).'
+'.visbilled('1', 'billed2361.jpg', 'kymco super 8 4T benzinmåler modstand', false, true).'
+'.visbilled('1', 'billed2362.jpg', 'kymco super 8 4T benzinmåler fjeder der glider i modstand', false, true).'
 '
 
 ,'

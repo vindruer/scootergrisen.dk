@@ -55,7 +55,7 @@ Afmonter choker stikket.
 Mål på choker stikket med et multimeter sat til ohm.
 '.visbilled('1', 'billed0305.jpg', 'fejlfinding af automatisk choker ohm måling', false, true).'
 '.visbilled('1', 'billed2708.jpg', 'fejlfinding af automatisk choker ohm måling', false, true).'
-Ifølge manualen til Kymco Agility og Kymco Super 8 må der maksimalt være 10 Ω.
+Ifølge manualen til Kymco Agility og Kymco Super 8 4T må der maksimalt være 10 Ω.
 Jeg har målt 2 automatiske chokere til at være på 15 Ω og de ser ud til at virke fint.
 Så den automatisk choker kan godt virke normalt selvom modstanden er lidt over 10 Ω.
 

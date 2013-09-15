@@ -15,12 +15,14 @@ $indhold = '';
 $del = array();
 
 $del = array(
+
 '
 introduktion
 ' => '
 Her på siden ses de samme links som er i dropdownmenuen øverst på hjemmesiden.
 Her er der bare billeder så det er lettere at forstå hvad siderne handler om.
 '
+
 );
 
 $leftcontentmenuer = $GLOBALS['setup']['menu'];
@@ -79,7 +81,7 @@ foreach($leftcontentmenuer as $key => $value){
 
    foreach($value as $navn => $array){
 
-      if($key == 'scootermærker'){
+      if($key == $GLOBALS['setup']['l_m_scootermerker']){
 
          $indholdb .= galleri('logob', key($array),  $array['logo'], $navn);
 
@@ -107,7 +109,7 @@ foreach($leftcontentmenuer as $menuoverskrift => $menudata){
       foreach($menudata as $normalmenuoverskrift => $value){
 
          if($normalmenuoverskrift != '0'){
-         //if($menuoverskrift != 'scootermærker'){
+         //if($menuoverskrift != $GLOBALS['setup']['l_m_scootermerker']){
 
             // hent normal menu
             $normalmenuoverskrifttitle = mb_ucfirst($value[key($value)]);
@@ -142,7 +144,7 @@ foreach($leftcontentmenuer as $menuoverskrift => $menudata){
 
                      foreach($noget as $submenukey => $submenuvalue){
 
-                     if($menuoverskrift == 'scootermærker'){
+                     if($menuoverskrift == $GLOBALS['setup']['l_m_scootermerker']){
 
                            $submenutitle = mb_ucfirst($submenuvalue[key($submenuvalue)]);
                            $thumb = $submenuvalue['logo'];
@@ -157,14 +159,14 @@ foreach($leftcontentmenuer as $menuoverskrift => $menudata){
                            // undermenuoverskrifter
                            $submenutitle = mb_ucfirst($submenuvalue[key($submenuvalue)]);
 
-                           if($submenuvalue['thumbnail'] != ''){
-               
+                           if(isset($submenuvalue['thumbnail'])){
+
                               $thumb = $submenuvalue['thumbnail'];
-               
+
                            }else{
-               
-                              $thumb = 'billed3232'; // tomt billede
-               
+
+                              trigger_error('thumbnail mangler ved "' . $submenutitle . '"');
+
                            }
 
                            $navn = $submenukey;

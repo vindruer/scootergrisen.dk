@@ -468,9 +468,11 @@ Motoren kaldes "JJDM-48-1000" i typegodkendelsen og det står også på venstre 
 '.visbilled('1', 'billed3307.jpg', 'Giantco E-Buddy motor afmonteret', false, true).'
 I el diagrammet kan man se at motoren er forbundet til controlleren igennem 8 ledninger.
 '.visbilled('1', 'billed1268.jpg', 'Giantco E-Buddy eldiagram motor controller', false, true).'
-De 3 øverste (Gul, Grøn, Blå) er faserne som bærer strømmen til motorens spoler gennem de tykke ledninger.
-De 2 miderste (Rød) er nok +12VDC og (Sort) er Stel.
-De 3 nederste (Blå, Grøn, Gul) er Hall sensorene som registerer hjulets position.
+De 3 øverste (Gul, Grøn, Blå) er faserne som gå til motorens spoler gennem de tykke ledninger.
+
+De 5 nederste er til hall sensorene som registerer hjulets position.
+(Rød) er nok +12VDC og (Sort) er nok stel. De går nok begge til hver sensor.
+(Blå, Grøn, Gul) går nok til hver sin sensor.
 '.visflash('0', "http://www.youtube.com/watch?v=H0ppMNLr37s", 'Giantco E-Buddy motorlyd', true).'
 '
 
@@ -550,7 +552,7 @@ Viseren på instrumentpanelet som viser opladningsniveauet hopper hurtigt op nå
 Det er ikke ligesom benzinviser på min scooter som meget langsomt går op og ned.
 Det var lidt bakkede der hvor jeg kørte og da jeg skulle op af en måske lidt stejl bakke kørte den meget langsomt. Kun 10 km/t eller måske lidt hurtigere men det gik langsomt.
 Lige så snart den kørte lige ud eller ned af bakke kunne den køre fint hurtigt og accelere fint syns jeg.
-Jeg kunne godt mærke at den ligesom ikke har så meget kraft i sig som min egen scooter (Kymco Super 8, 50 ccm) men den var meget sjov og køre på og kunne sagtens forstille mig man kunne have meget sjov ud af at køre på den og ikke mindst nyde hvor stille den er.
+Jeg kunne godt mærke at den ligesom ikke har så meget kraft i sig som min egen scooter (Kymco Super 8 4T, 50 ccm) men den var meget sjov og køre på og kunne sagtens forstille mig man kunne have meget sjov ud af at køre på den og ikke mindst nyde hvor stille den er.
 Affjedringen var blød så det syns jeg var godt.
 Bremserne var ikke specielt gode men bremse kunne de da.
 En sjov detalje er at det efter sædet er et klistermærke hvor der står noget om at man skal huske at skifte motorolie og bruge karburatorvæske hvilket man jo ikke skal på en elektriske scooter.

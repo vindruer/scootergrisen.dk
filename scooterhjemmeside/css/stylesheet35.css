@@ -635,17 +635,6 @@ div > .filholder:nth-of-type(2n+1) {
 
    padding: 2px; /* tilføj plads (som text-shadow er bred) så skygge ikke bliver klippet */
    color: #fff;
-   text-shadow:
-      -1px -1px 0 black,
-      0 -1px 0 black,
-      1px -1px 0 black,
-      -1px 0 0 black,
-      /*0 0 0 black,*/
-      1px 0 0 black,
-      -1px 1px 0 black,
-      0 1px 0 black,
-      1px 1px 0 black
-      ;
 }
 
 .metadescription { /* h2 */
@@ -658,17 +647,6 @@ div > .filholder:nth-of-type(2n+1) {
 
    padding: 1px; /* tilføj plads (som text-shadow er bred) så skygge ikke bliver klippet */
    color: #fff;
-   text-shadow:
-      -1px -1px 0 black,
-      0 -1px 0 black,
-      1px -1px 0 black,
-      -1px 0 0 black,
-      /*0 0 0 black,*/
-      1px 0 0 black,
-      -1px 1px 0 black,
-      0 1px 0 black,
-      1px 1px 0 black
-      ;
 }
 
 .hrundersideoverskriftholder { /* hr */
@@ -1279,16 +1257,28 @@ button img {
 
 
 
-   background: rgba(0, 0, 0, 0.9);
+   background: rgba(0, 0, 0, 0.7);
 /* ligner lort
    background-image: -webkit-repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.2) 4px)
                     ,-webkit-repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.2) 4px);
 */
-   background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.1) 4px)
+/*   background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.1) 4px)
                     ,repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.1) 4px);
-
+*/
 /*   background: rgba(0, 0, 0, 0.75);*/
 /*   background: black;*/
+
+   background: -moz-linear-gradient(center top , rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)) repeat scroll 0% 0% transparent;
+   background: -webkit-linear-gradient(-90deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)) repeat scroll 0% 0% transparent;
+   background: -ms-linear-gradient(-90deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)) repeat scroll 0% 0% transparent;
+   background: linear-gradient(center top , rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)) repeat scroll 0% 0% transparent;
+
+   border-width: 1px 0px;
+   border-style: solid;
+   border-color: black;
+   border-image: none;
+   box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1) inset;
+
 }
 
 .dropdownmenu .sub {
@@ -1381,6 +1371,9 @@ ul.ulpunktc {
    background: Crimson;
    background: #3C14DC;
 /*   box-shadow: inset 2px 0 2px rgba(0, 0, 0, 0.5), inset 0 2px 2px rgba(0, 0, 0, 0.5);*/
+
+   background: rgba(0, 0, 0, 0.5);
+
 }
 
 .ulpunkta > li:hover > a {
@@ -1550,7 +1543,7 @@ ul.ulpunktc {
    background: rgba(0, 0, 0, 0.3);
    padding: 1em;
    margin-left: 138px; /* billede bredde + margin */
-   box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.25);
+   box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.15);
 }
 
 .clearboth {
@@ -1849,6 +1842,7 @@ ul.ulpunktc {
 
 .bordertype3 {
    border: 1px solid #4D637A;
+   border: 1px solid #000;
 }
 
 .bordertype4 {
@@ -2589,7 +2583,7 @@ screen and (max-width: 540px) {
 
 	.dropdownmenu {
       display: none;
-      /*background-color: #ccc;*/
+      background-color: #ccc;
 	}
 
 	.dropdownmenu li {
@@ -2764,7 +2758,7 @@ screen and (max-width: 540px) {
       margin: 0 1px;
    }
 
-   .en_eller_anden_besked_overst_pa_siden, .altdetoverste {
+   .en_eller_anden_besked_overst_pa_siden, .altdetoverste, .altdetoversteb {
       margin: 0 !IMPORTANT;
       border: 0 !IMPORTANT;
       border-radius: 0 !IMPORTANT;
@@ -2923,15 +2917,25 @@ screen and (max-width: 540px) {
 }
 
 .altdetoverste {
+   color: white;
    background: #9D9D9D; /* fallback */
+   background: #fff; /* fallback */
+/*
    background-image: -webkit-repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.7) 0px, rgba(255, 255, 255, 0.8) 2px, rgba(255, 255, 255, 0.7) 6px);
-   /*background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.7) 0px, rgba(255, 255, 255, 0.8) 2px, rgba(255, 255, 255, 0.7) 6px);*/
+
    background-image: repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 0px, rgba(255, 255, 255, 0.2) 2px, rgba(0, 0, 0, 0.1) 6px);
 
    background-image: -webkit-repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.1) 2px, rgba(255, 255, 255, 0.1) 4px)
                     ,-webkit-repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.1) 2px, rgba(255, 255, 255, 0.1) 4px);
    background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.1) 2px, rgba(255, 255, 255, 0.1) 4px)
                     ,repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.1) 2px, rgba(255, 255, 255, 0.1) 4px);
+*/
+}
+
+.altdetoversteb {
+   background: rgba(255, 255, 255, 0.5);
+   background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7));
+   background: rgba(0, 0, 0, 0.5);
 }
 
 .soiufsdiuf, .soiufsdiuf option {
@@ -3120,9 +3124,20 @@ screen and (max-width: 540px) {
 .breadcrumbs {
    padding: 10px;
 /*   background: rgba(0, 0, 0, 0.5);*/
-   background: black;
-   color: white;
+/*   background: black;
+   color: white;*/
+}
 
+.breadcrumbs a, .breadcrumbs a:active, .breadcrumbs a:visited {
+   color: white;
+   text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+   text-decoration: underline;
+}
+
+.textshadow1 {
    text-shadow:
       -1px -1px 0 black,
       0 -1px 0 black,
@@ -3134,13 +3149,4 @@ screen and (max-width: 540px) {
       0 1px 0 black,
       1px 1px 0 black
       ;
-}
-
-.breadcrumbs a, .breadcrumbs a:active, .breadcrumbs a:visited {
-   color: white;
-   text-decoration: none;
-}
-
-.breadcrumbs a:hover {
-   text-decoration: underline;
 }

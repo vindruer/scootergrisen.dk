@@ -142,7 +142,7 @@ XT50Q-03 (enkeltsæde)<br>
 
    ),'begrænsninger'       => array(
        'begrænstransmis'   => ens('begrænstransmis', '', 'muligvis forreste tandhjul', '', '')
-      ,'begrænstænding'    => ens('begrænstænding', '', '', 'CDi tændingsmodul under sæde', 'ja')
+      ,'begrænstænding'    => ens('begrænstænding', '', '', 'CDi tændingsmodul under sæde', '27 km/t : CDI Under sæde')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
@@ -738,6 +738,7 @@ $databaseright = array(
 //LBXT - T = scooter ?
    ,'(House of Sourcing) Windbell XT50QT-2 LBXT 45 km/t E14195 (e4*2002/24*0308)' => 'typegodkendelser/Kinroad%20Windbell%20%28E14195%29%20udstedt%2019-04-2005.pdf'
    ,'(Bike Danmark Aps) Windbell XT50QT-2 LBXT 45 km/t E14273 (e4*2002/24*0308)' => 'typegodkendelser/Kinroad%20Windbell%20%28E14273%29%20udstedt%2013-05-2005.pdf'
+   ,'(MK-TRADE) Kinroad-Xintian XT50Q-A 27 km/t E16982 (e4*2002/24*1135)'            => 'typegodkendelser/Kinroad-xintian%20-%20%28E16982%29%20udstedt%2022-02-2008.pdf'
    ,'(MK-TRADE) Kinroad XT50QT-2A LBX 28 km/t E16968 (e4*2002/24*1096)' => 'typegodkendelser/Kinroad%20-%20%28E16968%29%20udstedt%2018-02-2008.pdf'
    ,'(Superprices ApS) LBX Little Fish XT50QT-2A 28 km/t E17047 (e4*2002/24*1096)' => 'typegodkendelser/Kinroad%20Little%20Fish%20%28E17047%29%20udstedt%2028-03-2008.pdf'
 
@@ -758,10 +759,14 @@ $databaseright = array(
 //LBXY - Y = offroad ?
 // (LBXYCB3A36X)
    ,'(Bike Danmark Aps) XT50GY YCB3A 45 km/t E14864 (e4*2002/24*0453)' => 'typegodkendelser/Kinroad%20XT%2050%20GY%20%28E14864%29%20udstedt%2003-02-2006.pdf'
+   ,'(Bike Danmark Aps) Kinroad-Xintian XT50Q LBXPCBLA 45 km/t E14196 (e4*2002/24*0381)'            => 'typegodkendelser/Kinroad%20-%20Xin%20Tian%20XT%2050%20Q%20%28E14196%29%20udstedt%2019-04-2005.pdf'
 
    ,'(TEXAS Andreas Petersen A/S) P Prince 45 km/t E14233 (e4*2002/24*0381)' => 'typegodkendelser/Kinroad%20Prince%20%28E14233%29%20udstedt%2002-05-2005.pdf'
    ,'(TEXAS Andreas Petersen A/S) Fresh Wind XT50QT LBXTC 45 km/t E14231 (e4*2002/24*0309)' => 'typegodkendelser/Kinroad%20Fresh%20Wind%20%28E14231%29%20udstedt%2002-05-2005.pdf'
    ,'(TEXAS Andreas Petersen A/S) Kinroad Windbell XT50QT-2 LBXT 45 km/t E14230 (e4*2002/24*0308)' => 'typegodkendelser/Kinroad%20Windbell%20%28E14230%29%20udstedt%2002-05-2005.pdf'
+
+   ,'versus 4T LC LJ50QT-2F 30 km/t E20557 (e4*2002/24*2985)'  => 'typegodkendelser/VGA%20%20Versus%20LC%20%28E20557%29%20udstedt%2020-06-2013.pdf'
+   ,'versus 4T LC LJ50QT-2F 45 km/t E20556 (e4*2002/24*2985)'  => 'typegodkendelser/VGA%20Versus%20LC%20%28E20556%29%20udstedt%2020-06-2013.pdf'
 
 )
 

@@ -30,7 +30,7 @@ Hvis der ikke var nogen lys modstand og man slukkede for forlyset så ville det 
 Når forlyset slukkes så går strømmen igennem modstanden som på den måde holder batteri opladningen stabil.
 
 På Kymco Agility er lysmodstanden på 30 watt 7,5 Ω.
-På Kymco Super 8 er der ikke nogen modstand til forlyset fordi der bruges en lys kontrol boks.
+På Kymco Super 8 4T er der ikke nogen modstand til forlyset fordi der bruges en lys kontrol boks.
 På scootere hvor det ikke er muligt at slukke forlyset er der ikke nogen lysmodstand.
 ').'
 
@@ -46,8 +46,8 @@ På de fleste scootere får den automatiske choker strøm fra generatoren.
 '.visbilled('1', 'billed1249.jpg', 'karburator modstand', false, true).'
 '.visbilled('1', 'billed2733.jpg', 'karburator modstand', false, true).'
 
-På Kymco Super 8 får den automatiske choker strøm fra batteriet (jævnstrøm).
-På Kymco Super 8 sidder modstanden i forbindelse mellem CDI og den automatiske choker.
+På Kymco Super 8 4T får den automatiske choker strøm fra batteriet (jævnstrøm).
+På Kymco Super 8 4T sidder modstanden i forbindelse mellem CDI og den automatiske choker.
 ').'
 '
 

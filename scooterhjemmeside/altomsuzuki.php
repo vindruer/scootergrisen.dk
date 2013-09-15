@@ -279,14 +279,14 @@ $databasecenter = array(
       ,'andet'             => ens('andet', '', '', '', '')
 
    ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+       'begrænstransmis'   => ens('begrænstransmis', '', '', 'Mellem forreste remskivehalvdele er monteret en bøsning med brystbredde 4,0 mm.', '')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
-      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
+      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', 'Resonatorrør påsvejst forreste udstødningsrør ø 22,2 mm, længde 205 mm.', '')
       ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 
@@ -419,14 +419,14 @@ $databasecenter = array(
       ,'andet'             => ens('andet', '', '', '', '')
 
    ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+       'begrænstransmis'   => ens('begrænstransmis', '', '', 'Mellem forreste remskivehalvdele er monteret en bøsning med brystbredde 5,0 mm.', '')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
-      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
+      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', 'Resonatorrør påsvejst forreste udstødningsrør ø 22,2 mm, længde 247 mm.', '')
       ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 
@@ -1399,14 +1399,14 @@ $databasecenter = array(
       ,'andet'             => ens('andet', '', '', '', '')
 
    ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+       'begrænstransmis'   => ens('begrænstransmis', '', '', 'Mellem forreste remskivehalvdele er monteret en bøsning med brystbredde: Variant 1: 3,0 mm. Variant 2: 4,0 mm.<br>Bøs. m/ brystbrd.=5,0mm Mell. forr. remskivehalvd.', '')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
-      ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
-      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
+      ,'begrænsindsug'     => ens('begrænsindsug', '', '', 'I indsugningsrøret er monteret en hærdet bøsning ø 14 mm.', '')
+      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', 'Resonatorrør påsvejst forreste udstødningsrør ø 22,2 mm, længde 205 mm. I forreste udstødningsrør - ved flangen på midten af røret - er fastsvejst et rør ø 17,3 mm. Flangesamlingen er sikret med "sprængbolte".', '')
       ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 

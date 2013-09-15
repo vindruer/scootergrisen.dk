@@ -11,7 +11,6 @@ $filer_der_ikke_skal_vises = array(
    ,'fejl.php'
    ,'hentfil.php'
    ,'motor.php'
-   ,'nyhedsarkiv.php'
    ,'sog.php'
    ,'sogningerfejlbesog.php'
    ,'statestik.php'
@@ -30,7 +29,7 @@ $filer = hentfilliste('filer', $GLOBALS['setup']['datamappe']);
 
 do{
 
-   $tilfeldig_index = array_rand($filer,1);
+   $tilfeldig_index = array_rand($filer, 1);
    $tilfeldig_fil = $filer[$tilfeldig_index];
    $tilfeldig_fil = basename($tilfeldig_fil);
 

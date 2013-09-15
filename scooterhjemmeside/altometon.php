@@ -22,7 +22,7 @@ $databasecenter = array(
       ,'pris'              => ens('pris', '14995', '', '', '')
       ,'hastighed'         => ens('hastighed', '25 og 30 og 45', '', '', '')
       ,'farver'            => ens('farver', 'sort hvid', '', '', '')
-      ,'forhandlere'       => ens('forhandlere', 'http://www.c-reinhardt.dk', 'http://www.koehler-knallerter.dk', 'http://www.tg-motor.dk', '')
+      ,'forhandlere'       => ens('forhandlere', 'http://www.c-reinhardt.dk', 'http://www.koehler-knallerter.dk', 'http://www.tg-motor.dk', 'http://www.hv-care.dk/')
 
    ),'motor'               => array(
        'motormodel'        => ens('motormodel', 'C130A', '', '', '')

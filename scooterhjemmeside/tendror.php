@@ -285,7 +285,7 @@ Tændrøret i en 2 takt motor giver gnist dobbelt så ofte som i en 4 takt motor
 ,'
 egne erfaringer
 ' => '
-Her ses et NGK CR7HSA tændrør efter 2000 km i en Kymco Super 8.
+Her ses et NGK CR7HSA tændrør efter 2000 km i en Kymco Super 8 4T.
 På sideelektroden og isolatoren er der kommet en hård hvid belægning.
 Jeg har læst at den hvide belægning kan skyldes additiver i olie og benzin, olie som kommer ind i forbrændingskammeret, dårlig benzinkvalitet og hvor længe motoren bliver brugt af gangen. Altså hvis man køre korte ture så bliver tændrøret ikke varmt nok til at brænde belægninger af.
 '.visbilled('1', 'billed0492.jpg', 'Tændrør NGK CR7HSA', false, true).'

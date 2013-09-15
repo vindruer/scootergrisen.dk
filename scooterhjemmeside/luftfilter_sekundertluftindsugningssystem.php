@@ -88,12 +88,16 @@ På denne tegning ser det ud til at det sekundære luftfilteret sidder i luftfil
 '.visbilled('1', 'billed2845.jpg', 'pair check valve pair control valve tegning', false, true).'
 
 '.afsnit('slangerne','
-Ifølge servicemanualen til Kymco Super 8 er det meget vigtigt at slange længden er den samme ved eventuelt udskiftning.
+Ifølge servicemanualen til Kymco Super 8 4T er det meget vigtigt at slange længden er den samme ved eventuelt udskiftning.
 Jeg tror det er den tykke slange som har et lille smalt stykke slange limet på hvor længden er vigtig.
 Den tykke slangen som suger frisk luft ind til det sekundære luftfilter har et kort stykke slange limet på som er halvt så tykt som resten af slangen.
 Jeg ved ikke hvorfor den har fået limet en mindre slange på for det må jo mindske luft indsugningen.
 ').'
-'.visbilled('1', 'billed0495.jpg', 'Sekundært luftfilter system', false, true).'
+Her ses det sekundære indsugningssystem som findes på Kymco 4 takt modeller.
+'.visbilled('1', 'billed0495.jpg', 'Sekundært luftfilter system kymco 4 takt', false, true).'
+Her ses det sekundære indsugningssystem som findes på Kymco 2 takt modeller.
+'.visbilled('1', 'billed3873.jpg', 'Sekundært luftfilter system kymco 2 takt', false, true).'
+Kymco kalder systemet for clean air system eller Secondary Air Suction System (SASS).
 '
 
 );

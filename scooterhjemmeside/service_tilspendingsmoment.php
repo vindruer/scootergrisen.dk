@@ -82,7 +82,7 @@ Dette skema kan bruges som guide til hvor meget der skal spændes hvis der ikke 
 '.visbilled('1', 'billed0038.jpg', 'standard tilspændings moment for skruer og møtrikker', false, true).'
 '
 .'
-Standardard tilspændingsmoment fra Kymco Super 8 servicemanual.
+Standardard tilspændingsmoment fra Kymco Super 8 4T servicemanual.
 '.
 box(array('250', '100')
    ,array(

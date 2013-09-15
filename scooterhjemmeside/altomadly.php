@@ -299,7 +299,7 @@ $databasecenter = array(
 
    ),'generelt'            => array(
        'model'             => ens('model', 'adly gazelle', '', '', '')
-      ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
+      ,'ogsåkaldet'        => ens('ogsåkaldet', 'noble ?', '', '', '')
       ,'scootertype'       => ens('scootertype', 'TB-50', '', '', '')
       ,'varianter'         => ens('varianter', 'TB-50 I (en skrivebremse for, noget med dæk)', 'TB-50 II (dobbelt skivebremse for, noget med dæk)', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
@@ -586,7 +586,6 @@ $databaseright = array(
    ,'gazelle servicemanual'         => 'adly_gazelle_servicemanual.pdf'
 
 ),'typegodkendelser' => array(
-   // http://www.scooter-dele.dk/piz.asp?id=1978
     'Jet (ATJT5) 45 km/t S9859'                => 'typegodkendelser/Adly%20Jet%2050%20%28S9859%29%20udstedt%2020-05-1999.pdf'
    ,'D Jet / Cat / Silver Fox 45 km/t E11199 (e4*92/61*0045)'                => 'typegodkendelser/Adly%20Moto%20-%20%28E11199%29%20udstedt%2019-01-2001.pdf'
    ,'D TB SS 45 km/t E11200 (e4*92/61*0044)'                => 'typegodkendelser/Adly%20Moto%20-%20%28E11200%29%20udstedt%2019-01-2001.pdf'

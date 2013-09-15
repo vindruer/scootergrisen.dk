@@ -162,6 +162,7 @@ $databaseright = array(
 
 'download' => array(
     'metro brugermanual'              => 'a2b_metro_brugermanual.pdf'
+   ,'metro servicemanual'             => 'a2b_metro_servicemanual.pdf'
 
 ),'typegodkendelser' => array(
     'metro 25 km/t E18985 (e13*2002/24*0416)'=> 'typegodkendelser/A2B%20Metro%20%28E18985%29%20udstedt%2009-03-2011.pdf'

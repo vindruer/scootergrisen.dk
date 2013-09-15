@@ -726,7 +726,67 @@ $databaseright = array(
    ,'jigger city 30 km/t E19161 (e9*2002/24*0354)' => 'typegodkendelser/Kreidler%20Jigger%20City%2050%20(E19161)%20udstedt%2024-06-2011.pdf'
    ,'jigger city 45 km/t E19162 (e9*2002/24*0354)' => 'typegodkendelser/Kreidler%20Jigger%20City%2050%20(E19162)%20udstedt%2024-06-2011.pdf'
 
-)                      
+
+
+   ,'Galactica 2.0 50 DD SG 30 km/t E19123 (e9*2002/24*0336)'            => 'typegodkendelser/Kreidler%20Galactica%202.0%2050%20DD%20%28E19123%29%20udstedt%2026-05-2011.pdf'
+   ,'Galactica 2.0 50 DD SG 45 km/t E19124 (e9*2002/24*0336)'            => 'typegodkendelser/Kreidler%20Galactica%202.0%2050%20DD%20%28E19124%29%20udstedt%2026-05-2011.pdf'
+      //1E40QMB
+      //,'begrænscontroller' => ens('begrænscontroller', '', '50XS2T30-HY CDI boks u. dæksel u. fodplade', '50XS2T45-HY CDI boks u. dæksel u. fodplade', '')
+
+   ,'Hiker 2.0 50 DD S SG 30 km/t E19125 (e9*2002/24*0336)'            => 'typegodkendelser/Kreidler%20Hiker%202.0%2050%20DD%20S%20%28E19125%29%20udstedt%2026-05-2011.pdf'
+   ,'Hiker 2.0 50 DD S SG 45 km/t E19126 (e9*2002/24*0336)'            => 'typegodkendelser/Kreidler%20Hiker%202.0%2050%20DD%20S%20%28E19126%29%20udstedt%2026-05-2011.pdf'
+
+   ,'Jigger 50 GY 45 km/t E17784 (e9*2002/24*0354)'            => 'typegodkendelser/Kreidler%20Jigger%2050%20%28E17784%29%20udstedt%2028-08-2009.pdf'
+   ,'Jigger50 GY 30 km/t E17785 (e9*2002/24*0354)'            => 'typegodkendelser/Kreidler%20Jigger50%20%28E17785%29%20udstedt%2028-08-2009.pdf'
+      //1E40QMB
+      //,'begrænstænding'    => ens('begrænstænding', '', 'CDI boks u. dæksel u. fodplade (50XS2T30-HY)', 'CDI boks u. dæksel u. fodplade (50XS2T45-HY)', '')
+
+   ,'RMC-E-50 Hiker SG 30 km/t E17783 (e9*2002/24*0336)'            => 'typegodkendelser/Kreidler%20RMC-E-50%20Hiker%20%28E17783%29%20udstedt%2028-08-2009.pdf'
+//3.50 X 13
+//3.50 X 13
+//130/70 - 13
+//130/70 - 13
+//1E40QMB
+//PZ19J
+//50XS2T-30-HY
+//CDI boks u. dæksel u. fodplade
+//køreklar : 91 kg
+//lyddæmper : E9 KR HH475T-B
+   ,'RMC-E-50 Hiker Sport SG 45 km/t E17683 (e9*2002/24*0336)'            => 'typegodkendelser/Kreidler%20RMC-E-50%20Hiker%20Sport%20%28E17683%29%20udstedt%2017-06-2009.pdf'
+//3.50 X 13
+//3.50 X 13
+//130/60 - 13
+//130/60 - 13
+//1E40QMB
+//PZ19J
+//50XS 2T 45-HY
+//CDI boks u. dæksel u. fodplade
+//køreklar : 91 kg
+//lyddæmper : E9 KR HH475T-A
+   ,'RMC-E-50 Hiker Sport SG 30 km/t E17741 (e9*2002/24*0336)'            => 'typegodkendelser/Kreidler%20RMC-E-50%20Hiker%20Sport%20%28E17741%29%20udstedt%2016-07-2009.pdf'
+//3.50 X 13
+//3.50 X 13
+//130/60 - 13
+//130/60 - 13
+//1E40QMB
+//PZ19J
+//50XS2T30-HY
+//CDI boks u. dæksel u. fodplade
+//køreklar : 88 kg
+//lyddæmper : E9 KR HH475T-A
+
+   ,'RMC-H-50 Galactia NB 45 km/t E17763 (e9*2002/24*0348)'            => 'typegodkendelser/Kreidler%20RMC-H-50%20Galactia%20%28E17763%29%20udstedt%2013-08-2009.pdf'
+   ,'RMC-H-50 Galactia NB 30 km/t E17764 (e9*2002/24*0348)'            => 'typegodkendelser/Kreidler%20RMC-H-50%20Galactia%20%28E17764%29%20udstedt%2013-08-2009.pdf'
+      //50XS 2T 45-HY
+      //50XS 2T 30-HY
+      //CDI boks u. dæksel u. fodplade
+      //1E40QMB
+      //3.50 X 13
+      //3.50 X 13
+      //130/60 - 13
+      //130/60 - 13
+
+)
 
 );
 

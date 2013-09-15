@@ -49,18 +49,18 @@ Her ses et speedometerdrev.
 Speedometerdrevet sidder mellem forhjulet fælg og det ene gaffelben.
 '.visbilled('1', 'billed1531.jpg', 'speedometerdrev', false, true).'
 Fjern møtrikken på forhjulsakslen.
-'.visbilled('1', 'billed1818.jpg', 'kymco super 8 forhjul afmontering af aksel', false, true).'
+'.visbilled('1', 'billed1818.jpg', 'kymco super 8 4T forhjul afmontering af aksel', false, true).'
 Fjern bolten.
-'.visbilled('1', 'billed1819.jpg', 'kymco super 8 forhjul afmontering af aksel', false, true).'
+'.visbilled('1', 'billed1819.jpg', 'kymco super 8 4T forhjul afmontering af aksel', false, true).'
 Træk forhjulet lidt ud og fjern speedometerdrevet fra fælgen.
-'.visbilled('1', 'billed1820.jpg', 'kymco super 8 forhjul speedometerdrev', false, true).'
+'.visbilled('1', 'billed1820.jpg', 'kymco super 8 4T forhjul speedometerdrev', false, true).'
 Læg mærke til de 2 hak i speedometerdrevet og fælgen som skal passe ind i hinanden når speedometerdrevet monteres igen.
 '.visbilled('1', 'billed1821.jpg', 'speedometerdrev', false, true).'
 '.visbilled('1', 'billed1822.jpg', 'forhjulsleje nav hakket til speedometerdrev', false, true).'
 Sæt noget imellem bremseklodserne i samme tykkelse som bremseskiven så der ikke sker noget hvis man kommer til at klemme på bremsegrebet.
 '.visbilled('1', 'billed1823.jpg', 'bremsecaliper bremseklodser', false, true).'
 Her ses forhjulet.
-'.visbilled('1', 'billed1824.jpg', 'kymco super 8 forhjul', false, true).'
+'.visbilled('1', 'billed1824.jpg', 'kymco super 8 4T forhjul', false, true).'
 Her ses et afstandsstykke.
 '.visbilled('1', 'billed1825.jpg', 'afstandsstykke bøsning ved forhjulsleje', false, true).'
 En stift holder gevinddelen.

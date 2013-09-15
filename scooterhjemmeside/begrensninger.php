@@ -255,6 +255,7 @@ galleriholder(array(
 .'
 
 På nogle CDI bokse kan kan fjerne begrænsningen ved at fjerne en ledning fra stikket hvor der går en ledning ud fra CDI boksen og ind igen.
+'.ahref('http://www.youtube.com/watch?v=fDGauzkqaDA', 'Video - Fjern begræsning på CDI boks').'
 '.
 galleriholder(array(
     galleri('highslide', '', 'billed0196.jpg', array('CDI begrænsning ledning på Kymco Super 8', ''))
@@ -446,7 +447,7 @@ galleriholder(array(
 Det lader til at en stiv koblingstrykfjeder er velegnet til racing brug og får bæltet til at tage hurtigere fat.
 Og at en svag koblingstrykfjeder er velegnet til by kørsel, men at bæltet ikke bider så godt fast, altså langsom acceleration.
 
-På min Kymco Super 8 sidder en stram koblingstrykfjeder med en klat blå maling.
+På min Kymco Super 8 4T sidder en stram koblingstrykfjeder med en klat blå maling.
 Det lader til at en hvid eller grøn (malossi) fjeder skulle være bedre på min scooter.
 ').'
 
@@ -541,9 +542,19 @@ Knækbolte kan også sidde hvor udstødningen monteres på cylinderen eller hvor
 '
 
 ,'
+motorblok
+' => '
+I motorblokken hvor cylinderen sættes i kan være en kant der forhændre andet end den originale cylinder at blive sat i.
+Den originale cylinder har et indhak i cylinderskørtet så det kan sættes i.
+
+For at andre cylindre kan sættes i kan man slibe kanten væk i motorblokken.
+Kan ses her '.ahref('http://www.scootergalleri.dk/fotoalbum/tuningprojekter/83105-hjaelp_til_speedfight_2').'
+'
+
+,'
 egne erfaringer
 ' => '
-Her er mine erfaringer fra min Kymco Super 8 (50 cm³ 30 km/t).
+Her er mine erfaringer fra min Kymco Super 8 4T (50 cm³ 30 km/t).
 Hastighederne vist her er dem som vises på speedometeret. Speedometeret viser 5-10 % for meget af hvad den rigtige hastighed er.
 
 '.afsnit('med alle begrænsninger','

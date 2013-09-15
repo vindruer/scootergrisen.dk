@@ -22,12 +22,12 @@ Skru bunden af karburatoren.
 Der ligger gerne noget snavs i bunden som kan fjernes med karburatorrens.
 '.visbilled('1', 'billed2663.jpg', 'slide karburator bund', false, true).'
 Skru dyser og strålerør ud.
-'.visbilled('1', 'billed1456.jpg', 'CV karburator fra kymco super 8 svømmer', false, true).'
+'.visbilled('1', 'billed1456.jpg', 'CV karburator fra kymco super 8 4T svømmer', false, true).'
 
 Sprøjt/blæs igennem dyser og strålerør.
 
 Kontroller at der er et fint rundt hul igennem dyserne.
-'.visbilled('1', 'billed1457.jpg', 'tomgangsdyse hoveddyse fra kymco super 8 karburator', false, true).'
+'.visbilled('1', 'billed1457.jpg', 'tomgangsdyse hoveddyse fra kymco super 8 4T karburator', false, true).'
 På siden af strålerøret og tomgangsdysen er nogen små huller der også skal sprøjtes/blæses igennem.
 '.visbilled('1', 'billed1459.jpg', 'nåledyse hoveddyse strålerør tomgangsdyse', false, true).'
 
@@ -135,7 +135,7 @@ Når der i manualen står at blandingsskruen skal være 1,5 til 2,5 åben så be
 Når blandingsskruen skrues ibund så drej stille og roligt indtil du kan mærke den stopper.
 Blandingsskruen har et meget fint gevind som formodentligt slet kan ødelægges hvis man drejer for hårdt.
 
-Jeg har checket blandingsskruen på en kymco super 8 og den var 3/4 omgang skruet ud og på en kymco agility var den 5/8 omgang skruet ud.
+Jeg har checket blandingsskruen på en kymco super 8 4T og den var 3/4 omgang skruet ud og på en kymco agility var den 5/8 omgang skruet ud.
 Det passer ikke med de 2 ± ½ omgange som står i servicemanualerne. Jeg ved ikke hvorfor det ikke stemmer.
 
 '.afsnit('Honda Zoomer med karburator data','

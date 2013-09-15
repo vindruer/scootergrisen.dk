@@ -15,19 +15,22 @@ $databasecenter_b = array(
 '
 el diagrammer
 ' => '
-Her er et el diagram som skulle passe til Giantco Sprint, Venus og G-Buddy.
-Det skulle også passe til Giantco Stealth bortset fra at der på Stealth er 1 ekstra forlyspære og nogle ekstra pærer ved instrumtpanelet.
-På dette el diagram får forlyset jævnstrøm fra spændingsregulatoren.
+Her følger 3 forskellige el diagrammer til Giantco scootere. Først et sort/hvid, så et i farver også et jeg selv har lavet.
+
+Her er et sort/hvid el diagram som skulle passe til Giantco Sprint, Venus og G-Buddy.
+Det skulle også passe til Giantco Stealth bortset fra at der på Stealth er en ekstra forlyspære og nogle ekstra pærer ved instrumentpanelet.
+På dette el diagram får forlyset jævnstrøm fra spændingsregulatoren (øverste venstre ledning gul til sort).
 '.visbilled('1', 'billed1239.jpg', 'giantco el diagram', false, true).'
 
 Her er et el diagram med farver.
-På dette el diagram får forlyset vækselstrøm fra generatoren.
+På dette el diagram får forlyset vækselstrøm fra generatoren (gul ledning fra stator går til lyskontakt til højre på styret).
 '.visfil('1', 'scooterhjemmeside/download/giantco_eldiagram.pdf').'
 
-Ud fra det sort/hvide el diagram har jeg lavet dette experimentale el diagram i vektor grafik med farver.
+Ud fra det sort/hvide el diagram har jeg lavet dette experimentale el diagram i vektor grafik med farver i forskellige formater.
+'.visbilled('1', 'billed1757.jpg', 'giantco experimental el diagram', false, true).'
+Her er det samme experimentale el diagram i PDF og SVG format.
 '.visfil('1', 'scooterhjemmeside/download/giantco_eldiagram_experimental.pdf')
 .visfil('1', 'scooterhjemmeside/download/giantco_eldiagram_experimental.svg').'
-'.visbilled('1', 'billed1757.jpg', 'giantco experimental el diagram', false, true).'
 
 '.afsnit('bemærk', '
 Det er en lille forskel på det sort/hvide el diagram og det med farver.
@@ -51,7 +54,7 @@ Ud fra de billeder man kan se hos T Hansen hvor man kan se ledningsfarverne på 
 ,'
 bonus info
 ' => '
-giantcohk.com virker ikke mere checket den 12-01-2012 ... sjovt nok efter T Hansen er holdt op med det mærke.
+giantcohk.com virker ikke mere (checket den 12-01-2012 ... sjovt nok efter T Hansen er holdt op med det mærke).
 '
 
 );
@@ -189,7 +192,7 @@ $databasecenter = array(
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
-      ,'begrænscontroller' => ens('begrænscontroller', 'begrænsningen kan fjernes ved at afmonterer et sort stik med hvide ledninger som går ud af controlleren', '', '', '')
+      ,'begrænscontroller' => ens('begrænscontroller', '', '', '', 'begrænsningen kan fjernes ved at afmonterer et sort stik med hvide ledninger som går ud af controlleren')
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
       ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
@@ -206,16 +209,16 @@ $databasecenter = array(
    ),'generelt'            => array(
        'model'             => ens('model', 'giantco G-10', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
-      ,'scootertype'       => ens('scootertype', '', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'HY-T-10', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
    ),'motor'               => array(
-       'motormodel'        => ens('motormodel', '', '', '', '')
-      ,'motortype'         => ens('motortype', '', '', '', '')
+       'motormodel'        => ens('motormodel', '1PE40QMB', '', '', '')
+      ,'motortype'         => ens('motortype', '2 takt', '', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
       ,'volume'            => ens('volume', '', '', '', '')
       ,'køling'            => ens('køling', '', '', '', '')
@@ -226,7 +229,7 @@ $databasecenter = array(
       ,'kompression'       => ens('kompression', '', '', '', '')
       ,'tomgang'           => ens('tomgang', '', '', '', '')
       ,'nomieffektogheste' => ens('nomieffektogheste', '', '', '', '')
-      ,'maxeffektogheste'  => ens('maxeffektogheste', '', '', '', '')
+      ,'maxeffektogheste'  => ens('maxeffektogheste', '1,84', 'kw', '', '(ifølge 30 og 45 km/t typegodkendelse)')
       ,'moment'            => ens('moment', '', '', '', '')
       ,'karburator'        => ens('karburator', '', '', '', '')
       ,'brændstof indsp..' => ens('brændstof indsp..', '', '', '', '')
@@ -247,10 +250,10 @@ $databasecenter = array(
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '', '', '', '')
-      ,'fælgbag'           => ens('fælg', '', '', '', '')
-      ,'dækfor'            => ens('dæk1', '', '', '', '')
-      ,'dækbag'            => ens('dæk1', '', '', '', '')
+       'fælgfor'           => ens('fælg', '3.50', '13', '', '')
+      ,'fælgbag'           => ens('fælg', '3.50', '13', '', '')
+      ,'dækfor'            => ens('dæk1', '130', '60', '13', '')
+      ,'dækbag'            => ens('dæk1', '130', '60', '13', '')
       ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
       ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
       ,'affjedringfor'     => ens('affjedringfor', '', '', '', '')
@@ -325,7 +328,7 @@ $databasecenter = array(
       ,'andet'             => ens('andet', '', '', '', '')
 
    ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+       'begrænstransmis'   => ens('begrænstransmis', '', '10,5 mm bøsning i forreste remskive', '6,8 mm bøsning i forreste remskive', '')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
@@ -333,7 +336,7 @@ $databasecenter = array(
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
       ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
-      ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
+      ,'begrænsstelnum'    => ens('begrænsstelnum', '', 'Tegn nr. 12 i stelnummeret er "3" og angiver maksimal hastighed = 30 km/t.', 'Tegn nr. 12 i stelnummeret er "4" og angiver maksimal hastighed = 45 km/t.', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 
    )
@@ -483,7 +486,7 @@ $databasecenter = array(
    ),'generelt'            => array(
        'model'             => ens('model', 'giantco lambros', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
-      ,'scootertype'       => ens('scootertype', '', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'HY50QT-20A', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
       ,'hastighed'         => ens('hastighed', '', '', '', '')
@@ -491,8 +494,8 @@ $databasecenter = array(
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
    ),'motor'               => array(
-       'motormodel'        => ens('motormodel', '', '', '', '')
-      ,'motortype'         => ens('motortype', '', '', '', '')
+       'motormodel'        => ens('motormodel', '1PE40QMB', '', '', '')
+      ,'motortype'         => ens('motortype', '2 takt', '', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
       ,'volume'            => ens('volume', '', '', '', '')
       ,'køling'            => ens('køling', '', '', '', '')
@@ -503,7 +506,7 @@ $databasecenter = array(
       ,'kompression'       => ens('kompression', '', '', '', '')
       ,'tomgang'           => ens('tomgang', '', '', '', '')
       ,'nomieffektogheste' => ens('nomieffektogheste', '', '', '', '')
-      ,'maxeffektogheste'  => ens('maxeffektogheste', '', '', '', '')
+      ,'maxeffektogheste'  => ens('maxeffektogheste', '1,84', 'kw', '', '(ifølge 30 og 45 km/t typegodkendelse)')
       ,'moment'            => ens('moment', '', '', '', '')
       ,'karburator'        => ens('karburator', '', '', '', '')
       ,'brændstof indsp..' => ens('brændstof indsp..', '', '', '', '')
@@ -524,10 +527,10 @@ $databasecenter = array(
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '', '', '', '')
-      ,'fælgbag'           => ens('fælg', '', '', '', '')
-      ,'dækfor'            => ens('dæk1', '', '', '', '')
-      ,'dækbag'            => ens('dæk1', '', '', '', '')
+       'fælgfor'           => ens('fælg', '3.50', '12', '', '')
+      ,'fælgbag'           => ens('fælg', '3.50', '12', '', '')
+      ,'dækfor'            => ens('dæk1', '120', '70', '12', '')
+      ,'dækbag'            => ens('dæk1', '130', '70', '12', '')
       ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
       ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
       ,'affjedringfor'     => ens('affjedringfor', '', '', '', '')
@@ -602,7 +605,7 @@ $databasecenter = array(
       ,'andet'             => ens('andet', '', '', '', '')
 
    ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+       'begrænstransmis'   => ens('begrænstransmis', '', '10,5 mm bøsning i forreste remskive', '6,8 mm bøsning i forreste remskive', '')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
@@ -610,7 +613,7 @@ $databasecenter = array(
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
       ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
-      ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
+      ,'begrænsstelnum'    => ens('begrænsstelnum', '', 'Tegn 12 i stelnummeret er "3" og angiver den maksimale hastighed = 30 km/t.', 'Tegn 12 i stelnummeret er "4" og angiver den maksimale hastighed = 45 km/t.', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 
    )
@@ -623,16 +626,16 @@ $databasecenter = array(
    ),'generelt'            => array(
        'model'             => ens('model', 'giantco spartan', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
-      ,'scootertype'       => ens('scootertype', '', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'HY50QT-20', 'd3 (30 km/t)', 'd4 (45 km/t)', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
    ),'motor'               => array(
-       'motormodel'        => ens('motormodel', '', '', '', '')
-      ,'motortype'         => ens('motortype', '', '', '', '')
+       'motormodel'        => ens('motormodel', '1PE40QMB', '', '', '')
+      ,'motortype'         => ens('motortype', '2 takt', '', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
       ,'volume'            => ens('volume', '', '', '', '')
       ,'køling'            => ens('køling', '', '', '', '')
@@ -643,7 +646,7 @@ $databasecenter = array(
       ,'kompression'       => ens('kompression', '', '', '', '')
       ,'tomgang'           => ens('tomgang', '', '', '', '')
       ,'nomieffektogheste' => ens('nomieffektogheste', '', '', '', '')
-      ,'maxeffektogheste'  => ens('maxeffektogheste', '', '', '', '')
+      ,'maxeffektogheste'  => ens('maxeffektogheste', '1,84', 'kw', '', '(ifølge 30 og 45 km/t typegodkendelse)')
       ,'moment'            => ens('moment', '', '', '', '')
       ,'karburator'        => ens('karburator', '', '', '', '')
       ,'brændstof indsp..' => ens('brændstof indsp..', '', '', '', '')
@@ -664,10 +667,10 @@ $databasecenter = array(
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '', '', '', '')
-      ,'fælgbag'           => ens('fælg', '', '', '', '')
-      ,'dækfor'            => ens('dæk1', '', '', '', '')
-      ,'dækbag'            => ens('dæk1', '', '', '', '')
+       'fælgfor'           => ens('fælg', '3.50', '12', '', '')
+      ,'fælgbag'           => ens('fælg', '3.50', '12', '', '')
+      ,'dækfor'            => ens('dæk1', '120', '70', '12', '')
+      ,'dækbag'            => ens('dæk1', '130', '70', '12', '')
       ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
       ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
       ,'affjedringfor'     => ens('affjedringfor', '', '', '', '')
@@ -742,7 +745,7 @@ $databasecenter = array(
       ,'andet'             => ens('andet', '', '', '', '')
 
    ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+       'begrænstransmis'   => ens('begrænstransmis', '', '10,5 mm bøsning i forreste remskive', '6,8 mm bøsning i forreste remskive', '')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
@@ -750,7 +753,7 @@ $databasecenter = array(
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
       ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
-      ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
+      ,'begrænsstelnum'    => ens('begrænsstelnum', '', 'Tegn 12 i stelnummeret er "3" og angiver den maksimale hastighed = 30 km/t.', 'Tegn 12 i stelnummeret er "4" og angiver den maksimale hastighed = 45 km/t.', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 
    )
@@ -1200,20 +1203,26 @@ $databaseright = array(
    ,'giantco filer med kodebeskyttelse (jeg kender ikke koden)' => 'giantco_kodebeskyttet.zip'
 
 ),'typegodkendelser' => array(
-    'e-Buddy 30 km/t E17906 (e4*2002/24*2403)'  => 'typegodkendelser/Giantco%20e-Buddy%20%28E17906%29%20udstedt%2014-12-2009.pdf'
-   ,'e-Buddy 45 km/t E17907 (e4*2002/24*2403)'  => 'typegodkendelser/Giantco%20e-Buddy%20%28E17907%29%20udstedt%2014-12-2009.pdf'
-   ,'g-Buddy 30 km/t E17894 (e4*92/61*0172)'    => 'typegodkendelser/Giantco%20g-Buddy%20%28E17894%29%20udstedt%2026-11-2009.pdf'
-   ,'g-Buddy 45 km/t E17895 (e4*92/61*0172)'    => 'typegodkendelser/Giantco%20g-Buddy%20%28E17895%29%20udstedt%2026-11-2009.pdf'
-   ,'sprint 30 km/t E15465 (e4*92/61*0172)'     => 'typegodkendelser/Giantco%20Sprint%20SE%20%28E15465%29%20udstedt%2001-06-2006.pdf'
-   ,'sprint 30 km/t E15465 (e4*92/61*0172) 2'   => 'typegodkendelser/Giantco%20Sprint%20SE%20%28E15465%29%20udstedt%2001-06-2006_2.pdf'
-   ,'sprint 45 km/t E14667 (e4*92/61*0172)'     => 'typegodkendelser/Giantco%20Sprint%20SE%20%28E14667%29%20udstedt%2021-11-2005.pdf'
-   ,'sprint 45 km/t E14667 (e4*92/61*0172) 2'   => 'typegodkendelser/Giantco%20Sprint%20SE%20%28E14667%29%20udstedt%2021-11-2005_2.pdf'
-   ,'stealth 30 km/t E16843 (e4*2002/24*1785)'  => 'typegodkendelser/Giantco%20Stealth%20%28E16843%29%20udstedt%2008-01-2008.pdf'
-   ,'stealth 45 km/t E16844 (e4*2002/24*1785)'  => 'typegodkendelser/Giantco%20Stealth%20%28E16844%29%20udstedt%2008-01-2008.pdf'
-   ,'venus 30 km/t E15917 (e4*2002/24*0330)'    => 'typegodkendelser/Giantco%20Venus%20%28E15917%29%20udstedt%2031-10-2006.pdf'
-   ,'venus 45 km/t E15918 (e4*2002/24*0330)'    => 'typegodkendelser/Giantco%20Venus%20%28E15918%29%20udstedt%2031-10-2006.pdf'
-   ,'venus II 30 km/t E18077 (e4*2002/24*0330)' => 'typegodkendelser/Giantco%20Venus%20II%20%28E18077%29%20udstedt%2010-03-2010.pdf'
-   ,'venus II 45 km/t E18076 (e4*2002/24*0330)' => 'typegodkendelser/Giantco%20Venus%20II%20%28E18076%29%20udstedt%2010-03-2010.pdf'
+    'E-Buddy 30 km/t E17906 (e4*2002/24*2403)'  => 'typegodkendelser/Giantco%20e-Buddy%20%28E17906%29%20udstedt%2014-12-2009.pdf'
+   ,'E-Buddy 45 km/t E17907 (e4*2002/24*2403)'  => 'typegodkendelser/Giantco%20e-Buddy%20%28E17907%29%20udstedt%2014-12-2009.pdf'
+   ,'G-Buddy 30 km/t E17894 (e4*92/61*0172)'    => 'typegodkendelser/Giantco%20g-Buddy%20%28E17894%29%20udstedt%2026-11-2009.pdf'
+   ,'G-Buddy 45 km/t E17895 (e4*92/61*0172)'    => 'typegodkendelser/Giantco%20g-Buddy%20%28E17895%29%20udstedt%2026-11-2009.pdf'
+   ,'G-10 30 km/t E18075 (e4*2002/24*1785)'     => 'typegodkendelser/Giantco%20G10%20%28E18075%29%20udstedt%2010-03-2010.pdf'
+   ,'G-10 45 km/t E18074 (e4*2002/24*1785)'     => 'typegodkendelser/Giantco%20G10%20%28E18074%29%20udstedt%2010-03-2010.pdf'
+   ,'Lambros 30 km/t E17555 (e4*2002/24*1785)'  => 'typegodkendelser/Giantco%20Lambros%20%28E17555%29%20udstedt%2010-03-2009.pdf'
+   ,'Lambros 45 km/t E17556 (e4*2002/24*1785)'  => 'typegodkendelser/Giantco%20Lambros%20%28E17556%29%20udstedt%2010-03-2009.pdf'
+   ,'Spartan 30 km/t E17271 (e4*2002/24*1785)'  => 'typegodkendelser/Giantco%20Spartan%20%28E17271%29%20udstedt%2029-10-2008.pdf'
+   ,'Spartan 45 km/t E17270 (e4*2002/24*1785)'  => 'typegodkendelser/Giantco%20Spartan%20%28E17270%29%20udstedt%2023-10-2008.pdf'
+   ,'Sprint 30 km/t E15465 (e4*92/61*0172)'     => 'typegodkendelser/Giantco%20Sprint%20SE%20%28E15465%29%20udstedt%2001-06-2006.pdf'
+   ,'Sprint 30 km/t E15465 (e4*92/61*0172) 2'   => 'typegodkendelser/Giantco%20Sprint%20SE%20%28E15465%29%20udstedt%2001-06-2006_2.pdf'
+   ,'Sprint 45 km/t E14667 (e4*92/61*0172)'     => 'typegodkendelser/Giantco%20Sprint%20SE%20%28E14667%29%20udstedt%2021-11-2005.pdf'
+   ,'Sprint 45 km/t E14667 (e4*92/61*0172) 2'   => 'typegodkendelser/Giantco%20Sprint%20SE%20%28E14667%29%20udstedt%2021-11-2005_2.pdf'
+   ,'Stealth 30 km/t E16843 (e4*2002/24*1785)'  => 'typegodkendelser/Giantco%20Stealth%20%28E16843%29%20udstedt%2008-01-2008.pdf'
+   ,'Stealth 45 km/t E16844 (e4*2002/24*1785)'  => 'typegodkendelser/Giantco%20Stealth%20%28E16844%29%20udstedt%2008-01-2008.pdf'
+   ,'Venus 30 km/t E15917 (e4*2002/24*0330)'    => 'typegodkendelser/Giantco%20Venus%20%28E15917%29%20udstedt%2031-10-2006.pdf'
+   ,'Venus 45 km/t E15918 (e4*2002/24*0330)'    => 'typegodkendelser/Giantco%20Venus%20%28E15918%29%20udstedt%2031-10-2006.pdf'
+   ,'Venus II 30 km/t E18077 (e4*2002/24*0330)' => 'typegodkendelser/Giantco%20Venus%20II%20%28E18077%29%20udstedt%2010-03-2010.pdf'
+   ,'Venus II 45 km/t E18076 (e4*2002/24*0330)' => 'typegodkendelser/Giantco%20Venus%20II%20%28E18076%29%20udstedt%2010-03-2010.pdf'
 
 )
 

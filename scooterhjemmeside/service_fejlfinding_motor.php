@@ -19,7 +19,7 @@ Det kan for eksempel være 10:1.
 
 10:1 betyder at når stemplet bevæger sig fra sin nederste position til sig øverste position så presser den indholdet i cylinderen sammen så det fylder 10 gange mindre.
 '.visbilled('1', 'billed0526.jpg', 'kompression', false, true).'
-I Kymco Super 8 servicemanualen står der at cylinder kompressionen er 11:1 og at kompressions trykket er 14-18 kg/cm².
+I Kymco Super 8 4T servicemanualen står der at cylinder kompressionen er 11:1 og at kompressions trykket er 14-18 kg/cm².
 
 Kompressionen kan testes med en '.ahref('verktoj.php#kompressionstester', 'kompressionstester').'.
 '
@@ -48,7 +48,7 @@ Her er målt cirka 135 PSI (930 KPascal).
 
 Sammenlign målingen med det der står i scooterens servicemanual.
 
-Kymco Super 8 skal have et tryk på 16-18 kg/cm².
+Kymco Super 8 4T skal have et tryk på 16-18 kg/cm².
 Sym Mio skal have et tryk på 9 ± 2 kg/cm².
 I "Haynes 4768" bogen står at en måling omkring 190 PSI (13 Bar, 13 Kg/cm², 1310 Kpascal) indikere at cylinderen er i god stand.
 

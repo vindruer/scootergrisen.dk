@@ -47,6 +47,18 @@ function initialize(){
 
    if (google !== undefined) {
 
+var styles = [
+  {
+    featureType: "poi",
+    elementType: "labels",
+    stylers: [
+      { visibility: "off" }
+    ]
+  }
+];
+
+var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
+
       // når man inslæser en kml fil så zoomer og centrers kortet automatisk
       // i forhold til indholdet så disse indstillinger ignoreres
       latlng = new google.maps.LatLng(56.18, 11.544800),
@@ -58,6 +70,7 @@ function initialize(){
          //mapTypeId: google.maps.MapTypeId.ROADMAP
          //mapTypeId: google.maps.MapTypeId.SATELLITE
          mapTypeId: google.maps.MapTypeId.HYBRID
+         //mapTypeIds: [google.maps.MapTypeId.HYBRID, \'map_style\']
          ,
          mapTypeControlOptions: {
             style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR // DEFAULT | HORIZONTAL_BAR | DROPDOWN_MENU
@@ -68,6 +81,9 @@ function initialize(){
       };
 
       map = new google.maps.Map(kortholder, myOptions);
+
+      //map.mapTypes.set(\'map_style\', styledMap);
+      //map.setMapTypeId(\'map_style\');
 
       //kmlurl = "http://scootergrisen.dk/scooterhjemmeside/kml/26012012.kml";
       kmlurl = "http://scootergrisen.dk/scooterhjemmeside/kml/1.php";

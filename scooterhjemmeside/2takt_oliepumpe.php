@@ -32,6 +32,8 @@ Her ses en oliepumpe som vist nok kaldes en ekstern oliepumpe eller aksel drevet
 '.visbilled('1', 'billed1441.jpg', 'oliepumpe', false, true).'
 Her ses den eksterne oliepumpe monteret oppe fra.
 '.visbilled('1', 'billed1440.jpg', 'oliepumpe motor', false, true).'
+'.visbilled('1', 'billed3871.jpg', 'oliepumpe i motor', false, true).'
+'.visbilled('1', 'billed3872.jpg', 'oliepumpe på vej ud af motor', false, true).'
 Oliepumpens aksel går gennem et hul i motorblokken og tænderne får kontakt med krumtapakslen som driver oliepumpen rundt.
 '.visbilled('1', 'billed1442.jpg', 'oliepumpe', false, true).'
 

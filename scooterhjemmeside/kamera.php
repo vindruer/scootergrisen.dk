@@ -35,13 +35,13 @@ Her er links til nogen af dem der optager mens de køre så du kan se hvad det h
 box(array('170', '170', '170', '170')
    ,array(
        array('bruger','kamera','hvor','køretøj')
-      ,array(''.ahref('http://www.youtube.com/user/TheGardenSnake', 'TheGardenSnake').'','Drift','Canada (eller også er det USA)','supermoto')
-      ,array(''.ahref('http://www.youtube.com/user/13mordeth', '13mordeth').'','almindeligt fladt kamera under visiret','Taiwan','motorcykel<br>scooter')
-      ,array(''.ahref('http://www.youtube.com/user/SonofthewindsInc', 'SonofthewindsInc').'','GoPro Hero','Storbritannien London','cykel')
+      ,array(''.ahref('http://www.youtube.com/user/TheGardenSnake', 'TheGardenSnake').'','Drift / GoPro','Canada (eller også er det USA)','supermoto')
+      ,array(''.ahref('http://www.youtube.com/user/13mordeth', '13mordeth').'','kompakt kamera under visiret','Taiwan','motorcykel<br>scooter')
+      ,array(''.ahref('http://www.youtube.com/user/SonofthewindsInc', 'SonofthewindsInc').'','GoPro','Storbritannien London','cykel')
       ,array(''.ahref('http://www.youtube.com/user/187Premises', '187Premises').'',              'Contour',               'Storbritannien London', 'motorcykel')
       ,array(''.ahref('http://www.youtube.com/user/BaronVonGrumble', 'BaronVonGrumble').'',              'Drift',               'Storbritannien', 'motorcykel')
       ,array(''.ahref('http://www.youtube.com/user/scootergrisen', 'scootergrisen').'',              'GoPro Hero 2 + Canon PowerShot A470',               'Sjælland', 'scooter')
-      ,array(''.ahref('http://www.youtube.com/channel/UCynm_mGw_E3V7dQd5sspXXA', 'Per Hald (katana)').'',              'Interphone motioncam01 + Contour Roam',               '', 'scooter')
+      ,array(''.ahref('http://www.youtube.com/channel/UCynm_mGw_E3V7dQd5sspXXA', 'Per Hald (katana)').'',              'Contour Roam',               '', 'scooter')
    )
 )
 .'
@@ -329,6 +329,15 @@ sony
 ' => '
 '.visbilled('1', 'billed3729.jpg', 'sony logo', false, true).'
 '.linkknap('http://www.sony.dk/product/cam-action-cam/hdr-as15', 'sony.dk').'
+'.
+box(array('170', '170', '100', '270')
+   ,array(
+       array('kamera',              'ekstra info',               'pris', 'andet')
+      ,array('HDR-AS15', 'med Wi-Fi', '2499', '')
+      ,array('HDR-AS10', 'uden Wi-Fi ?', '', 'er vist ikke solgt i danmark')
+   )
+)
+.'
 '
 .galleriholder(array(
     galleri('highslide', '', 'billed3512.jpg', array('sony HDR-AS15', ''))
@@ -337,9 +346,10 @@ sony
    ,galleri('highslide', '', 'billed3515.jpg', array('sony HDR-AS15', 'i vandtæt hus'))
    ,galleri('highslide', '', 'billed3722.jpg', array('sony HDR-AS15', ''))
    ,galleri('highslide', '', 'billed3723.jpg', array('sony HDR-AS15', ''))
-   ,galleri('highslide', '', 'billed3724.jpg', array('sony HDR-AS15', 'holder med LCD skærm'))
+   ,galleri('highslide', '', 'billed3724.jpg', array('sony AKA-LU1', 'holder med LCD skærm'))
 ))
 .'
+'.linkknap('http://www.youtube.com/watch?v=Y7C2G4fAA1U', 'video :<br>REVIEW - Sony AKA-LU1 Action Camera LCD Handycam Handheld Grip Camcorder Attachment for HDR-AS15', true).'
 '
 
 ,'
@@ -428,24 +438,29 @@ Her skriver jeg om nogen af de problemer man typisk oplever på folks optagelser
 
 '.afsnit('rystede billede', '
 Er kameraet monteret et vibrerende sted på scooteren kan det give rystelser.
-For eksempel hvis man monter det på styret kan det give mange rystelser når man køre på bump i vejen.
+For eksempel hvis man monter det på styret kan det give mange rystelser fra motoren og ujævn vej.
+Vibrationer fra motoren kan give et bølgende billede da de fleste hjelmkamera bruger CMOS sensorer.
 
-Det bedste sted at montere kameraet er nok på styrthjelmen.
-Gode optagelser er også set ved montering på forgaflen.
+Det bedste sted at montere kameraet er på/i styrthjelmen da kroppen fungere støddæmpende.
+
+Gode optagelser er dog også set ved montering på forgaflen.
 ').'
 
 '.afsnit('vindstøj', '
-Den indbyggede mikrofon i vel næsten alle kamera er bare ikke god i vind og vil give en vindstøj.
-Derfor vil det bedste nok være at montere en ekstern mikrofon inden i styrthjelmen og forbinde den til kameraet hvis der er mulighed for det.
-Hvis der ikke er mulighed for det kan man kan man placere kameraet inden i styrthjelmen bag visiret hvis det kan være der.
+Den indbyggede mikrofon i mange kamera er bare ikke god i vind og vil give vindstøj.
+Derfor vil det bedste nok være at montere en ekstern mikrofon inden i styrthjelmen og forbinde den til kameraet hvis der ekstern mikrofonindgang på kameraet.
+
+Hvis der ikke er ekstern mikrofon indgang kan man placere kameraet inden i styrthjelmen bag visiret hvis der er plads.
 Ellers kan man pakke kameraet ind i noget pels eller en strømpe eller noget for at reducere støjen hvis mikrofonen er udenfor hjelmen.
+
+Jeg har også har vindstøj-frie-optagelser ved at have mikrofonen bunden af hætten på min jakke.
 ').'
 
 '.afsnit('dropped frames', '
-Jeg har læst at hvis man har et forholdsvist langsomt hukommelseskort (for eksempel class 2) og man optager i 1920x1080 så kan videoen komme til at hakke fordi hukommelseskortet ikke er hurtigt nok til at gemmes dataen ved store videostørrelser.
-Det kan så rettet med et hurtigere hukommelseskort som class 10.
+Jeg har læst at hvis man har et forholdsvist langsomt hukommelseskort (for eksempel class 2) og man optager i 1920x1080 så kan videoen komme til at hakke fordi hukommelseskortet ikke er hurtigt nok til at gemmes dataen.
+Det kan rettet med et hurtigere hukommelseskort som class 10.
 
-Jeg har også set en videoanmeldelse af et kamera der bare var dårligt så selvom personen brugte et class 10 hukommelseskort så var frame 3 og 4 for eksempel den samme frame, og 7 og 8 kunne være den samme osv og nogen gange var der vist en hel række frames itræk som var ens.
+Jeg har også set '.ahref('http://www.youtube.com/watch?v=rMYNjWceV0w', 'denne videoanmeldelse').' af et RD32 kamera der bare var dårligt så selvom personen brugte et class 10 hukommelseskort så var frame 3 og 4 for eksempel den samme frame, og 7 og 8 kunne være den samme osv og nogen gange var der en hel række frames itræk som var ens.
 ').'
 
 '.afsnit('dårlig billedekvalitet', '
@@ -471,12 +486,12 @@ Her er nogen billeder fra mit kamera hvor solens kraftigste lys kan give lodrett
 
 '.afsnit('Skråt billede', '
 Sensorchips af CMOS typen scanner her linie i billeder en af gangen.
-Det kan give et skråt billede hvis man bevæger kameraet hurtigt.
-Det kan også give et lodret bølgende billede hvis kameraet er motoren et sted som vibrer meget.
-Det kan også give en helt specielt effekt hvis man filmer en profil på et fly som drejer hurtigt, så kan det komme til at se ud som om propellen slet ikke er forbundet til flyet.
+Det kan give et skråt billede hvis man bevæger kameraet hurtigt eller filmer noget som bevæger sig hurtigt.
+Det kan også give et lodret bølgende billede hvis kameraet er monteret et sted som vibrer meget som på en scooter når motoren køre.
+Det kan også give en helt specielt effekt hvis man filmer en propel på et fly som drejer hurtigt, så kan det se ud som om propellen ikke er forbundet til flyet.
 
-Effekten er vist storre jo mere lys der er, det har vist noget med lukkehastigheden at gøre.
-Så hvis man giver kameraet solbriller på man kan vist nedsætte denne effekt.
+Effekten er vist større jo mere lys der er, det har vist noget med lukkehastigheden at gøre.
+Så hvis man giver kameraet solbriller på kan man vist nedsætte denne effekt.
 ').'
 '
 
@@ -555,11 +570,11 @@ Det optager videoer i MJPEG (Motion JPEG) hvilket vil sige at det ikke er særli
 ,'
 gopro hero 2 erfaring
 ' => '
-Jeg har i Oktober 2012 købt mig et GoPro Hero 2 kamera og her vil jeg skrive om mine erfaring med det kamera.
+Jeg har i Oktober 2012 købt mig et GoPro Hero 2 kamera og her vil jeg løbende skrive om mine erfaring med dette kamera.
 
 Jeg vil primært skrive om de problemer jeg har med kameraet så andre kan lærer af dem.
 
-De 2 knapper der sidder i huset som beskytter kameraet er lidt rigeligt stramme.
+De 2 knapper der sidder i huset som beskytter kameraet er rigeligt stramme.
 Det hjælper at sprøjte lidt WD-40 ind der hvor metal stangen køre ind og ud i gummipakningerne. Det gav et mere jævn tryk.
 Ligeledes hjalp det på lukkemekanismen i sort plastik så den lukker jævn i stedet for det giver et hak fordi plastikket er helt tørt.
 
@@ -567,13 +582,14 @@ Det hus det fulgte med kameraet har ikke nogen åbning til ekstern mikrofon.
 Derfor har jeg boet et hul i mit hus.
 '.visbilled('1', 'billed3643.jpg', 'boret hul i gopro hus til ekstern mikrofon', false, true).'
 '.visbilled('1', 'billed3644.jpg', 'ekstern mikrofon igennem gopro hus', false, true).'
-Senere jeg har også lavet hul til USB stikket.
-Det var lidt kedeligt og skulle tage kameraet ud af huset hver gang man skulle overfører data og oplade batteriet.
+Jeg har også lavet hul til USB stikket.
+Det blev kedeligt og tage kameraet ud af huset hver gang man skulle overfører data og oplade batteriet.
 '.visbilled('1', 'billed3734.jpg', 'USB stik igennem gopro hus', false, true).'
-Jeg skal også prøve og se om jeg kan tilslutte kameraet til scooterens batteriet gennem en omformer. Har dog endnu ikke prøvet det da jeg mangler cigarhunstikket.
+Jeg skal også prøve og se om jeg kan tilslutte kameraet til scooterens batteriet gennem en omformer så jeg kan optage i længere tid.
+Jeg har ikke prøvet det så meget endnu da det er kedeligt med de ledninger.
 '.visbilled('1', 'billed3733.jpg', 'USB stik igennem gopro hus', false, true).'
 
-På gopro.com anbefaler de ikke nogen bestemt ekstern mikrofon men der står at deres team har brugt sådan nogen klipsmikroner med 2.5 volt bias.
+På '.ahref('http://gopro.com', 'gopro.com').' anbefaler de ikke nogen bestemt ekstern mikrofon men der står at deres team har brugt klipsmikrofoner med 2.5 volt bias.
 Så vidt jeg forstår skulle en dynamisk mikron med lav modstand være bedst.
 En kondensator mikrofon er så vist jeg kan læse mig til for følsom til sådan noget med vind.
 
@@ -596,11 +612,11 @@ Lidt efter stod der V198 (den nye version).
 Mærkeligt nok står der så V33 på displayet når jeg har version 124 på, fordi der åbenbart følger en opdatering til WiFi enheden med som er ekstra udstyr som jeg ikke her.
 
 Overføre filer :
-Der er lidt kedeligt og skulle tage kameraet ud og ind af huset hele tiden når man skal overføre filer.
-Der er ikke hul i siden af det vandtætte hus så jeg lavet muligvis hul til USB stikket på et tidspunkt.
+Man kan enten overføre filer gennem USB eller ved at tage SD kortet ud og sætte det i computeren.
+USB overførsel er lettest men også langsomst.
 
 CineForum Studio :
-Det videoredigeringsprogram som hedder '.ahref('http://gopro.com/software-app/cineform-studio/', 'CineForum Studio').' ('.ahref('http://software.gopro.com/PC/GoProCineFormStudioPC-1.3.2.169.zip', 'direkte download').') ret dårligt så kan ikke anbefale at bruge det.
+Det videoredigeringsprogram som hedder '.ahref('http://gopro.com/software-app/cineform-studio/', 'CineForum Studio').' ('.ahref('http://software.gopro.com/PC/GoProCineFormStudioPC-1.3.2.169.zip', 'direkte download').') er ret dårligt så kan ikke anbefale at bruge det.
 Både fordi man ikke kan sætte 2 klip sammen men også fordi når man gemmes i 720p (det format jeg ønsker at bruge) så laver programmet fejl i encodingen så video størrelsen bliver 1280x736 (AR 327:184) eller noget i den stil og det kan give en grøn linie nederst i afspilleren i VLC og MPC, også hvis man uploader til youtube. Dog ikke nogen grøn linie i windows media player.
 
 På hukommelseskortet findes en filen '.high('MISC\version.txt').'.
@@ -699,12 +715,33 @@ overførselshastighed
 ' => '
 Her skriver jeg lidt op de overførselshastigheder jeg oplever når jeg skal kopier fra hukommelseskortet til computeren.
 
-Hvis jeg sætter micro SD hukommelseskortet direkte i computer så bliver der overført med 16,7 MByte/sekundet.
+Hvis jeg sætter micro SD hukommelseskortet direkte i computer så bliver der overført med 16,7 MByte/sekund.
 
-Gennem USB 2.0 er det lidt langsommere.
+Gennem USB er det cirka 6,8 MByte/sekund.
 
 Det går fint nok og overfører gennem USB kabel hvis man har noget andet man kan lave på computeren imens.
 Men hvis man har meget data og man vil have det overført hurtigt muligt så går det hurtigere ved at sætte hukommelseskortet direkte i computeren hvis man har mulighed for det.
+'
+
+,'
+vinkel
+' => '
+Mit GoPro Hero 2 kan indstilles til 3 forskellige synsvinkler.
+Det kommer dog an på hvad opløsning man optager i, i nogle opløsninger er der ikke mulighed for at skifte synsvinkel.
+
+Jo større synsvinkel man bruger jo mindre vigtigt er det at kameraet peger præcist
+'
+
+,'
+fokus under vand
+' => '
+Hvis man tager mit GoPro Hero 2 kamera under vand i det vandtætte hus med den buede linse så er billedet ud af fokus.
+For at få fokus kan man placer en flad linse foran sådan at vandet ikke kommer i kontakt med den buede linse.
+Linsen skal være ret stor sådan at kanten af linsen (metalringen) ikke kommer med i billedet når man bruger wide synsvinkel.
+
+Man kunne også lave en lille boks eller noget af gennemsigtig plexiglas så hele kameraet er inden i boksen.
+
+Jeg har endnu ikke selv prøvet dette men kan være jeg prøvet det på et tidspunkt.
 '
 
 );

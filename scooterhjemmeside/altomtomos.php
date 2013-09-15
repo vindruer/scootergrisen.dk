@@ -161,6 +161,7 @@ $databaseright = array(
 //'emner på siden' => array()
 
 'download' => array(
+      'Tomos Classic-XL 25 K reservedele'    => 'tomos_classicxl_reservedele.pdf'
 //   ,''    => ''
 
 ),'typegodkendelser' => array(

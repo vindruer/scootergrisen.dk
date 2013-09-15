@@ -173,7 +173,7 @@ Får jævnstrøm fra batteriet.
 Da DC CDI boksen får jævnstrøm er der en ekstra DC/AC konverter hvilket gør boksen lidt større end en AC CDI boks.
 DC CDI giver mere præcis tændings timing og motoren er lettere at starte om vinteren (ifølge '.ahref('http://en.wikipedia.org/wiki/Capacitor_discharge_ignition', 'Wikipedia').').
 
-'.afsnit('på Kymco Super 8 er CDI boksen forbundet med','
+'.afsnit('på Kymco Super 8 4T er CDI boksen forbundet med','
 Tændspole.
 Lyskontrol boks.
 Tændingslås (batteriets + terminal når tændingslåsen er drejet til ON).
@@ -186,15 +186,15 @@ Pickup.
 
 '.afsnit('adskilt','
 Her ses CDI boksen fra en Kymco Super 8.
-'.visbilled('1', 'billed1090.jpg', 'Kymco Super 8 CDI', false, true).'
+'.visbilled('1', 'billed1090.jpg', 'Kymco Super 8 4T CDI', false, true).'
 Elektronikken er omgivet af noget sort kunstharpiks som normalt er hårdt og svært at få af.
 
 Men hvis man varmer kunstharpiksen med en varmepistol bliver det blødt og kan fjernes lidt af gangen.
-'.visbilled('1', 'billed1091.jpg', 'Kymco Super 8 CDI adskilt', false, true).'
-'.visbilled('1', 'billed1092.jpg', 'Kymco Super 8 CDI adskilt', false, true).'
-'.visbilled('1', 'billed1094.jpg', 'Kymco Super 8 CDI adskilt', false, true).'
-'.visbilled('1', 'billed1093.jpg', 'Kymco Super 8 CDI adskilt', false, true).'
-'.galleriholder(array(galleri('highslidestandard', 'billed1577.jpg', 'billed1577.jpg', 'Kymco Super 8 CDI adskilt'))). '
+'.visbilled('1', 'billed1091.jpg', 'Kymco Super 8 4T CDI adskilt', false, true).'
+'.visbilled('1', 'billed1092.jpg', 'Kymco Super 8 4T CDI adskilt', false, true).'
+'.visbilled('1', 'billed1094.jpg', 'Kymco Super 8 4T CDI adskilt', false, true).'
+'.visbilled('1', 'billed1093.jpg', 'Kymco Super 8 4T CDI adskilt', false, true).'
+'.galleriholder(array(galleri('highslidestandard', 'billed1577.jpg', 'billed1577.jpg', 'Kymco Super 8 4T CDI adskilt'))). '
 ').'
 
 '.afsnit('justerbare CDI','
@@ -225,6 +225,12 @@ kontaktsæt
 På ældre knallerter uden CDI er det et kontaktsæt som bestemmer hvornår tændrøret skal give gnist.
 '.visbilled('1', 'billed2552.jpg', 'kontaktsæt', false, true).'
 Krumtapakslen har en blød firkantet form der hvor den har kontakt med kontaktsættet som får kontakten til at åbne og lukke når motoren køre.
+'
+
+,'
+pickup
+' => '
+Se '.ahref('elektrisk_spoler.php#pickup', 'Spoler - Elektrisk').'
 '
 
 );

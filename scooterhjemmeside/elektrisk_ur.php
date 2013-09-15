@@ -14,19 +14,19 @@ $databasecenter = array(
 ur
 ' => '
 Her ses uret fra Kymco Super 8.
-'.visbilled('1', 'billed2354.jpg', 'kymco super 8 digital ur', false, true).'
+'.visbilled('1', 'billed2354.jpg', 'kymco super 8 4T digital ur', false, true).'
 På de 2 knapper nederst i hjørnerne kan man indstille tid og dato.
-'.visbilled('1', 'billed2355.jpg', 'kymco super 8 digital ur', false, true).'
-'.visbilled('1', 'billed2356.jpg', 'kymco super 8 digital ur', false, true).'
+'.visbilled('1', 'billed2355.jpg', 'kymco super 8 4T digital ur', false, true).'
+'.visbilled('1', 'billed2356.jpg', 'kymco super 8 4T digital ur', false, true).'
 Der er 4 ledninger.
 Den grønne er stelforbindelse.
 De 3 andre får + 12 volt fra batteriets + terminal.
-'.visbilled('1', 'billed2357.jpg', 'kymco super 8 digital ur', false, true).'
+'.visbilled('1', 'billed2357.jpg', 'kymco super 8 4T digital ur', false, true).'
 Brun (LED) : (batteri +) gennem tændingslås og lys kontakt. (baggrundslys)
 Sort (EN) : (batteri +) gennem tændingslås. (tallene vises)
 Rød (12V) : (batteri +) hele tiden (for at kunne huske tiden).
 Grøn (G) : (batteri -) stelforbindelse.
-'.visbilled('1', 'billed2358.jpg', 'kymco super 8 digital ur led en 12v g', false, true).'
+'.visbilled('1', 'billed2358.jpg', 'kymco super 8 4T digital ur led en 12v g', false, true).'
 
 '.afsnit('indstilling af ur/dato' ,'
 Hold begge knapper inden i nogle sekunder indtil uret begynder at blinke.

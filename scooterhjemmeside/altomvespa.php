@@ -439,6 +439,7 @@ $databaseright = array(
 
 'download' => array(
     'diverse dyser til Piaggio, Gilera og Vespa'   => 'dyser_piaggio_gilera_vespa.png'
+   ,'LX 2T servicemanual'                 => 'vespa_lx_2t_servicemanual.pdf'
    ,'LX 4T servicemanual'                 => 'vespa_lx_4t_servicemanual.pdf'
    ,'LX 4T reservedele'                   => 'vespa_lx_4t_reservedele.pdf'
    ,'LX 4T reservedele 2'                 => 'vespa_lx_4t_reservedele_2.pdf'
@@ -447,7 +448,7 @@ $databaseright = array(
     'LX50 (C38) 25 km/t E20502 (e11*2002/24*0441)'        => 'typegodkendelser/Vespa%20LX50%20%28E20502%29%20udstedt%2031-05-2013.pdf'
    ,'LX50 (C38) 45 km/t E20554 (e3*2002/24*0565)'         => 'typegodkendelser/Vespa%20LX50%20%28E20554%29%20udstedt%2012-06-2013.pdf'
 
-)                      
+)
 
 );
 

@@ -39,7 +39,7 @@ Jeg har samlet info om de nye regler i forummet emnet '.ahref('http://scootergri
 '.afsnit('1. Januar 2012','
 Der er kommet nye regler i forbindelse med hvor meget man får i bøde og hvornår man får bøde.
 
-Blandt andet kan man nu allerede få bøde hvis scooteren kan køre 1 km/t hurtigere end det tilladte.
+Blandt andet kan man nu allerede få bøde hvis man køre 1 km/t hurtigere end det tilladte.
 ').'
 '
 
@@ -69,21 +69,42 @@ bøder
 ' => '
 Den 1. Januar 2012 kom der nye regler for hvornår og hvor meget man får i bøde.
 
-De nye regler betyder blandt andet at man nu kan få bøde blot scooteren/knallerten kan køre 1 km/t hurtigere end det tilladte.
+De nye regler betyder blandt andet at man nu kan få bøde blot man bliver målt til at køre 1 km/t hurtigere end det tilladte.
 
-Her er links til de nye bødetakster.
+Bødetakster ved fartkontrol og rullefelt er ikke ens.
+Efter hvad jeg kan forstå så må man gerne køre på en lille knallert som har en topfart på 39 km/t hvis bare man højst køre 30 km/t på den.
+
+'.afsnit('bøder ved fartkontrol (for eksempel lasermåling)', '
+Lille knallert kan få bøde hvis den bliver kørt med 31 km/t.
+Stor knallert kan få bøde hvis den bliver kørt med 46 km/t.
 
 '.ahref('http://www.sikkertrafik.dk/Site/Knallertteori/Foraeldre/Straf-og-boder/bodetakster.aspx', 'Bødetakster for lille knallert').'
 
 '.ahref('http://www.sikkertrafik.dk/Raad-og-viden/I-bil/Boeder-og-straf/Boedetakster/Stor-knallert.aspx', 'Bødetakster for stor knallert').'
-'
+').'
 
-,'
-fra 30 km/t til 25 km/t
-' => '
-Hastigheden på 30 km/t scootere bliver muligvis sat ned til 25 km/t i fremtiden.
-Og muligvis i samme forbindelse sættes alderen for at tage kørekort til 45 km/t scooter sat ned fra 18 år til 16 år.
-Jeg har ikke så meget info om dette men det kaldes muligvis et EU direktiv som træder i kraft i år 2013.
+'.afsnit('bøder på rullefelt (måling af topfart)', '
+Lille knallert kan få bøde hvis den kan køre 40 km/t på rullefelt.
+Stor knallert kan få bøde hvis den kan køre 60 km/t på rullefelt.
+
+'.ahref('http://www.sikkertrafik.dk/Raad-og-viden/Knallert/Lille-knallert/Rullefelt.aspx', 'Rullefelt lille knallert').'
+
+'.ahref('https://www.sikkertrafik.dk/Raad-og-viden/Knallert/Stor-knallert/Boeder-og-straffe-for-stor-knallert.aspx', 'Rullefelt stor knallert').'
+').'
+'.afsnit('ekstra oplysninger', '
+Jeg syntes der er nogen modstridende oplysninger alt efter hvor man læser.
+Som for eksempel i '.ahref('download/vejledning_om_syn_af_koretojer.pdf', 'Vejledning om syn af køretøjer').' hvor der blandt andet står følgende.
+
+'.citat('
+11.03.040 Knallert
+(1) Ved standardtypegodkendelse tillades den fastsatte hastighedsgrænse overskredet
+med højst 5%.
+(2) Ved anden hastighedsmåling end nævnt i pkt. (1) må den fastsatte hastighedsgrænse
+på 30 km/h for en lille knallert og 45 km/h for en stor knallert ikke kunne
+overskrides med mere end 20 %.
+').'
+I '.ahref('http://www.youtube.com/watch?v=sc3AuW2TWq0', 'denne video').' kan du se hvordan det kan se ud når man bliver stopper for at køre for hurtigt på scooter.
+').'
 '
 
 ,'
@@ -199,14 +220,16 @@ anhænger
 ' => '
 En anhænger kaldes i lovtekster gerne for påhængsvogn.
 
-Tidligere har det vist ikke være tilladt at have anhænger på en knallert/scooter hvad enten det var en lille eller stor knallert.
+Tidligere har det vist ikke været tilladt at have anhænger på en knallert/scooter hvad enten det var en lille eller stor knallert.
 I lovteksten stod "Til knallert må ikke kobles påhængskøretøj.".
 
 Men i '.ahref('download/lovforslag_nr_l39.pdf','Lovforslag nr. L 39').' står blandt andet noget om anhænger til 45 km/t knallert. Der står også "Loven træder i kraft den 1. april 2012.".
 
 Umiddelbart lader det til at det nu er tilladt at køre med anhænger på en 45 km/t scooter.
 
-Så er det bare om den skal være godkendt og om der overhovedet er nogen i danmark der sælger sådan nogen anhængere endnu eller om man skal/må bygge dem selv.
+Så er det bare om den skal være godkendt og om der overhovedet er nogen i danmark der sælger sådan nogen anhængere endnu og om man må bygge dem selv.
+
+Påhængsvogn til stor knallert må maksimum have en totalvægt på 100 kg, maksimalt være 2,5 meter lang og maksimalt 1 meter bred. Dækmønster skal mindst være 1 mm og må ikke være indrettet til personbefordring.
 
 Fra følgende fil har jeg kopieret noget tekst ud som handler om påhængsvogn til stor knallert.
 
@@ -454,13 +477,6 @@ Kilde : '.ahref('http://www.politi.dk/da/aktuelt/nyheder/2009/knallertresultat_1
 '
 
 ,'
-købeloven
-' => '
-'.ahref('https://www.retsinformation.dk/Forms/R0710.aspx?id=1419', 'retsinformation.dk - Købeloven').'
-'.ahref('http://www.forbrug.dk/Dine-rettigheder/Forbrugerguides/Koebelov', 'forbrug.dk - Købeloven').'
-'
-
-,'
 direktiv 2002/24
 ' => '
 EF-direktiv 2002/24/EF vedrørende standardtypegodkendelse af to- og trehjulede motordrevne køretøjer.
@@ -490,14 +506,19 @@ Reklamationsretten er den ret som købeloven giver dig.
 Købeloven giver dig 2 års reklamationsret.
 Det er ikke muligt at aftale en kortere frist.
 De 2 års reklamationsret gælder for hele varen og ikke kun dele af varen.
-Det vil sige butikken kan ikke lovligt sige at der kun er 6 måneders reklamationsret på batterierne i en elektrisk scooter.
+Det vil sige butikken kan ikke lovligt sige at der for eksempel kun er 6 måneders reklamationsret på batterierne i en elektrisk scooter.
+
+'.afsnit('købeloven', '
+'.ahref('https://www.retsinformation.dk/Forms/R0710.aspx?id=1419', 'retsinformation.dk - Købeloven').'
+'.ahref('http://www.forbrug.dk/Dine-rettigheder/Forbrugerguides/Koebelov', 'forbrug.dk - Købeloven').'
+').'
 '
 
 ,'
 garanti
 ' => '
 Garanti er noget som butikken eller producenten kan vælge at give dig.
-En garanti er noget som giver dig bedre fordele end de 2 års reklamationsret som du allerede har ifølge loven.
+En garanti er noget som giver dig bedre fordele end de 2 års reklamationsret som du allerede har ifølge købeloven.
 
 Du har ikke krav på en garanti. Det bestemmer butikken selv om de vil give eller tilbyde.
 
@@ -523,7 +544,7 @@ lyd
 '
 
 ,'
-typegodkendelser
+typegodkendelser til stor knallert
 ' => '
 Hos '.ahref('http://www.trafikstyrelsen.dk/DA/Syn-og-K%C3%B8ret%C3%B8jer/Typegodkendelser/Regler-om-typegodkendelse.aspx', 'trafikstyrelsen.dk').' står at stor knallert ikke behøver typegodkendelse.
 '

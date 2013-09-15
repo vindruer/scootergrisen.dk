@@ -17,8 +17,8 @@
 
 $setup['globaltopbesked']              = ''; // eventuelt en vigtig besked som vises øverst på alle sider
 $setup['textformstorrelse']            = '100x15';
-$setup['email_emne_kontakt']           = 'Kontakt';
-$setup['email_emne_fejl']              = 'Fejl';
+$setup['email_emne_kontakt']           = 'Kontakt (scootergrisen)';
+$setup['email_emne_fejl']              = 'Fejl (scootergrisen)';
 $setup['email_emne_foreslalink']       = 'Foreslag (scootergrisen)';
 $setup['email_emne_upload']            = 'Upload';
 $setup['lavthumbnailslille']           = 0;

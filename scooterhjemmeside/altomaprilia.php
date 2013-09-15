@@ -1890,12 +1890,25 @@ $databaseright = array(
    ,'RS PG 45 km/t S9725'        => 'typegodkendelser/Aprilia%20RS%2050%20%28S9725%29%20udstedt%2019-02-1999.pdf'
 
    ,'sonic TL (0 = luftkølet, A = vandkølet) 45 km/t E12600 (e11*92/61*0078)'        => 'typegodkendelser/Aprilia%20Sonic%20%28E12600%29%20udstedt%2022-04-2003.pdf'
-   ,'sonic PB luftkølet 45 km/t S 8964'        => 'typegodkendelser/Aprilia%20Sonic%20%28S8964%29%20udstedt%2020-02-1998.pdf'
+   ,'sonic PB luftkølet 45 km/t S8964'        => 'typegodkendelser/Aprilia%20Sonic%20%28S8964%29%20udstedt%2020-02-1998.pdf'
    ,'sonic TL 25 (B) og 30 (C) km/t E15471 (e11*92/61*0079)'        => 'typegodkendelser/Aprilia%20Sonic%2050%20%28E15471%29%20udstedt%2001-06-2006.pdf'
 
    ,'SX (PV) 45 km/t E20501 (e11*2002/24*0441)'        => 'typegodkendelser/Aprillia%20SX50%20%28E20501%29%20udstedt%2031-05-2013.pdf'
 
    ,'SR50 (TE) 45 km/t E20533 (e11*92/61*0090)'        => 'typegodkendelser/Aprillia%20SR50%20%28E20533%29%20udstedt%2007-06-2013.pdf'
+
+
+   ,'SX50 / RX50 PV D50B 45 km/t 15586 (e11*2002/24*0441)'            => 'typegodkendelser/Aprilia%20-%20%28E15586%29%20udstedt%2027-06-2006.pdf'
+   ,'SX50 / RX50 PV D50C2 30 km/t 16301 (e11*2002/24*0441)'            => 'typegodkendelser/Aprilia%20-%20%28E16301%29%20udstedt%2029-03-2007.pdf'
+   ,'SX50 (B) / RX50 (E) PV 30 km/t E18241 (e11*2002/24*0441)'            => 'typegodkendelser/Aprilia%20-%20%28E18241%29%20udstedt%2028-05-2010.pdf'
+   ,'SX50 (0) / RX50 (A) PV 45 km/t E18245 (e11*2002/24*0441)'            => 'typegodkendelser/Aprilia%20-%20%28E18245%29%20udstedt%2028-05-2010.pdf'
+   ,'Area 51 MY (AO) 44 km/t S9265'            => 'typegodkendelser/Aprilia%20Area%2051%20%28S9265%29%20udstedt%2008-07-1998.pdf'
+   ,'Classic 50 LP (vandkølet) 45 km/t S9712'            => 'typegodkendelser/Aprilia%20Classic%2050%20%28S9712%29%20udstedt%2022-03-1999.pdf'
+   ,'Rally TM 45 km/t E12680 (e11*92/61*0084)'            => 'typegodkendelser/Aprilia%20Rally%20%28E12680%29%20udstedt%2021-05-2003.pdf'
+   ,'Rally 50 TM A/00 / B/00 25 og 30 km/t E15472 (e11*62/61*0084)'            => 'typegodkendelser/Aprilia%20Rally%2050%20%28E15472%29%20udstedt%2001-06-2006.pdf'
+   ,'Rally LC MD 45 km/t S9133'            => 'typegodkendelser/Aprilia%20Rally%20LC%20%28S9133%29%20udstedt%2006-05-1998.pdf'
+   ,'RX 50 ST 45 km/t E12016 (e11*2000/7*00044)'            => 'typegodkendelser/Aprilia%20RX%2050%20%28E12016%29%20udstedt%2027-05-2002.pdf'
+   ,'Sportcity 50 SB (A/00 - 2t) 45 km/t E17641 (e11*2002/24*0666)'            => 'typegodkendelser/Aprilia%20Sportcity%2050%20%28E17641%29%20udstedt%2018-05-2009.pdf'
 
 )
 

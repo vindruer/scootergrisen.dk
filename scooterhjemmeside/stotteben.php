@@ -14,21 +14,21 @@ $databasecenter = array(
 støtteben
 ' => '
 Her ses et centerstøtteben.
-'.visbilled('1', 'billed1795.jpg', 'kymco super 8 centerstøtteben', false, true).'
+'.visbilled('1', 'billed1795.jpg', 'kymco super 8 4T centerstøtteben', false, true).'
 Støttebenet sidder fast med 2 bolte, 2 møtrikker og en dobbelt fjeder.
-'.visbilled('1', 'billed1797.jpg', 'kymco super 8 centerstøtteben', false, true).'
-'.visbilled('1', 'billed1796.jpg', 'kymco super 8 centerstøtteben', false, true).'
+'.visbilled('1', 'billed1797.jpg', 'kymco super 8 4T centerstøtteben', false, true).'
+'.visbilled('1', 'billed1796.jpg', 'kymco super 8 4T centerstøtteben', false, true).'
 En gummidæmper søger for et blødt anslag mod motorblokken når støttebenet slås op og absorber motorens vibrationer under kørsel så støttebenet ikke sidder og rasler og slår mod motorblokken ved et bump i vejen.
-'.visbilled('1', 'billed1803.jpg', 'kymco super 8 centerstøtteben gummidæmper', false, true).'
+'.visbilled('1', 'billed1803.jpg', 'kymco super 8 4T centerstøtteben gummidæmper', false, true).'
 Fjederen kan afmonteres med et stykke ståltråd der er viklet som sig selv nogle gange.
 Her har jeg brugt en hammer til at vippe fjederen af ved at holde hammeren mod støttebenet.
-'.visbilled('1', 'billed1799.jpg', 'kymco super 8 montering af fjeder på centerstøtteben', false, true).'
+'.visbilled('1', 'billed1799.jpg', 'kymco super 8 4T montering af fjeder på centerstøtteben', false, true).'
 Møtrikkerne kan afmonteres med et par gaffelnøgler.
-'.visbilled('1', 'billed1798.jpg', 'kymco super 8 centerstøtteben afmontering af skrue og møtrik', false, true).'
+'.visbilled('1', 'billed1798.jpg', 'kymco super 8 4T centerstøtteben afmontering af skrue og møtrik', false, true).'
 
 Her ses dobbelt fjederen som er svejset sammen i enderne.
 Bolten i venstre side af motoren (tætteste ved fjederen) var let af tage ud.
-'.visbilled('1', 'billed1802.jpg', 'kymco super 8 centerstøtteben fjeder bolt møtrik', false, true).'
+'.visbilled('1', 'billed1802.jpg', 'kymco super 8 4T centerstøtteben fjeder bolt møtrik', false, true).'
 
 Bolten i højre side af motoren sad fast.
 

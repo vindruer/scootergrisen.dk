@@ -140,7 +140,7 @@ Her er nogen billeder af Malossi multivar 5113139 købt hos scoot.dk.
    ,galleri('highslide', '', 'billed3407.jpg', array('malossi multivar 5113139', ''))
    ,galleri('highslide', '', 'billed3408.jpg', array('malossi multivar 5113139', ''))
    ,galleri('highslide', '', 'billed3409.jpg', array('malossi multivar 5113139', 'her ses skålen fra Malossi multivar kittet'))
-   ,galleri('highslide', '', 'billed3410.jpg', array('malossi multivar 5113139', 'her ses den originale skål fra Kymco Super 8 til sammenligning. Læg mærke til der er lidt forskel på banerne hvor rullerne ligger'))
+   ,galleri('highslide', '', 'billed3410.jpg', array('malossi multivar 5113139', 'her ses den originale skål fra Kymco Super 8 4T til sammenligning. Læg mærke til der er lidt forskel på banerne hvor rullerne ligger'))
    ,galleri('highslide', '', 'billed3412.jpg', array('malossi multivar 5113139', ''))
    ,galleri('highslide', '', 'billed3413.jpg', array('malossi multivar 5113139', ''))
    ,galleri('highslide', '', 'billed3414.jpg', array('malossi multivar 5113139', ''))

@@ -39,6 +39,9 @@ Der er en bruger med en Scoopie scooter som skriver at hvis den køre over 25 km
 De 5-6 sekunders afbrydelse sker ikke under 25 km/t eller hvis man "huk-bremser".
 Hvis du kender mere til dette og eventuelt har en løsning så '.kontaktmig().' gerne.
 ').'
+'.afsnit('Giantco E-Buddy - Kørsel på ru eller ujævn vej afbryder strømmen til motoren','
+Ukendt grund.
+').'
 '
 
 );

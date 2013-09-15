@@ -1282,7 +1282,7 @@ $databasecenter = array(
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', 'AC', 'LC', '', '')
-      ,'pris'              => ens('pris', '16000', '18995', '', '(afhængig af om det er luftkølet, væskekølet og med startsspærre, cirka pris i følge 45scooter.dk)') . 'Speedfight 3 Luftkølet koster 11995-13995,- kroner'
+      ,'pris'              => ens('pris', '16000', '18995', '', '(afhængig af om det er luftkølet, væskekølet og med startsspærre, cirka pris i følge 45scooter.dk)') . '<br>Speedfight 3 Luftkølet koster 11995-13995,- kroner'
       ,'hastighed'         => ens('hastighed', '45', '', '', '')
       ,'farver'            => ens('farver', 'sort rød blå-gul sølv', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
@@ -1539,16 +1539,16 @@ $databasecenter = array(
       ,'andet'             => ens('andet', '', '', '', '')
 
    ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+       'begrænstransmis'   => ens('begrænstransmis', '', '', '', 'plade bagerst i remskiveskålen forhændre rulle rampen i at bevæge sig helt ud ?')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
-      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
+      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', 'blindrør ?')
       ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
-      ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
+      ,'begrænsandet'      => ens('begrænsandet', '', '', '', 'kant i motorblok hvor cylinderen går ind så man kun man bruge original cylinder ? kan slibes væk')
 
    )
 
@@ -2818,8 +2818,12 @@ $databaseright = array(
     'Peugeot ACI-100'                => 'peugeot_aci100.pdf'
    ,'Peugeot electrical test workshop manual'                => 'peugeot_electrical_test_workshop_manual.pdf'
    ,'Peugeot workshop manual electricity'                => 'peugeot_workshop_manual_electricity.pdf'
+
+   ,'Peugeot (HL2 motor) workshop manual 50 CC engine horizontal liquid-cooled cylinder'      => 'peugeot_workshop_manual_50_cc_engine_horizontal_liquid-cooled_cylinder.pdf'
+   ,'Peugeot (HA1 motor) workshop manual 50 CC engine horizontal cylinder I.A.E (exhaust air injection)'      => 'peugeot_workshop_manual_50_cc_engine_horizontal_cylinder_i_a_e_exhaust_air_injection.pdf'
    ,'Peugeot workshop manual 50 cc 4-stroke engine 2 valves air cooling'                => 'peugeot_workshop_manual_50_cc_4-stroke_engine_2_valves_air_cooling.pdf'
    ,'Peugeot motor FB-0-1-2-4 workshop manual 50 cm³'                => 'peugeot_motor_fb_0_1_2_4_workshop_manual.pdf'
+
    ,'Peugeot TSDI info'                => 'peugeot_tsdi_info.zip'
    ,'Peugeot TSDI indsprøjtningssystem servicemanual'                => 'peugeot_tsdi_indsprojtningssystem_servicemanual.pdf'
    ,'Peugeot TSDI motor servicemanual'                => 'peugeot_tsdi_motor_servicemanual.pdf'
@@ -2827,7 +2831,11 @@ $databaseright = array(
 
    ,'Peugeot New Vivacity 50 cc 2 stroke technical training'                => 'peugeot_newvivacity_50cc_2stroke_technical_training.pdf'
    ,'Peugeot Speedfight 3 50 cc 2 stroke technical training'                => 'peugeot_speedfight3_50cc_2stroke_technical_training.pdf'
-   ,'Peugeot V-Clic technical training'                => 'peugeot_vclic_technical_training.pdf'
+
+   ,'Peugeot V-Clic (Qingqi QM50QT-6) brugermanual'      => 'qingqi_qm50qt6_brugermanual.pdf'
+   ,'Peugeot V-Clic (Qingqi QM50QT-6) servicemanual'     => 'qingqi_qm50qt6_brugerservice.pdf'
+   ,'Peugeot V-Clic servicemanual'                       => 'peugeot_vclic_servicemanual.pdf'
+   ,'Peugeot V-Clic technical training'                  => 'peugeot_vclic_technical_training.pdf'
 
    ,'Peugeot Elystar 125 + 150 cc brugermanual'                => 'peugeot_elystar_125_150_brugermanual.pdf'
    ,'Peugeot Elystar servicemanual'                => 'peugeot_elystar_servicemanual.pdf'
@@ -2856,7 +2864,6 @@ $databaseright = array(
    ,'scoot\'elec el diagram B'         => 'peugeot_scootelec_eldiagram2.jpg'
    ,'scoot\'elec diagnostic'           => 'peugeot_scootelec_diagnostic.pdf'
    ,'tweet servicemanual'              => 'peugeot_tweet_servicemanual.pdf'
-   ,'v-clic servicemanual'             => 'peugeot_vclic_servicemanual.pdf'
    ,'squab reservedele'                => 'peugeot_squab_reservedele.pdf'
    ,'squab reservedele 2'              => 'peugeot_squab_reservedele2.zip'
 

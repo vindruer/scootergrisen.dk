@@ -92,7 +92,7 @@ if($setup['roden'] == "C:/Users/Administrator/Desktop/scootergrisen.dk"){
 
    require_once('config_mysql_webhotel.php');
 
-   $setup['minemail'] = "info@netkoder.dk"; // one.com begrænser eksterne email adresser til 20 om dagen på grund af spam. Derfor brug en intern email adresse og viderestil så de emails til den eksterne emailadresse.
+   $setup['minemail'] = "info@scootergrisen.dk"; // one.com begrænser eksterne email adresser til 20 om dagen på grund af spam. Derfor brug en intern email adresse og viderestil så de emails til den eksterne emailadresse.
    ini_set('sendmail_from', $setup['minemail']); // kun til windows systemer
    ini_set('SMTP', 'mailout.one.com'); // kun til windows systemer
    ini_set('smtp_port', '25'); // kun til windows systemer

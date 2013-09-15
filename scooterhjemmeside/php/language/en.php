@@ -4,6 +4,8 @@
 
 $setup['setlocalreturn'] = setlocale(LC_ALL, 'en_GB.1252', 'english-uk', 'eng', 'en_UK', 'en_UK@euro'); // setlocal påvirker ting som decimal tegn (. / ,) og dagnavn (sunday / søndag) | et "locale name" kan bestå af 3 dele for eksempel i "en_GB.1252" | en = sprog | _GB = land | .1252 = character set
 
+$setup['l_sidetopbesked_dennesidevarretstor'] = 'This page was rather large and took a long time to load.<br><br>So i split the the page into several smaller pages that a faster to load.<br><br>Use the menu called';
+
 $setup['l_login_youareloggedin'] = 'you are logged in';
 
 $setup['l_login_username'] = 'username';
@@ -30,7 +32,7 @@ $setup['l_gotonextpage'] = 'go to next page...';
 $setup['l_cube'] = 'go to front page';
 $setup['language_search'] = 'Search...';
 
-$setup['l_flag_english'] = 'switch to english';
+$setup['l_flag_english'] = 'switch to english (only partial translation)';
 $setup['l_flag_dansk'] = 'switch to danish';
 
 $setup['l_smaikoner_forum'] = 'go to forum (board)';
@@ -38,7 +40,7 @@ $setup['l_smaikoner_nyheder'] = 'show the latest news from the website';
 $setup['l_smaikoner_kontakt'] = 'write a message to me making the website';
 $setup['l_smaikoner_introduktion'] = 'introduction';
 $setup['l_smaikoner_tilfeldig'] = 'roll the dice and land on a random page';
-$setup['l_smaikoner_download'] = 'download';
+$setup['l_smaikoner_download'] = 'manuals (download)';
 $setup['l_smaikoner_typegodkendelser'] = 'type approvals';
 $setup['l_smaikoner_teoriprove'] = 'theory test for 30 km/t scooters';
 $setup['l_smaikoner_begrensninger'] = 'restrictions';
@@ -47,9 +49,10 @@ $setup['l_smaikoner_kamera'] = 'camera';
 $setup['l_smaikoner_vinchecker'] = 'VIN checker';
 $setup['l_smaikoner_links'] = 'links';
 $setup['l_smaikoner_stederidanmark'] = 'places in denmark';
-$setup['l_smaikoner_billederfragaden'] = 'images from the streets';
+$setup['l_smaikoner_billeder'] = 'images from the streets';
 $setup['l_smaikoner_vinterrad'] = 'winter tips';
 $setup['l_smaikoner_karburator'] = 'carburettor';
+$setup['l_smaikoner_nummerplade'] = 'licenseplate image generator til make a image that looks like a licenseplate from a small moped og large moped';
 
 $setup['l_spotlys_begrensninger'] = 'restrictions';
 $setup['l_spotlys_begrensninger_description'] = 'can be removed if you wish to drive faster or get lower fuel consumption';
@@ -63,8 +66,8 @@ $setup['l_spotlys_vinterrad'] = 'winter tips';
 $setup['l_spotlys_vinterrad_description'] = 'about being warm, frozen locks, hard to start engines and visor fog';
 $setup['l_spotlys_lyd'] = 'listen to music+audio';
 $setup['l_spotlys_lyd_description'] = '<span class="bold" style="font-family: consolas, monospace;">L Ron Harald</span><br><span class="bold" style="font-family: consolas, monospace;">Zanger Rinus</span><br><span class="bold" style="font-family: consolas, monospace;">Halløj i betalingsringen</span>';
-$setup['l_spotlys_billederfragaden'] = 'images from the streets';
-$setup['l_spotlys_billederfragaden_description'] = 'is images i primarily took my self of scooters and other vehicles';
+$setup['l_spotlys_billeder'] = 'images from the streets';
+$setup['l_spotlys_billeder_description'] = 'is images i primarily took my self of scooters and other vehicles';
 $setup['l_spotlys_forum'] = 'forum (board)';
 $setup['l_spotlys_forum_description'] = 'is the place we write with each other about scooters';
 $setup['l_spotlys_stederidanmark'] = 'places in denmark';
@@ -83,10 +86,6 @@ $setup['l_m_hovedmenu_introduktion'] = 'introduction';
 $setup['l_m_hovedmenu_introduktion_description'] = 'here you can learn more about the website and how to use it';
 $setup['l_m_hovedmenu_gratisreklame'] = 'free commercial';
 $setup['l_m_hovedmenu_gratisreklame_description'] = 'get a free commercial on the website';
-$setup['l_m_hovedmenu_download'] = 'download';
-$setup['l_m_hovedmenu_download_description'] = 'here you can download manuals, electrical diagrams and so on';
-$setup['l_m_hovedmenu_links'] = 'links';
-$setup['l_m_hovedmenu_links_description'] = 'here you can find links to other danish scooter/moped websites, dealers, makers, insurance companies';
 $setup['l_m_hovedmenu_tilfeldig'] = 'random page';
 $setup['l_m_hovedmenu_tilfeldig_description'] = 'roll the dice and land on a random page';
 $setup['l_m_hovedmenu_todo'] = 'todo';
@@ -95,44 +94,46 @@ $setup['l_m_hovedmenu_kontakt'] = 'contact';
 $setup['l_m_hovedmenu_kontakt_description'] = 'write a message to the creator of this website';
 
 $setup['l_m_oplysninger'] = 'information';
-$setup['l_m_oplysninger_benzin'] = 'petrol (gasoline)';
-$setup['l_m_oplysninger_benzin_description'] = 'explains where petrol (gasoline) comes from, what its made off. octane, additives, fuel consumption, learn to get better fuel consumption, alternatives to petrol (gasoline)';
 $setup['l_m_oplysninger_bogerogblade'] = 'books and magazines';
 $setup['l_m_oplysninger_bogerogblade_description'] = 'books and magazines about scooters and spare parts';
-$setup['l_m_oplysninger_elektricitetogelektronik'] = 'electricity and electronics';
-$setup['l_m_oplysninger_elektricitetogelektronik_description'] = 'explain voltage, amps, ohms, watts and electronic component';
 $setup['l_m_oplysninger_forsikring'] = 'insurance';
 $setup['l_m_oplysninger_forsikring_description'] = 'explains different types off insurance. Phone numbers, insurance companies';
 $setup['l_m_oplysninger_kobafscooter'] = 'buying a scooter';
 $setup['l_m_oplysninger_kobafscooter_description'] = 'advice when buying a new or used scooter, website where you can buy and sell';
 $setup['l_m_oplysninger_loveogregler'] = 'laws and regulations';
 $setup['l_m_oplysninger_loveogregler_description'] = 'what rules applies when riding scooter, what you get a ticket and what you are allowed and not allowed to do';
-$setup['l_m_oplysninger_olie'] = 'engine oil, gear oil, hydraulic oil';
-$setup['l_m_oplysninger_olie_description'] = 'explain where oil comes from, engine oil, gear oil, hydraulic oil, viscosity, temperature range';
-$setup['l_m_oplysninger_omregn'] = 'convert and calculate';
-$setup['l_m_oplysninger_omregn_description'] = 'convert between different units, calculate fuel consumption, units and abbreviations, convert torque tightening, convert tire pressure, calculate combustion chamber volume and displacement, calculate compression ratio';
 $setup['l_m_oplysninger_ordbog'] = 'dictionary';
-$setup['l_m_oplysninger_ordbog_description'] = 'explain different abbreviations and words';
+$setup['l_m_oplysninger_ordbog_description'] = 'explain different scooter related abbreviations and words';
 $setup['l_m_oplysninger_registrering'] = 'registration';
 $setup['l_m_oplysninger_registrering_description'] = 'license plate, frame number, engine number, ?fabrikationsplate?, ?componentmarksign?, type approval, registration';
-$setup['l_m_oplysninger_sammenlign'] = 'compare 2 stroke, 4 stroke and electric';
-$setup['l_m_oplysninger_sammenlign_description'] = 'compare fuel consumption, noise, pollution, odours, oil change, for scooters with 2 stroke, 4 stroke and electric engine';
-$setup['l_m_oplysninger_smorelse'] = 'lubrication and fluids';
-$setup['l_m_oplysninger_smorelse_description'] = 'brake fluids, ?carburettor anti-freeze-fluid?, ?cobberfat?, coolant, ?lockoil?, ?siliconefat?, rust protection';
-$setup['l_m_oplysninger_stederidanmark'] = 'places in denmark';
-$setup['l_m_oplysninger_stederidanmark_description'] = 'map off denmark with shops, workshops, dealers, importers and other interesting places';
-$setup['l_m_oplysninger_teoriprove'] = 'theory test';
-$setup['l_m_oplysninger_teoriprove_description'] = 'questions that tests your knowledge about ride 30 km/t scooter in traffic';
 $setup['l_m_oplysninger_tilkoring'] = 'running-in';
 $setup['l_m_oplysninger_tilkoring_description'] = 'advice for running-in a new scooter and new engine parts';
-$setup['l_m_oplysninger_typegodkendelser'] = 'type approval';
-$setup['l_m_oplysninger_typegodkendelser_description'] = 'type approval for many scooter models sold in denmark';
-$setup['l_m_oplysninger_vinchecker'] = 'VIN checker';
-$setup['l_m_oplysninger_vinchecker_description'] = 'write a 17 digit frame number and (maybe) see info about the scooter like maker and year';
 $setup['l_m_oplysninger_vinterrad'] = 'winter tips';
 $setup['l_m_oplysninger_vinterrad_description'] = 'advice primarily useful in the winter';
-$setup['l_m_oplysninger_verktoj'] = 'tools';
-$setup['l_m_oplysninger_verktoj_description'] = 'multimeter, caliper, micrometer, ?universalholder?, ?feeler gauge?, ?strobelamp?, torque wrench';
+
+$setup['l_m_dokumenter'] = 'documents';
+$setup['l_m_dokumenter_download'] = 'manuals, electrical diagrams, sparepartscatalogues, etc (download)';
+$setup['l_m_dokumenter_download_description'] = 'here you can download manuals, electrical diagrams and so on';
+$setup['l_m_dokumenter_typegodkendelser'] = 'type approval';
+$setup['l_m_dokumenter_typegodkendelser_description'] = 'type approval for many scooter models sold in denmark';
+
+$setup['l_m_interaktive'] = 'interactive';
+$setup['l_m_interaktive_vinchecker'] = 'VIN checker';
+$setup['l_m_interaktive_vinchecker_description'] = 'write a 17 digit frame number and (maybe) see info about the scooter like maker and year';
+$setup['l_m_interaktive_omregn'] = 'convert and calculate';
+$setup['l_m_interaktive_omregn_description'] = 'convert between different units, calculate fuel consumption, units and abbreviations, convert torque tightening, convert tire pressure, calculate combustion chamber volume and displacement, calculate compression ratio';
+$setup['l_m_interaktive_teoriprove'] = 'theory test';
+$setup['l_m_interaktive_teoriprove_description'] = 'questions that tests your knowledge about ride 30 km/t scooter in traffic';
+$setup['l_m_interaktive_nummerplade'] = 'license plate generator';
+$setup['l_m_interaktive_nummerplade_description'] = 'license plate generator is not made yet';
+
+$setup['l_m_vesker'] = 'fluids and lubrications';
+$setup['l_m_vesker_benzin'] = 'petrol (gasoline)';
+$setup['l_m_vesker_benzin_description'] = 'explains where petrol (gasoline) comes from, what its made off. octane, additives, fuel consumption, learn to get better fuel consumption, alternatives to petrol (gasoline)';
+$setup['l_m_vesker_olie'] = 'engine oil, gear oil, hydraulic oil';
+$setup['l_m_vesker_olie_description'] = 'explain where oil comes from, engine oil, gear oil, hydraulic oil, viscosity, temperature range';
+$setup['l_m_vesker_smorelse'] = 'lubrication and fluids';
+$setup['l_m_vesker_smorelse_description'] = 'brake fluids, ?carburettor anti-freeze-fluid?, ?cobberfat?, coolant, ?lockoil?, ?siliconefat?, rust protection';
 
 $setup['l_m_scooterensdele'] = 'things on scooter';
 $setup['l_m_scooterensdele_2taktmotor'] = '2 stroke engine';
@@ -298,7 +299,15 @@ $setup['l_m_scooterensdele_stotteben_description'] = 'center stand, side kicksta
 $setup['l_m_scooterensdele_tendror'] = 'spark plug';
 $setup['l_m_scooterensdele_tendror_description'] = 'spark plug codes, heat valves, champion, NGK, Denso, Bosch, Torch, spark plug types, spark plug cap, iridium, spark';
 
-$setup['l_m_service'] = 'service';
+$setup['l_m_service'] = 'workshop (service)';
+$setup['l_m_service_verktojskassen'] = 'toolbox';
+$setup['l_m_service_verktojskassen_verktoj'] = 'tools';
+$setup['l_m_service_verktojskassen_verktoj_description'] = 'multimeter, caliper, micrometer, ?universalholder?, ?feeler gauge?, ?strobelamp?, torque wrench';
+$setup['l_m_service_elektrisk'] = 'electrical work';
+$setup['l_m_oplysninger_elektricitetogelektronik'] = 'electricity and electronics';
+$setup['l_m_oplysninger_elektricitetogelektronik_description'] = 'explain voltage, amps, ohms, watts and electronic component';
+$setup['l_m_service_elektrisk_elektriskarbejde'] = 'electrical work';
+$setup['l_m_service_elektrisk_elektriskarbejde_description'] = 'soldering, heat shrink, charger, connectors to CDI boxes and stuff like that';
 $setup['l_m_service_fejlfinding'] = 'fault finding';
 $setup['l_m_service_fejlfinding_introduktion'] = 'introduction';
 $setup['l_m_service_fejlfinding_introduktion_description'] = 'start here if your looking to solve problems with your scooter';
@@ -384,22 +393,18 @@ $setup['l_m_specielt'] = 'special';
 $setup['l_m_specielt_rodekassen'] = 'mess box';
 $setup['l_m_specielt_rodekassen_andet'] = 'other';
 $setup['l_m_specielt_rodekassen_andet_description'] = 'different unfinished subjects';
-$setup['l_m_specielt_rodekassen_elektriskarbejde'] = 'electrical work';
-$setup['l_m_specielt_rodekassen_elektriskarbejde_description'] = 'soldering, heat shrink, charger, connectors to CDI boxes and stuff like that';
 $setup['l_m_specielt_rodekassen_slidkanogetophastigheden'] = 'wear can increase top speed';
 $setup['l_m_specielt_rodekassen_slidkanogetophastigheden_description'] = 'something about warn on the variator pulley (or restriction ring) can increase the top speed on a restricted scooter';
 $setup['l_m_specielt_rodekassen_forsogpaatfindeudafhvordanmanfarnummerpladepakobtbrugtscooterudenpapir'] = 'trying to find out how to get license plate on a bought used scooter without papers';
 $setup['l_m_specielt_rodekassen_forsogpaatfindeudafhvordanmanfarnummerpladepakobtbrugtscooterudenpapir_description'] = 'here im trying to collect information about how to get license plate on a used scooter bought without papers';
-$setup['l_m_specielt_rodekassen_nummerplade'] = 'license plate generator';
-$setup['l_m_specielt_rodekassen_nummerplade_description'] = 'license plate generator is not made yet';
-$setup['l_m_specielt_rodekassen_atv'] = 'ATV';
-$setup['l_m_specielt_rodekassen_atv_description'] = 'here i collect info about ATV (All Terrain Vehicle)';
+$setup['l_m_scootermerker_atv'] = 'ATV (All-Terrain Vehicle)';
+$setup['l_m_scootermerker_atv_description'] = 'here i collect info about ATV (All Terrain Vehicle)';
 $setup['l_m_specielt_rodekassen_brandselscelle'] = 'fuel cells';
 $setup['l_m_specielt_rodekassen_brandselscelle_description'] = 'learn about fuel cell technology';
 
 $scootergentag = ' scooters with images, data and maybe manuals, electrical diagrams, spare parts catalogues and type approvals';
 
-$setup['l_m_scootermerker'] = 'scooter brands';
+$setup['l_m_scootermerker'] = 'vehicles (scooter brands)';
 $setup['l_m_scootermerker_galleri'] = 'gallery';
 $setup['l_m_scootermerker_galleri_description'] = 'overview of all the scooter brands and images of the each scooter model';
 $setup['l_m_scootermerker_1'] = 'A - B - C - D';
@@ -471,7 +476,7 @@ $setup['l_m_scootermerker_3_kreidler'] = 'kreidler';
 $setup['l_m_scootermerker_3_kreidler_description'] = 'watch Kreidler' . $scootergentag;
 $setup['l_m_scootermerker_3_kymco'] = 'kymco';
 $setup['l_m_scootermerker_3_kymco_description'] = 'watch Kymco' . $scootergentag;
-$setup['l_m_scootermerker_3_kymcosuper8'] = 'Kymco Super 8';
+$setup['l_m_scootermerker_3_kymcosuper8'] = 'Kymco Super 8 4T';
 $setup['l_m_scootermerker_3_kymcosuper8_description'] = 'here i have written about some of the problems i have been having with this model';
 $setup['l_m_scootermerker_3_lifan'] = 'lifan';
 $setup['l_m_scootermerker_3_lifan_description'] = 'watch Lifan' . $scootergentag;
@@ -567,18 +572,28 @@ $setup['l_m_scootermerker_2takt_modellermed2taktmotor'] = 'models with 2 stroke 
 $setup['l_m_scootermerker_2takt_modellermed2taktmotor_description'] = 'an attempt to make a list of all the 2 stroke scooters sold in denmark';
 $setup['l_m_scootermerker_elektriskescootere'] = 'electric scooters';
 $setup['l_m_scootermerker_elektriskescootere_description'] = 'electric scooter models that have been and are being sold or have been seen in denmark';
+$setup['l_m_scootermerker_sammenlign'] = 'compare 2 stroke, 4 stroke and electric';
+$setup['l_m_scootermerker_sammenlign_description'] = 'compare fuel consumption, noise, pollution, odours, oil change, for scooters with 2 stroke, 4 stroke and electric engine';
 
 $setup['l_m_underholdning'] = 'entertainment';
 $setup['l_m_underholdning_billeder'] = 'images';
 $setup['l_m_underholdning_billeder_description'] = 'images from the internet. Part of which is funny';
-$setup['l_m_underholdning_billederfragaden'] = 'images from the streets';
-$setup['l_m_underholdning_billederfragaden_description'] = 'images of scooters, mopeds and other vehicles driving on cycle lanes and roads';
+$setup['l_m_underholdning_billeder'] = 'images from the streets';
+$setup['l_m_underholdning_billeder_description'] = 'images of scooters, mopeds and other vehicles driving on cycle lanes and roads';
 $setup['l_m_underholdning_videoer'] = 'videos';
 $setup['l_m_underholdning_videoer_description'] = 'videos from the internet';
 $setup['l_m_underholdning_spil'] = 'games';
 $setup['l_m_underholdning_spil_description'] = 'games with scooters';
 $setup['l_m_underholdning_lyd'] = 'audio';
 $setup['l_m_underholdning_lyd_description'] = 'audio that have something to do with scooters';
+
+$setup['l_m_andresteder'] = 'other places';
+$setup['l_m_hovedmenu_links'] = 'links';
+$setup['l_m_hovedmenu_links_description'] = 'here you can find links to other danish scooter/moped websites, dealers, makers, insurance companies';
+$setup['l_m_hovedmenu_stederidanmark'] = 'places in denmark';
+$setup['l_m_hovedmenu_stederidanmark_description'] = 'map off denmark with shops, workshops, dealers, importers and other interesting places';
+$setup['l_m_hovedmenu_facebookfanside'] = 'fan-page on facebook';
+$setup['l_m_hovedmenu_facebookfanside_description'] = 'fan-page on facebook (not made by me) where people on facebook can discover the website and to get more visitors';
 
 $setup['language_lastupdate'] = 'page was last updated';
 $setup['language_rssnews'] = 'RSS news feed';

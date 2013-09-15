@@ -17,7 +17,7 @@ Mål begge knaster på det bredeste punkt.
 '.visbilled('1', 'billed2625.jpg', 'måling af knastaksel knast bredde', false, true).'
 '.visbilled('1', 'billed2623.jpg', 'måling af knastaksel', false, true).'
 '.visbilled('1', 'billed2647.jpg', 'måling af knastaksel', false, true).'
-'.afsnit('Kymco Super 8 (50 cm³) data','
+'.afsnit('Kymco Super 8 4T (50 cm³) data','
 Knasten til indsugningsventilen skal minimum være 26,038 mm.
 Knasten til udstødningsventilen skal minimum være 25,407 mm.
 ').'
@@ -30,11 +30,11 @@ Mål den indre diameter på begge vippearme.
 Mål den ydre diameter på begge vippearmsaksler.
 '.visbilled('1', 'billed2626.jpg', 'måling af vippearme', false, true).'
 
-'.afsnit('Kymco Super 8 (50 cm³) data','
+'.afsnit('Kymco Super 8 4T (50 cm³) data','
 Den indre diameter på begge vippearme skal maksimalt være 10,10 mm.
 Den ydre diameter på begge vippearmsaksler skal minimum være 9,91 mm.
 ').'
-'.afsnit('Kymco Super 8 (50 cm³) måling','
+'.afsnit('Kymco Super 8 4T (50 cm³) måling','
 Jeg har målt den indre diameter på indsugningsventilens vippearm til at være 10,00 mm.
 Jeg har målt den indre diameter på udstødningsventilens vippearm til at være 10,03 mm.
 
@@ -52,13 +52,13 @@ Mål højden på den ydre og indre ventilfjeder i afslappet tilstand (uden at de
 Nogle scootere har 1 fjeder per ventil (ydreventil).
 Andre scootere har 2 fjedre per ventil (ydreventil og indreventil).
 
-'.afsnit('Kymco Super 8 (50 cm³) data','
+'.afsnit('Kymco Super 8 4T (50 cm³) data','
 Den ydre ventilfjeder skal minimum være 33,3 mm.
 Den indre ventilfjeder skal minimum være 30,1 mm.
 
-Selvom data stammer fra Kymco Super 8 servicemanualen så har min Kymco Super 8 kun 1 fjeder per ventil (den ydrefjeder).
+Selvom data stammer fra Kymco Super 8 4T servicemanualen så har min Kymco Super 8 4T kun 1 fjeder per ventil (den ydrefjeder).
 ').'
-'.afsnit('Kymco Super 8 (50 cm³) måling','
+'.afsnit('Kymco Super 8 4T (50 cm³) måling','
 Jeg har målt den ydrefjeder for indsugningsventilen til at være 35,71 mm.
 Jeg har målt den ydrefjeder for udstødningsventilen til at være 35,78 mm.
 
@@ -75,11 +75,11 @@ Mål bredden af ventilerne på ventilstammen (midt på ventilen hvor den køre o
 '.visbilled('1', 'billed2629.jpg', 'måling af ventiler', false, true).'
 '.visbilled('1', 'billed2915.jpg', 'måling af ventiler', false, true).'
 
-'.afsnit('Kymco Super 8 (50 cm³) data','
+'.afsnit('Kymco Super 8 4T (50 cm³) data','
 Indsugningsventilen skal minimum være 4,9 mm.
 Udstødningsventilen skal minimum være 4,9 mm.
 ').'
-'.afsnit('Kymco Super 8 (50 cm³) måling','
+'.afsnit('Kymco Super 8 4T (50 cm³) måling','
 Jeg har målt midt på indsugningsventilen : 4,980 mm.
 Jeg har målt midt på udstødningsventilen : 4,957 mm.
 ').'
@@ -93,20 +93,20 @@ Det variere fra scooter model til scooter model hvor langt fra bunden af stemple
 '.visbilled('1', 'billed2630.jpg', 'måling af stempel', false, true).'
 '.visbilled('1', 'billed2688.jpg', 'måling af stempel', false, true).'
 
-'.afsnit('Kymco Super 8 (50 cm³) data','
+'.afsnit('Kymco Super 8 4T (50 cm³) data','
 9 mm fra bunden skal stemplets ydre diameter minimum være 38,9 mm.
 ').'
-'.afsnit('Kymco Super 8 (50 cm³) måling','
+'.afsnit('Kymco Super 8 4T (50 cm³) måling','
 Jeg har målt stemplets ydre diameter 90 grader fra stempelpindshullet og 9 mm fra bunden : 38,96 mm.
 ').'
 
 Mål den indre diameter på stempelpindshullet med stempelpinden taget ud.
 '.visbilled('1', 'billed2632.jpg', 'måling af stempelpindshul på stempel', false, true).'
 
-'.afsnit('Kymco Super 8 (50 cm³) data','
+'.afsnit('Kymco Super 8 4T (50 cm³) data','
 Stempelpindshullet skal maksimalt være 13,04 mm.
 ').'
-'.afsnit('Kymco Super 8 (50 cm³) måling','
+'.afsnit('Kymco Super 8 4T (50 cm³) måling','
 Jeg har målt stempelpindshullet indre diameter til at være 12,9-12,99 mm.
 ').'
 
@@ -115,7 +115,7 @@ Mål stempelpindens ydre diameter.
 '.visbilled('1', 'billed2916.jpg', 'måling af stempelpind', false, true).'
 '.visbilled('1', 'billed3147.jpg', 'måling af stempelpind', false, true).'
 
-'.afsnit('Kymco Super 8 (50 cm³) data','
+'.afsnit('Kymco Super 8 4T (50 cm³) data','
 Stempelpinden skal minimum være 12,96 mm.
 ').'
 
@@ -123,7 +123,7 @@ Mål mellemrummet mellem topringen og stemplets vandrette kant hvor topringen sk
 Mål mellemrummet mellem andenringen og stemplets vandrette kant hvor andenringen skal sidde.
 '.visbilled('1', 'billed2633.jpg', 'måling af stempel og stempelrings spillerum', false, true).'
 
-'.afsnit('Kymco Super 8 (50 cm³) data','
+'.afsnit('Kymco Super 8 4T (50 cm³) data','
 Mellemrummet for topringen skal maksimalt være 0,09 mm.
 Mellemrummet for andenringen skal maksimalt være 0,09 mm.
 ').'
@@ -137,11 +137,11 @@ Fjern topringen og gør det samme for andenringen.
 (Jeg ved dog ikke om ringene skal sidde i den uslidte del af cylinden eller der hvor der er slid).
 '.visbilled('1', 'billed2631.jpg', 'måling af stempelringe i cylinder', false, true).'
 
-'.afsnit('Kymco Super 8 (50 cm³) data','
+'.afsnit('Kymco Super 8 4T (50 cm³) data','
 Topringen skal maksimalt have et mellemrum på 0,45 mm.
 Andenringen skal maksimalt have et mellemrum på 0,45 mm.
 ').'
-'.afsnit('Kymco Super 8 (50 cm³) måling','
+'.afsnit('Kymco Super 8 4T (50 cm³) måling','
 Topring i bund hvor cylinder ikke er slidt : 0,275 mm.
 Andenring i bund hvor cylinder ikke er slidt : 0,285 mm.
 Siderail i bund hvor cylinder ikke er slidt : 0,52 mm.
@@ -192,7 +192,7 @@ Topring : 0,08 til 0,20 mm.
 Andenring : 0,05 til 0,20 mm.
 ').'
 
-'.afsnit('Kymco Super 8 (50 cm³) data','
+'.afsnit('Kymco Super 8 4T (50 cm³) data','
 Placer ring ved cylinder bund.
 Topring : 0,08 til 0,20 mm.
 Andenring : 0,05 til 0,20 mm.
@@ -266,7 +266,7 @@ Placer krumtapakslen på 2 V blokke så krumtapakslen kan dreje frit rundt på l
 
 Mål spillerummet til siden for plejlstangens store ende.
 '.visbilled('1', 'billed2734.jpg', 'måling af spillerum ved plejlstangens store ende', false, true).'
-'.afsnit('Kymco Super 8 (50 cm³) data','
+'.afsnit('Kymco Super 8 4T (50 cm³) data','
 Maksimalt 0,55 mm.
 ').'
 '.afsnit('Sym Jet (50 cm³) data','
@@ -279,7 +279,7 @@ Maksimalt 0,71 mm.
 Bevæg plejlstangen i X og Y retningerne og mål spillerummet.
 '.visbilled('1', 'billed2735.jpg', 'måling af plejlstang slør tegning', false, true).'
 '.visbilled('1', 'billed2743.jpg', 'måling af plejlstang slør', false, true).'
-'.afsnit('Kymco Super 8 (50 cm³) data','
+'.afsnit('Kymco Super 8 4T (50 cm³) data','
 Maksimalt 0,05 mm.
 ').'
 '.afsnit('Sym Jet (50 cm³) data','
@@ -291,7 +291,7 @@ Maksimalt 0,04 mm.
 
 Mål ved de i servicemanualen angivne punkter på akslen og drej akslen for at se hvor skæv akslen er (kaldet runout).
 '.visbilled('1', 'billed2793.jpg', 'punkter for måling at krumtapakslen skævhed tegning', false, true).'
-'.afsnit('Kymco Super 8 (50 cm³) data','
+'.afsnit('Kymco Super 8 4T (50 cm³) data','
 I manualen står ikke hvor man skal måle men der er billede der viser det selvom de godt nok har klippet antal mm væk i manualen men det ser ud til der står 90 mm til variator siden og 50 eller 60 mm til svinghjuls siden målt fra ydersiderne af vægtene.
 '.visbilled('1', 'billed2744.jpg', 'måling at krumtapakslen skævhed', false, true).'
 Maksimalt 0,10 mm.
@@ -333,7 +333,7 @@ data
 ' => '
 Kig i scooterens servicemanual for at finde ud af hvor meget de enkelte dele må være slidt før de bør udskiftes..
 
-Her er data for Kymco Super 8 50 cm³.
+Her er data for Kymco Super 8 4T 50 cm³.
 '.
 box(array('350', '150', '150')
    ,array(

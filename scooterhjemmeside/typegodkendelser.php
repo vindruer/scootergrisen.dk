@@ -16,22 +16,18 @@ $databasecenter = array(
 introduktion
 ' => '
 <div style="float: left; margin: 30px;">'.visbilled('1', 'billed2612.jpg', 'typegodkendelse', false, true).'</div>'
-.'<div>Her på siden er typegodkendelser 2 takt og 4 takt 50 cm³ scootere og elektriske scootere.
+.'<div>Her på siden er typegodkendelser til 2 takt og 4 takt 50 cm³ scootere og elektriske scootere.
 
-Typegodkendelserne stammer fra færdselsstyrelsens hjemmeside.
-
-'.ahref('http://www.fstyr.biltorvet.dk/WebForm1.aspx', 'Gå direkte til færdselsstyrelsens typegodkendelser').'.
+Typegodkendelserne stammer fra '.ahref('http://www.fstyr.biltorvet.dk/WebForm1.aspx', 'færdselsstyrelsens typegodkendelser').'.
 
 Typegodkendelser indeholder information om en bestemt scooter/knallert model.
-Information om anmelderen, mærke, model, hastighed, fabrikantkode, begrænsninger, vægt, dimensioner, motor type, fælg, dæk og andet.
+Information som anmelder, mærke, model, hastighed, fabrikantkode, begrænsning, vægt, dimensioner, motor type, fælg, dæk og andet.
 
 Det variere hvor meget information der er i typegodkendelserne og det er ikke alle modeller jeg har kunne finde en typegodkendelse til da færdselsstyrelsen ikke har en komplet liste med typegodkendelser.
 
 For det meste er der separate typegodkendelse for en 25, 30 km/t (lille knallert) og 45 km/t (stor knallert) selvom de næsten indeholder samme information.
 
-<mark>fstyr.dk skulle have skrevet til en anden på nettet at det ikke er hensigten at godkendelser på invalideknallerter er tilgængelige på internettet.
-Så det kunne forklarer hvorfor der er nogen scootere jeg ikke kan finde typegodkendelser på hos fstyr.dk.
-En invalideknallerter er dem med 3 hjul.</mark>
+Der findes vist kun typegodkendelser til de scootere/knallerter der skal have nummerplade, jeg har vist aldrig fundet nogen til lille 3 hjulet invaldeknallert som ikke skal have nummerplade.
 <div class="clearboth"></div>
 </div>
 '

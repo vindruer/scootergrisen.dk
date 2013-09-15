@@ -190,14 +190,14 @@ Her ses hvor bremsekablet sidder ved venstre bremsegreb.
 bremsekontakt
 ' => '
 Her ses en bremsekontakt ved højre bremsegreb.
-'.visbilled('1', 'billed2561.jpg', 'kymco super 8 højre bremsekontakt', false, true).'
+'.visbilled('1', 'billed2561.jpg', 'kymco super 8 4T højre bremsekontakt', false, true).'
 Bremsekontakter bruges til at tænde bremselyset når der bremses og som en sikkerhedsfunktion der gør at man skal bremse før man kan bruge el starteren til at starte motoren.
 
 Når bremsegrebet er sluppet presser bremsegrebet ind på kontakten også er forbindelsen mellem terminalerne afbrudt.
-'.visbilled('1', 'billed2405.jpg', 'kymco super 8 højre bremsekontakt ind', false, true).'
+'.visbilled('1', 'billed2405.jpg', 'kymco super 8 4T højre bremsekontakt ind', false, true).'
 Når man bremser kommer dutten ud og forbindelsen mellem de to terminaler tilsluttes og bremselyset tændes og el starteren kan bruges.
-'.visbilled('1', 'billed2406.jpg', 'kymco super 8 højre bremsekontakt ud', false, true).'
-'.visbilled('1', 'billed2407.jpg', 'kymco super 8 højre bremsekontakt ud', false, true).'
+'.visbilled('1', 'billed2406.jpg', 'kymco super 8 4T højre bremsekontakt ud', false, true).'
+'.visbilled('1', 'billed2407.jpg', 'kymco super 8 4T højre bremsekontakt ud', false, true).'
 
 Her ses en bremsekontakt ved venstre bremsegreb.
 '.visbilled('1', 'billed2717.jpg', 'venstre bremsekontakt', false, true).'

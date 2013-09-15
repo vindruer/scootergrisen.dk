@@ -4,25 +4,13 @@ require_once('./php/opsetning_scooterhjemmeside.php');
 require_once('./php/generelt_funktioner.php');
 require_once('./php/scooterhjemmeside_funktioner.php');
 
-$title = "elektrisk arbejde - Rodekassen";
-$overskrift = "elektrisk arbejde - Rodekassen";
-$metadescription = "side om elektrisk arbejde som lodning, krympeflex, sikringer, opladere, løse stik til CDI boks og sådan noget";
+$title = "elektrisk arbejde";
+$overskrift = "elektrisk arbejde";
+$metadescription = "side om elektrisk arbejde som lodning, krympeflex, sikringer, opladere, løse stik til CDI boks og sådan noget (mangler en masse info)";
 
 $databasecenter = array(
 
 '
-
-' => '
-
-'
-
-,'
-
-' => '
-
-'
-
-,'
 krympeflex
 ' => '
 Krymflex er plastikrør der krymper når de får varme. Altså de bliver mindre.
