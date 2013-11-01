@@ -5,9 +5,9 @@
 // http://www.scootergalleri.dk/vid_vis.aspx?VideoID=20637
 
 chdir('..');
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $indhold = '';
 

@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "krumtap - 4 takt motor";
 $overskrift = "krumtap - 4 takt motor";
@@ -40,8 +40,8 @@ galleriholder(array(
 ))
 .'
 
-'.visflash('0', 'http://www.youtube.com/watch?v=bf07DxbENR0', '', true).'
-'.visflash('0', 'http://www.youtube.com/watch?v=iNj3VbBCRRM', '', true).'
+'.visflash('0', 'http://www.youtube.com/watch?v=bf07DxbENR0', 'krumtappen skal åbenbart kunne bevæge sig sidelæns sådan her på en 4 takt motor', true).'
+'.visflash('0', 'http://www.youtube.com/watch?v=iNj3VbBCRRM', 'krumtappen kan let sættes i og tages ud på denne 4 takt motor, sådan skal det vist være', true).'
 
 '
 

@@ -1,27 +1,22 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "registrering";
-$overskrift = "registrering";
-$metadescription = "info om nummerplader, stelnummer, motornummer, typeattest, registreringsattest, typegodkendelse osv til scootere og knallerter";
+$setup['nogetikon']               = 'ikoner/ikon_registrering2.png';
+
+$title = "registrering af scootere og knallerter";
+$overskrift = "registrering af scootere og knallerter";
+$metadescription = "info om nummerplade, stelnummer, motornummer, typeattest, registreringsattest, typegodkendelse osv til scootere og knallerter";
 
 $databasecenter = array(
 
 '
-introduktion
-' => '
-Denne side handler om alt hvad der har med registering af scootere at gøre.
-Nummerplade, stelnummer, motornummer, typeattest, registreringsattest, typegodkendelse, osv.
-'
-
-,'
 bemærk
 ' => '
-Den måde man køber sin nummerplade er for nylig lavet om.
-Hvor man før kun kunne købe sin nummerplade hos skat skal man i fremtiden købe nummerplade hos en synshal eller en forhandler som er godkendt til at sælge dem.
+Den måde man køber nummerplade har ændret sig.
+Hvor man tidligere kun kunne købe nummerplade hos skat skal/kan? man i fremtiden købe nummerplade hos en synshal eller en forhandler som er godkendt til at sælge dem.
 Jeg har endnu ikke så meget info om dette da jeg ikke selv har prøvet det.
 '
 
@@ -36,22 +31,24 @@ Det gælder dog ikke for 30 km/t invalideknallert (med 3 hjul).
 Køber man en brugt 30 km/t scooter er det ikke altid der skal være nummerplade på. Det kommer an på hvornår scooteren blev solgt første gang fra fabriksny af.
 En 30 km/t scooter der er solgt fra ny før 1. Juli 2006 har ikke nummerplade og skal ikke have nummerplade selvom den sælges senere.
 
-Fra '.ahref('download/vejledning_om_syn_af_koretojer.pdf', 'vejledning_om_syn_af_koretojer.pdf').' :
+'.ahref('download/vejledning_om_syn_af_koretojer.pdf', 'Vejledning om syn af køretøjer').' :
 '.citat('
 En lille knallert skal kun registreres, hvis den er erhvervet som fabriksny
 den 1. juli 2006 eller senere. En invalideknallert skal ikke registreres.
 ').'
 
-En gul nummerplade til lille knallert koster 590,- kroner.
-Tidligere kostede det kun 90 kroner for en nummerplade til en lille knallert som skulle købes hos skat men det er lavet om.
-
-Kigge man på nummerpladen lige på eller tager et billede af nummerpladen med blitz lige på så kan man se nogle symboler med et øje i en hånd.
+Kigge man på nummerpladen lige på eller tager et billede af nummerpladen med blitz lige på så kan man måske se nogle symboler med et øje i en hånd.
 Jeg går ud fra at symbolerne er til for at sikre sig mod hjemmelavede nummerplader.
-Læs mere om symbolet som vist kaldes argusøje : '.ahref('http://www.denstoredanske.dk/Sprog,_religion_og_filosofi/Religion_og_mystik/Guder_i_antik_litteratur/Argos').'.
+Læs mere om argusøje symbolet på '.ahref('http://www.denstoredanske.dk/Sprog,_religion_og_filosofi/Religion_og_mystik/Guder_i_antik_litteratur/Argos', 'denstoredanske.dk/.../Argos').'.
 '.visbilled('1', 'billed1253.jpg', '30 km/t nummerplade med argusøje symbol øje i hånd', false, true).'
+
+Tidligere kostede det kun 90 kroner for en nummerplade til lille knallert som dengang kun kunne købes hos skat men det er lavet om.
+En gul nummerplade til lille knallert koster 590,- kroner. Men de steder som nu må sælge nummerplade må muligvis selv bestemme hvad pris det vil sælge nummerpladen for.
 
 Bogstaverne på gul nummerplade til lille knallert starter fra VB.
 Tallene på gul nummerplade til lille knallert går fra 5500 til 9999.
+
+Nummerpladen er 145 mm bred og 125 mm høj.
 '
 
 ,'
@@ -62,6 +59,8 @@ En stor knallert som højst må køre 45 km/t har en hvid nummerplade med 2 bogs
 En 45 km/t nummerplade koster 590,- kroner.
 
 Tallene på hvid nummerplade til stor knallert går fra 001 til 699.
+
+Nummerpladen er 145 mm bred og 125 mm høj.
 '
 
 ,'
@@ -85,7 +84,7 @@ Her ses et VIN. De to stjerner i starteren og slutning er ikke en del af VIN.
 
 Stelnummeret kan ofte ses ved at fjerne et stykke plastik over fodbrættet.
 '.visbilled('1', 'billed0348.jpg', 'stelnummer', false, true).'
-VIN står også på fabrikationspladen.
+Stelnummeret kan også stå på en '.ahref('#fabrikationsplade', 'fabrikationsplade').'.
 
 Stelnummeret kan nogle gange bruges til at finde ud af om scooteren er godkendt som 30 km/t eller 45 km/t scooter ved at sammenligne med scooterens typegodkendelse.
 
@@ -93,7 +92,7 @@ VIN indeholder ikke (eller sjældent ?) bogstaverne i, o og q (I, O og Q) da de 
 
 Brug '.ahref('vinchecker.php', 'VIN checker').' til at dekode VIN og måske få nogle oplysninger om scooteren.
 
-Her er en forklaring på hvad tegn nummer 1 til 17 i VIN betyder.
+Her er en forklaring på hvad tegn 1 til 17 i VIN betyder.
 '.
 box(array('100', '200', '200')
    ,array(
@@ -320,11 +319,11 @@ Her ses en VIN forklaring fra XT50QT typegodkendelse (side 110).
 '.visfil('1', 'scooterhjemmeside/download/xt50qt_eectypegodkendelse.pdf').'
 '.visbilled('1', 'billed1843.jpg', 'stelnummer VIN forklaring', false, true).'
 
-Her er noget data fra nogle typegodkendelser.
+Her er noget data fra nogle '.ahref('typegodkendelser.php', 'typegodkendelser').'.
 '.
-box(array('20', '100', '100', '100', '100')
+box(array('100', '100', '100', '100', '100')
    ,array(
-       array('VIN tegn',  'fra Zhongyu ZY50QT-7 typegodkendelse', 'fra Sym Mio typegodkendelse', 'fra EVT 4000E typegodkendelse', 'fra Giantco Sprint typegodkendelse')
+       array('VIN tegn',  'Zhongyu ZY50QT-7 typegodkendelse', 'Sym Mio typegodkendelse', 'EVT 4000E typegodkendelse', 'Giantco Sprint typegodkendelse')
       ,array('1',  '', '', '', '')
       ,array('2',  '', '', '', '')
       ,array('3',  '', '', '', '')
@@ -408,7 +407,7 @@ box(array('120', '400')
 ,'
 VIN checker
 ' => '
-Prøv at indtast et VIN (17 cifret stelnummer) i '.ahref('vinchecker.php', 'VIN checkeren').' og måske kan du få oplysninger så som producent og årgang.
+Prøv at indtast et VIN (17 cifret stelnummer) i '.ahref('vinchecker.php', 'VIN checkeren').' og måske kan du få oplysninger om scooteren/knallerter som producent, model, årgang, osv.
 '
 
 ,'
@@ -445,7 +444,7 @@ Det kaldes et komponentmærkningsskilt i typegodkendelsen.
 
 Det giver oplysninger om blandt andet luftfilter, udstødning og remskiver.
 
-Her ses de samme info fra typegodkendelsen.
+Her ses samme data fra typegodkendelsen.
 '.visbilled('1', 'billed2787.jpg', 'komponentmærkningsskilt', false, true).'
 
 Her ses komponentmærkningsskiltet fra en Jinlun JL50QT-5.
@@ -467,7 +466,7 @@ Her ses en typeattest.
 
 Læg mærke til der står nederst at forhandleren erklærer at scooteren er fabriksny, klargjort efter fabrikantens anvisninger og er i forskriftsmæssig stand.
 
-På typeattesten står typegodkendelsesnummer og typeanmeldelsesnummer. De kan bruges til at finde ud af hvilken typegodkendelse der passer til scooteren.
+På typeattesten står typegodkendelsesnummer og typeanmeldelsesnummer som kan bruges til at finde den typegodkendelse som passer til scooteren.
 '
 
 ,'
@@ -503,7 +502,7 @@ Noget af papiret udfyldes i butikken og når man aflevere papiret hos skat så u
 
 Man får en kopi af papiret.
 ').'
-Idag er det noget lavet om.
+Idag er det nok lavet om.
 '
 
 ,'
@@ -528,13 +527,24 @@ Starter typeanmeldelsesnummeret med E så har scooteren et EF-typegodkendelsesnu
 Starter typeanmeldelsesnummeret med S eller A eller G så har scooteren ikke et EF-typegodkendelsesnummer.
 
 Da 30 km/t invalideknallerter med 3 hjul ikke skal registeres så findes der vist ikke nogen typegodkendelser til dem.
+
+Fra '.ahref('http://www.trafikstyrelsen.dk/DA/Syn-og-K%C3%B8ret%C3%B8jer/Typegodkendelser/Regler-om-typegodkendelse.aspx').'.
+'.citat('
+Forskellige former for typegodkendelser
+
+Der findes fire forskellige former af typegodkendelser, og hvilken godkendelse, man skal bruge, afhænger bl.a. af, om man kun skal have godkendt et enkelt køretøj eller en hel serie. Indehaveren af en godkendelse har pligt til at oplyse Trafikstyrelsen om ændringer på køretøjet, som kan have betydning for godkendelsen.
+
+1. Standardtypegodkendelse, omfatter flere ens, seriefremstillede, helt færdigopbyggede køretøjer. (For tiden normalt varebiler og påhængs- og campingvogne). Godkendelsen kan ske på baggrund af enten en ansøgning eller en anmeldelse. Det er kun køretøjsfabrikanter eller deres repræsentanter (importører), der kan få standardtypegodkendt et køretøj.
+2. Anmeldt EF-typegodkendelse, omfatter flere ens, seriefremstillede, helt færdigopbyggede køretøjer, hvor køretøjet i sin helhed er EF-godkendt, eller flere ens, seriefremstillede, ikke færdigopbyggede køretøjer hvor det ikke færdigopbyggede køretøj er EF-typegodkendt. Det er kun køretøjsfabrikanter eller deres repræsentanter (importører), der kan anmelde en EF-typegodkendelse.
+3. Typegodkendelse, omfatter flere ens chassiser. Godkendelsen kan ske på baggrund af enten en ansøgning eller en anmeldelse. Det er kun køretøjsfabrikanter eller deres repræsentanter (importører), der kan få typegodkendt et køretøj.
+4. Godkendelseserklæring, omfatter et enkelt chassis. Godkendelsen kan ske på baggrund af enten en ansøgning eller en anmeldelse.
+').'
 '
 
 ,'
 statestik
 ' => '
-På '.high('http://www.mclf.dk/statistikmff/').' kunne man tidligere se noget statestik om nyregisteret scootere og hvilke modeller der er solgt, hvor mange og hvor i landet de er solgt.
-Men siden er lukket nu.
+På '.high('http://www.mclf.dk/statistikmff/').' kunne man tidligere se noget statestik om nyregisteret scootere og hvilke modeller der er solgt, hvor mange og hvor i landet de er solgt (siden er lukket nu).
 
 Jeg fik dog downloadet noget data og her er eksempler på data sorteret efter hvilke modeller der sælges flest af.
 

@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "tændrør - Service";
 $overskrift = "tændrør - Service";
-$metadescription = "service af tændrør på scooter";
+$metadescription = "service af tændrør på scooter (diagnose, elektrode afstand, rengøring, montering, tændrør på forskellige scootere)";
 
 $databasecenter = array(
 
@@ -102,7 +102,7 @@ box(array('150', '100', '70', '70')
       ,array('Piaggio Fly 150 cm³',    '',                '12-14',   '')
       ,array('Sachs Madass',           '',                '20',      '')
       ,array('Sym Mio',                '1,0-1,4',         '',        '')
-      ,array('Sym Orbit',              '1,0-1,4',         '',        '')
+      ,array('Sym Orbit 4 takt',       '1,0-1,4',         '',        '')
       ,array('Yamaha Giggle',          '1,3',             '13',      '9,4')
    )
 )
@@ -186,7 +186,7 @@ box(array('180', '80', '80', '80', '80')
       ,array('skyteam PBR',           '',                        '',                '',                           'Thunder 1E6')
       ,array('sym fiddle II',         'CR7HSA',                  '',                'A7RC',                       '')
       ,array('sym mio',               'C6HSA<br>CR6HSA',        '',                '',                           '')
-      ,array('sym orbit',             '',                        '',                'A7RC',                       '')
+      ,array('sym orbit 4 takt',      '',                        '',                'A7RC',                       '')
       ,array('texas chili',           '',                        '',                '',                           'Denso U20FSRU')
       ,array('texas city',            '',                        '',                '',                           'Denso U20FSRU')
       ,array('texas flash',           '',                        '',                '',                           'Denso U20FSRU')

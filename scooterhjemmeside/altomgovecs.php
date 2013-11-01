@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "govecs elektriske scootere";
+$title = "govecs scootere med elektrisk motor";
 $overskrift = "govecs";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
@@ -891,6 +891,7 @@ $databaseright = array(
 
 'download' => array(
     'Govecs GO! S1.2 brugermanual'                                      => 'govecs_go!s1.2_brugermanual.pdf'
+   ,'Govecs detaljeret typegodkendelse'                                 => 'govecs_detaljeret_typegodkendelse.pdf'
 
 ),'typegodkendelser' => array(
     'Govecs (93 2E) 45 km/t E19844 (e11*2002/24*0961) 1'                => 'typegodkendelser/Govecs%2093%20%28E19844%29%20udstedt%2013-07-2012.pdf'

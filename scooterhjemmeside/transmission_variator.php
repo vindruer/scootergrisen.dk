@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "variator - Transmission";
 $overskrift = "variator - Transmission";
@@ -35,8 +35,6 @@ De 6 grønne firkanter er ruller som bliver slynget ud af centrifugalkraften og 
 Jo højere omdrejninger motoren kører med jo længere bliver rullerne slynget ud og jo højere kører kileremmen i de forreste remskiver.
 
 '.visflash('0', "http://www.youtube.com/watch?v=2EjW-iSP-Q8", 'Her er en som skilder CVT ad og forklare hvad de forskellige dele gør', true).'
-
-<!--Se også '.ahref('http://www.letsindig.be/vario/vario.htm', 'vario (letsindig.be)').'-->
 '
 
 );

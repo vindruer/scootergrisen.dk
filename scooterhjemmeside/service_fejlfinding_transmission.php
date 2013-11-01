@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "Transmission - Fejlfinding";
 $overskrift = "Transmission - Fejlfinding";
-$metadescription = "find og ret fejl på scooterens transmission";
+$metadescription = "find og ret fejl på scooterens/knallertens transmission (variator, kobling)";
 
 $databasecenter = array(
 

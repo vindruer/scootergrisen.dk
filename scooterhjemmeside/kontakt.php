@@ -1,14 +1,14 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $setup['nogetikon']               = 'ikoner/ikon_kontakt2.png';
 
-$title = "kontakt";
-$overskrift = "kontakt";
-$metadescription = "skriv en besked til mig som laver scootergrisen.dk";
+$title = "kontakt scootergrisen (mig som laver hjemmesiden)";
+$overskrift = "kontakt scootergrisen (mig som laver hjemmesiden)";
+$metadescription = "her kan du stille spørgsmål eller komme med forslag til hjemmesiden eller hvad du ellers har lyst til at skrive til mig";
 
 $GLOBALS['setup']['head'] = '
 <style type="text/css">

@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "bremser - Service";
 $overskrift = "bremser - Service";
-$metadescription = "service af bremse på scooter";
+$metadescription = "kontrol af bremsevæske niveau, udluftning, af hydrauliske bremser, udskiftning af bremsevæske, kontrol af bremseklodser, bremseskive, rensning af caliper og belægning, justering af tromlebremse";
 
 $databasecenter = array(
 
@@ -284,8 +284,6 @@ På den måde kommer man ikke til at røre ved belægningen med fedtede fingre e
 ,'
 se også
 ' => '
-<!--'.ahref('http://www.letsindig.be/kymco/bremse/bremse.htm', 'Guide til adskillelse af bremsen på Kymco Agility (www.letsindig.be)').'.-->
-
 '.ahref('http://repvideo.lars-mc.dk/repvideo/view.repair_video.php?id=18', 'Fremstilling af bremseslange til motorcykel (repvideo.lars-mc.dk)').'.
 '
 

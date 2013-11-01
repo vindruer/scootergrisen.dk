@@ -1,19 +1,19 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "forsøg på at finde ud af hvordan man får nummerplade på købt brugt scooter uden papir - Rodekassen";
 $overskrift = "forsøg på at finde ud af hvordan man får nummerplade på købt brugt scooter uden papir - Rodekassen";
-$metadescription = "her samler jeg info om dette emne";
+$metadescription = "her samler jeg info om hvordan man får nummerplade på en scooter man har købt brugt men hvor der ikke fulgte nogen papir med som man skal bruge når man skal have nummerplade på";
 
 $databasecenter = array(
 
 '
 forsøg på at finde ud af hvordan man får nummerplade på købt brugt scooter uden papir
 ' => '
-'.visbilled('1', 'billed3621.jpg', '', false, true).'
+'.visbilled('1', 'billed3621.jpg', 'ansøgning om registeringsattest', false, true).'
 '.visfil('1', 'scooterhjemmeside/download/ansogning_om_ny_registreringsattest.pdf').'
 
 Køb af scooter uden typeattest/registerings attest

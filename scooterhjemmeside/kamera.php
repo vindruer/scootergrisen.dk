@@ -1,58 +1,27 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $setup['nogetikon']               = 'ikoner/ikon_kamera2.png';
 
 $title = "kamera (hjelmkamera / actionkamera)";
 $overskrift = "kamera (hjelmkamera / actionkamera)";
-$metadescription = "kamera der bruges til at optage video og lyd mens man køre på scooter så man kan dele sine oplevelser med andre";
+$metadescription = "kamera der kan bruges til at optage video og lyd mens man køre på scooter/cykel/ski/svømmer/osv så man kan dele sine oplevelser med andre";
+
+$setup['nogetikon']               = 'ikoner/ikon_kamera2.png';
 
 $databasecenter = array(
 
 '
 introduktion
 ' => '
-Her på siden samler jeg information om kamera som er egnet til at optage video og lyd mens man for eksempel køre på scooter.
-
-Se også forum emnet '.ahref('http://scootergrisen.dk/forum/viewtopic.php?f=4&t=851', 'Kamera i styrthjelm').' hvor vi snakker om det og viser de videoer vi og andre har optaget og linker til andre sider som handler om disse kamera.
-'
-
-,'
-video eksempel
-' => '
-Her er en video jeg har optaget mens jeg køre på scooter med kameraet monteret på hjelmen.
-'.visflash('0', 'http://www.youtube.com/watch?v=aSaITYWYikM', 'My first GoPro Hero 2 video upload', true).'
-'
-
-,'
-kamerafolk på nettet
-' => '
-Her er links til nogen af dem der optager mens de køre så du kan se hvad det hele går ud på og hvorfor det er så fedt.
-'.
-box(array('170', '170', '170', '170')
-   ,array(
-       array('bruger','kamera','hvor','køretøj')
-      ,array(''.ahref('http://www.youtube.com/user/TheGardenSnake', 'TheGardenSnake').'','Drift / GoPro','Canada (eller også er det USA)','supermoto')
-      ,array(''.ahref('http://www.youtube.com/user/13mordeth', '13mordeth').'','kompakt kamera under visiret','Taiwan','motorcykel<br>scooter')
-      ,array(''.ahref('http://www.youtube.com/user/SonofthewindsInc', 'SonofthewindsInc').'','GoPro','Storbritannien London','cykel')
-      ,array(''.ahref('http://www.youtube.com/user/187Premises', '187Premises').'',              'Contour',               'Storbritannien London', 'motorcykel')
-      ,array(''.ahref('http://www.youtube.com/user/BaronVonGrumble', 'BaronVonGrumble').'',              'Drift',               'Storbritannien', 'motorcykel')
-      ,array(''.ahref('http://www.youtube.com/user/scootergrisen', 'scootergrisen').'',              'GoPro Hero 2 + Canon PowerShot A470',               'Sjælland', 'scooter')
-      ,array(''.ahref('http://www.youtube.com/channel/UCynm_mGw_E3V7dQd5sspXXA', 'Per Hald (katana)').'',              'Contour Roam',               '', 'scooter')
-   )
-)
-.'
-'
-
-,'
-kamera producenter
-' => '
-Her følger infomation om forskellige kamera producenter og deres forskellige kamera modeller.
+Her følger information om forskellige kamera producenter og deres forskellige kamera modeller.
 
 Af kamera producenter kan blandt andet nævnes GoPro, Contour, Drift, VIO POV, Interphone, Sony, Gobandit og JVC.
+
+Se også forum emnet '.ahref('http://scootergrisen.dk/forum/viewtopic.php?f=4&t=851', 'Kamera i styrthjelm').' hvor vi snakker om det og viser de videoer vi og andre har optaget og linker til andre sider som handler om disse kamera.
 '
 
 ,'
@@ -61,11 +30,11 @@ gopro
 '.visbilled('1', 'billed3725.jpg', 'gopro logo', false, true).'
 '
 .linkknap('http://gopro.com/products/', 'gopro.com products')
-.linkknap('http://gopro.com/product-comparison-hd-hero2-hd-hero-cameras/', 'Sammenlign GoPro Hero2 / GoPro Hero / GoPro Hero 960')
-.linkknap('http://www.gopro.com/product-comparison-hero3-cameras', 'Sammenlign GoPro Hero3 white / silver / black')
+.linkknap('http://gopro.com/product-comparison-hd-hero2-hd-hero-cameras/', 'Sammenlign<br>GoPro Hero2 / GoPro Hero')
+.linkknap('http://www.gopro.com/product-comparison-hero3-cameras', 'Sammenlign<br>GoPro Hero3 (white / silver / black)')
 .'
 '.
-box(array('170', '170', '100', '270')
+box(array('170', '170', '150', '270')
    ,array(
        array('kamera',              'udgave',               'pris (US $)', 'andet')
       ,array('HD Hero (original)',              'HD helmet hero',                '239.99', '')
@@ -77,15 +46,19 @@ box(array('170', '170', '100', '270')
       ,array('HD Hero2 (professional)',         'HD hero2 motorsports',          '299.99', 'med 3,5 mm stereo jack stik til ekstern mikrofon')
       ,array('HD Hero2 (professional)',         'HD hero2 surf',                 '299.99', 'med 3,5 mm stereo jack stik til ekstern mikrofon')
       ,array('SD Hero 170 (gammelt)',           '',                '', 'video opløsning : 512 × 384')
-      ,array('HD Hero3',         'HD hero3 white edition',                 '199.99', 'Wi-Fi er indbygget<br>op til 15/Mbs video bitrate<br>Bruger MicroSD hukommelseskort')
+      ,array('HD Hero3',         'HD hero3 white edition',                 '199.99 (1899,- DKK)', 'Wi-Fi er indbygget<br>op til 15/Mbs video bitrate<br>Bruger MicroSD hukommelseskort')
       ,array('HD Hero3',         'HD hero3 silver edition',                '299.99', 'Wi-Fi er indbygget<br>op til 35/Mbs video bitrate<br>Bruger MicroSD hukommelseskort')
       ,array('HD Hero3',         'HD hero3 black edition',                 '399.99', 'Wi-Fi er indbygget<br>Wi-Fi fjernbetjening medfølger<br>2 x bedre lavtlysydelse i forhold til Hero2 og Hero3 white og silver edition<br>Kan optage i 4K, 2,7K og 1440p opløsning<br>op til 45/Mbs video bitrate<br>Bruger MicroSD hukommelseskort')
+      ,array('HD Hero3+',        'HD hero3+ silver edition',                '299.99 (2699,- DKK)', '')
+      ,array('HD Hero3+',        'HD hero3+ black edition',                 '399.99 (3599,- DKK)', '')
    )
 )
 .'
 '
 .galleriholder(array(
-    galleri('highslide', '', 'billed3642.jpg', array('GoPro Hero 3', ''))
+    galleri('highslide', '', 'billed3897.jpg', array('GoPro Hero 3+', ''))
+
+   ,galleri('highslide', '', 'billed3642.jpg', array('GoPro Hero 3', ''))
    ,galleri('highslide', '', 'billed3641.jpg', array('GoPro Hero 3', ''))
    ,galleri('highslide', '', 'billed3640.jpg', array('GoPro Hero 3', ''))
 
@@ -109,8 +82,6 @@ box(array('170', '170', '100', '270')
 .'
 '.visflash('0', 'http://www.youtube.com/watch?v=PXfamVXsb54', 'hero 2 udpakning', true).'
 '.linkknap('http://www.youtube.com/watch?v=XIpgI0CBPXM', 'video :<br>GoPro How To: Start Using Your HD HERO2 Camera', true).'
-
-'.visfil('1', 'scooterhjemmeside/download/gopro_filer.zip', 'Gopro filer').'
 '
 
 ,'
@@ -119,17 +90,17 @@ contour
 '.visbilled('1', 'billed3726.jpg', 'contour logo', false, true).'
 '
 .linkknap('http://store.contour.com/', 'contour.com Products')
-.linkknap('http://contour.com/products/compare_cameras', 'Sammenlign Contour Roam / Contour GPS / Contour+')
+.linkknap('http://contour.com/products/compare_cameras', 'Sammenlign<br>Contour Roam2 / Contour+2')
 .'
 '.
-box(array('170', '170', '100', '270')
+box(array('170', '170', '130', '270')
    ,array(
        array('kamera',              'udgave',               'pris', 'andet')
       ,array('contour roam', 'roam watersports', '', 'med laser')
       ,array('contour GPS', '', '', '')
       ,array('contour+', '', '', 'med 2,5 mm jack til ekstern mikrofon')
-      ,array('contour+2', '', 'set til 3495,-', 'Slow Motion - 854 x 480 @ 120/100, 60/50, or 30/25fps<br>Waterproof Case medfølger<br>microSD følger ikke med i danmark')
-      ,array('contour roam2', '', '', '')
+      ,array('contour+2', '', 'set til 3495,-<br>$ 399,99 USD', 'Slow Motion - 854 x 480 @ 120/100, 60/50, or 30/25fps<br>Waterproof Case medfølger<br>microSD følger ikke med i danmark')
+      ,array('contour roam2', '', '$ 199,99 USD', '')
    )
 )
 .'
@@ -174,9 +145,8 @@ box(array('170', '170', '100', '270')
 '.visflash('0', 'http://www.youtube.com/watch?v=m61Ttym-X6k', 'contour+ udpakning', true).'
 '.linkknap('http://www.youtube.com/watch?v=sqAoccWVwVE', 'video :<br>sammenligning af contour / contour gps / contour+ kameraene', true).'
 
-Før kameraet hed Contour hed det vist VholdR og firmaet hed Twenty20. I Twenty20 VholdR står at det kun understøtter kort op til 2 GB.
-
-'.visfil('1', 'scooterhjemmeside/download/contour_filer.zip', 'Contour filer').'
+Før kameraet hed Contour hed det vist VholdR og firmaet hed Twenty20.
+I Twenty20 VholdR står at det kun understøtter kort op til 2 GB.
 '
 
 ,'
@@ -186,7 +156,7 @@ drift innovation
 '
 .linkknap('http://driftinnovation.com/', 'driftinnovation.com')
 .linkknap('http://driftinnovation.com/camera/', 'camera')
-.linkknap('http://driftinnovation.com/compare-cameras/', 'sammenlign Drift HD Ghost / Drift HD / Drift HD720')
+.linkknap('http://driftinnovation.com/compare-cameras/', 'sammenlign<br>Drift HD Ghost / Drift HD / Drift HD720')
 .'
 Drift kameraet lader til at være et kamera der er let at betjene.
 Drift har skærm og fjernbetjening, roterbartbillede/linse.
@@ -235,8 +205,6 @@ box(array('170', '170', '100', '270')
 .'
 '.visflash('0', 'http://www.youtube.com/watch?v=OlCbOW-8FgM', 'Drift HD Review', true).'
 '.linkknap('http://www.youtube.com/watch?v=lpfHWBpZepY', 'video :<br>My Helmet Camera Setup: Drift Stealth HD170', true).'
-
-'.visfil('1', 'scooterhjemmeside/download/drift_filer.zip', 'Drift filer').'
 '
 
 ,'
@@ -266,8 +234,6 @@ box(array('170', '170', '100', '270')
 ))
 .'
 '.visflash('0', 'http://www.youtube.com/watch?v=mNeS_I9R3BA', 'POV.HD Out Of Box', true).'
-
-'.visfil('1', 'scooterhjemmeside/download/vio_filer.zip', 'VIO filer').'
 '
 
 ,'
@@ -320,8 +286,6 @@ polaroid XS20.
 Chitec digital inc
 
 Interphone, Rollei, ERA 
-
-'.visfil('1', 'scooterhjemmeside/download/interphone_filer.zip', 'Interphone filer').'
 '
 
 ,'
@@ -392,6 +356,19 @@ JVC GC-XA1EU (JVC Adixxion XA1)
    ,galleri('highslide', '', 'billed3720.jpg', array('JVC GC-XA1EU', '(JVC Adixxion XA1)'))
    ,galleri('highslide', '', 'billed3721.jpg', array('JVC GC-XA1EU', '(JVC Adixxion XA1)'))
 ))
+.'
+'
+
+,'
+manualer, osv
+' => '
+Jeg har samlet manualer og andre filer til de forskellige kamera modeller så du let kan hente dem.
+'
+.visfil('1', 'scooterhjemmeside/download/gopro_filer.zip', 'Gopro filer')
+.visfil('1', 'scooterhjemmeside/download/contour_filer.zip', 'Contour filer')
+.visfil('1', 'scooterhjemmeside/download/drift_filer.zip', 'Drift filer')
+.visfil('1', 'scooterhjemmeside/download/vio_filer.zip', 'VIO filer')
+.visfil('1', 'scooterhjemmeside/download/interphone_filer.zip', 'Interphone filer')
 .'
 '
 
@@ -574,6 +551,11 @@ Jeg har i Oktober 2012 købt mig et GoPro Hero 2 kamera og her vil jeg løbende 
 
 Jeg vil primært skrive om de problemer jeg har med kameraet så andre kan lærer af dem.
 
+Her har jeg sat 2 af de buede klisterholdere på min styrthjelm.
+'.visbilled('1', 'billed3906.jpg', 'GoPro Hero klisterholder øverst på styrthjelm', false, true).'
+Jeg har sat lidt gaffatape på så kameraet ikke sidder og rokker. Hvis gaffatapen ikke er på sidder det en lille smule løst i holdderen.
+'.visbilled('1', 'billed3905.jpg', 'GoPro Hero klisterholder på siden af styrthjelm', false, true).'
+
 De 2 knapper der sidder i huset som beskytter kameraet er rigeligt stramme.
 Det hjælper at sprøjte lidt WD-40 ind der hvor metal stangen køre ind og ud i gummipakningerne. Det gav et mere jævn tryk.
 Ligeledes hjalp det på lukkemekanismen i sort plastik så den lukker jævn i stedet for det giver et hak fordi plastikket er helt tørt.
@@ -595,9 +577,9 @@ En kondensator mikrofon er så vist jeg kan læse mig til for følsom til sådan
 
 Firmware opdatering :
 Hvis man vil kan man opdater firmware i sit kamera som kan give nogen nye muligheder.
-Programmet CineForm Studio kan bruges til at se om der er en opdatering klar og til at hente firmware filen.
+Programmet CineForm Studio / GoPro Studio kan bruges til at se om der er en opdatering klar og til at hjælpe med at hente og opdatere firmwaren.
 
-Opdateringen forgår ved at man downloade en fil kaldet '.high('HD2-firmware.bin').'.
+Manual opdateringen forgår ved at man downloade en fil kaldet '.ahref('http://software.gopro.com/Firmware/HD2/HD2-firmware.bin', 'HD2-firmware.bin').'.
 Den ligger man i roden af hukommelseskortet.
 Så holder man udløserknappen inde (den øverste).
 Tryk på tænd knappen én gang og kameraet tænder.
@@ -605,10 +587,11 @@ Tryk så 3 gange på tænd knappen.
 På kameradisplayet ses så et logo og et versionstal.
 Kameraet slukker når opdateringen er færdig.
 
-Når opdateringen er færdig så slet '.high('HD2-firmware.bin').' filen fra hukommelseskortet.
+Når opdateringen er færdig så slet '.high('HD2-firmware.bin').' filen fra hukommelseskortet, ellers tror jeg nok opdateringen kan gå igang igen.
 
 Der stod V50 (den gamle version) første gang jeg opdaterede.
 Lidt efter stod der V198 (den nye version).
+
 Mærkeligt nok står der så V33 på displayet når jeg har version 124 på, fordi der åbenbart følger en opdatering til WiFi enheden med som er ekstra udstyr som jeg ikke her.
 
 Overføre filer :
@@ -618,6 +601,9 @@ USB overførsel er lettest men også langsomst.
 CineForum Studio :
 Det videoredigeringsprogram som hedder '.ahref('http://gopro.com/software-app/cineform-studio/', 'CineForum Studio').' ('.ahref('http://software.gopro.com/PC/GoProCineFormStudioPC-1.3.2.169.zip', 'direkte download').') er ret dårligt så kan ikke anbefale at bruge det.
 Både fordi man ikke kan sætte 2 klip sammen men også fordi når man gemmes i 720p (det format jeg ønsker at bruge) så laver programmet fejl i encodingen så video størrelsen bliver 1280x736 (AR 327:184) eller noget i den stil og det kan give en grøn linie nederst i afspilleren i VLC og MPC, også hvis man uploader til youtube. Dog ikke nogen grøn linie i windows media player.
+
+GoPro Studio :
+Senere er kommet et videoredigeringsprogram som hedder '.ahref('http://software.gopro.com/PC/GoProStudioPC-2.0.0.285.exe', 'GoPro Studio (direkte download)').' som jeg endnu ikke har prøvet. Kan være det er noget bedre.
 
 På hukommelseskortet findes en filen '.high('MISC\version.txt').'.
 Sådan her så filen ud fra ny før jeg opdaterede.
@@ -644,13 +630,23 @@ Sådan her så filen ud fra ny før jeg opdaterede.
 }
 </code></pre>
 
+'.high('MISC\version.txt').'. efter opdatering til version 312.
+<pre style="background: gray; color: black; padding: 10px; overflow-x: scroll;"><code class="fontsize_small">{
+"info version":"1.0",
+"firmware version":"HD2.08.12.312.WIFI.R68.02",
+"camera type":"HD2",
+}
+</code></pre>
+
 Det vidste sig at kameraet kunne finde på at fryse i starten af en optagelse efter opdatering til version 198 så derfor har jeg nedgraderet til version 124 hvilket jeg har læst på nettet at andre også havde problemet med.
 
 '.ahref('http://software.gopro.com/Firmware/HD2/HD2-firmware.bin').' peger på den seneste firmware.
-Det vil sige når der kommer en ny firmwave så kommer linket automatisk til at pege på den nye firmware.
+Det vil sige når der kommer en ny firmware så kommer linket automatisk til at pege på den nye firmware.
 
-Firmware v124 kan downloades her :
+Diverse firmware versioner kan downloades her :
 '.ahref('http://software.gopro.com/Firmware/v124/HD2-firmware.bin').'
+'.ahref('http://software.gopro.com/Firmware/v198/HD2-firmware.bin').'
+Du kan læse om forskellen mellem forskellige versioner på '.ahref('http://gopro.com/support/articles/firmware-release-information', 'firmware-release-information').'.
 
 Du kan også finde firmware filer i følgende zip fil hvor jeg har samlet diverse GoPro Hero filer.
 '.visfil('1', 'scooterhjemmeside/download/gopro_filer.zip', 'Gopro filer').'
@@ -672,6 +668,8 @@ straffelovens paragraf 264
 I forbindelse med at man tager billede/video/lyd af folk på gaden så møder man måske nogen der mener at det er ulovligt.
 
 Her er lidt lovtekst om det.
+
+Så vidt jeg kan forstå må man altså gerne tage billeder hvis blot det/dem man filmer er på et offentligt sted.
 '.citat('
 § 264. Med bøde eller fængsel indtil 6 måneder straffes den, som uberettiget
 
@@ -689,9 +687,6 @@ Stk. 2. Begås det i stk. 1, nr. 1, nævnte forhold med forsæt til at skaffe si
 
 <span style="color: red;">§ 264 d. Med bøde eller fængsel indtil 6 måneder straffes den, der uberettiget videregiver meddelelser eller billeder vedrørende en andens private forhold eller i øvrigt billeder af den pågældende under omstændigheder, der åbenbart kan forlanges unddraget offentligheden. Bestemmelsen finder også anvendelse, hvor meddelelsen eller billedet vedrører en afdød person.</span>
 ').'
-Så vidt jeg kan forstå må man altså gerne tage billeder så længe man befinder sig et offentligt sted.
-
-Så det skulle ikke være ulovligt at køre og filme med kamera så længe man gør det et offentligt sted.
 '
 
 ,'
@@ -717,7 +712,7 @@ Her skriver jeg lidt op de overførselshastigheder jeg oplever når jeg skal kop
 
 Hvis jeg sætter micro SD hukommelseskortet direkte i computer så bliver der overført med 16,7 MByte/sekund.
 
-Gennem USB er det cirka 6,8 MByte/sekund.
+Gennem USB 2 er det 6,86 MByte/sekund.
 
 Det går fint nok og overfører gennem USB kabel hvis man har noget andet man kan lave på computeren imens.
 Men hvis man har meget data og man vil have det overført hurtigt muligt så går det hurtigere ved at sætte hukommelseskortet direkte i computeren hvis man har mulighed for det.
@@ -736,12 +731,40 @@ Jo større synsvinkel man bruger jo mindre vigtigt er det at kameraet peger præ
 fokus under vand
 ' => '
 Hvis man tager mit GoPro Hero 2 kamera under vand i det vandtætte hus med den buede linse så er billedet ud af fokus.
+'.visflash('0', 'http://www.youtube.com/watch?v=vCBEvcO59CY', 'GoPro Hero 2 goes for a little swim', true).'
 For at få fokus kan man placer en flad linse foran sådan at vandet ikke kommer i kontakt med den buede linse.
 Linsen skal være ret stor sådan at kanten af linsen (metalringen) ikke kommer med i billedet når man bruger wide synsvinkel.
 
 Man kunne også lave en lille boks eller noget af gennemsigtig plexiglas så hele kameraet er inden i boksen.
 
-Jeg har endnu ikke selv prøvet dette men kan være jeg prøvet det på et tidspunkt.
+Jeg har endnu ikke selv prøvet dette men kan være jeg prøver det på et tidspunkt.
+'
+
+,'
+video eksempel
+' => '
+Her er en video jeg har optaget mens jeg køre på scooter med kameraet monteret på hjelmen. Se flere på '.ahref('videoer.php', 'videoer').'.
+'.visflash('0', 'http://www.youtube.com/watch?v=aSaITYWYikM', 'My first GoPro Hero 2 video upload', true).'
+'
+
+,'
+kamerafolk på nettet
+' => '
+Her er links til nogen af dem der optager mens de køre så du kan se hvad det hele går ud på og hvorfor det er så fedt.
+'.
+box(array('170', '170', '170', '170')
+   ,array(
+       array('bruger','kamera','hvor','køretøj')
+      ,array(''.ahref('http://www.youtube.com/user/TheGardenSnake', 'TheGardenSnake').'','Drift / GoPro','Canada (eller også er det USA)','supermoto')
+      ,array(''.ahref('http://www.youtube.com/user/13mordeth', '13mordeth').'','kompakt kamera under visiret','Taiwan','motorcykel<br>scooter')
+      ,array(''.ahref('http://www.youtube.com/user/SonofthewindsInc', 'SonofthewindsInc').'','GoPro','Storbritannien London','cykel')
+      ,array(''.ahref('http://www.youtube.com/user/187Premises', '187Premises').'',              'Contour',               'Storbritannien London', 'motorcykel')
+      ,array(''.ahref('http://www.youtube.com/user/BaronVonGrumble', 'BaronVonGrumble').'',              'Drift',               'Storbritannien', 'motorcykel')
+      ,array(''.ahref('http://www.youtube.com/user/scootergrisen', 'scootergrisen').'',              'GoPro Hero 2 + Canon PowerShot A470',               'Sjælland', 'scooter')
+      ,array(''.ahref('http://www.youtube.com/channel/UCynm_mGw_E3V7dQd5sspXXA', 'Per Hald (katana)').'',              'Contour Roam',               '', 'scooter')
+   )
+)
+.'
 '
 
 );

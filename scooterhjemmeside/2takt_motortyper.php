@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "motortyper - 2 takt motor";
 $overskrift = "motortyper - 2 takt motor";
@@ -234,7 +234,7 @@ Piaggio
 ', '
 Hi-PER2 PRO (low-pressure connector next to the intake)
 Hi-PER2 (påfyldningshul med oliepind øverst bagerst på motoren)
-Hi-PER1 (gearoil påfyldningsskrue og drænskrue nederst på fælg siden af motoren)
+Gammel Piaggio (gearoil påfyldningsskrue og drænskrue nederst på fælg siden af motoren)
 '.ahref('http://www.tuningmatters.com/2011/10/23/review-piaggio-engine-differences-hi-per-2-vs-piaggio-old/').'
 C281M (italjet torpedo)
 C801M (Piaggio Ape)

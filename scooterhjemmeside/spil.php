@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "spil - Underholdning";
-$overskrift = "spil - Underholdning";
-$metadescription = "spil med scootere";
+$title = "computerspil med scootere og knallerter - Underholdning";
+$overskrift = "computerspil med scootere og knallerter - Underholdning";
+$metadescription = "computerspil hvor man kan kører på scooter/knallert";
 
 $flash = 'Adobe flash player<br>' . ahref('http://get.adobe.com/flashplayer/', visbilled('1', 'billed2459.jpg', 'Adobe flash player logo', null, null, null, null, null, null, null, null, null, null, null, 'vertical-align: bottom;'), null, true) . "\r\n";
 $shockwave = 'Adobe shockwave player<br>' . ahref('http://get.adobe.com/shockwave/', visbilled('1', 'billed2458.jpg', 'Adobe shockwave player logo', null, null, null, null, null, null, null, null, null, null, null, 'vertical-align: bottom;'), null, true) . "\r\n";

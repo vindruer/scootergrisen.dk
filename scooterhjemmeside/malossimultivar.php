@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "malossi multivar";
 $overskrift = "malossi multivar";
@@ -21,113 +21,6 @@ hæfte
 ' => '
 Her er hæftet som følger med i Malossi multivar pakken.
 '.visfil('1', 'scooterhjemmeside/download/malossi_multivar.pdf', 'Malossi multivar (01/2011 - 73 3863)').'
-'
-
-,'
-pakke numre
-' => '
-Her følger 3 af Malossi multivar pakkerne kaldet 5113139, 5113269 og 5113790.
-
-<span style="color: red;">Jeg har markeret noget af teksten med rødt der hvor der er forskel mellem pakke 5113139, 5113269 og 5113790 så man lettere kan se forskellen.</span>
-
-Tallene på tegning passer til tallene i følgendende tabeller.
-'.visbilled('1', 'billed3411.jpg', 'malossi multivar', false, true).'
-'
-
-,'
-5113139
-' => '
-Pakken 5113139 passer ifølge medfølgende hæfte og '.ahref('http://www.malossistore.co.uk/Prodotto.aspx?type=M&&C=5113139', 'malossistore').' til :
-BAOTIAN ECO BIKE 50 4T (139 QMB)
-BAOTIAN REBEL - ROCKY - TANCO 9/12 50 4T
-GARELLI FLEXI\' 50 4T euro 2 (1P139 QMB)
-GARELLI TIESSE FOUR 50 4T euro 2 (1P39QMB)
-HUPPER MONTECARLO 30 50 4T (139QMB)
-MALAGUTI DVD 50 4T (139 QMB)
-PEUGEOT V-CLIC 50 4T
-WT MOTORS BILBAO 50 4T (PEDA 139QMB)
-
-Pakken 5113139 består af følgende.
-'.
-box(array('150', '150', '150', '150')
-   ,array(
-       array('nummer på tegning', 'del', 'beskrivelse', 'varenummer')
-      ,array('1', 'Adaptorskive', '(medfølger ikke)', '')
-      ,array('2', 'Bagplade', 'målt til 2,6 mm i tykkelse', '25 8068B')
-      ,array('3', 'Styr', '3 styks<br>nylon', '37 8175')
-      ,array('4', 'Ruller', '6 styks<br>16x13 mm<br><span style="color: red;">7,0 gram</span><br>Kaldet HTRoll', '<span style="color: red;">66 9823.M0</span>')
-      ,array('5', 'Remskiveskål', 'Hul til bøsning målt til indre diameter : 19,99-20,04 mm', '61 8125B')
-      ,array('6', 'Gliderør', 'Målt til længe : 38,77 mm og ydre diameter : 19,96 mm og tykkelse 2,96 mm', '<span style="color: red;">2311096B</span>')
-      ,array('7', 'Begrænser ring', '(medfølger ikke)', '')
-      ,array('8', 'yderste remskive', '(medfølger ikke)', '')
-      ,array('', 'Trykfjeder', 'Hvid<br>4,0 mm tråd diameter<br>Reinforced<br>Målt til 4,12-4,30 mm (inklusiv maling) og 103,82-105,69 mm i længde', '<span style="color: red;">2912658.W0</span>')
-      ,array('', 'Klistermærker', '3 styks', '')
-      ,array('', 'Hæfte', '32 sider', '73 3863')
-   )
-)
-.'
-'
-
-,'
-5113269
-' => '
-Pakken 5113269 (set i gammel hæfte fra 08/2007) passer til :
-Kymco Agility - People // Peo. S (BB10) 4t euro 2, Vitality (SG10) 4t euro 2
-
-Pakken 5113269 består af følgende.
-'.
-box(array('150', '150', '150', '150')
-   ,array(
-       array('nummer på tegning', 'del', 'beskrivelse', 'varenummer')
-      ,array('1', 'Adaptorskive', '(medfølger ikke)', '')
-      ,array('2', 'Bagplade', '', '25 8068B')
-      ,array('3', 'Styr', '3 styks<br>nylon', '37 8175')
-      ,array('4', 'Ruller', '6 styks<br>16x13 mm<br><span style="color: red;">6,0 gram</span><br>Kaldet HTRoll', '<span style="color: red;">66 9823.L0</span>')
-      ,array('5', 'Remskiveskål', '', '61 8125B')
-      ,array('6', 'Gliderør', '', '<span style="color: red;">23 8854B</span>')
-      ,array('7', 'Begrænser ring', '', '0812673B')
-      ,array('8', 'yderste remskive', '(medfølger ikke)', '')
-      ,array('', 'Trykfjeder', 'Hvid<br>4,0 mm tråd diameter<br>Reinforced', '<span style="color: red;">29 8360.W0</span>')
-      ,array('', 'Klistermærker', '3 styks', '')
-      ,array('', 'Hæfte', '32 sider', '73 3863')
-   )
-)
-.'
-'
-
-,'
-5113790
-' => '
-Pakke 5113790 passer ifølge malossistore.co.uk og medfølgende hæfte til :
-KYMCO AGILITY R10/R12/R16 - RS 50 4T euro 2 (KL10B)
-KYMCO DINK 50 4T euro 2
-KYMCO PEOPLE 50 4T euro 2
-KYMCO PEOPLE S 50 4T euro 2 (BB10)
-KYMCO SENTO 50 4T euro 2
-KYMCO SUPER 8 50 4T euro 2 (KL10)
-KYMCO VITALITY 50 4T euro 2 (SG10)
-SYM SYMPLY 50 4T euro 2 (XS1P39QMB)
-
-Pakken 5113790 består af følgende.
-'.
-box(array('150', '150', '150', '150')
-   ,array(
-       array('nummer på tegning', 'del', 'beskrivelse', 'varenummer')
-      ,array('1', 'Adaptorskive', '(medfølger ikke) *<br>målt til 0,96-0,99 mm i bredden', '')
-      ,array('2', 'Bagplade', 'målt til 2,48-2,49 mm i tykkelse', '25 8068B')
-      ,array('3', 'Styr', '3 styks<br>nylon', '37 8175')
-      ,array('4', 'Ruller', '6 styks<br>16x13 mm<br><span style="color: red;">6,0 gram</span><br>Kaldet HTRoll', '<span style="color: red;">66 9823.L0</span>')
-      ,array('5', 'Remskiveskål', '', '61 8125B')
-      ,array('6', 'Gliderør', 'målt til 19,96-19,99 mm i ydre diameter<br>2,98-3,06 mm ydre-mindre-diameter<br>36,50-36,56 mm bredde<br>14,02 mm indre diameter', '<span style="color: red;">2313741B</span>')
-      ,array('7', 'Begrænser ring', 'målt til 6,975 mm i bredde', '0812673B')
-      ,array('8', 'yderste remskive', '(medfølger ikke)', '')
-      ,array('', 'Trykfjeder', 'Hvid<br>4,0 mm tråd diameter<br>Reinforced<br>Målt til 105,33-106,05 mm i længde<br>4,18-4,24 mm i trådtykkelse (med maling)', '<span style="color: red;">2912658.W0</span>')
-      ,array('', 'Klistermærker', '3 styks', '')
-      ,array('', 'Hæfte', '32 sider', '73 3863')
-   )
-)
-.'
-* Selvom der i hæftet står af adaptorskiven (1 mm bred) ikke medfølger så gjorde den det i den pakke jeg fik.
 '
 
 ,'
@@ -190,22 +83,7 @@ Her er nogen billeder af Malossi multivar 5113790 købt hos speedline.dk.
 '
 
 ,'
-bruger kommentar
-' => '
-En bruger skrev følgende til mig.
-'.citat('
-De siger godt nok at multivaren er lettere, men den er et par gram tungere end originalen på en kymco Agility, så der er i forhold til Kymco (som også er kvalitet) ikke en optimering på dét punkt.
-
-Når vi er kommet forbi den ting, så er der kun store ting at sige om multivaren. Dens optimerede rullebaner gør at man hurtigere gearer op samt at man kan opnå en smugle højere gearing end originalen, hvilket både giver en "friskere" scooter og (uden begrænsning) en hurtigere og mere økonomisk. :)
-
-Den hvide trykfjeder i Agility kittet kræver 30 kg tryk at trykke fuldstændig sammen, hvilket er det samme som originalen på agilityen, som i forvejen er lavet til 80 kubiks cylinder. Denne fjeder kaldes også 800 RPM fjeder. :)
-
-En trykfjeder fungerer sådan, at den trykker kontra variatoren, og det kræver derfor flere krafter at trykke en kraftigere fjeder ud. Fordelen ved en kraftigere fjeder er, at den så folder sig ud hurtigere, og så presser variatoren tilbage i hvile-position hurtigere, således at omdrejningerne holdes høje, hvilket mest er nødvendigt på racermaskiner, hvor man gerne vil have høje omdrejninger i et sving, selvom man har sluppet gassen, således at man stadig er tæt på toppen af effektbåndet når man så igen giver gas efter svinget. :D
-').'
-'
-
-,'
-citater fra hæftet
+citater fra hæftet på engelsk
 ' => '
 Hæftet består af tekst på mange sporg.
 Her er de engelske tekster fra hæftet.
@@ -441,88 +319,124 @@ SPRING SET for Malossi Clutch Fly - Delta
 '
 
 ,'
-en lang historie om at få den rigtige pakke
+pakke numre
 ' => '
-'.afsnit('1. forsøg hos scoot.dk','
-Jeg købte i Maj 2012 "Malossi multivar 5113139" hos '.ahref('http://scoot.dk').' til 599,- kroner.
+Her følger 3 af Malossi multivar pakkerne kaldet 5113139, 5113269 og 5113790.
 
-Jeg vidste på det tidspunkt ikke særlig meget om det og vidste ikke der fandtes forskellige kit.
-Troede egentligt bare der var en slags.
-Da jeg købte det spurgte jeg om det passede til Kymco Super 8 og fik at vide det passede til alle 4 takt (underforstået alle 4 takt med 50 ccm motor).
+<span style="color: red;">Jeg har markeret noget af teksten med rødt der hvor der er forskel mellem pakke 5113139, 5113269 og 5113790 så man lettere kan se forskellen.</span>
 
-Jeg får udleveret en pakke som har været åbnet.
+Tallene på tegning passer til tallene i følgendende tabeller.
+'.visbilled('1', 'billed3411.jpg', 'malossi multivar', false, true).'
+'
 
-Da jeg monter delene (borset fra fjederen) går kickstarteren på når motoren startes og det får mig til at tro at delene ikke passer.
-Jeg prøver så og afmonter og påmonter det igen men kickstarteren går stadig på så undersøge nærmere og læser hæftet som følger med hvor jeg kan se at der findes mange slage Malossi multivar pakker.
+,'
+5113139
+' => '
+Pakken 5113139 passer ifølge medfølgende hæfte og '.ahref('http://www.malossistore.co.uk/Prodotto.aspx?type=M&&C=5113139', 'malossistore').' til :
+BAOTIAN ECO BIKE 50 4T (139 QMB)
+BAOTIAN REBEL - ROCKY - TANCO 9/12 50 4T
+GARELLI FLEXI\' 50 4T euro 2 (1P139 QMB)
+GARELLI TIESSE FOUR 50 4T euro 2 (1P39QMB)
+HUPPER MONTECARLO 30 50 4T (139QMB)
+MALAGUTI DVD 50 4T (139 QMB)
+PEUGEOT V-CLIC 50 4T
+WT MOTORS BILBAO 50 4T (PEDA 139QMB)
 
-På det jeg har fået står 5113139 og det skulle passer til diverse Baotian 4 takt 139QMB modeller.
-I hæftet som fulgte med fra 2007 er Kymco Super 8 ikke nævnt men det er Kymco Agility (som minder en del om Super 8) hvor der står at det er et andet kit som passer til den som hedder 5113269.
-Jeg læser så i hæftet at rullevægten er forskellige i pakke 5113139 og 5113269 og trykfjederen har forskellige reservedelsnumre, hvilket får mig til at tro at der må være en forskel.
-Jeg tænker at gliderøret må være for bredt siden min kickstarter gik på.
+Pakken 5113139 består af følgende.
+'.
+box(array('150', '150', '150', '150')
+   ,array(
+       array('nummer på tegning', 'del', 'beskrivelse', 'varenummer')
+      ,array('1', 'Adaptorskive', '(medfølger ikke)', '')
+      ,array('2', 'Bagplade', 'målt til 2,6 mm i tykkelse', '25 8068B')
+      ,array('3', 'Styr', '3 styks<br>nylon', '37 8175')
+      ,array('4', 'Ruller', '6 styks<br>16x13 mm<br><span style="color: red;">7,0 gram</span><br>Kaldet HTRoll', '<span style="color: red;">66 9823.M0</span>')
+      ,array('5', 'Remskiveskål', 'Hul til bøsning målt til indre diameter : 19,99-20,04 mm', '61 8125B')
+      ,array('6', 'Gliderør', 'Målt til længe : 38,77 mm og ydre diameter : 19,96 mm og tykkelse 2,96 mm', '<span style="color: red;">2311096B</span>')
+      ,array('7', 'Begrænser ring', '(medfølger ikke)', '')
+      ,array('8', 'yderste remskive', '(medfølger ikke)', '')
+      ,array('', 'Trykfjeder', 'Hvid<br>4,0 mm tråd diameter<br>Reinforced<br>Målt til 4,12-4,30 mm (inklusiv maling) og 103,82-105,69 mm i længde', '<span style="color: red;">2912658.W0</span>')
+      ,array('', 'Klistermærker', '3 styks', '')
+      ,array('', 'Hæfte', '32 sider', '73 3863')
+   )
+)
+.'
+'
 
-Jeg vil jo gerne have det helt rigtige og ikke bare nogen som passer nogenlunde.
-Jeg ringer til scoot.dk og han siger de har monteret det på mange Kymco Super 8 og der har kickstarteren ikke gået på.
-Så måske har min låsering på kickstarten været røget ud af sit hak eller noget så delene er kommet længere ind.
+,'
+5113269
+' => '
+Pakken 5113269 (set i gammel hæfte fra 08/2007) passer til :
+Kymco Agility - People // Peo. S (BB10) 4t euro 2, Vitality (SG10) 4t euro 2
 
-Standard gliderøret som sidder i scooteren fra ny har en længde på 37,95 mm.
-Gliderøret i pakke 5113139 har jeg målt til at have en længde på 38,77 mm (0,82 mm længere).
-Det er jo ikke særlig meget længere så ved ikke om det er derfor kickstarteren gik på.
-Jeg tænker også om bagpladen kunne være tykkere. Malossi bagpladen (25 8068B) har jeg målt til at være 2,6 mm tyk. Jeg måler standard bagpladen på et senere tidspunkt. Hvis den er tyndere er det måske mere sandsynligt at der var derfor kickstarteren gik på.
+Pakken 5113269 består af følgende.
+'.
+box(array('150', '150', '150', '150')
+   ,array(
+       array('nummer på tegning', 'del', 'beskrivelse', 'varenummer')
+      ,array('1', 'Adaptorskive', '(medfølger ikke)', '')
+      ,array('2', 'Bagplade', '', '25 8068B')
+      ,array('3', 'Styr', '3 styks<br>nylon', '37 8175')
+      ,array('4', 'Ruller', '6 styks<br>16x13 mm<br><span style="color: red;">6,0 gram</span><br>Kaldet HTRoll', '<span style="color: red;">66 9823.L0</span>')
+      ,array('5', 'Remskiveskål', '', '61 8125B')
+      ,array('6', 'Gliderør', '', '<span style="color: red;">23 8854B</span>')
+      ,array('7', 'Begrænser ring', '', '0812673B')
+      ,array('8', 'yderste remskive', '(medfølger ikke)', '')
+      ,array('', 'Trykfjeder', 'Hvid<br>4,0 mm tråd diameter<br>Reinforced', '<span style="color: red;">29 8360.W0</span>')
+      ,array('', 'Klistermærker', '3 styks', '')
+      ,array('', 'Hæfte', '32 sider', '73 3863')
+   )
+)
+.'
+'
 
-Scoot.dk vil ikke bestille det rigtige kit.
-Det noget med de skal købe 10 af gangen og det ville han vist ikke.
-De bruger kun den ene slags siger han.
+,'
+5113790
+' => '
+Pakke 5113790 passer ifølge malossistore.co.uk og medfølgende hæfte til :
+KYMCO AGILITY R10/R12/R16 - RS 50 4T euro 2 (KL10B)
+KYMCO DINK 50 4T euro 2
+KYMCO PEOPLE 50 4T euro 2
+KYMCO PEOPLE S 50 4T euro 2 (BB10)
+KYMCO SENTO 50 4T euro 2
+KYMCO SUPER 8 50 4T euro 2 (KL10)
+KYMCO VITALITY 50 4T euro 2 (SG10)
+SYM SYMPLY 50 4T euro 2 (XS1P39QMB)
 
-Jeg afmonter kickstarteren så jeg kan komme til at køre på scooteren uden den går på.
-Imens venter jeg på at få det plastikstyr som manglede i pakken som havde været åbnet.
+Pakken 5113790 består af følgende.
+'.
+box(array('150', '150', '150', '150')
+   ,array(
+       array('nummer på tegning', 'del', 'beskrivelse', 'varenummer')
+      ,array('1', 'Adaptorskive', '(medfølger ikke) *<br>målt til 0,96-0,99 mm i bredden', '')
+      ,array('2', 'Bagplade', 'målt til 2,48-2,49 mm i tykkelse', '25 8068B')
+      ,array('3', 'Styr', '3 styks<br>nylon', '37 8175')
+      ,array('4', 'Ruller', '6 styks<br>16x13 mm<br><span style="color: red;">6,0 gram</span><br>Kaldet HTRoll', '<span style="color: red;">66 9823.L0</span>')
+      ,array('5', 'Remskiveskål', '', '61 8125B')
+      ,array('6', 'Gliderør', 'målt til 19,96-19,99 mm i ydre diameter<br>2,98-3,06 mm ydre-mindre-diameter<br>36,50-36,56 mm bredde<br>14,02 mm indre diameter', '<span style="color: red;">2313741B</span>')
+      ,array('7', 'Begrænser ring', 'målt til 6,975 mm i bredde', '0812673B')
+      ,array('8', 'yderste remskive', '(medfølger ikke)', '')
+      ,array('', 'Trykfjeder', 'Hvid<br>4,0 mm tråd diameter<br>Reinforced<br>Målt til 105,33-106,05 mm i længde<br>4,18-4,24 mm i trådtykkelse (med maling)', '<span style="color: red;">2912658.W0</span>')
+      ,array('', 'Klistermærker', '3 styks', '')
+      ,array('', 'Hæfte', '32 sider', '73 3863')
+   )
+)
+.'
+* Selvom der i hæftet står af adaptorskiven (1 mm bred) ikke medfølger så gjorde den det i den pakke jeg fik.
+'
 
-Han tilbyder mig et andet plastikstyr men jeg vil have det originale.
-
-Nå man jeg får aldrig det plastikstyr fordi i mellem tiden har jeg jo fundet ud af at det ikke er den rigtige pakke han har solgt mig.
-Så jeg afmonterede det og fik mine penge tilbage så jeg kunne købe den rigtige pakke et andet sted.
-').'
-'.afsnit('2. forsøg hos scootercity københavn','
-Prøvede at bestille det hos scootercity men i telefonen snakkede han om KGI og man kunne bestille på nettet, men jeg havde jo ikke dankort så regnede ikke med jeg kunne bestille det der men så fandt han ud af at man kunne bruge bankoverførsel.
-').'
-'.afsnit('3. forsøg hos kgi.dk','
-Ringer til KGI og spørger om de har den Malossi multivar pakke med 5113790 og får at vide at det har de. Jeg bestiller på nettet. KGI har deres eget reservedelsnummer men der står ikke Malossi\'s nummer. Inden jeg betaler med bankoverførsel ringer jeg for at checke at det nu det nu også den rigtig bakke. Uden at sige hvad nummer det skal være spørger jeg hvad nummer det er og får at vide at det er 5113790. Det er den rigtige siger jeg så og nogen dage efter hente jeg min pakke hos post danmark...
-
-Og så har KGI selvfølgelig sendt den forkerte pakke. Nemlig Malossi multivar 5113269 :(...
-
-Forskellen på pakke 5113269 og 5113790 er reservedelsnummeret på gliderøret og trykfjederen... det står bare ikke hvad forskel der er men der må da være en forskel siden de har forskellige reservedelsnumre tænker jeg.
-
-Ringer til KGI for at høre hvorfor de har sendet den forkerte pakke og snakker med 2 forskellige om at det er det samme som er i pakken Malossi har bare ændret nummeret.
-Men jeg kan ikke se noget sted at 5113269 skulle passe til Kymco Super 8.
-
-Jeg vælger så og skrive til Malossi og spørge om hvad forskellen er på de 2 pakker.
-
-'.afsnit('spørg malossi','
-Jeg fik følgende svar fra '.ahref('http://www.malossistore.co.uk/', 'MalossiStore UK').'.
-
+,'
+bruger kommentar
+' => '
+En bruger skrev følgende til mig.
 '.citat('
-The 5113269 is no longer available and has been replaced by the 5113790. If components in the kit are different then this will be what the difference is between the 2 kits.
+De siger godt nok at multivaren er lettere, men den er et par gram tungere end originalen på en kymco Agility, så der er i forhold til Kymco (som også er kvalitet) ikke en optimering på dét punkt.
 
-Thank You
+Når vi er kommet forbi den ting, så er der kun store ting at sige om multivaren. Dens optimerede rullebaner gør at man hurtigere gearer op samt at man kan opnå en smugle højere gearing end originalen, hvilket både giver en "friskere" scooter og (uden begrænsning) en hurtigere og mere økonomisk. :)
 
-MalossiStore UK
-').'
-Godt så. De skriver altså at hvis der er forskel på nogen af delene... ja så er der forskel på de dele.
+Den hvide trykfjeder i Agility kittet kræver 30 kg tryk at trykke fuldstændig sammen, hvilket er det samme som originalen på agilityen, som i forvejen er lavet til 80 kubiks cylinder. Denne fjeder kaldes også 800 RPM fjeder. :)
 
-Jeg skrev også til '.ahref('http://www.malossi.com/').' men modtag aldrig svar.
-').'
-').'
-'.afsnit('4. forsøg hos sgncparts.dk','
-Bestile den 01-06-2012 hos sgncparts.dk.
-Efter flere telefonen samtaler og lang tids ventetid og forsøg på at bestille fra italien og spanien kunne de alligevel ikke sælge mig 5113790 da dem de køber hos sendt de gamle 5113269 pakker.
-Jeg fik først at vide den 27-06-2012 at han alligevel ikke kunne sælge det til mig. Så der var en del ventetid hvilket jeg ikke havde noget imod hvis bare han kunne få den rigtige pakke men det kunne han så ikke aliigevel.
-').'
-'.afsnit('5. forsøg hos speedline.dk','
-Sjovt nok var det første sted jeg nok kiggede på '.ahref('http://www.speedline.dk/da/scooter/variator-malossi-multivar-m5113790/').' men da man ikke kunne betale med bankoverførsel købte jeg det ikke der og troede det kostede 200 kroner kun i forsendelse og efterkrav (det viste sig så "kun" at være 134 kroner for forsendelse og efterkrav. Først troede jeg der kom 75 kroners forsendelse oven i).
-
-Jeg ringer til speedline.dk tirsdag den 03-07-2012 for at være sikker på de har Malossi multivar 5113790 og han pakker så en kasse op og ser at det har de.
-Så jeg bestiller på deres hjemmeside og 2 dage senere henter jeg min pakke hos post danmark.
-Og dejligt nok da jeg åbner pakken er det den rigtige (og længe ventede) Malossi multivar 5113790.
-'.visflash('0', "http://www.youtube.com/watch?v=piZHWebvcZw", 'Pakke med Malossi Multivar 5113790 fra speedline.dk', true).'
+En trykfjeder fungerer sådan, at den trykker kontra variatoren, og det kræver derfor flere krafter at trykke en kraftigere fjeder ud. Fordelen ved en kraftigere fjeder er, at den så folder sig ud hurtigere, og så presser variatoren tilbage i hvile-position hurtigere, således at omdrejningerne holdes høje, hvilket mest er nødvendigt på racermaskiner, hvor man gerne vil have høje omdrejninger i et sving, selvom man har sluppet gassen, således at man stadig er tæt på toppen af effektbåndet når man så igen giver gas efter svinget. :D
 ').'
 '
 

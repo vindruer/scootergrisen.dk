@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "batteri - Elektrisk";
 $overskrift = "batteri - Elektrisk";
-$metadescription = "lær om starterbatteriet der sidder i en scooter";
+$metadescription = "lær om starterbatteriet der sidder i en scooter/knallert som bruges til at drive startermotoren og andet elektrisk udstyr";
 
 $databasecenter = array(
 
@@ -38,13 +38,13 @@ Begge typer er bly-syre batterier.
 
 '.afsnit('vedligeholdelsesfrit bly-syre batteri','
 Kan kendes på at der ikke er nogen påfyldningsskruer.
-'.visbilled('1', 'billed2308.jpg', 'kymco super 8 4T vedligeholdelsesfrit batteri YTX7A-BS KY D410', false, true).'
-På vedligeholdelsesfrie batterier kan der stå MF eller "Maintenance Free".
+'.visbilled('1', 'billed2308.jpg', 'kymco super 8 4T vedligeholdelsesfrit bly-syre batteri YTX7A-BS KY D410', false, true).'
+På vedligeholdelsesfrie bly-syre batterier kan der stå MF eller "Maintenance Free".
 Betegnes også VRLA (Valve Regulated Lead Acid) eller SLA (Sealed Lead Acid).
-VRLA, SLA, AGM og MF referer allesammen til vedligeholdelsesfrie batterier.
+VRLA, SLA, AGM og MF referer allesammen til vedligeholdelsesfrie bly-syre batterier.
 AGM står for Absorbed Glass Mat og er et glasfiber net mellem blypladerne som holder batterisyren fast.
 Når batteriet fra nyt af har fået fyldt batterisyre på og lukket skal det aldrig have fyldt hverken vand eller syre på. Derfor kaldes det vedligeholdelsesfrit.
-Vedligeholdelsesfrie batterier selvaflader langsommere end traditionelle batterier.
+Vedligeholdelsesfrie bly-syre batterier selvaflader langsommere end traditionelle batterier.
 Batterisyrens massefylde kan ikke måles med et hydrometer da det ikke er meningen man skal åbne batteriet.
 Selvom batterisyren udvikler brint og ilt ved opladning så bliver det til vand igen inden i batteriet.
 Blypladerne består af bly og calcium.
@@ -149,7 +149,7 @@ Vand fra vandhanen indeholder mineraler og salte.
 Det kan ses på bunden af en gryde hvis man har kogt vand.
 Hvis man bruger vandhanevand i batteriet ville det forringe batteriet fordi mineraler og salte vil give modstand.
 Derfor skal man bruge demineraliseret vand i stedet for når der skal fyldes vand på et traditionelt bly-syre batteri.
-Vedligeholdelsesfrie batterier skal aldrig have fyldt demineraliseret vand på.
+Vedligeholdelsesfrie bly-syre batterier skal aldrig have fyldt demineraliseret vand på.
 ').'
 
 '.afsnit('batterisyre','
@@ -198,21 +198,21 @@ Oxygen gas stiger op ved de positive blyplader.
 Hydrogen kaldes også brint.
 Oxygen kaldes også ilt.
 
-På et traditionelt batteri kommer gasserne op ved påfyldningshullerne eller ud ved udluftningshullet i siden af batteriet.
-På et vedligeholdelsesfri batteri kan gasserne ikke komme ud da det er lukket så i stedet genbruges hydrogen og oxygen gasserne og laves igen om til vand øverst i batteriet.
+På et traditionelt bly-syre batteri kommer gasserne op ved påfyldningshullerne eller ud ved udluftningshullet i siden af batteriet.
+På et vedligeholdelsesfri bly-syre batteri kan gasserne ikke komme ud da det er lukket så i stedet genbruges hydrogen og oxygen gasserne og laves igen om til vand øverst i batteriet.
 
-Det er på grund af denne spaltning at man ikke skal bruge alle typer opladere på vedligeholdelsesfrie batterier. Da opladeren måske kan lade batteriet for kraftigt.
+Det er på grund af denne spaltning at man ikke skal bruge alle typer opladere på vedligeholdelsesfrie bly-syre batterier. Da opladeren måske kan lade batteriet for kraftigt.
 
 Blandingen af brint og ilt gasser kaldes knaldgas og er meget eksplosivt hvis den antændes.
 Derfor skal man sørge for udluftning når traditionelle batterier oplades.
-Selvom vedligeholdelsesfri batteriet ikke lader gasserne komme ud af batteriet under normale opstændigheder så er det nok en god ide at sørge for udluftning alligevel.
+Selvom vedligeholdelsesfrie bly-syre batteri ikke lader gasserne komme ud af batteriet under normale omstændigheder så er det nok en god ide at sørge for udluftning alligevel.
 ').'
 
 '.afsnit('selvafladning','
 Batteriet aflades af sig selv, selvom det ikke bliver brugt.
 Dette fænomen kaldes selvafladning.
 Høje temperaturer øger selvafladningen. Jo højere temperatur jo hurtigere selvaflader batteriet.
-Vedligeholdelsesfrie batterier aflades langsommere end traditionelle bly-syre batterier.
+Vedligeholdelsesfrie bly-syre batterier aflades langsommere end traditionelle bly-syre batterier.
 
 Batteriets selvafladning kan ligge på 0,3-1,5% af batteriets kapacitet per dag når temperaturen er 20-30 °Celsius.
 Et batteri kan selvaflade sig selv fuldstændigt i løbet af 1-3 måneder.

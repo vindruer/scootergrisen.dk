@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "spændingsregulator - Elektrisk";
 $overskrift = "spændingsregulator - Elektrisk";
-$metadescription = "forklaring af spændingsregulatoren på en scooter som begrænser spændingen fra generatoren og laver vækselstrøm om til jævnstrøm";
+$metadescription = "forklaring af spændingsregulatoren på en scooter som begrænser spændingen fra generatoren og laver vekselstrøm om til jævnstrøm";
 
 $databasecenter = array(
 

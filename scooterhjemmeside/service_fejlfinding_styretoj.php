@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "Styretøj - Fejlfinding";
 $overskrift = "Styretøj - Fejlfinding";
-$metadescription = "find og ret fejl på scooterens styretøj";
+$metadescription = "find og ret fejl på scooterens/knallertens styretøj (tungt at dreje styr, styrer til en side eller sporer ikke lige, forhjul hopper, blød for dæmpning, støj fra for dæmper, baghjul ekser, blød baghjuls affjedring)";
 
 $databasecenter = array(
 

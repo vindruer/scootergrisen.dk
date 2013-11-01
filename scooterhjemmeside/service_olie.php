@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "olie - Service";
 $overskrift = "olie - Service";
-$metadescription = "service af olie på scooter";
+$metadescription = "service af olie på scooter (kontroller motorolie niveau, skift motorolie, kontroller gearolie niveau, skift gearolie, video instruktion)";
 
 $databasecenter = array(
 

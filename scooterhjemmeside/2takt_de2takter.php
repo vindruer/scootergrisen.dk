@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "de 2 takter - 2 takt motor";
 $overskrift = "de 2 takter - 2 takt motor";
-$metadescription = "forklaring af de 2 takter på en 2 takt motor";
+$metadescription = "forklaring af de 2 takter på en 2 takt motor med karburator og den koniske udstødning som sender trykbølgen baglæns";
 
 $databasecenter = array(
 

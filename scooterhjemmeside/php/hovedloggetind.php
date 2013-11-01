@@ -60,15 +60,15 @@ if($_POST['funktion'] == "lavthumbnails"){
 
    if(isset($_POST['thumbnails'])){
 
-      if($_POST['thumbnails'] == "lille"){
+      if($_POST['thumbnails'] == "Lille"){
 
          $setup['lavthumbnailslille'] = 1;
 
-      }elseif($_POST['thumbnails'] == "mellem"){
+      }elseif($_POST['thumbnails'] == "Mellem"){
 
          $setup['lavthumbnailsmellem'] = 1;
 
-      }elseif($_POST['thumbnails'] == "lille og mellem"){
+      }elseif($_POST['thumbnails'] == "Lille og mellem"){
 
          $setup['lavthumbnailslille'] = 1;
          $setup['lavthumbnailsmellem'] = 1;

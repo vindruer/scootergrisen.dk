@@ -1,11 +1,11 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "indsprøjtningskit";
-$overskrift = "indsprøjtningskit";
+$title = "indsprøjtningskit til scooter med 4 takt motor";
+$overskrift = "indsprøjtningskit til scooter med 4 takt motor";
 $metadescription = "ombyg en scooter motor med karburator til indsprøjtning med et indsprøjtningskit";
 
 $databasecenter = array(

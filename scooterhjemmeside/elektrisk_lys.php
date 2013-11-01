@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "lys - Elektrisk";
 $overskrift = "lys - Elektrisk";
@@ -107,6 +107,8 @@ Bremselysets glødetråd lyser en del kraftigere end baglysets glødetråd.
 '.visbilled('1', 'billed0162.jpg', 'baglys bremselys pære glødetråde 5 watt 21 watt', false, true).'
 Her ses en 12 volt 5 watt positionslys pære som sidder i bunden af forlygten.
 '.visbilled('1', 'billed0060.jpg', 'positionslys kymco super 8 4T', false, true).'
+Her ses forlygten inde fra med 2 positionslys i bunden og 2 halogenlys øverst.
+'.visbilled('1', 'billed3886.jpg', 'forlygte indefra kymco super 8 4T', false, true).'
 Positionslyset kan tændes selvom motoren ikke køre så andre kan se scooteren hvis man for eksempel holder et mørkt sted om natten og motoren ikke kan starte og man dermed ikke kan tænde for forlyset.
 Positionslyset kan også tændes hvis forlys pæren er sprunget så man i det mindste har lidt forlys på indtil man får skiftet forlys pæren.
 
@@ -208,7 +210,7 @@ Blinklys relæet får blinklyset til at blinke fremfor at lyse konstant.
 Blinklys relæet giver en klik klik klik lyd hver gang relæet slår til og fra.
 Klik klik klik lyden minder om at man skal slukke for blinklyset hvis man skulle have glemt det.
 
-Øverst på blinklys relæet sidder en metal plade med hul i som jeg vil tro er til for at forstærke lyden.
+Øverst på blinklys relæet sidder en metalplade med hul i som jeg vil tro er til for at forstærke lyden.
 '.visbilled('1', 'billed0871.jpg', 'blinklys relæ', false, true).'
 Blinklys relæet sidder oppe under instrumentpanelet.
 '.visbilled('1', 'billed0068.jpg', 'blinklys relæ', false, true).'

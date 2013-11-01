@@ -1,13 +1,14 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "rating oversigt";
 $overskrift = "rating oversigt";
 $metadescription = "se de sider der er blevet stemt på med ratingsystemet og hvor mange stemmer de har fået i gennemsnit osv";
 
+$deloverskrift = '';
 $oversigtindhold = '';
 $tableindhold = '';
 
@@ -25,7 +26,7 @@ if ($db->connect_errno > 0) {
    }else{
    }
 
-   if ($stmt = $db->prepare("SELECT * FROM {$GLOBALS['setup']['mysql_tablenavn']}")) {
+   if ($stmt = $db->prepare("SELECT * FROM {$GLOBALS['setup']['mysql_tablenavn']} WHERE `antalstemmer` >= 5")) {
 
       $stmt->execute();
 
@@ -55,7 +56,8 @@ if ($db->connect_errno > 0) {
 
    if ($tableindhold != '') {
 
-      $oversigtindhold .= '<table class="tablesorter">';
+      $oversigtindhold .= '<div style="overflow-x: auto;">';
+      $oversigtindhold .= '<table class="tableholder fontsize_small tablesorter">';
 
       $oversigtindhold .= '<thead>';
       $oversigtindhold .= '<tr>';
@@ -73,17 +75,12 @@ if ($db->connect_errno > 0) {
       $oversigtindhold .= '</tbody>';
 
       $oversigtindhold .= '</table>';
+      $oversigtindhold .= '</div>';
 
    } else {
 
-      $oversigtindhold .= '<div class="ratingoversigtingendata borderradius5px">';
-      $oversigtindhold .= '<h1>Ingen data at vise</h1>';
-      $oversigtindhold .= '<h2>Her er nogen misser i stedet for</h2>';
-      $oversigtindhold .= '<img src="http://placekitten.com/180/160" alt="Miau 1" width="180" height="160">';
-      $oversigtindhold .= '<img src="http://placekitten.com/181/160" alt="Miau 2" width="181" height="160">';
-      $oversigtindhold .= '<img src="http://placekitten.com/182/160" alt="Miau 3" width="182" height="160">';
-      $oversigtindhold .= '<img src="http://placekitten.com/183/160" alt="Miau 4" width="183" height="160">';
-      $oversigtindhold .= '</div>';
+      $deloverskrift = 'ingen data at vise';
+      $oversigtindhold .= nogenmisser();
 
    }
 
@@ -92,6 +89,7 @@ if ($db->connect_errno > 0) {
 $databasecenter = array(
 
 '
+'.$deloverskrift.'
 ' => '
 '.$oversigtindhold.'
 '

@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "forreste remskiver - Transmission";
 $overskrift = "forreste remskiver - Transmission";
@@ -166,8 +166,7 @@ Det kan dog virke lidt voldsomt.
 Du kan også kile en lille gaffelnøgle fast mellem remskivens tænder og motorblokken.
 Denne metode bruger jeg selv og jeg kan godt anbefale den.
 '.visbilled('1', 'billed1490.jpg', 'afmontering af remskive møtrik', false, true).'
-Her er en video der viser hvordan man gør.
-'.visflash('0', 'http://www.youtube.com/watch?v=zYCasW5pY24', '', true).'
+'.visflash('0', 'http://www.youtube.com/watch?v=zYCasW5pY24', 'video der viser hvordan man kan kile en lille gaffelnøgle fast og fjerne møtrikken', true).'
 Du kan også bruge en oliefiltertang.
 '.visbilled('1', 'billed0182.jpg', 'afmontering af remskive', false, true).'
 Du kan også købe et specielt stykke metal du spænder fast i de samme huller som holdt variatordækslet med de samme skruer som bruges til variatordækslet.

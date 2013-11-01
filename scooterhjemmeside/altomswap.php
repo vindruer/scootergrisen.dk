@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "swap elektriske scootere";
+$title = "swap scootere med elektrisk motor";
 $overskrift = "swap";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
@@ -30,7 +30,7 @@ $databasecenter = array(
    ),'motor'               => array(
        'motormodel'        => ens('motormodel', 'Shang Wei SWM1LM', '', '')
       ,'motortype'         => ens('motortype', 'elektrisk', '', '')
-      ,'elmotorspec'       => ens('elmotorspec', '48', '220', 'permanente magneter børsteløs jævnstrøm', '')
+      ,'elmotorspec'       => ens('elmotorspec', '48', '580', 'permanente magneter børsteløs jævnstrøm', 'AMP.S : 14,8, POLES : 4, RATING: CONT, VOLTS : 48VDC, S/N : SWM1LM-AO[...]')
       ,'volume'            => ens('volume', '', '', '')
       ,'køling'            => ens('køling', '', '', '')
       ,'boring'            => ens('boring', '', '', '')

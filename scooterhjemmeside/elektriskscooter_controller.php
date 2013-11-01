@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "controller - Elektrisk scooter";
 $overskrift = "controller - Elektrisk scooter";
@@ -19,6 +19,13 @@ Controlleren indeholder en del elektronik.
 '.visbilled('1', 'billed1418.jpg', 'Elektrisk motor controller fra EVT', false, true).'
 Controlleren bestemmer hvor hurtigt motoren skal dreje ud fra hvor meget gashåndtaget er drejet.
 Jo mere gashåndtaget drejes jo flere volt sender controlleren til motoren og jo hurtigere drejer motoren.
+
+Her ses en controller på en SWAP 2.
+'.
+galleriholder(array(
+    galleri('highslide', '', 'billed3896.jpg', array('SWAP 2 controller'))
+))
+.'
 
 Her ses en controller på en Peugeot Scoot\'elec.
 '.visbilled('1', 'billed2178.jpg', 'Peugeot Scoot\'elec controller', false, true).'
@@ -140,15 +147,21 @@ På nogle controllere er det et stik man kan tage fra hinanden alt efter om cont
 Når stikket er taget fra hinanden kan controllen være indstillet til en 120° motor og samles stikket er controllen indstillet til en 60° motor.
 ').'
 
-'.afsnit('brake high low noget','
+'.afsnit('brake (high - low)','
 Her ses en controller hvor der står "BRAKE : HIGH LEVEL".
 '.visbilled('1', 'billed3072.jpg', 'BBK SCDC motor controller model A4880-TM6', false, true).'
 
-Jeg er ikke sikker på hvad dette betyder.
+Der er også nogen controllere hvor der både er HIGH og LOW brake.
+
+Jeg ved endnu ikke så meget om dette.
+
+Hvis controlleren både har HIGH og LOW brake kan man vist nøjes med at bruge den ene slags.
+Hvis man bruger HIGH brake skal man vist bruge en ektra ledning fra batteri + (plus).
+
+Det er vist til bremsekontakterne sådan at strømmmen til motoren afbrydes når man bremser.
 
 På en controller kan der være en ledning til controllen som kan gives 12-72 volt når der bremses for at stoppe motoren.
-Det skulle være på scootere som har bremselyse og ledningen skulle forbindelse det den positive ledning på bremselyset.
-Måske har det noget med at gøre at der på en controller kan stå "Brake: High".
+Det skulle være på scootere som har bremselys og ledningen skulle forbindelse det den positive ledning på bremselyset.
 
 Der kan også være 2 andre ledninger på et stik som vist har 5 volt og måske bruges til bremsekontakterne.
 Når de kortsluttes stopper motoren.
@@ -194,6 +207,7 @@ Læs mere om EVT motor, controller og oplader.
 
 '.afsnit('controller typer','
 Jeg ved endnu ikke så meget om controller typer men her er det jeg har indtil videre.
+Se også '.ahref('http://www.freescale.com/webapp/sps/site/overview.jsp?code=WBT_MOTORPRINTUT_WP', 'freescale.com - Motor Tutorial - Motor Principles').'.
 
 '.afsnit('PM brush/series wound DC','
 Pulse-width modulation with semiconductors.

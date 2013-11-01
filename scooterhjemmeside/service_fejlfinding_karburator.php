@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "Karburator - Fejlfinding";
 $overskrift = "Karburator - Fejlfinding";
-$metadescription = "find og ret fejl på scooterens karburator";
+$metadescription = "find og ret fejl på scooterens/knallertens karburator (mager/fed blanding, automatisk choker, karburatorvarmer)";
 
 $databasecenter = array(
 
@@ -49,8 +49,8 @@ automatisk choker
 ' => '
 Der findes nogen forskellige måder at teste om den automatiske choker virker alt efter hvor grundig man vil være.
 
-'.afsnit('Den lette måde (mål elektrisk modstand)','
-Vent 30 minutter hvis motoren lige har kørt så den automatiske choker kan trække sig sammen og blive kold.
+'.afsnit('Den første lette måde (mål elektrisk modstand)','
+Vent 30 minutter hvis motoren lige har kørt så den automatiske choker kan blive kold og trække sig sammen.
 Afmonter choker stikket.
 Mål på choker stikket med et multimeter sat til ohm.
 '.visbilled('1', 'billed0305.jpg', 'fejlfinding af automatisk choker ohm måling', false, true).'
@@ -63,7 +63,7 @@ I "Haynes 4768" bogen står 20-40 Ω.
 ').'
 
 '.afsnit('Den anden lette måde (mål udpresning)','
-Vent 30 minutter hvis motoren lige har kørt så den automatiske choker kan trække sig sammen.
+Vent 30 minutter hvis motoren lige har kørt så den automatiske choker kan blive kold og trække sig sammen.
 Afmonter chokeren.
 Mål hvor langt ventilen er ude i forhold til kanten af den automatiske choker med enden af en skydelære.
 Tag ledningerne ud af stikket.
@@ -81,7 +81,7 @@ Det er sådan set ligegyldigt om man måler ved ventilen eller spidsen af nålen
 ').'
 
 '.afsnit('Den grundige måde (pust igennem hul)','
-Vent 30 minutter hvis motoren lige har kørt så den automatiske choker kan trække sig sammen.
+Vent 30 minutter hvis motoren lige har kørt så den automatiske choker kan blive kold og trække sig sammen.
 Tøm karburatoren for benzin ved at løsne drænskruen i bunden af karburatoren og tag karburatoren af motoren.
 Lad den automatiske choker blive siddende på karburatoren.
 Pust gennem en slange ind i lufthullet til den automatisk choker.

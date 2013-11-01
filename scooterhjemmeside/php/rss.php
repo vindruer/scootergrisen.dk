@@ -3,11 +3,11 @@
 // RSS feed nyheder for http://scootergrisen.dk/
 
 chdir('..');
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$nyheder = require_once('nyhederdatabase.php');
+$nyheder = require_once './php/nyhederdatabase.php';
 
 $servername = $_SERVER['SERVER_NAME'];
 $channeltitle = "Scootergrisen nyt"; // Det som kommer til at slå i Bookmarks toolbar når man tilføjer det i en browser

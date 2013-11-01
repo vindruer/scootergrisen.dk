@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "oplader - Elektrisk scooter";
 $overskrift = "oplader - Elektrisk scooter";
@@ -73,16 +73,16 @@ Her ses en oplader til en Tisong TM-300.
 ,'
 opladerstik
 ' => '
-På nogle elektrisk scootere er opladerstikket i scooteren af samme type som man kender det fra computere og andet 220 volt vækselstrømsudstyr.
+På nogle elektrisk scootere er opladerstikket i scooteren af samme type som man kender det fra computere og andet 220 volt vekselstrømsudstyr.
 '.visbilled('1', 'billed3347.jpg', 'giantco e-buddy opladningsstik', false, true).'
 '.visbilled('1', 'billed3348.jpg', 'giantco e-buddy opladningsstik', false, true).'
 Her ses en oplader som bruger samme type stik i opladeren og i scooteren.
 '.visbilled('1', 'billed3349.jpg', 'greensaver HB48062 batterioplader til giantco e-buddy', false, true).'
-Hvis man kom til forbinde scooterensopladerstik direkte med stikket til stikkontaktens 220 volt vækselstrøm (i stedet for stikkert fra opladeren) så ville det sikkert ikke være så godt.
+Hvis man kom til forbinde scooterensopladerstik direkte med stikket til stikkontaktens 220 volt vekselstrøm (i stedet for stikkert fra opladeren) så ville det sikkert ikke være så godt.
 
 Der kan godt nok være en hovedafbryder i nogle scootere som beskytter med kortslutning og måske andre ting men jeg ved ikke om den også er i stand til at beskytte mod dette.
 
-I Giantco E-Buddy er en hovedafbryder hvor på der står "230V/400V~". Så den lyder ligesom til at være designet til 220 volt vækselstrøm så den ville nok ikke slå fra. Og det vil så betyde at batterierne får 220 volt vækselstrøm ved 50 Hz og det kan ikke være godt.
+I Giantco E-Buddy er en hovedafbryder hvor på der står "230V/400V~". Så den lyder ligesom til at være designet til 220 volt vekselstrøm så den ville nok ikke slå fra. Og det vil så betyde at batterierne får 220 volt vekselstrøm ved 50 Hz og det kan ikke være godt.
 '
 
 );

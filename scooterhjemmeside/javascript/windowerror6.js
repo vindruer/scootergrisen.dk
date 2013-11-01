@@ -27,11 +27,21 @@ function gemnogetmederror(msg, url, line) {
 
    'use strict';
 
+   if (  url
+      && url.indexOf('http://scootergrisen.dk') !== 0
+      && url.indexOf('http://scootergrisen.localhost') !== 0
+      && url.indexOf('http://netkoder.dk') !== 0
+      && url.indexOf('http://netkoder.localhost') !== 0
+   ) {
+      return false;
+   }
+
    var filename = "/scooterhjemmeside/php/logerror.php",
        params = null,
        req = null,
        i = null,
        l = null,
+       useragent = null,
        // If the error is from these 3rd party script URLs, we ignore
        // We could also just ignore errors from all scripts that aren't our own
        ignorerurls = [
@@ -66,6 +76,10 @@ function gemnogetmederror(msg, url, line) {
           'TypeError: \'undefined\' is not a function',
           'Uncaught Error: Error connecting to extension pioclpoplcdbaefihamjohnefbikjilc',
           'Uncaught Error: Error connecting to extension nonjdcjchghhkdoolnlbekcfllmednbl'
+       ],
+       // ignorer disse uderagents. bots osv
+       ignoreruseragents = [
+          'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
        ];
 
    if (msg !== undefined && url !== undefined && line !== undefined) {
@@ -82,13 +96,26 @@ function gemnogetmederror(msg, url, line) {
       }
    }
 
+   if (navigator.userAgent) {
+
+      useragent = navigator.userAgent;
+
+   }
+
+   for (i = 0, l = ignoreruseragents.length; i < l; i++) {
+      if (useragent.indexOf(ignoreruseragents[i]) > -1) {
+         return false;
+      }
+   }
+
    if (line !== 0 && line !== 1) {
 
       if (encodeURIComponent) {
 
          params = "msg=" + encodeURIComponent(msg)
                 + "&url=" + encodeURIComponent(url)
-                + "&line=" + line;
+                + "&line=" + line
+                + "&useragent=" + useragent;
 
          req = new AjaxRequest();
 

@@ -1,6 +1,6 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('grundleggendeopsetning.php');
+require_once './php/grundleggendeopsetning.php';
 
 $setup['headekstra']             = '';
 $setup['sidetopbesked']          = '';
@@ -19,6 +19,6 @@ $setup['sessionmappe']           = "$setup[tempfuld]/sessions";
 
 $setup['visreklame']             = 0;
 
-require_once('hovedopsetning.php');
+require_once './php/hovedopsetning.php';
 
 ?>

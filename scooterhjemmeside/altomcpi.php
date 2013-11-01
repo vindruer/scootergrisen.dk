@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "CPI 50 cm³ scootere";
+$title = "CPI scootere med 50 cm³ motor";
 $overskrift = "CPI";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 /*
 JP = popcorn RFTJP45 Tomos Import Danmark A/S T. Hansen Gruppen A/S
 JP = action

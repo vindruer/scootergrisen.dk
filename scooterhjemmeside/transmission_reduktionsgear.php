@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "reduktionsgear - Transmission";
 $overskrift = "reduktionsgear - Transmission";
@@ -53,6 +53,7 @@ Her ses "final shaft". Den bagerste aksel.
 '.visbilled('1', 'billed2640.jpg', 'reduktionsgear tandhjul og aksler', false, true).'
 
 '.visflash('0', "http://www.youtube.com/v/ZOnGeRYRpCQ", 'hvis man skubber scooteren så vil baghjulet få tandhjulene i reduktionsgearet og koblingsklokken til at dreje med. Det er derfor en scooter er tung at skubbe', true).'
+'.visflash('0', "http://www.youtube.com/watch?v=D4N_3MH7iSw", 'udskiftning af Sekundær gearing GY6 Agitity', true).'
 '.afsnit('Reduktions ratio','
 Der opgives i nogle manualer en reduktions ratio.
 

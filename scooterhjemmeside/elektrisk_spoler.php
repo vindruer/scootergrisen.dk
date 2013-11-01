@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "spoler - Elektrisk";
 $overskrift = "spoler - Elektrisk";
@@ -87,7 +87,7 @@ Og ved fuld hastighed har jeg målt 111 volt.
 ,'
 spoler
 ' => '
-Jeg syns det har været lidt svært at forstå hvad de forskellige spoler hedder og er til og det ser ud til at variere meget fra scooter til scooter hvor mange spoler der er og hvad de er forbundet til.
+Jeg syntes det har været lidt svært at forstå hvad de forskellige spoler hedder og er til og det ser ud til at variere meget fra scooter til scooter hvor mange spoler der er og hvad de er forbundet til.
 
 Her vil jeg skrive om spolernavne, ohm værdier og det jeg tror jeg ved om spoler indtil videre.
 '.visbilled('1', 'billed2703.jpg', 'generator spoler tegning', false, true).'
@@ -98,9 +98,9 @@ box(array('120', '120', '120', '120')
    ,array(
        array('dansk spolenavn'            ,'engelsk spolenavn'                               ,'har forbindelse til'   ,'forklaring')
       ,array('pickupspole'                ,'pickup coil<br>pulse coil<br>pulse generator'  ,'CDI boksen'            ,'generer pulssignal hver gang svinghjulet drejer en omgang som bruges af CDI boksen til at beregne tidspunktet hvor tændrøret skal give gnist')
-      ,array('fødespole ?'                ,'exciter coil<br>source coil'                    ,'CDI boksen'            ,'Findes på scootere med AC CDI.<br>Generer cirka 200 volt vækselstrøm til CDI boksen som af CDI boksen sendes videre til tændspolen når tændrøret skal give gnist')
+      ,array('fødespole ?'                ,'exciter coil<br>source coil'                    ,'CDI boksen'            ,'Findes på scootere med AC CDI.<br>Generer cirka 200 volt vekselstrøm til CDI boksen som af CDI boksen sendes videre til tændspolen når tændrøret skal give gnist')
       ,array('ladespole'                  ,'charging coil'                                   ,'spændingsregulator'    ,'bruges til at oplade batteriet når motoren køre')
-      ,array('lysspole'                   ,'lighting coil'                                   ,'forlyspære når forlyset er tændt på lyskontakten.<br>Lysmodstand når forlyset er slukket på lyskontakten.'              ,'generer vækselstrøm som bruges til forlys pæren(e).')
+      ,array('lysspole'                   ,'lighting coil'                                   ,'forlyspære når forlyset er tændt på lyskontakten.<br>Lysmodstand når forlyset er slukket på lyskontakten.'              ,'generer vekselstrøm som bruges til forlys pæren(e).')
    )
 )
 .'

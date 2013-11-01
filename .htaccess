@@ -1,18 +1,56 @@
 # .htaccess for http://scootergrisen.dk
 # æøåÆØÅ UTF-8 uden BOM
 
-# disable varnishe cache server hos one.com hvis oplever problemer
-header add "disablevcache" "true"
 
-#php_flag zlib.output_compression On # Giver fejl 500 hos one.com
 
-#php_value upload_max_filesize 100M
-#php_value memory_limit 1M
-
-DirectoryIndex scooterhjemmeside/index.php
+##################################
+#                                #
+#     ...     #
+#                                #
+##################################
 
 ErrorDocument 403 /scooterhjemmeside/fejl.php
 ErrorDocument 404 /scooterhjemmeside/fejl.php
+
+DirectoryIndex scooterhjemmeside/index.php
+
+
+
+##################################
+#                                #
+#          kompression           #
+#                                #
+##################################
+
+# Giver fejl 500 hos one.com
+#php_flag zlib.output_compression On
+# virker på one.com
+#SetOutputFilter DEFLATE
+
+# DEFLATE by extension
+AddOutputFilter DEFLATE html xml js css xsl txt srt svg vtt ttml
+
+# "AddOutputFilterByType" ser ud til at kræve "LoadModule filter_module modules/mod_filter.so" eller giver det fejl 500
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript application/x-subrip text/vtt application/ttml+xml image/svg+xml
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
+
+
+
+##################################
+#                                #
+#     ...     #
+#                                #
+##################################
+
+# disable varnishe cache server hos one.com hvis oplever problemer
+header add "disablevcache" "true"
+
+#php_value upload_max_filesize 100M
+#php_value memory_limit 1M
 
 #Options -Indexes
 #Options +Indexes
@@ -33,9 +71,9 @@ IndexOptions +FancyIndexing +FoldersFirst -IconsAreLinks +IconHeight=16 +IconWid
 DefaultIcon /scooterhjemmeside/billeder/ikoner/page_white.png
 
 AddIcon /scooterhjemmeside/billeder/ikoner/application_double.png .exe
-AddIcon /scooterhjemmeside/billeder/ikoner/page_white_zip.png .Z .z .tgz .gz .zip
+AddIcon /scooterhjemmeside/billeder/ikoner/page_white_zip.png .Z .z .tgz .gz .zip .jar
 AddIcon /scooterhjemmeside/billeder/ikoner/page_white_acrobat.png .pdf
-AddIcon /scooterhjemmeside/billeder/ikoner/page_white_text.png .txt
+AddIcon /scooterhjemmeside/billeder/ikoner/page_white_text.png .txt .srt .vtt .ttml .ini
 AddIcon /scooterhjemmeside/billeder/ikoner/page_white_flash.png .fla .swf
 AddIcon /scooterhjemmeside/billeder/ikoner/page_white_php.png .php .php3 .php4 .php5
 AddIcon /scooterhjemmeside/billeder/ikoner/page_white_office.png .docx .docm .dotx .dotm
@@ -47,7 +85,8 @@ AddIcon /scooterhjemmeside/billeder/ikoner/html.png .html .htm
 AddIcon /scooterhjemmeside/billeder/ikoner/xhtml.png .xhtml
 AddIcon /scooterhjemmeside/billeder/ikoner/script_code.png .js
 AddIcon /scooterhjemmeside/billeder/ikoner/database_table.png .sql
-AddIcon /scooterhjemmeside/billeder/ikoner/music.png .wav .mp3 .ogg .oga
+AddIcon /scooterhjemmeside/billeder/ikoner/music.png .wav .mp3 .ogg .oga .m4a .opus
+AddIcon /scooterhjemmeside/billeder/ikoner/font.png .otf .eot .ttf .woff .ttc
 AddIcon /scooterhjemmeside/billeder/ikoner/folder_up.png ..
 AddIcon /scooterhjemmeside/billeder/ikoner/asterisk_yellow.png README
 AddIcon /scooterhjemmeside/billeder/ikoner/folder_add.png ^^DIRECTORY^^
@@ -60,11 +99,11 @@ AddIconByType (SND,/scooterhjemmeside/billeder/ikoner/music.png) audio/*
 AddIconByType (VID,/scooterhjemmeside/billeder/ikoner/film.png) video/*
 
 AddDescription "HTML" .html
-AddDescription "PHP / HTML" .php
-AddDescription "Cascading style sheet tekst" .css
+AddDescription "PHP" .php
+AddDescription "Cascading style sheet" .css
 AddDescription "Flash" .swf
-AddDescription "Almindelig tekst" .txt
-AddDescription "Javascript tekst" .js
+AddDescription "Almindelig tekst" .txt .ini
+AddDescription "Javascript" .js
 AddDescription "XML" .xml
 AddDescription "Adobe Acrobat PDF" .pdf
 AddDescription "PNG billed" .png
@@ -73,6 +112,64 @@ AddDescription "GIF billed" .gif
 AddDescription "Markør" .cur
 AddDescription "Ikon" .ico
 AddDescription "Komprimeret fil" .zip
+AddDescription "Java ARchive" .jar
+AddDescription "Undertekster" .srt .vtt .ttml
+AddDescription "EXtensible Stylesheet Language (stylesheet til XML)" .xsl
+AddDescription "Font" .otf .eot .ttf .woff .ttc
+AddDescription "WAV lyd" .wav
+AddDescription "MP3 lyd" .mp3
+AddDescription "OGG lyd" .ogg .oga
+AddDescription "MP4 lyd" .m4a
+AddDescription "OPUS lyd" .opus
+AddDescription "OGG video" .ogv
+AddDescription "WebM video" .webm
+AddDescription "MP4 video" .mp4
+AddDescription "MOV video" .mov
+AddDescription "3GPP video" .3gp
+AddDescription "WMV video" .wmv
+
+
+
+#########################
+#                       #
+#      MIME typer       #
+#                       #
+#########################
+
+AddType audio/ogg .oga
+AddType audio/mpeg .mp3
+AddType audio/wave .wav
+AddType audio/mp4 .m4a
+AddType audio/ogg .opus
+
+AddType video/ogg .ogv
+AddType video/webm .webm
+AddType video/mp4 .mp4
+AddType video/quicktime .mov
+AddType video/3gpp .3gp
+
+AddType application/x-subrip .srt
+AddType text/vtt .vtt
+AddType application/ttml+xml .ttml
+
+AddType text/javascript .js
+
+AddType image/svg+xml .svg
+
+# fordi nogen browsere siger at highslide zoom ico sendes med Other/undefined mime type (image/vnd.microsoft.icon er det officielle IANA navn)
+#AddType image/x-icon .cur .ico
+AddType image/vnd.microsoft.icon .cur .ico
+
+#Note: Because there are no defined MIME types for TrueType, OpenType, and Web Open File Format (WOFF) fonts, the MIME type of the file specified is not considered.
+AddType application/vnd.ms-fontobject .eot
+AddType application/font-woff .woff
+AddType application/octet-stream .ttf
+AddType application/octet-stream .otf
+
+AddType application/x-web-app-manifest+json .webapp
+AddType text/cache-manifest .appcache
+
+AddType text/xsl .xsl
 
 
 
@@ -82,7 +179,7 @@ AddDescription "Komprimeret fil" .zip
 #                           #
 #############################
 
-#RedirectPermanent /favicon.ico http://scootergrisen.dk/scooterhjemmeside/billeder/ikoner/shortcuticon0001.ico
+RedirectPermanent /favicon.ico http://scootergrisen.dk/scooterhjemmeside/billeder/ikoner/shortcuticon0001.ico
 
 RedirectPermanent /htmlgrisen/lyd_radio.php http://netkoder.dk/netkoder/lyd_streaming.php
 RedirectPermanent /htmlgrisen/lyd_fatherted.php http://netkoder.dk/netkoder/lyd_soundboard.php
@@ -399,15 +496,17 @@ RedirectPermanent /scooterhjemmeside/download/orbit_brugermanual.pdf http://scoo
 RedirectPermanent /scooterhjemmeside/download/orbit_servicemanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/sym_orbit_servicemanual.pdf
 RedirectPermanent /scooterhjemmeside/download/orbit_reservedele.pdf http://scootergrisen.dk/scooterhjemmeside/download/sym_orbit_reservedele.pdf
 RedirectPermanent /scooterhjemmeside/download/orbit_reservedele.pdf http://scootergrisen.dk/scooterhjemmeside/download/sym_orbit_reservedele.pdf
-RedirectPermanent /scooterhjemmeside/download/fiddle_brugermanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_fiddle_brugermanual.pdf
-RedirectPermanent /scooterhjemmeside/download/fiddle_reservedele.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_fiddle_reservedele.pdf
-RedirectPermanent /scooterhjemmeside/download/mio_brugermanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_mio_brugermanual.pdf
-RedirectPermanent /scooterhjemmeside/download/mio_servicemanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_mio_servicemanual.pdf
-RedirectPermanent /scooterhjemmeside/download/mio_reservedele.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_mio_reservedele.pdf
-RedirectPermanent /scooterhjemmeside/download/orbit_brugermanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_orbit_brugermanual.pdf
-RedirectPermanent /scooterhjemmeside/download/orbit_servicemanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_orbit_servicemanual.pdf
-RedirectPermanent /scooterhjemmeside/download/orbit_reservedele.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_orbit_reservedele.pdf
-RedirectPermanent /scooterhjemmeside/download/orbit_reservedele.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_orbit_reservedele.pdf
+
+RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/fiddle_brugermanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_fiddle_brugermanual.pdf
+RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/fiddle_reservedele.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_fiddle_reservedele.pdf
+RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/mio_brugermanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_mio_brugermanual.pdf
+RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/mio_servicemanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_mio_servicemanual.pdf
+RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/mio_reservedele.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_mio_reservedele.pdf
+RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/orbit_brugermanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_orbit_brugermanual.pdf
+RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/orbit_servicemanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_orbit_servicemanual.pdf
+RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/orbit_reservedele.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_orbit_reservedele.pdf
+RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/orbit_reservedele.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/sym_orbit_reservedele.pdf
+
 RedirectPermanent /scooterhjemmeside/download/katalog_pgoscooter20122013.pdf http://scootergrisen.dk/scooterhjemmeside/download/pgo_katalog_2012_2013.pdf
 RedirectPermanent /scooterhjemmeside/download/katalog_pgoscooter20112012.pdf http://scootergrisen.dk/scooterhjemmeside/download/pgo_katalog_2011_2012.pdf
 RedirectPermanent /scooterhjemmeside/download/katalog_pgoscooter20102011.pdf http://scootergrisen.dk/scooterhjemmeside/download/pgo_katalog_2010_2011.pdf
@@ -667,7 +766,7 @@ RedirectPermanent /scooterhjemmeside/download/ebuddy_eldiagram_experimental.svg 
 RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/ebuddy_eldiagram_experimental.svg http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/giantco_ebuddy_eldiagram_experimental.svg
 RedirectPermanent /scooterhjemmeside/download/neos_2t_servicemanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/yamaha_neos_2t_servicemanual.pdf
 RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/neos_2t_servicemanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/yamaha_neos_2t_servicemanual.pdf
-RedirectPermanent /scooterhjemmeside/download/xiaofeilu_hrtk122_d​etaljeret_typegodkendelse.pdf http://scootergrisen.dk/scooterhjemmeside/download/typegodkendelser/xiaofeilu_hrtk122_detaljeret_typegodkendelse.pdf
+RedirectPermanent /scooterhjemmeside/download/xiaofeilu_hrtk122_detaljeret_typegodkendelse.pdf http://scootergrisen.dk/scooterhjemmeside/download/typegodkendelser/xiaofeilu_hrtk122_detaljeret_typegodkendelse.pdf
 RedirectPermanent /scooterhjemmeside/download/puch_maxi_priser.jpg http://scootergrisen.dk/scooterhjemmeside/download/puch_e50_prisliste.jpg
 RedirectPermanent /scooterhjemmeside/download/piaggio_ape_servicemanual_tysk.pdf http://scootergrisen.dk/scooterhjemmeside/download/piaggio_ape_servicemanual.pdf
 RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/piaggio_ape_servicemanual_tysk.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/piaggio_ape_servicemanual.pdf
@@ -687,6 +786,19 @@ RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/kymco_super8_
 RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/kymco_super8_eldiagram.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/kymco_super8_4t_eldiagram.pdf
 
 RedirectPermanent /scooterhjemmeside/billederfragaden.php http://scootergrisen.dk/scooterhjemmeside/billeder.php
+
+RedirectPermanent /scooterhjemmeside/download/piaggio_fly_servicemanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/piaggio_fly_4t_servicemanual.pdf
+RedirectPermanent /scooterhjemmeside/download/piaggio_fly_servicemanual_150ccm.pdf http://scootergrisen.dk/scooterhjemmeside/download/piaggio_fly_4t_150ccm_servicemanual.pdf
+RedirectPermanent /scooterhjemmeside/download/piaggio_fly_reservedele.pdf http://scootergrisen.dk/scooterhjemmeside/download/piaggio_fly_4t_reservedele.pdf
+RedirectPermanent /scooterhjemmeside/download/piaggio_liberty_brugermanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/piaggio_liberty_4t_brugermanual.pdf
+RedirectPermanent /scooterhjemmeside/download/piaggio_zip_indsugning.gif http://scootergrisen.dk/scooterhjemmeside/download/piaggio_zip_4t_indsugning.gif
+RedirectPermanent /scooterhjemmeside/download/piaggio_zip_cdibegrensning.jpg http://scootergrisen.dk/scooterhjemmeside/download/piaggio_zip_4t_cdibegrensning.jpg
+RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/piaggio_fly_servicemanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/piaggio_fly_4t_servicemanual.pdf
+RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/piaggio_fly_servicemanual_150ccm.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/piaggio_fly_4t_150ccm_servicemanual.pdf
+RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/piaggio_fly_reservedele.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/piaggio_fly_4t_reservedele.pdf
+RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/piaggio_liberty_brugermanual.pdf http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/piaggio_liberty_4t_brugermanual.pdf
+RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/piaggio_zip_indsugning.gif http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/piaggio_zip_4t_indsugning.gif
+RedirectPermanent /scooterhjemmeside/download/dialog/hent/download/piaggio_zip_cdibegrensning.jpg http://scootergrisen.dk/scooterhjemmeside/download/dialog/hent/download/piaggio_zip_4t_cdibegrensning.jpg
 
 
 
@@ -754,40 +866,6 @@ RewriteRule ^test/(.*)$ http://netkoder.dk/test/$1 [R=301,L]
 
 #########################
 #                       #
-#      MIME typer       #
-#                       #
-#########################
-
-AddType audio/ogg .oga
-AddType audio/mpeg .mp3
-AddType audio/wave .wav
-AddType audio/mp4 .m4a
-AddType audio/ogg .opus
-
-AddType video/ogg .ogv
-AddType video/webm .webm
-AddType video/mp4 .mp4
-AddType video/quicktime .mov
-AddType video/3gpp .3gp
-
-AddType application/x-subrip .srt
-AddType text/vtt .vtt
-AddType application/ttml+xml .ttml
-
-AddType application/font-woff .woff
-
-
-# fordi nogen browsere siger at highslide zoom ico sendes med Other/undefined mime type
-# image/vnd.microsoft.icon er det officielle IANA navn
-#AddType image/x-icon .cur .ico
-AddType image/vnd.microsoft.icon .cur .ico
-
-#AddType image/svg+xml .svg
-
-
-
-#########################
-#                       #
 #        phpBB3         #
 #                       #
 #########################
@@ -809,7 +887,8 @@ AddType image/vnd.microsoft.icon .cur .ico
 # AddDefaultCharset sætter kun for MIME type text/plain og text/html
 # virker i undermapper
 
-#AddDefaultCharset UTF-8 # sætter også for HTML filer med for eksempel "windows-1252" hvilket ikke er så godt så brug derfor ikke
+# sætter også for HTML filer med for eksempel "windows-1252" hvilket ikke er så godt så brug derfor ikke
+#AddDefaultCharset UTF-8
 
 #AddCharset UTF-8 .css .js .xml .json .rss .atom .srt
 
@@ -833,6 +912,10 @@ AddType image/vnd.microsoft.icon .cur .ico
 # virker åbenbart kun i samme mappe
 #AddCharset UTF-8 .srt
 
+<FilesMatch "crossdomain\.xml|info\.txt|robots\.txt|sitemap\.xml|sitemap_video\.xml|todo\.txt">
+AddDefaultCharset UTF-8
+</FilesMatch>
+
 
 
 #########################
@@ -847,39 +930,6 @@ AddType image/vnd.microsoft.icon .cur .ico
       Header append Vary: Accept-Encoding
    </FilesMatch>
 </IfModule>
-
-
-
-###########################
-#                         #
-# virker ikke hos one.com #
-#                         #
-###########################
-
-<IfModule mod_expires.c>
-   ExpiresActive On
-      <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
-      ExpiresDefault "access plus 1 year"
-   </FilesMatch>
-</IfModule>
-
-
-
-###########################
-#                         #
-# virker ikke hos one.com #
-#                         #
-###########################
-
-<IfModule mod_headers.c>
-   Header unset ETag
-   Header unset Last-Modified
-</IfModule>
-FileETag None
-<FilesMatch "\.(ico|gz|JPG|jpg|jpeg|png|gif|js|css|swf|cur)$">
-   Header unset Cache-control
-   Header set Expires "access plus 1 month"
-</FilesMatch>
 
 
 
@@ -949,23 +999,48 @@ deny from all
 
 
 
-#########################
-#                       #
-#      Expires....      #
-#                       #
-#########################
+###########################
+#                         #
+#         Expires         #
+#                         #
+###########################
 
-#<IfModule mod_expires.c>
+<IfModule mod_expires.c>
+   ExpiresActive On
+      <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+      ExpiresDefault "access plus 1 month"
+   </FilesMatch>
+</IfModule>
 
-#    ExpiresActive on
 
-  # CSS
-#    ExpiresByType text/css "access plus 1 day"
 
-  # JavaScript
-#    ExpiresByType application/javascript "access plus 1 day"
+###########################
+#                         #
+#          ETag           #
+#                         #
+###########################
 
-#</IfModule>
+FileETag none
+
+
+
+###########################
+#                         #
+#       Undermapper       #
+#                         #
+###########################
+
+#<Directory "C:/Users/Administrator/Desktop/netkoder.dk/temp">
+
+#   #Header append Cache-Control must-revalidate
+#   Order Deny,Allow
+#   Deny from All
+
+#   <FilesMatch "\.(jpg)$">
+#   Allow from all
+#   </FilesMatch>
+
+#</Directory>
 
 
 

@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "LED (diode lys)";
 $overskrift = "LED (diode lys)";
@@ -37,7 +37,7 @@ Budget. Billig billig. 20 kroner. Men det var vist også nedsat... eller koster 
 Her ses elektronikken.
 Simpelt nok til at jeg kan forstå det... sådan da.
 Nederst har vi stikket som bare er 2 spyd der er loddet til en ensretter må det vel være.
-Pæren er åbenbart lavet til vækselstrøm men det fungere også med jævnstrøm.
+Pæren er åbenbart lavet til vekselstrøm men det fungere også med jævnstrøm.
 Og da der er sådan en ensretter så er det lige meget hvordan man vender plus og minus. Pæren lyser lige meget hvad.
 Der er 21 LED ialt.
 Det er delt op i 7 parallele grupper som hver hedder "minus - LED - LED - LED - plus" også er der indskuds en modstand i hver gruppe et sted på 150 Ohm.

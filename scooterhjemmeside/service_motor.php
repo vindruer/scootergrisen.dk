@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "motor - Service";
 $overskrift = "motor - Service";
-$metadescription = "service af motor på scooter";
+$metadescription = "service af motor på scooter (måling af tolerancer på motorens dele)";
 
 $databasecenter = array(
 

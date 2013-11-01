@@ -5,11 +5,11 @@
 // i webshot programmet så tager programmet screenshots af alle linksne
 
 chdir('..');
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$database = require_once('linksdatabase.php');
+$database = require_once './php/linksdatabase.php';
 
 header('Content-type: text/plain');
 

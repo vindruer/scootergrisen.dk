@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "modeller med 2 takt motor";
-$overskrift = "modeller med 2 takt motor";
-$metadescription = "liste med scootere/knallert med 2 takt motor som kan eller har kunne fås i danmark";
+$title = "scooter og knallert modeller med 2 takt motor";
+$overskrift = "scooter og knallert modeller med 2 takt motor";
+$metadescription = "liste med scootere og knallerter med 2 takt motor som kan eller har kunne fås i danmark";
 
 $databasecenter = array(
 
@@ -137,6 +137,7 @@ easy rider
 people
 super 9
 vitality
+super 8 2T
 ', '')
       ,array('leone', 'swan (Keeway Swan)
 ', '')

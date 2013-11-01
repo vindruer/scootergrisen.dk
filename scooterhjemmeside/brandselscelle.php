@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "brændselscelle";
 $overskrift = "brændselscelle";
-$metadescription = "information om brændselscelleteknologi";
+$metadescription = "information om brændselscelleteknologi som det kunne bruges til scootere i fremtiden";
 
 $databasecenter = array(
 

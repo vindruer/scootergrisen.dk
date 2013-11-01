@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "aprilia 50 cm³ knallerter, scootere og offroader";
+$title = "aprilia knallerter, scootere og offroader med 50 cm³ motor";
 $overskrift = "aprilia";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
@@ -23,7 +23,7 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -163,7 +163,7 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -995,7 +995,7 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -1415,7 +1415,7 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '15998', '', '', '')
-      ,'hastighed'         => ens('hastighed', '45', '', '', '')
+      ,'hastighed'         => ens('hastighed', '25 og 30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -1834,11 +1834,14 @@ $databaseright = array(
 //'emner på siden' => array()
 
 'download' => array(
-    'scarabeo 4T brugermanual'             => 'aprilia_scarabeo_brugermanual.pdf'
+    'Habana brugermanual'                  => 'aprilia_habana_brugermanual.pdf'
+   ,'scarabeo 4T brugermanual'             => 'aprilia_scarabeo_brugermanual.pdf'
    ,'scarabeo 4T servicemanual'            => 'aprilia_scarabeo_servicemanual.pdf'
    ,'scarabeo 4T bruger + servicemanual'   => 'aprilia_scarabeo_brugerogservicemanual.pdf'
    ,'sportcity one brugermanual'           => 'aprilia_sportcityone_brugermanual.pdf'
    ,'RS brugermanual'                      => 'aprilia_rs_brugermanual.pdf'
+   ,'SR servicemanual'                     => 'aprilia_rs_servicemanual.pdf'
+   ,'sonic brugermanual'                   => 'aprilia_sonic_brugermanual.pdf'
    ,'SR brugermanual'                      => 'aprilia_sr_brugermanual.pdf'
    ,'SR servicemanual'                     => 'aprilia_sr_servicemanual.pdf'
    ,'SR Ditech eldiagram (2004)'           => 'aprilia_sr_ditech_eldiagram.pdf'

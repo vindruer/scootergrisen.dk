@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "luftfilter og udstødning - Service";
 $overskrift = "luftfilter og udstødning - Service";
@@ -125,7 +125,7 @@ Til boremaskinen kan man købe forskelligt tilbehør.
 Her ses en stålbørste monteret.
 '.visbilled('1', 'billed1363.jpg', 'stålbørste til boremaskine', false, true).'
 
-Min boremaskine går op til 3300 o/min og det syns jeg er lidt for langsomt.
+Min boremaskine går op til 3300 o/min og det syntes jeg er lidt for langsomt.
 
 Stålbørsten viste sig at være rigtig god til at fjerne maling de steder hvor der ikke var rust.
 Den kunne også godt fjerne rust de steder hvor der var let rust men de steder hvor rusten var dyb var stålbørsten ikke så god til at fjerne rusten men polerede i stedet for at fjerne det.

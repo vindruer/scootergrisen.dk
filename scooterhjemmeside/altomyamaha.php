@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "yamaha 50 cm³ og elektrisk scootere";
+$title = "yamaha scootere med 50 cm³ og elektrisk motor";
 $overskrift = "yamaha";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
@@ -1393,7 +1393,7 @@ $databasecenter = array(
       ,'andet'             => ens('andet', 'LCD display med blå belysning', '', '')
 
    ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+       'begrænstransmis'   => ens('begrænstransmis', '', 'Bøsning ml. forr. remskivedele', '', '')
       ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
@@ -1401,7 +1401,7 @@ $databasecenter = array(
       ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
       ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
-      ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
+      ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', 'Tegn nr. 8 er "1" og angiver den maksimale hastighed = 45 km/t', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 
    )

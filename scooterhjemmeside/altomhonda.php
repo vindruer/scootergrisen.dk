@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "honda 50 cm³ knallerter og scootere";
+$title = "honda knallerter og scootere med 50 cm³ motor";
 $overskrift = "honda";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
@@ -1143,6 +1143,7 @@ $databaseright = array(
    ,'dax motor reservedele'            => 'honda_dax_motor_reservedele.pdf'
    ,'sfx reservedele'                  => 'honda_sfx_reservedele.pdf'
    ,'zoomer servicemanual'             => 'honda_zoomer_servicemanual.pdf'
+   ,'vision NSC50WH servicemanual (tysk)'             => 'honda_vision_nsc50wh_servicemanual_tysk.pdf'
 
 ),'typegodkendelser' => array(
     'zoomer 45 km/t E13678 (e4*2002/24*0315)'   => 'typegodkendelser/Honda%20NPS%2050%20Zoomer%20%28E13678%29%20udstedt%2023-09-2004.pdf'

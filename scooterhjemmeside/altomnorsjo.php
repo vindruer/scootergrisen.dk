@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "norsjö 50 cm³ og elektrisk vareknallert";
+$title = "norsjö vareknallert med 50 cm³ og elektrisk motor";
 $overskrift = "norsjö";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_norsjo.png';
 
@@ -313,9 +313,9 @@ $databaseright = array(
    ,'prisliste'                           => 'norsjo_prisliste.pdf'
 
 ),'typegodkendelser' => array(
-    '4 stroke 30 km/t E15233 (e5*2002/24*0007)'    => 'typegodkendelser/Norsjo%20Carrier%20%28E15233%29%20udstedt%2003-04-2006.pdf'
-   ,'electric 35 km/t E15234 (e5*2002/24*0006)'    => 'typegodkendelser/Norsjo%20Carrier%20%28E15234%29%20udstedt%2003-04-2006.pdf'
-   ,'electric 30 km/t E16754 (e5*2002/24*0007)'    => 'typegodkendelser/Norsjo%20Carrier%20Elec%202011A%20%28E16754%29%20udstedt%2003-12-2007.pdf'
+    'carrier 4 stroke 35 km/t (stor knallert) E15234 (e5*2002/24*0006)'    => 'typegodkendelser/Norsjo%20Carrier%20%28E15234%29%20udstedt%2003-04-2006.pdf'
+   ,'carrier electronic 30 km/t (stor knallert) E15233 (e5*2002/24*0007)'    => 'typegodkendelser/Norsjo%20Carrier%20%28E15233%29%20udstedt%2003-04-2006.pdf'
+   ,'carrier electronic 30 km/t (stor knallert) E16754 (e5*2002/24*0007)'    => 'typegodkendelser/Norsjo%20Carrier%20Elec%202011A%20%28E16754%29%20udstedt%2003-12-2007.pdf'
 
 )
 

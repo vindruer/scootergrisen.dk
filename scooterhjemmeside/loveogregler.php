@@ -1,12 +1,14 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "love og regler";
-$overskrift = "love og regler";
-$metadescription = "information om lovgivning til scootere/knallerter der må køre 30 og 45 km/t";
+$setup['nogetikon']               = 'ikoner/ikon_loveogregler2.png';
+
+$title = "love og regler til scootere og knallerter";
+$overskrift = "love og regler til scootere og knallerter";
+$metadescription = "information om den danske lovgivning til scootere/knallerter (lille knallert og stor knallert) der må køre 25, 30 og 45 km/t";
 
 $databasecenter = array(
 
@@ -22,7 +24,7 @@ Det er meningen at man skal kunne finde svar på sådanne spørgsmål på denne 
 Næsten alt teksten på denne side er kopieret direkte fra andre hjemmesider.
 
 <mark>Vær opmærksom på at bare fordi det står her på siden behøver det ikke være rigtigt.
-Nogle lovgivninger er måske forældet og det kan være svært at finde ud af om en lov stadig gælder eller om der er kommet en ny lov.</mark>
+Det kan være svært at finde ud af om en lov stadig gælder eller om der er kommet en ny lov.</mark>
 '
 
 ,'
@@ -485,9 +487,10 @@ Direktivet er vedtaget i år 2002.
 
 Det kan godt være det hedder EC direktiv eller EU direktiv.
 
-I direktivet opdeles 2 hjulede scootere i klassen L1e.
-Og 3 hjulede scootere i klassen L2e.
-L3e er vist motorcykler... men er ikke sikker.
+I direktivet opdeles sådan :
+2 hjulet scootere i klassen L1e.
+3 hjulet scootere i klassen L2e.
+Motorcykler er vist i klassen L3e... men er ikke sikker.
 '
 
 ,'
@@ -520,7 +523,7 @@ garanti
 Garanti er noget som butikken eller producenten kan vælge at give dig.
 En garanti er noget som giver dig bedre fordele end de 2 års reklamationsret som du allerede har ifølge købeloven.
 
-Du har ikke krav på en garanti. Det bestemmer butikken selv om de vil give eller tilbyde.
+Du har ikke krav på en garanti. Det bestemmer butikken selvom de vil give eller tilbyde.
 
 En fabriksgaranti er en garanti der gives at producenten.
 

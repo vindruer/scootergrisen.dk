@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "ur - Elektrisk";
 $overskrift = "ur - Elektrisk";
-$metadescription = "uret som kan findes i en scooter";
+$metadescription = "uret som viser hvad klokken er som kan findes på instrumentpanelet på en scooter/knallert";
 
 $databasecenter = array(
 

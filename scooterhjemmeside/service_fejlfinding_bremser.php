@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "Bremser - Fejlfinding";
 $overskrift = "Bremser - Fejlfinding";
-$metadescription = "find og ret fejl på scooterens bremser";
+$metadescription = "find og ret fejl på scooterens/knallertens bremser (dårlig bremse funktion, bremsegreb pulserer, bremse vil ikke give slip)";
 
 $databasecenter = array(
 

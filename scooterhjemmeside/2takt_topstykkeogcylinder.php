@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "topstykke og cylinder - 2 takt motor";
 $overskrift = "topstykke og cylinder - 2 takt motor";
@@ -18,6 +18,8 @@ Her ses topstykke og cylinder fra en 2 takt motor.
 
 På så godt som alle 2 takt motorer med karburator består topstykket kun af ét stykke metal og ingen bevægelige dele.
 I forhold til en 4 takt motor så er 2 takt motorens topstykke meget mere simpelt og lettere at afmonter.
+
+'.visbilled('1', 'billed3884.jpg', '2 takt cylinder', false, true).'
 
 '.visbilled('1', 'billed0840.jpg', '2 takt tændrør topstykke pakning cylinder tegning', false, true).'
 Cylinderen har skyllekanaler hvor benzin/luft/olie presses op når stemplet bevæger sig ind.

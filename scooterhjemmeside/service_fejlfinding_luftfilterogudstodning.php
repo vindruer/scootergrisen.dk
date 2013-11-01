@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "Luftfilter og udstødning - Fejlfinding";
 $overskrift = "Luftfilter og udstødning - Fejlfinding";
-$metadescription = "find og ret fejl på scooterens luftfiler, sekundært luftfilter, udstødning";
+$metadescription = "find og ret fejl på scooterens/knallertens luftfiler, sekundært luftfilter, udstødning";
 
 $databasecenter = array(
 

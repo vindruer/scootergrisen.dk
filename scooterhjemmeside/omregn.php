@@ -1,15 +1,22 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "omregn og udregn";
-$overskrift = "omregn og udregn";
+$title = "omregn, udregn og konverter mellem forskellige enheder";
+$overskrift = "omregn, udregn og konverter mellem forskellige enheder";
 $metadescription = "tilspændingsmoment, dæktryk, benzinforbrug, slagvolume, forbrændingskammer volume, kompressionsforhold, effekt, hastighed, konverterings tabeller, enheder og forkortelser";
 
 $GLOBALS['setup']['head'] = '
 <style type="text/css">
+
+.omregnerq optgroup {
+}
+
+.omregnerq option {
+   font-family: consolas, "lucida console", monospace;
+}
 
 .formomregnerinfo {
    margin-left: auto;
@@ -67,13 +74,21 @@ tilspændingsmoment
 . formbox('1', '', 'omregn tilspændingsmoment mellem Nm, Kg-m og Lb-ft', '#', 'get', '', ''
    . input('1', 'number', 'dataind', '', '16', 'Indtast tilspændingsmoment', 'moment_dataind', '', 'onkeyup="konverter(this.form, \'moment\');" onchange="konverter(this.form, \'moment\');" onkeypress="return disableEnterKey(event);"', '', '6', '')
    . input('1', 'select', 'fraogtil', 
-       '<option value="nmtilkgm" selected="selected">Nm ---&gt; Kg-m</option>'
+       '<optgroup label="Nm">'
+      .'<option value="nmtilkgm" selected="selected">Nm ---&gt; Kg-m</option>'
       .'<option value="nmtillbft"                   >Nm ---&gt; Lb-ft</option>'
+      .'</optgroup>'
+
+      .'<optgroup label="Kg-m">'
       .'<option value="kgmtilnm"                    >Kg-m -&gt; Nm</option>'
       .'<option value="kgmtillbft"                  >Kg-m -&gt; Lb-ft</option>'
+      .'</optgroup>'
+
+      .'<optgroup label="Lb-ft">'
       .'<option value="lbfttilnm"                   >Lb-ft &gt; Nm</option>'
       .'<option value="lbfttilkgm"                  >Lb-ft &gt; Kg-m</option>'
-      , '6', 'Vælg fra og til enheder', 'fratil_moment', '', 'onchange="konverter(this.form, \'moment\');" onkeypress="return disableEnterKey(event);"', '', '', '')
+      .'</optgroup>'
+      , '9', 'Vælg fra og til enheder', 'fratil_moment', 'omregnerq', 'onchange="konverter(this.form, \'moment\');" onkeypress="return disableEnterKey(event);"', '', '', '')
    . input('1', 'text', 'dataud', '', '16', 'Resultat', 'moment_dataud', 'omregnudregnresultat', '', '', '', 'readonly')
 )
 . '<div class="formomregnerinfo">' . musover('a', 'TagToTip', visbilled('2', 'ikoner/info.png', 'hold markør her for info'), 'Nm = Newton Meter<br>Kg-m = Kilo Gram kraft per Meter<br>Lb-ft = Pund kraft per fod<br><br>Kg-m og Kgf-m og m-kg er det samme<br>Lb-ft og Lbf-ft og ft-lb er det samme') . '</div>'
@@ -84,46 +99,62 @@ dæktryk
 . formbox('1', '', 'omregn dæktryk mellem kg/cm², psi, bar og kpascal', '#', 'get', '', ''
    . input('1', 'number', 'dataind', '', '18', 'Indtast dæktryk', 'daktryk_dataind', '', 'onkeyup="konverter(this.form, \'daktryk\');" onchange="konverter(this.form, \'daktryk\');" onkeypress="return disableEnterKey(event);"', '', '6', '')
    . input('1', 'select', 'fraogtil', 
-       '<option value="kgcm2tilpsi" selected="selected">Kg/cm² -&gt; PSI</option>'
+       '<optgroup label="Kg-m">'
+      .'<option value="kgcm2tilpsi" selected="selected">Kg/cm² -&gt; PSI</option>'
       .'<option value="kgcm2tilbar"          >Kg/cm² -&gt; Bar</option>'
       .'<option value="kgcm2tilkpascal"      >Kg/cm² -&gt; Kpascal</option>'
+      .'</optgroup>'
+
+      .'<optgroup label="PSI">'
       .'<option value="psitilkgcm2"          >PSI ----&gt; Kg/cm²</option>'
       .'<option value="psitilbar"            >PSI ----&gt; Bar</option>'
       .'<option value="psitilkpascal"        >PSI ----&gt; Kpascal</option>'
+      .'</optgroup>'
+
+      .'<optgroup label="Bar">'
       .'<option value="bartilkgcm2"          >Bar ----&gt; Kg/cm²</option>'
       .'<option value="bartilpsi"            >Bar ----&gt; PSI</option>'
       .'<option value="bartilkpascal"        >Bar ----&gt; Kpascal</option>'
+      .'</optgroup>'
+
+      .'<optgroup label="Kpascal">'
       .'<option value="kpascaltilkgcm2"      >Kpascal &gt; Kg/cm²</option>'
       .'<option value="kpascaltilpsi"        >Kpascal &gt; PSI</option>'
       .'<option value="kpascaltilbar"        >Kpascal &gt; Bar</option>'
-      , '12', 'Vælg fra og til enheder', 'fratil_daktryk', '', 'onchange="konverter(this.form, \'daktryk\');" onkeypress="return disableEnterKey(event);"', '', '', '')
+      .'</optgroup>'
+      , '16', 'Vælg fra og til enheder', 'fratil_daktryk', 'omregnerq', 'onchange="konverter(this.form, \'daktryk\');" onkeypress="return disableEnterKey(event);"', '', '', '')
    . input('1', 'text', 'dataud', '', '18', 'Resultat', 'daktryk_dataud', 'omregnudregnresultat', '', '', '', 'readonly')
 )
-. '<div class="formomregnerinfo">' . musover('b', 'TagToTip', visbilled('2', 'ikoner/info.png', 'hold markør her for info'), 'Kg/cm² = kilogram per kvadrat centimeter<br>PSI = pounds per square inch (pund per kvadrat tomme)<br>1 Bar = gennemsnits trykket ved havoverfladen<br>Kpascal = Kilo pascal<br><br>PSI er det samme som Lb/in2<br>Lb/in2 = libra per square inch (pund per kvadrat tomme)') . '</div>'
+. '<div class="formomregnerinfo">' . musover('b', 'TagToTip', visbilled('2', 'ikoner/info.png', 'hold markør her for info'), 'Kg/cm² = kilogram per kvadrat centimeter<br>PSI = pounds per square inch (pund per kvadrat tomme)<br>1 Bar = gennemsnits trykket ved havoverfladen<br>Kpascal = Kilo pascal<br><br>PSI er det samme som Lb/in²<br>Lb/in² = libra per square inch (pund per kvadrat tomme)') . '</div>'
 
 ,'
 benzinforbrug
 ' => ''
 . formbox('1', '', 'omregn benzinforbrug mellem km/l og mpg', '#', 'get', '', ''
-   . input('1', 'number', 'dataind', '', '25', 'Indtast KM/L eller MPG', 'benzin_dataind', '', 'onkeyup="omregn_benzinforbrug(this.form);" onchange="omregn_benzinforbrug(this.form);" onkeypress="return disableEnterKey(event);"', '', '6')
+   . input('1', 'number', 'dataind', '', '25', 'Indtast MPG, KM/L eller L/100 km', 'benzin_dataind', '', 'onkeyup="omregn_benzinforbrug(this.form);" onchange="omregn_benzinforbrug(this.form);" onkeypress="return disableEnterKey(event);"', '', '6')
    . input('1', 'select', 'fraogtil', 
-       '<option value="mpgimptilmpgus" selected="selected">mpg (imperial) ----&gt; mpg (us)</option>'
-      .'<option value="mpgimptilkml"                      >mpg (imperial) ----&gt; Km/l</option>'
-      .'<option value="mpgimptill100km"                   >mpg (imperial) ----&gt; L/100 km</option>'
+       '<optgroup label="MPG">'
+      .'<option value="mpgimptilmpgus" selected="selected">mpg (imperial) &gt; mpg (us)</option>'
+      .'<option value="mpgimptilkml"                      >mpg (imperial) &gt; Km/l</option>'
+      .'<option value="mpgimptill100km"                   >mpg (imperial) &gt; L/100 km</option>'
+      .'<option value="mpgustilmpgimp"                    >mpg (us) ------&gt; mpg (imperial)</option>'
+      .'<option value="mpgustilkml"                       >mpg (us) ------&gt; Km/l</option>'
+      .'<option value="mpgustill100km"                    >mpg (us) ------&gt; L/100 km</option>'
+      .'</optgroup>'
 
-      .'<option value="mpgustilmpgimp"                    >mpg (us) ----------&gt; mpg (imperial)</option>'
-      .'<option value="mpgustilkml"                       >mpg (us) ----------&gt; Km/l</option>'
-      .'<option value="mpgustill100km"                    >mpg (us) ----------&gt; L/100 km</option>'
+      .'<optgroup label="KM/L">'
+      .'<option value="kmltilmpgimp"                      >Km/l ----------&gt; mpg (imperial)</option>'
+      .'<option value="kmltilmpgus"                       >Km/l ----------&gt; mpg (us)</option>'
+      .'<option value="kmltill100km"                      >Km/l ----------&gt; L/100 km</option>'
+      .'</optgroup>'
 
-      .'<option value="kmltilmpgimp"                      >Km/l --------------&gt; mpg (imperial)</option>'
-      .'<option value="kmltilmpgus"                       >Km/l --------------&gt; mpg (us)</option>'
-      .'<option value="kmltill100km"                      >Km/l --------------&gt; L/100 km</option>'
+      .'<optgroup label="L/100 km">'
+      .'<option value="l100kmtilmpgimp"                   >L/100 km ------&gt; mpg (imperial)</option>'
+      .'<option value="l100kmtilmpgus"                    >L/100 km ------&gt; mpg (us)</option>'
+      .'<option value="l100kmtilkml"                      >L/100 km ------&gt; Km/l</option>'
+      .'</optgroup>'
 
-      .'<option value="l100kmtilmpgimp"                   >L/100 km ----------&gt; mpg (imperial)</option>'
-      .'<option value="l100kmtilmpgus"                    >L/100 km ----------&gt; mpg (us)</option>'
-      .'<option value="l100kmtilkml"                      >L/100 km ----------&gt; Km/l</option>'
-
-   , '12', 'Vælg fra og til enheder', 'fratil_benzinforbrug', '', 'onchange="omregn_benzinforbrug(this.form);" onkeypress="return disableEnterKey(event);"', '', '', '')
+   , '15', 'Vælg fra og til enheder', 'fratil_benzinforbrug', 'omregnerq', 'onchange="omregn_benzinforbrug(this.form);" onkeypress="return disableEnterKey(event);"', '', '', '')
    . lidtplads('lodret')
    . input('1', 'text', 'dataud_resultat1', '', '25', 'Resultat', 'benzin_dataud1', 'omregnudregnresultat', '', '', '', 'readonly')
 )
@@ -153,20 +184,21 @@ forbrændingskammer volume
 )
 . '<div class="formomregnerinfo">' . musover('e', 'TagToTip', visbilled('2', 'ikoner/info.png', 'hold markør her for info'), 'Slagvolume = Området i cylinderen over stemplet fra TDC til BDC (uden forbrændingskammer volume)<br>Kompression = Det kompressionsforhold som indholdet i cylinderen presses sammen af stemplet') . '</div>'
 . '
-Forbrændingskammer volumen = slagvolume / (kompression - 1).
+Forbrændingskammer volume = slagvolume / (kompression - 1).
 '.visbilled('1', 'billed0155.jpg', 'cylinder volume', false, true).'
-
+'.afsnit('eksempler', '
 Kymco Super 8 4T har en motor volume på 49,5 cm³ og et kompressionsforhold på 11:1.
 49,5 cm³ / (11 - 1) = 4,95 cm³.
 Forbrændingskammeret har altså en volume på 4,95 cm³.
 
-Apollo 30 har en motor volume på 49,5 og et kompressionsforhold på 8:1.
+Apollo 30 har en motor volume på 49,5 cm³ og et kompressionsforhold på 8:1.
 49,5 cm³ / (8 - 1) = 7,07 cm³.
 Forbrændingskammeret har altså en volume på 7,07 cm³.
 
 Yamaha Giggle har en motor volume på 49 cm³ og et kompressionsforhold på 12:1.
 49 cm³ / (12 - 1) = 4,45 cm³.
 Forbrændingskammeret har altså en volume på 4,45 cm³.
+').'
 '
 
 ,'
@@ -186,13 +218,18 @@ Kompression = (forbrændingskammer volume + slagvolume) / forbrændingskammer vo
 effekt
 ' => ''
 . formbox('1', '', 'omregn effekt mellem Kw (Kilo Watt) og Hk (Heste Kræfter)', '#', 'get', '', ''
-   . input('1', 'number', 'dataind', '', '16', 'Indtast værdi', 'effekt_dataind', '', 'onkeyup="konverter(this.form, \'effekt\');" onchange="konverter(this.form, \'effekt\');" onkeypress="return disableEnterKey(event);"', '', '6', '')
+   . input('1', 'number', 'dataind', '', '16', 'Indtast Kw eller HK', 'effekt_dataind', '', 'onkeyup="konverter(this.form, \'effekt\');" onchange="konverter(this.form, \'effekt\');" onkeypress="return disableEnterKey(event);"', '', '6', '')
    . input('1', 'select', 'fraogtil', 
-       '<option value="kwtilhkmet" selected="selected">Kw -------------&gt; Hk (metric)</option>'
+       '<optgroup label="Kw">'
+      .'<option value="kwtilhkmet" selected="selected">Kw -------------&gt; Hk (metric)</option>'
       .'<option value="kwtilhkmec"                    >Kw -------------&gt; Hk (mechanical)</option>'
+      .'</optgroup>'
+
+      .'<optgroup label="Hk">'
       .'<option value="hkmettilkw"                    >Hk (metric) ----&gt; Kw</option>'
       .'<option value="hkmectilkw"                    >Hk (mechanical) &gt; Kw</option>'
-      , '4', 'Vælg fra og til enheder', 'fratil_effekt', '', 'onchange="konverter(this.form, \'effekt\');" onkeypress="return disableEnterKey(event);"', '', '', '')
+      .'</optgroup>'
+      , '6', 'Vælg fra og til enheder', 'fratil_effekt', 'omregnerq', 'onchange="konverter(this.form, \'effekt\');" onkeypress="return disableEnterKey(event);"', '', '', '')
    . input('1', 'text', 'dataud', '', '16', 'Resultat', 'effekt_dataud', 'omregnudregnresultat', '', '', '', 'readonly')
 )
 . '<div class="formomregnerinfo">' . musover('g', 'TagToTip', visbilled('2', 'ikoner/info.png', 'hold markør her for info'), 'Kw = Kilo Watt = 1000 Watt<br>Hk = Heste Kræfter<br>Metric Hk bruges vist nok mest i europa<br>Mechanical Hk bruges vist nok mest i england og usa') . '</div>'
@@ -201,11 +238,16 @@ effekt
 hastighed
 ' => ''
 . formbox('1', '', 'omregn hastighed mellem Km/t (Kilo Meter / Time) og mph (Miles Per Hour)', '#', 'get', '', ''
-   . input('1', 'number', 'dataind', '', '16', 'Indtast værdi', 'hastighed_dataind', '', 'onkeyup="konverter(this.form, \'hastighed\');" onchange="konverter(this.form, \'hastighed\');" onkeypress="return disableEnterKey(event);"', '', '6', '')
+   . input('1', 'number', 'dataind', '', '16', 'Indtast Km/t eller mph', 'hastighed_dataind', '', 'onkeyup="konverter(this.form, \'hastighed\');" onchange="konverter(this.form, \'hastighed\');" onkeypress="return disableEnterKey(event);"', '', '6', '')
    . input('1', 'select', 'fraogtil', 
-       '<option value="kmttilmph" selected="selected">Km/t &gt; mph</option>'
+       '<optgroup label="Km/t">'
+      .'<option value="kmttilmph" selected="selected">Km/t &gt; mph</option>'
+      .'</optgroup>'
+
+      .'<optgroup label="MPH">'
       .'<option value="mphtilkmt"                    >mph -&gt; Km/t</option>'
-      , '2', 'Vælg fra og til enheder', 'fratil_hastighed', '', 'onchange="konverter(this.form, \'hastighed\');" onkeypress="return disableEnterKey(event);"', '', '', '')
+      .'</optgroup>'
+      , '4', 'Vælg fra og til enheder', 'fratil_hastighed', 'omregnerq', 'onchange="konverter(this.form, \'hastighed\');" onkeypress="return disableEnterKey(event);"', '', '', '')
    . input('1', 'text', 'dataud', '', '16', 'Resultat', 'hastighed_dataud', 'omregnudregnresultat', '', '', '', 'readonly')
 )
 . '<div class="formomregnerinfo">' . musover('h', 'TagToTip', visbilled('2', 'ikoner/info.png', 'hold markør her for info'), 'Km/t = Kilo Meter per Time<br>mph = Miles Per Hour = Mil Per Time') . '</div>'

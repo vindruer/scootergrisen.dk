@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "Starter - Fejlfinding";
 $overskrift = "Starter - Fejlfinding";
-$metadescription = "find og ret fejl på scooterens starterrelæ, starter motor";
+$metadescription = "find og ret fejl på scooterens/knallertens starterrelæ, starter motor";
 
 $databasecenter = array(
 

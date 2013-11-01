@@ -1,14 +1,35 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "PGO 50 cm³ og elektrisk scootere";
+$title = "PGO scootere med 50 cm³ og elektrisk motor";
 $overskrift = "PGO";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+
+/*
+PGO - UOPLYST :
+   RFVPAUB3061001
+   RFVPAUB3071002
+   RFVPAUA30A1001
+   RFVPAUB3091003
+
+PGO - HOT 50 PMPS lille knallert :
+   RFVPMPS2291218
+   RFVPMPS2291218
+   RFVPMPS2291216
+   RFVPMPS2291217
+   RFVPMPS22A1219
+   RFVPMPS2291218
+   RFVPMPS2291218
+   RFVPMPS22A1219
+   RFVPMPS22A1219
+   RFVPMPS22A1218
+   RFVPMPS22A1219
+*/
 
 $databasecenter_b = array(
 
@@ -21,37 +42,41 @@ De skriver i PGO scooter katalogerne at PGO Hot og PGO Big Max er de mest solgte
 '
 
 ,'
-modeller der ligner hinanden
+modeller som ligner hinanden
 ' => '
-Mange af modellerne minder meget om hinanden men jeg har valgt at vise et billede af hver så man kan se forskellen.
+Mange af modellerne minder meget om hinanden.
 
 '.afsnit('Hot og Big Max','
-Ser ud til at være identisk borset fra hastigheden.
+Ser ud til at være identiske bortset fra hastigheden.
 Hot er 30 km/t.
 Big Max er 45 km/t.
 ').'
 
 '.afsnit('Dr. Big og T-Rex','
-Ser ud til at være identisk borset fra hastigheden.
+Ser ud til at være identiske bortset fra hastigheden.
 Dr Big er 30 km/t.
 T-Rex er 45 km/t.
 ').'
 
 '.afsnit('Ligero, Rodoshow og Bubu','
 Ligner hinanden.
-PE = Bubu, Rodoshow (rodoshow har vist en mere afrundet front end ligero som er lidt kantet)
-PA = Ligero
+PE = Bubu, Rodoshow (Rodoshow har vist en mere afrundet front)
+PA = Ligero (Ligero har vist en mere kantede front)
 ').'
 
 '.afsnit('Ligero RS, Its magic og Galaxy','
 Ligner hinanden.
 ').'
+'
 
-'.afsnit('under modeller','
+,'
+under modeller
+' => '
+'.afsnit('10", 12", SP, RS, DN','
 Eksempelvis fås PGO Hot i 3 udgaver :
 '.afsnit('','
-PGO Hot (c reinhardt kalder den classic)
-PGO Hot 12" (c reinhardt kalder den special) (3 ege fælge ?)
+PGO Hot (C. Reinhardt kalder den classic)
+PGO Hot 12" (C. Reinhardt kalder den special) (3 ege fælge ?)
 PGO Hot SP (6 ege fælge ?)
 ').'
 [blank] = 10" stålfælge, ensfarvet skjolde.
@@ -64,8 +89,7 @@ For eksempel PGO Ligero RS.
 RS = Ved ikke hvad det står for.
 
 Scootertypen for PGO PMX Naked kan angives som PMS-50DN. 
-DN = Naked (der ikke er plastik skjolde oppe omkring styret/indstumenterne).
-
+DN = Naked (der er ikke plastikskjolde oppe omkring styret).
 
 PGO kalder forskellige versioner for "special edition" og "economic version".
 "economic version" er noget med forhjul/forbremse (lille smal rund) og bagagebærer (tyndt metalrør) at gøre. Måske en billigudgave.
@@ -79,12 +103,12 @@ Det ser ud til de fleste PGO med 50 cm³ motor har motortypen P2.
 Der er også nogle som har P5.
 Jeg har også læst om motortypen P1 i en ældre manual.
 
-Der ser ud til at P betyder at det er en 50 cm³ motor.
+Måske betyder P at det er en 50 cm³ motor men P9 er vist en 82 cm³ motor.
 '.visbilled('1', 'billed3179.jpg', 'pgo motortype motornummer P5', false, true).'
 '.visbilled('1', 'billed3178.jpg', 'pgo motortype motornummer P2', false, true).'
 '.visbilled('1', 'billed3404.jpg', 'pgo motortype motornummer P0', false, true).'
-P9 er vist 82 cm³ motor.
-På 100, 125 og 150 cm³ motor starter motortypen med C.
+
+100, 125 og 150 cm³ motorer er set med startende med C.
 For eksempel C1E5.
 '.visbilled('1', 'billed3180.jpg', 'pgo motortype motornummer', false, true).'
 
@@ -107,7 +131,7 @@ Resten af tegnene er produktions serie nummer.
 ,'
 sportsudstødning
 ' => '
-I PGO scooterkataloget 2012-2013 er der billeder hvor man kan se der er knækudstødning på.
+I '.ahref('download/pgo_katalog_2012_2013.pdf', 'PGO scooterkataloget 2012-2013').' er der på side 5 og 6 billeder hvor der er knækudstødning på.
 
 Ved Hot SP og Big Max SP : C Reinhardt skriver i en rettet udgave af kataloget at Sportsudstødning kun på SPL2 modellerne.
 
@@ -122,38 +146,14 @@ erhvervsmodel
 ' => '
 Der findes erhvervsmodeller som er lavet til at bære tasker.
 
+Det er vist kun PGO Hot, PGO Big Max og PGO PSE der er lavet som erhvervsmodeller til tasker.
+
 Her ses en erhvervsmodel med sorte skjolde.
 '.visbilled('1', 'billed2430.jpg', 'pgo hot post model', false, true).'
-
-Her ses en erhvervsmodel som Post danmark bruger med orange skjolde.
+Her ses en erhvervsmodel som post danmark bruger med orange skjolde.
 '.visbilled('1', 'billed2475.jpg', 'pgo post model', false, true).'
-Og her en elektrisk model.
+Og ses en elektrisk model.
 '.visbilled('1', 'billed3550.jpg', 'elektrisk pgo post model', false, true).'
-
-Det er vist kun PGO Hot og PGO Big Max der er lavet som erhvervsmodel til tasker.
-'
-
-,'
-andre model typer
-' => '
-PGO - UOPLYST :
-   RFVPAUB3061001
-   RFVPAUB3071002
-   RFVPAUA30A1001
-   RFVPAUB3091003
-
-PGO - HOT 50 PMPS lille knallert :
-   RFVPMPS2291218
-   RFVPMPS2291218
-   RFVPMPS2291216
-   RFVPMPS2291217
-   RFVPMPS22A1219
-   RFVPMPS2291218
-   RFVPMPS2291218
-   RFVPMPS22A1219
-   RFVPMPS22A1219
-   RFVPMPS22A1218
-   RFVPMPS22A1219
 '
 
 ,'
@@ -169,7 +169,7 @@ SR-03B står for ?
 E9 betyder måske at den er ubegrænset og lavere tal betyder måske at den er begrænset mere og mere jo lavere tallet er.
 07.05 er nok måned og år for hvornår den er lavet (Juli 2005).
 
-På SR-03B er der stik med max 6 ben hvor der er 5 ben i.
+På SR-03B er der stik til max 6 ben hvor der er 5 ben i brug.
 
 CDI boksen kan sidder lige over bagdækket og under højre stelrør.
 '
@@ -321,7 +321,7 @@ $databasecenter = array(
 ),'pgobigmax12' => array(
 
      'specielt'            => array(
-       'besked'            => ens('besked', 'som Big Max bare med 12 tommer hjul og aluminiumsfælge med 3 ege.', '', '', '')
+       'besked'            => ens('besked', 'som Big Max bare med 12 tommer hjul og aluminiumsfælge med 3 ege.', 'Den på billedet ser dog ud til og være med stålfælge', '', '')
 
    ),'generelt'            => array(
        'model'             => ens('model', 'PGO big max 12', '', '', '')
@@ -346,7 +346,7 @@ $databasecenter = array(
 ),'pgobigmaxnaked' => array(
 
      'specielt'            => array(
-       'besked'            => ens('besked', '', '', '', '')
+       'besked'            => ens('besked', 'Med bart styr', '', '', '')
 
    ),'generelt'            => array(
        'model'             => ens('model', 'PGO big max naked', '', '', '')
@@ -1855,7 +1855,7 @@ $databasecenter = array(
 ),'pgorodoshow' => array(
 
      'specielt'            => array(
-       'besked'            => ens('besked', 'Ligner PGO Ligero meget men PGO RodoShow er vist en ældre model. Frontskjoldet er mere blødt rundt på RodoShow og mindt under sædet er der en runding i skjoldene som er mere blød på RodoShow.', '', '', '')
+       'besked'            => ens('besked', 'Ligner PGO Ligero meget, men PGO RodoShow er vist en ældre model. Frontskjoldet er mere blødt rundt på RodoShow og mindt under sædet er der en runding i skjoldene som er mere blød på RodoShow.', '', '', '')
 
    ),'generelt'            => array(
        'model'             => ens('model', 'PGO Rodoshow', '', '', '')
@@ -2436,7 +2436,7 @@ $databasecenter = array(
 ),'pgotornado' => array(
 
      'specielt'            => array(
-       'besked'            => ens('besked', 'skulle være magen til PGO Hot borset fra fronten hvor forlyset sidder', '', '', '')
+       'besked'            => ens('besked', 'skulle være magen til PGO Hot bortset fra fronten hvor forlyset sidder', '', '', '')
 
    ),'generelt'            => array(
        'model'             => ens('model', 'PGO tornado', '', '', '')

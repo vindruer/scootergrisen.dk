@@ -427,7 +427,8 @@ function xxx_processbarb(afspillerid, processbarid) {
    var i,
        lyd = document.getElementById(afspillerid),
        bar = document.getElementById(processbarid),
-       gradientbar = null;
+       gradientbar = null,
+       storrelse = null;
 
    function progressBarb() {
 
@@ -449,7 +450,7 @@ function xxx_processbarb(afspillerid, processbarid) {
             gradientbar.addColorStop(1, '#000000');
             ctx.fillStyle = gradientbar;
 
-            for (i=0; i<r.length; i++) {
+            for (i = 0, storrelse = r.length; i < storrelse; i++) {
 
                start = r.start(i)/lyd.duration * bar.width;
                end = r.end(i)/lyd.duration * bar.width;
@@ -538,14 +539,14 @@ function rate(rating, url) {
 
             console.log('Denne IP har stemt sidst');
             document.getElementById('stemtal').innerHTML = 'X';
-            document.getElementById('stemekstrabesked').innerHTML = '<div class="harstemt">Du har allerede stemt på den viste side.</div>';
+            document.getElementById('stemekstrabesked').innerHTML = '<div class="harstemtfor">Du har allerede stemt på den viste side.</div>';
             document.getElementById('stemnedlink').style.visibility = 'hidden';
             document.getElementById('stemoplink').style.visibility = 'hidden';
 
          } else {
 
             console.log('Stemme blev sendt afsted... det er dog ikke ensbetydne med at den blev modtaget og gemt');
-            document.getElementById('stemekstrabesked').innerHTML = '<div class="harstemt">Du har nu stemt på den viste side</div>';
+            document.getElementById('stemekstrabesked').innerHTML = '<div class="harikkestemtfor">Du har nu stemt på den viste side</div>';
             document.getElementById('stemtal').innerHTML = response.replace('.', ',');
             document.getElementById('stemnedlink').style.visibility = 'hidden';
             document.getElementById('stemoplink').style.visibility = 'hidden';
@@ -634,7 +635,7 @@ function cubenoget() {
 }
 
 
-
+/*
 if (window.addEventListener) {
 
    var elemb = null;
@@ -662,7 +663,7 @@ if (window.addEventListener) {
    }, false);
 
 }
-
+*/
 
 
 function global_fullscreenon(element) {
@@ -752,7 +753,7 @@ function global_togglefullscreen() {
 }
 
 
-
+/*
 if (window.addEventListener) {
 
    window.addEventListener('load', function() {
@@ -768,7 +769,6 @@ if (window.addEventListener) {
              element.webkitRequestFullScreen ||
              element.msRequestFullscreen) {
 
-            /*knap.style.display = 'inline';*/
             knap.style.visibility = 'visible';
 
          }
@@ -778,7 +778,7 @@ if (window.addEventListener) {
    }, false);
 
 }
-
+*/
 
 
 function opdaterfullscreenknapbillede(id_button, id_img) {

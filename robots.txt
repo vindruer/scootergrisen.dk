@@ -2,11 +2,31 @@
 # æøåÆØÅ UTF-8 uden BOM
 
 Sitemap: http://scootergrisen.dk/sitemap.xml
+Sitemap: http://scootergrisen.dk/sitemap_video.xml
 
 User-agent: *
 
 Allow: /
 
+Disallow: /scooterhjemmeside/login.php
+Disallow: /scooterhjemmeside/billeder.php?*
+Disallow: /ub/
+Disallow: /scooterhjemmeside/download.php?download/uploadede_filer
+Disallow: /scooterhjemmeside/rodekassen_billedgalleri.php
+Disallow: /scooterhjemmeside/rodekassen_danmarksbilligstescooter.php
+Disallow: /scooterhjemmeside/rodekassen_lyskontrolboks.php
+Disallow: /scooterhjemmeside/rodekassen_malrustenudstodning.php
+Disallow: /scooterhjemmeside/rodekassen_rekkevidde.php
+Disallow: /scooterhjemmeside/rodekassen_skjolde.php
+Disallow: /scooterhjemmeside/rodekassen_trafiksensor.php
+Disallow: /scooterhjemmeside/rodekassen_varme.php
+Disallow: /scooterhjemmeside/rodekassen_videoplayer.php
+Disallow: /scooterhjemmeside/php/language.php*
+Disallow: /scooterhjemmeside/ratingoversigt.php?sorter=*
+Disallow: /scooterhjemmeside/atv.php
+Disallow: /scooterhjemmeside/ordbog.php
+Disallow: /scooterhjemmeside/kml/26012012.kml
+Disallow: /scooterhjemmeside/billeder/reklamer/
 Disallow: /scooterhjemmeside/rodekassen_varme.php
 Disallow: /scooterhjemmeside/rodekassen_skjolde.php
 Disallow: /forum/images/

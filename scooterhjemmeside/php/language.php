@@ -1,20 +1,20 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
 chdir('..');
-require_once('./php/opsetning_scooterhjemmeside.php');
+require_once './php/opsetning_scooterhjemmeside.php';
 
 if(isset($_GET) && isset($_GET['language'])){
 
    switch($_GET['language']){
 
       case 'da' :
-      case 'da_DK' :
-         $cookieverdi = 'da_DK';
+      case 'da-DK' :
+         $cookieverdi = 'da-DK';
          break;
 
       case 'en' :
-      case 'en_UK' :
-         $cookieverdi = 'en_UK';
+      case 'en-UK' :
+         $cookieverdi = 'en-UK';
          break;
 
       case '' :
@@ -22,7 +22,7 @@ if(isset($_GET) && isset($_GET['language'])){
          break;
 
       default :
-         $cookieverdi = 'en_UK';
+         $cookieverdi = 'en-UK';
          break;
 
    }

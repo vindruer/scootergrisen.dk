@@ -1,14 +1,16 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "giantco 50 cm³ og elektrisk scootere";
+$title = "giantco scootere med 50 cm³ og elektrisk motor";
 $overskrift = "giantco";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+
+// giantcohk.com virker ikke mere (checket den 12-01-2012 ... sjovt nok efter T Hansen er holdt op med det mærke).
 
 $databasecenter_b = array(
 
@@ -23,7 +25,7 @@ På dette el diagram får forlyset jævnstrøm fra spændingsregulatoren (øvers
 '.visbilled('1', 'billed1239.jpg', 'giantco el diagram', false, true).'
 
 Her er et el diagram med farver.
-På dette el diagram får forlyset vækselstrøm fra generatoren (gul ledning fra stator går til lyskontakt til højre på styret).
+På dette el diagram får forlyset vekselstrøm fra generatoren (gul ledning fra stator går til lyskontakt til højre på styret).
 '.visfil('1', 'scooterhjemmeside/download/giantco_eldiagram.pdf').'
 
 Ud fra det sort/hvide el diagram har jeg lavet dette experimentale el diagram i vektor grafik med farver i forskellige formater.
@@ -33,30 +35,26 @@ Her er det samme experimentale el diagram i PDF og SVG format.
 .visfil('1', 'scooterhjemmeside/download/giantco_eldiagram_experimental.svg').'
 
 '.afsnit('bemærk', '
-Det er en lille forskel på det sort/hvide el diagram og det med farver.
-
-På det sort/hvide el digram får forlyset jævnstrøm fra spændingsregulatoren.
-På det farvede el diagram får forlyset vækselstrøm fra generatoren.
-
-Det er den gule ledning øverst til venstre på lyskontakten der er forskel på hvor går hen.
-
-
-Jeg har ikke selv en Giantco scooter så jeg har ikke mulighed for at checke at ledninger og deres farver er korrekte.
+Jeg mangler ledningsfarverne ved den automatiske choker og batteri og sikringen ved batteriet.
 
 Hvis du har en Giantco scooter må du meget gerne '.kontaktemig().' eller skrive i '.forummet().' hvis du har nogen kommentar eller rettelser til el diagrammerne.
-
-Jeg mangler ledningsfarverne ved den automatiske choker og batteri og sikringen ved batteriet.
 
 Ud fra de billeder man kan se hos T Hansen hvor man kan se ledningsfarverne på diverse dele så ser det ikke altid ud til at passe på el diagrammerne. Det kan måske være fordi farverne på el diagrammerne kun viser farverne på ledningsnettet og ikke farverne de ledninger som går fra stikket og hen til delene.
 ').'
 '
-
+/*
 ,'
-bonus info
+navne og producent
 ' => '
-giantcohk.com virker ikke mere (checket den 12-01-2012 ... sjovt nok efter T Hansen er holdt op med det mærke).
-'
+Type starter med HY = ?
+HF = ?
+JL = ? JinLang ?
+Stelnummer starter med LNG = Jiangmen Giantco Motorcycle Co., Ltd.
 
+På '.ahref('http://www.thansen.dk/supersearchnew.asp?c=9738757867&startid=714770783&n=1726626229&brandid=-1177915524&modelid=1726626229#result', 'thansen').' kan man se at nogen af reservedelene fås i 2 udgaver fra forskellig producent (HF) og (JL).
+Blandt andet beslag, gaffelbro, holdere, bøsning ved motorophæng, støtteben, motorophæng, styr og fodplade.
+'
+*/
 );
 
 $databasecenter = array(
@@ -64,7 +62,7 @@ $databasecenter = array(
 'giantcoebuddy' => array(
 
      'specielt'            => array(
-       'besked'            => ens('besked', 'Se også '.ahref('specielt_giantcoebuddy.php', 'Specielt for Giantco E-Buddy').'.', '', '', '')
+       'besked'            => ens('besked', 'Se også '.ahref('specielt_giantcoebuddy.php', 'Giantco E-Buddy').' hvor jeg samler alt hvad jeg kan finde om denne model.', '', '', '')
 
    ),'generelt'            => array(
        'model'             => ens('model', 'giantco e-buddy', '', '', '')
@@ -214,7 +212,7 @@ $databasecenter = array(
       ,'pris'              => ens('pris', '', '', '', '')
       ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
-      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', 'http://www.thansen.dk', '', '', '')
 
    ),'motor'               => array(
        'motormodel'        => ens('motormodel', '1PE40QMB', '', '', '')
@@ -489,9 +487,9 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', 'HY50QT-20A', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
-      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', 'http://www.thansen.dk', '', '', '')
 
    ),'motor'               => array(
        'motormodel'        => ens('motormodel', '1PE40QMB', '', '', '')
@@ -631,7 +629,7 @@ $databasecenter = array(
       ,'pris'              => ens('pris', '', '', '', '')
       ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
-      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', 'http://www.thansen.dk', '', '', '')
 
    ),'motor'               => array(
        'motormodel'        => ens('motormodel', '1PE40QMB', '', '', '')

@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "transmission - Service";
 $overskrift = "transmission - Service";
-$metadescription = "service af transmission på scooter";
+$metadescription = "service af transmission på scooter (kilerem, koblingsbelægning, koblingsklokke, koblingstrykfjeder, ruller)";
 
 $databasecenter = array(
 
@@ -214,7 +214,7 @@ box(array('250', '150', '150')
    )
 )
 .'
-Her er data for Sym Orbit (AV05W-6) 50 cm³.
+Her er data for Sym Orbit 4 takt (AV05W-6) 50 cm³.
 '.
 box(array('250', '150', '150')
    ,array(

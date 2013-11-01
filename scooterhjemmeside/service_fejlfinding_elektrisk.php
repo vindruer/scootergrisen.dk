@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "Elektrisk - Fejlfinding";
 $overskrift = "Elektrisk - Fejlfinding";
-$metadescription = "find og ret fejl på scooterens elektriske udstyr";
+$metadescription = "find og ret fejl på scooterens/knallertens elektriske udstyr (tændspole, generator, pickup, spændingsregulator, kortslutning, dårlig forbindelse)";
 
 $databasecenter = array(
 
@@ -32,7 +32,7 @@ Der skal være 7000-8400 Ω (eller 10000 - 14000 Ω ved 20 °Celsius) (på en Ky
 
 Skru tændrørshætten af.
 
-Mål ohm værdien på tændspolens sekundære terminal (stelforbindelsen) og på enden af ændrørskablet.
+Mål ohm værdien på tændspolens sekundære terminal (stelforbindelsen) og på enden af tændrørskablet.
 '.visbilled('1', 'billed0711.jpg', 'tændspole ohm', false, true).'
 Der skal være 3000-5000 Ω (på en Kymco Super 8).
 Der skal være 2500-3200 Ω (eller 7000 - 9000 Ω ved 20 °Celsius) (på en Kymco Like).
@@ -156,10 +156,10 @@ Her er nogen videoer hvor der er en som prøver at finde ud af hvorfor batteriet
 (måler volt på stator med stikket taget fra og motor køre 23-5X også fucker tallene op med højere omdrejning, kunne være fordi der er en dårligforbindelse)
 
 '.visflash('0', 'http://www.youtube.com/watch?v=kvQW-hgSk6c', 'Måler på spændingsomdeler fra generator', true).'
-(motor køre 2,2 volt vækselstrøm på spændingsregulator gul-lyserød)
+(motor køre 2,2 volt vekselstrøm på spændingsregulator gul-lyserød)
 
 '.visflash('0', 'http://www.youtube.com/watch?v=h0rtDGVOi4k', 'Måler på batteriet', true).'
-(volt stiger ikke nok når motor køre, målt på batteri)
+(volt stiger ikke nok når motor kører, målt på batteri)
 ').'
 
 '.afsnit('exciting / source coil (spole som laver strøm til AC CDI)','
@@ -167,7 +167,7 @@ Denne spole findes på scootere med AC CDI boks som får strøm fra generatoren 
 
 Ledningen fra "exciting coil" kan for eksempel være sort/rød.
 
-For at kontroller spolen fjernes stikket også måler man mellem den sort/røde ledning fra spolen og motorblokken.
+For at kontrollere spolen fjernes stikket også måler man mellem den sort/røde ledning fra spolen og motorblokken.
 
 Der skal for eksempel være :
 350-450 Ω (set i Baotian motor servicemanual).
@@ -351,7 +351,7 @@ Bag på hornet sidder en skrue som man kan justere på hvis hornet ikke giver ly
 ,'
 starterrelæ
 ' => '
-Da der var en bruger som spurgte hvor meget Ohm spolen i et typisk starterrelæ målte jeg mit til 80,5 Ohm.
+Da der var en bruger som spurgte hvor mange Ohm spolen i et typisk starterrelæ skal have målte jeg min spole til 80,5 Ohm.
 Spolen er mellem de 2 mindste/tyndeste terminaler.
 '.visbilled('1', 'billed3785.jpg', 'starterrelæ stik', false, true).'
 '

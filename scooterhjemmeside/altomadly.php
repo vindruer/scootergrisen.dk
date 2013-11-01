@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "adly 50 cm³ scootere";
+$title = "adly scootere med 50 cm³ motor";
 $overskrift = "adly";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
@@ -23,7 +23,7 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', 'SF-50', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '13500', '', '', '')
-      ,'hastighed'         => ens('hastighed', '25 og 45', '', '', '')
+      ,'hastighed'         => ens('hastighed', '25 og 30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -163,7 +163,7 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -303,7 +303,7 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', 'TB-50', '', '', '')
       ,'varianter'         => ens('varianter', 'TB-50 I (en skrivebremse for, noget med dæk)', 'TB-50 II (dobbelt skivebremse for, noget med dæk)', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -540,7 +540,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'RFLATJT50VA001098 (45 km/t S07813-01)', '', '', '')
+      ,'stelnummer'        => ens('stelnummer', 'RFLATJT50VA001098 (45 km/t S07813-01)', 'RFLATJT50VA001017 (HD858)', '', '')
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '', '', '', '')

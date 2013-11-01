@@ -1,14 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'billed2698.jpg';
-
-$title = "sym 50 cm³ scootere";
+$title = "sym scootere med 50 cm³ motor";
 $overskrift = "sym";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
@@ -76,6 +74,15 @@ AV05W1-6
 AV05W-D
 AV05W-S
 
+Orbit (2 takt) : 
+JE05W1-6
+JE05W1-F
+JE05W2-6
+JE05W3-D
+
+Orbit II TS (2 takt) (JE er vist 2 takt) : 
+JEA103CX010868    30 : (A1/03), 45 : (A1/01)
+
 Symphony : 
 AY05W-T
 
@@ -86,16 +93,10 @@ AZ05W2-6
 Tonik 50 : 
 FW05A3-D
 
---- over 50 ccm ---
+--- over 50 cm³ ---
 
-JET 4 125 ccm : 
+JET 4 125 cm³ : 
 AD12W1-6
-
-Sym Orbit 2 takt : 
-JE05W1-6
-JE05W1-F
-JE05W2-6
-JE05W3-D
 '
 
 );
@@ -104,7 +105,10 @@ $databasecenter = array(
 
 'symcello' => array(
 
-   'generelt'              => array(
+     'specielt'            => array(
+       'besked'            => ens('besked', '', '', '', '')
+
+   ),'generelt'            => array(
        'model'             => ens('model', 'sym cello', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', 'sym allo', '', '', '')
       ,'scootertype'       => ens('scootertype', 'AJ05W', 'AJ05W1-6 AJ05W2-6 AJ05W3-6<br>AC05W1-6 AC05W2-6 AC05W3-6', '', '')
@@ -381,7 +385,10 @@ $databasecenter = array(
 
 ),'symfiddle' => array(
 
-   'generelt'              => array(
+     'specielt'            => array(
+       'besked'            => ens('besked', '', '', '', '')
+
+   ),'generelt'            => array(
        'model'             => ens('model', 'sym fiddle', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '')
       ,'scootertype'       => ens('scootertype', 'AW05W', 'AW05W-6 AW05W1-6 AW05W-D AW05W-S AW05W-F', '')
@@ -518,7 +525,10 @@ $databasecenter = array(
 
 ),'symfiddle3hjul' => array(
 
-   'generelt'              => array(
+     'specielt'            => array(
+       'besked'            => ens('besked', '', '', '', '')
+
+   ),'generelt'            => array(
        'model'             => ens('model', 'sym fiddle 3 hjul', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
       ,'scootertype'       => ens('scootertype', '', '', '', '')
@@ -655,7 +665,10 @@ $databasecenter = array(
 
 ),'symjet4' => array(
 
-   'generelt'              => array(
+     'specielt'            => array(
+       'besked'            => ens('besked', '', '', '', '')
+
+   ),'generelt'            => array(
        'model'             => ens('model', 'sym jet 4', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
       ,'scootertype'       => ens('scootertype', 'AD05W', 'JD05W (Jet 4 R)', '', '')
@@ -1079,7 +1092,10 @@ $databasecenter = array(
 
 ),'symmio' => array(
 
-   'generelt'              => array(
+     'specielt'            => array(
+       'besked'            => ens('besked', '', '', '', '')
+
+   ),'generelt'            => array(
        'model'             => ens('model', 'sym mio', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '')
       ,'scootertype'       => ens('scootertype', 'HU05', '', '')
@@ -1216,18 +1232,21 @@ $databasecenter = array(
 
 ),'symorbit' => array(
 
-   'generelt'              => array(
+     'specielt'            => array(
+       'besked'            => ens('besked', '', '', '', '')
+
+   ),'generelt'            => array(
        'model'             => ens('model', 'sym orbit', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', 'sym symply', '', '')
-      ,'scootertype'       => ens('scootertype', 'AV05W (sym orbit)', 'AE05W (sym orbit II S)', 'JE05W (Orbit II TS (JE er muligvis 2 takt))') . 'AV05W-6 AV05W-8 AV05W-A AV05W-F AV05W-T<br>AV05W1-T AV05W1-6 AV05W-D AV05W-S'
-      ,'varianter'         => ens('varianter', 'sym orbit II', '', '')
+      ,'scootertype'       => ens('scootertype', 'AV05W (sym orbit)', 'AE05W (sym orbit II S)', '') . 'AV05W-6 AV05W-8 AV05W-A AV05W-F AV05W-T<br>AV05W1-T AV05W1-6 AV05W-D AV05W-S'
+      ,'varianter'         => ens('varianter', 'sym orbit', 'sym orbit II', 'sym orbit II S')
       ,'pris'              => ens('pris', '8999', '10999', '')
       ,'hastighed'         => ens('hastighed', '30 og 45', '', '')
       ,'farver'            => ens('farver', 'sort sort-hvid rød', '', '')
       ,'forhandlere'       => ens('forhandlere', 'http://sym.dk/forhandler-kort/', '', '', '')
 
    ),'motor'               => array(
-       'motormodel'        => ens('motormodel', 'XS1P39QMB', '(Sym Orbit)', '') . '<br>' . ens('model', 'XS1P37QMA-2', '(Sym Orbit II S)', '')
+       'motormodel'        => ens('motormodel', 'XS1P39QMB', '(Sym Orbit)', '') . '<br>' . ens('motormodel', 'XS1P37QMA-2', '(Sym Orbit II S)', '')
       ,'motortype'         => ens('motortype', '4 takt', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
       ,'volume'            => ens('volume', '49,58', '', '')
@@ -1351,9 +1370,152 @@ $databasecenter = array(
 
    )
 
+),'symorbitiits' => array(
+
+     'specielt'            => array(
+       'besked'            => ens('besked', 'Kan være TS står for TwoStroke', '', '', '')
+
+   ),'generelt'            => array(
+       'model'             => ens('model', 'sym orbit II TS', '', '', '')
+      ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'JE05W (Orbit II TS)', '', '', '')
+      ,'varianter'         => ens('varianter', '', '', '', '')
+      ,'pris'              => ens('pris', '9999', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
+      ,'farver'            => ens('farver', '', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', 'http://sym.dk/forhandler-kort/', '', '', '')
+
+   ),'motor'               => array(
+       'motormodel'        => ens('motormodel', 'XS1PE39QMA', '', '', '')
+      ,'motortype'         => ens('motortype', '2 takt', '', '', '')
+      ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
+      ,'volume'            => ens('volume', '', '', '', '')
+      ,'køling'            => ens('køling', '', '', '', '')
+      ,'boring'            => ens('boring', '', '', '', '')
+      ,'slaglængde'        => ens('slaglængde', '', '', '', '')
+      ,'ventiler'          => ens('ventiler', '', '', '', '')
+      ,'ventiljustering'   => ens('ventiljustering', '', '', '', '')
+      ,'kompression'       => ens('kompression', '', '', '', '')
+      ,'tomgang'           => ens('tomgang', '', '', '', '')
+      ,'nomieffektogheste' => ens('nomieffektogheste', '', '', '', '')
+      ,'maxeffektogheste'  => ens('maxeffektogheste', '', '', '', '')
+      ,'moment'            => ens('moment', '', '', '', '')
+      ,'karburator'        => ens('karburator', '', '', '', '')
+      ,'brændstof indsp..' => ens('brændstof indsp..', '', '', '', '')
+      ,'smøring'           => ens('smøring', '', '', '', '')
+      ,'tændrør'           => ens('tændrør', '', '', '', '')
+
+   ),'dimensioner'         => array(
+       'længde'            => ens('længde', '', '', '', '')
+      ,'bredde'            => ens('bredde', '', '', '', '')
+      ,'højde'             => ens('højde', '', '', '', '')
+      ,'sædehøjde'         => ens('sædehøjde', '', '', '', '')
+      ,'frihøjde'          => ens('frihøjde', '', '', '', '')
+      ,'akselafstand'      => ens('akselafstand', '', '', '', '')
+
+   ),'brændstof'           => array(
+       'benzin'            => ens('benzin', '', '', '', '')
+      ,'benzintank'        => ens('benzintank', '', '', '', '')
+      ,'forbrug'           => ens('forbrug', '', '', '', '')
+
+   ),'hjul'                => array(
+       'fælgfor'           => ens('fælg', '3.00', '12', '')
+      ,'fælgbag'           => ens('fælg', '3.50', '12', '')
+      ,'dækfor'            => ens('dæk1', '120', '70', '12', '')
+      ,'dækbag'            => ens('dæk1', '130', '70', '12', '')
+      ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
+      ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
+      ,'affjedringfor'     => ens('affjedringfor', '', '', '', '')
+      ,'affjedringbag'     => ens('affjedringbag', '', '', '', '')
+      ,'bremserfor'        => ens('bremser', '', '', '', '')
+      ,'bremserbag'        => ens('bremser', '', '', '', '')
+      ,'eger'              => ens('eger', '', '', '')
+      ,'castervinkel'      => ens('castervinkel', '', '', '')
+      ,'efterløb'          => ens('efterløb', '', '', '')
+      ,'drejevinkel'       => ens('drejevinkel', '', '', '', '')
+      ,'venderadius'       => ens('venderadius', '', '', '', '')
+
+   ),'elektrisk'           => array(
+       'starterbatteri'    => ens('starterbatteri', '', '', '', '')
+      ,'batterispec1'      => ens('batterispec1', '', '', '', '')
+      ,'batterispec2'      => ens('batterispec2', '', '', '', '')
+      ,'batterivægt'       => ens('batterivægt', '', '', '', '')
+      ,'batterilevetid'    => ens('batterilevetid', '', '', '', '')
+      ,'generator'         => ens('generator', '', '', '', '')
+      ,'sikring'           => ens('sikring', '', '', '', '')
+      ,'tændingssystem'    => ens('tændingssystem', '', '', '', '')
+      ,'elstart'           => ens('elstart', '', '', '', '')
+      ,'kickstart'         => ens('kickstart', '', '', '', '')
+      ,'lysfor'            => ens('lys', '', '', '', '')
+      ,'lysbagbremse'      => ens('lys', '', '', '', '')
+      ,'lysbag'            => ens('lys', '', '', '', '')
+      ,'lysbremse'         => ens('lys', '', '', '', '')
+      ,'lyspositions'      => ens('lys', '', '', '', '')
+      ,'lysblink'          => ens('lys', '', '', '', '')
+      ,'lyskontrolblink'   => ens('lys', '', '', '', '')
+      ,'lyskontrollangt'   => ens('lys', '', '', '', '')
+      ,'lysnummerplade'    => ens('lys', '', '', '', '')
+      ,'lysinstrument'     => ens('lys', '', '', '', '')
+      ,'oplader'           => ens('oplader', '', '', '', '')
+      ,'ladetid'           => ens('ladetid', '', '', '', '')
+      ,'rækkevidde'        => ens('rækkevidde', '', '', '', '')
+      ,'controller'        => ens('controller', '', '', '', '')
+
+   ),'olie og væsker'      => array(
+       'motor'             => ens('olie', '', '', '', '')
+      ,'gear'              => ens('olie', '', '', '', '')
+      ,'forgaffel'         => ens('olie', '', '', '', '')
+      ,'kølervæske'        => ens('kølervæske', '', '', '', '')
+
+   ),'transmission'        => array(
+       'transmissiontype'  => ens('transmissiontype', '', '', '', '')
+      ,'kobling'           => ens('kobling', '', '', '', '')
+      ,'antalgear'         => ens('antalgear', '', '', '', '')
+      ,'gearratio'         => ens('gearratio', '', '', '', '')
+      ,'tandhjulfor'       => ens('tandhjulfor', '', '', '', '')
+      ,'tandhjulbag'       => ens('tandhjulbag', '', '', '', '')
+      ,'reduktionsratio'   => ens('reduktionsratio', '', '', '', '')
+
+   ),'ekstra'              => array(
+       'stel'              => ens('stel', '', '', '', '')
+      ,'stelnummer'        => ens('stelnummer', 'LXMJEA103CX010868 (XZ8314)', '', '', '30 : (A1/03), 45 : (A1/01)')
+      ,'udstødning'        => ens('udstødning', '', '', '', '')
+      ,'euroemission'      => ens('euroemission', '', '', '', '')
+      ,'vægttør'           => ens('vægttør', '', '', '', '')
+      ,'vægtkørerklar'     => ens('vægtkørerklar', '', '', '', '')
+      ,'vægttotal'         => ens('vægttotal', '', '', '', '')
+      ,'bæreevne'          => ens('bæreevne', '', '', '', '')
+      ,'luftfiltertype'    => ens('luftfiltertype', '', '', '', '')
+      ,'stigeevne'         => ens('stigeevne', '', '', '', '')
+      ,'medfølger'         => ens('medfølger', '', '', '', '')
+      ,'bremsevæske'       => ens('bremsevæske', '', '', '', '')
+      ,'støj'              => ens('støj', '', '', '', '')
+      ,'bagagevolume'      => ens('bagagevolume', '', '', '', '')
+      ,'bakgear'           => ens('bakgear', '', '', '', '')
+      ,'importør'          => ens('importør', 'Itago A/S', '', '', '')
+      ,'producent'         => ens('producent', '', '', '', '')
+      ,'andet'             => ens('andet', '', '', '', '')
+
+   ),'begrænsninger'       => array(
+       'begrænstransmis'   => ens('begrænstransmis', '', 'Bøsning i forr. variator', 'Bøsning i forr. variator', '')
+      ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
+      ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
+      ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
+      ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
+      ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
+      ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
+      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', 'blindrør')
+      ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
+      ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
+
+   )
+
 ),'symorbit3hjul' => array(
 
-   'generelt'              => array(
+     'specielt'            => array(
+       'besked'            => ens('besked', '', '', '', '')
+
+   ),'generelt'            => array(
        'model'             => ens('model', 'sym orbit 3 hjul', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
       ,'scootertype'       => ens('scootertype', '', '', '', '')
@@ -1490,7 +1652,10 @@ $databasecenter = array(
 
 ),'symsymphony' => array(
 
-   'generelt'              => array(
+     'specielt'            => array(
+       'besked'            => ens('besked', '', '', '', '')
+
+   ),'generelt'            => array(
        'model'             => ens('model', 'sym symphony', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', 'sym symphony 50', '', '', '')
       ,'scootertype'       => ens('scootertype', 'AY05W', 'AY05W-T', '', '')
@@ -1928,11 +2093,11 @@ $databaseright = array(
    ,'mio brugermanual (dansk)'         => 'sym_mio_brugermanual_dk.pdf'
    ,'mio servicemanual'                => 'sym_mio_servicemanual.pdf'
    ,'mio reservedele'                  => 'sym_mio_reservedele.pdf'
-   ,'orbit brugermanual'               => 'sym_orbit_brugermanual.pdf'
-   ,'orbit brugermanual (dansk)'       => 'sym_orbit_brugermanual_dk.pdf'
    ,'orbit 2T brugermanual (JE05W1-6JE05W1-FJE05W2-6JE05W3-D)'                 => 'sym_orbit_2t_brugermanual.pdf'
-   ,'orbit servicemanual'              => 'sym_orbit_servicemanual.pdf'
-   ,'orbit reservedele'                => 'sym_orbit_reservedele.pdf'
+   ,'orbit 4T brugermanual'            => 'sym_orbit_brugermanual.pdf'
+   ,'orbit 4T brugermanual (dansk)'    => 'sym_orbit_brugermanual_dk.pdf'
+   ,'orbit 4T servicemanual'           => 'sym_orbit_servicemanual.pdf'
+   ,'orbit 4T reservedele'             => 'sym_orbit_reservedele.pdf'
    ,'symphony brugermanual'            => 'sym_symphony_brugermanual.pdf'
    ,'symphony SR brugermanual'         => 'sym_symphony_sr_brugermanual.pdf'
    ,'tonik brugermanual'               => 'sym_tonik_brugermanual.pdf'

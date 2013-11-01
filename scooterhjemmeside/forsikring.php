@@ -1,14 +1,14 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "forsikring";
-$overskrift = "forsikring";
-$metadescription = "information om forsikring til scootere/knallerter";
+$title = "forsikringsinformation til scootere og knallerter";
+$overskrift = "forsikringsinformation til scootere og knallerter";
+$metadescription = "information om ansvarsforsikring og kaskoforsikring til scootere og knallerter";
 
-$linksarray = require_once('./php/linksdatabase.php');
+$linksarray = require_once './php/linksdatabase.php';
 $linksarray = $linksarray['forsikringsselskaber'];
 
 if(isset($linksarray)){
@@ -64,7 +64,7 @@ kaskoforsikring
 ' => '
 En kaskoforsikring er en forsikring man kan købe udover ansvarsforsikringen.
 
-Du bestemmer selv om du vil have en kaskoforsikring.
+Du bestemmer selvom du vil have en kaskoforsikring.
 
 En kaskoforsikring koster fra cirka 3000-5000 kroner om året oven i ansvarsforsikringen.
 

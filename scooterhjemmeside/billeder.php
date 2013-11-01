@@ -1,12 +1,14 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "billeder - Underholdning";
-$overskrift = "billeder - Underholdning";
-$metadescription = "sjove og anderledes scooter/knallerter billeder";
+$setup['nogetikon']               = 'ikoner/ikon_billeder2.png';
+
+$title = "billeder med scootere og knallerter - Underholdning";
+$overskrift = "billeder med scootere og knallerter - Underholdning";
+$metadescription = "billeder med scootere og knallerter fra gaden, trafikken, sjove og anderledes";
 
 $databasecenter = array(
 
@@ -128,7 +130,7 @@ scootere
    ,galleri('highslide', '', 'billed3686.jpg', array('Piaggio Fly'))
    ,galleri('highslide', '', 'billed3687.jpg', array('CPI Aragon'))
    ,galleri('highslide', '', 'billed3688.jpg', array('Piaggio Typhoon'))
-   ,galleri('highslide', '', 'billed3691.jpg', array('AGM LX 125 ccm'))
+   ,galleri('highslide', '', 'billed3691.jpg', array('AGM LX 125 cm³'))
    ,galleri('highslide', '', 'billed3692.jpg', array('Peugeot Speedfight'))
    ,galleri('highslide', '', 'billed3693.jpg', array('Baotian Supermoto (BT49QT-9)'))
    ,galleri('highslide', '', 'billed3694.jpg', array('Vespa LX'))

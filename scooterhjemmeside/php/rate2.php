@@ -1,7 +1,7 @@
 <?php
 
 chdir('..');
-require_once('grundleggendeopsetning.php');
+require_once './php/grundleggendeopsetning.php';
 
 #
 # Test værdier. Hvis de ikke er gyldige så exit

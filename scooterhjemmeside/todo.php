@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "todo";
 $overskrift = "todo";
@@ -48,6 +48,7 @@ Lav konkurrence hvor man kan vinde Haynes 4768 eller en batterioplader eller nog
 brugerne skriver der mangler...
 ' => '
 '
+.citat('at finde størelsen på drivremen til agm bella scooter fra 2009')
 .citat('scooter Lifan 300, brukarmanual etc')
 .citat('starterrelæ honda vision 1998')
 .citat('baghjulslør udskiftning af leje')

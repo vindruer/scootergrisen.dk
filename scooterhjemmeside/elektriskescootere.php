@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "elektriske scootere";
-$overskrift = "elektriske scootere";
-$metadescription = "oversigt med elektriske scootere som findes i danmark";
+$title = "elektriske scootere og knallerter";
+$overskrift = "elektriske scootere og knallerter";
+$metadescription = "oversigt med elektriske scootere og knallerter som findes i danmark";
 
 $databasecenter = array(
 

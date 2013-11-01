@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "sekundært luft indsugnings system - Luftfilter og udstødning";
 $overskrift = "sekundært luft indsugnings system - Luftfilter og udstødning";
@@ -70,6 +70,20 @@ Luften suges ind gennem dette hul under variatordækslet, gennem luftfilteret, g
 På nogle scootere sidder reed valven på udstødningens forrør.
 '.visbilled('1', 'billed0610.jpg', 'reed valve ved udstødning', false, true).'
 '.visbilled('1', 'billed0805.jpg', 'reed valve', false, true).'
+
+'.visbilled('1', 'billed3907.jpg', 'under sædeboks på PGO G-Max sekundært luftfilter og reedvalve over cylinder på motor', false, true).'
+'.visbilled('1', 'billed3880.jpg', 'sekundært luftfilter på motor', false, true).'
+'.visbilled('1', 'billed3882.jpg', 'sekundært luftfilter på motor', false, true).'
+Her ses det sekundære luftfilter, slangen til reed valve, røret videre til forrøret helt oppe ved cylinderen.
+'.visbilled('1', 'billed3881.jpg', 'sekundært luftfilter på motor', false, true).'
+'.visbilled('1', 'billed3883.jpg', 'reed valve mellem sekundært luftfilter og udstødning', false, true).'
+'.visbilled('1', 'billed3876.jpg', 'reed valve mellem sekundært luftfilter og udstødning', false, true).'
+'.visbilled('1', 'billed3877.jpg', 'adskildt reed valve', false, true).'
+
+'.visbilled('1', 'billed3878.jpg', 'sekundært luftfilter', false, true).'
+Dette sekundære luftfilter kan skilles ad.
+'.visbilled('1', 'billed3879.jpg', 'åbnet sekundært luftfilter', false, true).'
+
 På de scootere hvor reed valven sidder på forrøret er hullet i topstykket lukket også er der ikke noget bøjet rør aller forrest på motoren.
 '.visbilled('1', 'billed0751.jpg', 'lukket hul i topstykke', false, true).'
 '.visbilled('1', 'billed2990.jpg', 'lukket hul i topstykke', false, true).'

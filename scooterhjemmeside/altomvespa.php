@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "vespa 50 cm³ scootere";
+$title = "vespa scootere med 50 cm³ motor";
 $overskrift = "vespa";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
@@ -447,6 +447,7 @@ $databaseright = array(
 ),'typegodkendelser' => array(
     'LX50 (C38) 25 km/t E20502 (e11*2002/24*0441)'        => 'typegodkendelser/Vespa%20LX50%20%28E20502%29%20udstedt%2031-05-2013.pdf'
    ,'LX50 (C38) 45 km/t E20554 (e3*2002/24*0565)'         => 'typegodkendelser/Vespa%20LX50%20%28E20554%29%20udstedt%2012-06-2013.pdf'
+   ,'LX50 (C38) 45 km/t E20703 (e3*2002/24*0565)'         => 'typegodkendelser/Vespa%20LX50%20%28E20703%29%20udstedt%2027-09-2013.pdf'
 
 )
 

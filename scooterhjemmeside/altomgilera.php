@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "gilera 50 cm³ scootere";
+$title = "gilera scootere og offroader med 50 cm³ motor";
 $overskrift = "gilera";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
@@ -438,7 +438,7 @@ $databasecenter = array(
 
      'specielt'            => array(
        'besked'            => ens('besked', '
-Der er lavet mange udgaver af Gilera Runner.<br>
+Det er noget værre rod det her fordi der er så mange Gilera Runner udgaver.<br>
 <br>
 Gilera Runner : 1997-2001<br>
 Gilera Runner DD (Double Disc) : 1998(1999)-2001<br>

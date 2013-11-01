@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "big bore kit";
-$overskrift = "big bore kit";
-$metadescription = "større cylinderkit til scooter motorer";
+$title = "big bore kit (større cylinder) til scootere og knallerter";
+$overskrift = "big bore kit (større cylinder) til scootere og knallerter";
+$metadescription = "cylinderkit med flere cm³ på grund af større diameter i cylinderen end standard cylinderne på 50 cm³";
 
 $databasecenter = array(
 

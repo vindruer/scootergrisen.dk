@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "bøger og blade";
-$overskrift = "bøger og blade";
-$metadescription = "scooterrelaterede bøger og blade";
+$title = "bøger og blade om scootere og knallerter";
+$overskrift = "bøger og blade om scootere og knallerter";
+$metadescription = "scooterrelaterede bøger, blade, værkstedsbøger, reservedelskataloger, magasiner og aviser";
 
 $databasecenter = array(
 
@@ -21,6 +21,16 @@ Her på siden kan du finde information om bøger, blade, magaziner og reservedel
 manualer
 ' => '
 På '.ahref('download.php', 'download siden').' kan du finde manualer til de forskellige scooter modeller.
+'
+
+,'
+steder som sælger manualer osv
+' => '
+'.afsnit('manualer kan købes hos...','
+'.ahref('http://kosters.dk/Catalogue/Motorcykel-Knallert-Scooter-ATV-10645', 'kosters.dk').'
+'.ahref('http://www.villymotor.dk/?knallert-manualer,14', 'villymotor.dk').'
+'.ahref('http://www.thansen.dk/product.asp?pn=1709642681', 'thansen.dk').'
+').'
 '
 
 ,'

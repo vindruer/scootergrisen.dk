@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "longjia (VGA) 50 cm³ scootere";
+$title = "longjia (VGA) scootere med 50 cm³ motor";
 $overskrift = "longjia (VGA)";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_longjia.png';
 
@@ -589,7 +589,7 @@ De kalder boksen for "isoleret transportboks" fordi det ikke er godkendt til mad
 
    ),'begrænsninger'       => array(
        'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
-      ,'begrænstænding'    => ens('begrænstænding', '', 'ja', 'ja', '')
+      ,'begrænstænding'    => ens('begrænstænding', '', 'ja', 'ja', 'På højre side af scooteren over baghjulet er en orange ledning fra CDI boksen som går til en rød ledning der kan tages af<br>' . visbilled('1', 'billed3899.jpg', 'VGA Mover CDI boks ubegrænset orange og rød ledning') . '')
       ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')

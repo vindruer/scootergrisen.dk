@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $filer_der_ikke_skal_vises = array(
     '.htaccess'
@@ -12,6 +12,7 @@ $filer_der_ikke_skal_vises = array(
    ,'hentfil.php'
    ,'motor.php'
    ,'sog.php'
+   ,'ratingoversigt.php'
    ,'sogningerfejlbesog.php'
    ,'statestik.php'
    ,'specielt_2taktscootere.php'
@@ -23,6 +24,7 @@ $filer_der_ikke_skal_vises = array(
    ,'usenet.php'
    ,'visbilled.php'
    ,'visfil.php'
+   ,'login.php'
    );
 
 $filer = hentfilliste('filer', $GLOBALS['setup']['datamappe']);

@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "oliepumpe - 4 takt motor";
 $overskrift = "oliepumpe - 4 takt motor";
@@ -36,11 +36,11 @@ Oliepumpen suger motorolie op fra bunden af motoren.
 Når motorolien ligger i bunden af motoren som på de fleste 4 takt scootere så kaldes det en vådsump.
 '.visbilled('1', 'billed1085.jpg', 'motor med vådsump', false, true).'
 Nederst i motoren sidder en si som olien passer igennem.
-'.visbilled('1', 'billed3740.jpg', '', false, true).'
-'.visbilled('1', 'billed3741.jpg', '', false, true).'
+'.visbilled('1', 'billed3740.jpg', 'motorolie drænbolt på højre side af motor', false, true).'
+'.visbilled('1', 'billed3741.jpg', 'motorolie drænbolt på højre side af motor', false, true).'
 En bruger skriver at gevindet på bundproppen hvor der står GY6 i er 29,6 mm i diameter og 1,5 mm i gevindstigning.
-'.visbilled('1', 'billed3742.jpg', '', false, true).'
-'.visbilled('1', 'billed3739.jpg', '', false, true).'
+'.visbilled('1', 'billed3742.jpg', 'motorolie drænbolt med si taget ud ved højre side af motor', false, true).'
+'.visbilled('1', 'billed3739.jpg', 'hullet i bunden af motoren hvor drænbolten og sien sad', false, true).'
 '.visbilled('1', 'billed3738.jpg', 'motorblokdel med oliepind og bundskrue', false, true).'
 Efter sien suges olien videre til oliepumpen hvorefter den fordeler sig ud til både det højre krumtapkugleleje og op til cylinderen.
 '.visbilled('1', 'billed1474.jpg', 'motorblok og cylinder olie passage', false, true).'

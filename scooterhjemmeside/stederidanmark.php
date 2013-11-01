@@ -1,14 +1,14 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_stederidanmark.png';
+$setup['nogetikon']               = 'ikoner/ikon_stederidanmark2.png';
 
-$title = "steder i danmark";
-$overskrift = "steder i danmark";
-$metadescription = "kort som viser diverse scooterbutikker, værksteder og forhandlere i danmark hvor man kan købe scootere eller ting til scootere";
+$title = "danmarkskort med forhandlere af scootere og reservedele";
+$overskrift = "danmarkskort med forhandlere af scootere og reservedele";
+$metadescription = "kort som viser diverse scooterbutikker, værksteder og forhandlere i danmark hvor man kan købe scootere og knallerter eller dele og udstyr til dem";
 
 /*
 
@@ -85,8 +85,7 @@ var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
       //map.mapTypes.set(\'map_style\', styledMap);
       //map.setMapTypeId(\'map_style\');
 
-      //kmlurl = "http://scootergrisen.dk/scooterhjemmeside/kml/26012012.kml";
-      kmlurl = "http://scootergrisen.dk/scooterhjemmeside/kml/1.php";
+      kmlurl = "http://scootergrisen.dk/scooterhjemmeside/kml/kml.php";
 
       kmlurl += "?rand=" + (new Date()).valueOf(); // tilføj noget i URLen så google maps ikke cacher kml filen
       ctaLayer = new google.maps.KmlLayer(
@@ -191,7 +190,8 @@ if ($db->connect_errno > 0) {
 
    if ($tableindhold != '') {
 
-      $oversigtindhold .= '<table class="tablesorter">';
+      $oversigtindhold .= '<div style="overflow-x: auto;">';
+      $oversigtindhold .= '<table class="tableholder fontsize_small tablesorter">';
 
       $oversigtindhold .= '<thead>';
       $oversigtindhold .= '<tr>';
@@ -210,17 +210,11 @@ if ($db->connect_errno > 0) {
       $oversigtindhold .= '</tbody>';
 
       $oversigtindhold .= '</table>';
+      $oversigtindhold .= '</div>';
 
    } else {
 
-      $oversigtindhold .= '<div class="ratingoversigtingendata">';
-      $oversigtindhold .= '<h1>Ingen data at vise</h1>';
-      $oversigtindhold .= '<h2>Her er nogen misser i stedet for</h2>';
-      $oversigtindhold .= '<img src="http://placekitten.com/180/160" alt="Miau 1" width="180" height="160">';
-      $oversigtindhold .= '<img src="http://placekitten.com/181/160" alt="Miau 2" width="181" height="160">';
-      $oversigtindhold .= '<img src="http://placekitten.com/182/160" alt="Miau 3" width="182" height="160">';
-      $oversigtindhold .= '<img src="http://placekitten.com/183/160" alt="Miau 4" width="183" height="160">';
-      $oversigtindhold .= '</div>';
+      $oversigtindhold .= nogenmisser();
 
    }
 

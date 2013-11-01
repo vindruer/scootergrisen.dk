@@ -2,9 +2,9 @@
 
 // eksempel : visbilled.php?scooterhjemmeside/billeder/billed1234.jpg
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "billed visning";
 $overskrift = "";

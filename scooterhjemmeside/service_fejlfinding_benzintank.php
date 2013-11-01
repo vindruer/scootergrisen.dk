@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "Benzintank - Fejlfinding";
 $overskrift = "Benzintank - Fejlfinding";
-$metadescription = "find og ret fejl på scooterens benzintank, automatisk benzinhane, benzinmåler, benzindæksel";
+$metadescription = "find og ret fejl på scooterens/knallertens benzintank, automatisk benzinhane, benzinmåler, benzindæksel";
 
 $databasecenter = array(
 

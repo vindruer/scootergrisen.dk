@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+>
+
+<url>
+   <loc>http://scootergrisen.dk/scooterhjemmeside/specielt_3hjuletscootere.php</loc>
+   <video:video>
+      <video:thumbnail_loc>http://scootergrisen.dk/scooterhjemmeside/billeder/posters/pgotr3pamesse.png</video:thumbnail_loc>
+      <video:title>PGO TR-3 invalideknallert på messe med C. Reinhardt (wmv format)</video:title>
+      <video:description>PGO TR-3 invalideknallert på messe med C. Reinhardt (wmv format) (vises i HTML 5 &lt;video&gt;-afspiller)</video:description>
+      <video:content_loc>http://scootergrisen.dk/scooterhjemmeside/videoer/pgotr3pamesse.wmv</video:content_loc>
+      <video:duration>302</video:duration>
+   </video:video>
+   <video:video>
+      <video:thumbnail_loc>http://scootergrisen.dk/scooterhjemmeside/billeder/posters/pgotr3pamesse.png</video:thumbnail_loc>
+      <video:title>PGO TR-3 invalideknallert på messe med C. Reinhardt (ogv format)</video:title>
+      <video:description>PGO TR-3 invalideknallert på messe med C. Reinhardt (ogv format) (vises i HTML 5 &lt;video&gt;-afspiller)</video:description>
+      <video:content_loc>http://scootergrisen.dk/scooterhjemmeside/videoer/pgotr3pamesse.ogv</video:content_loc>
+      <video:duration>302</video:duration>
+   </video:video>
+   <video:video>
+      <video:thumbnail_loc>http://scootergrisen.dk/scooterhjemmeside/billeder/posters/pgotr3pamesse.png</video:thumbnail_loc>
+      <video:title>PGO TR-3 invalideknallert på messe med C. Reinhardt (mp4 format)</video:title>
+      <video:description>PGO TR-3 invalideknallert på messe med C. Reinhardt (mp4 format) (vises i HTML 5 &lt;video&gt;-afspiller)</video:description>
+      <video:content_loc>http://scootergrisen.dk/scooterhjemmeside/videoer/pgotr3pamesse.mp4</video:content_loc>
+      <video:duration>302</video:duration>
+   </video:video>
+   <video:video>
+      <video:thumbnail_loc>http://scootergrisen.dk/scooterhjemmeside/billeder/posters/pgotr3pamesse.png</video:thumbnail_loc>
+      <video:title>PGO TR-3 invalideknallert på messe med C. Reinhardt (webm format)</video:title>
+      <video:description>PGO TR-3 invalideknallert på messe med C. Reinhardt (webm format) (vises i HTML 5 &lt;video&gt;-afspiller)</video:description>
+      <video:content_loc>http://scootergrisen.dk/scooterhjemmeside/videoer/pgotr3pamesse.webm</video:content_loc>
+      <video:duration>302</video:duration>
+   </video:video>
+</url>
+
+<url>
+   <loc>
+      http://scootergrisen.dk/scooterhjemmeside/karburator.php
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/YnzzUOcXqLY/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         CV carburetor disassembly
+      </video:title>
+      <video:description>
+         Shows a CV carburetor being disassembled. The carburetor is from a Kymco Super 8
+         scooter with a 4 stroke 50 cc engine. I have disassembled and cleaned the ca...
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/YnzzUOcXqLY?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=YnzzUOcXqLY&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         589
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<url>
+   <loc>
+      http://scootergrisen.dk/scooterhjemmeside/transmission_forresteremskiver.php
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/zYCasW5pY24/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Remove variatornut without special tool on Kymco Super 8
+      </video:title>
+      <video:description>
+         A small wrench fits right between the crankcase and teeth on the pulley plate in
+         order to get the variatornut off and on without any special tool. Some peopl...
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/zYCasW5pY24?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=zYCasW5pY24&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         80
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<url>
+   <loc>
+      http://scootergrisen.dk/scooterhjemmeside/service_elektrisk.php
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/bJVqdOsVHig/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Activating a maintenance free lead acid battery
+      </video:title>
+      <video:description>
+         Battery model : YTX7A-BS Battery type : Sealed VRLA Volts : 12 Cells : 6 Amount
+         of acid : 0,33 liters Voltage 20 minutter after filling acid : 12,55 Voltage ...
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/bJVqdOsVHig?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=bJVqdOsVHig&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         471
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<url>
+   <loc>
+      http://scootergrisen.dk/uv/222/derestrict-cdi-unit-on-kymco-super-8-4-stroke-50-cc-scooter
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/fDGauzkqaDA/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Derestrict CDI unit on Kymco Super 8 (4 stroke 50 cc) scooter
+      </video:title>
+      <video:description>
+         Shows how to derestrict the CDI unit så the scooter how run higher RPM (higher top
+         speed) and also have better acceleration. Note : Before you derestrict the...
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/fDGauzkqaDA?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=fDGauzkqaDA&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         133
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<url>
+   <loc>
+      http://scootergrisen.dk/scooterhjemmeside/service_tendror.php
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/0SEcgCycJDc/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Change sparkplug on Kymco Fever ZX
+      </video:title>
+      <video:description>
+         Video made by Anders Bruun Nørring (which is not me the uploader). http://scootergrisen.dk/
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/0SEcgCycJDc?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=0SEcgCycJDc&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         263
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<url>
+   <loc>
+      http://scootergrisen.dk/scooterhjemmeside/transmission_variator.php
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/-YLd8LWvqPA/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Variator i action on a Kymco Super 8
+      </video:title>
+      <video:description>
+         My belt is worn so i think thats why it dossent go all the way on the front pulleys.
+         Also there are alot of vibrations. Pictures : http://scootergrisen.dk/sc...
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/-YLd8LWvqPA?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=-YLd8LWvqPA&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         73
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<!--url>
+   <loc>
+      Enter the page URL your video is embedded on here
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/l5yz7xmJ03U/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Anti close pass device
+      </video:title>
+      <video:description>
+         On some roads car drivers and other vehicles driver quite close when overtaking
+         me. So I'm trying to figure out some device so i can avoid these close passes.
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/l5yz7xmJ03U?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=l5yz7xmJ03U&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         142
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url-->
+<url>
+   <loc>
+      http://scootergrisen.dk/scooterhjemmeside/benzin.php
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/_Oc0sIkZSEA/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Refueling scooter at gas station
+      </video:title>
+      <video:description>
+         50 DKKroner got me 4.15 liter 92 octane gasoline. When refueling twist the pistol
+         horizontally and hold it like that until its over the fueltank opening to a...
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/_Oc0sIkZSEA?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=_Oc0sIkZSEA&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         133
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<!--url>
+   <loc>
+      Enter the page URL your video is embedded on here
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/s6kJv1PEDI0/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Kamera i styrthjelm 3 (inden i københavn)
+      </video:title>
+      <video:description>
+         Tur på scooter i københavn ved istedgade, hovedbanegården, rådhuset, tivoli, vesterbrogade
+         Forum - Kamera i styrthjelm : http://scootergrisen.dk/forum/viewto...
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/s6kJv1PEDI0?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=s6kJv1PEDI0&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         1563
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url-->
+<url>
+   <loc>
+      http://scootergrisen.dk/scooterhjemmeside/service_bremser.php
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/eys5oerqkEg/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Change brakefluid on scooter
+      </video:title>
+      <video:description>
+         Shows how to change the brakefluid on a scooter. Pictures : http://scootergrisen.dk/scooterhjemmeside/service_bremser.php
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/eys5oerqkEg?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=eys5oerqkEg&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         240
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<!--url>
+   <loc>
+      Enter the page URL your video is embedded on here
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/uZNytkDxE0k/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Kamera i styrthjelm 2 (test)
+      </video:title>
+      <video:description>
+         Test video hvor jeg har sat mit kamera i hjelmen også for at se hvor godt det blev
+         og høre om lyden er god. Hvis du har nogen gode ideer til hvad jeg kan lav...
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/uZNytkDxE0k?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=uZNytkDxE0k&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         985
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url-->
+<url>
+   <loc>
+      http://scootergrisen.dk/scooterhjemmeside/speedometer.php
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/3zj0UjubvZY/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Speedometer driven by powertool
+      </video:title>
+      <video:description>
+         This is a speedometer from a Kymco super 8 scooter (moped, gas scooter). Pictures
+         : http://scootergrisen.dk/scooterhjemmeside/speedometer.php
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/3zj0UjubvZY?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=3zj0UjubvZY&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         75
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<url>
+   <loc>
+      http://scootergrisen.dk/scooterhjemmeside/smorelse.php
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/EZod3L7LRTg/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Gasoline, ice and anti freeze in bottle
+      </video:title>
+      <video:description>
+         petrol (gasoline) on top of the bottle and mostly water with a little bit of anti-freeze
+         liquid in it. The water is frozen in the bottom so imagen this happe...
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/EZod3L7LRTg?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=EZod3L7LRTg&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         71
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<url>
+   <loc>
+      http://scootergrisen.dk/scooterhjemmeside/service_tendror.php
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/JlW2zvkyU00/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Remove and clean sparkplug on 4 stroke 50 cc scooter
+      </video:title>
+      <video:description>
+         Removal of the spark plug on Kymco Super 8, 4 stroke, 50cc and cleaning with
+         wirebrush and installation.
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/JlW2zvkyU00?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=JlW2zvkyU00&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         124
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<url>
+   <loc>
+      http://scootergrisen.dk/scooterhjemmeside/smorelse.php
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/jYPTZCEJ718/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Brakefluid and water
+      </video:title>
+      <video:description>
+         Here i have water in the cup and then i pore brakefluid ind the cup to se how it
+         mixes. As you can se water and brakefluid i fully mixable meaning that when ...
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/jYPTZCEJ718?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=jYPTZCEJ718&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         56
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<url>
+   <loc>
+      http://scootergrisen.dk/scooterhjemmeside/benzintank.php
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/qSyCjcKTyBM/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Fuel tank float test
+      </video:title>
+      <video:description>
+         Shows how a fuel tank float in a Kymco Super 8 scooter works. The float (black round
+         thing) floats on top of the fuel in the fuel tank. As the fuel is used t...
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/qSyCjcKTyBM?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=qSyCjcKTyBM&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         79
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<!--url>
+   <loc>
+      Enter the page URL your video is embedded on here
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/MmwDS4foJRc/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Cycling in Fakse Ladeplads
+      </video:title>
+      <video:description>
+         No i didn't get a electric scooter. It's me riding a bike. Weee it's fun and quiet,
+         but my ass hurts.
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/MmwDS4foJRc?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=MmwDS4foJRc&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         349
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url-->
+<url>
+   <loc>
+      http://scootergrisen.dk/scooterhjemmeside/malossimultivar.php
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/wv_RCsz-tlw/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Installing Malossi Multivar 5113790 on Kymco Super 8
+      </video:title>
+      <video:description>
+         Here i install a Malossi multivar 5113790 kit on my Kymco Super 8 (50 ccm 4 stroke).
+         Pictures : http://scootergrisen.dk/scooterhjemmeside/malossimultivar.php
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/wv_RCsz-tlw?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=wv_RCsz-tlw&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         2559
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<url>
+   <loc>
+      http://scootergrisen.dk/uv/196/kamera-i-styrthjelm-1-test
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/XdX_9HGpzrM/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Kamera i styrthjelm 1 (test)
+      </video:title>
+      <video:description>
+         Dette er den første video hvor jeg har monteret mit kamera i min styrthjelm. Next
+         time maby i talk in english i dont know. Forum - Kamera i styrthjelm : http...
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/XdX_9HGpzrM?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=XdX_9HGpzrM&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         729
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<!--url>
+   <loc>
+      Enter the page URL your video is embedded on here
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/0bIWzL5050g/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Lighthouse (Stevns fyr)
+      </video:title>
+      <video:description>
+         Lighthouse located in denmark. Area was used in cold war and had HAWK missiles.
+         Old danish video about HAWK system : http://www.luftvet.dk/images/video/hawk/...
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/0bIWzL5050g?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=0bIWzL5050g&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         576
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url-->
+<url>
+   <loc>
+      http://scootergrisen.dk/uv/225/driving-around-tappernoje-city-on-scooter-np-motor
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/IWEL4t89Lz8/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Driving around Tappernøje city on scooter + NP Motor
+      </video:title>
+      <video:description>
+         Going no where is Tappernøje city and looking for NP Motor (They got scooters).
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/IWEL4t89Lz8?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=IWEL4t89Lz8&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         571
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<url>
+   <loc>
+      http://scootergrisen.dk/scooterhjemmeside/service_fejlfinding_benzintank.php
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/wQ6p3rRVqMo/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Fuel flow test on Kymco Super 8
+      </video:title>
+      <video:description>
+         I remove fuel hose from carburetor. Then use electric starter with sparkplugcap
+         out = slow flow of fuel. Then use electric starter with sparkplugcap in and e...
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/wQ6p3rRVqMo?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=wQ6p3rRVqMo&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         54
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<url>
+   <loc>
+      http://scootergrisen.dk/scooterhjemmeside/udstodning.php
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/IjjDsibPff8/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Change exhaust gasket on Kymco Fever ZX
+      </video:title>
+      <video:description>
+         Video is made by Anders Bruun Nørring (which is not me the uploader). http://scootergrisen.dk/
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/IjjDsibPff8?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=IjjDsibPff8&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         507
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+<url>
+   <loc>
+      http://scootergrisen.dk/uv/230/driving-around-store-heddinge-city-on-scooter
+   </loc>
+   <video:video>
+      <video:thumbnail_loc>
+         http://i.ytimg.com/vi/_THo8jWo03w/0.jpg
+      </video:thumbnail_loc>
+      <video:title>
+         Driving around Store heddinge city on scooter
+      </video:title>
+      <video:description>
+         Just me driving around with a camera on my helmet.
+      </video:description>
+      <video:content_loc>
+         http://www.youtube.com/v/_THo8jWo03w?version=3&amp;f=videos&amp;app=youtube_gdata
+      </video:content_loc>
+      <video:player_loc allow_embed="yes">
+         http://www.youtube.com/watch?v=_THo8jWo03w&amp;feature=youtube_gdata_player
+      </video:player_loc>
+      <video:duration>
+         415
+      </video:duration>
+      <video:category>
+         Autos
+      </video:category>
+   </video:video>
+</url>
+
+</urlset>

@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "Battery Management System - Elektrisk scooter";
 $overskrift = "Battery Management System - Elektrisk scooter";
@@ -20,8 +20,7 @@ BMS er elektronik som overvåger opladningen/afladningen af batterierne.
 BMS findes på nogle elektriske scootere men ikke alle.
 
 '.afsnit('BMS kan stå for følgende opgaver', '
-'
-.listemedgrafik(array(
+'.listemedgrafik(array(
     'Opladning og afladning.'
    ,'Kontroller om der aflades/oplades med for mange ampere.'
    ,'Temperaturmåling af batterierne. Kan stoppe opladningen fra hvis temperaturen bliver for høj.'

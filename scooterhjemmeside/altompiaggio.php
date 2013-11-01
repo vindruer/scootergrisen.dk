@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "piaggio 50 cm³ scootere";
+$title = "piaggio scootere med 50 cm³ motor";
 $overskrift = "piaggio";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
@@ -15,7 +15,7 @@ $databasecenter = array(
 'piaggioape' => array(
 
      'specielt'            => array(
-       'besked'            => ens('besked', 'Fra Januar 2012 kan denne model også fås som lille knallert (det vil sige enten 25 eller 30 km/t).', 'Som lille knallert skal den ikke have nummerplade da den har 3 hjul og bruges som invalideknallert så man vil nok ikke se dem med gul nummerplade', ''.kontaktmig(1).' gerne hvis du kan fortælle hvordan det er at køre på cykelstier med denne model eller har billeder af det.', 'dataen er lidt rodet for denne model da der er mange udgaver og størrelser og sådan. '.kontaktmig(1).' gerne hvis du kan hjælpe med at gøre dataen mere præcis.<br><br>Her er nogen links til sider om Ape : '.ahref('http://trehjul.dk/', 'trehjul.dk').', '.ahref('http://ape50.dk/', 'ape50.dk').'<br><br>I følge '.ahref('http://buchberg-mc.dk/butikken/produkter/piaggio-ape', 'buchberg-mc.dk').' findes Ape ikke som 30 km/t (men som 25 km/t)<br>'.ahref('http://ape50.dk/index.php/ofte-stillede-sporgsmal.html', 'Ofte stillede spørgsmål').'')
+       'besked'            => ens('besked', 'Fra Januar 2012 fås denne model også som lille knallert (25 km/t, ikke 30 km/t).', 'Som lille knallert skal den ikke have nummerplade da den har 3 hjul og derfor betegnes som invalideknallert', '', 'dataen er lidt rodet for denne model da der er mange undermodeller.<br><br>Links til hjemmesider om Piaggio Ape : '.ahref('http://trehjul.dk/', 'trehjul.dk').', '.ahref('http://ape50.dk/', 'ape50.dk').', '.ahref('http://buchberg-mc.dk/butikken/produkter/piaggio-ape', 'buchberg-mc.dk').'')
 
    ),'generelt'            => array(
        'model'             => ens('model', 'piaggio ape', '', '', '')
@@ -135,7 +135,7 @@ cirka 20 km/l (i følge lidt ældre reklameblad : "APE - den perfekte EU TRANSPO
    ),'transmission'        => array(
        'transmissiontype'  => ens('transmissiontype', '', '', '', '')
       ,'kobling'           => ens('kobling', '', '', '', '')
-      ,'antalgear'         => ens('antalgear', '4', 'og baggear', '', '') . '<br>' . ens('antalgear', '3', 'og baggear', '', '(på 25/30 km/t modellen)')
+      ,'antalgear'         => ens('antalgear', '4', 'og bakgear', '', '') . '<br>' . ens('antalgear', '3', 'og bakgear', '', '(på 25 km/t model)')
       ,'gearratio'         => ens('gearratio', '', '', '', '')
       ,'tandhjulfor'       => ens('tandhjulfor', '', '', '', '')
       ,'tandhjulbag'       => ens('tandhjulbag', '', '', '', '')
@@ -1169,15 +1169,15 @@ Udvendige lad/kasselængde :<br>
 ),'piaggiozip2t' => array(
 
      'specielt'            => array(
-       'besked'            => ens('besked', 'dette er data fra ældre zip (måske lidt før 1997) fra 45scooter.dk', '', '', '')
+       'besked'            => ens('besked', 'noget data er fra ældre zip (måske lidt før 1997) fra 45scooter.dk', '', '', '')
 
    ),'generelt'            => array(
        'model'             => ens('model', 'piaggio zip 2T', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
-      ,'pris'              => ens('pris', '13995', '', '', '')
-      ,'hastighed'         => ens('hastighed', '45', '', '', '')
+      ,'pris'              => ens('pris', '9995', '13995', '', '')
+      ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -1211,20 +1211,20 @@ Udvendige lad/kasselængde :<br>
 
    ),'brændstof'           => array(
        'benzin'            => ens('benzin', '', '', '', '')
-      ,'benzintank'        => ens('benzintank', '4', '', '', '')
+      ,'benzintank'        => ens('benzintank', '4', '', '', '(ældre zip)') . ens('benzintank', '7,5', '', '', '(ny zip)')
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
        'fælgfor'           => ens('fælg', '', '10', '', '')
       ,'fælgbag'           => ens('fælg', '', '10', '', '')
-      ,'dækfor'            => ens('dæk1', '90', '90', '10', 'slangefri')
-      ,'dækbag'            => ens('dæk1', '90', '90', '10', 'slangefri')
+      ,'dækfor'            => ens('dæk1', '90', '90', '10', 'slangefri (ældre zip)') . ens('dæk1', '100', '80', '10', ' (ny zip)')
+      ,'dækbag'            => ens('dæk1', '90', '90', '10', 'slangefri (ældre zip)') . ens('dæk1', '120', '70', '10', ' (ny zip)')
       ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
       ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
       ,'affjedringfor'     => ens('affjedringfor', 'teleskopgaffel', '', '', '')
       ,'affjedringbag'     => ens('affjedringbag', '', '', '', '')
-      ,'bremserfor'        => ens('bremser', 'tromle', '104', '', '')
-      ,'bremserbag'        => ens('bremser', 'tromle', '100', '', '')
+      ,'bremserfor'        => ens('bremser', 'tromle', '104', '', '(ældre zip)') . ens('bremser', 'skive', '', '', '(ny zip)')
+      ,'bremserbag'        => ens('bremser', 'tromle', '100', '', '(ældre zip)')
       ,'eger'              => ens('eger', '', '', '')
       ,'castervinkel'      => ens('castervinkel', '', '', '')
       ,'efterløb'          => ens('efterløb', '', '', '')
@@ -1461,13 +1461,13 @@ $databaseright = array(
    ,'ape RST eldiagram 2012'              => 'piaggio_ape_rst_eldiagram.pdf'
    ,'Vespa Ciao (P PX PV PXV) Bravo (P PV) SI (SIM SIV) servicemanual'                => 'vespa_ciao_bravo_si_servicemanual.pdf'
    ,'Vespa SI reservedele'                => 'vespa_si_reservedele.pdf'
-   ,'fly 4T servicemanual'                => 'piaggio_fly_servicemanual.pdf'
-   ,'fly 4T 150 cm³ servicemanual'        => 'piaggio_fly_servicemanual_150ccm.pdf'
-   ,'fly 4T reservedele'                  => 'piaggio_fly_reservedele.pdf'
+   ,'fly 4T servicemanual'                => 'piaggio_fly_4t_servicemanual.pdf'
+   ,'fly 4T 150 cm³ servicemanual'        => 'piaggio_fly_4t_150ccm_servicemanual.pdf'
+   ,'fly 4T reservedele'                  => 'piaggio_fly_4t_reservedele.pdf'
    ,'fly zip LX liberty 4T eldiagram'     => 'piaggio_zip_fly_lx_liberty_4t_eldiagram.jpg'
-   ,'liberty brugermanual'                => 'piaggio_liberty_brugermanual.pdf'
-   ,'zip 4T indsugning'                   => 'piaggio_zip_indsugning.gif'
-   ,'zip 4T CDI begrænsning'              => 'piaggio_zip_cdibegrensning.jpg'
+   ,'liberty 4T brugermanual'             => 'piaggio_liberty_4t_brugermanual.pdf'
+   ,'zip 4T indsugning'                   => 'piaggio_zip_4t_indsugning.gif'
+   ,'zip 4T CDI begrænsning'              => 'piaggio_zip_4t_cdibegrensning.jpg'
    ,'zip 4T reservedele'                  => 'piaggio_zip_4t_reservedele.pdf'
    ,'piaggio catalogue of spare parts'    => 'piaggio_catalogue_of_spare_parts.zip'
    ,'piaggio 50cc four stroke restriction'=> 'piaggio_50cc_four_stroke_restriction.pdf'
@@ -1557,7 +1557,7 @@ $databaseright = array(
    ,'Zip 4T C25 45 km/t E15936 (e4*2002/24*0551)'       => 'typegodkendelser/Piaggio%20ZIP%204T%20%28E15936%29%20udstedt%2013-11-2006.pdf'
    ,'Zip 4T C25 (LBM) 30 km/t E17085 (e4*2002/24*0551)'       => 'typegodkendelser/Piaggio%20ZIP%204T%20%28E17085%29%20udstedt%2009-04-2008.pdf'
    ,'Zip 4T C25 (LBM) 30 km/t E17085 (e4*2002/24*0551)'       => 'typegodkendelser/Piaggio%20ZIP%204T%20%28E17085%29%20udstedt%2009-04-2008_2.pdf'
-   ,'Zip 4T C25 Chongquin Zongshen C25CM km/t E14739 (e4*2002/24*0551)'       => 'typegodkendelser/Piaggio%20Zip%2050%20%28E14739%29%20udstedt%2019-12-2005.pdf'
+   ,'Zip 4T C25 Chongquin Zongshen C25CM 45 km/t E14739 (e4*2002/24*0551)'       => 'typegodkendelser/Piaggio%20Zip%2050%20%28E14739%29%20udstedt%2019-12-2005.pdf'
    ,'New Zip C25 2T C251M / 4T C252M / 2T (euro 2) C259M 45 km/t E10648 (e3*92/61*0020)'       => 'typegodkendelser/Piaggio%20New%20Zip%20%28E10648%29%20udstedt%2019-06-2000.pdf'
 
    //tom   ,'km/t E ()'       => 'typegodkendelser/Piaggio%20NRG%20%28A9207%29%20udstedt%2015-06-1998.pdf'

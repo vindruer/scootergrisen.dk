@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "motorblok - 4 takt motor";
 $overskrift = "motorblok - 4 takt motor";
-$metadescription = "noget om motorblok delene på en 4 takt 50 ccm scooter / knallert";
+$metadescription = "noget om motorblok delene på en 4 takt 50 cm³ scooter / knallert";
 
 $databasecenter = array(
 

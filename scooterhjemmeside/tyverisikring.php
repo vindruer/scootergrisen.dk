@@ -1,11 +1,11 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "tyverisikring (låse og alarmer)";
-$overskrift = "tyverisikring (låse og alarmer)";
+$title = "tyverisikring (låse og alarmer) til scootere og knallerter";
+$overskrift = "tyverisikring (låse og alarmer) til scootere og knallerter";
 $metadescription = "lær hvordan du kan sikre din scooter/knallert mod tyveri med låser, alarmer og GPS sporing";
 
 $GLOBALS['setup']['head'] = '
@@ -50,8 +50,7 @@ Her kan du læse hvordan du sikre din scooter mod tyveri.
 ,'
 råd
 ' => '
-'
-.listemedgrafik(array(
+'.listemedgrafik(array(
     'Brug låsene. Det hjælper ikke at låsene ligger i hjelmrummet når tyven kommer forbi og stjæler scooteren.'
    ,'Tag scooteren ind om natten hvis du har mulighed for det.'
    ,'Lås baghjulet fast til for eksempel en lygtepæl, cykelstativ eller lignende. Det er bedst at låse baghjulet fast fordi det er letteste for tyven af afmontere forhjulet.'
@@ -380,20 +379,18 @@ smart kit 1011
 Set hos '.ahref('http://elektronik-lavpris.dk/product_info.php?products_id=13064', 'elektronik lavpris').'.
 Man skal selv samle og lode elektronikken og købe en boks og sirene til.
 '.visbilled('1', 'billed2409.jpg', 'smart-kit no 1011', false, true).'
-<!--Se også '.ahref('http://www.letsindig.be/geely/alarm/alarm.html').'-->
 '
 
 ,'
 honest
 ' => '
-Set hos '.ahref('http://www.dba.dk/', 'den blå avis').' og '.ahref('http://www.speedline.dk/da/scooter/alarm-honest-traadloes-dc/', 'speedline.dk').'.
+Set hos '.ahref('http://www.dba.dk/', 'den blå avis').' og '.ahref('http://www.speedline.dk/da/scooter/alarm-honest-traadloes-s-dc/', 'speedline.dk').'.
 Både alarmen og fjernbetjeningen er trådløse. Der er ingen ledninger som skal monteres.
 '.visbilled('1', 'billed2402.jpg', 'nemalarm', false, true).'
 Der er en tænd og sluk knap på siden af alarmen.
 '.visbilled('1', 'billed2403.jpg', 'nemalarm', false, true).'
 Alarmen bruger et 9 volt batteri.
 '.visbilled('1', 'billed2404.jpg', 'nemalarm', false, true).'
-'.visflash('0', 'http://www.youtube.com/watch?v=zKLTp6-IYG4', 'sådan bruger du nemalarm').'
 '.visflash('0', 'http://www.youtube.com/watch?v=zgS4l5yI5Is', 'honest alarm demonstration').'
 '
 
@@ -422,7 +419,7 @@ Hvis scooterens ledningsnet ikke har et forberedt stik til alarmen så bruges de
 ,'
 alarm el diagrammer
 ' => '
-Det kan godt være jeg er idiot til at læse el diagrammer til alarmer men jeg syns godt nok ikke de er lette at forstå.
+Det kan godt være jeg er idiot til at læse el diagrammer til alarmer men jeg syntes godt nok ikke de er lette at forstå.
 Det er ikke altid der er gjort så meget ud af at oversætte til de rigtige ord.
 
 Her er nogen af de alarm el diagrammer jeg har kunne finde.

@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "benzintank";
 $overskrift = "benzintank";
-$metadescription = "forklaring af benzintanken på en scooter";
+$metadescription = "forklaring af benzintanken på en scooter, benzindækslet med hul i, benzinviseren på instrumentpanelet, benzinmåler i benzintanken med svømmer, benzinfilter, benzinhane som åbner for benzinen og benzinpumpe";
 
 $databasecenter = array(
 

@@ -1,36 +1,36 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "fartbegrænser (politiværn)";
-$overskrift = "fartbegrænser (politiværn)";
-$metadescription = "har forsøger jeg og samle info om fartbegrænser til scootere/knallerter som med et tryk på en knap kan ændre topfarten";
+$title = "fartbegrænser (politiværn) til scootere og knallerter";
+$overskrift = "fartbegrænser (politiværn) til scootere og knallerter";
+$metadescription = "læs om fartbegrænsere der ved tryk på en knap kan nedsætte topfarten så scooteren/knallerten ikke kan køre så hurtigt";
 
 $databasecenter = array(
 
 '
-fartbegrænser
+introduktion
 ' => '
 Fartbegrænser kaldes også politiværn.
 
-Der har været nogen brugere som har efterspurgt info om fartbegrænser.
+Der har været nogen brugere som har efterspurgt info om fartbegrænser så derfor har jeg lavet denne side.
 
 En fartbegrænser er en boks som kan nedsætte scooterens topfart.
 Typisk med en knap så man kan slå fartbegrænseren til og fra.
 
-Der findes forskellige modeller.
+Der findes forskellige modeller men ikke så mange igen og de er lettere at finde til 2 takt motor end til 4 takt motor.
 '
 
 ,'
 fartbegrænser til 2 takt motor
 ' => '
-Her ses den fartbegrænser der bliver skrevet om og solgt mest på nettet.
+Her ses den fartbegrænser der bliver skrevet om og solgt flest steder på nettet.
 Navnet er ukendt.
 Den har en ON/OFF kontakt og to ledninger (rød og sort) som skal forbindelses til scooteren.
 Denne model dur på scootere med 2 takt motor som har ekstern pickup.
-'.visbilled('1', 'billed3775.jpg', 'fartbegrænser', false, true).'
+'.visbilled('1', 'billed3775.jpg', 'fartbegrænser til 2 takt motor', false, true).'
 
 '.afsnit('montering...','
 Sort ledning skal have stelforbindelse.
@@ -51,10 +51,10 @@ Den anden cirkel er til fin justering.
 '.afsnit('brug...','
 ON/OFF kontakten bruges til at slå fartbegrænsningen til og fra.
 
-OFF : Fartbegrænser er slået fra. Normal ubegrænset topfart.
+OFF : Fartbegrænser er slået fra. Normal ubegrænset topfart som om fartbegrænseren ikke var monteret.
 ON : Fartbegrænser slået til. Topfarten er begrænset.
 ').'
-'.afsnit('udgaver...','
+'.afsnit('andre udgaver...','
 Fartbegrænser med 3 ledninger og magnet kontakt :
 
 Rød : 12 volt fra tændingslåsen
@@ -62,22 +62,24 @@ Sort : stelforbindelse
 Blå (eller grøn) : pickup
 
 Oversat fra tysk : Til alle køretøjer med ekstern pickup i tændingen.
+
+Her er en '.ahref('http://www.scootergalleri.dk/fotoalbum/diverse_scooter/50407-dobbelttjekning__af_fartbegraenser', 'anden ukendt fartbegrænser').'.
 ').'
 '.afsnit('monteringsvejledninger...','
-Her er links til nogen monteringsvejledninger.
-'.visbilled('1', 'billed3864.jpg', 'rev-limiter with switch', false, true).'
-'.visbilled('1', 'billed3865.jpg', 'Fine Adjustment For Small RPM-Terminator Mounting Instructions', false, true).'
-'.ahref('http://www.speedline.dk/images/vejledning/SW-1000055.jpg', 'monteringsvejledning').'
-'.ahref('http://www.scooter-center.com/medias/sys_master/8865914683422/Einbauanleitung%20%28SCK2000%29.pdf', 'Einbauanleitung (SCK2000).pdf').'
-'.ahref('http://www.scooter-center.com/medias/sys_master/8866165948446/Einbauanleitung%20%28SCK6000%29.pdf', 'Einbauanleitung (SCK6000).pdf').'
+Her er nogen monteringsvejledninger.
+'.visbilled('1', 'billed3864.jpg', 'fartbegrænser montering instruktion rev-limiter with switch fitting instruction', false, true).'
+'.visbilled('1', 'billed3865.jpg', 'fartbegrænser montering instruktion Fine Adjustment For Small RPM-Terminator Mounting Instructions', false, true).'
+'.ahref('http://www.speedline.dk/images/vejledning/SW-1000055.jpg', 'speedline.dk monteringsvejledning').'
+'.ahref('http://www.scooter-center.com/medias/sys_master/8865914683422/Einbauanleitung%20%28SCK2000%29.pdf', 'Einbauanleitung (SCK2000)').'
+'.ahref('http://www.scooter-center.com/medias/sys_master/8866165948446/Einbauanleitung%20%28SCK6000%29.pdf', 'Einbauanleitung (SCK6000)').'
 ').'
 '.afsnit('kan købes hos...','
-'.ahref('http://www.kgi.dk/product-1473.php', 'kgi.dk').' Set til 139,95 kroner ("Kan kun monteres på modeller med pickup ved svinghjulet")
-'.ahref('http://www.speedline.dk/da/scooter/fartbegraenser-s-sw-1000055/', 'speedline.dk').' Set til 139,95 kroner (har kun 1 juster cirkel) '.ahref('http://www.speedline.dk/images/vejledning/SW-1000055.jpg', 'monteringsvejledning').'
-'.ahref('http://www.msp-tuning.dk/pi/Motoforce_fartbegr%C3%A6nser_2731_.aspx', 'msp-tuning.dk').' Set til 189,- kroner
 '.ahref('http://www.scooter-dele.dk/piz.asp?ID=1952&aid=23844', 'scooter-dele.dk').' Set til 99,- kroner
 '.ahref('http://www.protunahandels.de/product.asp?c=314157754&n=19084216&pn=19084219', 'protunahandels.de').' Set til 99,- kroner ("Rød ledning skal på statoren.")
 '.ahref('http://www.scooterland.dk/default.asp?PageID=3&ProductCategoryID=2430,3,43,181&ProductID=5789&Mode=ShowProduct&HotPrice=', 'scooterland.dk').' Set til 129,- kroner
+'.ahref('http://www.kgi.dk/product-1473.php', 'kgi.dk').' Set til 139,95 kroner ("Kan kun monteres på modeller med pickup ved svinghjulet")
+'.ahref('http://www.speedline.dk/da/scooter/fartbegraenser-s-sw-1000055/', 'speedline.dk').' Set til 139,95 kroner (har kun 1 juster cirkel) '.ahref('http://www.speedline.dk/images/vejledning/SW-1000055.jpg', 'monteringsvejledning').'
+'.ahref('http://www.msp-tuning.dk/pi/Motoforce_fartbegr%C3%A6nser_2731_.aspx', 'msp-tuning.dk').' Set til 189,- kroner
 ').'
 '.afsnit('modeller som denne fartbegrænser skulle virke (eller ikke virke) på...','
 
@@ -478,14 +480,18 @@ Yamaha Why
 .visflash('0', 'http://www.scootergalleri.dk/video/guider/89845-politivaern', 'video - Politiværn', true)
 .visflash('0', 'http://www.scootergalleri.dk/video/guider/79500-hvordan_politi_vaern_skal_tilsluttes___', 'video - Hvordan Politi-værn skal tilsluttes... (blå/hvid (eller hvid/grøn) ledning på CPI)', true)
 .'
-
-'.ahref('http://www.scootergalleri.dk/fotoalbum/diverse_scooter/50407-dobbelttjekning__af_fartbegraenser', 'Anden fartbegrænser').'.
 '
 
 ,'
 fartbegrænser til 4 takt motor
 ' => '
-Fartbegrænser til nogle 4 takt motorer kan købes hos '.ahref('http://www.scooter-spare-parts.de/shop/Drehzahlbegrenzer:::1.html', 'scooter-spare-parts.de').'.
+Fartbegrænser til 4 takt (og 2 takt) motorer kan købes hos '.ahref('http://www.scooter-spare-parts.de/shop/Drehzahlbegrenzer:::1.html', 'scooter-spare-parts.de').'.
+
+'
+.visbilled('1', 'billed3774.jpg', 'speedotronic fartbegrænser', false, false)
+.visbilled('1', 'billed3866.jpg', 'speedotronic fartbegrænser Drehzahlbegrenzer Doublecheck mit Magnet-/Taster', false, false)
+.visbilled('1', 'billed3867.jpg', 'speedotronic fartbegrænser speedlimiter 4-Takt', false, false)
+.'
 
 '.afsnit('de har opdelt deres fartbegrænsere i 4 kategorier', '
 Standard (motor med karburator)
@@ -493,19 +499,14 @@ DITech/Purejet/TSDI (motor med indsprøjtning)
 Motor med pickup ved koblingsklokken
 Motor uden pickup ved koblingsklokken
 ').'
-'
-.visbilled('1', 'billed3774.jpg', 'fartbegrænser', false, false)
-.visbilled('1', 'billed3866.jpg', 'fartbegrænser speedotronic Drehzahlbegrenzer Doublecheck mit Magnet-/Taster', false, false)
-.visbilled('1', 'billed3867.jpg', 'fartbegrænser speedotronic speedlimiter 4-Takt', false, false)
-.'
 
-Nogen fås med magnet/knap. Noget de kalder doublecheck, triplecheck.
+Nogen af deres fartbegrænsere fås med magnet eller knap og noget de kalder doublecheck, triplecheck.
 
 Her er en manual jeg fik tilsendt af dem.
 '.visfil('1', 'scooterhjemmeside/download/speedotronic%20Drehzahlbegrenzer%20Doublecheck-Triplecheck%20Einbauanleitung.pdf', 'speedotronic Drehzahlbegrenzer Doublecheck-Triplecheck Einbauanleitung.pdf').'
 
 '.afsnit('kan købes hos...','
-'.ahref('http://www.scooter-spare-parts.de/shop/Drehzahlbegrenzer:::1.html', 'scooter-spare-parts.de').' set til 23,95 - 119,95 € (178 - 894 DK Kroner).
+'.ahref('http://www.scooter-spare-parts.de/shop/Drehzahlbegrenzer:::1.html', 'scooter-spare-parts.de').' set til 23,95 - 119,95 € (178 - 894 DK Kroner) afhængig af model.
 ').'
 
 '.
@@ -789,6 +790,7 @@ Znen:
    )
 )
 .'
+Her er en fartbegrænser til motorer med AC tænding kaldet '.ahref('http://www.daxshoppen.dk/fartbegr%C3%86nser_cdi_model_speedtracker-p-1564.html', 'speedtracker 400080P').'.
 '
 
 );

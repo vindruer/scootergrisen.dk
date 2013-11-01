@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "andre mærker 50 cm³ og elektriske scootere";
-$overskrift = "andre mærker";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$title = "andre knallerter og scootere med 50 cm³ og elektrisk motor";
+$overskrift = "andre";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_andre.png';
 
@@ -762,8 +762,8 @@ $databasecenter = array(
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '3,50 eller 2.15', '10', '', 'aluminium')
-      ,'fælgbag'           => ens('fælg', '3,50 eller 2.15', '10', '', 'aluminium')
+       'fælgfor'           => ens('fælg', '3.50 eller 2.15', '10', '', 'aluminium')
+      ,'fælgbag'           => ens('fælg', '3.50 eller 2.15', '10', '', 'aluminium')
       ,'dækfor'            => ens('dæk1', '3.00', '10', '', '')
       ,'dækbag'            => ens('dæk1', '3.00', '10', '', '')
       ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
@@ -1410,146 +1410,6 @@ $databasecenter = array(
       ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
       ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
-
-   )
-
-),'strangerxfight' => array(
-
-     'specielt'            => array(
-       'besked'            => ens('besked', 'måske samme som yiying sampra', '', '', '')
-
-   ),'generelt'            => array(
-       'model'             => ens('model', 'stranger x-fight', '', '', '')
-      ,'ogsåkaldet'        => ens('ogsåkaldet', 'yiying YY50QT', '', '', '')
-      ,'scootertype'       => ens('scootertype', '', '', '', '')
-      ,'varianter'         => ens('varianter', '', '', '', '')
-      ,'pris'              => ens('pris', '4995', '5995', '', '')
-      ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
-      ,'farver'            => ens('farver', 'sort-rød sort sølv blå', '', '', '')
-      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
-
-   ),'motor'               => array(
-       'motormodel'        => ens('motormodel', 'BZ139QMB', '', '', '')
-      ,'motortype'         => ens('motortype', '4 takt', '', '', '')
-      ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
-      ,'volume'            => ens('volume', '', '', '', '')
-      ,'køling'            => ens('køling', 'blæse', '', '', '')
-      ,'boring'            => ens('boring', '', '', '', '')
-      ,'slaglængde'        => ens('slaglængde', '', '', '', '')
-      ,'ventiler'          => ens('ventiler', '', '', '', '')
-      ,'ventiljustering'   => ens('ventiljustering', '', '', '', '')
-      ,'kompression'       => ens('kompression', '', '', '', '')
-      ,'tomgang'           => ens('tomgang', '', '', '', '')
-      ,'nomieffektogheste' => ens('nomieffektogheste', '', '', '', '')
-      ,'maxeffektogheste'  => ens('maxeffektogheste', '', '', '', '')
-      ,'moment'            => ens('moment', '', '', '', '')
-      ,'karburator'        => ens('karburator', '', '', '', '')
-      ,'brændstof indsp..' => ens('brændstof indsp..', '', '', '', '')
-      ,'smøring'           => ens('smøring', '', '', '', '')
-      ,'tændrør'           => ens('tændrør', '', '', '', '')
-
-   ),'dimensioner'         => array(
-       'længde'            => ens('længde', '', '', '', '')
-      ,'bredde'            => ens('bredde', '', '', '', '')
-      ,'højde'             => ens('højde', '', '', '', '')
-      ,'sædehøjde'         => ens('sædehøjde', '', '', '', '')
-      ,'frihøjde'          => ens('frihøjde', '', '', '', '')
-      ,'akselafstand'      => ens('akselafstand', '', '', '', '')
-
-   ),'brændstof'           => array(
-       'benzin'            => ens('benzin', '', '', '', '')
-      ,'benzintank'        => ens('benzintank', '', '', '', '')
-      ,'forbrug'           => ens('forbrug', '', '', '', '')
-
-   ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '', '', '', '')
-      ,'fælgbag'           => ens('fælg', '', '', '', '')
-      ,'dækfor'            => ens('dæk1', '', '', '', '')
-      ,'dækbag'            => ens('dæk1', '', '', '', '')
-      ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
-      ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
-      ,'affjedringfor'     => ens('affjedringfor', '', '', '', '')
-      ,'affjedringbag'     => ens('affjedringbag', '', '', '', '')
-      ,'bremserfor'        => ens('bremser', '', '', '', '')
-      ,'bremserbag'        => ens('bremser', '', '', '', '')
-      ,'eger'              => ens('eger', '', '', '')
-      ,'castervinkel'      => ens('castervinkel', '', '', '')
-      ,'efterløb'          => ens('efterløb', '', '', '')
-      ,'drejevinkel'       => ens('drejevinkel', '', '', '', '')
-      ,'venderadius'       => ens('venderadius', '', '', '', '')
-
-   ),'elektrisk'           => array(
-       'starterbatteri'    => ens('starterbatteri', '', '', '', '')
-      ,'batterispec1'      => ens('batterispec1', '', '', '', '')
-      ,'batterispec2'      => ens('batterispec2', '', '', '', '')
-      ,'batterivægt'       => ens('batterivægt', '', '', '', '')
-      ,'batterilevetid'    => ens('batterilevetid', '', '', '', '')
-      ,'generator'         => ens('generator', '', '', '', '')
-      ,'sikring'           => ens('sikring', '', '', '', '')
-      ,'tændingssystem'    => ens('tændingssystem', '', '', '', '')
-      ,'elstart'           => ens('elstart', '', '', '', '')
-      ,'kickstart'         => ens('kickstart', '', '', '', '')
-      ,'lysfor'            => ens('lys', '', '', '', '')
-      ,'lysbagbremse'      => ens('lys', '', '', '', '')
-      ,'lysbag'            => ens('lys', '', '', '', '')
-      ,'lysbremse'         => ens('lys', '', '', '', '')
-      ,'lyspositions'      => ens('lys', '', '', '', '')
-      ,'lysblink'          => ens('lys', '', '', '', '')
-      ,'lyskontrolblink'   => ens('lys', '', '', '', '')
-      ,'lyskontrollangt'   => ens('lys', '', '', '', '')
-      ,'lysnummerplade'    => ens('lys', '', '', '', '')
-      ,'lysinstrument'     => ens('lys', '', '', '', '')
-      ,'oplader'           => ens('oplader', '', '', '', '')
-      ,'ladetid'           => ens('ladetid', '', '', '', '')
-      ,'rækkevidde'        => ens('rækkevidde', '', '', '', '')
-      ,'controller'        => ens('controller', '', '', '', '')
-
-   ),'olie og væsker'      => array(
-       'motor'             => ens('olie', '', '', '', '')
-      ,'gear'              => ens('olie', '', '', '0,12', '')
-      ,'forgaffel'         => ens('olie', '', '', '', '')
-      ,'kølervæske'        => ens('kølervæske', '', '', '', '')
-
-   ),'transmission'        => array(
-       'transmissiontype'  => ens('transmissiontype', '', '', '', '')
-      ,'kobling'           => ens('kobling', '', '', '', '')
-      ,'antalgear'         => ens('antalgear', '', '', '', '')
-      ,'gearratio'         => ens('gearratio', '', '', '', '')
-      ,'tandhjulfor'       => ens('tandhjulfor', '', '', '', '')
-      ,'tandhjulbag'       => ens('tandhjulbag', '', '', '', '')
-      ,'reduktionsratio'   => ens('reduktionsratio', '', '', '', '')
-
-   ),'ekstra'              => array(
-       'stel'              => ens('stel', '', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'LD5GY0BCB8D (30 km/t)', 'LD5GY0BCB7B (30 km/t)', 'LD5TCBPA06F (stranger 45 km/t (måske uden x-fight))', 'LD5GY0BCB8D010 (ukendt yiying model) LD5GY0BCB7B010419 (E15916-01 VT6241)')
-      ,'udstødning'        => ens('udstødning', '', '', '', '')
-      ,'euroemission'      => ens('euroemission', '', '', '', '')
-      ,'vægttør'           => ens('vægttør', '', '', '', '')
-      ,'vægtkørerklar'     => ens('vægtkørerklar', '', '', '', '')
-      ,'vægttotal'         => ens('vægttotal', '', '', '', '')
-      ,'bæreevne'          => ens('bæreevne', '', '', '', '')
-      ,'luftfiltertype'    => ens('luftfiltertype', '', '', '', '')
-      ,'stigeevne'         => ens('stigeevne', '', '', '', '')
-      ,'medfølger'         => ens('medfølger', '', '', '', '')
-      ,'bremsevæske'       => ens('bremsevæske', '', '', '', '')
-      ,'støj'              => ens('støj', '', '', '', '')
-      ,'bagagevolume'      => ens('bagagevolume', '', '', '', '')
-      ,'bakgear'           => ens('bakgear', '', '', '', '')
-      ,'importør'          => ens('importør', '', '', '', '')
-      ,'producent'         => ens('producent', 'Benzhou', '', '', '')
-      ,'andet'             => ens('andet', '', '', '', '')
-
-   ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
-      ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
-      ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
-      ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
-      ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
-      ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
-      ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
-      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
-      ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
-      ,'begrænsandet'      => ens('begrænsandet', '', '', '', ''.visfil('1', 'scooterhjemmeside/download/stranger_xfight_begrensning.gif').'')
 
    )
 
@@ -2408,7 +2268,6 @@ $databaseright = array(
    ,'tisong TM-300 eldiagram'             => 'tisong_tm300_eldiagram.pdf'
    ,'tisong TM-300 COC'                   => 'tisong_tm300_coc.pdf'
    ,'superbike XT50QT-2 brugermanual'     => 'xt50qt2_brugermanual.pdf'
-   ,'x-fight begrænsning'                 => 'stranger_xfight_begrensning.gif'
 
 ),'typegodkendelser' => array(
     'benda scoot 25 km/t E17548 (e4*2002/24*1771)' => 'typegodkendelser/Benda%20Scoot%20%28E17548%29%20udstedt%2005-02-2009.pdf'
@@ -2422,61 +2281,236 @@ $databaseright = array(
    ,'city scooter freak BT49QT-12-d45 45 km/t E16888 (e4*2002/24*1397)'    => 'typegodkendelser/Baotian%20BT49QT-12-d45%20%28E16888%29%20udstedt%2025-01-2008.pdf'
    ,'listo 44 km/t E13278 (e4*92/61*0194)' => 'typegodkendelser/Zhongyu%20ZY50QT-7%20%28E13278%29%20udstedt%2009-03-2004.pdf'
    ,'pexma 30 km/t E15583 (e11*2002/24*0187)'      => 'typegodkendelser/Pexma%20PM50QT-4%20%28E15583%29%20udstedt%2027-06-2006.pdf'
+   ,'Kangda Zongsshen KD50QT-4 30 km/t E15387 (e11*2002/24*0187)'            => 'typegodkendelser/Kangda%20Zongsshen%20%28E15387%29%20udstedt%2016-05-2006.pdf'
    ,'shineray XY50PYIE 25 km/t E16170 (e11*2002/24*0328)' => 'typegodkendelser/SHINERAY%20-%20%28E16170%29%20udstedt%2012-02-2007.pdf'
    ,'shineray XY50PYIE 45 km/t E16169 (e11*2002/24*0328)' => 'typegodkendelser/SHINERAY%20-%20%28E16169%29%20udstedt%2012-02-2007.pdf'
    ,'shineray Linxx XY50PYIE 45 km/t E16510 (e11*2002/24*0328)' => 'typegodkendelser/Linxx%2050cc%20%28E16510%29%20udstedt%2017-08-2007.pdf'
    ,'tisong TM-300 45 km/t E17206 (e11*2002/24*0297)' => 'typegodkendelser/Tisong%20city%20%28E17206%29%20udstedt%2020-08-2008.pdf'
    ,'xmotos XB31 25 km/t E18100 (e13*2002/24*0327)' => 'typegodkendelser/Xmotos%20-%20%28E18100%29%20udstedt%2026-03-2010.pdf'
-   ,'yiying HP Trading ApS YIYING SAMPRA YY50QT-A GY (Razer sport) 25 km/t E16236 (e4*2002/24*1090)' => 'typegodkendelser/YIYING%20SAMPRA%20%28E16236%29%20udstedt%2001-03-2007.pdf'
-   ,'yiying HP Trading ApS YY50QT-02 45 km/t E15473 (e4*2002/24*0323)' => 'typegodkendelser/Yiying%20-%20%28E15473%29%20udstedt%2002-06-2006.pdf'
-   ,'yiying HP Trading ApS YY50QT-5 45 km/t E15474 (e4*2002/24*0543)' => 'typegodkendelser/Yiying%20-%20%28E15474%29%20udstedt%2002-06-2006.pdf'
-   ,'yiying HP Trading ApS YY50QT-10 45 km/t E15475 (e4*2002/24*0643)' => 'typegodkendelser/Yiying%20-%20%28E15475%29%20udstedt%2002-06-2006.pdf'
-   ,'yiying Dankobber Motor ApS YY50QT-A 25 km/t E15610 (e4*2002/24*1090)' => 'typegodkendelser/Yiying%20-%20%28E15610%29%20udstedt%2029-06-2006.pdf'
-   ,'yiying Dankobber Motor ApS YY50QT-01 YY50QT-02 45 km/t E15617 (e4*2002/24*0323)' => 'typegodkendelser/Yiying%20-%20%28E15617%29%20udstedt%2004-07-2006.pdf'
-   ,'yiying Dankobber Motor ApS YY50QT-01 YY50QT-02 BP 45 km/t E15612 (e4*2002/24*0323)' => 'typegodkendelser/Yiying%20YY50QT%20%28E15612%29%20udstedt%2029-06-2006.pdf'
-   ,'yiying Dankobber Motor ApS YY50QT-26 45 km/t E15611 (e4*2002/24*0713)' => 'typegodkendelser/Yiying%20-%20%28E15611%29%20udstedt%2029-06-2006.pdf'
-   ,'yiying C. Reinhardt A/S YY50QT-B (stranger x-fight) 30 km/t E15916 (e4*2002/24*1226)' => 'typegodkendelser/Yiying%20-%20%28E15916%29%20udstedt%2031-10-2006.pdf'
-   ,'yiying C. Reinhardt as YY50QT BP (stranger (uden x-fight ?)) 45 km/t E15252 (e4*2002/24*0323)' => 'typegodkendelser/Yiying%20YY50QT%20%28E15252%29%20udstedt%2006-04-2006.pdf'
    ,'HUONIAO RMC HN50QT-K 30 km/t E17168 (e4*2002/24*1599)' => 'typegodkendelser/HUONIAO%20RMC%20HN50QT-K%20%28E17168%29%20udstedt%2014-07-2008.pdf'
    ,'HUONIAO RMC HN50QT-K 45 km/t E17169 (e4*2002/24*1599)' => 'typegodkendelser/HUONIAO%20RMC%20HN50QT-K%20%28E17169%29%20udstedt%2014-07-2008.pdf'
    ,'Sinski MC02A (GD140) 45 km/t E15464 (e4*2002/24*0583)' => 'typegodkendelser/Sinski%20MC02A%20%28E15464%29%20udstedt%2001-06-2006.pdf'
 
-   ,'Kangda Zongsshen KD50QT-4 30 km/t E15387 (e11*2002/24*0187)'            => 'typegodkendelser/Kangda%20Zongsshen%20%28E15387%29%20udstedt%2016-05-2006.pdf'
-
    ,'Baoxin TWS Scooty BX 45 km/t S8194'            => 'typegodkendelser/Baoxin%20TWS%20Scooty%20%28S8194%29%20udstedt%2020-03-1997.pdf'
+//TWS Reservdelar AB
+//LBB
+//MIKUNI 13-195
+//Taiwan NF Company NF-50 2 takt
+//2.15 x 10
+//2.15 x 10
+//3.50-10
+//3.50-10
 
-   ,'Black`n Roll S4800D km/t E15545 (e2*2002/24*0014)'            => 'typegodkendelser/Black%60n%20Roll%20S4800D%20%28E15545%29%20udstedt%2015-06-2006.pdf'
+   ,'Black`n Roll S4800D 30 km/t E15545 (e2*2002/24*0014)'            => 'typegodkendelser/Black%60n%20Roll%20S4800D%20%28E15545%29%20udstedt%2015-06-2006.pdf'
+//SPH Import ApS
+//J.H.M
+//1,2 x 19
+//1,2 x 19
+//1,75 - 19
+//1,75 - 19
+//Tegn 9 i stelnummeret er D og angiver den maksimale hastighed = 30 km/t
 
    ,'Branson BS49 45 km/t E12244 (e4*92/61*0144)'            => 'typegodkendelser/Branson%20BS49%20%28E12244%29%20udstedt%2007-10-2002.pdf'
+//Amager Trailer Center
+//LE8T
+//KEIHIN CVK
+//Branson FY139QMB 4 takt
+//2.15 x 10
+//2.15 x 10
+//3.50 - 10
+//3.50 - 10
 
    ,'Cagiva Cucciolo P3 45 km/t A9790'            => 'typegodkendelser/Cagiva%20Cucciolo%20%28A9790%29%20udstedt%2026-03-1999.pdf'
+//F.I. Motorcykler A/S
+//ZCG
+//P3
+//PHVA 12
+//Derbi EMH050 2 takt
+//1.85 x 16
+//2.15 x 16
+//2 3/4 - 16
+//3 1/4 - 16
+//Hastighedsbegrænsning: Art/placering: Afstandsskive, 1,0 mm tykkelse, mellem forreste remskivehalvdele.
+
+//http://www.scootergalleri.dk/galleri/256847-cagiva_cucciolo_byttet
 
    ,'Chun Lan CL50KT 45 km/t S9891'            => 'typegodkendelser/Chun%20Lan%20-%20%28S9891%29%20udstedt%2010-06-1999.pdf'
+//Arrin A/S
+//LCL
+//Skive, tykk. = 6,5 mm Mell. forr. remskivehalvd
+//Chun Lan 1E 39 FM 2 takt
+//2.15 x 10
+//2.15 x 10
+//3.00-10
+//3.00-10
+
    ,'Chun Lan Starway CL50QT 45 km/t E10592 (e4*92/61*0015)'            => 'typegodkendelser/Chunlan%20Starway%20%28E10592%29%20udstedt%2016-05-2000.pdf'
+//Hot Products Co. Holst & Tharaldsen A/S
+//CLC
+//PZ17
+//ChunLan 1E39FM 2 takt
+//2.15 x 10
+//2.15 x 10
+//100/80 - 10
+//100/80 - 10
+//Hastighedsbegrænsning: Begrænset åbning af hjerteklap, der er placeret mellem indsugningtrøret og cylinderen, og sikret mod adskillelse med knækbolt. Åbningshøjden i hjelteklappen er begrænset til 2,5 mm.
 
    ,'Di Blasi R7E 45 km/t E10124 (e1*92/61*0034)'            => 'typegodkendelser/Di%20Blasi%20-%20%28E10124%29%20udstedt%2009-09-1999.pdf'
+//Mobility AS
+//ZCH
+//DELL'ORTO SHA1412L
+//Di Blasi M1 2 takt
+//2.50 x 5"
+//2.50 x 5"
+//4.00 - 5"
+//4.00 - 5"
 
    ,'FYM FY50QT 45 km/t E14783 (e4*2002/24*0336)'            => 'typegodkendelser/FYM%20-%20%28E14783%29%20udstedt%2005-01-2006.pdf'
+//Max MC Import A/S
+//LE8
+//KEIHIN CVK
+//Jiangsu Linhai Motor
+//FY139QMB
+//4 takt
+//2.15 x 10
+//2.15 x 10
+//3.50 - 10
+//3.50 - 10
+//Hastighedsbegrænsning: Art/Placering: Afstandsskive mellem forreste remskivehalvdele med en tykkelse på 7,0 mm
 
    ,'Huatian JL50QT-16 (JL50QT-6 / HT50QT-16) 40 km/t E16497 (e11*2002/24*0359)'            => 'typegodkendelser/Huatian%20-%20%28E16497%29%20udstedt%2007-08-2007.pdf'
+//CBIZ Partner AB
+//LJL
+//PT18J
+//ZHEJIANG HUATIAN I CO. LTD. JL139QMB
+//3.50 x 10 51J
+//3.50 x 10 51J
+//100/60-12
+//100/60-12
+//Tegn nr. 12 er "E" og angiver den maksimale hastighed = 40 km/t.
+
+//måske jinlun ?
 
    ,'Hyosung Sense C 45 km/t E12156 (e4*92/61*0033)'            => 'typegodkendelser/Hyosung%20-%20%28E12156%29%20udstedt%2030-08-2002.pdf'
+//Nic. Christiansen Gruppen
+//KM4CA1
+//Elektronisk tænding (CDI)
+//Sense (Mikum kaburator)
+//Sense (Sunglim kaburator)
+//Hyosung SD50 2 takt
+//2.15 x 10
+//2.15 x 10
+//100/80 - 10
+//100/80 - 10
+
    ,'Hyosung Prima C 45 km/t E12157 (e4*92/61*0034)'            => 'typegodkendelser/Hyosung%20-%20%28E12157%29%20udstedt%2030-08-2002.pdf'
+//Nic. Christiansen Gruppen
+//KM4C
+//Elektronisk tænding
+//Hyosung SF50 2 takt
+//3.0 x 12
+//3.0 x 12
+//110/70 - 12
+//120/70 - 12
+
    ,'Hyosung SB-50 CA1 45 km/t S8235'            => 'typegodkendelser/Hyosung%20SB-50%20%28S8235%29%20udstedt%2025-06-1997.pdf'
+//Scan-Parts A/S
+//KM4_____7
+//MIKUNI 39C2
+//Hyosung SB50 2 takt
+//2.15 x 10
+//2.15 x 10
+//3.50-10
+//3.50-10
+
    ,'Hyosung SF50 C 45 km/t A9998'            => 'typegodkendelser/Hyosung%20SF50%20%28A9998%29%20udstedt%2016-06-1999.pdf'
+//Trading Group Denmark A/S
+//KM4
+//CDI-tændingsmodul, placeret under forreste skjold.
+//Hyosung CA1 2 takt
+//3.0 x 12
+//3.0 x 12
+//110/70 - 12
+//120/70 - 12
+
+//http://www.scootergalleri.dk/galleri/60523-hyosung_sf50
 
    ,'Kalkhoff Pro Connect S Dame 40 km/t E18300 (e1*2002/24*0444)'            => 'typegodkendelser/Kalkhoff%20Pro%20Connect%20S%20Dame%20%28E18300%29%20udstedt%2029-06-2010.pdf'
    ,'Kalkhoff Pro Connect S Dame 40 km/t E18301 (e1*2002/24*0444)'            => 'typegodkendelser/Kalkhoff%20Pro%20Connect%20S%20Dame%20%28E18301%29%20udstedt%2029-06-2010.pdf'
+//e1*2002/24*0444
+//9 Gear S (Small, 45 cm stel)
+//9 Gear M (Medium, 50 cm stel)
+//9 Gear L (Large, 55 cm stel)
    ,'Kalkhoff Pro Connect S Herre 40 km/t E18299 (e1*2002/24*0431)'            => 'typegodkendelser/Kalkhoff%20Pro%20Connect%20S%20Herre%20%28E18299%29%20udstedt%2029-06-2010.pdf'
    ,'Kalkhoff Pro Connect S Herre 40 km/t E18302 (e1*2002/24*0431)'            => 'typegodkendelser/Kalkhoff%20Pro%20Connect%20S%20Herre%20%28E18302%29%20udstedt%2029-06-2010.pdf'
+//e1*2002/24*0431
+//9 Gear S (Small, 45 cm stel)
+//9 Gear M (Medium, 50 cm stel)
+//9 Gear L (Large, 55 cm stel)
+//9 Gear XL (eXtra Large, 60 cm stel)
+
+//fælles for både dame og herre :
+//0,3 kw max
+//motor : Panasonic NUA009D (EBDCC2)
+//iCycle ApS
+//22 kg køreklar
+//40 km/t max
+//21 x 660
+//21 x 660
+//37 x 622
+//37 x 622
 
    ,'Motorhispania Furia FU01 45 km/t S10373'            => 'typegodkendelser/Motorhispania%20Furia%20%28S10373%29%20udstedt%2007-03-2000.pdf'
+//Svenska Motorimporten
+//VTV
+//Bøsn. m/ lysn. = 11,5 mm I udstødningsrør
+//karburator : SHA 14 -12 L eller PHBN 12
+//Minarelli AM6 2 takt 6 gear manuel
+//1.6 x 21
+//1.85 x 18
+//80/90 - 21
+//110/80 - 18
+
+//http://www.scootergalleri.dk/galleri/22195-motorhispania_furia_6v_
+//http://www.scootergalleri.dk/galleri/7703-motorhispania_furia_supermotard
 
    ,'Oxygen OX04 44 km/t E16546 (e11*2002/24*0522)'            => 'typegodkendelser/Oxygen%20-%20%28E16546%29%20udstedt%2012-09-2007.pdf'
+//ZGZ
+//C. Reinhardt A/S
+//elektrisk
+//motor mærkning : 4195
+//3,0 kw max
+//44 km/t max
+//2.50 x 10
+//3.50 x 12
+//100/80 - 10
+//120/70 - 12
+
+//http://www.oxygenworld.it/ er ved at likvidere
 
    ,'Siamoto Birdie 50 BR10 45 km/t E9937 (e9*92/61*0011)'            => 'typegodkendelser/Siamoto%20Birdie%2050%20%28E9937%29%20udstedt%2015-06-1999.pdf'
+//SPH Import A/S
+//ZED
+//SIAMOTO IE40FM 2 takt
+//2.50 x 10
+//2.50 x 10
+//100/90 - 10
+//100/90 - 10
+//Godkendelsen har tidligere være udstedt til: Grafisk InnoVision, Eremitageparken 187, 2800 Lyngby, tlf: 45 93 40 88
+
+//http://www.scootergalleri.dk/galleri/186049-siamoto_birdie
+//http://www.scootergalleri.dk/galleri/247972-siamoto_birdie_50___solgt
+//står NANFAN_ på variatorskjoldet
 
    ,'Wangye Superbyke WY50QT-16A Trend 45 km/t E15969 (e4*2002/24*1104)'            => 'typegodkendelser/Wangye%20Superbyke%20%28E15969%29%20udstedt%2023-11-2006.pdf'
+//A1 Import
+//CPi Boks ved motor
+//1PE40QMB
+//3,50 x 12
+//3,50 x 12
+//120/70 - 12
+//120/70 - 12
+//Tegn 4 i stelnummeret er W og angiver den maksimale hastighed = 45 km/t
 
 )
 

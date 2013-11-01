@@ -1,13 +1,13 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_galleri.png';
+$setup['nogetikon']               = 'ikoner/ikon_galleri2.png';
 
-$title = "galleri";
-$overskrift = "galleri";
+$title = "galleri med scootere og knallerter";
+$overskrift = "galleri med scootere og knallerter";
 $metadescription = "oversigt af scootermærker og modeller hvor der vises små billeder med navn, pris, motortype og hastighed";
 
 $databasecenter = array(
@@ -25,6 +25,7 @@ scootermærker
    ,galleri('logo', basename($_SERVER['SCRIPT_NAME']) . '#' . 'atala',  'logo_atala', 'atala')
    ,galleri('logo', basename($_SERVER['SCRIPT_NAME']) . '#' . 'avanti',  'logo_avanti', 'avanti')
    ,galleri('logo', basename($_SERVER['SCRIPT_NAME']) . '#' . 'baotian',  'logo_baotian', 'baotian')
+   ,galleri('logo', basename($_SERVER['SCRIPT_NAME']) . '#' . 'benzhou_yiying',  'logo_benzhouyiying', 'benzhou yiying')
    ,galleri('logo', basename($_SERVER['SCRIPT_NAME']) . '#' . 'beta',  'logo_beta', 'beta')
    ,galleri('logo', basename($_SERVER['SCRIPT_NAME']) . '#' . 'busetto',  'logo_busetto', 'busetto')
    ,galleri('logo', basename($_SERVER['SCRIPT_NAME']) . '#' . 'cpi',  'logo_cpi', 'cpi')
@@ -70,6 +71,7 @@ scootermærker
    ,galleri('logo', basename($_SERVER['SCRIPT_NAME']) . '#' . 'scoopie',  'logo_scoopie', 'scoopie')
    ,galleri('logo', basename($_SERVER['SCRIPT_NAME']) . '#' . 'skyteam',  'logo_skyteam', 'skyteam')
    ,galleri('logo', basename($_SERVER['SCRIPT_NAME']) . '#' . 'solex',  'logo_solex', 'solex')
+   ,galleri('logo', basename($_SERVER['SCRIPT_NAME']) . '#' . 'solo',  'logo_solo', 'solo')
    ,galleri('logo', basename($_SERVER['SCRIPT_NAME']) . '#' . 'suzuki',  'logo_suzuki', 'suzuki')
    ,galleri('logo', basename($_SERVER['SCRIPT_NAME']) . '#' . 'swap',  'logo_swap', 'swap')
    ,galleri('logo', basename($_SERVER['SCRIPT_NAME']) . '#' . 'sym',  'logo_sym', 'sym')
@@ -202,10 +204,12 @@ baotian
 ))
 
 ,'
-busetto
+benzhou yiying
 ' => ''
 .galleriholder(array(
-    galleri('scooter', 'altombusetto.php', 'busettoecc800', 'Busetto ECC-800')
+   //,galleri('scooter', 'altombenzhouyiying.php', 'benzhouyiying', 'Benzhou Yiying ')
+    galleri('scooter', 'altombenzhouyiying.php', 'yiyingsampra', 'Benzhou Yiying Sampra')
+   ,galleri('scooter', 'altombenzhouyiying.php', 'strangerxfight', 'Stranger x-fight')
 ))
 
 ,'
@@ -218,6 +222,13 @@ beta
    ,galleri('scooter', 'altombeta.php', 'betarrenduro', 'Beta RR Enduro')
    ,galleri('scooter', 'altombeta.php', 'betarrmotard', 'Beta RR Motard')
    ,galleri('scooter', 'altombeta.php', 'betaquadra', 'Beta Quadra')
+))
+
+,'
+busetto
+' => ''
+.galleriholder(array(
+    galleri('scooter', 'altombusetto.php', 'busettoecc800', 'Busetto ECC-800')
 ))
 
 ,'
@@ -455,6 +466,13 @@ kymco
 ))
 
 ,'
+lifan
+' => ''
+.galleriholder(array(
+    galleri('scooter', 'altomlifan.php', 'lifanlf50qt26a', 'Lifan LF50QT-26A')
+))
+
+,'
 longjia
 ' => ''
 .galleriholder(array(
@@ -464,13 +482,6 @@ longjia
    ,galleri('scooter', 'altomlongjia.php', 'longjiah2', 'Longjia H-2')
    ,galleri('scooter', 'altomlongjia.php', 'longjiaversus', 'Longjia Versus')
    ,galleri('scooter', 'altomlongjia.php', 'longjiaversus4t', 'Longjia Versus 4T LC')
-))
-
-,'
-lifan
-' => ''
-.galleriholder(array(
-    galleri('scooter', 'altomlifan.php', 'lifanlf50qt26a', 'Lifan LF50QT-26A')
 ))
 
 ,'
@@ -728,6 +739,14 @@ solex
 ))
 
 ,'
+solo
+' => ''
+.galleriholder(array(
+    galleri('scooter', 'altomsolo.php', 'soloelectra', 'Solo Electra')
+   ,galleri('scooter', 'altomsolo.php', 'solohercules', 'Solo Hercules')
+))
+
+,'
 suzuki
 ' => ''
 .galleriholder(array(
@@ -764,6 +783,7 @@ sym
    ,galleri('scooter', 'altomsym.php', 'symjetsportx', 'Sym Jet Sport X')
    ,galleri('scooter', 'altomsym.php', 'symmio', 'Sym Mio')
    ,galleri('scooter', 'altomsym.php', 'symorbit', 'Sym Orbit')
+   ,galleri('scooter', 'altomsym.php', 'symorbitiits', 'Sym Orbit II TS')
    ,galleri('scooter', 'altomsym.php', 'symorbit3hjul', 'Sym Orbit 3 hjul')
    ,galleri('scooter', 'altomsym.php', 'symsymphony', 'Sym Symphony')
    ,galleri('scooter', 'altomsym.php', 'symsymphonysr', 'Sym Symphony SR')
@@ -931,7 +951,6 @@ andre mærker
    ,galleri('scooter', 'altomandre.php', 'rmczanzara', 'RMC Zanzara')
    ,galleri('scooter', 'altomandre.php', 'shineray', 'Shineray')
    ,galleri('scooter', 'altomandre.php', 'sinskimc02a', 'Sinski MC02A')
-   ,galleri('scooter', 'altomandre.php', 'strangerxfight', 'Stranger x-fight')
    ,galleri('scooter', 'altomandre.php', 'superbikext50qt2', 'Superbike XT50QT-2')
    ,galleri('scooter', 'altomandre.php', 'tisongtm300', 'Tisong TM-300')
    ,galleri('scooter', 'altomandre.php', 'tpgs303', 'TP GS-303')
@@ -944,7 +963,7 @@ andre mærker
 ,'
 se også...
 ' => '
-'.linkknap('galleri_manglerdata.php', 'Galleri for modeller som mangler data').'
+'.linkknap('galleri_manglerdata.php', 'Galleri for scooter og knallert modeller som mangler data').'
 '
 
 );

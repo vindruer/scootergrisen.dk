@@ -14,7 +14,7 @@
 #                                                                             #
 ###############################################################################
 
-require_once('./php/checkipreferer.php');
+require_once './php/checkipreferer.php';
 checkip(); // exit hvis IP adresse har spammet
 checkreferer();
 
@@ -24,7 +24,7 @@ ini_set("date.timezone", "Europe/Copenhagen"); // for at undgå ...It is not saf
 //ini_set('zlib.output_compression_level', '-1'); // 0 = ingen 9 = mest (-1 = server vælger)
 
 $setup = array(); // skal indeholde indstillinger
-$fejl = array(); // skal indeholde fejlbeskeder
+$fejlbeskeder = array(); // skal indeholde fejlbeskeder
 
 $setup['loggetind'] = 0;
 
@@ -61,7 +61,7 @@ $setup['besogfilnavn']   = "besog.txt";
 
 $setup['domain']         = "http://$_SERVER[SERVER_NAME]";
 
-require_once('config_login.php');
+require_once './php/config_login.php';
 
 
 
@@ -75,7 +75,7 @@ if($setup['roden'] == "C:/Users/Administrator/Desktop/scootergrisen.dk"){
 
    ini_set('log_errors', 1);
 
-   require_once('config_mysql_localhost.php');
+   require_once './php/config_mysql_localhost.php';
 
    $setup['minemail'] = "info@localhost.localdomain"; // one.com begrænser eksterne email adresser til 20 om dagen på grund af spam. Derfor brug en intern email adresse og viderestil så de emails til den eksterne emailadresse.
    ini_set('sendmail_from', $setup['minemail']); // kun til windows systemer
@@ -90,7 +90,7 @@ if($setup['roden'] == "C:/Users/Administrator/Desktop/scootergrisen.dk"){
 
    ini_set('log_errors', 1);
 
-   require_once('config_mysql_webhotel.php');
+   require_once './php/config_mysql_webhotel.php';
 
    $setup['minemail'] = "info@scootergrisen.dk"; // one.com begrænser eksterne email adresser til 20 om dagen på grund af spam. Derfor brug en intern email adresse og viderestil så de emails til den eksterne emailadresse.
    ini_set('sendmail_from', $setup['minemail']); // kun til windows systemer

@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "motorolie, gearolie, hydrauliskolie";
 $overskrift = "motorolie, gearolie, hydrauliskolie";
@@ -264,7 +264,7 @@ Som det ses på billederne kan en 10W-40 motorolie bruges når udendørs tempera
 Jeg har læst at hvis man bruger en højere viskositet end anbefalet så kan det give dårlig acceleration og at det kan skade oliepumpen og smørringssystemet og give modstand i motoren.
 
 Viskositet måles med Centistokes (cst). Jo højere tal jo tykkere er olien.
-Men jeg syns ikke jeg har set enheden Centistrokes blive brugt så meget.
+Men jeg syntes ikke jeg har set enheden Centistrokes blive brugt så meget.
 
 Før i tiden hvor der kun fandtes singlegrade olie skulle man køre med en tynd olie om vinteren og en tyk olie om sommeren.
 Med multigrade olie kan man bruge den samme olie hele året rundt.

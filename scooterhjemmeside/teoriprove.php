@@ -1,14 +1,17 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $setup['nogetikon']               = 'ikoner/ikon_teoriprove2.png';
 
 $title = "teoriprøve til lille knallert (den gamle teoriprøve)";
 $overskrift = "teoriprøve til lille knallert (den gamle teoriprøve)";
-$metadescription = "online udgaven af den gamle knallert teoriprøve som de 15-17 årige tidligere fik når de skulle have knallertbevis";
+$metadescription = "online udgave af den gamle knallert teoriprøve som de 15-17 årige tidligere fik når de skulle have knallertbevis til at køre lille knallert (dem som højst må køre 30 km/t)";
+
+checkomfindesellersopret('mappe', $GLOBALS['setup']['tempfuld']);
+checkomfindesellersopret('mappe', $GLOBALS['setup']['sessionmappe']);
 
 $GLOBALS['setup']['head'] = '
 <style type="text/css">
@@ -22,9 +25,19 @@ $GLOBALS['setup']['head'] = '
    margin-bottom: 5px; /* så der er lidt mellemrum hvis knapperne wrapper */
 }
 
+.teori_sporgsmal_holder_holder {
+   overflow-x: auto;
+}
+
 .teori_sporgsmal_holder {
    margin: 0 auto;
    width: 682px;
+   padding: 0 10px; /* der skal være lidt plads til venstre fordi Ja er så tæt på kanten af billedet så border over Ja går lidt ud over billedet */
+}
+
+.teori_sporgsmal_holderbbbbbbbbbbbb {
+   text-align: center;
+   margin: auto;
 }
 
 .stortekst {
@@ -60,7 +73,7 @@ $GLOBALS['setup']['head'] = '
 }
 
 .forrige_og_neste_knap {
-   width: 30%;
+   width: 25%;
 }
 
 .tillykke_tekst {
@@ -714,29 +727,30 @@ if($vis_introduktion){
                . '<div style="float: right; margin-left: 20px; margin-bottom: 20px; display: inline;">'
                . visbilled('1', 'billed2505.jpg', 'max 30 km zone')
                . '</div>'
-               . 'Velkommen til online udgaven af den gamle knallert teoriprøve.'
+               . 'Velkommen til online udgaven af den gamle teoriprøve til lille knallert.'
                . "\r\n"
                . "\r\n"
                . 'Dette var teoriprøven som de 15-17 årige tog på ungdomsskolen når de skulle have knallertbevis.'
                . "\r\n"
                . "\r\n"
-               . 'Teoriprøven blev brugt for lille knallert som højst måtte køre 30 km/t.'
+               . 'Teoriprøven blev brugt til lille knallert som er dem der højst må køre 30 km/t.'
                . "\r\n"
                . "\r\n"
                . 'Teoriprøven består af ialt ' . count($sporgsmaldatabase) . ' billeder fordelt i 3 evaluerende prøver kaldet A, B og C.'
                . "\r\n"
                . "\r\n"
+               . '<div style="margin-left: 2em;">'
                . 'A : Indledende manøvrer m.v.'
                . "\r\n"
                . 'B : Manøvrer i vejkryds'
                . "\r\n"
                . 'C : Afsluttende manøvrer på vej'
                . "\r\n"
+               . '</div>'
                . "\r\n"
-               . 'På ungdomsskolen havde man 10 minutter til at svare på hver af de 3 evaluerende prøver.'
+               . 'På ungdomsskolen havde eleven 10 minutter til at svare på hver af de 3 evaluerende prøver.'
                . "\r\n"
-               . 'Altså man havde 30 minutter til at svare på alle spørgsmålene.'
-               . "\r\n"
+               . 'Altså 30 minutter til at svare på alle spørgsmålene.'
                . "\r\n"
                . 'Her på hjemmesiden er der ikke nogen tidsgrænse så tag dig bare god tid.'
                . "\r\n"
@@ -744,7 +758,7 @@ if($vis_introduktion){
                . 'Vær opmærksom på at der kan være fejl så stol ikke automatisk på alt så du måske kommer til at gøre noget forkert i trafikken.'
                . "\r\n"
                . "\r\n"
-               . 'Teoriprøven bruger cookies/sessions til at gemme svarene mellem sideskift.'
+               . 'Teoriprøven bruger sessions/cookies til at gemme svarene mellem sideskift.'
                . "\r\n"
                . "\r\n"
                . 'Held og lykke.'
@@ -772,7 +786,7 @@ if($vis_introduktion){
 
       $xxx .= lidtplads('lodret');
 
-      $xxx .= '<div class="teori_sporgsmal_holder">';
+      $xxx .= '<div class="teori_sporgsmal_holder"">';
 
       $xxx .= '<div style="text-align: center;">';
       $xxx .= $billed . ' / ' . count($sporgsmaldatabase);
@@ -782,13 +796,13 @@ if($vis_introduktion){
       $xxx .= $tekst;
       $xxx .= '</div>';
 
-      $xxx .= '<div style="text-align: center; margin: auto;">';
+      $xxx .= '<div class="teori_sporgsmal_holderbbbbbbbbbbbb">';
 //      $xxx .= '<form method="post" enctype="multipart/form-data" action="'.$_SERVER['SCRIPT_NAME'].'" style="text-align: center; margin: auto;">';
 
       //$billed++;
       $xxx .= '<input type="hidden" name="billed" value="'.$billed.'">';
 
-      $xxx .= '<div class="teori_sporgsmal" style="background: url('.$billedurl.') no-repeat;">';
+      $xxx .= '<div class="teori_sporgsmal" style="background: url('.$billedurl.') no-repeat left top;">';
       // så teori_sporgsmal højden automatisk bliver sat
       $xxx .= '<img src="'.$billedurl.'" alt="billed" style="visibility:hidden;">';
 
@@ -847,7 +861,13 @@ if($vis_introduktion){
 
       $xxx .= '</div>';
 
+      $xxx .= '</div>';
+
+      $xxx .= '</div>';
+
       $xxx .= lidtplads('lodret');
+
+      $xxx .= '<div style="text-align: center;">';
 
       $forrigebilled = $billed - 1;
 
@@ -861,14 +881,12 @@ if($vis_introduktion){
 
       }
 
-      $xxx .= lidtplads('vandret');
-      $xxx .= '<span style="margin: 0 50px;"></span>';
+      //$xxx .= lidtplads('vandret');
+      $xxx .= '<span style="margin-left: 10%;"></span>';
 
       $xxx .= '<input type="submit" name="funktion" value="Næste billede" class="forrige_og_neste_knap bold fontsize_medium">';
 
 //      $xxx .= '</form>';
-
-      $xxx .= '</div>';
 
       $xxx .= '</div>';
 
@@ -950,11 +968,11 @@ if($vis_introduktion){
 
 }elseif($vis_knallertbevis){
 
-   $xxx .= 'Efter den 19. Januar 2013 får man et kørekort i AM kategoriet i stedet for et knallertbevis.' . "\r\n";
+   $xxx .= '<div class="bold borderradius5px" style="background: darkred; color: white; text-align: center; padding: 10px;">';
+   $xxx .= 'Efter den 19. Januar 2013 får man et kørekort i AM kategorien i stedet for et knallertbevis.';
    $xxx .= "\r\n";
    $xxx .= 'Følgende information gælder derfor ikke længere.';
-   $xxx .= "\r\n";
-   $xxx .= "\r\n";
+   $xxx .= '</div>';
    $xxx .= "\r\n";
    $xxx .= 'Her ses et knallertbevis. Forsiden og bagsiden' . "\r\n";
    $xxx .= "\r\n";
@@ -1032,6 +1050,42 @@ if($vis_introduktion){
    $xxx .= visfil('1', 'scooterhjemmeside/lyd/teori_B_vejkryds.mp3');
    $xxx .= visfil('1', 'scooterhjemmeside/lyd/teori_C_nar_du_moder_andre_trafikanter.mp3');
    $xxx .= visfil('1', 'scooterhjemmeside/lyd/teori_knallerter_og_trafiksikkerhed.mp3');
+   $xxx .= "\r\n";
+
+   $xxx .= 'Er her alle billederne fra teoriprøven :' . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/a01.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve A Indledende manøvrer m.v. spørgsmål 1', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/a02.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve A Indledende manøvrer m.v. spørgsmål 2', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/a03.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve A Indledende manøvrer m.v. spørgsmål 3', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/a04.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve A Indledende manøvrer m.v. spørgsmål 4', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/a05.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve A Indledende manøvrer m.v. spørgsmål 5', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/a06.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve A Indledende manøvrer m.v. spørgsmål 6', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/a07.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve A Indledende manøvrer m.v. spørgsmål 7', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/a08.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve A Indledende manøvrer m.v. spørgsmål 8', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/a09.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve A Indledende manøvrer m.v. spørgsmål 9', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/a10.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve A Indledende manøvrer m.v. spørgsmål 10', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/a11.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve A Indledende manøvrer m.v. spørgsmål 11', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/b01.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve B Manøvrer i vejkryds spørgsmål 1', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/b02.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve B Manøvrer i vejkryds spørgsmål 2', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/b03.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve B Manøvrer i vejkryds spørgsmål 3', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/b04.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve B Manøvrer i vejkryds spørgsmål 4', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/b05.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve B Manøvrer i vejkryds spørgsmål 5', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/b06.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve B Manøvrer i vejkryds spørgsmål 6', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/b07.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve B Manøvrer i vejkryds spørgsmål 7', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/b08.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve B Manøvrer i vejkryds spørgsmål 8', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/b09.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve B Manøvrer i vejkryds spørgsmål 9', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/b10.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve B Manøvrer i vejkryds spørgsmål 10', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/c01.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve C Afsluttende manøvrer på vej spørgsmål 1', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/c02.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve C Afsluttende manøvrer på vej spørgsmål 2', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/c03.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve C Afsluttende manøvrer på vej spørgsmål 3', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/c04.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve C Afsluttende manøvrer på vej spørgsmål 4', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/c05.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve C Afsluttende manøvrer på vej spørgsmål 5', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/c06.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve C Afsluttende manøvrer på vej spørgsmål 6', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/c07.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve C Afsluttende manøvrer på vej spørgsmål 7', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/c08.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve C Afsluttende manøvrer på vej spørgsmål 8', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/c09.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve C Afsluttende manøvrer på vej spørgsmål 9', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/c10.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve C Afsluttende manøvrer på vej spørgsmål 10', false, true) . "\r\n";
+   $xxx .= visbilled('1', 'teoriprove/c11.jpg', 'Teoriprøve til lille knallert (den gamle teoriprøve) Evaluerende knallertprøve C Afsluttende manøvrer på vej spørgsmål 11', false, true) . "\r\n";
+   $xxx .= "\r\n";
 
 }elseif($vis_slet){
 
@@ -1070,7 +1124,7 @@ $databasecenter = array(
 teoriprøve for lille knallert
 ' => '
 '.$yyy.'
-<div class="bold borderradius5px" style="background: darkred; color: white; text-align: center; padding: 10px;">Den 19. Januar 2013 kom der nye regler i forbindelse med teoriundervisning og kørekort.<br>Det betyder at denne teoriprøve ikke længere er den samme som den man får når man skal til teoriundervisning.<br>Læs mere i forummet emnet '.ahref('http://scootergrisen.dk/forum/viewtopic.php?f=4&t=956', 'De nye regler om knallertundervisning (fra 19. Januar 2013)', 'style="color: pink;"').'<br><br>Prøv også '.ahref('http://www.sikkertrafik.dk/Site/Knallertteori.aspx', 'Klar til Knallert', 'style="color: pink;"').' hvor du kan teste om du er klar til den nye teoriprøve.</div>
+<div class="bold borderradius5px" style="background: darkred; color: white; text-align: center; padding: 10px;">Den 19. Januar 2013 kom der nye regler i forbindelse med teoriundervisning og kørekort.<br>Det betyder at denne teoriprøve ikke længere er den samme som den man får når man skal til teoriundervisning.<br>Læs mere i forum emnet '.ahref('http://scootergrisen.dk/forum/viewtopic.php?f=4&t=956', 'De nye regler om knallertundervisning (fra 19. Januar 2013)', 'style="color: pink;"').'<br><br>Prøv også '.ahref('http://www.sikkertrafik.dk/Site/Knallertteori.aspx', 'Klar til Knallert', 'style="color: pink;"').' hvor du kan teste om du er klar til den nye teoriprøve.</div>
 '
 
 );

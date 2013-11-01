@@ -12,8 +12,8 @@ På det sidste har jeg lavet nogen '.ahref('http://www.youtube.com/user/scooterg
 Se for eksempel '.ahref('http://www.youtube.com/watch?v=G1FQhKEYty8', 'turen over storestrømsbroen på scooter').'.
 
 Jeg har lavet om på menuen øverst på hjemmesiden.
-Alle typer køretøjer er nu flyttet i Køretøjer (scootermærker) menuen.
-Værkstedet (service) menuen skal fremover indeholde alle de ting der har med servicering af scooteren af gøre, værktøj, olie, elektrisk arbejde, osv.
+Alle typer køretøjer er nu flyttet i Køretøjer menuen.
+Værkstedet menuen skal fremover indeholde alle de ting der har med servicering af scooteren af gøre, værktøj, olie, elektrisk arbejde, osv.
 Dokumenter menuen indeholder Manualer, el diagrammer, reservedele, osv (download) og typegodkendelser.
 Billeder fra gaden er lagt ind på billeder siden (kan findes i underholdning menuen).
 
@@ -21,7 +21,7 @@ Nye køretøjer :
 '.ahref('altomkymco.php#kymcosuper82t', 'Kymco Super 8 2T').'.
 
 Nye sider :
-'.ahref('nummerplade.php', 'Nummerplade billede generator').' kan lave et billede som ligner en nummerplade til en lille knallert eller stor knallert.
+'.ahref('nummerplade.php', 'Billede generator af knallert nummerplade').' kan lave et billede som ligner en nummerplade til en lille knallert eller stor knallert.
 Du kan for eksempel bruge billedet som avatar i forummet.
 
 Nye Manualer, el diagrammer, reservedele, osv :
@@ -59,7 +59,7 @@ Nye typegodkendelser :
 '.ahref('download/typegodkendelser/Baoxin%20TWS%20Scooty%20%28S8194%29%20udstedt%2020-03-1997.pdf', 'Baoxin TWS Scooty BX 45 km/t S8194').'
 '.ahref('download/typegodkendelser/Batioan%20-%20%28E16626%29%20udstedt%2018-10-2007.pdf', 'Batioan QT50-12D30 30 km/t E16626 (e4*2002/24*1397)').'
 '.ahref('download/typegodkendelser/Benzhou%20YY50QT-A%20%28E15543%29%20udstedt%2014-06-2006.pdf', 'Benzhou YY50QT-A (måske Yiying sampra ?) 25 km/t E15543 (e4*2002/24*1090)').'
-'.ahref('download/typegodkendelser/Black%60n%20Roll%20S4800D%20%28E15545%29%20udstedt%2015-06-2006.pdf', 'Black`n Roll S4800D km/t E15545 (e2*2002/24*0014)').'
+'.ahref('download/typegodkendelser/Black%60n%20Roll%20S4800D%20%28E15545%29%20udstedt%2015-06-2006.pdf', 'Black`n Roll S4800D 30 km/t E15545 (e2*2002/24*0014)').'
 '.ahref('download/typegodkendelser/Branson%20BS49%20%28E12244%29%20udstedt%2007-10-2002.pdf', 'Branson BS49 45 km/t E12244 (e4*92/61*0144)').'
 '.ahref('download/typegodkendelser/Cagiva%20Cucciolo%20%28A9790%29%20udstedt%2026-03-1999.pdf', 'Cagiva Cucciolo P3 45 km/t A9790').'
 '.ahref('download/typegodkendelser/Chun%20Lan%20-%20%28S9891%29%20udstedt%2010-06-1999.pdf', 'Chun Lan CL50KT 45 km/t S9891').'
@@ -541,7 +541,7 @@ mandag den 8. Oktober 2012
 Der er ikke rigtig sket så meget nyt på hjemmesiden på det sidste.
 Men så vil jeg da fortælle lidt om hvad jeg har lavet alligevel.
 
-Jeg har arbejdet lidt på at finde billeder til '.ahref('manglerdata.php', 'Modeller som mangler data').'.
+Jeg har arbejdet lidt på at finde billeder til '.ahref('manglerdata.php', 'scooter og knallert modeller som mangler data').'.
 
 Og så siger jeg tak til jer der har søgt og gemt jeres VIN/stelnummer med '.ahref('vinchecker.php', 'VIN Checker').'.
 De gemte VIN bruger jeg til at gøre VIN checkeren endnu bedre.
@@ -623,7 +623,7 @@ lørdag den 1. September 2012
 
 '.ahref('bigborekit.php', 'Big bore kit').' har fået sin egen side.
 
-Flyttet en masse modeller fra '.ahref('manglerdata.php', 'Modeller som mangler data').' ind på de forskellige scootermærkers sider. Også selvom jeg næsten ikke har noget data på de fleste af modellerne. Men der er da billeder af dem.
+Flyttet en masse modeller fra '.ahref('manglerdata.php', 'scooter og knallert modeller som mangler data').' ind på de forskellige scootermærkers sider. Også selvom jeg næsten ikke har noget data på de fleste af modellerne. Men der er da billeder af dem.
 
 Skrevet lidt mere på '.ahref('kamera.php', 'Kamera').' og tilføjet flere billeder, manualer og kameraer.
 
@@ -927,7 +927,7 @@ Før blev det store billede vist på en side for sig selv også skulle kan klikk
 Nu bliver man på samme side og i stedet forstørres billedet.
 
 Jeg var valgt at gøre alle scootere som har ligget på min computer tilgængelige på hjemmesiden også selvom jeg ikke har særligt meget data på dem og som jeg ikke engang er sikker på om de har kunne købes i danmark.
-Det drejer sig om '.ahref('altomlynx.php', 'Lynx').', '.ahref('altomnordicebike.php', 'Nordic E-Bike').', '.ahref('altomvarg.php', 'Varg').' og '.ahref('manglerdata.php', 'Modeller som mangler data').' hvor jeg har samlet de modeller som jeg har næsten ikke har noget data på. Mange af dem har jeg ikke engang billeder af.
+Det drejer sig om '.ahref('altomlynx.php', 'Lynx').', '.ahref('altomnordicebike.php', 'Nordic E-Bike').', '.ahref('altomvarg.php', 'Varg').' og '.ahref('manglerdata.php', 'scooter og knallert modeller som mangler data').' hvor jeg har samlet de modeller som jeg har næsten ikke har noget data på. Mange af dem har jeg ikke engang billeder af.
 Det betyder at i stedet for at det kun er mig selv der samler data så kan alle nu se de data der er samlet indtil videre.
 Hvis du kender noget til nogle af modellerne så '.kontaktmig().' gerne.
 '

@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "andet - Transmission";
 $overskrift = "andet - Transmission";
@@ -102,7 +102,7 @@ kædetransmission
 ' => '
 Der findes scootere med kædetransmission som en del af motorblokken som det ses her.
 '.visbilled('1', 'billed3358.jpg', 'scooter med kæde transmission i motorblok', false, true).'
-Jeg har dog aldrig set nogen 50 cm³ scootere i danmark med den form for transmission.
+Det er vist ikke særlig mange 50 cm³ scootere/knallerter i danmark med den form for transmission men Suzuki FZ50 bruger den vist.
 '
 
 );

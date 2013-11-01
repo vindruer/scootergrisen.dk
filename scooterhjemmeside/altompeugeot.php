@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "peugeot 50 cm³ og elektrisk scootere";
+$title = "peugeot scootere og knallerter med 50 cm³ og elektrisk motor";
 $overskrift = "peugeot";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
@@ -158,12 +158,12 @@ $databasecenter = array(
        'besked'            => ens('besked', '', '', '', '')
 
    ),'generelt'            => array(
-       'model'             => ens('model', 'peugeot elyseo', '', '', '')
+       'model'             => ens('model', 'peugeot elyséo', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -303,7 +303,7 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', 'peugeot elystar Advantage', '', '', '')
       ,'pris'              => ens('pris', '20000', '', '', '(20000,- for elystar Advantage)')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -443,7 +443,7 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -583,7 +583,7 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', 'peugeot jet c-tech', 'peugeot Jet Force C-Tech', 'peugeot Jet Force C-Tech R-Cup', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -863,7 +863,7 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', 'peugeot ludix classic', 'peugeot ludix pro', 'Peugeot Ludix Elegance (2 forlygter og smalle dæk)', 'peugeot ludix trend')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '25 og 30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -1563,7 +1563,7 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', 'peugeot speedfight 3 RS', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -2117,7 +2117,7 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', 'TKR Furious (naked styr)', 'TKR Naked', '', '')
       ,'pris'              => ens('pris', '11495', '14495', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -2257,7 +2257,7 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -2397,7 +2397,7 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '11995', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -2833,7 +2833,7 @@ $databaseright = array(
    ,'Peugeot Speedfight 3 50 cc 2 stroke technical training'                => 'peugeot_speedfight3_50cc_2stroke_technical_training.pdf'
 
    ,'Peugeot V-Clic (Qingqi QM50QT-6) brugermanual'      => 'qingqi_qm50qt6_brugermanual.pdf'
-   ,'Peugeot V-Clic (Qingqi QM50QT-6) servicemanual'     => 'qingqi_qm50qt6_brugerservice.pdf'
+   ,'Peugeot V-Clic (Qingqi QM50QT-6) servicemanual'     => 'qingqi_qm50qt6_servicemanual.pdf'
    ,'Peugeot V-Clic servicemanual'                       => 'peugeot_vclic_servicemanual.pdf'
    ,'Peugeot V-Clic technical training'                  => 'peugeot_vclic_technical_training.pdf'
 

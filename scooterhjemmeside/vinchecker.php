@@ -1,14 +1,14 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_vinchecker.png';
+$setup['nogetikon']               = 'ikoner/ikon_vinchecker2.png';
 
-$title = "VIN checker";
-$overskrift = "VIN checker";
-$metadescription = "indtast et 17 cifret stelnummer fra en scooter/knallert og se om du kan få oplysninger som procudent, årgang, mærke og model";
+$title = "VIN checker til scootere og knallerter";
+$overskrift = "VIN checker til scootere og knallerter";
+$metadescription = "indtast 17 cifret stelnummer fra en scooter/knallert og se om du kan få oplysninger som producent, årgang, mærke, model og hastighed";
 
 $GLOBALS['setup']['head'] = '
 <style type="text/css">
@@ -591,7 +591,8 @@ function visvinidatabase($visantalsogninger){
             . 'Seneste '.$visantalsogninger.' søgninger'
             . '</div>'
 
-            . '<table class="tablesorter">'
+            . '<div style="overflow-x: auto;">'
+            . '<table class="tableholder fontsize_small tablesorter">'
    
             . '<thead>'
             . '<tr>'
@@ -607,20 +608,12 @@ function visvinidatabase($visantalsogninger){
             . '</tbody>'
 
             . '</table>'
+            . '</div>'
             ;
    
       } else {
    
-         $indhold .= ''
-            . '<div class="ratingoversigtingendata">'
-            . '<h1>Ingen data at vise</h1>'
-            . '<h2>Her er nogen misser i stedet for</h2>'
-            . '<img src="http://placekitten.com/180/160" alt="Miau 1" width="180" height="160">'
-            . '<img src="http://placekitten.com/181/160" alt="Miau 2" width="181" height="160">'
-            . '<img src="http://placekitten.com/182/160" alt="Miau 3" width="182" height="160">'
-            . '<img src="http://placekitten.com/183/160" alt="Miau 4" width="183" height="160">'
-            . '</div>'
-            ;
+         $indhold .= nogenmisser();
    
       }
    
@@ -703,7 +696,7 @@ function vincheckdigitchecker(){
 
    $vinliste = array(
        'LT50QT-29' => 'LLMTCB2954L053104' // LT50QT-29
-      ,'Kymco Super 8 4T, 50 ccm, 30 km/t' => 'LC2U7010072600558'
+      ,'Kymco Super 8 4T 50 cm³, 30 km/t' => 'LC2U7010072600558'
       ,'VGA Digita' => 'L4HDEBBP8B6000746'
       ,'Keeway Hurricane' => 'TSYTAB2'
       ,'Keeway Focus 45 km/t' => 'TSYTABMP16C'
@@ -765,11 +758,11 @@ var_dump($vin);
    }
 
    $indhold .= doraemonsays(
-       'Velkommen til den meget experimentale knap-så-fantastiske VIN Checker.'
+       'Velkommen til den meget experimentale knap-så-fantastiske VIN Checker til scootere og knallerter.'
       . "\r\n" . "\r\n"
       .'Her kan du <span style="text-decoration: underline;">måske</span> få information om en scooter/knallert ud fra det <span class="bold">17 cifret stelnummer</span> (kaldet VIN) som findes på nyere modeller.' . "\r\n" . "\r\n"
       .'Hvis du har et stelnummer fra en gammel knallert som ikke er på 17 tegn så kan du ikke bruge det her.' . "\r\n" . "\r\n"
-      .'Se eventuelt også ' . ahref('registrering.php#stelnummer', 'Registrering#stelnummer') . "\r\n"
+      .'Se også ' . ahref('registrering.php#stelnummer', 'Registrering#stelnummer') . "\r\n"
    );
 
    $indhold .= lidtplads('lodret');
@@ -816,11 +809,11 @@ var_dump($vin);
    $indhold .= ''
       . formbox('1', '', 'VIN checker', $_SERVER['PHP_SELF'], 'post', '', ''
          . input('0', 'hidden', 'funktion', 'vincheckdigitchecker')
-         . input('1', 'text', 'vin', $vin, '33', 'Indtast scooter/knallert VIN (17 tegn)', 'fejl_sogetekst', '', 'list="vinliste" title="Skriv et VIN (stelnummer) på 17 tegn og brug kun tegnene 0-9 og a-z eller A-Z."', '', '20')
+         . input('1', 'text', 'vin', $vin, '33', 'Indtast VIN (17 tegn)', 'fejl_sogetekst', '', 'list="vinliste" title="Skriv et VIN (stelnummer) på 17 tegn og brug kun tegnene 0-9 og a-z eller A-Z."', '', '20')
          . input('1', 'text', 'kommentartilvin', $kommentartilvin, '33', 'skriv eventuelt en kommentar', 'fejl_kommentartilvin', '', 'title="Skriv eventuelt til kommentar som for eksempel hvis du ved noget om hvad scooter stelnummeret passer til så jeg kan forbedre VIN checkeren"', '', '')
          // placeholder="" pattern="[0-9a-zA-Z]{17}"
          . $dataliste
-         . input('1', 'checkbox', 'skalgrisenbliveklogere', '', '', 'Gem til scootergrisen', 'blablablacheckbox', '', $sidstetilstand)
+         . input('1', 'checkbox', 'skalgrisenbliveklogere', '', '', 'Gem VIN til scootergrisen', 'blablablacheckbox', '', $sidstetilstand)
          . input('1', 'submit', 'qqqqqqqqq_sendknap', 'Undersøg VIN', '', 'rykind', 'qqqqqqqqq_sendknap')
          //. input('1', 'button', 'qqqqqqqqq_resetknap', 'Ryd', '', 'rykind', 'qqqqqqqqq_resetknap', '', 'onclick="fejl_sogetekst.value=\'\';"')
          . input('1', 'reset', 'qqqqqqqqq_resetknap', 'Ryd', '', 'rykind', 'qqqqqqqqq_resetknap', '', '')
@@ -836,13 +829,13 @@ var_dump($vin);
          if(isset($_POST["skalgrisenbliveklogere"])){
 
             // gem først til fil som backup hvis mysql ikke virker
-            gemvinifil('gem', $GLOBALS['setup']['vinsogninger'], $tid . ' : ' . $vin . ' : ' . $kommentartilvin . "\r\n");
+            //gemvinifil('gem', $GLOBALS['setup']['vinsogninger'], $tid . ' : ' . $vin . ' : ' . $kommentartilvin . "\r\n");
             $indhold .= gemvinidatabase($vin, $kommentartilvin, $tid);
 
          }else{
 
             // gem først til fil som backup hvis mysql ikke virker
-            gemvinifil('gem', $GLOBALS['setup']['vinsogninger'], $tid . ' : ' . '[Valgt ikke at gemme]' . "\r\n");
+            //gemvinifil('gem', $GLOBALS['setup']['vinsogninger'], $tid . ' : ' . '[Valgt ikke at gemme]' . "\r\n");
             $indhold .= gemvinidatabase('[Valgt ikke at gemme]', $kommentartilvin, $tid);
 
          }
@@ -2344,7 +2337,7 @@ E = ?
             array('4+5',     '?',      '
 AJ = Cello/Allo
 AD = Jet 4
-AE = Sym Orbit II S
+AE = Sym Orbit II S (4 takt)
 
 AF = måske Orbit/Symply
 AY = Symphony
@@ -2588,16 +2581,16 @@ CH1 = city 4T (ligner 104T)
 ? = Hawk X-Race
 
 BR8
-BR9 (303R 150ccm)
+BR9 (303R 150 cm³)
 BF8
 BF9
 BK8
-BK9 (delivery 150ccm)
+BK9 (delivery 150 cm³)
 BH8
 
-GA5 GF5 GI5 GE5 BH1 BR1 BK1 (49,3ccm)
+GA5 GF5 GI5 GE5 BH1 BR1 BK1 (49,3 cm³)
 
-GF9 GI9 GE9 BH5 (82,4ccm)
+GF9 GI9 GE9 BH5 (82,4 cm³)
 ')
            ,array('7+8',     '?',          '
 25 = ?
@@ -2628,7 +2621,7 @@ FT = ?
 LXM:
 AJ = Cello/Allo
 AD = Jet 4
-AE = Sym Orbit II S
+AE = Sym Orbit II S (4 takt)
 )
 
 ukendt 1-3 :
@@ -2640,7 +2633,7 @@ AZ = Symphony SR
 FW = Tonik
 BL = Jet Euro X
 
-ukendt 1-3 over 50 ccm :
+ukendt 1-3 over 50 cm³ :
 HE = Attila RS-21 EFI
 AD = Jet 4
 LM = GTS/Joymax
@@ -2648,12 +2641,12 @@ LH = HD
 LA = Joyride
 ')
            ,array('6+7',     '?',          '
-05 = 50 ccm
-11 = 125 ccm
-12 = 125 ccm (124,5 ccm)
-15 = 150 ccm (149,5 ccm)
-18 = 200 ccm (171,2 ccm)
-25 = 250 ccm
+05 = 50 cm³
+11 = 125 cm³
+12 = 125 cm³ (124,5 cm³)
+15 = 150 cm³ (149,5 cm³)
+18 = 200 cm³ (171,2 cm³)
+25 = 250 cm³
 ')
            ,array('8',     '?',          '
 A = ? (set ved Sym Tonik)
@@ -3031,11 +3024,11 @@ A1AAJA01 = Jet Force 45km F - Med SBC
 A1AAJB00 = Jet Force 45km  
 A1AAJB00 = Jet Force 45km  
 E1A000 = Electric 45km  
-G1AA000 = Elyseo 45km 50 ccm 
+G1AA000 = Elyseo 45km 50 cm³ 
 G1AA1000 = Elystar TSDI 45km  
 G1AAJ000 = Elystar TSDI 45km  
 G1AAP000 = Elystar Advance 45km  
-G2AA000 = Elyseo Mc 100 ccm 
+G2AA000 = Elyseo Mc 100 cm³ 
 L1ABAM000 = LUDIX ONE 10" 25KM  
 L1ABBA000 = LUDIX Elegance 14" 25KM  
 L1ABBM000 = LUDIX Classic 14" 25KM  
@@ -4289,7 +4282,7 @@ function checkforkendetegn($data){
    if(mb_strtoupper($data[0] . $data[1] . $data[2]) == 'PGO'){
 
       $indhold .= '<span style="color: darkred;">';
-      $indhold .= 'Efter som det indtastede stelnummer starter med PGO er det formodentligt fra en ældre PGO scooter fra før de brugte VIN. Du kan derfor ikke bruge dette stelnummeret her. De oplysninger du vil få er ikke rigtige.';
+      $indhold .= 'Efter som det indtastede stelnummer starter med PGO er det formodentligt fra en ældre PGO scooter fra før de brugte VIN. Du kan derfor ikke bruge dette stelnummeret her. De oplysninger du få vil ikke være rigtige.';
       $indhold .= '</span>';
 
    }else{
@@ -5106,8 +5099,8 @@ L4S
 ,'
 links til andre VIN checkere og andet info
 ' => '
-'.ahref('https://motorregister.skat.dk/dmr-front/appmanager/skat/dmr?_nfpb=true&_nfpb=true&_pageLabel=vis_koeretoej_side&_nfls=false', 'motorregister.skat.dk').' (søg på både nummerplade og stelnummer)
-'.ahref('http://selvbetjening.trafikstyrelsen.dk/', 'selvbetjening.trafikstyrelsen.dk').' (søg på både nummerplade og stelnummer) (ved nogle kan man se synsrapporter (nok kun 45 km/t))
+'.ahref('https://motorregister.skat.dk/dmr-front/appmanager/skat/dmr?_nfpb=true&_nfpb=true&_pageLabel=vis_koeretoej_side&_nfls=false', 'motorregister.skat.dk').' (søg på nummerplade og stelnummer)
+'.ahref('http://selvbetjening.trafikstyrelsen.dk/', 'selvbetjening.trafikstyrelsen.dk').' (søg på nummerplade og stelnummer) (ved nogle kan man se synsrapporter (nok kun 45 km/t))
 '.ahref('http://www.fstyr.biltorvet.dk/WebForm1.aspx', 'fstyr.biltorvet.dk').' (find typegodkendelser ud fra stelnummer, finder dog sjældent noget)
 
 '.ahref('http://www.nummerplade.net/', 'nummerplade.net').' (søg på både nummerplade og stelnummer)

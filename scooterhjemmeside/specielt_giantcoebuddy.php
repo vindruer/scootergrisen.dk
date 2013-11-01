@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "Giantco E-Buddy";
 $overskrift = "Giantco E-Buddy";
@@ -551,9 +551,9 @@ Sidste gang jeg prøvede en E-buddy var det som om at man ikke kunne accellere l
 Viseren på instrumentpanelet som viser opladningsniveauet hopper hurtigt op når man drejer tændingslåsen til ON og falder hurtigt ned når man drejer til OFF.
 Det er ikke ligesom benzinviser på min scooter som meget langsomt går op og ned.
 Det var lidt bakkede der hvor jeg kørte og da jeg skulle op af en måske lidt stejl bakke kørte den meget langsomt. Kun 10 km/t eller måske lidt hurtigere men det gik langsomt.
-Lige så snart den kørte lige ud eller ned af bakke kunne den køre fint hurtigt og accelere fint syns jeg.
+Lige så snart den kørte lige ud eller ned af bakke kunne den køre fint hurtigt og accelere fint syntes jeg.
 Jeg kunne godt mærke at den ligesom ikke har så meget kraft i sig som min egen scooter (Kymco Super 8 4T, 50 ccm) men den var meget sjov og køre på og kunne sagtens forstille mig man kunne have meget sjov ud af at køre på den og ikke mindst nyde hvor stille den er.
-Affjedringen var blød så det syns jeg var godt.
+Affjedringen var blød så det syntes jeg var godt.
 Bremserne var ikke specielt gode men bremse kunne de da.
 En sjov detalje er at det efter sædet er et klistermærke hvor der står noget om at man skal huske at skifte motorolie og bruge karburatorvæske hvilket man jo ikke skal på en elektriske scooter.
 Starter knappen på højre side at styret gør ikke noget. Jeg tænkte den måske blev brugt som horn men det gør den ikke.

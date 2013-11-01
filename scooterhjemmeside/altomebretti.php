@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "ebretti elektrisk scooter";
+$title = "ebretti scootere med elektrisk motor";
 $overskrift = "ebretti";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
@@ -22,7 +22,7 @@ $databasecenter = array(
       ,'pris'              => ens('pris', '13999', '16999', '', '')
       ,'hastighed'         => ens('hastighed', '25 og 45', '', '', '')
       ,'farver'            => ens('farver', 'sort grå hvid grøn pink rød', '', '', '')
-      ,'forhandlere'       => ens('forhandlere', 'http://www.ebretti.dk/?page=dealers', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
    ),'motor'               => array(
        'motormodel'        => ens('motormodel', 'JYS48V10-1500W', '', '', '')

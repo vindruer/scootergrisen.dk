@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "kymco 50 cm³ scootere";
+$title = "kymco scootere med 50 cm³ motor";
 $overskrift = "kymco";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
@@ -440,10 +440,10 @@ $databasecenter = array(
    ),'generelt'            => array(
        'model'             => ens('model', 'kymco k 12', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
-      ,'scootertype'       => ens('scootertype', '', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'SC10AE(DM)', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -540,7 +540,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'RFBSC10AE46000188 S08627-01', 'RFBSC10AE46000428 S08627-01', 'RFBSC10AE46000502 S08627-01', '')
+      ,'stelnummer'        => ens('stelnummer', 'RFBSC10AE46000188 S08627-01', 'RFBSC10AE46000428 S08627-01', 'RFBSC10AE46000502 S08627-01', 'RFBSC10AE46000196 (OS853)')
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '', '', '', '')
@@ -1427,6 +1427,7 @@ $databaseright = array(
    ,'agility el diagram'                => 'kymco_agility_eldiagram.pdf'
    ,'like eldiagram'                    => 'kymco_like_eldiagram.pdf'
    ,'like servicemanual'                => 'kymco_like_servicemanual.pdf'
+   ,'people servicemanual'              => 'kymco_people_servicemanual.pdf'
    ,'super 8 4T brugermanual'           => 'kymco_super8_4t_brugermanual.pdf'
    ,'super 8 4T servicemanual'          => 'kymco_super8_4t_servicemanual.pdf'
    ,'super 8 4T reservedele'            => 'kymco_super8_4t_reservedele.pdf'

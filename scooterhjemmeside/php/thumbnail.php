@@ -6,16 +6,16 @@
 
          //////////////////////////////////////////////////////////////////
         //                                                              //
-       //   Vær opmærksom på output før billedet fra include() filer   //
+       //    Vær opmærksom på output før billedet fra include filer    //
       //                                                              //
      //      Det kan betyde at billedet ikke vil blive vist          //
     //                                                              //
    //////////////////////////////////////////////////////////////////
 
 chdir('..');
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 if(!$GLOBALS['setup']['loggetind']){
 

@@ -13,12 +13,15 @@ html {
    background: #bbb repeating-radial-gradient(5px circle at 44.5px 111.5px, #999, transparent 50%, #999) no-repeat;
    background: #444 repeating-radial-gradient(5px circle at 63px 75px, #777, transparent 50%, #777) no-repeat;
 */
-   min-height: 100%; /* for at baggrunden skal fylde hele højden selv på siden med ikke så meget indhold */
-   background: #000 -webkit-repeating-linear-gradient(-143deg, rgba(0, 0, 0, 0.9) 0px, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0.9) 6px);
+/*   min-height: 100%; /* for at baggrunden skal fylde hele højden selv på siden med ikke så meget indhold */
+/*
+*/
+/*   background: #000 -webkit-repeating-linear-gradient(-143deg, rgba(0, 0, 0, 0.9) 0px, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0.9) 6px);*/
    background: #000 repeating-linear-gradient(-143deg, rgba(0, 0, 0, 0.9) 0px, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0.9) 6px);
-
-   /*font-size: 0;*/
    font-size: small;
+/*   background: white;*/
+
+   background: Background;
 }
 
 body {
@@ -32,7 +35,7 @@ body {
    clear: both;
    float: left;
    width: 100%;           /* width of whole page */
-   overflow: hidden;     /* This chops off any overhanging divs */  /* skyld i volumekontrol popup cutoff 1 */
+   /*overflow: hidden;     /* This chops off any overhanging divs */  /* skyld i volumekontrol popup cutoff 1 */
 }
 
 .rightmenu .colleft{ /* .colleft står langt ude til venstre */
@@ -49,6 +52,7 @@ body {
    margin-left: -200px;
    position: relative;
    right: 100%;
+   font-size: 0;
 }
 
 .rightmenu .col1wrap{ /* .col1wrap står lidt ude til venstre */
@@ -93,20 +97,8 @@ img {
    border: 0;
 }
 
-#footertekst {
-   background: #9D9D9D; /* fallback */
-   background-image: -webkit-repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.1) 2px, rgba(255, 255, 255, 0.1) 4px)
-                    ,-webkit-repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.1) 2px, rgba(255, 255, 255, 0.1) 4px);
-   background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.1) 2px, rgba(255, 255, 255, 0.1) 4px)
-                    ,repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.1) 2px, rgba(255, 255, 255, 0.1) 4px);
-}
-
 #footertekst, #footertekst a {
    text-align: center;
-}
-
-#footertekst, #footertekst a, #footertekst a:visited, #footertekst a:active {
-   color: #000;
 }
 
 .loggetind_pa_den_harde_made {
@@ -321,7 +313,6 @@ img {
 .counterosv {
    text-align: center;
    overflow-x: auto;
-   font-size: 0; /* undgå whitespace son kan udløse ledret scrollbar i IE10 */
 }
 
 .socialmedieholder {
@@ -407,9 +398,6 @@ img {
    text-align: center;
    overflow: hidden;
    min-width: 450px;
-}
-
-.filholdersub {
 }
 
 .filholder a {
@@ -604,9 +592,10 @@ div > .filholder:nth-of-type(2n+1) {
 
 .sideoverskriftlogo {
    float: left;
-   perspective: 150px;
-   -o-perspective: 150px;
    -webkit-perspective: 150px;
+   -ms-perspective: 150px;
+   -o-perspective: 150px;
+   perspective: 150px;
 }
 
 .sideoverskriftlogobillede {
@@ -622,7 +611,7 @@ div > .filholder:nth-of-type(2n+1) {
 
 .overskrifttitlemetadescriptionholder {
    margin-left: 84px; /* bredden på billedet + margin */
-   margin-right: 230px; /* bredden på login boks */
+   /*margin-right: 230px; /* bredden på login boks */
 }
 
 .title { /* h1 */
@@ -634,7 +623,7 @@ div > .filholder:nth-of-type(2n+1) {
    font-weight: bold;
 
    padding: 2px; /* tilføj plads (som text-shadow er bred) så skygge ikke bliver klippet */
-   color: #fff;
+   color: #000; /* for at farven i forummets style.php skal overskrives */
 }
 
 .metadescription { /* h2 */
@@ -646,7 +635,7 @@ div > .filholder:nth-of-type(2n+1) {
    font-weight: normal;
 
    padding: 1px; /* tilføj plads (som text-shadow er bred) så skygge ikke bliver klippet */
-   color: #fff;
+   color: #000; /* for at farven i forummets style.php skal overskrives */
 }
 
 .hrundersideoverskriftholder { /* hr */
@@ -658,6 +647,7 @@ div > .filholder:nth-of-type(2n+1) {
 .sideindholddel, .sideindholddeludenoverskrift {
    padding: 0 10px 1px;
    clear: both;
+color: black;
 }
 
 .sideindholddel {
@@ -955,7 +945,7 @@ form {
 .inputselect:focus,
 .inputselect option:focus,
 .gemknap:focus {
-   border-color: #000;
+   border-color: #000; /* giver problem i IE10 hvor størrelsen ændres så ting hopper på hjemmesiden */
 }
 
 #underholdningholder {
@@ -1008,7 +998,7 @@ form {
 }
 
 .video {
-   background: #000 url(../billeder/ikoner/flashbaggrund.gif) no-repeat center center;
+   background: #000 url(../billeder/ikoner/flashbaggrund.png) no-repeat center center;
    color: #fff;
    display: block;
    margin-left: auto;
@@ -1257,7 +1247,7 @@ button img {
 
 
 
-   background: rgba(0, 0, 0, 0.7);
+/*   background: rgba(0, 0, 0, 0.7);*/
 /* ligner lort
    background-image: -webkit-repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.2) 4px)
                     ,-webkit-repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.2) 4px);
@@ -1265,20 +1255,21 @@ button img {
 /*   background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.1) 4px)
                     ,repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.1) 4px);
 */
-/*   background: rgba(0, 0, 0, 0.75);*/
+   /*background: lightgrey;*/
 /*   background: black;*/
-
+/*
    background: -moz-linear-gradient(center top , rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)) repeat scroll 0% 0% transparent;
    background: -webkit-linear-gradient(-90deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)) repeat scroll 0% 0% transparent;
    background: -ms-linear-gradient(-90deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)) repeat scroll 0% 0% transparent;
    background: linear-gradient(center top , rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)) repeat scroll 0% 0% transparent;
-
+*/
+/*
    border-width: 1px 0px;
    border-style: solid;
    border-color: black;
    border-image: none;
    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1) inset;
-
+*/
 }
 
 .dropdownmenu .sub {
@@ -1303,16 +1294,24 @@ button img {
 .dropdownmenu a {
    display: block;
    text-decoration: none;
-   height: 31px;
+/*               height: 31px;*/
+
+
    border: 0 solid #2C5463;
+/*
    padding-left: 10px;
    padding-right: 10px;
-   line-height: 29px;
+*/
+padding: 1em;
+
+   /*line-height: 29px;*/
    cursor: pointer;
 
    /* for at undgå at langeordudenmellem ikke går ud over kanten */
-   overflow: hidden;
+/*            overflow: hidden;*/
    text-overflow: ellipsis;
+
+           padding: 5px 10px;
 }
 
 .ulpunktb,
@@ -1322,7 +1321,7 @@ button img {
 
 .ulpunkta ul {
    position: absolute;
-   top: 31px;
+/*          top: 31px;*/
    left: 0;
    width: 158px;
 }
@@ -1335,8 +1334,8 @@ ul.ulpunktc {
 
 .ulpunktb a {
    height: auto;
-   line-height: 1em;
-   padding: 5px 10px;
+/*             line-height: 1em;*/
+         /*   padding: 5px 10px;*/
    width: 138px;
 }
 
@@ -1345,7 +1344,7 @@ ul.ulpunktc {
 }
 
 .ulpunkta > li > a {
-   color: #fff;
+/*   color: #fff;*/
 }
 
 .ulpunktb > li:hover .sub {
@@ -1354,31 +1353,27 @@ ul.ulpunktc {
 
 .dropdownmenu > li a {
    color: white;
-   background: #3B424C;
+/*   background: #3B424C;*/
 }
 
 .dropdownmenu li:hover > a {
    color: white;
-   background: #3B424C;
+/*   background: #3B424C;*/
 }
 
 .ulpunkta li:hover > a,
 .ulpunktb li:hover > a,
 .ulpunktc li:hover > a {
    color: white;
-   background: SaddleBrown;
-   background: #3B424C;
-   background: Crimson;
-   background: #3C14DC;
 /*   box-shadow: inset 2px 0 2px rgba(0, 0, 0, 0.5), inset 0 2px 2px rgba(0, 0, 0, 0.5);*/
 
+   background: #666; /* fallback */
    background: rgba(0, 0, 0, 0.5);
-
 }
 
 .ulpunkta > li:hover > a {
    /* øverst menu punkt */
-   box-shadow: inset 2px 0 2px rgba(0, 0, 0, 0.5), inset 0 2px 2px rgba(0, 0, 0, 0.5);
+/*   box-shadow: inset 2px 0 2px rgba(0, 0, 0, 0.5), inset 0 2px 2px rgba(0, 0, 0, 0.5);*/
 }
 
 .ulpunktb,
@@ -1400,43 +1395,6 @@ ul.ulpunktc {
    text-align: center;
    margin-right: auto;
    margin-left: auto;
-}
-
-.nyloginindhold {
-   position: absolute;
-   top: 10px;
-   right: 10px;
-   z-index: 1;
-}
-
-.nyloginindhold label {
-   margin-right: 5px;
-}
-
-.nyloginindhold input {
-   vertical-align: middle;
-   float: right;
-   margin: 0;
-   padding: 0;
-}
-
-.nyloginindhold a, .nyloginindhold a:visited, .nyloginindhold a:active {
-   color: black;
-}
-
-.loginhoverform, .logudhoverform {
-   background-color: white;
-   background-color: rgba(255, 255, 255, 1);
-   padding: 5px;
-   color: black;
-}
-
-.loginhoverform a {
-   color: black;
-}
-
-.loginhover:hover .loginhoverform {
-   display: block;
 }
 
 .flag {
@@ -1535,14 +1493,15 @@ ul.ulpunktc {
 
 .doraemonhasspokenitbilled {
    float: left;
+   margin: 1em 1em 0 1em;
 }
 
 .doraemonhasspokenit {
    display: block;
-   background: lightgreen;
-   background: rgba(0, 0, 0, 0.3);
+   background: #dcdcdc; /* fallback */
+   background: rgba(0, 0, 0, 0.1);
    padding: 1em;
-   margin-left: 138px; /* billede bredde + margin */
+/*   margin-left: 138px; /* billede bredde + margin */
    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.15);
 }
 
@@ -1564,7 +1523,7 @@ ul.ulpunktc {
 .spotlysholderholderb {
    padding: 4px;
    margin: 0 auto;
-   width: 1000px;
+   width: 800px;
 }
 
 .spotlysholderholderb a,
@@ -1593,6 +1552,7 @@ ul.ulpunktc {
 }
 
 .spotlyoverskrift {
+   display: block;
    font-weight: bold;
    color: maroon;
 }
@@ -1625,20 +1585,22 @@ ul.ulpunktc {
 
 .sogesogesubmit {
    color: #036;
-   margin: 0;
    padding: 0;
    border: 0;
    border-left: none;
    border-top-left-radius: 0;
    border-bottom-left-radius: 0;
-   width: 16px;
-   height: 16px;
    background: url(../billeder/ikoner/forstorrelsesglas2.png) no-repeat center center;
    /*position: relative;*/
+   width: 16px;
+   height: 16px;
    left: 157px;
-   margin-left: -21px;
+   margin: 0 0 0 -21px; /* billede bredde + ønskede margin til højre kant */
+}
+
+.sogesogefelt, .sogesogesubmit {
    vertical-align: middle;
-   font-size: 0;
+/*   font-size: 0;*/
 }
 
 .logudknap {
@@ -1661,7 +1623,7 @@ ul.ulpunktc {
    border-color: #555;
 }
 
-.orphusholder {
+.orphusogrssholder {
    text-align: center;
    margin-top: 10px;
 }
@@ -1750,6 +1712,8 @@ ul.ulpunktc {
 .harstemt {
    text-align: center;
    margin: 0 auto;
+   background: red;
+   color: white;
 }
 
 .thumbnailtekst {
@@ -1914,10 +1878,7 @@ ul.ulpunktc {
 }
 
 .background_color_8 {
-   background: #fff; /* fallback farve når rgba ikke virker */
-   background: rgba(255, 255, 255, 0.5);
-   background: rgba(255, 255, 255, 0.8);
-   background: #fff;
+   background-color: #fff;
 }
 
 .background_color_9 {
@@ -1960,7 +1921,8 @@ ul.ulpunktc {
 }
 
 .fontfamily_6 { /* h1, h2 */
-   font-family: "tekton pro", tahoma, sans-serif;
+/*   font-family: "tekton pro", tahoma, sans-serif;*/
+font-family: palatino, "big caslon medium", corbel, serif;
 }
 
 .fontfamily_7 { /* h3, h4 */
@@ -2021,13 +1983,6 @@ ul.ulpunktc {
 
 .underline {
    text-decoration: underline;
-}
-
-.backgroundimage1 {
-   background-image: url(../billeder/ikoner/billed0673.png);
-   background-repeat: no-repeat;
-   background-position: bottom right;
-   background-size: 100% 100%;
 }
 
 .baggrundlinear1 {
@@ -2222,6 +2177,7 @@ ul.ulpunktc {
    border-radius: 12px; /* passer til den border-radius som caniuse bruger */
    background: #EDE1CC;
    margin: 1em auto;
+   text-align: center;
 }
 
 .caniuseoverskrift {
@@ -2244,6 +2200,7 @@ ul.ulpunktc {
 #afspilningsliste {
    float: left;
    margin-right: 2em;
+   margin-bottom: 2em;
    white-space: nowrap;
    background: rgba(0, 0, 0, 0.1);
    border: 1px solid rgba(0, 0, 0, 0.3);
@@ -2302,6 +2259,7 @@ ul.ulpunktc {
    text-align: center;
    /* perspective virker af en eller anden grund kun her i Chrome */
    -webkit-perspective: 900px;
+   -ms-perspective: 900px;
    -o-perspective: 900px;
    perspective: 900px;
 }
@@ -2312,6 +2270,7 @@ ul.ulpunktc {
    text-decoration: none;
    /* perspective virker af en eller anden grund kun her i Firefox */
    -webkit-perspective: 900px;
+   -ms-perspective: 900px;
    -o-perspective: 900px;
    perspective: 900px;
 }
@@ -2326,7 +2285,6 @@ ul.ulpunktc {
    /* et eller andet margin problem med <figure> */
    margin: 0;
    vertical-align: bottom;
-
 }
 
 /*.nywebgldemoholder > a > figure > img {*/
@@ -2431,11 +2389,11 @@ screen and (max-width: 960px) {
    .linkknap {
       font-size: x-small !IMPORTANT;
    }
-
+/*
    .bordertype1 {
       border-color: transparent;
    }
-
+*/
    .sideoverskriftholder {
       margin-left: 0;
       margin-right: 0;
@@ -2446,7 +2404,6 @@ screen and (max-width: 960px) {
 
    .dropdownmenu {
       margin: 0 !IMPORTANT;
-      padding: 0 !IMPORTANT;
       border-radius: 0 !IMPORTANT;
       box-shadow: none !IMPORTANT;
       border: none !IMPORTANT;
@@ -2480,10 +2437,6 @@ screen and (max-width: 960px) {
 
    .overskriftfordatacenter {
       font-size: medium !IMPORTANT;
-   }
-
-   .nyloginindhold {
-      /*display: none;*/
    }
 
    .holdernoget .rightmenu .colleft {
@@ -2569,19 +2522,22 @@ screen and (max-width: 540px) {
       margin: 0 0 1em 0;
    }
 
+   .skiftmenusprog {
+      margin-top: 2em;
+      margin-bottom: 2em;
+   }
+
 	#dropdownmenu_dims {
       display: block;
       background: lightgrey url(../billeder/ikoner/dropdownmenu.png) no-repeat center center;
-      height: 52px;
+/*      height: 62px; /* dobbelte af .dropdownmenu a så der er noget og trykke på */
       cursor: pointer;
-      margin-bottom: 5px;
+      margin-bottom: 1em;
+
 	}
 
-   #dropdownmenu_dims:hover > .dropdownmenu {
-      display: block;
-   }
-
 	.dropdownmenu {
+      padding: 0 !IMPORTANT;
       display: none;
       background-color: #ccc;
 	}
@@ -2589,6 +2545,38 @@ screen and (max-width: 540px) {
 	.dropdownmenu li {
       float: none;
 	}
+
+   #dropdownmenu_dims, .dropdownmenu a {
+/*               height: 62px; /* skyld i at linie 2 bliver klippet */
+/*
+               line-height: 58px;
+               line-height: 4em;
+               line-height: 8em;
+*/
+padding-top: 2em;
+padding-bottom: 2em;
+   }
+
+   #dropdownmenu_dims:hover {
+      padding-top: 0;
+      padding-bottom: 0;
+   }
+
+   #dropdownmenu_dims:hover > .dropdownmenu {
+      display: block;
+   }
+
+   .ulpunkta ul {
+      top: auto;
+   }
+
+   .ulpunktb a {
+      /*line-height: 2em;*/ /* eller bliver linie 2 klippet */
+   }
+
+   ul.ulpunktc {
+      top: -1px; /* eventuel border skal trækkes fra her */
+   }
 
    .holdernoget .rightmenu .col1 {
       margin: 0;
@@ -2607,7 +2595,16 @@ screen and (max-width: 540px) {
    }
 
    .breadcrumbs {
-      display: none;
+      font-size: xx-small;
+      line-height: 2em;
+   }
+
+   .breadcrumbs span:nth-child(odd) {
+      /*display: block;*/
+      white-space: nowrap;
+   }
+
+   .skiftmenusprog {
    }
 
    .overskrifttitlemetadescriptionholder {
@@ -2669,7 +2666,8 @@ screen and (max-width: 540px) {
 
    .tableholder img {
       width: 16px !IMPORTANT;
-      height: 16px !IMPORTANT;
+      /*height: 16px !IMPORTANT;*/
+      height: auto !IMPORTANT;
    }
 
    .filmliste {
@@ -2732,12 +2730,8 @@ screen and (max-width: 540px) {
       height: 53px !IMPORTANT;
    }
 
-   body {
-      margin-bottom: 72px !IMPORTANT; /* giv lidt plads til genindlæs og pilop */
-   }
-
    .navigationsknapper {
-      display: block;
+      /*display: block;*/
    }
 
    #reklameholder {
@@ -2762,6 +2756,26 @@ screen and (max-width: 540px) {
       margin: 0 !IMPORTANT;
       border: 0 !IMPORTANT;
       border-radius: 0 !IMPORTANT;
+   }
+
+   .altdetoverste {
+      border-bottom: 1px dotted #7c7c7c !IMPORTANT;
+   }
+
+   .nywebgldemoholder_a_figure_img {
+      border: 0;
+   }
+
+   .lidtpladslodret {
+      height: 5px;
+   }
+
+   .megetlidtpladslodret {
+      height: 2px;
+   }
+
+   .lidtpladsvandret {
+      margin-left: 5px;
    }
 
 }
@@ -2917,9 +2931,7 @@ screen and (max-width: 540px) {
 }
 
 .altdetoverste {
-   color: white;
-   background: #9D9D9D; /* fallback */
-   background: #fff; /* fallback */
+
 /*
    background-image: -webkit-repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.7) 0px, rgba(255, 255, 255, 0.8) 2px, rgba(255, 255, 255, 0.7) 6px);
 
@@ -2933,9 +2945,7 @@ screen and (max-width: 540px) {
 }
 
 .altdetoversteb {
-   background: rgba(255, 255, 255, 0.5);
-   background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7));
-   background: rgba(0, 0, 0, 0.5);
+
 }
 
 .soiufsdiuf, .soiufsdiuf option {
@@ -2967,9 +2977,6 @@ screen and (max-width: 540px) {
 
 
 
-#cubeholder {
-}
-
 .cubecontainer {
 /*   overflow: hidden;*/
    margin: 0 auto;
@@ -2979,7 +2986,7 @@ screen and (max-width: 540px) {
   position: relative;
 /*  border: 1px solid #CCC;*/
   -webkit-perspective: 1000px;
-     -moz-perspective: 1000px;
+      -ms-perspective: 1000px;
        -o-perspective: 1000px;
           perspective: 1000px;
 
@@ -3109,7 +3116,7 @@ screen and (max-width: 540px) {
    -webkit-animation-iteration-count: infinite;
    -webkit-animation-duration: 4s;
    -webkit-transform-style: preserve-3d;
-   -webkit-animation-direction: linear;
+   -webkit-animation-direction: normal;
    -webkit-transform-origin: center center;
 
    animation-name: octocatspinner;
@@ -3117,7 +3124,7 @@ screen and (max-width: 540px) {
    animation-iteration-count: infinite;
    animation-duration: 4s;
    transform-style: preserve-3d;
-   animation-direction: linear;
+   animation-direction: normal;
    transform-origin: center center;
 }
 
@@ -3128,9 +3135,9 @@ screen and (max-width: 540px) {
    color: white;*/
 }
 
-.breadcrumbs a, .breadcrumbs a:active, .breadcrumbs a:visited {
-   color: white;
-   text-decoration: none;
+.breadcrumbs, .breadcrumbs a, .breadcrumbs a:active, .breadcrumbs a:visited {
+/*   color: #000; /* for at farven i forummets style.php skal overskrives */
+/*   text-decoration: none;*/
 }
 
 .breadcrumbs a:hover {
@@ -3149,4 +3156,50 @@ screen and (max-width: 540px) {
       0 1px 0 black,
       1px 1px 0 black
       ;
+}
+
+.ratingoversigtingendata {
+   text-align: center;
+   margin: 1em 0;
+}
+
+/*
+   .holdernoget .rightmenu .col2 {
+      display: none;
+   }
+
+   .holdernoget .rightmenu .colleft {
+      float: left;
+      width: 100%;
+      margin-left: 0;
+      position: relative;
+      right: 0;
+   }
+
+   .holdernoget .rightmenu .col1wrap {
+      float: left;
+      width: 100%;
+      position: relative;
+      left: 0;
+   }
+
+   .holdernoget .rightmenu .col1 {
+      margin: 0 10px;
+   }
+
+*/
+/*
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+* {
+   outline: 1px solid black;
+}
+*/
+
+.breadcrumbspacer {
+   color: rgba(0, 0, 0, 0.5);
+   margin: 0 .5em;
 }

@@ -1,14 +1,14 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_karburator.png';
+$setup['nogetikon']               = 'ikoner/ikon_karburator2.png';
 
 $title = "karburator";
 $overskrift = "karburator";
-$metadescription = "forklaring af CV og slide karburatorer som findes på scootere";
+$metadescription = "forklaring af CV og slide karburatorer som findes på scootere og knallerter";
 
 $databasecenter = array(
 
@@ -20,7 +20,7 @@ Karburatorens opgave er at blande benzin og luft og samtidig forstøve benzinen 
 
 Der findes primært 2 typer af karburatore på scootere/knallerter.
 "Slide" typen og CV typen.
-'.visbilled('1', 'billed0014.jpg', 'slide CV type karburator', false, true).'
+'.visbilled('1', 'billed0014.jpg', 'tværsnit af slide og CV karburator typer', false, true).'
 
 "Slide" typen findes primært på 2 takt scootere.
 CV typen findes primært på 4 takt scootere.
@@ -32,7 +32,7 @@ Her ses en "slide" karburator og en CV karburator.
 '.
 galleriholder(array(
     galleri('highslide', '', 'billed2659.jpg', array('slide karburator', 'fra Peugeot Buxy'))
-   ,galleri('highslide', '', 'billed1764.jpg', array('CV karburator', 'fra Kymco Super 8'))
+   ,galleri('highslide', '', 'billed1764.jpg', array('CV karburator', 'fra Kymco Super 8 4T'))
 ))
 .'
 "Slide" typen kan kendes på at gaskablet er monteret øverst.
@@ -45,7 +45,7 @@ dele
 '.visflash('0', 'http://www.youtube.com/watch?v=YnzzUOcXqLY', 'adskildelse af 18,5 mm CV karburator', true).'
 '.
 galleriholder(array(
-    galleri('highslide', '', 'billed1785.jpg', array('karburatorens dele', ''))
+    galleri('highslide', '', 'billed1785.jpg', array('karburatorens dele', 'CV karburator fra Kymco Super 8 4T'))
    ,galleri('highslide', '', 'billed0413.jpg', array('karburatorens dele', 'eksploderet tegning'))
    ,galleri('highslide', '', 'billed0423.jpg', array('tværsnit', ''))
    ,galleri('highslide', '', 'billed0479.jpg', array('tværsnit', 'luftgennemstrømning'))
@@ -59,9 +59,9 @@ delenes virkningsområde
 ' => '
 Motoren har brug for forskellig mængde benzin alt efter om motoren skal startes fra kold, køre i tomgang, accelerer, kører roligt eller med fuld gas.
 Hoveddysen er karburatorens primære kilde til benzin ved normal kørsel men der er ikke nok vakuum til at suge nok benzin op fra hoveddysen i tomgang og meget lav hastighed.
-Derfor har karburatoren forskellige "hjælpe systemer" for at hjælpe ved kold start, tomgang, lav hastighed og ved acceleration.
+Derfor har karburatoren forskellige hjælpe systemer for at hjælpe ved kold start, tomgang, lav hastighed og acceleration.
 
-Hoveddysen, tomgangsdysen, nålen, luftskruen/blandingsskruen virker ved forskellige motor hastigheder og om de forskellige systemer bliver brugt kommer an på hvor meget der drejes på gashåndtaget og dermed hvor hurtigt motoren kører.
+Hoveddysen, tomgangsdysen, nålen, luftskruen/blandingsskruen virker ved forskellige motor hastigheder og om de forskellige hjælpe systemer bliver brugt kommer an på hvor meget der drejes på gashåndtaget og dermed hvor hurtigt motoren kører.
 
 Her kan du se hvornår de enkelte dele har betydning for benzin levering til motoren.
 '.visbilled('1', 'billed0431.jpg', 'karburator delenes virknings område', false, true).'
@@ -69,9 +69,11 @@ Ved tomgang (gashåndtaget er sluppet) er det kun luftskruen/blandingsskruen og 
 
 Ved medium hastighed (gashåndtaget er drejet halvt) er det nålens position i nåledysen som har mest at sige.
 
-Ved fuld gas (gashåndtaget er drejet helt) er det kun hoveddysen som bestemmer hvor meget benzin der skal leveres til motoren.
+Ved fuld gas (gashåndtaget er drejet helt) er det hullet i hoveddysen som bestemmer hvor meget benzin der maksimalt kan leveres til motoren.
 
-Her ses delenes virkningsområde vist på en "slide" karburator alt efter hvor meget gasspjældet er åbnet (altså hvor meget gashåndtaget er drejet).
+
+
+Her ses delenes virkningsområde vist på en "slide" karburator alt efter hvor meget gasspjældet er oppe (altså hvor meget gashåndtaget er drejet).
 '.visbilled('1', 'billed1084.jpg', 'karburator delenes virknings område', false, true).'
 '
 
@@ -91,26 +93,27 @@ På "slide" karburatorer justeres forsnævringen ved at dreje på gashåndtaget.
 På CK karburatorer justeres forsnævringen automatisk alt efter luftgennemstrømningen.
 
 '.afsnit('prøv selv venturi effekten','
-Hvis luft hastigheden stiger så falder trykket.
+Når lufthastigheden stiger så falder trykket.
 
-Prøv at hold 2 ark papir parallelt et stykke fra hinanden og pust imellem dem og se hvad der sker.
-Du kan også prøve at holde et papir i 2 af hjørnerne og puste tæt hen over det.
-'.visbilled('1', 'billed0433.jpg', 'venturi effekten med papir', false, true).'
+Prøv at hold 2 ark papir parallelt et stykke fra hinanden og pust ned imellem dem og se hvad der sker.
+Prøv også at hold et papir i 2 af hjørnerne og puste tæt hen over det og se hvad der sker.
+
 Det der sker kaldes "venturi effekten".
+'.visbilled('1', 'billed0433.jpg', 'venturi effekten med papir', false, true).'
 ').'
 '
 
 ,'
 data
 ' => '
-Her ses karburator data for Kymco Super 8.
-'.visbilled('1', 'billed0411.jpg', 'karburator data kymco super 8', false, true).'
+Her ses karburator data for Kymco Super 8 4T.
+'.visbilled('1', 'billed0411.jpg', 'karburator data kymco super 8 4T', false, true).'
 Skemaet fortæller os at karburatoren har en indre diameter på 18,5 mm.
 At den er af CVK typen.
 Svømmer højden skal være 10 mm fra karburator kanten.
 Hoveddysen har størrelse #K80 hvis den er begrænset og K82 hvis den er ubegrænset.
 Tomgangsdysen har størrelse #35.
-Motoren skal køre med 1900 o/min i tomgang.
+I tomgang skal motoren køre med 1900 o/min.
 Gashåndtaget skal kunne bevæges 2-6 mm uden at det påvirker vippegasspjældet.
 Blandingsskruen skal være skruet 1,5 til 2,5 omgange ud fra bunden.
 
@@ -138,10 +141,10 @@ benzinhane
 ,'
 dyser
 ' => '
-I bunden af karburatoren sidder benzindyserne.
+I bunden af karburatoren sidder benzindyserne som oftes blot kaldes dyser.
 
-En dyse er et hul med en bestemt form og bestemt størrelse indre diameter.
-Nogle dyser sidder fast i karburatoren og kan ikke skrues ud mens andre har gevind så de kan skrues ud og byttes med an anden størrelse.
+En dyse er et hul med en bestemt form og bestemt diameter.
+Nogle dyser sidder fast i karburatoren og andre kan skrues ud og byttes med en dyse med større eller mindre hul.
 '.
 galleriholder(array(
     galleri('highslide', '', 'billed0412.jpg', array('gennemskåret hoveddyse', ''))
@@ -239,7 +242,6 @@ Her er nogle eksempler på dyse størrelser.
 .visfil('1', 'scooterhjemmeside/download/dyser_suzuki.png', 'Suzuki')
 .'
 ').'
-Hvis du har mere info om dyse størrelser på så skriv gerne i '.forummet().' eller '.kontaktmig().'.
 '
 
 ,'
@@ -333,9 +335,9 @@ galleriholder(array(
 ))
 .'
 '.afsnit('videoer','
-'.ahref('http://www.youtube.com/watch?v=5p8qluBZqhI', 'Accelerator pumpen sprøjter benzin', '', true).'
+'.ahref('http://www.youtube.com/watch?v=5p8qluBZqhI', 'Accelerator pumpen sprøjter benzin', false, true).'
 
-'.ahref('http://www.youtube.com/watch?v=hOF1s5jlB9Q', 'Accelerator pumpen presses ned når man drejer gashåndtaget/vippegasspjældet', '', true).'
+'.ahref('http://www.youtube.com/watch?v=hOF1s5jlB9Q', 'Accelerator pumpen presses ned når man drejer gashåndtaget/vippegasspjældet', false, true).'
 ').'
 '
 
@@ -459,7 +461,7 @@ Når man justere på blandingsskruen så er det benzin og luft mængden der komm
 De 3 små huller er også fra tomgangskredsløbet men før blandingsskruen og de er placeret lige bag vippegasspjældet når det er lukket.
 Disse huller påvirkes ikke af blandingsskruen.
 
-'.ahref('http://www.youtube.com/watch?v=vvSWSnpcBEE', 'Video : Når vippegasspjældet åbnes vil de 3 små huller komme mere og mere tilsyne', '', true).'
+'.ahref('http://www.youtube.com/watch?v=vvSWSnpcBEE', 'Video : Når vippegasspjældet åbnes vil de 3 små huller komme mere og mere tilsyne', false, true).'
 
 Her ses hullet hvor tomgangsdysen skrues i, i bunden af karburatoren.
 Det er dette hul som har forbindelse med de 4 små huller.
@@ -472,7 +474,7 @@ gasspjæld
 Gasspjældet er den del inden i karburatoren som bevæger sig når der drejes på gashåndtaget.
 
 '.afsnit('dele og navne','
-På grund af "slide" og CV karburatorens forskellige opbygning syns jeg det har været forvirrende når folk har skrevet om gasspjæld da gasspjældet er forskellige dele på de to typer karburatorer.
+På grund af "slide" og CV karburatorens forskellige opbygning syntes jeg det har været forvirrende når folk har skrevet om gasspjæld da gasspjældet er forskellige dele på de to typer karburatorer.
 
 På en "slide" karburator er gaskablet forbundet med en stempel ventil.
 På en CV karburator er gaskablet forbundet med en vippe ventil.
@@ -525,8 +527,6 @@ Her ses delene i et el diagram fra Sym Jet.
 
 Jeg forstiller mig at "thermo swtich" er afbrudt om sommeren og dermed får karburatorvarmeren ikke strøm og først når temperaturen kommer under et bestemt niveau tilsluttes strømmen til karburatorvarmeren som bliver varm og varmer karburatoren.
 
-Hvis du ved noget mere om karburatorvarmer, "power filter" eller "thermo swtich" så '.kontaktmig().' gerne.
-
 På scootere med væskekøling kan karburatoren i stedet for en karburatorvarmer være forbundet med vandpumpen med 2 slanger for at få varm kølervæske ind i karburatoren.
 
 
@@ -575,12 +575,12 @@ galleriholder(array(
     galleri('highslide', '', 'billed3102.jpg', array('automatisk choker', ''))
 ))
 .'
-'.ahref('http://www.youtube.com/watch?v=RhVK-u-LyjA', 'Video : her ses den automatisk choker når den tilsluttes strøm (videoen kører hurtigere end normalt)', '', true).'
+'.ahref('http://www.youtube.com/watch?v=RhVK-u-LyjA', 'Video : her ses den automatisk choker når den tilsluttes strøm (videoen kører hurtigere end normalt)', false, true).'
 
 Her ses hvordan nålen lukker for benzin hullet og ventilen lukker for luft gennemstrømningen.
 '.visbilled('1', 'animation0018.gif', 'automatisk choker animation', false, true).'
 
-'.ahref('http://www.youtube.com/watch?v=z23hlj6CQH0', 'Video : her kan man rigtig se hvordan den automatiske choker virker', '', true).'
+'.ahref('http://www.youtube.com/watch?v=z23hlj6CQH0', 'Video : her kan man rigtig se hvordan den automatiske choker virker', false, true).'
 '.visbilled('1', 'billed0487.jpg', 'karburator automatisk choker forklaring', false, true).'
 Nålen lukker for benzinen.
 Ventilen lukker for luften.
@@ -607,7 +607,7 @@ Den ene ledning er forbundet med batteriets plus (+) terminal (når tændingslå
 Den anden ledning er forbundet med en modstand og derefter videre til CDI boksen.
 Modstanden gør at den automatiske choker kun får 6-7 volt i stedet for batteriets 12-14 volt.
 
-På andre scootere kan den automatisk choker få vækselstrøm fra generatoren også gennem en modstand.
+På andre scootere kan den automatisk choker få vekselstrøm fra generatoren også gennem en modstand.
 
 Det skulle ikke have nogen betydning hvordan den automatisk choker drejes andet end at så passe den bedst hvis der for eksempel sidder et gummi hus over karburatoren.
 '
@@ -623,7 +623,7 @@ galleriholder(array(
 .'
 Der er 2 huller i bunden af stemplet.
 Det midterste hul er til nålen.
-Det andet hul er så noget af luften over membran kan blive suget ud og da der er atmosfærisk luft under membranen betyder det at stemplet og nålen bliver løftet.
+Det andet hul er så luften over membran kan suges ud og da der er atmosfærisk luft under membranen betyder det at stemplet og nålen bliver løftet.
 Jo hurtigere luften suges igennem karburatoren jo mere vakuum vil der opstå og jo højere vil stemplet og nålen rejse sig.
 '.
 galleriholder(array(
@@ -685,6 +685,8 @@ galleriholder(array(
 ))
 .'
 Her ses at der sidder en klips i hver ende som sørger for at slangen bliver siddende på studsen.
+Læg mærke til at slangen er lavet i 2 lag af forskelligt materiale.
+Inderste er et tykt gummi rør og uden på er der et tynd plastik lag i et andet materiale.
 '.
 galleriholder(array(
     galleri('highslide', '', 'billed1857.jpg', array('benzinslange', ''))
@@ -699,21 +701,19 @@ Da jeg skildte min CV karburator ad fandt jeg ud af at der er 2 fjedre som minde
 Jeg blev itvivl om hvilken fjeder der skulle sidde hvor.
 
 Ved air cut off valven sidde denne fjeder.
-Den har den tykkeste tråd og er derfor sværre at presse sammen end den anden fjeder.
+Den har en tykkeste tråd og er derfor sværre at presse sammen.
 '.visbilled('1', 'billed2660.jpg', 'CV karburator air cut off valve', false, true).'
 Ved accelerator pumpen sidder denne fjeder.
-Den er lidt længere og har 1 ekstra vending i forhold til den anden fjeder.
+Den har en tyndere tråd og er derfor lettere at presse sammen også har den 1 ekstra vending og er lidt længere.
 '.visbilled('1', 'billed2661.jpg', 'CV karburator accelerator pumpe', false, true).'
-
 Jeg er nogenlunde sikker på at den kraftige fjeder skal sidde ved air cut off valven og den slappe fjeder skal sidde ved accelerator pumpen.
-
-Hvis der er nogen som mener noget andet så er i velkommen til at '.kontaktemig().' så jeg kan rette det.
 '
 
 ,'
 gaskabel
 ' => '
-Her vises et gaskabel af den type som sidder på en scooter med CV karburator (mest på 4 takt).
+Her vises et gaskabel af den type som sidder på en scooter med CV karburator (findes mest på scootere med 4 takt motor).
+'.visbilled('1', 'billed3885.jpg', 'styr, gashåndtag og gaskabel på Kymco', false, true).'
 '.
 galleriholder(array(
     galleri('highslide', '', 'billed2870.jpg', array('gaskabel gashåndtag ende', 'den ende af gaskablet som sidder ved gashåndtaget'))
@@ -789,8 +789,6 @@ PD18J
 PD19J
 PZ17A
 ').'
-
-'.kontaktmig(1).' gerne hvis du kan hjælpe mig med at lave en liste med karburatormærker og typer.
 '
 
 ,'
@@ -800,22 +798,25 @@ filer
 '
 
 ,'
-engelsk oversatte ord
+danske og engelske ord
 ' => '
-Her ses danske og engelske ord for nogen af karburatorens dele.
+Her ses danske og engelske ord for nogle af karburatorens dele.
 
-Hoveddyse kaldes main jet.
-Tomgangsdyse kaldes idle jet eller slow jet.
-
-Nåledysen kaldes needle jet.
-Strålerør kaldes needle jet base.
-
-Luftskrue kaldes air screw eller pilot air screw.
-Blandingsskrue kaldes fuel mixture screw.
-
-Luftskrue og blandingsskrue har også den fælles betegnelse pilot screw.
-
-Pind som holder svømmer kaldes float pivot.
+'.
+box(array('200', '200')
+   ,array(
+       array('dansk', 'engelsk')
+      ,array('Hoveddyse', 'Main jet')
+      ,array('Tomgangsdyse', 'Idle jet<br>Slow jet')
+      ,array('Nåledysen', 'Needle jet')
+      ,array('Strålerør', 'Needle jet base')
+      ,array('Luftskrue', 'Air screw<br>Pilot air screw')
+      ,array('Blandingsskrue', 'Fuel mixture screw')
+      ,array('Luftskrue og blandingsskrue har også den fælles betegnelse...', 'Pilot screw')
+      ,array('? Svømmeraksel ?', 'Float pivot')
+   )
+)
+.'
 '
 
 );

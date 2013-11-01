@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "Serviceskemaer - Service";
 $overskrift = "Serviceskemaer - Service";
@@ -105,9 +105,15 @@ SAE10W/30.
 '
 
 ,'
-Giantco
+Giantco med 4 takt motor
 ' => '
 '.visbilled('1', 'billed3241.jpg', 'giantco 4 takt service skema', false, true).'
+'
+
+,'
+Giantco E-Buddy
+' => '
+'.visbilled('1', 'billed3875.jpg', 'giantco E-Buddy service skema', false, true).'
 '
 
 ,'

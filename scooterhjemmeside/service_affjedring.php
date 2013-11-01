@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "affjedring - Service";
 $overskrift = "affjedring - Service";
-$metadescription = "service af affjedring på scooter";
+$metadescription = "service af affjedring på scootere og knallerter, hvor meget olie der skal i rørene";
 
 $databasecenter = array(
 

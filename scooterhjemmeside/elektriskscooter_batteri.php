@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "batteri - Elektrisk scooter";
 $overskrift = "batteri - Elektrisk scooter";
@@ -285,7 +285,6 @@ Hvis du bestille hos rs components så skriv 00000000 som CVR nummer hvis du er 
 
 '.ahref('http://www.batteribyen.dk/hus-og-have-batterier/elektriske-koeretoejer').'
 '.ahref('http://victron.dk/group.asp?group=20&sort=&page=1').'
-'.ahref('http://www.vbat.co.uk/Deep-Cycle-AGM-GEL-Sealed-Lead-Acid-Batteries.asp').'
 '.ahref('http://stratosol.dk/category/batterier-20/').'
 '.ahref('http://kerychip.dk/oscommerce_st/catalog/index.php?cPath=32_71').'
 

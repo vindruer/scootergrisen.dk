@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "værktøj";
-$overskrift = "værktøj";
-$metadescription = "forklaring af forskelligt værktøj der bruges i forbindelse med scootere";
+$title = "værktøj til scootere og knallerter";
+$overskrift = "værktøj til scootere og knallerter";
+$metadescription = "forklaring af forskelligt værktøj der bruges på scootere og knallerter";
 
 $databasecenter = array(
 

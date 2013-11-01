@@ -1,13 +1,13 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $setup['sidetopbesked'] = 'Her på siden har jeg samlet de modeller som jeg næsten ikke har noget data på.<br>Det er ikke sikkert at billederne og dataen her på siden er rigtige, og det er heller ikke sikkert at alle modellerne har kunne fås i danmark.<br>Hvis du kender noget til nogen af dem, har billeder, filer eller andet så '.kontaktmig().' gerne.';
 
-$title = "modeller som mangler data";
-$overskrift = "modeller som mangler data";
+$title = "scooter og knallert modeller som mangler data";
+$overskrift = "scooter og knallert modeller som mangler data";
 $metadescription = "mindre kendte scooter/knallert modeller som jeg næsten ikke har noget information om";
 
 $databasecenter = array(
@@ -1561,15 +1561,15 @@ $databasecenter = array(
        'model'             => ens('model', 'Tugger', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
       ,'scootertype'       => ens('scootertype', '', '', '', '')
-      ,'varianter'         => ens('varianter', '', '', '', '')
+      ,'varianter'         => ens('varianter', '1A', '1B', '1D', 'V1, V2, V3, V4')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '45', '', '', '(stor knallert fås både som 30 km/t (2KW motor) og 45 km/t (4KW motor))')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
    ),'motor'               => array(
-       'motormodel'        => ens('motormodel', '', '', '', '')
-      ,'motortype'         => ens('motortype', '', '', '', '')
+       'motormodel'        => ens('motormodel', 'C.F.R', '', '', '')
+      ,'motortype'         => ens('motortype', 'elektrisk', 'CA2kW eller CA4000W', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
       ,'volume'            => ens('volume', '', '', '', '')
       ,'køling'            => ens('køling', '', '', '', '')
@@ -1580,7 +1580,7 @@ $databasecenter = array(
       ,'kompression'       => ens('kompression', '', '', '', '')
       ,'tomgang'           => ens('tomgang', '', '', '', '')
       ,'nomieffektogheste' => ens('nomieffektogheste', '', '', '', '')
-      ,'maxeffektogheste'  => ens('maxeffektogheste', '', '', '', '')
+      ,'maxeffektogheste'  => ens('maxeffektogheste', '2,0', 'kw', '', '') . ' eller ' . ens('maxeffektogheste', '4,0', 'kw', '', '')
       ,'moment'            => ens('moment', '', '', '', '')
       ,'karburator'        => ens('karburator', '', '', '', '')
       ,'brændstof indsp..' => ens('brændstof indsp..', '', '', '', '')
@@ -1601,16 +1601,16 @@ $databasecenter = array(
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '', '', '', '')
-      ,'fælgbag'           => ens('fælg', '', '', '', '')
-      ,'dækfor'            => ens('dæk1', '', '', '', '')
-      ,'dækbag'            => ens('dæk1', '', '', '', '')
+       'fælgfor'           => ens('fælg', '4½', '13', '', '')
+      ,'fælgbag'           => ens('fælg', '4½', '13', '', '(2 styks)')
+      ,'dækfor'            => ens('dæk1', '155', '80', '13', 'R')
+      ,'dækbag'            => ens('dæk1', '155', '80', '13', 'R (2 styks)')
       ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
       ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
       ,'affjedringfor'     => ens('affjedringfor', '', '', '', '')
       ,'affjedringbag'     => ens('affjedringbag', '', '', '', '')
-      ,'bremserfor'        => ens('bremser', '', '', '', '')
-      ,'bremserbag'        => ens('bremser', '', '', '', '')
+      ,'bremserfor'        => ens('bremser', 'tromle', '160', '', '')
+      ,'bremserbag'        => ens('bremser', 'tromle', '160', '', '(2 styks)')
       ,'eger'              => ens('eger', '', '', '')
       ,'castervinkel'      => ens('castervinkel', '', '', '')
       ,'efterløb'          => ens('efterløb', '', '', '')
@@ -1660,7 +1660,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', '', '', '', '')
+      ,'stelnummer'        => ens('stelnummer', 'YS63W', '', '', '')
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '', '', '', '')
@@ -1674,7 +1674,7 @@ $databasecenter = array(
       ,'støj'              => ens('støj', '', '', '', '')
       ,'bagagevolume'      => ens('bagagevolume', '', '', '', '')
       ,'bakgear'           => ens('bakgear', '', '', '', '')
-      ,'importør'          => ens('importør', '', '', '', '')
+      ,'importør'          => ens('importør', 'H.C. Petersen & Co.s Eftf. A/S', '', '', '')
       ,'producent'         => ens('producent', '', '', '', '')
       ,'andet'             => ens('andet', '', '', '', '')
 
@@ -1720,7 +1720,7 @@ $databasecenter = array(
       ,'kompression'       => ens('kompression', '', '', '', '')
       ,'tomgang'           => ens('tomgang', '', '', '', '')
       ,'nomieffektogheste' => ens('nomieffektogheste', '', '', '', '')
-      ,'maxeffektogheste'  => ens('maxeffektogheste', '1500', 'watt', '', '')
+      ,'maxeffektogheste'  => ens('maxeffektogheste', '1500', 'w', '', '')
       ,'moment'            => ens('moment', '', '', '', '')
       ,'karburator'        => ens('karburator', '', '', '', '')
       ,'brændstof indsp..' => ens('brændstof indsp..', '', '', '', '')
@@ -2677,146 +2677,6 @@ Charge time:6-8h
       ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
       ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
       ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
-      ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
-
-   )
-
-),'yiyingsampra' => array(
-
-     'specielt'            => array(
-       'besked'            => ens('besked', 'yiying HP Trading ApS YIYING SAMPRA YY50QT-A GY 25 km/t E16236 (e4*2002/24*1090)', '', '', '')
-
-   ),'generelt'            => array(
-       'model'             => ens('model', 'yiying sampra', '', '', '')
-      ,'ogsåkaldet'        => ens('ogsåkaldet', 'måske Benzhou YY50QT-A', 'måske stranger x-fight', '', '')
-      ,'scootertype'       => ens('scootertype', 'YY50QT-A', '', '', '')
-      ,'varianter'         => ens('varianter', '', '', '', '')
-      ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '25 og 30', '', '', '')
-      ,'farver'            => ens('farver', '', '', '', '')
-      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
-
-   ),'motor'               => array(
-       'motormodel'        => ens('motormodel', 'BZ39QMB (BZ139QMB)', '', '', '')
-      ,'motortype'         => ens('motortype', '', '', '', '')
-      ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
-      ,'volume'            => ens('volume', '', '', '', '')
-      ,'køling'            => ens('køling', '', '', '', '')
-      ,'boring'            => ens('boring', '', '', '', '')
-      ,'slaglængde'        => ens('slaglængde', '', '', '', '')
-      ,'ventiler'          => ens('ventiler', '', '', '', '')
-      ,'ventiljustering'   => ens('ventiljustering', '', '', '', '')
-      ,'kompression'       => ens('kompression', '', '', '', '')
-      ,'tomgang'           => ens('tomgang', '', '', '', '')
-      ,'nomieffektogheste' => ens('nomieffektogheste', '', '', '', '')
-      ,'maxeffektogheste'  => ens('maxeffektogheste', '', '', '', '')
-      ,'moment'            => ens('moment', '', '', '', '')
-      ,'karburator'        => ens('karburator', 'JIN HONG PD 18J', '', '', '')
-      ,'brændstof indsp..' => ens('brændstof indsp..', '', '', '', '')
-      ,'smøring'           => ens('smøring', '', '', '', '')
-      ,'tændrør'           => ens('tændrør', '', '', '', '')
-
-   ),'dimensioner'         => array(
-       'længde'            => ens('længde', '', '', '', '')
-      ,'bredde'            => ens('bredde', '', '', '', '')
-      ,'højde'             => ens('højde', '', '', '', '')
-      ,'sædehøjde'         => ens('sædehøjde', '', '', '', '')
-      ,'frihøjde'          => ens('frihøjde', '', '', '', '')
-      ,'akselafstand'      => ens('akselafstand', '', '', '', '')
-
-   ),'brændstof'           => array(
-       'benzin'            => ens('benzin', '', '', '', '')
-      ,'benzintank'        => ens('benzintank', '', '', '', '')
-      ,'forbrug'           => ens('forbrug', '', '', '', '')
-
-   ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '2.50', '10', '', '')
-      ,'fælgbag'           => ens('fælg', '2.50', '10', '', '')
-      ,'dækfor'            => ens('dæk1', '3.50', '10', '', '')
-      ,'dækbag'            => ens('dæk1', '3.50', '10', '', '')
-      ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
-      ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
-      ,'affjedringfor'     => ens('affjedringfor', '', '', '', '')
-      ,'affjedringbag'     => ens('affjedringbag', '', '', '', '')
-      ,'bremserfor'        => ens('bremser', '', '', '', '')
-      ,'bremserbag'        => ens('bremser', '', '', '', '')
-      ,'eger'              => ens('eger', '', '', '')
-      ,'castervinkel'      => ens('castervinkel', '', '', '')
-      ,'efterløb'          => ens('efterløb', '', '', '')
-      ,'drejevinkel'       => ens('drejevinkel', '', '', '', '')
-      ,'venderadius'       => ens('venderadius', '', '', '', '')
-
-   ),'elektrisk'           => array(
-       'starterbatteri'    => ens('starterbatteri', '', '', '', '')
-      ,'batterispec1'      => ens('batterispec1', '', '', '', '')
-      ,'batterispec2'      => ens('batterispec2', '', '', '', '')
-      ,'batterivægt'       => ens('batterivægt', '', '', '', '')
-      ,'batterilevetid'    => ens('batterilevetid', '', '', '', '')
-      ,'generator'         => ens('generator', '', '', '', '')
-      ,'sikring'           => ens('sikring', '', '', '', '')
-      ,'tændingssystem'    => ens('tændingssystem', '', '', '', '')
-      ,'elstart'           => ens('elstart', '', '', '', '')
-      ,'kickstart'         => ens('kickstart', '', '', '', '')
-      ,'lysfor'            => ens('lys', '', '', '', '')
-      ,'lysbagbremse'      => ens('lys', '', '', '', '')
-      ,'lysbag'            => ens('lys', '', '', '', '')
-      ,'lysbremse'         => ens('lys', '', '', '', '')
-      ,'lyspositions'      => ens('lys', '', '', '', '')
-      ,'lysblink'          => ens('lys', '', '', '', '')
-      ,'lyskontrolblink'   => ens('lys', '', '', '', '')
-      ,'lyskontrollangt'   => ens('lys', '', '', '', '')
-      ,'lysnummerplade'    => ens('lys', '', '', '', '')
-      ,'lysinstrument'     => ens('lys', '', '', '', '')
-      ,'oplader'           => ens('oplader', '', '', '', '')
-      ,'ladetid'           => ens('ladetid', '', '', '', '')
-      ,'rækkevidde'        => ens('rækkevidde', '', '', '', '')
-      ,'controller'        => ens('controller', '', '', '', '')
-
-   ),'olie og væsker'      => array(
-       'motor'             => ens('olie', '', '', '', '')
-      ,'gear'              => ens('olie', '', '', '', '')
-      ,'forgaffel'         => ens('olie', '', '', '', '')
-      ,'kølervæske'        => ens('kølervæske', '', '', '', '')
-
-   ),'transmission'        => array(
-       'transmissiontype'  => ens('transmissiontype', '', '', '', '')
-      ,'kobling'           => ens('kobling', '', '', '', '')
-      ,'antalgear'         => ens('antalgear', '', '', '', '')
-      ,'gearratio'         => ens('gearratio', '', '', '', '')
-      ,'tandhjulfor'       => ens('tandhjulfor', '', '', '', '')
-      ,'tandhjulbag'       => ens('tandhjulbag', '', '', '', '')
-      ,'reduktionsratio'   => ens('reduktionsratio', '', '', '', '')
-
-   ),'ekstra'              => array(
-       'stel'              => ens('stel', '', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'LD5GY0ACB7J', 'LD5GY0BCB8D010 (ukendt yiying model)', '', '')
-      ,'udstødning'        => ens('udstødning', '', '', '', '')
-      ,'euroemission'      => ens('euroemission', '', '', '', '')
-      ,'vægttør'           => ens('vægttør', '', '', '', '')
-      ,'vægtkørerklar'     => ens('vægtkørerklar', '', '', '', '')
-      ,'vægttotal'         => ens('vægttotal', '', '', '', '')
-      ,'bæreevne'          => ens('bæreevne', '', '', '', '')
-      ,'luftfiltertype'    => ens('luftfiltertype', '', '', '', '')
-      ,'stigeevne'         => ens('stigeevne', '', '', '', '')
-      ,'medfølger'         => ens('medfølger', '', '', '', '')
-      ,'bremsevæske'       => ens('bremsevæske', '', '', '', '')
-      ,'støj'              => ens('støj', '', '', '', '')
-      ,'bagagevolume'      => ens('bagagevolume', '', '', '', '')
-      ,'bakgear'           => ens('bakgear', '', '', '', '')
-      ,'importør'          => ens('importør', 'Dan Prime ApS', '', '', '')
-      ,'producent'         => ens('producent', '', '', '', '')
-      ,'andet'             => ens('andet', '', '', '', '')
-
-   ),'begrænsninger'       => array(
-       'begrænstransmis'   => ens('begrænstransmis', 'Skive', '', '', '')
-      ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
-      ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
-      ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
-      ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
-      ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
-      ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
-      ,'begrænsudstødning' => ens('begrænsudstødning', 'Bøsning', '', '', '')
-      ,'begrænsstelnum'    => ens('begrænsstelnum', 'Tegn 7 i stelnummeret er A og angiver den maksimale hastighed = 25 km/t', '', '', '')
       ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
 
    )
@@ -4785,7 +4645,7 @@ Charge time:6-8h
 
      'specielt'            => array(
        'besked'            => ens('besked', '
-Jeg har kun meget lidt info om et mærke som skulle hedde HM også er der nogen forskellige modeller.
+Jeg har kun meget lidt info om et mærke som skulle hedde HM (Måske Honda Montesa) også er der nogen forskellige modeller.
 Infoen stammer fra en hjemmeside som nu er lukket så har noget ikke noget om dem.
 
 Importør er muligvis : JN MOTOR v/Jesper Nielsen, Liljevej 28, 9740 Jerslev J
@@ -4823,6 +4683,11 @@ HM 50 R Mini Enduro / Cross :
    6 Gear 
 
 HM Baja mini 50 cc
+
+'.ahref('http://www.sjoholmmc.dk/product_info.php?products_id=20713').'
+
+Ser ud til nogen af dem er crossmaksiner så det er måske ikke allesammen der er solgt til at skulle have nummerplade på og køre på offentlig vej.
+Muligvis crossmaskiner til børn.
 ', '', '', '')
 
    ),'generelt'            => array(
@@ -4971,7 +4836,7 @@ HM Baja mini 50 cc
       ,'scootertype'       => ens('scootertype', 'XYDM82', '', '', '')
       ,'varianter'         => ens('varianter', 'A', 'E', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', 'i står at stor knallert køre 30 km/t', '', '')
+      ,'hastighed'         => ens('hastighed', '', 'i typegodkendelse står at stor knallert køre 30 km/t', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -5184,8 +5049,6 @@ $databaseright = array(
    ,'Simson Albatros 50 D00 45 km/t E11485 (e1*92/61*00089)'            => 'typegodkendelser/Simson%20Albatros%2050%20%28E11485%29%20udstedt%2025-07-2001.pdf'
 
    ,'Transportel 1200 Combi 12 20 km/t E15199 (e5*2002/24*0005)'            => 'typegodkendelser/Transportel%201200%20Combi%20%28E15199%29%20udstedt%2016-03-2006.pdf'
-
-   ,'Benzhou YY50QT-A (måske Yiying sampra ?) 25 km/t E15543 (e4*2002/24*1090)'            => 'typegodkendelser/Benzhou%20YY50QT-A%20%28E15543%29%20udstedt%2014-06-2006.pdf'
 
 )
 

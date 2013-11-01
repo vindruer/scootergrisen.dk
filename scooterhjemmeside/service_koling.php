@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "køling - Service";
 $overskrift = "køling - Service";
-$metadescription = "service af væskekølingsystem på scooter";
+$metadescription = "service af væskekølingsystem på scooter (dræning, udluftning, kontroller kølervæske niveau, måling af kølervæske med hydrometer)";
 
 $databasecenter = array(
 

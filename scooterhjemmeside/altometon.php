@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "e-ton elektrisk scooter";
+$title = "e-ton scootere med elektrisk motor";
 $overskrift = "e-ton";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_eton.png';
 
@@ -117,7 +117,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', 'stål', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'RK1EJC0E_AA000 (30 km/t)', '', '', '')
+      ,'stelnummer'        => ens('stelnummer', 'RK1EJC0E_AA000 (30 km/t)', 'RK1EJC0E6AA000172 (XS8000)', '', '')
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '44,4 (uden batteri)', '', '', '')

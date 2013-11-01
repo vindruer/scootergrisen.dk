@@ -1,14 +1,14 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $setup['nogetikon']               = 'ikoner/ikon_information2.png';
 
-$title = "introduktion";
-$overskrift = "introduktion";
-$metadescription = "velkomst og forklaring af hjemmesiden";
+$title = "introduktion til hjemmesiden";
+$overskrift = "introduktion til hjemmesiden";
+$metadescription = "velkomst og forklaring af hjemmesiden, hvordan du bruger den og historien bag hjemmesiden";
 
 $databasecenter = array(
 
@@ -24,7 +24,7 @@ Hej og velkommen til Scootergrisen.
 En hjemmeside om scootere og knallerter.
 
 Scooterne her på hjemmesiden må køre 25, 30 eller 45 km/t.
-Du kan finde scootere med 2 takt, 4 takt og elektrisk motor her på hjemmesiden.
+Her kan du finde scootere med 2 takt, 4 takt og elektrisk motor.
 
 Du finder ikke Maxi-scootere/MC-scootere/motorcykler her på hjemmesiden. Det er dem med motorcykel nummerplade som må køre over 45 km/t.
 <div class="clearboth"></div>
@@ -68,7 +68,7 @@ Vær opmærksom på at søge funktionen ikke virker på samme måde som mange s�
 Hvis du ser en fejl på hjemmesiden (for eksempel en stavefejl) så kan du hjælpe med at få det rettet.
 Ved at markere teksten med musen og trykke CTRL og ENTER kommer denne popup besked hvor du eventuelt kan skrive en rettelse eller kommentar.
 '.visbilled('1', 'billed3660.jpg', 'fundet en fejl ? orphus ctrl + enter', false, true).'
-Når du trykker på Send knappen bliver der sendt en besked om fejlen til mig så jeg kan rette det.
+Når du trykker på Send knappen får jeg senere en besked om fejlen så jeg kan rette den.
 '
 
 ,'
@@ -104,7 +104,7 @@ Browseren bør have Javascript og cookies aktiveret.
 '.ahref('http://get.adobe.com/flashplayer/', 'Adobe Flash Player').' kræves for at se flash indhold så som videoer.
 
 PDF filer kan åbnes med '.ahref('http://get.adobe.com/reader/', 'Adobe Reader').'.
-ZIP filer kan åbnes med '.ahref('http://www.7-zip.org/', '7-zip').'.
+ZIP filer kan åbnes med '.ahref('http://www.7-zip.org/', '7-Zip').'.
 SVG filer kan åbnes i nogle browsere. Ellers med '.ahref('http://inkscape.org/', 'Inkscape').'.
 ').'
 

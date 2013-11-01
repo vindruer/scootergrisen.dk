@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "bagerste remskiver - Transmission";
 $overskrift = "bagerste remskiver - Transmission";
@@ -78,7 +78,7 @@ Fjedrene kan fjernes og monteres med en tang.
 '.visflash('0', "http://www.youtube.com/watch?v=BVZkF9-zE7Y", 'fjern og monter koblingsfjedre med låseringstang', true).'
 '.visflash('0', "http://www.youtube.com/watch?v=sYfoqtmNxJA", 'HaSse viser hvordan man sætter fjedre på', true).'
 '.visflash('0', "http://www.youtube.com/watch?v=8yv_g52Yz5I", 'på denne kobling kan man justere fjeder spændingen og tilføje vægte på bakkerne', true).'
-Jeg har selv brugt ståltråd til at fjerne og montere fjedrene og syns det virker godt.
+Jeg har selv brugt ståltråd til at fjerne og montere fjedrene og syntes det virker godt.
 
 Når fjedre, clips og skiver er fjernet kan bakkerne tages af.
 '.visbilled('1', 'billed1336.jpg', 'kobling koblingsbakker koblingsfjedre', false, true).'

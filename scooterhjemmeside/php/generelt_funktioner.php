@@ -82,7 +82,7 @@ function bygsiden(
          $modelarray[] = str_ireplace("$overskrift ", '', ($value["generelt"]["model"]));
       }
 
-      $metadescription = implode(" - ", $modelarray);
+      $metadescription = implode(" - ", $modelarray) . ' | ' . mb_ucfirst($metadescription);
 
       foreach($databasecenter as $overskrift_x => $indhold_x){
          $delen .= visscooter($overskrift_x, $indhold_x);
@@ -99,6 +99,12 @@ function bygsiden(
    if(isset($GLOBALS['setup']['bodyparameter']) && $GLOBALS['setup']['bodyparameter'] != ''){
 
       $bodyekstraattributter .= ' ' . $GLOBALS['setup']['bodyparameter'];
+
+   }
+
+   if(!$GLOBALS['setup']['lokalt']){
+
+      $ekstra_lige_efter_body_start .= googleanalyticsscriptkode();
 
    }
 
@@ -252,9 +258,7 @@ function bygsiden(
    $indhold .= ''
       . '<!DOCTYPE html>'."\r\n"
       . "\r\n"
-      . '<!-- Kat! Jeg en missekat og jeg dans, dans, dans og jeg dans, dans, dans -->'."\r\n"
-      . "\r\n"
-      . '<html id="toppen" lang="da"' . $htmlekstraattributter . '>'."\r\n"
+      . '<html lang="da" id="toppen"' . $htmlekstraattributter . '>'."\r\n"
       . "\r\n"
       . htmlhead($title, $overskrift, $keywords, $metadescription)."\r\n"
       . "\r\n"
@@ -334,7 +338,12 @@ function bygsiden(
       . $slutbodyekstra
       . $navigationsknapper
       . clearboth() // clear før </body> eller rækker <body> ikke hele siden ned som <html>
+
+      // placer deferable javascript sidst, ellers kan de bloker for parrallel downloads
+      . '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/jquery-1.8.2.min.js"></script>'."\r\n"
+      . '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/jquery.tablesorter.js"></script>'."\r\n"
       . "\r\n"
+
       . '</body>'."\r\n"
       . "\r\n"
       . '</html>' // sidste output til HTML siden hvis alt går efter planen
@@ -408,7 +417,8 @@ background-image: url(/' . $GLOBALS['setup']['datamappe'] . '/' . $filnavn . ');
 */
 //         $altdetoversteekstra = '';
 
-         $indhold .= '   <div' . $altdetoversteekstra . ' class="altdetoverste bordertype5 borderradius5pxbottom margintype6">'."\r\n";
+         $indhold .= '   <div' . $altdetoversteekstra . ' class="altdetoverste background_color_8 bordertype5 borderradius5pxbottom margintype6">'."\r\n";
+         //$indhold .= '   <div' . $altdetoversteekstra . ' class="altdetoverste margintype6">'."\r\n";
          //$indhold .= '   <div class="borderradius5pxbottom" style="background: rgba(0, 0, 0, 0.5);">'."\r\n";
          $indhold .= '   <div class="altdetoversteb borderradius5pxbottom">'."\r\n";
          //$indhold .= '   <div>'."\r\n";
@@ -493,7 +503,7 @@ function smaikonerbar($smaikoner){
    $indhold .= clearboth();
    $indhold .= '<div style="display: none;"><input type="hidden" name="funktion" value="sog"></div>';
    $indhold .= '<label for="sogetekst" class="displaynone"></label><input type="text" maxlength="100" id="sogetekst" name="sogetekst" value="' . $sogetekst . '" size="20" class="inputtext sogesogefelt borderradius5px fontsize_11px fontfamily_2" onfocus="if(this.value==\'' . $GLOBALS['setup']['language_search'] . '\')this.value=\'\';" ondrop="if(this.value==\'' . $GLOBALS['setup']['language_search'] . '\')this.value=\'\';" onblur="if(this.value==\'\')this.value=\'' . $GLOBALS['setup']['language_search'] . '\';">';
-   $indhold .= '<input type="submit" name="sog_sendbilled" value="" class="inputknap sogesogesubmit fontsize_11px">';
+   $indhold .= '<input type="submit" name="sog_sendbilled" value="" class="inputknap sogesogesubmit fontsize_11px fontfamily_2">';
    $indhold .= '</form>';
    $indhold .= "\r\n";
 
@@ -548,7 +558,7 @@ function titlebar($title, $metadescription){
 
    $indhold .= '      ';
    $indhold .= ahref('http://' . $_SERVER['SERVER_NAME'] . '/', visbilled('2', $billede, mb_ucfirst($GLOBALS['setup']['l_cube']), null, null, null, 'class="sideoverskriftlogobillede"', null, '64', '64'), 'class="sideoverskriftlogo" id="dugnasivaivcmaismcasdcoumdso"', false) . "\r\n";
-   $indhold .= ahref('http://' . $_SERVER['SERVER_NAME'] . '/', $cubekode, 'class="sideoverskriftlogo" title="' . mb_ucfirst($GLOBALS['setup']['l_cube']) . '"', false) . "\r\n";
+//   $indhold .= ahref('http://' . $_SERVER['SERVER_NAME'] . '/', $cubekode, 'class="sideoverskriftlogo" title="' . mb_ucfirst($GLOBALS['setup']['l_cube']) . '"', false) . "\r\n";
    $indhold .= "\r\n";
 
    $indhold .= '      ';
@@ -583,7 +593,7 @@ function titlebar($title, $metadescription){
 
 
 
-
+/*
    $indhold .= '      ';
    $indhold .= '<div class="nyloginindhold fontsize_xsmall">'."\r\n";
 
@@ -616,7 +626,7 @@ function titlebar($title, $metadescription){
          )."\r\n"
          . '         </div>'."\r\n"
 
-         . '         <div id="loginhoverform" class="loginhoverform bordertype2 borderradius5px displaynone">'."\r\n"
+         . '         <div id="loginhoverform" class="loginhoverform bordertype1 borderradius5px displaynone">'."\r\n"
          . '            <form method="post" action="/' . $GLOBALS['setup']['datamappe'] . '/' . 'statestik.php" enctype="multipart/form-data" name="loginhoverformular">'."\r\n"
          . '               <div><input type="submit" name="login" value="' . mb_ucfirst($GLOBALS['setup']['l_knap_login']) . '" class="inputknap fontsize_xsmall"></div>'."\r\n"
          . '               <div><input type="button" name="login" value="' . mb_ucfirst($GLOBALS['setup']['l_knap_luk']) . '" class="inputknap fontsize_xsmall" style="margin-right: .5em;" onClick="visskjulloginformular(0, \'loginhoverform\', \'loginhover\');"></div>'."\r\n"
@@ -647,7 +657,7 @@ function titlebar($title, $metadescription){
 
    $indhold .= '      </div>'."\r\n"; // slut på class="nyloginindhold"
    $indhold .= "\r\n";
-
+*/
 
 
 
@@ -681,6 +691,8 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
    $indhold = '';
 
    $indhold .= '<head>'."\r\n";
+   $indhold .= "\r\n";
+   $indhold .= '   <!-- Bare fordi man er tyk kan man altså godt ha tynd mave : Robert Dølhus -->'."\r\n";
    $indhold .= "\r\n";
    $indhold .= '   <!-- http://' . $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'] . ' -->'."\r\n";
    $indhold .= "\r\n";
@@ -733,7 +745,7 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
    $indhold .= '   <meta name="robots" content="index, follow, noarchive">'."\r\n";
    $indhold .= "\r\n";
 
-   if($overskrift == "forsiden"){
+   if(basename($_SERVER['SCRIPT_NAME']) == "index.php"){
 
       $indhold .= '   <meta name="google-site-verification" content="' . $GLOBALS['setup']['googlesiteverification'] . '">'."\r\n";
       //$indhold .= '   <meta name="y_key" content="98a1c6387842ba6e">'."\r\n";
@@ -761,9 +773,11 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
    $cachecontrol = '?v=' . filemtime($GLOBALS['setup']['rodenogdatamappe'] . '/css/stylesheet35.css');
    $indhold .= '   <link rel="stylesheet" type="text/css" href="/' . $GLOBALS['setup']['datamappe'] . '/css/stylesheet35.css' . $cachecontrol . '">'."\r\n";
 
-   if($overskrift != "forsiden"){
+   if(basename($_SERVER['SCRIPT_NAME']) != "index.php"){
 
       $indhold .= '   <link rel="stylesheet" type="text/css" href="/' . $GLOBALS['setup']['datamappe'] . '/javascript/highslide/highslide.css">'."\r\n";
+      $indhold .= '   <link rel="stylesheet" type="text/css" href="/' . $GLOBALS['setup']['datamappe'] . '/css/theme.default.css">'."\r\n";
+      $indhold .= '   <link rel="stylesheet" type="text/css" href="/' . $GLOBALS['setup']['datamappe'] . '/css/theme.blue.css">'."\r\n";
 
    }
 
@@ -776,10 +790,11 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
 
    $cachecontrol = '?v=' . filemtime($GLOBALS['setup']['rodenogdatamappe'] . '/javascript/javascript8.js');
    $indhold .= '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/javascript8.js' . $cachecontrol . '"></script>'."\r\n";
+   $indhold .= "\r\n";
 
    $indhold .= "\r\n";
 
-   if($overskrift != "forsiden"){
+   if(basename($_SERVER['SCRIPT_NAME']) != "index.php"){
    if(isset($GLOBALS['setup']['headekstra']) && $GLOBALS['setup']['headekstra'] != ''){
 
       $indhold .= ''
@@ -808,47 +823,39 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
    }
 
    $indhold .= ''
-      . '   <link rel="stylesheet" href="/' . $GLOBALS['setup']['datamappe'] . '/css/theme.default.css">'."\r\n"
-      . '   <link rel="stylesheet" href="/' . $GLOBALS['setup']['datamappe'] . '/css/theme.blue.css">'."\r\n"
-      . '   <style>'."\r\n"
-      . '      .tablesorter-blue { margin: 0; }'."\r\n"
-      . '   </style>'."\r\n"
-      . '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/jquery-1.8.2.min.js"></script>'."\r\n"
-      . '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/jquery.tablesorter.js"></script>'."\r\n"
       //. '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/jquery.tablesorter.widgets.js"></script>'."\r\n" // tablesorter widgets (optional)
       . "\r\n"
-      . '   <script type="text/javascript">'."\r\n"
-      . "\r\n"
+      //. '   <script type="text/javascript">'."\r\n"
+      //. "\r\n"
       //. '   $(document).ready(function() {'."\r\n"
-      . '   jQuery(document).ready(function() {'."\r\n"
-      . "\r\n"
-      . '      // these default equivalents were obtained from a table of equivalents'."\r\n"
-      . '      // provided by sugar.js sorting alogrithms: http://sugarjs.com/sorting'."\r\n"
-      . '      jQuery.tablesorter.characterEquivalents = {'."\r\n"
-      . '         "za" : "\u00e6;", // æ'."\r\n"
-      . '         "zb" : "\u00f8;", // ø'."\r\n"
-      . '         "zc" : "\u00e5;", // å'."\r\n"
-      . '         "ZA" : "\u00c6;", // Æ'."\r\n"
-      . '         "ZB" : "\u00d8;", // Ø'."\r\n"
-      . '         "ZC" : "\u00c5;"  // Å'."\r\n"
-      . '      };'."\r\n"
-      . "\r\n"
-      . '      jQuery(\'table\').tablesorter({'."\r\n"
-      . '         theme          : \'blue\','."\r\n"
-      . '         widgets        : [\'zebra\', \'columns\'],'."\r\n"
-      . '         usNumberFormat : false,'."\r\n"
-      . '         sortReset      : true,'."\r\n"
-      . '         sortRestart    : true,'."\r\n"
-      . '         // Enable use of the characterEquivalents reference'."\r\n"
-      . '         sortLocaleCompare : true,'."\r\n"
-      . '         // if false, upper case sorts BEFORE lower case'."\r\n"
-      . '         ignoreCase : true'."\r\n"
-      . '      });'."\r\n"
-      . "\r\n"
-      . '   });'."\r\n"
-      . "\r\n"
-      . '   </script>'."\r\n"
-      . "\r\n"
+      //. "\r\n"
+      //. '      // these default equivalents were obtained from a table of equivalents'."\r\n"
+      //. '      // provided by sugar.js sorting alogrithms: http://sugarjs.com/sorting'."\r\n"
+      //. '      $.tablesorter.characterEquivalents = {'."\r\n"
+      //. '         "za" : "\u00e6;", // æ'."\r\n"
+      //. '         "zb" : "\u00f8;", // ø'."\r\n"
+      //. '         "zc" : "\u00e5;", // å'."\r\n"
+      //. '         "ZA" : "\u00c6;", // Æ'."\r\n"
+      //. '         "ZB" : "\u00d8;", // Ø'."\r\n"
+      //. '         "ZC" : "\u00c5;"  // Å'."\r\n"
+      //. '      };'."\r\n"
+      //. "\r\n"
+      //. '      $(\'table\').tablesorter({'."\r\n"
+      //. '         theme          : \'blue\','."\r\n"
+      //. '         widgets        : [\'zebra\', \'columns\'],'."\r\n"
+      //. '         usNumberFormat : false,'."\r\n"
+      //. '         sortReset      : true,'."\r\n"
+      //. '         sortRestart    : true,'."\r\n"
+      //. '         // Enable use of the characterEquivalents reference'."\r\n"
+      //. '         sortLocaleCompare : true,'."\r\n"
+      //. '         // if false, upper case sorts BEFORE lower case'."\r\n"
+      //. '         ignoreCase : true'."\r\n"
+      //. '      });'."\r\n"
+      //. "\r\n"
+      //. '   });'."\r\n"
+      //. "\r\n"
+      //. '   </script>'."\r\n"
+      //. "\r\n"
       ;
 
    $indhold .= '</head>';
@@ -940,8 +947,15 @@ function breadcrumbs(){
 
    $indhold = '';
    $nogetindhold = '';
+   $breadcrumbsindhold = '';
    $GLOBALS['setup']['breadcrumbs'] = array();
-   
+
+   $GLOBALS['setup']['breadcrumbs'][] = array(
+       'http://' . $_SERVER['SERVER_NAME']
+      ,'<span itemprop="title">' . $_SERVER['SERVER_NAME'] . '</span>'
+      ,'itemprop="url"'
+   );
+
    foreach($GLOBALS['setup']['menu'] as $keya => $valuea){
    
       foreach($valuea as $keyb => $valueb){
@@ -951,12 +965,14 @@ function breadcrumbs(){
             if(is_array($valuec)){
    
                foreach($valuec as $keyd => $valued){
-   
+ 
                   foreach($valued as $keye => $valuee){
 
                      if($keye != 'thumbnail'){
                      if(basename($_SERVER["PHP_SELF"]) == basename($keye)){
-                        $GLOBALS['setup']['breadcrumbs'] = array($keya, $keyc, $keyd);
+                        $GLOBALS['setup']['breadcrumbs'][] = array('start.php#' . strtolower(byttegn($keya)), '<span itemprop="title">' . mb_ucfirst($keya) . '</span>', 'itemprop="url"');
+                        $GLOBALS['setup']['breadcrumbs'][] = array('start.php#' . strtolower(byttegn($keya)), '<span itemprop="title">' . mb_ucfirst($keyc) . '</span>', 'itemprop="url"');
+                        $GLOBALS['setup']['breadcrumbs'][] = array($keye, '<span itemprop="title">' . mb_ucfirst($keyd) . '</span>', 'itemprop="url"');
                      }
                      }
    
@@ -968,7 +984,8 @@ function breadcrumbs(){
    
                if($keyc != 'thumbnail'){
                if(basename($_SERVER["PHP_SELF"]) == basename($keyc)){
-                  $GLOBALS['setup']['breadcrumbs'] = array($keya, $keyb);
+                  $GLOBALS['setup']['breadcrumbs'][] = array('start.php#' . strtolower(byttegn($keya)), '<span itemprop="title">' . mb_ucfirst($keya) . '</span>', 'itemprop="url"');
+                  $GLOBALS['setup']['breadcrumbs'][] = array($keyc, '<span itemprop="title">' . mb_ucfirst($keyb) . '</span>', 'itemprop="url"');
                }
                }
    
@@ -980,25 +997,34 @@ function breadcrumbs(){
    
    }
 
-   foreach($GLOBALS['setup']['breadcrumbs'] as $key => $value){
-
-      $GLOBALS['setup']['breadcrumbs'][$key] = mb_ucfirst($value);
-
-   }
-
-   foreach($GLOBALS['setup']['breadcrumbs'] as $key => $value){
-
-      $GLOBALS['setup']['breadcrumbs'][$key] = '<span itemprop="title">' . $value . '</span>';
-
-   }
-
-
-
 if(1){
 
-   $language_en_uk         = $GLOBALS['setup']['domainogdatamappe'] . '/php/language.php?language=en_UK';
-   $language_da_dk         = $GLOBALS['setup']['domainogdatamappe'] . '/php/language.php?language=da_DK';
+   $language_en_uk         = $GLOBALS['setup']['domainogdatamappe'] . '/php/language.php?language=en-UK';
+   $language_da_dk         = $GLOBALS['setup']['domainogdatamappe'] . '/php/language.php?language=da-DK';
    $language_da_automatisk = $GLOBALS['setup']['domainogdatamappe'] . '/php/language.php?language=';
+
+   $nogetindhold .= ''
+      . '      <form action="' . $GLOBALS['setup']['domainogdatamappe'] . '/php/language.php" method="get" class="skiftmenusprog" style="white-space: nowrap; float: right; margin-right: 10px;">'."\r\n"
+      . '         <label>' . mb_ucfirst($GLOBALS['setup']['l_changelanguage']) . ' : '."\r\n"
+      . '            <select class="inputselect fontsize_xsmall" name="language" size="1" onchange="form.submit();" onselect="form.submit();">'."\r\n"
+      . '               <option value="da"' . ((
+         mb_strtolower($GLOBALS['setup']['languageinuse']) == 'da' ||
+         mb_strtolower($GLOBALS['setup']['languageinuse']) == 'da-dk'
+         ) ? ' selected' : '') . '>Dansk (da)</option>'."\r\n"
+      . '               <option value="en"' . ((
+         mb_strtolower($GLOBALS['setup']['languageinuse']) == 'en' ||
+         mb_strtolower($GLOBALS['setup']['languageinuse']) == 'en-uk' ||
+         mb_strtolower($GLOBALS['setup']['languageinuse']) == 'en-us'
+         ) ? ' selected' : '') . '>English (en)</option>'."\r\n"
+      . '               <option value=""' . ((mb_strtolower($GLOBALS['setup']['languageinuse']) == ''
+         ) ? ' selected' : '') . '>' . mb_ucfirst($GLOBALS['setup']['l_changelanguage_automatic']) . '</option>'."\r\n"
+      . '            </select>'."\r\n"
+      . '         </label>'."\r\n"
+      . '      </form>'."\r\n"
+      . '      ' . clearboth()."\r\n"
+      . "\r\n"
+      ;
+
 /*
    $nogetindhold .= ''
       . '<script type="text/javascript">' . "\r\n"
@@ -1028,7 +1054,7 @@ if(1){
 
       . '</script>' . "\r\n"
 
-      . '<style>' . "\r\n"
+      . '<style type="text/css">' . "\r\n"
       . '#global_fullscreentoggleknap{' . "\r\n"
       . '   float: right;' . "\r\n"
       . '   vertical-align: middle; margin-left: 10px;' . "\r\n"
@@ -1040,37 +1066,34 @@ if(1){
       ;
 */
 
-//array_search
-//$setup['menu']
-
-if($GLOBALS['setup']['vissprog']){
 /*
+if($GLOBALS['setup']['vissprog']){
+
    $nogetindhold .= ''
       . '<button style="float: right; margin: 0; padding: 0;" id="global_fullscreentoggleknap" class="visibilityhidden" onclick="global_togglefullscreen();" title="' . mb_ucfirst($GLOBALS['setup']['button_fullscreentoggle']) . '">'
       . visbilled('2', 'afspiller/afspiller_fuldskerm.png', mb_ucfirst($GLOBALS['setup']['button_fullscreentoggle']), false, null, null, 'id="global_fullscreentoggleknap_img"', null, '20', '20')
       . '</button>'
       ;
-*/
-   $nogetindhold .= ''
+
+   $nogetindhold .= '         '
       //. '<span class="ekstraundersmaikoner fontsize_small" style="background-color: rgba(255, 255, 255, 0.6); padding: 1em; border-radius: 5px; float: right;">'
       . '<span style="float: right; margin-right: 10px;">'
+      . "\r\n"
       ;
 
-   $nogetindhold .= ''
-      . mb_ucfirst($GLOBALS['setup']['l_changelanguage_try'])
-      . lidtplads('vandret')
+   $nogetindhold .= '            '
       . mb_ucfirst($GLOBALS['setup']['l_changelanguage'])
       . ' : '
-      . '<span style="white-space: nowrap;">'
-      . lidtplads('vandret')
+      . '<span class="skiftmenusprog" style="white-space: nowrap;">'
+      . lidtplads('vandret', true)
       . ahref($language_en_uk, visbilled('2', 'ikoner/united_kingdom_great_britain.png', $GLOBALS['setup']['l_flag_english'], '', null, null, 'class="ikon16x16"', null, '16', '16'))
-      . lidtplads('vandret')
+      . lidtplads('vandret', true)
       . ahref($language_da_dk, visbilled('2', 'ikoner/denmark.png', $GLOBALS['setup']['l_flag_dansk'], '', null, null, 'class="ikon16x16"', null, '16', '16'))
-      . lidtplads('vandret')
+      . lidtplads('vandret', true)
       . ahref(
          $language_da_automatisk
          ,mb_ucfirst($GLOBALS['setup']['l_changelanguage_automatic'])
-         ,'alt="Choose language from the browsers preferences" title="Choose language from the browsers preferences"'
+         ,'title="' . mb_ucfirst($GLOBALS['setup']['l_changelanguage_automatic_description']) . '"'
         )
       . '</span>'
       ;
@@ -1078,9 +1101,9 @@ if($GLOBALS['setup']['vissprog']){
    if(isset($GLOBALS['setup']['languageinuse'])){
 
       $nogetindhold .= ''
-         . lidtplads('vandret')
-         . ' | '
-         . lidtplads('vandret')
+         . lidtplads('vandret', true)
+         . '<span style="color: rgba(0, 0, 0, 0.5); margin: 0 .5em;">|</span>'
+         . lidtplads('vandret', true)
          . '<span style="white-space: nowrap;">'
          . mb_ucfirst($GLOBALS['setup']['l_changelanguage_current'])
          . ' : '
@@ -1091,31 +1114,39 @@ if($GLOBALS['setup']['vissprog']){
    }
 
    $nogetindhold .= ''
-      . '</span>'."\r\n"
-      . clearboth()
+
+      . "\r\n"
+      . '         </span>'."\r\n"
+      . "\r\n"
+      . '         ' . clearboth()
       . "\r\n"
       ;
 
 }
-
+*/
 }
 
+   $breadcrumbs_noget = array();
 
+   foreach($GLOBALS['setup']['breadcrumbs'] as $value){
 
-   $tegnb = '<span style="color: rgba(255, 255, 255, 0.4);" class="bold">&#187;</span>';
-   $tegn = '<span style="color: rgba(255, 255, 255, 0.5);" class="bold">/</span>';
+      $breadcrumbs_noget[] = ''
+         . '         <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">' . "\r\n"
+         . '            ' . ahref($value[0], $value[1], $value[2]) . "\r\n"
+         . '         </span>' . "\r\n";
+
+   }
+
+   $tegn = '         <span class="breadcrumbspacer">&#187;</span>' . "\r\n";
+
+   $breadcrumbsindhold .= implode($tegn, $breadcrumbs_noget) . "\r\n";
 
    $indhold .= ''
-      . '      '
-      . '<div class="breadcrumbs fontsize_xsmall" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">'
-      //. mb_ucfirst($GLOBALS['setup']['l_youarehere'])
-
-      . ahref('http://' . $_SERVER['SERVER_NAME'], '<span itemprop="title">' . $_SERVER['SERVER_NAME'] . '</span>', 'itemprop="url"')
-
-      . ' ' . $tegn . ' '
-      . implode(" $tegn ", $GLOBALS['setup']['breadcrumbs'])
+      . '      <div class="breadcrumbs fontsize_xsmall">' . "\r\n"
+      //. mb_ucfirst($GLOBALS['setup']['l_youarehere']) . "\r\n"
+      . $breadcrumbsindhold
       . $nogetindhold
-      . '</div>' . "\r\n"
+      . '      </div>' . "\r\n"
       . "\r\n"
       ;
 
@@ -1134,7 +1165,7 @@ function vispost($visrightcontent = true, $visfooter = true){
 
       $maskenoget = '';
 
-      require_once('./php/rate.php');
+      require_once './php/rate.php';
       $tilbage = hentrating($_SERVER['SCRIPT_NAME']);
 
       if(isset($tilbage[0])){
@@ -1174,13 +1205,13 @@ function vispost($visrightcontent = true, $visfooter = true){
             . '         <a href="javascript:void(0);" class="stemned" id="stemnedlink" onclick="rate(\'1\', \'' . $_SERVER['SCRIPT_NAME'] . '\');"></a>'
             . "\r\n"
             . '         <div class="stemmeterholder bordertype1 borderradius5px">'
-            . '            <meter class="ratemeter borderradius5px" id="ratemeter" min="20" low="45" high="75" optimum="100" max="100" value="' . $tilbage[0] . '"></meter>'
+            . '            <meter class="ratemeter borderradius5px" id="ratemeter" min="20" low="45" high="60" max="100" optimum="100" value="' . $tilbage[0] . '"></meter>'
             . '         </div>' . "\r\n"
-            . '         <div id="stemekstrabesked" style="margin: 10px auto; text-align: center; background: red; color: white;">' . $maskenoget . '</div>' . "\r\n"
+            . '         <div id="stemekstrabesked" style="margin: 10px auto; text-align: center;">' . $maskenoget . '</div>' . "\r\n"
             . "\r\n"
             . '      </div>' . "\r\n"
             . "\r\n"
-            . '      <div style="margin: 10px auto; text-align: center;">'.ahref('ratingoversigt.php', $GLOBALS['setup']['l_uniholder_voteonpage_seeallvotes']).'</div>' . "\r\n"
+            . '      <div style="margin: 10px auto; text-align: center;">'.ahref('ratingoversigt.php', mb_ucfirst($GLOBALS['setup']['l_uniholder_voteonpage_seeallvotes'])).'</div>' . "\r\n"
             . "\r\n"
             ;
 
@@ -1239,14 +1270,14 @@ function vispost($visrightcontent = true, $visfooter = true){
                . input('0', 'hidden', 'funktion', 'opretsymlink')
                . input('1', 'submit', 'opretsymlink', 'Opret symlink')
             )
-            . formbox('0', '', '', $GLOBALS['setup']['datamappe'] . '/' . 'galleri.php', 'post', '', ''
+            . formbox('0', '', '', '/' . $GLOBALS['setup']['datamappe'] . '/' . 'galleri.php', 'post', '', ''
                . input('0', 'hidden', 'funktion', 'lavthumbnails')
                . input('1', 'submit', 'thumbnails', 'lille')
                . input('1', 'submit', 'thumbnails', 'mellem')
                . input('1', 'submit', 'thumbnails', 'lille og mellem')
             )
 
-            . formbox('0', '', '', $GLOBALS['setup']['datamappe'] . '/' . 'manglerdata.php', 'post', '', ''
+            . formbox('0', '', '', '/' . $GLOBALS['setup']['datamappe'] . '/' . 'galleri_manglerdata.php', 'post', '', ''
                . input('0', 'hidden', 'funktion', 'lavthumbnails')
                . input('1', 'submit', 'thumbnails', 'lille')
                . input('1', 'submit', 'thumbnails', 'mellem')
@@ -1270,7 +1301,7 @@ function vispost($visrightcontent = true, $visfooter = true){
             . '<br>'
             . '<script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/orphus2.js"></script>'
             . noscript('<div class="noscript bordertype2 borderradius5px">Javascript er ikke aktiv - orphus</div>')
-            . '<div class="orphusholder">'
+            . '<div class="orphusogrssholder">'
             . ahref('http://www.orphus.ru', visbilled('2', 'ikoner/orphus.gif', 'orphus system', null, null, null, null, null, '121', '21'), 'id="orphus"')
             . '</div>'
             ;
@@ -1282,7 +1313,9 @@ function vispost($visrightcontent = true, $visfooter = true){
          $menuer[$GLOBALS['setup']['l_uniholder_rssnewsfeed']] = ''
             . mb_ucfirst($GLOBALS['setup']['l_uniholder_rssnewsfeed_message']) . '.'
             . ' '
+            . '<div class="orphusogrssholder">'
             . ahref('http://' . $_SERVER['SERVER_NAME'] . '/' . $GLOBALS['setup']['datamappe'] . '/php/rss.php', visbilled('2', 'ikoner/rss_nyheder.png', 'RSS feed', null, null, null, null, null, '101', '20', null, null, null, null, 'vertical-align: middle;'), 'type="application/rss+xml"')
+            . '</div>'
             ;
 
          if(!$GLOBALS['setup']['loggetind']){
@@ -1311,11 +1344,12 @@ function vispost($visrightcontent = true, $visfooter = true){
                . ahref($translatelink . '&tl=nl', visbilled('2', 'ikoner/netherlands.png', 'nederlands', '', null, null, 'class="ikon16x16"', null, '16', '16'))
                . '<br>'
                . '<br>'
-               . ahref($translatelink . '&tl=zh-TW', visbilled('2', 'ikoner/china.png', 'chinese traditional', '', null, null, 'class="ikon16x16"', null, '16', '16')) . '中國'
-               . lidtplads('vandret')
-               . ahref($translatelink . '&tl=zh-CN', visbilled('2', 'ikoner/china.png', 'chinese simplified', '', null, null, 'class="ikon16x16"', null, '16', '16')) . '中国'
-               . '<br>'
-               . '<br>'
+               // nogen browsere kan ikke vise kinesiske tegn direkte og viser firkanter i stedet
+               //. ahref($translatelink . '&tl=zh-TW', visbilled('2', 'ikoner/china.png', 'chinese traditional', '', null, null, 'class="ikon16x16"', null, '16', '16')) . '中國'
+               //. lidtplads('vandret')
+               //. ahref($translatelink . '&tl=zh-CN', visbilled('2', 'ikoner/china.png', 'chinese simplified', '', null, null, 'class="ikon16x16"', null, '16', '16')) . '中国'
+               //. '<br>'
+               //. '<br>'
                . ahref($translatelink . '&tl=en', 'More languages')
                . '</div>'
                ;
@@ -1412,10 +1446,51 @@ function visfootertag($visreklame = true, $visspotlys = true, $viscounterogsocia
 
       if($viscounterogsocialemedier && !$GLOBALS['setup']['lokalt']){
 
+/*
          $indhold .= ''
-            . '   <script type="text/javascript" src="http://www.chart.dk/js/unified.asp"></script>'."\r\n"
+            //. '   <script type="text/javascript" src="http://www.chart.dk/js/unified.asp"></script>'."\r\n"
+            . '   <script type="text/javascript">'."\r\n"
+            ."\r\n"
+            . '      function track_visitor_hjemmelavet(element_id, website_id) {'."\r\n"
+            ."\r\n"
+            . '         \'use strict\';'."\r\n"
+            ."\r\n"
+            . '         var element = document.getElementById(element_id),'."\r\n"
+            . '             wid = website_id,'."\r\n"
+            . '             wrnd = Math.random(),'."\r\n"
+            . '             wref = document.referrer,'."\r\n"
+            . '             wdoc = document.location,'."\r\n"
+            . '             disx = screen.width,'."\r\n"
+            . '             disy = screen.height,'."\r\n"
+            . '             disd = 0,'."\r\n"
+            . '             version = \'17\','."\r\n"
+            . '             strTracker = \'\','."\r\n"
+            . '             wtit = document.title;'."\r\n"
+            ."\r\n"
+            . '         if (navigator.appName !== "Netscape") { disd = screen.colorDepth; } else { disd = screen.pixelDepth; }'."\r\n"
+            . '         if (top.document.referrer !== null) { wref = top.document.referrer; }'."\r\n"
+            ."\r\n"
+            . '         strTracker = "<a href=\'http://www.chart.dk/ref.asp?id=" + wid + "\' target=\'_blank\'>'
+               .'<img src=\''
+               .'http://cluster.chart.dk/reghit.asp'
+               .'?secID=" + wrnd + "'
+               .'&website_id=" + wid + "'
+               .'&ref=" + encodeURI(wref) + "'
+               .'&doc=" + encodeURI(wdoc) + "'
+               .'&title=" + encodeURI(wtit) + "'
+               .'&disx=" + disx + "'
+               .'&disy=" + disy + "'
+               .'&disd=" + disd + "'
+               .'&v=" + version + "'
+               .'\'></a>";'."\r\n"
+            . '         element.innerHTML = strTracker;'."\r\n"
+            ."\r\n"
+            . '      }'."\r\n"
+            ."\r\n"
+            . '   </script>'."\r\n"
             . "\r\n"
             ;
+*/
 
          $indhold .= ''
             . '   <div id="fb-root"></div>'."\r\n"
@@ -1432,7 +1507,7 @@ function visfootertag($visreklame = true, $visspotlys = true, $viscounterogsocia
 
          $indhold .= ''
             . '   <script async type="text/javascript" src="https://apis.google.com/js/plusone.js">'."\r\n"
-            . '      {lang: \'da\'}'."\r\n"
+            //. '      {lang: \'da\'}'."\r\n" // validere ikke med src
             . '   </script>'."\r\n"
             . "\r\n"
             ;
@@ -1445,19 +1520,24 @@ function visfootertag($visreklame = true, $visspotlys = true, $viscounterogsocia
             ;
 
          $indhold .= ''
-            . '   <div class="counterosv margintype4">'."\r\n"
+            . '   <div class="counterosv margintype4 fontsize_0">'."\r\n"
             . '<span class="socialmedieholder chartcounter">'
-            . '<script type="text/javascript">'
-            . '   if(typeof track_visitor == \'function\') {'
-            . '      track_visitor(' . $GLOBALS['setup']['chartid'] . ', \'\');'
-            . '   }'
-            . '</script>'
+            //. '<span id="chartdkcounter">'
+            //. '</span>'
+            //. '<script type="text/javascript">'
+            //. '   if(typeof track_visitor_hjemmelavet == \'function\') {'
+            //. '      track_visitor_hjemmelavet(\'chartdkcounter\', ' . $GLOBALS['setup']['chartid'] . ');'
+            //. '   }'
+            //. '</script>'
+            . '<a href="http://www.chart.dk/ref.asp?id=' . $GLOBALS['setup']['chartid'] . '" target="_blank">'
+            . '   <img src="http://cluster.chart.dk/chart.asp?id=' . $GLOBALS['setup']['chartid'] . '" alt="Chart.dk">'
+            . '</a>'
             . '</span>'
             . '<span class="socialmedieholder">'
-            . '<div class="fb-like" data-href="' . $GLOBALS['setup']['domain']  . '/" data-send="false" data-layout="box_count" data-width="97" data-height="88" data-show-faces="false" data-font="verdana"></div>'
+            . '<span class="fb-like" data-href="' . $GLOBALS['setup']['domain']  . '/" data-send="false" data-layout="box_count" data-width="97" data-height="88" data-show-faces="false" data-font="verdana"></span>'
             . '</span>'
             . '<span class="socialmedieholder">'
-            . '<div class="g-plusone" data-size="tall" data-href="' . $GLOBALS['setup']['domain']  . '" data-recommendations="false"></div>'
+            . '<span class="g-plusone" data-size="tall" data-href="' . $GLOBALS['setup']['domain']  . '" data-recommendations="false"></span>'
             . '</span>'
             . '<span class="socialmedieholder">'
             . '<a href="https://twitter.com/share" class="twitter-share-button" data-url="' . $GLOBALS['setup']['domain'] . $_SERVER['PHP_SELF']  . '" data-lang="da" data-count="vertical">Tweet</a>'
@@ -1503,7 +1583,7 @@ function visfootertekst($visrightcontent = true, $visfooter = true){
       . '&sl=da'
       ;
 
-   $bidder[] = ahref('http://' . $_SERVER['SERVER_NAME'], $_SERVER['SERVER_NAME']);
+   //$bidder[] = ahref('http://' . $_SERVER['SERVER_NAME'], $_SERVER['SERVER_NAME']);
 
    if($visrightcontent){
 
@@ -1563,7 +1643,8 @@ function visfootertekst($visrightcontent = true, $visfooter = true){
 
    $bidder[] = visminemail();
 
-   $indhold .= '   <div id="footertekst" class="margintype10 bordertype6 borderradius5pxtop fontsize_small" style="padding: 10px;">';
+   $indhold .= '   <div id="footertekst" class="margintype10 background_color_8 bordertype6 borderradius5pxtop fontsize_small" style="padding: 10px;">';
+   //$indhold .= '   <div id="footertekst" class="margintype10 borderradius5pxtop fontsize_small" style="padding: 10px;">';
    $indhold .= implode($adskiller, $bidder);
    $indhold .= '</div>'."\r\n";
    $indhold .= "\r\n";
@@ -1578,20 +1659,20 @@ function visfejlbeskeder(){
 
    $indhold = '';
 
-   (isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING'] != '')
-      ? $fejllink = $_SERVER['PHP_SELF'] . '?' . htmlspecialchars($_SERVER['QUERY_STRING']) . '#fejlbeskederzzz'
-      : $fejllink = $_SERVER['PHP_SELF'] . '#fejlbeskederzzz';
+   if(!empty($GLOBALS['fejlbeskeder'])){
 
-   if(!empty($GLOBALS['fejl']['beskeder'])){
+      (isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING'] != '')
+         ? $fejllink = $_SERVER['PHP_SELF'] . '?' . htmlspecialchars($_SERVER['QUERY_STRING']) . '#fejlbeskederzzz'
+         : $fejllink = $_SERVER['PHP_SELF'] . '#fejlbeskederzzz';
 
-      $indhold .= '   <div><a id="gatilfejllink" href="' . $fejllink . '">'.visbilled('2', 'ikoner/pilned.png', 'fejl').'</a></div>'."\r\n";
+      $indhold .= '   <div><a id="gatilfejllink" href="' . $fejllink . '">'.visbilled('2', 'ikoner/pilned.png', 'Der er sket en fejl i PHP').'</a></div>'."\r\n";
 
       $indhold .= '<a id="fejlbeskederzzz">&nbsp;</a>'."\r\n";
 
       $indhold .= '<div class="fejlbeskedholder fontfamily_2 fontsize_small">'."\r\n";
       $indhold .= '<div class="fejlbeskedoverskrift fontsize_large">Fejl</div>'."\r\n";
 
-      foreach($GLOBALS['fejl']['beskeder'] as $fejlbesked){
+      foreach($GLOBALS['fejlbeskeder'] as $fejlbesked){
 
          $indhold .= '<!-- fejlbeskeder --><div class="fejlbesked">' . $fejlbesked . '</div>'."\r\n";
 
@@ -1755,6 +1836,7 @@ function visdel($overskrift, $data, $br = true, $scootermodel = ''){
          $indhold .= "\r\n";
 
          $indhold .= '   <div class="sideindholddel background_color_8 fontfamily_1 fontsize_small bordertype1 borderradius5px margintype1">';
+//         $indhold .= '   <div class="sideindholddel background_color_8 fontfamily_1 fontsize_medium margintype1">';
          $indhold .= "\r\n";
 
          $indhold .= '      <h3 class="overskriftfordatacenter fontsize_xlarge fontfamily_7">';
@@ -2097,7 +2179,7 @@ function topmenu($overskrift, $data){
    $overskrift = trim($overskrift);
    $indhold .= '            <li>'."\r\n";
    $indhold .= '               <a>' . mb_ucfirst($overskrift) . '</a>'."\r\n";
-   $indhold .= '               <ul class="ulpunktb background_color_9 bordertype3">'."\r\n";
+   $indhold .= '               <ul class="ulpunktb background_color_9 bordertype1">'."\r\n";
 
       foreach($data as $normalmenuoverskrift => $value){
 
@@ -2129,7 +2211,7 @@ function topmenu($overskrift, $data){
 
                      $indhold .= '               <li>' . "\r\n";
                      $indhold .= '                  <a><span class="sub">' . mb_ucfirst($undermenuoverskrift) . '</span></a>' . "\r\n";
-                     $indhold .= '                  <ul class="ulpunktc background_color_9 bordertype3">'."\r\n";
+                     $indhold .= '                  <ul class="ulpunktc background_color_9 bordertype1">'."\r\n";
 
                      foreach($noget as $submenukey => $submenuvalue){
 
@@ -2816,10 +2898,11 @@ function viskontakt($billed = true, $overskrift = ''){
             //. input('1', 'text', 'message', '', '', '', '', '', 'style="visibility: hidden; display: none;"')
             . input('1', 'text', 'message', '', '', '', '', '', 'style="visibility: hidden; height: 0; width: 0;"')
             . input('1', 'submit', 'kontakt_sendknap_b', $GLOBALS['setup']['l_contactform_submit'], '', 'rykind', 'kontakt_sendknap_c')
+            . '<div style="text-align: center; margin-top: 1em;">' . mb_ucfirst($GLOBALS['setup']['l_contactform_alternative']) .' ' . visminemail() . '</div>'
          );
 
       $indhold .= ''
-         . '<div style="text-align: center;">' . mb_ucfirst($GLOBALS['setup']['l_contactform_alternative']) .' ' . visminemail() . '</div>'
+         //. '<div style="text-align: center;">' . mb_ucfirst($GLOBALS['setup']['l_contactform_alternative']) .' ' . visminemail() . '</div>'
          ;
 
    }
@@ -2968,7 +3051,19 @@ function galleri(
 
             $indhold .= '<div class="scootermodel borderradius5px">';
 
-            $indhold .= ahref($filurl . '#' . $sidelink, visbilled('1', 'thumbnails/lille/' . $billedefil . '.jpg', $alttekst, '', null, null, null, null, '180', '160'));
+            $indhold .= ahref(
+$filurl . '#' . $sidelink
+, visbilled(
+'1'
+, 'thumbnails/lille/' . $billedefil . '.jpg'
+, $alttekst
+, null
+, null
+, null
+, null
+, null
+, '180'
+, '160'));
 
             $indhold .= '<div class="thumbnailtekst fontsize_small">';
             $indhold .= ahref($filurl . '#' . $sidelink, mb_ucfirst($tekst));
@@ -3753,6 +3848,15 @@ function besog($handling){
          && stripos($ref, 'https://m.facebook.com') !== 0
          && stripos($ref, 'http://www.apriliaforum.com/') !== 0
          && stripos($ref, 'http://www.buzzdock.com/') !== 0
+         && stripos($ref, 'http://www1.search-results.com/') !== 0
+         && stripos($ref, 'http://techmind.dk') !== 0
+         && stripos($ref, 'http://archive.is/') !== 0
+         && stripos($ref, 'http://www2.inbox.com/') !== 0
+         && stripos($ref, 'http://nortonsafe.search.ask.com/') !== 0
+         && stripos($ref, 'http://avg.nation.com/') !== 0
+         && stripos($ref, 'http://www.alhea.com/') !== 0
+         && stripos($ref, 'http://www.findhurtig.dk/') !== 0
+         && stripos($ref, 'http://www.scooterklubben.dk/') !== 0
 //         && stripos($ref, '') !== 0
 
          ){
@@ -3932,7 +4036,7 @@ function besog($handling){
 
 
 
-function gemsogning($sogetekst, $antalfundnesider){
+function gemsogningifil($sogetekst, $antalfundnesider){
 
    $fil = "{$GLOBALS['setup']['tempfuld']}/{$GLOBALS['setup']['sogetekstfilnavn']}";
 
@@ -4005,7 +4109,8 @@ function box($breddearray, $tekstarray, $kodeibunden = ''){
    $tekstarrayhead = array_shift($tekstarray); // tag og fjern den først som til overskriften
 
    $indhold .= '   <!--ignore-->'."\r\n";
-   $indhold .= '   <table class="tableholder tablesorter" style="width: ' . $totalbredde . 'px; margin: 1em auto;">'."\r\n";
+   $indhold .= '   <div style="overflow-x: auto;">'."\r\n"; // gør at en bred table kan scrolles vandret på en lille skærm så man kan se hele tabellen selvom skærmen er for lille til at vise den på en gang
+   $indhold .= '   <table class="tableholder fontsize_small tablesorter" style="max-width: ' . $totalbredde . 'px; margin: 1em auto;">'."\r\n";
 
    $indhold .= '      <thead>'."\r\n";
    $indhold .= '         <tr>'."\r\n";
@@ -4054,6 +4159,8 @@ function box($breddearray, $tekstarray, $kodeibunden = ''){
 
    }
 
+   $indhold .= '      </tbody>'."\r\n";
+
    if($kodeibunden != ''){
 
       $indhold .= '      <tfoot>'."\r\n";
@@ -4064,9 +4171,8 @@ function box($breddearray, $tekstarray, $kodeibunden = ''){
 
    }
 
-   $indhold .= '      </tbody>'."\r\n";
-
    $indhold .= '   </table>'."\r\n";
+   $indhold .= '   </div>'."\r\n";
    $indhold .= '   <!--ignore-->'."\r\n";
    $indhold .= "\r\n";
 
@@ -4566,7 +4672,33 @@ function visflash(
 
       }
 
-   }elseif(stripos($url, 'http://embed.break.com/') === 0){
+   }elseif(stripos($url, 'http://embed.break.com/') === 0
+      || stripos($url, 'http://www.break.com/embed/') === 0){
+
+      if(stripos($url, 'http://embed.break.com/') === 0){
+
+      $videoid = str_replace("http://embed.break.com/"
+                       , ""
+                       , $url
+                       );
+
+      }
+
+      if(stripos($url, 'http://www.break.com/embed/') === 0){
+
+      $videoid = str_replace("http://www.break.com/embed/"
+                       , ""
+                       , $url
+                       );
+
+      }
+
+      $url = "http://media1.break.com/break/swf/player12.swf";
+
+      $urlparameterarray[] = 'async=true';
+
+      $flashvarsarray[] = 'icon=1B608EE7AFCE3765E176F3C6FBB98002B3D18C64572F2307D76EA476A27DF3B9E352';
+      $flashvarsarray[] = 'autoplay=0';
 
       if($autoplay){
 
@@ -5360,13 +5492,13 @@ function dinkommentar($medstort = false){
 
    $indhold = '';
 
-   $linktekst = 'din kommentar';
+   $linktekst = 'din kommentar om siden';
 
    ($medstort)
       ? $linktekst = mb_ucfirst($linktekst)
       : $linktekst = $linktekst;
 
-   $indhold .= ahref('#din_kommentar', $linktekst);
+   $indhold .= ahref('#din_kommentar_til_siden', $linktekst);
 
    return $indhold;
 
@@ -5763,7 +5895,7 @@ function visstatusform($vissogefterdet = true){
 
 
 
-function lidtplads($retning){
+function lidtplads($retning, $span = false){
 
    $indhold = '';
 
@@ -5777,7 +5909,15 @@ function lidtplads($retning){
 
    }elseif($retning == 'vandret'){
 
-      $indhold .= '<div class="lidtpladsvandret"></div>';
+      if($span){
+
+         $indhold .= '<span class="lidtpladsvandret"></span>';
+
+      }else{
+
+         $indhold .= '<div class="lidtpladsvandret"></div>';
+
+      }
 
    }else{
 
@@ -6352,7 +6492,7 @@ function vissogeresultater(){
    $fund = '';
    $fundnesider = array();
 
-   $tip = '<div>Tip : Skriv kun et ord og undgå tegn som + og - og / for at finde flest sider.</div>';
+   $tip = '<div>Tip : Skriv kun et eller to ord og undgå tegn som + og - og / for at finde flest sider.</div>';
 
    if($_SERVER['REQUEST_METHOD'] == "POST"){
    if(isset($_POST['funktion'])){
@@ -6367,7 +6507,7 @@ function vissogeresultater(){
       $sogetekstudenspecialtegn = $sogetekst;
       $sogetekstudenspecialtegn = str_replace('<', '&lt;', $sogetekstudenspecialtegn);
       $sogetekstudenspecialtegn = str_replace('>', '&gt;', $sogetekstudenspecialtegn);
-      $sogetekstudenspecialtegn = mb_ucfirst($sogetekstudenspecialtegn);
+      $sogetekstudenspecialtegn = $sogetekstudenspecialtegn;
 
       if($sogetekst == $GLOBALS['setup']['language_search'] || $sogetekst == ''){
 
@@ -6404,7 +6544,7 @@ function vissogeresultater(){
                || $v[0] == "ratingoversigt.php"
                || $v[0] == "windows7.php"
                || $v[0] == "kode_mysql.php"
-               || $v[0] == "kode_ge​t.php"
+               || $v[0] == "kode_get.php"
                || $v[0] == "forum.php"
             ){
 
@@ -6457,6 +6597,7 @@ function vissogeresultater(){
          }else{
 
             $indhold .= 'Teksten <span class="bold">"' . $sogetekstudenspecialtegn . '"</span> blev ikke fundet.' . "\r\n";
+            $indhold .= "\r\n";
             //$indhold .= sogspecialbesked($sogetekst);
             $indhold .= $tip;
 
@@ -6482,7 +6623,7 @@ function vissogeresultater(){
       if($_POST['funktion'] == "sog"){
       if(isset($_POST['sogetekst'])){
 
-         gemsogning($_POST['sogetekst'], count($fundnesider));
+         //gemsogningifil($_POST['sogetekst'], count($fundnesider)); // brug eventuelt som backup hvis database ikke virker
          $indhold .= gemsogetekstidatabase($_POST['sogetekst'], count($fundnesider));
 
       }
@@ -6509,9 +6650,11 @@ function mentedu($sogetekst){
    $words = array();
    $ekstrasogeordfil = $GLOBALS['setup']['roden'] . '/' . $GLOBALS['setup']['datamappe'] . '/php/sogeord.php';
 
+   $sogetekst = mb_strtolower($sogetekst); // lav til lower case eller bliver mente du ikke magen til når man starter med stor som når Firefox OS browser app automatisk gør det første bogstav stort når man søger
+
    if(file_exists($ekstrasogeordfil)){
 
-      $words = include_once($ekstrasogeordfil);
+      $words = include_once $ekstrasogeordfil;
 
    }
 
@@ -6559,11 +6702,12 @@ function mentedu($sogetekst){
          $indhold .= 'Mente du : <span class="bold">"' . $closest . '"</span> ?';
          $indhold .= "\r\n";
          $indhold .= ''
-            . formbox('0', '', '', $GLOBALS['setup']['datamappe'] . '/' . 'sog.php', 'post', '', ''
+            . formbox('0', '', '', $_SERVER["PHP_SELF"], 'post', '', ''
                . input('0', 'hidden', 'funktion', 'sog')
                . input('0', 'hidden', 'sogetekst', $closest, '30', '', 'sogetekst', '', '', '', '100')
                . input('0', 'submit', 'sog_sendknap', 'Ja da', '', '', '', '', '')
             );
+         $indhold .= "\r\n";
          $indhold .= "\r\n";
 
       }
@@ -6871,15 +7015,38 @@ function doraemonsays($data){
 
    $indhold = '';
 
-   $indhold .= '<div>';
-   $indhold .= visbilled('2', 'ikoner/doraemon2.png', 'doraemon siger noget', null, null, null, 'class="doraemonhasspokenitbilled"');
-   $indhold .= '<span class="doraemonhasspokenit bordertype2 borderradius5px">';
-   $indhold .= '' . $data . '';
-   $indhold .= '</span>';
-   $indhold .= '</div>';
+/*
+   $indhold .= '<!--ignore--><div style="
+position: absolute;
+left: 320px;
+top: 55px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: black;
+    width: 0px;
+    height: 0px;
+    background: none repeat scroll 0% 0% transparent;
+    border-bottom-width: 20px;
+    border-right-width: 20px;
+    border-left-width: 20px;
+    border-top-width: 20px;
+    border-style: solid;
+"></div><!--ignore-->';
+*/
 
-   $indhold .= clearboth();
-   $indhold .= "\r\n";
+   $indhold .= ''
+
+      .'<div>'
+      .visbilled('2', 'ikoner/doraemon2.png', 'doraemon siger noget', null, null, null, 'class="doraemonhasspokenitbilled"')
+      .'<span class="doraemonhasspokenit bordertype2 borderradius5px">'
+      .$data
+      .clearboth()
+      .'</span>'
+      .'</div>'
+      .clearboth()
+      ."\r\n"
+      ;
 
    return $indhold;
 
@@ -7628,7 +7795,7 @@ function spotlysholder($data){
 
       $data
 
-   , 5);
+   , 4);
 
    shuffle($tilfeldigspotlys);
 
@@ -7647,10 +7814,11 @@ function spotlysholder($data){
 
       $indhold .= '         <a href="' . $aurl . '" class="spotlysholder background_color_2 fontsize_xsmall fontfamily_1 bordertype1 borderradius5px">';
       $indhold .= '<img src="' . $imgurl . '" alt="' . $imgalt . '" class="spotlysbillede">';
-      $indhold .= '<div class="spotlyoverskrift fontsize_xlarge fontfamily_6">' . mb_strtoupper($overskrift) . '</div>';
+      $indhold .= '<span class="spotlyoverskrift fontsize_xlarge fontfamily_6">' . mb_strtoupper($overskrift) . '</span>';
       $indhold .= $ekstratekst;
       $indhold .= '</a>';
       $indhold .= "\r\n";
+
    }
 
    $indhold .= '         ' . clearboth();
@@ -7920,7 +8088,8 @@ function vissogningeridatabase($visantalsogninger){
             . 'Seneste '.$visantalsogninger.' søgninger'
             . '</div>'
 
-            . '<table class="tablesorter">'
+            . '<div style="overflow-x: auto;">'
+            . '<table class="tableholder fontsize_small tablesorter">'
 
             . '<thead>'
             . '<tr>'
@@ -7938,20 +8107,12 @@ function vissogningeridatabase($visantalsogninger){
             . '</tbody>'
 
             . '</table>'
+            . '</div>'
             ;
 
       } else {
 
-         $indhold .= ''
-            . '<div class="ratingoversigtingendata">'
-            . '<h1>Ingen data at vise</h1>'
-            . '<h2>Her er nogen misser i stedet for</h2>'
-            . '<img src="http://placekitten.com/180/160" alt="Miau 1" width="180" height="160">'
-            . '<img src="http://placekitten.com/181/160" alt="Miau 2" width="181" height="160">'
-            . '<img src="http://placekitten.com/182/160" alt="Miau 3" width="182" height="160">'
-            . '<img src="http://placekitten.com/183/160" alt="Miau 4" width="183" height="160">'
-            . '</div>'
-            ;
+         $indhold .= nogenmisser();
 
       }
 
@@ -7959,6 +8120,55 @@ function vissogningeridatabase($visantalsogninger){
 
    return $indhold;
 
+}
+
+
+
+function googleanalyticsscriptkode(){
+
+   $indhold = '';
+
+   $indhold .= ''
+         .'   <script type="text/javascript">'."\r\n"
+         ."\r\n"
+         ."      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){"."\r\n"
+         ."      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),"."\r\n"
+         ."      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)"."\r\n"
+         ."      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');"."\r\n"
+         ."\r\n"
+         ."      ga('create', '" . $GLOBALS['setup']['googleanalytics1'] . "', '" . $GLOBALS['setup']['googleanalytics2'] . "');"."\r\n"
+         ."      ga('send', 'pageview');"."\r\n"
+         ."\r\n"
+         .'   </script>'."\r\n"
+         ."\r\n";
+
+   return $indhold;
+
+}
+
+
+
+function nogenmisser() {
+
+   $indhold = '';
+
+   $indhold .= ''
+      .'<div class="ratingoversigtingendata borderradius5px" style="background: rgba(255, 255, 255, 0.5)">'
+      .'<h1>Wut! No data ?</h1>'
+      .'<h2>Her er nogen misser i stedet</h2>'
+      .'<img src="http://placekitten.com/40/160" alt="Miau 1" width="40" height="160" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;">'
+      .'<img src="http://placekitten.com/81/160" alt="Miau 2" width="81" height="170" style="border-top-left-radius: 10px;">'
+      .'<img src="http://placekitten.com/182/160" alt="Miau 3" width="182" height="180" style="border-top-left-radius: 10px;">'
+      .'<img src="http://placekitten.com/133/160" alt="Miau 4" width="133" height="210" style="border-top-left-radius: 10px;">'
+      .'<img src="http://placekitten.com/74/160" alt="Miau 5" width="74" height="230" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">'
+      .'<img src="http://placekitten.com/35/160" alt="Miau 6" width="35" height="200" style="border-top-right-radius: 10px;">'
+      .'<img src="http://placekitten.com/46/160" alt="Miau 7" width="46" height="170" style="border-top-right-radius: 10px;">'
+      .'<img src="http://placekitten.com/57/160" alt="Miau 8" width="57" height="160" style="border-top-right-radius: 10px;">'
+      .'<img src="http://placekitten.com/80/160" alt="Miau 9" width="80" height="140" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;">'
+      .'</div>'
+      ;
+
+   return $indhold;
 }
 
 

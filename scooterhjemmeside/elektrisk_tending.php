@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "tænding - Elektrisk";
 $overskrift = "tænding - Elektrisk";
-$metadescription = "forklaring af scooterens tændingssystem som tændingspunkt, CDI, TCI, kontaktsæt";
+$metadescription = "forklaring af tændingssystemet på scootere som tændingspunkt, CDI, TCI, ignition advance kurve";
 
 $databasecenter = array(
 
@@ -39,7 +39,7 @@ Når motoren køre giver tændrøret gnist når stemplet næsten er øverst i ko
 Når motorens o/min stiger så bestemmer CDI boksens "ignition advance" kurve at tændingspunktet skal foregå lidt tidligere.
 
 Her ses et eksempel på hvordan tændingspunktet ændres ved forskellige motor hastigheder.
-'.visbilled('1', 'billed1756.jpg', 'ignition advance kurve piaggio fly 150 ccm', false, true).'
+'.visbilled('1', 'billed1756.jpg', 'ignition advance kurve piaggio fly 150 cm³', false, true).'
 Her ses en "ignitions advance" kurve fra en XT50QT.
 '.visbilled('1', 'billed1841.jpg', 'ignition advance kurve xt50qt', false, true).'
 
@@ -57,16 +57,16 @@ Waveform A markere det tidligste og seneste tidspunkt for tændingspunktet.
 '.visbilled('1', 'billed1074.jpg', 'waveform a', false, true).'
 Waveform B variere alt efter hvor mange o/min motoren køre med.
 Her er linierne markeret med N1 til N4.
-'.visbilled('1', 'billed1077.jpg', 'waveform b', false, true).'
 N1 bruges ved laveste o/min.
 N2 bruges ved lidt højere o/min.
 N3 bruges ved endnu højere o/min.
 N4 bruges ved højeste o/min (full advance).
+'.visbilled('1', 'billed1077.jpg', 'waveform b', false, true).'
 
 Tændingspunktet (hvor tændrøret giver gnist) findes ved at lægge waveform A og waveform B oven på hinanden.
 Punktet hvor linierne krydser er tændingspunktet..
-'.visbilled('1', 'billed1075.jpg', 'waveform a og waveform b', false, true).'
 Hvis linierne i waveform A og waveform B ikke krydser hinanden (N1) så er det forhøjningen på svinghjulet som bestemmer tændingspunktet. Så gives der gnist når forhøjningen forlader pickupen.
+'.visbilled('1', 'billed1075.jpg', 'waveform a og waveform b', false, true).'
 
 Her ses hvor mange grader krumtapakslen er drejet ved de forskellige tændingspunktet.
 Tændingspunktet variere her fra 10 til 35 grader før TDC.
@@ -77,10 +77,9 @@ Det seneste tændingspunkt er her ved 10 grader før TDC (tomgang).
 Her ses hvordan tændrøret giver gnist tidligere jo højere o/min motoren køre med.
 '.visbilled('1', 'animation0005.gif', 'pickup scr gate spark advance', false, true).'
 
-Her er en animation af screenshots fra et computer program.
+Her er en animation med screenshots fra et computer program.
+Jeg går ud fra den røde linie er pickupen og at den høje grønne linie er tændingspunktet.
 '.visbilled('1', 'animation0004.gif', 'oscilloscope-xsc1', false, true).'
-Jeg går ud fra den røde linie er pickupen.
-Den grønne linie må være tændingspunktet.
 '
 
 ,'
@@ -109,14 +108,12 @@ CDI boksen får signal fra pickupen.
 CDI boksen udregner hvornår tændrøret skal give gnist afhængig af motorens omdrejningshastighed.
 Kondensatoren aflades til tændspolen.
 Tændspolen laver de cirka 220 volt fra CDI boksen om til cirka 20000 volt og tændrøret giver gnist.
-(Der er en bruger som har skrevet at 220 volt er for meget).
+(Nogle steder på nettet står at CDI boksen afgiver cirka 400-600 volt og at tændspolen laver spændingen om til cirka 40000 volt.)
 
 Efter som svinghjulet drejer 2 omgange før en 4 takt motor har gennemført sine 4 takter så vil jeg mene det foregår sådan her for på en 4 takt motor.
 '.visbilled('1', 'billed0735.jpg', 'signal fra pickup og volt på kondensator', false, true).'
 Og sådan her på en 2 takt motor.
 '.visbilled('1', 'billed2449.jpg', 'signal fra pickup og volt på kondensator', false, true).'
-
-Nogle steder på nettet står at CDI boksen afgiver cirka 400-600 volt og at tændspolen laver de 400-600 volt om til cirka 40000 volt.
 ').'
 
 Tændingspunktet hvor tændrøret giver gnist variere alt efter hvor hurtigt motoren køre.
@@ -146,7 +143,7 @@ Her ses en DC CDI.
 ').'
 
 '.afsnit('AC CDI','
-Får vækselstrøm fra generatoren.
+Får vekselstrøm fra generatoren.
 
 '.afsnit('her ses nogen eksempel på hvordan en AC CDI kan være forbundet','
 Dødmandsknap.
@@ -214,7 +211,7 @@ TCI står for Transistor Controlled Ignition.
 
 TCI styrer ligesom CDI tændingstidspunktet men er bare lavet på en anden måde end en CDI boks.
 
-TCI findes blandt andet på '.ahref('altomhonda.php#hondazoomer', 'Honda Zoomer').'.
+TCI findes blandt andet på '.ahref('altomhonda.php#hondazoomer', 'Honda Zoomer').' og nogle Yamaha modeller.
 
 TCI boksen har et mere simpelt design i forhold til CDI og den bruger ikke nogen kondensator.
 '

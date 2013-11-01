@@ -1,11 +1,11 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "elektricitet og elektronik";
-$overskrift = "elektricitet og elektronik";
+$title = "grundlæggende viden om elektricitet og elektronik";
+$overskrift = "grundlæggende viden om elektricitet og elektronik";
 $metadescription = "introduktion til elektricitet og elektronik. Forklaring af volt, ampere, watt, ohm, vekselstrøm og jævnstrøm, elektronik komponenter";
 
 $databasecenter = array(
@@ -245,7 +245,7 @@ Den er på 35 Volt og 1000 µF.
 Her ses en kondensator som skulle være den der aflades til tændspolen.
 '.visbilled('1', 'billed1152.jpg', 'kondensator i kymco super 8 4T CDI boks', false, true).'
 På printpladen er den angivet med C hvilket vist nok betyder kondensator.
-Jeg syns der står 155K på den hvis det giver mening.
+Jeg syntes der står 155K på den hvis det giver mening.
 Det betyder 155nF (nano Farad) som er dens kapacitet.
 
 Her ses en thyristor.

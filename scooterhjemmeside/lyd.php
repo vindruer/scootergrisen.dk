@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "lyd - Underholdning";
-$overskrift = "lyd - Underholdning";
-$metadescription = "scooterrelaterede lydfiler";
+$title = "lyd og musik med scootere og knallerter - Underholdning";
+$overskrift = "lyd og musik med scootere og knallerter - Underholdning";
+$metadescription = "musik og lydfiler hvor scootere og knallerterne bliver nævnt";
 
 $playerurl = $GLOBALS['setup']['domainogdatamappe'] . '/' . 'flash' . '/' . 'player_mp3_multi.swf';
 $playlistfil = '/scooterhjemmeside/lyd/playlist_lyd.txt';

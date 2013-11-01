@@ -1,26 +1,19 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "forlygte - Service";
 $overskrift = "forlygte - Service";
-$metadescription = "service af forlygten på scooter";
+$metadescription = "service af forlygten på scooter (justering af nærlyset)";
 
 $databasecenter = array(
 
 '
-rettelse
-' => '
-Før var der her på siden en længere forklaring på hvordan man justerede forlygten på en scooter.
-Det viste sig at være forkert det havde skrevet og også en besværlig måde at gøre det på så jeg har kortet forklaringen en del ned.
-'
-
-,'
 justering af forlygte
 ' => '
-For at scooterens forlys skal kunne lyse vejen godt op men samtidig ikke blænde modkørende så skal nærlyset pege lidt ned.
+For at scooterens forlygte skal kunne lyse vejen godt op men samtidig ikke blænde modkørende så skal nærlyset pege lidt ned.
 
 Før man juster forlygten skal scooterens dæk havde '.ahref('service_dek.php#kontroller_dektryk', 'korrekt dæktryk').'.
 
@@ -29,6 +22,11 @@ Vælg nærlyset.
 Forlygtens hældning justeres på en skrue bag forlygten op under front skjoldet eller lige omkring forlygten foran på scooteren.
 '.visbilled('1', 'billed0331.jpg', 'scooter forlygte justerings skrue', false, true).'
 Den nemmeste måde er nok at køre en tur om aftenen/natten et sted hvor det er mørkt (ingen gadebelysning) så man kan se hvordan vejen lyses op og lave justeringer i løbet af turen indtil man er tilfreds.
+
+På denne Kymco Super 8 4T sidder justeringsskruen inde bag forlygten oppe over forhjulet og det kan være lidt svært at komme ind og finde skruen hver gang man skal justere.
+'.visbilled('1', 'billed3888.jpg', 'scooter forlygte justerings skrue', false, true).'
+Der er tilsyneladende også mulighed for at justere skruen med et værktøj fra siden.
+'.visbilled('1', 'billed3887.jpg', 'scooter forlygte justerings skrue', false, true).'
 '
 
 ,'

@@ -2,7 +2,7 @@
 
 // english translation for http://scootergrisen.dk/
 
-$setup['setlocalreturn'] = setlocale(LC_ALL, 'en_GB.1252', 'english-uk', 'eng', 'en_UK', 'en_UK@euro'); // setlocal påvirker ting som decimal tegn (. / ,) og dagnavn (sunday / søndag) | et "locale name" kan bestå af 3 dele for eksempel i "en_GB.1252" | en = sprog | _GB = land | .1252 = character set
+$setup['setlocalreturn'] = setlocale(LC_ALL, 'en_GB.UTF-8', 'English_United Kingdom.1252', 'en_GB.1252', 'english-uk', 'eng', 'en_UK', 'en_UK@euro'); // setlocal påvirker ting som decimal tegn (. / ,) og dagnavn (sunday / søndag) | et "locale name" kan bestå af 3 dele for eksempel i "en_GB.1252" | en = sprog | _GB = land | .1252 = character set
 
 $setup['l_sidetopbesked_dennesidevarretstor'] = 'This page was rather large and took a long time to load.<br><br>So i split the the page into several smaller pages that a faster to load.<br><br>Use the menu called';
 
@@ -20,9 +20,9 @@ $setup['l_gratisreklame_klikpabilledet'] = 'click on the image to visit';
 
 $setup['l_youarehere'] = 'you are here in the menu';
 
-$setup['l_changelanguage_try'] = '';
 $setup['l_changelanguage'] = 'change menu language';
-$setup['l_changelanguage_automatic'] = 'automatic';
+$setup['l_changelanguage_automatic'] = 'use browser settings';
+$setup['l_changelanguage_automatic_description'] = 'automatically choose language from the browsers preferences';
 $setup['l_changelanguage_current'] = 'language';
 $setup['button_fullscreentoggle'] = 'fullscreen toggle';
 
@@ -36,9 +36,10 @@ $setup['l_flag_english'] = 'switch to english (only partial translation)';
 $setup['l_flag_dansk'] = 'switch to danish';
 
 $setup['l_smaikoner_forum'] = 'go to forum (board)';
+$setup['l_smaikoner_start'] = 'start (menu with images) so its easier to understand what the different pages are about';
 $setup['l_smaikoner_nyheder'] = 'show the latest news from the website';
 $setup['l_smaikoner_kontakt'] = 'write a message to me making the website';
-$setup['l_smaikoner_introduktion'] = 'introduction';
+$setup['l_smaikoner_introduktion'] = 'website';
 $setup['l_smaikoner_tilfeldig'] = 'roll the dice and land on a random page';
 $setup['l_smaikoner_download'] = 'manuals (download)';
 $setup['l_smaikoner_typegodkendelser'] = 'type approvals';
@@ -53,6 +54,11 @@ $setup['l_smaikoner_billeder'] = 'images from the streets';
 $setup['l_smaikoner_vinterrad'] = 'winter tips';
 $setup['l_smaikoner_karburator'] = 'carburettor';
 $setup['l_smaikoner_nummerplade'] = 'licenseplate image generator til make a image that looks like a licenseplate from a small moped og large moped';
+$setup['l_smaikoner_videoer'] = 'different videos with scooters and mopeds, helmetcams,musicvideos, tv and movies, commercials, inventions';
+$setup['l_smaikoner_serivefejlfindingintroduktion'] = 'start here if your looking to solve problems with your scooter';
+$setup['l_smaikoner_loveogregler'] = 'laws and rules';
+$setup['l_smaikoner_registrering'] = 'registration';
+$setup['l_smaikoner_tendror'] = 'sparkplug';
 
 $setup['l_spotlys_begrensninger'] = 'restrictions';
 $setup['l_spotlys_begrensninger_description'] = 'can be removed if you wish to drive faster or get lower fuel consumption';
@@ -73,24 +79,34 @@ $setup['l_spotlys_forum_description'] = 'is the place we write with each other a
 $setup['l_spotlys_stederidanmark'] = 'places in denmark';
 $setup['l_spotlys_stederidanmark_description'] = 'is a map where you can find shops, workshops, dealers of scooters and spare parts (now with sortable table of all the places)';
 
+$setup['l_m_forummenu'] = 'forum';
+$setup['l_m_forummenu_boardindex'] = 'board index';
+$setup['l_m_forummenu_boardindex_description'] = 'forum frontpage with an overview of the different forums';
+$setup['l_m_forummenu_activetopics'] = 'view active topics';
+$setup['l_m_forummenu_activetopics_description'] = 'view the newest topics and latests answers';
+$setup['l_m_forummenu_sog'] = 'search in forum';
+$setup['l_m_forummenu_sog_description'] = 'search amoung the topics written in the forum';
+
 $setup['l_m_hovedmenu'] = 'main menu';
 $setup['l_m_hovedmenu_forum'] = 'forum';
 $setup['l_m_hovedmenu_forum_description'] = 'is the place we write with each other about scooters';
 $setup['l_m_hovedmenu_forsiden'] = 'front page';
 $setup['l_m_hovedmenu_forsiden_description'] = 'go to the front page';
-$setup['l_m_hovedmenu_start'] = 'start';
+$setup['l_m_hovedmenu_start'] = 'start (menu with images)';
 $setup['l_m_hovedmenu_start_description'] = 'here you can see the menu with images so its easy to see what the different pages is about';
 $setup['l_m_hovedmenu_nyheder'] = 'news';
 $setup['l_m_hovedmenu_nyheder_description'] = 'her you can see about the latest changes/additions on the website';
-$setup['l_m_hovedmenu_introduktion'] = 'introduction';
-$setup['l_m_hovedmenu_introduktion_description'] = 'here you can learn more about the website and how to use it';
-$setup['l_m_hovedmenu_gratisreklame'] = 'free commercial';
-$setup['l_m_hovedmenu_gratisreklame_description'] = 'get a free commercial on the website';
-$setup['l_m_hovedmenu_tilfeldig'] = 'random page';
+$setup['l_m_hovedmenu_tilfeldig'] = 'visit a random page';
 $setup['l_m_hovedmenu_tilfeldig_description'] = 'roll the dice and land on a random page';
 $setup['l_m_hovedmenu_todo'] = 'todo';
 $setup['l_m_hovedmenu_todo_description'] = 'plans for the future of this website';
-$setup['l_m_hovedmenu_kontakt'] = 'contact';
+$setup['l_m_hovedmenu_login'] = 'login';
+$setup['l_m_hovedmenu_login_description'] = 'here i can login on the website, its not meant for others to register and login';
+$setup['l_m_hovedmenu_ratingoversigt'] = 'ratings overview';
+$setup['l_m_hovedmenu_ratingoversigt_description'] = 'see which pages the users things are espacially good and bad';
+$setup['l_m_hovedmenu_sog'] = 'seach';
+$setup['l_m_hovedmenu_sog_description'] = 'search through the websites pages for sertant texts';
+$setup['l_m_hovedmenu_kontakt'] = 'contact scootergrisen';
 $setup['l_m_hovedmenu_kontakt_description'] = 'write a message to the creator of this website';
 
 $setup['l_m_oplysninger'] = 'information';
@@ -100,8 +116,6 @@ $setup['l_m_oplysninger_forsikring'] = 'insurance';
 $setup['l_m_oplysninger_forsikring_description'] = 'explains different types off insurance. Phone numbers, insurance companies';
 $setup['l_m_oplysninger_kobafscooter'] = 'buying a scooter';
 $setup['l_m_oplysninger_kobafscooter_description'] = 'advice when buying a new or used scooter, website where you can buy and sell';
-$setup['l_m_oplysninger_loveogregler'] = 'laws and regulations';
-$setup['l_m_oplysninger_loveogregler_description'] = 'what rules applies when riding scooter, what you get a ticket and what you are allowed and not allowed to do';
 $setup['l_m_oplysninger_ordbog'] = 'dictionary';
 $setup['l_m_oplysninger_ordbog_description'] = 'explain different scooter related abbreviations and words';
 $setup['l_m_oplysninger_registrering'] = 'registration';
@@ -111,9 +125,9 @@ $setup['l_m_oplysninger_tilkoring_description'] = 'advice for running-in a new s
 $setup['l_m_oplysninger_vinterrad'] = 'winter tips';
 $setup['l_m_oplysninger_vinterrad_description'] = 'advice primarily useful in the winter';
 
-$setup['l_m_dokumenter'] = 'documents';
-$setup['l_m_dokumenter_download'] = 'manuals, electrical diagrams, sparepartscatalogues, etc (download)';
-$setup['l_m_dokumenter_download_description'] = 'here you can download manuals, electrical diagrams and so on';
+$setup['l_m_dokumenter'] = 'download';
+$setup['l_m_dokumenter_download'] = 'manuals, electrical diagrams, sparepartscatalogues, etc';
+$setup['l_m_dokumenter_download_description'] = 'here you can download manuals, electrical diagrams and so on for scooters and mopeds';
 $setup['l_m_dokumenter_typegodkendelser'] = 'type approval';
 $setup['l_m_dokumenter_typegodkendelser_description'] = 'type approval for many scooter models sold in denmark';
 
@@ -122,10 +136,8 @@ $setup['l_m_interaktive_vinchecker'] = 'VIN checker';
 $setup['l_m_interaktive_vinchecker_description'] = 'write a 17 digit frame number and (maybe) see info about the scooter like maker and year';
 $setup['l_m_interaktive_omregn'] = 'convert and calculate';
 $setup['l_m_interaktive_omregn_description'] = 'convert between different units, calculate fuel consumption, units and abbreviations, convert torque tightening, convert tire pressure, calculate combustion chamber volume and displacement, calculate compression ratio';
-$setup['l_m_interaktive_teoriprove'] = 'theory test';
-$setup['l_m_interaktive_teoriprove_description'] = 'questions that tests your knowledge about ride 30 km/t scooter in traffic';
-$setup['l_m_interaktive_nummerplade'] = 'license plate generator';
-$setup['l_m_interaktive_nummerplade_description'] = 'license plate generator is not made yet';
+$setup['l_m_interaktive_nummerplade'] = 'image generator of license plate';
+$setup['l_m_interaktive_nummerplade_description'] = 'input registrationnumber from scooter/moped and get an image that looks like a numberplate';
 
 $setup['l_m_vesker'] = 'fluids and lubrications';
 $setup['l_m_vesker_benzin'] = 'petrol (gasoline)';
@@ -296,6 +308,8 @@ $setup['l_m_scooterensdele_starterdrev'] = 'starterdrive';
 $setup['l_m_scooterensdele_starterdrev_description'] = 'starterdrive is the part first spun around by the startermotor';
 $setup['l_m_scooterensdele_stotteben'] = 'kickstand';
 $setup['l_m_scooterensdele_stotteben_description'] = 'center stand, side kickstand';
+$setup['l_m_scooterensdele_styretoj'] = 'steering';
+$setup['l_m_scooterensdele_styretoj_description'] = 'handlebar, steering stem and bearings';
 $setup['l_m_scooterensdele_tendror'] = 'spark plug';
 $setup['l_m_scooterensdele_tendror_description'] = 'spark plug codes, heat valves, champion, NGK, Denso, Bosch, Torch, spark plug types, spark plug cap, iridium, spark';
 
@@ -370,7 +384,7 @@ $setup['l_m_tilbehorekstraudstyr'] = 'accessories and equipment';
 $setup['l_m_tilbehorekstraudstyr_batterioplader'] = 'battery charger';
 $setup['l_m_tilbehorekstraudstyr_batterioplader_ctekxs800'] = 'CTEK XS 800';
 $setup['l_m_tilbehorekstraudstyr_batterioplader_ctekxs800_description'] = 'learn about the battery charger CTEK XS 800';
-$setup['l_m_tilbehorekstraudstyr_batterioplader_optimate4'] = 'OptiMate 4';
+$setup['l_m_tilbehorekstraudstyr_batterioplader_optimate4'] = 'TecMate OptiMate 4';
 $setup['l_m_tilbehorekstraudstyr_batterioplader_optimate4_description'] = 'learn about the battery charger OptiMate 4';
 $setup['l_m_tilbehorekstraudstyr_tyverisikring'] = 'security (locks and alarms)';
 $setup['l_m_tilbehorekstraudstyr_tyverisikring_description'] = 'lock types and advice to protect your scooter from thieves, alarms, GSM, GPRS, GPS tracking, thieves tools';
@@ -389,7 +403,7 @@ $setup['l_m_tilbehorekstraudstyr_indsprojtningskit_description'] = 'converter a 
 $setup['l_m_tilbehorekstraudstyr_kamera'] = 'camera';
 $setup['l_m_tilbehorekstraudstyr_kamera_description'] = 'info about cameras and helmet mounting so you can record while you ride';
 
-$setup['l_m_specielt'] = 'special';
+$setup['l_m_specielt'] = 'special / Mess box';
 $setup['l_m_specielt_rodekassen'] = 'mess box';
 $setup['l_m_specielt_rodekassen_andet'] = 'other';
 $setup['l_m_specielt_rodekassen_andet_description'] = 'different unfinished subjects';
@@ -397,14 +411,12 @@ $setup['l_m_specielt_rodekassen_slidkanogetophastigheden'] = 'wear can increase 
 $setup['l_m_specielt_rodekassen_slidkanogetophastigheden_description'] = 'something about warn on the variator pulley (or restriction ring) can increase the top speed on a restricted scooter';
 $setup['l_m_specielt_rodekassen_forsogpaatfindeudafhvordanmanfarnummerpladepakobtbrugtscooterudenpapir'] = 'trying to find out how to get license plate on a bought used scooter without papers';
 $setup['l_m_specielt_rodekassen_forsogpaatfindeudafhvordanmanfarnummerpladepakobtbrugtscooterudenpapir_description'] = 'here im trying to collect information about how to get license plate on a used scooter bought without papers';
-$setup['l_m_scootermerker_atv'] = 'ATV (All-Terrain Vehicle)';
-$setup['l_m_scootermerker_atv_description'] = 'here i collect info about ATV (All Terrain Vehicle)';
 $setup['l_m_specielt_rodekassen_brandselscelle'] = 'fuel cells';
 $setup['l_m_specielt_rodekassen_brandselscelle_description'] = 'learn about fuel cell technology';
 
 $scootergentag = ' scooters with images, data and maybe manuals, electrical diagrams, spare parts catalogues and type approvals';
 
-$setup['l_m_scootermerker'] = 'vehicles (scooter brands)';
+$setup['l_m_scootermerker'] = 'vehicles';
 $setup['l_m_scootermerker_galleri'] = 'gallery';
 $setup['l_m_scootermerker_galleri_description'] = 'overview of all the scooter brands and images of the each scooter model';
 $setup['l_m_scootermerker_1'] = 'A - B - C - D';
@@ -426,6 +438,8 @@ $setup['l_m_scootermerker_1_avanti'] = 'avanti';
 $setup['l_m_scootermerker_1_avanti_description'] = 'watch Avanti' . $scootergentag;
 $setup['l_m_scootermerker_1_baotian'] = 'baotian';
 $setup['l_m_scootermerker_1_baotian_description'] = 'watch Baotian' . $scootergentag;
+$setup['l_m_scootermerker_1_benzhouyiying'] = 'benzhou yiying';
+$setup['l_m_scootermerker_1_benzhouyiying_description'] = 'watch Benzhou Yiying' . $scootergentag;
 $setup['l_m_scootermerker_1_beta'] = 'beta';
 $setup['l_m_scootermerker_1_beta_description'] = 'watch Beta' . $scootergentag;
 $setup['l_m_scootermerker_1_busetto'] = 'busetto';
@@ -525,6 +539,8 @@ $setup['l_m_scootermerker_4_skyteam'] = 'skyteam';
 $setup['l_m_scootermerker_4_skyteam_description'] = 'watch Skyteam' . $scootergentag;
 $setup['l_m_scootermerker_4_solex'] = 'solex';
 $setup['l_m_scootermerker_4_solex_description'] = 'watch Solex' . $scootergentag;
+$setup['l_m_scootermerker_4_solo'] = 'solo';
+$setup['l_m_scootermerker_4_solo_description'] = 'watch Solo' . $scootergentag;
 $setup['l_m_scootermerker_4_suzuki'] = 'suzuki';
 $setup['l_m_scootermerker_4_suzuki_description'] = 'watch Suzuki' . $scootergentag;
 $setup['l_m_scootermerker_4_swap'] = 'swap';
@@ -532,6 +548,8 @@ $setup['l_m_scootermerker_4_swap_description'] = 'watch SWAP' . $scootergentag;
 $setup['l_m_scootermerker_4_sym'] = 'sym';
 $setup['l_m_scootermerker_4_sym_description'] = 'watch Sym' . $scootergentag;
 $setup['l_m_scootermerker_5'] = 'T - U - V - W - X - Y - Z';
+$setup['l_m_scootermerker_5_tantepaula'] = 'tante paula';
+$setup['l_m_scootermerker_5_tantepaula_description'] = 'watch tante paula' . $scootergentag;
 $setup['l_m_scootermerker_5_texas'] = 'texas';
 $setup['l_m_scootermerker_5_texas_description'] = 'watch Texas' . $scootergentag;
 $setup['l_m_scootermerker_5_tgb'] = 'tgb';
@@ -564,9 +582,9 @@ $setup['l_m_scootermerker_specielt_3hjuletscootere'] = '3 wheel scooters';
 $setup['l_m_scootermerker_specielt_3hjuletscootere_description'] = 'see the different 3 wheel scooters you can get and learn about parts like reverse gear, differential gear and parking brake';
 $setup['l_m_scootermerker_fremtidensscootere'] = 'future scooters';
 $setup['l_m_scootermerker_fremtidensscootere_description'] = 'see scooter models that might be sold in denmark in the future';
-$setup['l_m_scootermerker_galleri_manglerdata'] = 'gallery for models missing data';
+$setup['l_m_scootermerker_galleri_manglerdata'] = 'gallery for scooter and moped models missing data';
 $setup['l_m_scootermerker_galleri_manglerdata_description'] = 'gallery for models missing data. You can help with data, images, files and so on if you wish';
-$setup['l_m_scootermerker_manglerdata'] = 'models missing data';
+$setup['l_m_scootermerker_manglerdata'] = 'scooter and moped models missing data';
 $setup['l_m_scootermerker_manglerdata_description'] = 'data is missing on these models. You can help with data, images, files and so on if you wish';
 $setup['l_m_scootermerker_2takt_modellermed2taktmotor'] = 'models with 2 stroke engine';
 $setup['l_m_scootermerker_2takt_modellermed2taktmotor_description'] = 'an attempt to make a list of all the 2 stroke scooters sold in denmark';
@@ -587,6 +605,12 @@ $setup['l_m_underholdning_spil_description'] = 'games with scooters';
 $setup['l_m_underholdning_lyd'] = 'audio';
 $setup['l_m_underholdning_lyd_description'] = 'audio that have something to do with scooters';
 
+$setup['l_m_undervisning'] = 'education';
+$setup['l_m_interaktive_teoriprove'] = 'theory test';
+$setup['l_m_interaktive_teoriprove_description'] = 'questions that tests your knowledge about ride 30 km/t scooter in traffic';
+$setup['l_m_oplysninger_loveogregler'] = 'laws and regulations';
+$setup['l_m_oplysninger_loveogregler_description'] = 'what rules applies when riding scooter, what you get a ticket and what you are allowed and not allowed to do';
+
 $setup['l_m_andresteder'] = 'other places';
 $setup['l_m_hovedmenu_links'] = 'links';
 $setup['l_m_hovedmenu_links_description'] = 'here you can find links to other danish scooter/moped websites, dealers, makers, insurance companies';
@@ -594,6 +618,12 @@ $setup['l_m_hovedmenu_stederidanmark'] = 'places in denmark';
 $setup['l_m_hovedmenu_stederidanmark_description'] = 'map off denmark with shops, workshops, dealers, importers and other interesting places';
 $setup['l_m_hovedmenu_facebookfanside'] = 'fan-page on facebook';
 $setup['l_m_hovedmenu_facebookfanside_description'] = 'fan-page on facebook (not made by me) where people on facebook can discover the website and to get more visitors';
+
+$setup['l_m_omhjemmesiden'] = 'about';
+$setup['l_m_hovedmenu_introduktion'] = 'introduction to the website';
+$setup['l_m_hovedmenu_introduktion_description'] = 'here you can learn more about the website and how to use it';
+$setup['l_m_hovedmenu_gratisreklame'] = 'free commercial';
+$setup['l_m_hovedmenu_gratisreklame_description'] = 'get a free commercial on the website';
 
 $setup['language_lastupdate'] = 'page was last updated';
 $setup['language_rssnews'] = 'RSS news feed';
@@ -607,7 +637,7 @@ $setup['l_navigation_update'] = 'reload page';
 $setup['l_navigation_top'] = 'jump to the top of this page';
 
 $setup['l_uniholder_voteonpage'] = 'vote this page';
-$setup['l_uniholder_voteonpage_seeallvotes'] = 'view all votes';
+$setup['l_uniholder_voteonpage_seeallvotes'] = 'view votes';
 $setup['l_uniholder_subjetsonpage'] = 'subjects on page';
 $setup['l_uniholder_foundaerror'] = 'found an error ?';
 $setup['l_uniholder_foundaerror_message'] = 'report spelling errors and other forms of errors by selecting the text and pressing CTRL and ENTER';
@@ -618,7 +648,7 @@ $setup['l_uniholder_rssnewsfeed_message'] = 'use RSS news feed to automatically 
 $setup['l_uniholder_translate'] = 'translate';
 $setup['l_uniholder_deleteandcreate'] = 'delete and create';
 
-$setup['l_contactform_title'] = 'your comment';
+$setup['l_contactform_title'] = 'your comment about the page';
 $setup['l_contactform_legend'] = 'write your comment about the page';
 $setup['l_contactform_from'] = 'from (your e-mail)';
 $setup['l_contactform_message'] = 'message';

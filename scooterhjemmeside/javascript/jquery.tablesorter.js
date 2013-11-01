@@ -1475,3 +1475,33 @@
 	});
 
 })(jQuery);
+
+// mine ændringer
+
+$(document).ready(function() {
+
+   // these default equivalents were obtained from a table of equivalents
+   // provided by sugar.js sorting alogrithms: http://sugarjs.com/sorting
+   // Uncaught TypeError: Cannot set property 'characterEquivalents' of undefined
+   $.tablesorter.characterEquivalents = {
+      "za" : "\u00e6;", // æ
+      "zb" : "\u00f8;", // ø
+      "zc" : "\u00e5;", // å
+      "ZA" : "\u00c6;", // Æ
+      "ZB" : "\u00d8;", // Ø
+      "ZC" : "\u00c5;"  // Å
+   };
+
+   $('table').tablesorter({
+      theme          : 'blue',
+      widgets        : ['zebra', 'columns'],
+      usNumberFormat : false,
+      sortReset      : true,
+      sortRestart    : true,
+      // Enable use of the characterEquivalents reference
+      sortLocaleCompare : true,
+      // if false, upper case sorts BEFORE lower case
+      ignoreCase : true
+   });
+
+});

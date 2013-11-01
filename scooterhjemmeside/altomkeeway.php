@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "keeway 50 cm³ scootere og offroader";
+$title = "keeway scootere og offroader med 50 cm³ motor";
 $overskrift = "keeway";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
@@ -423,7 +423,7 @@ $databasecenter = array(
       ,'scootertype'       => ens('scootertype', 'B59', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '8999', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30', '', '', '')
       ,'farver'            => ens('farver', 'sort hvid', '', '', '')
       ,'forhandlere'       => ens('forhandlere', '', '', '', '')
 
@@ -1822,7 +1822,7 @@ $databaseright = array(
 
 'download' => array(
     'svømmehøjde på Keeway scootere'    => 'svommehojde_pa_keeway_scootere.pdf'
-   ,'leone Swan brugermanual'    => 'leone_swan_brugermanual.pdf'
+   ,'leone Swan brugermanual + eldiagram + serviceværksteder + reservedele'    => 'leone_swan_brugermanual.pdf'
    ,'leone Swan reservedele'     => 'leone_swan_reservedele.pdf'
 
 ),'typegodkendelser' => array(

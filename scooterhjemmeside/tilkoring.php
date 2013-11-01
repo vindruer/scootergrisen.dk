@@ -1,17 +1,17 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "tilkøring";
-$overskrift = "tilkøring";
-$metadescription = "råd til tilkøring af en ny scooter";
+$title = "tilkøring af ny scooter/knallert eller nye motor dele";
+$overskrift = "tilkøring af ny scooter/knallert eller nye motor dele";
+$metadescription = "info om tilkøring af ny scooter/knallert eller nye dele";
 
 $databasecenter = array(
 
 '
-tilkøring
+tilkøring af 4 takt
 ' => '
 En ny scooter skal tilkøres så delene slides til på den rigtige måde.
 

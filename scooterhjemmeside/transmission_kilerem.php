@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "kilerem - Transmission";
 $overskrift = "kilerem - Transmission";
@@ -78,7 +78,7 @@ box(array('200', '150', '180', '140')
       ,array('Texas Flash LZP LX6',            '',                      '403905',                  'reservedelsmanual')
       ,array('Texas Free 50-4 2006',           '',                      '403905',                  'reservedelsmanual')
       ,array('Sym Fiddle',                     '',                      '1B01BE201',               'reservedelsmanual')
-      ,array('Sym Orbit',                      '',                      '1B01BE201',               'reservedelsmanual')
+      ,array('Sym Orbit 4T',                   '',                      '1B01BE201',               'reservedelsmanual')
       ,array('Sym Mio',                        '',                      '1B01A1A01',               'reservedelsmanual')
       ,array('Vespa LX 4T',                    '',                      '82645R',                  'reservedelsmanual')
       ,array('PGO G-Max 125 cm³',              '',                      'C11220000001',            'reservedelsmanual')

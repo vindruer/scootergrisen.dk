@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "qingqi 50 cm³ scootere";
+$title = "qingqi scootere med 50 cm³ motor";
 $overskrift = "qingqi";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
@@ -719,7 +719,7 @@ $databaseright = array(
 
 'download' => array(
     'Qingqi QM50QT-6 brugermanual'      => 'qingqi_qm50qt6_brugermanual.pdf'
-   ,'Qingqi QM50QT-6 servicemanual'     => 'qingqi_qm50qt6_brugerservice.pdf'
+   ,'Qingqi QM50QT-6 servicemanual'     => 'qingqi_qm50qt6_servicemanual.pdf'
 
 ),'typegodkendelser' => array(
     'Hooper one 30 km/t E18109 (e4*2002/24*1358)' => 'typegodkendelser/HOOPER%20ONE%2030%20%28E18109%29%20udstedt%2009-04-2010.pdf'

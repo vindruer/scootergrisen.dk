@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "Kymco Super 8 4T";
 $overskrift = "Kymco Super 8 4T";
@@ -242,7 +242,7 @@ Jeg opdager det ved at batteriet er afladt så meget at scooteren ikke kan køre
 ,'
 bagerste støddæmpere
 ' => '
-Personligt syns jeg at den bagerste affjedring er alt for hård.
+Personligt syntes jeg at den bagerste affjedring er alt for hård.
 
 Der er 2 støddæmpere og fjedre bag på Kymco Super 8 4T hvor der på de fleste 50 cm³ scootere kun er 1 så måske det er derfor den er så hård i affjedringen.
 

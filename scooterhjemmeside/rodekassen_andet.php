@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "andet - Rodekassen";
 $overskrift = "andet - Rodekassen";
-$metadescription = "diverse info om diverse emner";
+$metadescription = "diverse info om diverse emner som ikke rigtig passer ind på nogen af de andre sider og som der ikke er særlig meget info om endnu";
 
 $databasecenter = array(
 
@@ -233,7 +233,7 @@ danmarks knallert union
 Jeg har læst om noget som kaldes Danmarks Knallert Union (DKU).
 Formanden skulle være Jesper Reinhardt som må være ham fra '.ahref('http://www.c-reinhardt.dk/', 'www.c-reinhardt.dk').' som blandt andet importer PGO scootere.
 
-Men jeg syns godt nok aldrig jeg før har læst om Danmarks Knallert Union.
+Men jeg syntes godt nok aldrig jeg før har læst om Danmarks Knallert Union.
 
 I '.ahref('download/lovforslag_nr_l39.pdf','Lovforslag nr. L 39').' står at lovforslaget har været til høring hos blandt andet Danmarks Knallert Union.
 

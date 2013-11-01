@@ -1,14 +1,14 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $setup['nogetikon']               = 'ikoner/ikon_begrensninger2.png';
 
-$title = "begrænsninger på scootere og knallerter";
-$overskrift = "begrænsninger på scootere og knallerter";
-$metadescription = "begrænsninger på scootere/knallerter som får dem til at køre langsomt og som også kan gøre at de bruger mere benzin, larmer mere og slides hurtigere. Her kan du lærer hvor begrænsningerne sidder.";
+$title = "begrænsninger på scootere og knallerter som nedsætter topfarten";
+$overskrift = "begrænsninger på scootere og knallerter som nedsætter topfarten";
+$metadescription = "begrænsninger på scootere og knallerter får dem til at køre langsommere og kan også gøre at de bruger mere benzin, larmer mere og slides hurtigere. Her kan du lærer om hvor begrænsningerne sidder og hvordan du fjerner dem.";
 
 $databasecenter = array(
 
@@ -16,34 +16,39 @@ $databasecenter = array(
 introduktion
 ' => '
 '.visbilled('1', 'billed2586.jpg', 'speedometer', false, true).'
-Begrænsninger er ændringer på scooteren som scooter producenten udfører for at overholde loven i det land hvor scooteren skal sælges.
-Formålet med begrænsninger er at nedsætte scooterens topfart.
-Begrænsninger kan også give et højere benzin forbrug, højere olie forbrug, mere støj og mere slid på delene.
+Begrænsninger er ændringer på scootere og knallerter som producenten udfører for at overholde loven i det land hvor køretøjet skal sælges.
 
-Scootere der kører 25, 30 og 45 km/t er ens. Eneste forskel er begrænsningerne.
+Formålet med begrænsningerne er at nedsætte scooterens topfart til enten 25, 30 eller 45 km/t.
+
+Begrænsningerne kan også have uønskede bivirkninger som højere benzin forbrug, højere olie forbrug, mere støj, mere varmeudvikling og mere slid på delene på grund af motoren køre med unødigt høje omdrejninger.
+
+Forskellen på scootere og knallerter der har en topfart på enten 25, 30 og 45 km/t ligger i begrænsningerne som er lidt forskellige.
 '
 
 ,'
 hvor er begrænsningerne ?
 ' => '
-Ofte er scootere begrænset flere steder.
-For eksempel kan en scooter være begrænset 5 forskellige steder.
+Ofte er scootere og knallerter begrænset flere steder.
+For eksempel kan der være 5 begrænsninger, men det kommer an på hvilken model det er.
 
-Her kan du se hvor begrænsningerne kan sidde.
-Se også '.ahref('http://www.billig-scooter.dk/portal/begraensninger_oversigt.php', 'Begrænsninger / oversigt (www.billig-scooter.dk)').'.
+Hvis du vil vide hvordan en bestemt scooter er begrænset så find den i '.ahref('galleri.php', 'Galleri').' også gå ind på dens side og se om der står noget i dataen.
+Se også '.ahref('http://www.billig-scooter.dk/portal/begraensninger_oversigt.php', 'Begrænsninger / oversigt (billig-scooter.dk)').' som viser hvor nogle scootere er begrænset.
+'.ahref('http://www.scootergalleri.dk/forum', 'scootergalleri.dk/forum').' har også en masse info om begrænsninger som du kan prøve og søge efter.
 
-Hvis du kan bidrage med billeder af begrænsninger eller info så '.kontaktmig().'.
+
+
+Her følger en oversigt med forskellige begrænsninger, billeder og kort forklaring.
 
 '.afsnit('variator','
 Der kan sidde en løs ring mellem de forreste remskiver.
 For at fjerne denne begrænsning skal ringen fjernes.
 '.visbilled('1', 'billed0084.jpg', 'gliderør med ring', false, true).'
 
-I stedet for en løs ring kan der på gliderøret være en forhøjning.
-For at fjerne denne begrænsning skal man købe et glat gliderør og skifte det ud.
+På gliderøret kan være en forhøjning.
+For at fjerne denne begrænsning skal man købe et glat gliderør og udskifte det.
 '.visbilled('1', 'billed1035.jpg', 'begrænsning gliderør med forhøjning glat gliderør', false, true).'
 
-I stedet for en løs ring eller forhøjning på gliderøret kan der også være en plade bag på den inderste remskive.
+Plade bag på den inderste remskive.
 For at fjerne denne begrænsning skal pladen fjernes.
 '.visbilled('1', 'billed1034.jpg', 'begrænsning plade i remskive', false, true).'
 ').'
@@ -55,16 +60,16 @@ For at fjerne denne begrænsning skal CDI boksen skiftes ud med en ubegrænset C
 ').'
 '.afsnit('ECU','
 ECU\'en kan ligesom CDI\'en boksen være begrænset.
-For at fjerne denne begrænsning skal man for eksempel bruge en gameboy med aprilia DITech interface for at omprogrammer ECU\'en.
+For at fjerne denne begrænsning kan man for eksempel omprogrammer ECU\'en med en gameboy med aprilia DITech interface.
 '.visbilled('1', 'billed0091.jpg', 'ECU honda zoomer aprilia DITech', false, true).'
 ').'
 '.afsnit('controller','
-Controlleren kan ligesom CDI og ECU være begrænset.
+Controlleren (findes på elektrisk scooter) kan ligesom CDI og ECU være begrænset.
 For at fjerne denne begrænsning kan man for eksempel hive et stik fra hinanden.
 '.visbilled('1', 'billed2168.jpg', 'controller begrænsning stik', false, true).'
 ').'
 '.afsnit('pickup ved kobling','
-En pickup i variatordækslet kan måle hvor hurtigt koblingsklokken og dermed baghjulet drejer rundt.
+En pickup i variatordækslet kan være forbundet med CDI boksen for at måle hvor hurtigt koblingsklokken og dermed baghjulet drejer rundt.
 For at fjerne denne begrænsning skal ledningen fjernes fra stikket.
 '.visbilled('1', 'billed0093.jpg', 'pickup i variator skjold ved koblingsklokke', false, true).'
 ').'
@@ -84,9 +89,9 @@ For at fjerne denne begrænsning skal "stopperen" muligvis bukkes eller saves af
 ').'
 
 '.afsnit('ruller','
-Jeg er ikke helt sikker på om rullernes vægt bruges som begrænsning men det tror jeg nok.
-Rullerne kan være lettere eller tungere end normalt.
-For at fjerne denne begrænsning skal rullerne skiftes ud med nogle ruller i den rigtige vægt.
+Jeg er ikke sikker på at rullerne bruges som hastighedsbegrænsning men der kan i hvert fald være forskel på deres vægt alt efter om scooteren er begrænset eller ej.
+Rullerne kan være lettere eller tungere end ubegrænset.
+For at fjerne denne begrænsning skal rullerne skiftes ud med ruller med den korrekte vægt.
 '.visbilled('1', 'billed0085.jpg', 'variator ruller', false, true).'
 ').'
 
@@ -100,49 +105,71 @@ For at fjerne denne begrænsning skal tragten fjernes og samtidig skal hoveddyse
 Den store koblingstrykfjeder kan være for stram så de bagerste remskiver ikke kan kommer helt fra hinanden.
 For at fjerne denne begrænsning skal koblingstrykfjederen skiftes ud med en tilpas stram fjeder.
 Koblingsstøttebøsningen kan også være for høj.
-Rullernes vægt skal muligvis skiftes hvis man sætter en anden koblingstrykfjeder i.
+Rullernes vægt skal muligvis ændres hvis man sætter en anden koblingstrykfjeder i så de passer sammen.
 '.visbilled('1', 'billed0090.jpg', 'koblingstrykfjeder', false, true).'
 ').'
 
-'.afsnit('isolatorstykke, tragt eller plade med huller','
+'.afsnit('isolatorstykke, tragt og plade med huller','
 Isolatorstykket mellem indsugningsstudsen og cylinderen kan have en mindre indre diameter som giver modstand for benzin/luft gennemstrømningen.
+For at fjerne denne begrænsning skal isolatorstykket skiftes ud med et isolatorstykke som har samme indre diameter som indsugningsporten til topstykket eller diamteren kan bores op.
 '.visbilled('1', 'billed0727.jpg', 'isolatorstykke', false, true).'
-For at fjerne denne begrænsning skal isolatorstykket skiftes ud med et isolatorstykke som har samme indre diameter som indsugningsporten til topstykket.
 
-Der kan også sidde en metal tragt eller plade med huller i før eller efter indsugningsstudsen eller mellem karburator og luftfilterkanalen som begrænser på samme måde.
+Der kan sidde en tragt under indsugningsstudsen som begrænser den mængde luft/benzin der kan suges ind i motoren.
+For at fjerne denne begrænsning skal tragten fjernes.
+'.visbilled('1', 'billed1968.jpg', 'begrænsning ved reed valve', false, true).'
+
+Der kan sidde en metalplade mellem karburator og luftfilterkanalen som begrænser mængden af luft.
+For at fjerne denne begrænsning skal metalpladen fjernes.
+Der skal muligvis også en større hoveddyse i når metalpladen fjernes.
 '.visbilled('1', 'billed2176.jpg', 'plade med huller i karburator', false, true).'
-For at fjerne denne begrænsning skal metal tragten/pladen fjernes.
+
 ').'
 
 '.afsnit('udstødning','
 Forrøret på udstødningen kan have mindre indre diameter.
-Der kan også sidde en ring mellem cylinder og udstødning som også giver mindre indre diameter.
-'.visbilled('1', 'billed2140.jpg', 'begrænsnings ring mellem cylinder og udstødning', false, true).'
-Der kan også være svejset et blindrør på forrøret.
+For at fjerne denne begrænsning kan man på nogle udstødninge skrue forrøret af og købe et ubegrænset forrør og sætte på, ellers kan hele udstødningen skiftes til en ubegrænset udstødning.
+
+Der kan sidde en påsvejset ring/tragt i starten af forrøret som også giver mindre indre diameter.
+For at fjerne denne begrænsning kan svejsepunkterne bores væk og ringen/tragten fjernes.
+'.visbilled('1', 'billed3900.jpg', 'begrænsnings ring påsvejset i udstødning', false, true).'
+
+Der kan være svejset et blindrør på forrøret.
+For at fjerne denne begrænsning skal blindrøret svejses af nær forrøret hvorefter stumpen kan klemmes sammes og svejses tæt, eller man kan købe en ubegrænset udstødning uden blindrør.
+'.visbilled('1', 'billed3901.jpg', 'begrænsning blindrør påsvejset udstødning', false, true).'
 ').'
 
 '.afsnit('gearskift','
-På modeller med for eksempel 6 gear kan gearskiftemekanismen være begrænset sådan at man for eksempel kun kan bruge de laveste 3 gear.
+På modeller med for eksempel 6 gear kan gearskiftemekanismen være begrænset så man for eksempel kun kan bruge de laveste 3 gear.
+For at fjerne denne begrænsning skal gearskiftemekanismen udskiftes med en ubegrænset gearskiftemekanisme.
 '.visbilled('1', 'billed2465.jpg', 'gearskiftemekanisme', false, true).'
 '.visbilled('1', 'billed3334.jpg', 'gearskiftemekanisme', false, true).'
-For at fjerne denne begrænsning skal gearskiftemekanismen udskiftes med en ubegrænset gearskiftemekanisme.
 ').'
 
 '.afsnit('tandhjul','
 På modeller med kædetræk kan forreste og bagerste tandhjul have en anden størrelse (antal tænder) som giver en lavere gearing.
+For at fjerne denne begrænsning skal for eksempel det bagerste tandhjul udskiftet med et tandhjul med færre tænder eller det forreste tandhjul udskiftet med et tandhjul med flere tænder.
 '.visbilled('1', 'billed2466.jpg', 'tandhjul 14 og 48 tænder', false, true).'
-For at fjerne denne begrænsning skal for eksempel det bagerste tandhjul udskiftet med et tandhjul med færre antal tænder eller det forreste tandhjul udskiftet med et tandhjul med flere antal tænder.
 ').'
 
-'.afsnit('andre','
-Du kan skrive i '.forummet().' eller '.kontaktemig().' hvis du kender andre typer begrænsninger.
-
-Her ses at der kan sidde en tragt mellem reed valve og indsudningsstudsen som begrænser scooteren.
-'.visbilled('1', 'billed1968.jpg', 'begrænsning ved reed valve', false, true).'
-
-I indsugningshullet på cylinderen kan sidde en såkaldt plomb (kan vel også staves plumb) der er en aflang ring som fungere som en begrænsning.
+'.afsnit('plomb i cylinder','
+I indsugningshullet på cylinderen kan sidde en såkaldt plomb (kan vel også staves plumb) der er en aflang ring der begrænser mængden af luft/benzin ved at gøre diameteren mindre.
+For at fjerne denne begræsning kan ringen bores ud eller man kan købe en ubegrænset cylinder uden plomb.
 '.visbilled('1', 'billed1731.jpg', 'cylinder med plomb', false, true).'
-Plomben gør hullet mindre så der ikke kan komme så meget benzin og luft igennem.
+').'
+
+'.afsnit('cylinder stopper','
+I motorblokken hvor cylinderskørtet sættes ind kan være en kant som gør at uoriginale cylindere ikke kan sættes i fordi skørtet rammer kanten.
+Den originale cylinder kan sættes i fordi den har til tilsvarende indhak på cylinderskørtet.
+Kan ses her '.ahref('http://www.scootergalleri.dk/fotoalbum/tuningprojekter/83105-hjaelp_til_speedfight_2').'
+').'
+
+'.afsnit('knækbolte','
+Knækbolte er ikke begrænsninger men de kan indikere hvor der er en begrænsning.
+Så hvis der sidder en knækbolt på indsugningsstudsen eller på forrøret så kunne det være et tegn på at der er en begræsning under indsugningsstudsen eller at forrøret er begrænset.
+').'
+
+'.afsnit('andre begrænsninger','
+Du kan skrive i '.forummet().' eller '.kontaktemig().' hvis du kender andre typer begrænsninger.
 ').'
 '
 
@@ -171,24 +198,14 @@ galleriholder(array(
     galleri('highslide', '', 'billed2806.jpg', array('remskive slid', ''))
 ))
 .'
-Resultatet er lavere topfart, højere omdrejninger, mere støj, mere slid på delene og benzinforbruget er højere.
+Resultatet er lavere topfart, unødigt høje omdrejninger, højere benzinforbruget, mere støj, mere slid på delene og mere varmeudvikling.
 
-Fjern variatordækslet.
+Fjern variatordækslet og '.ahref('transmission_forresteremskiver.php#fjern_motrikken_ved_de_forreste_remskiver', 'fjern møtrikken ved de forreste remskiver').'.
 '.
 galleriholder(array(
-    galleri('highslide', '', 'billed0171.jpg', array('variatordæksel', ''))
-))
-.'
-' . ahref('transmission_forresteremskiver.php#fjern_motrikken_ved_de_forreste_remskiver', 'Fjern møtrikken ved de forreste remskiver'). '
-'.
-galleriholder(array(
-    galleri('highslide', '', 'billed0172.jpg', array('variator', ''))
-))
-.'
-Her er den yderste remskive fjernet.
-'.
-galleriholder(array(
-    galleri('highslide', '', 'billed0173.jpg', array('variator forreste remskive kilerem gliderør', ''))
+    galleri('highslide', '', 'billed0171.jpg', array('variator', 'med variatordæksel'))
+   ,galleri('highslide', '', 'billed0172.jpg', array('variator', 'uden variatordæksel'))
+   ,galleri('highslide', '', 'billed0173.jpg', array('variator', 'den yderste remskive er fjernet'))
 ))
 .'
 
@@ -238,6 +255,14 @@ For at fjerne begrænsningen skal pladen fjernes.
 galleriholder(array(
     galleri('highslide', '', 'billed1125.jpg', array('remskive med bagplade', ''))
    ,galleri('highslide', '', 'billed0190.jpg', array('remskive med bagplade', ''))
+))
+.'
+').'
+'.afsnit('','
+Ring ved remskive ved kobling som måske gør at kileremmen ikke kan komme helt ned mellem de bagerste remskiver.
+'.
+galleriholder(array(
+    galleri('highslide', '', 'billed3874.jpg', array('remskive med ring', ''))
 ))
 .'
 ').'
@@ -445,7 +470,7 @@ galleriholder(array(
 ))
 .'
 Det lader til at en stiv koblingstrykfjeder er velegnet til racing brug og får bæltet til at tage hurtigere fat.
-Og at en svag koblingstrykfjeder er velegnet til by kørsel, men at bæltet ikke bider så godt fast, altså langsom acceleration.
+Og at en svag koblingstrykfjeder er velegnet til bykørsel, men at bæltet ikke bider så godt fast, altså langsom acceleration.
 
 På min Kymco Super 8 4T sidder en stram koblingstrykfjeder med en klat blå maling.
 Det lader til at en hvid eller grøn (malossi) fjeder skulle være bedre på min scooter.
@@ -544,10 +569,12 @@ Knækbolte kan også sidde hvor udstødningen monteres på cylinderen eller hvor
 ,'
 motorblok
 ' => '
-I motorblokken hvor cylinderen sættes i kan være en kant der forhændre andet end den originale cylinder at blive sat i.
+I motorblokken hvor cylinderen sættes i kan der være en kant som gør at man kun kan sætte en original cylinder i.
 Den originale cylinder har et indhak i cylinderskørtet så det kan sættes i.
+En uoriginal cylinder med lige skørt vil ramme kanten i motorblokken så det ikke kan komme i.
 
 For at andre cylindre kan sættes i kan man slibe kanten væk i motorblokken.
+
 Kan ses her '.ahref('http://www.scootergalleri.dk/fotoalbum/tuningprojekter/83105-hjaelp_til_speedfight_2').'
 '
 
@@ -555,7 +582,7 @@ Kan ses her '.ahref('http://www.scootergalleri.dk/fotoalbum/tuningprojekter/8310
 egne erfaringer
 ' => '
 Her er mine erfaringer fra min Kymco Super 8 4T (50 cm³ 30 km/t).
-Hastighederne vist her er dem som vises på speedometeret. Speedometeret viser 5-10 % for meget af hvad den rigtige hastighed er.
+Hastighederne vist her er dem som vises på speedometeret. Speedometeret viser 5-10 %.
 
 '.afsnit('med alle begrænsninger','
 Hastigheden er max 35 km/t.

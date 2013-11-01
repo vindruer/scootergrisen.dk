@@ -1,23 +1,24 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "3 hjulet scootere";
-$overskrift = "3 hjulet scootere";
-$metadescription = "3 hjulet scootere/knallert modeller som typisk er egnet til personer med handikap. Kaldes også invalide knallert eller trike";
+$title = "3 hjulet knallerter, scootere, vareknallerter, invalideknallerter, trikes";
+$overskrift = "3 hjulet knallerter, scootere, vareknallerter, invalideknallerter, trikes";
+$metadescription = "oversigt med 3 hjulet scooter og knallert køretøjer som er egnet til personer med handikap eller som varetransport";
 
 $databasecenter = array(
 
 '
 introduktion
 ' => '
-Her på siden samler jeg information om 3 hjulet scootere som også kaldes for trike eller invalide knallert da de gerne bruges af personer med handikap.
-
-Her følger de 3 hjulet scootere som jeg kender til sorteret efter om de har elektrisk motor, 4 takt motor eller 2 takt motor.
+Her på siden samler jeg information om 3 hjulet scootere og knallerter som findes i danmark.
+Køretøjerne betegnes tit som invalideknallert da en del af dem er egnet personer med handikap som ikke ville kunne køre på en 2 hjulet.
 
 Hvis du kender flere 3 hjulet modeller så '.kontaktmig().' gerne.
+
+Her følger de 3 hjulet scootere som jeg kender til sorteret efter om de har elektrisk motor, 4 takt motor eller 2 takt motor.
 '
 
 ,'
@@ -77,22 +78,29 @@ modeller med 2 takt motor
 ,'
 specielle dele
 ' => '
-'.afsnit('differential gear','
-Når man køre lige ud rotere alle hjul med samme hastighed men når man drejer vil hjul på samme aksel rotere med forskellig hastighed.
+I det følgende skriver om jeg dele der primært findes på 3 hjulet scootere og knallerter.
+'
+
+,'
+differential gear
+' => '
+Når man køre lige ud rotere alle 3 hjul med samme hastighed men når man drejer vil hjul på samme aksel rotere med forskellig hastighed.
 Hvis hjulene sidder på samme aksel (uden differential gear) så vil dækkene blive vredet mod jorden i det man drejede.
 
-Et differential gear giver hjulene mulighed for at rotere med forskellig hastighed.
+Et differential gear giver hjulene mulighed for at rotere med forskellig hastighed så man undgår dette vred.
 
 Her ses differential gearet på en PGO TR3.
 '.visbilled('1', 'billed1746.jpg', 'differential på PGO TR3', false, true).'
-Her ses en Swap 3 som jeg ikke ved om har differential gear.
-'.visbilled('1', 'billed1126.jpg', 'SWAP 3 bagfra', false, true).'
-
 '.visbilled('1', 'billed3650.jpg', 'PGO TR-3 differential gear', false, true).'
 '.visbilled('1', 'billed3651.jpg', 'PGO TR-3 differential gear', false, true).'
-').'
 
-'.afsnit('bakgear','
+Her ses en Swap 3 som jeg ikke ved om har differential gear.
+'.visbilled('1', 'billed1126.jpg', 'SWAP 3 bagfra', false, true).'
+'
+
+,'
+bakgear
+' => '
 D for Drive. Kør frem.
 '.visbilled('1', 'billed2382.jpg', 'gear vælger på PGO TR3', false, true).'
 N for Neutral. Frigear.
@@ -100,49 +108,59 @@ N for Neutral. Frigear.
 R for Reverse. Kør baglæns.
 '.visbilled('1', 'billed2384.jpg', 'gear vælger på PGO TR3', false, true).'
 
-Her ses baggearvælgeren fra PGO P3 knallert/Magnum (fra Medico Nord).
+Her ses bakgearvælgeren fra PGO P3 knallert/Magnum (fra Medico Nord).
 
 Her er fremadkørsel valgt.
 '.visbilled('1', 'billed3394.jpg', 'gear vælger på PGO P3 knallert/magnum', false, true).'
 Her er baglænskørsel valgt.
 '.visbilled('1', 'billed3395.jpg', 'gear vælger på PGO P3 knallert/magnum', false, true).'
-').'
+'
 
-'.afsnit('bak alarm','
+,'
+bak alarm
+' => '
 Bak alarm giver en lyd når der bakkes så folk kan høre man bakker.
-').'
+'
 
-'.afsnit('parkeringsbremse','
+,'
+parkeringsbremse
+' => '
 Parkeringsbremsen kan for eksempel være en pind som kan holde bremsegrebet inde så bremsen er aktiveret selv når man giver slip.
 
 Her er parkeringsbremsen slået fra.
 '.visbilled('1', 'billed3396.jpg', 'parkeringsbremse på PGO P3 knallert/magnum', false, true).'
 Her er parkeringsbremsen slået til.
 '.visbilled('1', 'billed3397.jpg', 'parkeringsbremse på PGO P3 knallert/magnum', false, true).'
-').'
+'
 
-'.afsnit('ekstra udstyr','
-Da 3 hjulede scootere ofte bruges af personer med handikap kan der til nogle modeller fås ekstra udstyr alt efter personens handikap/ønske.
+,'
+ekstra udstyr
+' => '
+Da 3 hjulet scootere ofte bruges af personer med handikap kan der til nogle modeller fås ekstra udstyr alt efter personens handikap/ønske.
 
-Ekstra støddæmper ved baghjul (så der er 2 støddæmpere i stedet for 1).
-Ryglæn.
-Armlæn.
-Stokkeholder.
-Rollatorholder.
-Gashåndtag i venstre side.
-Gaspedal ved fod.
-Lav sædehøjde.
-Fodbremse.
-Til TGB Delivery fås en elektrisk "varmeboks" til at holde maden varm.
-Norsjö carrier 4 stroke, Norsjö carrier electronic og Piaggio Ape fås med forskellige lad.
-').'
+Her er noget af det ekstra udstyr der kan fås.
+
+'.listemedgrafik(array(
+    'Ekstra støddæmper ved baghjul (så der er 2 støddæmpere i stedet for 1).'
+   ,'Ryglæn.'
+   ,'Armlæn.'
+   ,'Stokkeholder.'
+   ,'Rollatorholder.'
+   ,'Gashåndtag i venstre side (i stedet for højre side).'
+   ,'Gaspedal ved fod.'
+   ,'Lav sædehøjde.'
+   ,'Fodbremse (hvis man ikke har kræfter nok til håndbremse).'
+   ,'Til TGB Delivery fås en elektrisk "varmeboks" til at holde maden varm.'
+   ,'Norsjö carrier 4 stroke, Norsjö carrier electronic og Piaggio Ape fås med forskellige lad.'
+))
+.'
 '
 
 ,'
 ombygning
 ' => '
 '.afsnit('hastighed','
-Da mange kunder til 3 hjulede scootere nok ikke har kørekort så fås de fleste invalideknallerter kun som 30 km/t.
+Da mange kunder til 3 hjulet scootere nok ikke har kørekort så fås de mange invalideknallerter kun som lille knallert (30 km/t).
 
 Det kan godt lade sig gøre at lave en 45 km/t 3 hjulet scooter der er bare ikke så mange kunder til det.
 PGO TR3 fås både som 30 og 45 km/t.
@@ -157,7 +175,7 @@ Man kan søge om 30 og 45 km/t.
 ').'
 
 '.afsnit('ombyggere','
-Her er nogen af de firmaer der køber 2 hjulede scootere og ombygger dem til 3 hjulede og hvilke modeller de laver.
+Her er nogen af de firmaer der køber 2 hjulede scootere og ombygger dem til 3 hjulet og hvilke modeller de laver.
 
 '.afsnit('power wheels','
 '.ahref('http://www.power-wheels.dk', 'www.power-wheels.dk').' ombygger 2 hjulet scootere til 3 hjulet.
@@ -166,7 +184,7 @@ Udover at der monteres et ekstra hjul bliver stellet også galvaniseret.
 '.afsnit('power wheels ombygger følgende modeller','
 Derbi Atlantis.
 Sym Fiddle II.
-Sym Orbit.
+Sym Orbit 4 takt.
 TGB Delivery.
 ').'
 ').'
@@ -195,27 +213,54 @@ PGO T-Rex ombygges til PGO TR3.
 ,'
 links
 ' => '
-Her er nogle links til 3 hjulet relaterede hjemmesider.
-
+Her er links til hjemmesider der har relation til 3 hjulet scootere og knallerter.
 <!-- Server not found '.ahref('http://www.sahva-knallert.dk/', 'www.sahva-knallert.dk').' -->
-'.ahref('http://www.power-wheels.dk', 'www.power-wheels.dk').'
-'.ahref('http://www.sportster.dk', 'www.sportster.dk').'
-'.ahref('http://www.cr-mobility.dk', 'www.cr-mobility.dk').'
-'.ahref('http://www.mediconord.dk', 'www.mediconord.dk').'
-'.ahref('http://bike-shoppen.dk/Scootere/Handicapscooter.aspx', 'bike-shoppen.dk').'
-'.ahref('http://3hjulede.cordes.dk/', '3hjulede.cordes.dk').'
-'.ahref('http://www.hmi-basen.dk/', 'hmi-basen.dk').'
+'.listemedgrafik(array(
+    ''.ahref('http://www.power-wheels.dk', 'www.power-wheels.dk').''
+   ,''.ahref('http://www.sportster.dk', 'www.sportster.dk').''
+   ,''.ahref('http://www.cr-mobility.dk', 'www.cr-mobility.dk').''
+   ,''.ahref('http://www.mediconord.dk', 'www.mediconord.dk').''
+   ,''.ahref('http://bike-shoppen.dk/Scootere/Handicapscooter.aspx', 'bike-shoppen.dk').''
+   ,''.ahref('http://3hjulede.cordes.dk/', '3hjulede.cordes.dk').''
+   ,''.ahref('http://www.hmi-basen.dk/', 'hmi-basen.dk').''
+))
+.'
 '
 
 ,'
-videoer
+video
 ' => '
-'.ahref('http://cr-mobility.dk/files/user/filer/VIDEO_TS.wmv', 'Video med PGO TR-3 på messe').'.
+<!--ignore-->
+<div style="text-align: center; margin: 0 auto;">
+<div style="margin-bottom: 1em;">PGO TR-3 invalideknallert på messe med C. Reinhardt</div>
+<div style="margin-bottom: 1em;">
+<video width="320" height="240" controls preload="metadata" poster="/scooterhjemmeside/billeder/posters/pgotr3pamesse.png" onloadedmetadata="this.volume=0.5;">
+   <source src="/scooterhjemmeside/videoer/pgotr3pamesse.ogv" type="video/ogg">
+   <source src="/scooterhjemmeside/videoer/pgotr3pamesse.mp4" type="video/mp4">
+   <source src="/scooterhjemmeside/videoer/pgotr3pamesse.webm" type="video/webm">
+   Da din browser ikke understøtter HTML 5 &lt;video&gt; kan videoen ikke afspilles her.
+   '.visbilled('1', 'posters/pgotr3pamesse.png', 'PGO TR-3 invalideknallert på messe').'
+</video>
+</div>
+
+<div style="margin-bottom: 1em;">
+Videoen kan hentes i følgende formater : 
+   '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/pgotr3pamesse.wmv', 'wmv')
+.' '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/pgotr3pamesse.ogv', 'ogv')
+.' '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/pgotr3pamesse.mp4', 'mp4')
+.' '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/pgotr3pamesse.webm', 'webm')
+.'
+</div>
+<div style="margin-bottom: 1em;">Videoen stammer fra '.ahref('http://cr-mobility.dk/', 'cr-mobility.dk').'</div>
+</div>
+<!--ignore-->
 '
 
 ,'
 filer
 ' => '
+I følgende fil samler jeg kataloger og andre filer til 3 hjulet scootere og knallert efterhånden som jeg finder dem.
+
 '.visfil('1', 'scooterhjemmeside/download/3hjulet_filer.zip').'
 '
 

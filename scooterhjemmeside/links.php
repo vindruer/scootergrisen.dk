@@ -1,16 +1,16 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_links.png';
+$setup['nogetikon']               = 'ikoner/ikon_links2.png';
 
 $title = "links til scooterrelaterede hjemmesider";
 $overskrift = "links til scooterrelaterede hjemmesider";
 $metadescription = "links til andre scooterrelaterede hjemmesider som forum, forhandlere, importører, producenter, køb og salg, benzinselskaber og forsikringsselskaber";
 
-$linksarray = require_once('./php/linksdatabase.php');
+$linksarray = require_once './php/linksdatabase.php';
 
 $databasecenter = array(
 

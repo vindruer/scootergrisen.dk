@@ -1,11 +1,11 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "gratis reklame";
-$overskrift = "gratis reklame";
+$title = "gratis reklame på scootergrisen.dk";
+$overskrift = "gratis reklame på scootergrisen.dk";
 $metadescription = "læs denne side hvis du kunne tænke dig en gratis reklame på hjemmesiden";
 
 function visreklamer(){
@@ -52,7 +52,7 @@ Butik som sælger scootere og/eller reservedele til scootere.
 Scooter værksted.
 Scooter træf.
 Scooter cafe.
-Det kunne også være en video, et gallleri, et forum eller noget andet så længe det har et eller andet med scootere/knallerter at gøre.
+Det kunne også være en video, et galleri, et forum eller noget andet så længe det har et eller andet med scootere/knallerter at gøre.
 ').'
 
 '.afsnit('hvordan får jeg en gratis reklame på hjemmesiden ?','
@@ -71,7 +71,7 @@ Jeg vil ikke have at reklamen er animeret fordi det er irriterende for mig at se
 Det skal gerne gøres tydeligt præcist hvad brugeren kan forvente at finde inden der klikkes på linket.
 ').'
 
-Hvis du senere ønsker at ændre din reklame eller få den slttet så bare skriv igen.
+Hvis du senere ønsker at ændre din reklame eller få den slettet så bare skriv igen.
 
 '.afsnit('reklamer som skiftes til at blive vist på hjemmesiden','
 '.visreklamer().'

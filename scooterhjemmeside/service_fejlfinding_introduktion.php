@@ -1,19 +1,21 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "Introduktion - Fejlfinding";
-$overskrift = "Introduktion - Fejlfinding";
+$title = "Introduktion til fejlfinding af scootere og knallerter";
+$overskrift = "Introduktion til fejlfinding af scootere og knallerter";
 $metadescription = "find og ret fejl på scootere/knallerter der for eksempel ikke vil starte eller køre dårligt";
+
+$setup['nogetikon']               = 'ikoner/ikon_fejlfinding2.png';
 
 $databasecenter = array(
 
 '
 introduktion
 ' => '
-På denne side er det meningen at du skal kunne få hjælp til at finde og rette fejl på scootere.
+På denne side er det meningen at du skal kunne få hjælp til at finde og rette fejl på scootere og knallerter.
 
 Fejlfindingssiderne handler primært om scootere som har 4 takt motor med karburator.
 
@@ -43,11 +45,9 @@ Check '.ahref('elektrisk_sikring.php#sikring', 'sikringerne').'
 Batteriet er afladt - '.ahref('service_elektrisk.php#kontroller_batteri', 'Kontroller batteri').'
 '.ahref('#batteri_oplades_for_lidt', 'Batteri oplades for lidt').'.
 '.ahref('#batteri_oplades_for_meget', 'Batteri oplades for meget').'.
-Hvis batteriet oplades for lidt eller for meget så kan det være '.ahref('service_fejlfinding_elektrisk.php#spendingsregulator', 'spændingsregulatoren').' som der er fejl på.
-På nogle scootere er der en kontakt ved sidestøttebenet så el starteren kun kan startes hvis sidestøttebenet er slået op.
-Check '.ahref('stotteben.php#stottebenskontakt', 'Støttebenskontakt').'.
-Ved bremsegrebene sidder en kontakt. Bremselyset skal lyse når bremserne bruges.
-Undersøg '.ahref('bremser.php#bremsekontakt', 'bremsekontakter').'.
+Hvis batteriet oplades for lidt eller for meget så kan det være '.ahref('service_fejlfinding_elektrisk.php#spendingsregulator', 'spændingsregulatoren').' der er fejl på.
+På nogle scootere er der en '.ahref('stotteben.php#stottebenskontakt', 'støttebenskontakt').' ved sidestøttebenet så el starteren kun kan få strøm hvis sidestøttebenet er slået op.
+Ved bremsegrebene sidder '.ahref('bremser.php#bremsekontakt', 'bremsekontakter').'. Test kontakerne ved at kontroller at bremselyset lyser når bremserne bruges.
 Undersøg stelforbindelsesledningerne til stel og motorblok har god kontakt.
 Undersøg '.ahref('elektrisk_kontakter.php#tendingslas', 'tændingslås').'.
 '.ahref('starterdrev.php', 'Starterdrev').'
@@ -60,16 +60,15 @@ Hvis scooteren har gammel benzin i tank og karburator så tøm tank og karburato
 Undersøg om '.ahref('benzintank.php#benzinfilter', 'benzinfilteret').' er tilstoppet.
 Kontroller den '.ahref('service_fejlfinding_benzintank.php#automatisk_benzinhane', 'automatiske benzinhane').'.
 Kontroller '.ahref('karburator.php#svommer_og_naleventil', 'nåleventilen').' og '.ahref('service_karburator.php#juster_svommer_hojde', 'svømmer højde').'.
-Rens karburatoren.
-Rens '.ahref('karburator.php#dyser', 'hoveddysen og tomgangsdysen').' og de små gange i karburatoren med '.ahref('smorelse.php#karburatorrens', 'karburatorrens').' eller blæs igennem gangene med trykluft.
+Rens karburatorens '.ahref('karburator.php#dyser', 'hoveddyse og tomgangsdyse').' og de små gange i karburatoren med '.ahref('smorelse.php#karburatorrens', 'karburatorrens').' eller trykluft.
 ').'
 
 '.afsnit('luft','
 '.ahref('service_luftfilter.php#rens_luftfilter', 'Rens luftfilter').' eller sæt et nyt i.
 ').'
 
-'.afsnit('korrekt blandings forhold af benzin og luft','
-Kontroller at dele som luftfilter, karburator, indsugningsstuds, isolatorstykke, topstykke og vakuumslange sidder tæt sammen så der kan komme falsk luft ind.
+'.afsnit('korrekt blandingsforhold af benzin og luft','
+Kontroller at dele som luftfilter, karburator, indsugningsstuds, isolatorstykke, topstykke og vakuumslange sidder tæt sammen så der ikke kan komme falsk luft ind.
 Undersøg vakuumslanger for utætheder.
 '.ahref('service_fejlfinding_karburator.php#mager_fed_blanding', 'Mager/fed blanding').'
 ').'
@@ -610,25 +609,17 @@ benzinforbrug for højt
 ' => '
 '
 . fejlfinding('a', 'check om variatoren er begrænset ved de forreste remskiver')
-. fejlfinding('b', 'ubegrænset', 'begrænset med ring eller ligende')
+. fejlfinding('b', 'ubegrænset', 'begrænset med ring eller lignende')
 . fejlfinding('c', array(
  'fjern ringen/pladen eller skift bøsningen mellem de forreste remskiver'
 ,''
 ))
 
-. fejlfinding('a', 'check dækkene for korrekt dæktryk')
+. fejlfinding('a', 'check dækkene for korrekt dæktryk når de er kolde')
 . fejlfinding('b', 'korrekt dæktryk', 'forkert dæktryk')
 . fejlfinding('c', array(
- 'pump dækkene op til korrekt dæk'
+ 'pump dækkene til korrekt dæktryk'
 ))
-
-. fejlfinding('a', 'check om spændingsregulator stik er løst')
-. fejlfinding('b', 'normal', 'unormal')
-. fejlfinding('c', array(
- 'dårligt forbundet stik'
-))
-
-. fejlfinding('a', 'fejl på spændingsregulator')
 
 );
 

@@ -1,12 +1,14 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "videoer - Underholdning";
-$overskrift = "videoer - Underholdning";
+$title = "videoer med scootere og knallerter - Underholdning";
+$overskrift = "videoer med scootere og knallerter - Underholdning";
 $metadescription = "scooterrelaterede videoer opdelt i forskellige kategorierne";
+
+$setup['nogetikon']               = 'ikoner/ikon_videoer2.png';
 
 $underholdningdatabase = array(
 
@@ -75,7 +77,10 @@ http://video.google.com/videoplay?docid=7497863356280254008 viderestilles ikke..
 //array('2', '', '', '', '9+10'),
 //array('2', '', '', '', '9+10'),
 //array('2', '', '', '', '9+10'),
-//array('2', '', '', '', '9+10'),
+array('232', 'http://www.youtube.com/watch?v=zNMtXs5n83A', '', 'Why NOT to Let Your Girlfriend Ride Your Moped', '1+15'),
+array('231', 'http://www.youtube.com/watch?v=3CYc1STuZr0', '', 'Small Pistons Moped Touring 2013', '9+10'),
+array('230', 'http://www.youtube.com/watch?v=_THo8jWo03w', '', 'Driving around Store heddinge city on scooter', '9+10'),
+array('229', 'http://www.youtube.com/watch?v=KllNG262lYM', '', 'Full Assembly 50cc Scooter Moped Out of a Box (like a Pro)', ''),
 array('228', 'http://www.youtube.com/watch?v=5MguTsCDn9E', '', 'Driving around Vordingborg city on scooter', '9+10'),
 array('227', 'http://www.youtube.com/watch?v=G1FQhKEYty8', '', 'Driving over storestrøm bridge (storestrømsbroen) on scooter', '9+10'),
 array('226', 'http://www.youtube.com/watch?v=g1LpY7u-PM4', '', 'Driving around Præstø city on scooter', '9+10'),
@@ -155,7 +160,7 @@ array('153', 'http://www.youtube.com/watch?v=vox8vfTk1rs', '', 'Moped Safety Fil
 array('152', 'http://www.youtube.com/watch?v=LyRu9RbloLw', '', 'kondom på udstødning', ''),
 array('151', 'http://www.youtube.com/watch?v=RnIvhlKT7SY', '', '5Axis Machining cnc [www.disn.co.jp] 5Achs DMG/HyperMILL', ''),
 array('150', 'http://www.youtube.com/watch?v=BJXfnWArBQA', '', 'Scoot Commute', '10'),
-array('149', 'http://embed.break.com/MTkxNjE0NQ==', '', 'Crazy 85 MPH Moped Stunt', '13'),
+array('149', 'http://embed.break.com/MTkxNjE0NQ==', 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2010%2f9%2f14%2fc8b101c7-6cfb-42b4-ad5b-a7d6ed861b63_1.flv', 'Crazy 85 MPH Moped Stunt', '13'),
 array('148', 'http://vimeo.com/4129435', '', '2009 PoliniUSA Cup', '16'),
 array('147', 'http://webtv.tvmkanal.dk/v.swf', 'photo_id=510374&token=9f11100979dd02687622f4c4a22f5765', 'teufelskerle - moped love', '9'),
 array('146', 'http://webtv.tvmkanal.dk/v.swf', 'photo_id=512471&token=3cb303e3e38470e4e99a9e661e298f96', 'teufelskerle - knallert koach karburator', '9'),
@@ -185,7 +190,7 @@ array('125', 'http://www.youtube.com/watch?v=SHI0kkQv58E', '', 'ivar kører knal
 array('122', 'http://www.youtube.com/watch?v=kUHJeI0-a2I', '', 'det bare ikke hans omgang - set fra anden vinkel', '15+16'),
 array('121', 'http://www.youtube.com/v/t__r95QIkwo', '', 'silver giant dragbike 2009', '3'),
 array('120', 'http://www.youtube.com/watch?v=mplwn3WJG28', '', 'how it\'s made - Ball bearings', ''),
-array('119', 'http://embed.break.com/MzAyODc2', '', 'køre på scooter ind i indkøbscenter', ''),
+array('119', 'http://embed.break.com/MzAyODc2', 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2007%2f5%2f29%2f302876_32b0b512-60c3-472e-bef1-f6a870f697a6_prod.flv', 'køre på scooter ind i indkøbscenter', ''),
 array('118', 'http://www.youtube.com/v/1yKWH7QDhig', '', 'scootercam', '10'),
 //array('117', 'http://www.youtube.com/watch?v=LwapZ-sV6KI', '', 'scooter TV - Hvor ender de ulovlige scootere ?', ''),
 //array('116', 'http://www.youtube.com/v/iRasoZMirRc', '', 'roller karussell', '1'), // Denne video er ikke tilgængelig i dit land. (har virket)
@@ -255,9 +260,9 @@ array('53', 'http://www.youtube.com/watch?v=U9gdgqLAG0Q', '', 'stunts på baghju
 array('52', 'http://www.youtube.com/watch?v=3v_WJhF21qk', '', 'stunts med ild', '17'),
 array('51', 'http://www.youtube.com/v/jGfIgn2H25s', '', 'løber og står op mens køre scooter', ''),
 array('50', 'http://blip.tv/play/2216176', '', 'polini cup 2009', '16'),
-array('49', 'http://embed.break.com/NTAyOTI5', '', 'vælter på græs', '15'),
-array('48', 'http://embed.break.com/NDIxNTAx', '', 'problemer med at få scooteren ned fra støtteben', '1'),
-array('47', 'http://embed.break.com/MTQyMDA0Mg==', '', 'første gang på scooter', ''),
+array('49', 'http://embed.break.com/NTAyOTI5', 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2008%2f5%2f502929_38f6baa9-7fab-48bd-b749-2b22d3631c94_prod_1.flv', 'vælter på græs', '15'),
+array('48', 'http://embed.break.com/NDIxNTAx', 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2007%2f12%2f421501_9d552e09-562d-4dc1-98b9-8c28f7899b97_prod.flv', 'problemer med at få scooteren ned fra støtteben', '1'),
+array('47', 'http://embed.break.com/MTQyMDA0Mg==', 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2009%2f10%2f1420042_83f35dff-83cb-410d-a1f8-59a9753ed102_prod_1.flv', 'første gang på scooter', ''),
 array('46', 'http://www.funnyordie.com/videos/f4871c1636', '', 'på baghjul ind i bord', '15+17'),
 array('45', 'http://www.funnyordie.com/videos/fb4fd80f55', '', 'freaky robots', '14'),
 array('44', 'http://www.funnyordie.com/videos/402cddfd5d', '', 'slip gashåndtaget', ''),
@@ -274,12 +279,12 @@ array('34', 'http://www.youtube.com/watch?v=w_kIUSr7-is', '', 'Hollywood holt - 
 array('33', 'http://www.youtube.com/watch?v=6tlHM7_XgEY', '', 'L Ron Harald - E Puch Maxi sang', '11'),
 array('32', 'http://www.youtube.com/v/4mHsybH2go8'      , '', 't-hansen slagter', '8+14'),
 array('31', 'http://www.youtube.com/v/nvm0K_uy0zM'      , '', 't-hansen ko', '8+14'),
-array('30', 'http://embed.break.com/NTQyODM4'           , '', 'lige i nødderne', ''),
-array('29', 'http://embed.break.com/MTM2NDcyNw=='       , '', 'madvogn trukket af scooter', ''),
-array('28', 'http://embed.break.com/NjQ2OTk4'           , '', 'hop over scooter', ''),
-array('27', 'http://embed.break.com/NDU2ODUw'           , '', 'hop ind i vindue', ''),
+array('30', 'http://embed.break.com/NTQyODM4'           , 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2008%2f7%2fscooter-jump-failure-nutshot_1.flv', 'lige i nødderne', ''),
+array('29', 'http://embed.break.com/MTM2NDcyNw=='       , 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2009%2f9%2f1364727_51768b91-5822-40e9-8274-b76c17bd0882_prod_1.flv', 'madvogn trukket af scooter', ''),
+array('28', 'http://embed.break.com/NjQ2OTk4'           , 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2008%2f2%2f456850_6abf040a-ad48-42fd-ab76-0d6bfb08b270_prod.flv', 'hop over scooter', ''),
+array('27', 'http://embed.break.com/NDU2ODUw'           , 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2008%2f2%2f456850_6abf040a-ad48-42fd-ab76-0d6bfb08b270_prod.flv', 'hop ind i vindue', ''),
 array('26', 'http://www.youtube.com/v/DATBAdyABi4'      , '', 'hund bag på', '2'),
-array('25', 'http://embed.break.com/NDIyNjU5'           , '', 'gashåndtaget sidder vist fast', ''),
+array('25', 'http://embed.break.com/NDIyNjU5'           , 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2007%2f12%2fidiot-on-moped-goes-for-a-ride.flv', 'gashåndtaget sidder vist fast', ''),
 array('24', 'http://www.metacafe.com/fplayer/311648/bear_riding_a_moped.swf'                            , '', 'bjørn køre scooter', ''),
 array('23', 'http://www.metacafe.com/fplayer/898811/andreas_gustaffson_crazy_stunts_on_a_moped.swf'     , '', 'andreas gustaffson tricks', '17'),
 array('22', 'http://www.metacafe.com/fplayer/257550/hanging_by_a_moped.swf'                             , '', 'på rulleskøjter', '17'),
@@ -290,20 +295,20 @@ array('18', 'http://www.youtube.com/v/rFIU36Qrw58'      , '', 'drenge danser til
 array('17', 'http://www.youtube.com/v/VPGd0LCOVHk'      , '', 'hej jord', '15'),
 array('16', 'http://www.youtube.com/v/B9oTS8PigNY'      , '', 'blind mand på scooter', '14'),
 array('15', 'http://www.youtube.com/v/zBXgZ9HWF5E'      , '', 'tv rapporter styrter på vespa', '14+15'),
-array('14', 'http://embed.break.com/NTgwNTk3'           , '', 'hej pæl', '15'),
-array('13', 'http://embed.break.com/Njc1OTA3'           , '', 'spiderman', '14'),
+array('14', 'http://embed.break.com/NTgwNTk3'           , 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2008%2f9%2ffunny-scooter-crash-ends-in-faceplant_1.flv', 'hej pæl', '15'),
+array('13', 'http://embed.break.com/Njc1OTA3'           , 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2009%2f2%2f675907_8df1deb5-00cf-472c-9b25-967d6532d67d_prod_1.flv', 'spiderman', '14'),
 //array('12', 'http://embed.break.com/NzcwMzI2'           , '', 'transformers', ''), // slettet
-array('11', 'http://embed.break.com/Mjc1MjI3'           , '', 'fra filmen taxi', '14'),
-array('10', 'http://embed.break.com/MTUxNDIzMQ=='       , '', 'god til at køre på baghjul', '17'),
-array('9', 'http://embed.break.com/MzQ2ODc5'           , '', 'knap så god til at køre på baghjul', '15'),
-array('8', 'http://embed.break.com/MTgzNzU3'           , '', 'hjemmelavet elektrisk knallert', '1'),
-array('7', 'http://embed.break.com/MTA5NTMyOQ=='       , '', 'Scooter Showoff Owned by Pole', '15'),
+array('11', 'http://embed.break.com/Mjc1MjI3'           , 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2007%2f4%2f16%2f275227_d113b4c2-5ead-4bdd-a4b5-225027f7074c_prod.flv', 'fra filmen taxi', '14'),
+array('10', 'http://embed.break.com/MTUxNDIzMQ=='       , 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2009%2f11%2f1514231_98f96e5c-0b9d-4089-8108-f25f47fba21e_prod_1.flv', 'god til at køre på baghjul', '17'),
+array('9', 'http://embed.break.com/MzQ2ODc5'           , 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2007%2f8%2f9%2f346879_6ec70798-6449-4305-8155-fba16872c658_prod.flv', 'knap så god til at køre på baghjul', '15'),
+array('8', 'http://embed.break.com/MTgzNzU3'           , 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2006%2f11%2f16%2f183757_6922c96c-e61a-4762-9d35-8406475a287a_prod.flv', 'hjemmelavet elektrisk knallert', '1'),
+array('7', 'http://embed.break.com/MTA5NTMyOQ=='       , 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2009%2f8%2fscooter-showoff-owned-by-pole_1.flv', 'Scooter Showoff Owned by Pole', '15'),
 array('6', 'http://www.youtube.com/v/KHH7qm99Hbo'      , '', 'karrusel', '1'),
 array('5', 'http://www.youtube.com/v/ccxuaxGc9Uk'      , '', 'styrt', '15'),
 array('4', 'http://www.youtube.com/v/i8Pmx105_tk'      , '', 'hej hus', '15'),
-array('3', 'http://embed.break.com/MzA5NTE3'           , '', 'svensker hop', '15'),
-array('2', 'http://embed.break.com/MTYyMDEyMg=='       , '', 'det bare ikke hans omgang', '15+16'),
-array('1', 'http://embed.break.com/NTI3MjQ0'           , '', 'lidt farligt', '15')
+array('3', 'http://embed.break.com/MzA5NTE3'           , 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2007%2f6%2f9%2f309517_7f824005-8a8a-4852-9650-869c1459acc8_prod.flv', 'svensker hop', '15'),
+array('2', 'http://embed.break.com/MTYyMDEyMg=='       , 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2010%2f1%2f1620122_e6d51f5d-5405-4184-ac0f-fdaf028a860f_prod_1.flv', 'det bare ikke hans omgang', '15+16'),
+array('1', 'http://embed.break.com/NTI3MjQ0'           , 'sVidLoc=http%3a%2f%2fvideo1.break.com%2fdnet%2fmedia%2f2008%2f6%2f527244_01b26b57-0606-4749-aa8d-d57a97ca2d83_prod_1.flv', 'lidt farligt', '15')
 
 );
 

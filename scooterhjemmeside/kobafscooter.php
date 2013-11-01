@@ -1,14 +1,14 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "køb af scooter";
-$overskrift = "køb af scooter";
-$metadescription = "råd ved køb af ny eller brugt scooter";
+$title = "råd til køb af ny eller brugt scooter/knallert";
+$overskrift = "råd til køb af ny eller brugt scooter/knallert";
+$metadescription = "forsikring, typeattest, nummerplade, slutseddel og links til hjemmesider med brugte scootere/knallerter";
 
-$linksarray = require_once('./php/linksdatabase.php');
+$linksarray = require_once './php/linksdatabase.php';
 $forsikringsselskaberarray = $linksarray['forsikringsselskaber'];
 $kobogsalgarray = $linksarray['køb og salg'];
 
@@ -63,16 +63,19 @@ Her ses nogle forsikringsselskaber.
 '.$forsikringsselskaberkode.'
 Når du opretter en forsikring så får du et forsikringsbevis.
 Enten i butikken eller af det forsikringsselskab du vælger.
-Forsikringen gælder med det samme selv før du har betalt for den.
+Forsikringen kan gælde med det samme selv før du har betalt for den.
 ').'
 
 '.afsnit('typeattest','
-Når du køber en ny scooter får du en typeattest som er underskrevet af importøren og sælgeren/butikken.
+Når du køber en ny scooter får du en typeattest som er underskrevet af importøren og forhandleren.
+Se '.ahref('registrering.php#typeattest', 'Typeattest').'.
 ').'
 
 '.afsnit('nummerplade','
 Hvis du køber din nye scooter i en butik som tilbyder at hente nummerpladen for dig så beslut om du vil lade butikken gør det eller om du selv vil hente og købe nummerpladen hos skat.
 Butikken skal gerne have 500-1000 kroner hvis de skal hente nummerpladen.
+
+<mark>Reglerne for hvornår man kan købe nummerplade har ændret sig så det er ikke sikkert man kan købe nummerplade hos skat mere, jeg mangler info om dette. Så det er ikke sikkert det følgende er rigtigt.</mark>
 
 Hvis du selv vil købe din nummerplade så tag dit forsikringsbevis og typeattest med til skat.
 I butikken eller hos skat kan du få et papir som hedder "Anmeldelse til syn og/eller registrering af motorkørertøjer m.v." (også kaldet MO 2A) som du udfylder.
@@ -92,7 +95,7 @@ køb af brugt scooter
 ' => '
 Mit bedste råd til køb af brugt scooter er at du skal prøve at køre på scooteren inden du køber den.
 Når du prøver en tur kan du måske mærke, høre og føle om der er noget i vejen med scooteren.
-Køber du en scooter som ikke kan starte kan der være mange grunde til at den ikke kan starte og det kan blive dyrt og tage lang tid at lave, specielt hvis du ikke selv kan lave den og skal betale et værksted/mekaniker for at lave den.
+Køber du en scooter som ikke kan starte kan der være mange grunde til at den ikke kan starte og det kan blive dyrt og tage lang tid at lave, specielt hvis du ikke selv kan lave den og skal betale en mekaniker for at lave den.
 
 Her er nogle links til hjemmesider hvor du kan finde brugte scootere og selv kan oprette en annonce.
 
@@ -107,24 +110,24 @@ Kan du nå jorden med fødderne når du holder stille uden at du skal ned fra s�
 Rammer styret dine ben når der drejes.
 Virker både el og kickstarter.
 Kan den holde sig selv kørende i tomgang.
-Virker alle lys (kort/langt,bag,bremse,blink,position,instrument,nummerplade).
+Virker alle lys (kort/langt, bag, bremse, blink, position, instrument, nummerplade).
 Virker bremserne.
 
 Jo flere km den har kørt jo mere slidt er den.
-Spørg sælgeren om at se papir, manualer og kvitteringer.
+Spørg sælgeren om at se papir som typeattest/registerings attest og kvitteringer.
 Få en snak med ejeren og spørg om alt er originalt eller om der er skiftet nogle dele på den.
-Spørg om den har været ude for en ulykke så stellet eller andre dele eventuelt er skæve.
+Spørg om den har været udsat ulykker så stellet eller andre dele eventuelt er skæve.
 Spørg ejeren hvor hurtigt den kan køre og prøv det selv.
 Check at ratlås, sædelås, topbokslås, ekstra lås virker og at alle nøglerne følger med.
 Check at stelnummer og motornummer ikke er forsøgt fjernet eller ændret.
-Undersøg scooterens ny pris. Det kan være at scooteren nu kan købes billigere end dengang sælgeren købte sin.
+Undersøg scooterens ny pris. Det kan være at scooteren nu kan købes billigere end dengang sælgeren købte sin fra ny.
 ').'
 
 '.afsnit('det mindre vigtige','
-Spørg sælgeren om hvad der er i stykker og hvad der ikke virker så godt og overvej om du vil betale de ekstra penge til køb at nye dele og den tid det vil tage dig og lave det.
+Spørg sælgeren om hvad der er i stykker og hvad der ikke virker så godt og overvej om du vil betale de ekstra penge til køb af nye dele og den tid det vil tage dig og lave det og løn til mekaniker hvis du ikke kan lave det selv.
 Check for rust (specielt udstødningen er tit rusten).
-Tag fat i scooterens dele og check at de sidder fast eller om noget er løst/defekt.
-Plastikskjoldende er ofte i stykker og er måske ikke et problem hvis du kan leve med det. Men det kan måske være svært at få fat i nye skjolde.
+Tag fat i scooterens dele og check at de sidder fast.
+Plastikskjoldende er ofte i stykker og er måske ikke et problem hvis du kan leve med det. Men det kan måske være dyrt/svært at få fat i nye skjolde.
 Tænk på at nogle scootermærker/modeller har større sandsynlighed for at blive stjålet.
 Check dækkene for slid.
 ').'
@@ -133,7 +136,7 @@ Check dækkene for slid.
 Følger der ekstra udstyr med... topboks, alarm, ekstra lås, hjelm.
 Følger manualen med.
 Hvis du har set scooteren i en annonce så se om alt nu også er som der stod i annoncen eller om sælgeren direkte har løjet om noget.
-Hvis noget på scooterens skal laves af en mekaniker skal du huske på at det kan blive dyrt.
+Hvis noget på scooteren skal laves af en mekaniker kan det blive dyrt.
 ').'
 <!--
 '.afsnit('efter købet','
@@ -159,10 +162,11 @@ Spørg om sælgeren har kvitteringen fra dengang sælgeren købte scooteren.
 
 Kontakt eventuelt politiet for at høre om den er meldt stjålet.
 Hvis din lokale politistation ikke vil oplyse om den er stjålet over telefonen så prøv at ringe til en anden station eller tag scooteren med ned til politiet.
-Der er nogen der skriver at de ikke vil oplyse det i telefonen.
+Der er nogen på nettet der skriver at politiet ikke vil oplyse om den er stjålet i telefonen.
 
-Tag eventuelt en ven med som ved noget om scootere hvis du ikke selv ved så meget så kan i være to om at vurdere scooteren.
+Tag eventuelt en ven med som ved noget om scootere hvis du ikke selv ved så meget så i kan være to om at vurdere scooteren.
 Print en slutseddel som dig og sælgeren kan udfylde sammen for at undgå eventuelle problemer og misforståelser.
+Du (køberen) beholder slutsedlen når den er udfyldt.
 ').'
 
 '.afsnit('slutseddel','
@@ -178,11 +182,12 @@ Ved købet kan du og sælgeren udfylde denne slutseddel som bevis for købet hvi
 '.afsnit('køb af brugt scooter uden nummerplade','
 Der er af og til nogen der skriver om at de vil købe eller har købt en brugt scooter som ikke har nogen nummerplade og papir og derfor ikke ved om det er en 30 eller 45 km/t scooter.
 
-Hvis det er en 30 km/t scooter som er købt fra ny (eller typegodkendt ?) før den 1. Juli 2006 så skal den ikke have nummerplade på selvom den bliver solgt igen.
+Hvis det er en 30 km/t scooter som er købt fra ny før den 1. Juli 2006 så skal den ikke have nummerplade på selvom den bliver solgt igen senere.
 
-Men det kunne jo også være en 45 km/t scooter som har haft nummerplade men hvor den er blevet taget af. For eksempel hvis forsikringen er blevet afmeldt.
+Men det kunne også være en 45 km/t scooter som har haft nummerplade på men hvor den er blevet taget af.
+For eksempel hvis forsikringen er blevet afmeldt.
 
-Der er vist også noget med at det kan give problemer hvis der ikke er nogen typeattest eller typegodkendelse med til scooteren.
+Der er vist også noget med at det kan give problemer hvis der ikke er nogen typeattest/registerings attest med til scooteren.
 
 Man kan måske ud fra stelnummeret se om det er en 30 eller 45 km/t.
 I nogle typegodkendelser kan stå "Tegn 8 og 9 i stelnummeret er 30 el. 60 og angiver den maksimale hastighed = 30 km/t".

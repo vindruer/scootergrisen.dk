@@ -1,12 +1,12 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "elektrisk - Service";
 $overskrift = "elektrisk - Service";
-$metadescription = "service af elektriske dele på scooter";
+$metadescription = "service af elektriske dele på scootere og knallerter, ibrugtagning af nyt batteri, kontrol af batteri, service af ECU";
 
 $databasecenter = array(
 
@@ -29,7 +29,7 @@ Denne måling kaldes en ubelastet måling da der ikke bliver brugt strøm fra ba
 
 Sammenlign målingen med tallene i tabellen.
 '.visbilled('1', 'billed0262.jpg', 'batteri opladningsniveau i forhold til volt', false, true).'
-Måler du 12,5 volt eller mindre på et vedligeholdelsesfrit batteri eller 12,1 volt eller mindre på et tradionelt batteri så trænger batteriet til '.ahref('service_elektrisk.php#oplad_batteri', 'opladning').'.
+Måler du 12,5 volt eller mindre på et vedligeholdelsesfrit bly-syre batteri eller 12,1 volt eller mindre på et tradionelt batteri så trænger batteriet til '.ahref('service_elektrisk.php#oplad_batteri', 'opladning').'.
 ').'
 '.afsnit('Belastet måling','
 En belastet måling giver en mere præcis måling af batteriets opladningsniveau end den ubelastede måling.
@@ -51,7 +51,7 @@ Hvis batteriets volt niveau falder under 10,5 volt 10-15 sekunder inden i belast
 Et hydrometer bruges til måling af batterisyrens massefylde.
 '.visbilled('1', 'billed0263.jpg', 'Hydrometer', false, true).'
 Det er kun meningen at man skal måle batterisyrens massefylde på traditionelle bly-syre batterier med skruer.
-Vedligeholdelsesfrie batterier har en plastik strip som det ikke er meningen man skal tage af da det vil give ubalance i batteriets celler og forringe batteri ydelsen (har jeg læst).
+Vedligeholdelsesfrie bly-syre batterier har en plastik strip som det ikke er meningen man skal tage af da det vil give ubalance i batteriets celler og forringe batteri ydelsen (har jeg læst).
 
 Nogle hydrometer har 5 små kugler i stedet for en flyder.
 Hydrometeret med flyderen skulle være mere præcis end den med kuglerne.
@@ -84,7 +84,7 @@ Massefylden falder med cirka 0,007 for hver 10 °Celsius temperaturen stiger.
 ,'
 oplad batteri
 ' => '
-Hvis det er et traditionelt batteri som skal oplades så skru påfyldningsskruerne af og lad dem sidde løst over hullerne.
+Hvis det er et traditionelt bly-syre batteri som skal oplades så skru påfyldningsskruerne af og lad dem sidde løst over hullerne.
 
 '.afsnit('Tilslut oplader','
 Sluk for opladeren inden du tilslutter kablerne for at undgå gnister.
@@ -116,9 +116,9 @@ Tænd for opladeren.
 
 Ladetiden afhænger af hvor afladt batteriet er.
 
-Her ses hvor længe et vedligeholdelsesfrit batteri skal oplades hvis man bruger en "constant current" oplader.
+Her ses hvor længe et vedligeholdelsesfrit bly-syre batteri skal oplades hvis man bruger en "constant current" oplader.
 '.visbilled('1', 'billed0259.jpg', 'VRLA batteri opladnings niveau', false, true).'
-Har man et 7 Ah vedligeholdelsesfrit batteri med en spænding på 12,2 volt så kan det oplades i 5 til 11 timer med en "constand current" oplader som er sat til 0,7 ampere.
+Har man et 7 Ah vedligeholdelsesfrit bly-syre batteri med en spænding på 12,2 volt så kan det oplades i 5 til 11 timer med en "constand current" oplader som er sat til 0,7 ampere.
 ').'
 
 '.afsnit('Opladningener i gang','
@@ -131,8 +131,8 @@ Hvis batteriet bliver ubehageligt at røre så afbryd opladningen, lad batteriet
 '.afsnit('Efter opladningen','
 Vent mindst 30 minutter efter opladningen og '.ahref('service_elektrisk.php#kontroller_batteri', 'kontroller batteri').'.
 
-Et vedligeholdelsesfrit batteri skal minimum have 12,8 volt.
-Et traditionelt batteri skal minimum have 12,4 volt.
+Et vedligeholdelsesfrit bly-syre batteri skal minimum have 12,8 volt.
+Et traditionelt bly-syre batteri skal minimum have 12,4 volt.
 
 Oplad batteriet yderligere hvis det ikke har opnået det ønskede volt niveau.
 
@@ -159,25 +159,19 @@ Her skal man selv afbryde opladningen.
 Denne oplader type er kun beregnet til traditionelle batterier.
 '.visbilled('1', 'billed0260.jpg', 'batterioplader', false, true).'
 
-Her ses en automatisk oplader som hedder TecMate OptiMate 4.
+Her ses en automatisk oplader som hedder '.ahref('specielt_optimate4.php', 'TecMate OptiMate 4').'.
 Den kan bruges til traditionelle, vedligeholdelsesfrie og gel batterier.
 Den har ingen knapper og man kan lade den være tilsluttet batteriet så længe man har lyst.
 Lader man oplader stå tilsluttet i lang tid stå den og holde batteriet fuldt opladt selvom batteriet selvaflader.
 Lamperne fortæller hvad opladeren er i gang med og om batteriets tilstand.
 '.visbilled('1', 'billed0258.jpg', 'OptiMate 4 batterioplader', false, true).'
-Se også '.ahref('specielt_optimate4.php', 'specielt for OptiMate 4').'.
-'
-.visfil('1', 'scooterhjemmeside/download/optimate4_manual.pdf', 'OptiMate 4 manual')
-.visfil('1', 'scooterhjemmeside/download/optimate4_lamper.pdf', 'OptiMate 4 lamper')
-.'
 
 Her ses en automatisk oplader som hedder Yuasa MB-2020.
 Der er en tænd/sluk knap og en knap hvor man kan indstille om den skal oplade et nyt batteri (NEW) eller et brugt batteri som har været opladt før (NORMAL).
 '.visbilled('1', 'billed0268.jpg', 'Yuasa batterioplader', false, true).'
 
-Her ses en automatisk oplader fra CTEK som hedder XS 800.
+Her ses en automatisk oplader som hedder '.ahref('specielt_ctekxs800.php', 'CTEK XS 800').'.
 '.visbilled('1', 'billed0275.jpg', 'CTEK batterioplader', false, true).'
-'.visfil('1', 'scooterhjemmeside/download/batterioplader_ctekxs800.pdf', 'CTEK XS 800 manual').'
 
 '.afsnit('constant current og constant voltage','
 En oplader type hedder "constant current" fordi de oplader med de samme antal ampere hele tiden som ikke ændres under opladningen.
@@ -230,7 +224,7 @@ De 2 multimetre viser hvor mange volt og ampere batteriet bliver opladt med.
 ,'
 ibrugtagning af nyt batteri
 ' => '
-'.afsnit('ibrugtagning af nyt traditionelt batteri','
+'.afsnit('ibrugtagning af nyt traditionelt bly-syre batteri','
 Skru propperne af batteriet og gem dem.
 Tag hætten af udluftningshullet og smid den ud.
 Batterisyren skal være mellem 15 og 30 °Celsius altså stuetemperatur.
@@ -252,14 +246,14 @@ Monter først det positive (+) kabel.
 Monter derefter det negative (-) kabel.
 Smør terminalerne med et tyndt lag vaseline eller fedt for at undgå korrision.
 
-Når man tager et nyt traditionelt batteri ibrug skal man først skrue propperne ud når det skal bruges.
+Når man tager et nyt traditionelt bly-syre batteri ibrug skal man først skrue propperne ud når det skal bruges.
 
 '.ahref('http://repvideo.lars-mc.dk/repvideo/view.repair_video.php?id=7', 'Videoer fra lars-mc.dk : Påmontering af nyt batteri').'
 
 ').'
 
-'.afsnit('ibrugtagning af nyt vedligeholdelsesfrit batteri','
-'.visbilled('1', 'billed0083.jpg', 'ibrugtagning af nyt vedligeholdelsesfrit batteri', false, true).'
+'.afsnit('ibrugtagning af nyt vedligeholdelsesfrit bly-syre batteri','
+'.visbilled('1', 'billed0083.jpg', 'ibrugtagning af nyt vedligeholdelsesfrit bly-syre batteri', false, true).'
 Sæt skruer og gevind på batteri terminalerne.
 Monter batteriet i scooteren.
 Monter først det positive (+) kabel.
@@ -267,16 +261,16 @@ Monter derefter det negative (-) kabel.
 Smør terminalerne med et tyndt lag vaseline eller fedt for at undgå korrision.
 
 Jeg har lavet denne video der viser hvordan man gør.
-'.visflash('0', "http://www.youtube.com/watch?v=bJVqdOsVHig", 'ibrugtagning af nyt vedligeholdelsesfrit batteri', true).'
+'.visflash('0', "http://www.youtube.com/watch?v=bJVqdOsVHig", 'ibrugtagning af nyt vedligeholdelsesfrit bly-syre batteri', true).'
 Se også '.ahref('http://repvideo.lars-mc.dk/repvideo/view.repair_video.php?id=22', 'Klargøring af servicefri batteri (repvideo.lars-mc.dk)').'.
 Se også '.ahref('http://repvideo.lars-mc.dk/repvideo/view.repair_video.php?id=7', 'Påmontering af nyt batteri (repvideo.lars-mc.dk)').'.
 
 '.visbilled('1', 'billed2297.jpg', 'kymco YTX7A-BS kasse', false, true).'
-'.visbilled('1', 'billed2298.jpg', 'vedligeholdelsesfrit batteri kymco YTX7A-BS åben kasse', false, true).'
-'.visbilled('1', 'billed2300.jpg', 'vedligeholdelsesfrit batteri kymco YTX7A-BS batterisyrebeholder skruer til terminaler', false, true).'
+'.visbilled('1', 'billed2298.jpg', 'vedligeholdelsesfrit bly-syre batteri kymco YTX7A-BS åben kasse', false, true).'
+'.visbilled('1', 'billed2300.jpg', 'vedligeholdelsesfrit bly-syre batteri kymco YTX7A-BS batterisyrebeholder skruer til terminaler', false, true).'
 Her ses batteriet, batterisyren og skruer og gevind.
-'.visbilled('1', 'billed2301.jpg', 'vedligeholdelsesfrit batteri kymco YTX7A-BS batterisyrebeholder skruer til terminaler', false, true).'
-'.visbilled('1', 'billed2302.jpg', 'vedligeholdelsesfrit batteri kymco YTX7A-BS', false, true).'
+'.visbilled('1', 'billed2301.jpg', 'vedligeholdelsesfrit bly-syre batteri kymco YTX7A-BS batterisyrebeholder skruer til terminaler', false, true).'
+'.visbilled('1', 'billed2302.jpg', 'vedligeholdelsesfrit bly-syre batteri kymco YTX7A-BS', false, true).'
 Skruer og gevind
 '.visbilled('1', 'billed2303.jpg', 'skruer og gevind til batteriterminaler', false, true).'
 Først puttes gevindet i også skures skruen i.

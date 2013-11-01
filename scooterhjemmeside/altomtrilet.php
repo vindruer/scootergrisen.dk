@@ -1,16 +1,34 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "trilet 50 cm³ 3 hjulet invalideknallert";
+$title = "trilet 3 hjulet invalideknallert med 50 cm³ motor";
 $overskrift = "trilet";
-$metadescription = "billeder, specifikationer, manualer, el diagrammer, reservedele og typegodkendelser";
+$metadescription = "specifikationer, download og typegodkendelser";
 
 $setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
-$setup['sidetopbesked'] = ''.kontaktmig(1).' hvis du kan hjælpe med info til denne side';
+/*
+'.afsnit('reservedele til Trilet med Puch motor kan muligvis findes her', '
+'.ahref('http://www.west-import.dk/').'
+'.ahref('http://www.scootertuning.ch/index.php/cat/c23_Fahrwerk.html/page/2').'
+'.ahref('http://www.mopedspeed.dk/').'
+'.ahref('http://www.puchverkstan.se/').'
+'.ahref('http://www.jmpbparts.com/').'
+'.ahref('http://www.motormarket.dk/').'
+'.ahref('http://tempocykler.dk/velkommen').'
+'.ahref('http://www.puch-wieser.at/shop.html').'
+'.ahref('http://www.puchparts.dk/').'
+'.ahref('http://www.puchshop.de/catalog/home.php').'
+'.ahref('http://www.norscand.com/default.aspx').'
+'.ahref('http://www.puch-rbo.at/WEBEDITION/default.htm').'
+'.ahref('http://www.puch-zweirad.de/').'
+'.ahref('http://www.mopedspeed.dk/web-shop/puch-/').'
+'.ahref('http://www.cycle-tech.ch/de/q1/Kapitel_Mofa/Chapter.aspx').'
+').'
+*/
 
 $databasecenter_b = array(
 
@@ -41,46 +59,29 @@ AC504T  2006 til 2009 (Slut produktion)
 ,'
 links
 ' => '
-'.afsnit('Trilet links', '
 '.ahref('http://trilets.tumblr.com/', 'I just love when Trilets block my way...').'
 '.ahref('http://www.mo-ped.se/knallert/trilet.htm', 'mo-ped.se').'
 '.ahref('http://www.aksos.dk/reva-aalborg', 'Reva Aalborg').'
-').'
-'.afsnit('reservedele til Trilet med Puch motor kan muligvis findes her', '
-'.ahref('http://www.west-import.dk/').'
-'.ahref('http://www.scootertuning.ch/index.php/cat/c23_Fahrwerk.html/page/2').'
-'.ahref('http://www.mopedspeed.dk/').'
-'.ahref('http://www.puchverkstan.se/').'
-'.ahref('http://www.jmpbparts.com/').'
-'.ahref('http://www.motormarket.dk/').'
-'.ahref('http://tempocykler.dk/velkommen').'
-'.ahref('http://www.puch-wieser.at/shop.html').'
-'.ahref('http://www.puchparts.dk/').'
-'.ahref('http://www.puchshop.de/catalog/home.php').'
-'.ahref('http://www.norscand.com/default.aspx').'
-'.ahref('http://www.puch-rbo.at/WEBEDITION/default.htm').'
-'.ahref('http://www.puch-zweirad.de/').'
-'.ahref('http://www.mopedspeed.dk/web-shop/puch-/').'
-'.ahref('http://www.cycle-tech.ch/de/q1/Kapitel_Mofa/Chapter.aspx').'
-').'
 '
 
 ,'
-trilet stelfarver
+logo og stelfarve
 ' => '
-Triletens logo og stelfarve kan afslører hvad motormærke der sidder i.
+Triletens logo og stelfarve kan afslører hvad model det er og hvad motormærke der sidder i.
+Rød er Puch, blå er Honda, gul er Morini Franco.
 '.visbilled('1', 'billed3853.jpg', 'trilet 2000, trilet 2000M, trilet 2000M', false, true).'
 '.visbilled('1', 'billed3854.jpg', 'trilet R5', false, true).'
+Sort kan være Morini Franco eller ukendt 4 takt.
 '
 
 ,'
-trilet motortyper gennem tiden
+motortyper gennem tiden
 ' => '
-2000M = Morini Franco motor (cirka 2000 til 2005)
-2000H = Honda motor (cirka 1990 til 2000)
 2000 = Puch motor (enten MSA (? til ?) eller ZA50 (? til 1990))
+2000H = Honda motor (cirka 1990 til 2000)
+2000M = Morini Franco motor (cirka 2000 til 2005)
 
-MSA er en MS motor med 2 automatiske gear (MSA-utomatisk) og den rigtige betegnelse skulle være M5.
+MSA er en MS motor med 2 automatiske gear (MS A-utomatisk) og den rigtige betegnelse skulle være M5.
 Skulle også findes med M3 med kickstarter (brugt på Puch MS50 1966 og VS50 1966-1967).
 M5 med anden svinghjulsmagnet og en snorstartanordning (brugt i Puch R50 1967-1968 og Puch MS50 1969-? for post væsenet).
 

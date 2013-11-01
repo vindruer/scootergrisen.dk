@@ -1,8 +1,8 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "ventiler - Service";
 $overskrift = "ventiler - Service";
@@ -173,7 +173,7 @@ box(array('170', '170', '170')
       ,array('Skyteam PBR',      '0,05',              '0,05')
       ,array('Sym Fiddle',       '0,03 (± 0,02)',     '0,05 (± 0,02)')
       ,array('Sym Mio',          '0,05 (± 0,02)',     '0,10 (± 0,02)')
-      ,array('Sym Orbit',        '0,03 (± 0,02)',     '0,03 eller 0,05 (± 0,02)')
+      ,array('Sym Orbit 4 takt', '0,03 (± 0,02)',     '0,03 eller 0,05 (± 0,02)')
       ,array('Yamaha Giggle',    '0,10-0,16',         '0,18-0,24')
       ,array('Yamasaki YM50-8B', '0,05',              '0,08')
    )

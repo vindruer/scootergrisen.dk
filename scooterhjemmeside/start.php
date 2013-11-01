@@ -1,8 +1,10 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
+
+$setup['nogetikon']               = 'ikoner/ikon_start2.png';
 
 $title = "start (menu med billeder)";
 $overskrift = "start (menu med billeder)";
@@ -144,7 +146,7 @@ foreach($leftcontentmenuer as $menuoverskrift => $menudata){
 
                      foreach($noget as $submenukey => $submenuvalue){
 
-                     if($menuoverskrift == $GLOBALS['setup']['l_m_scootermerker']){
+                     if(isset($GLOBALS['setup']['l_m_scootermerker']) && $menuoverskrift == $GLOBALS['setup']['l_m_scootermerker']){
 
                            $submenutitle = mb_ucfirst($submenuvalue[key($submenuvalue)]);
                            $thumb = $submenuvalue['logo'];

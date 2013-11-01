@@ -1,9 +1,9 @@
 # .htaccess for http://scootergrisen.dk/scooterhjemmeside/
 # æøåÆØÅ UTF-8 uden BOM
 
-DirectoryIndex index.php
-
 ErrorDocument 403 /scooterhjemmeside/fejl.php
 ErrorDocument 404 /scooterhjemmeside/fejl.php
+
+DirectoryIndex index.php
 
 #RedirectPermanent /robots.txt http://scootergrisen.dk/robots.txt

@@ -1,11 +1,11 @@
 <?php // æøåÆØÅ UTF-8 uden BOM
 
-require_once('./php/opsetning_scooterhjemmeside.php');
-require_once('./php/generelt_funktioner.php');
-require_once('./php/scooterhjemmeside_funktioner.php');
+require_once './php/opsetning_scooterhjemmeside.php';
+require_once './php/generelt_funktioner.php';
+require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "køling";
-$overskrift = "køling";
+$title = "kølingssystemer på knallert/scooter moterer";
+$overskrift = "kølingssystemer på knallert/scooter moterer";
 $metadescription = "information om forskellige kølingssystemer som findes på scootere";
 
 $databasecenter = array(
@@ -42,6 +42,9 @@ På denne motor blæses luften ud af siden og under motoren.
 væskekøling
 ' => '
 Topstykke og cylinder indeholder kølervæske som cirkuleres af en vandpumpe til en radiator hvor væsken køles af vinden og/eller en blæser.
+
+Læg mærke til slangen på topstykket som går til øverst på køleren, nederst på køleren en anden slage som går til pumpen og endnu en slange fra pumpen til cylinderen.
+'.visbilled('1', 'billed3908.jpg', 'væskekølet motor', false, true).'
 
 Vandpumpen hjælper med at cirkulerer kølervæsken.
 '.visbilled('1', 'billed0152.jpg', 'vandpumpe', false, true).'
@@ -83,7 +86,7 @@ Radiatoren kan sidde forrest på scooteren og være forsynet med en elektrisk bl
 '.visbilled('1', 'billed2880.jpg', 'radiator forrest på scooter', false, true).'
 '.visbilled('1', 'billed2808.jpg', 'radiator og blæser forrest på scooter', false, true).'
 '.visbilled('1', 'billed1535.jpg', 'radiator blæser', false, true).'
-Den varme kølervæske kommer ind øverste på radiatoren og passager gennem nogle smalle aflange rør med kølefinner imellem.
+Den varme kølervæske kommer ind øverste på radiatoren og passere gennem nogle smalle aflange rør med kølefinner imellem.
 '.visbilled('1', 'billed1539.jpg', 'radiator finne og rør', false, true).'
 Når scooteren køre eller blæseren er tændt vil vinden blæse gennem radiatorens kølefinner.
 Vinden absorbere noget af varmen og dermed køles kølervæsken.

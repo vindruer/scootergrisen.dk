@@ -2,7 +2,7 @@
 
 include "class.xmlresponse.php";
 
-if ($_POST && isset($_POST['msg']) && isset($_POST['url']) && isset($_POST['line'])) {
+if ($_POST && isset($_POST['msg']) && isset($_POST['url']) && isset($_POST['line']) && isset($_POST['useragent'])) {
 
    $filename = "{$_SERVER['DOCUMENT_ROOT']}/temp/onerror.txt";
 
@@ -10,12 +10,13 @@ if ($_POST && isset($_POST['msg']) && isset($_POST['url']) && isset($_POST['line
    $url = $_POST['url'];
    $line = $_POST['line'];
    $browser = $_SERVER["HTTP_USER_AGENT"];
+   $useragent = $_SERVER["useragent"];
    $tid = date("j/n/Y H:i:s");
 
    if($filhandle = fopen($filename, "a")) {
 
       //$logline = "[$msg] [linie $line i $url] [browser : $browser] [IP : {$_SERVER['REMOTE_ADDR']}] [" . date("M d H:i:s") . "]";
-      $logline = "[$tid] [$msg] [$line] [$url] [$browser]";
+      $logline = "[$tid] [$msg] [$line] [$url] [$browser] [$useragent]";
       fwrite($filhandle, "$logline\r\n");
       fclose($filhandle);
 
