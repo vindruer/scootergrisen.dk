@@ -44,6 +44,7 @@ Disallow: /phpgrisen
 Disallow: /scooterhjemmeside/usenet.php
 Disallow: /scooterhjemmeside/motor_andet.php
 Disallow: /scooterhjemmeside/download/cpi_olivercity_eldiagram_cdi_generator.pdf
+Disallow: /scooterhjemmeside/download/dialog/hent/download/cpi_olivercity_eldiagram_cdi_generator.pdf
 Disallow: /scooterhjemmeside/tilfeldig.php
 Disallow: /scooterhjemmeside/2takt_motorolie.php
 Disallow: /scooterhjemmeside/2takt_karburator.php
