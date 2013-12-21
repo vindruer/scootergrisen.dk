@@ -8,7 +8,7 @@ $title = "kymco scootere med 50 cm³ motor";
 $overskrift = "kymco";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
 $databasecenter = array(
 
@@ -980,7 +980,7 @@ $databasecenter = array(
 
    ),'begrænsninger'       => array(
        'begrænstransmis'   => ens('begrænstransmis', '', '9,0 mm bred forhøjning på gliderør mellem forreste remskiver', '4,5 mm bred forhøjning på gliderør mellem forreste remskiver', '')
-      ,'begrænstænding'    => ens('begrænstænding', '', 'ja', '', 'begrænsning kan fjernes ved at afmonter en af de lilla/røde ledninger på CDI stikket.<br>' . visbilled('1', 'billed0166.jpg', 'Kymco Super 8 4T CDI stik ubegrænset') . '<br>' . ahref('http://www.youtube.com/watch?v=fDGauzkqaDA', 'Video - Fjern begræsning på CDI boks'))
+      ,'begrænstænding'    => ens('begrænstænding', '', 'ja', '', 'begrænsning kan fjernes ved at afmonter en af de lilla/røde ledninger på CDI stikket.<br>' . visbilled('1', 'billed0166.jpg', 'Kymco Super 8 4T CDI stik ubegrænset'))
       ,'begrænskarburator' => ens('begrænskarburator', '', 'standard begrænset hoveddyse : K80 / ubegrænset hoveddyse : K82', '', '')
       ,'begrænsluftfilter' => ens('begrænsluftfilter', '', 'tragt på indersiden af luftfilterkassen :<br>' . visbilled('1', 'billed2323.jpg', 'Kymco Super 8 4T tragt i luftfilterkasse'), '', false)
       ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')

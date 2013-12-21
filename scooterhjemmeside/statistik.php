@@ -4,9 +4,9 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "statestik som besøg, søgetekst og fejlbeskeder";
-$overskrift = "statestik som besøg, søgetekst og fejlbeskeder";
-$metadescription = "statestik";
+$title = "statistik som besøg, søgetekst og fejlbeskeder";
+$overskrift = "statistik som besøg, søgetekst og fejlbeskeder";
+$metadescription = "statistik";
 
 $indholdarray = '';
 
@@ -113,9 +113,9 @@ if($GLOBALS['setup']['loggetind']){
 
    }
 
-   $indholdarray['søgetekst']       = vissogningeridatabase(30);
-   $indholdarray['fejl']            = $fejlkode;
    $indholdarray['error events']    = $onerrorkode;
+   $indholdarray['fejl']            = $fejlkode;
+   $indholdarray['søgetekst']       = vissogningeridatabase(30);
    $indholdarray['besøg']           = besog('vis');
    //$indholdarray['søgninger']       = $sogningerkode;
    $indholdarray['todo']            = $todokode;

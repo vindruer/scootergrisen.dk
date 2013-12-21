@@ -19,9 +19,7 @@ html {
 /*   background: #000 -webkit-repeating-linear-gradient(-143deg, rgba(0, 0, 0, 0.9) 0px, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0.9) 6px);*/
    background: #000 repeating-linear-gradient(-143deg, rgba(0, 0, 0, 0.9) 0px, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0.9) 6px);
    font-size: small;
-/*   background: white;*/
-
-   background: Background;
+   background: #888;
 }
 
 body {
@@ -95,6 +93,166 @@ body > footer {
 
 img {
    border: 0;
+}
+
+
+
+/* dropdownmenu start */
+
+.dropdownmenu {
+   padding-right: 160px; /* så submenu ikke går ude til højre så man skal scrolle vandret for at se submenuen */
+   position: relative;
+   z-index: 10;
+/*   padding-left: 10px;
+   padding-right: 10px;*/
+
+
+
+/*   background: rgba(0, 0, 0, 0.7);*/
+/* ligner lort
+   background-image: -webkit-repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.2) 4px)
+                    ,-webkit-repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.2) 4px);
+*/
+/*   background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.1) 4px)
+                    ,repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.1) 4px);
+*/
+   /*background: lightgrey;*/
+/*   background: black;*/
+/*
+   background: -moz-linear-gradient(center top , rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)) repeat scroll 0% 0% transparent;
+   background: -webkit-linear-gradient(-90deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)) repeat scroll 0% 0% transparent;
+   background: -ms-linear-gradient(-90deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)) repeat scroll 0% 0% transparent;
+   background: linear-gradient(center top , rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)) repeat scroll 0% 0% transparent;
+*/
+/*
+   border-width: 1px 0px;
+   border-style: solid;
+   border-color: black;
+   border-image: none;
+   box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1) inset;
+*/
+}
+
+.dropdownmenu .sub {
+   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAJCAIAAACe+MrKAAAABnRSTlMA/wD/AP83WBt9AAAACXBIWXMAAAsSAAALEgHS3X78AAAAJ0lEQVR42mNgAIP/SADEQROFspBFkSRhoqimoBuBpgrdLKzKUUwEAMzKa5UodiyuAAAAAElFTkSuQmCC") right center no-repeat;
+   display: block;
+   cursor: pointer;
+   padding-right: 16px; /* billedets bredde + padding/margin */
+}
+
+.dropdownmenu ul {
+   padding: 0;
+   margin: 0;
+   list-style-type: none;
+   z-index: 11; /* så dropdown kommer over eventuel underliggende ting */
+}
+
+.dropdownmenu li {
+   position: relative;
+   float: left;
+}
+
+.dropdownmenu a {
+   display: block;
+   text-decoration: none;
+/*               height: 31px;*/
+
+      /*   border: 0 solid #2C5463;*/
+
+/*
+   padding-left: 10px;
+   padding-right: 10px;
+*/
+padding: 1em;
+
+   /*line-height: 29px;*/
+   cursor: pointer;
+
+   /* for at undgå at langeordudenmellem ikke går ud over kanten */
+/*            overflow: hidden;*/
+   text-overflow: ellipsis;
+
+           padding: 5px 10px;
+}
+
+.ulpunktb,
+.ulpunktc {
+   cursor: pointer;
+}
+
+.ulpunkta ul {
+   position: absolute;
+/*          top: 31px;*/
+   left: 0;
+   width: 158px;
+}
+
+ul.ulpunktc {
+   left: 158px;
+   top: -1px; /* eventuel border skal trækkes fra her */
+   width: 158px;
+}
+
+.ulpunktb a {
+   height: auto;
+/*             line-height: 1em;*/
+         /*   padding: 5px 10px;*/
+   width: 138px;
+}
+
+.dropdownmenu li a {
+   color: #000;
+}
+
+.ulpunkta > li > a {
+/*   color: #fff;*/
+}
+
+.ulpunktb > li:hover .sub {
+   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAJCAIAAACe+MrKAAAABnRSTlMA/wAAAP+JwC+QAAAACXBIWXMAAAsSAAALEgHS3X78AAAAMElEQVR42mP8//8/AxAwMsAB438GEEQWZYQKIInChJBEkYRgonhUoZuFaiMTGh8IAHqzGPpr2CG5AAAAAElFTkSuQmCC") right center no-repeat;
+}
+
+.dropdownmenu > li a {
+   color: white;
+/*   background: #3B424C;*/
+}
+
+.dropdownmenu li:hover > a {
+   color: white;
+/*   background: #3B424C;*/
+}
+
+.ulpunkta li:hover > a,
+.ulpunktb li:hover > a,
+.ulpunktc li:hover > a {
+   color: white;
+/*   box-shadow: inset 2px 0 2px rgba(0, 0, 0, 0.5), inset 0 2px 2px rgba(0, 0, 0, 0.5);*/
+
+   background: #666; /* fallback */
+   background: rgba(0, 0, 0, 0.5);
+}
+
+.ulpunkta > li:hover > a {
+   /* øverst menu punkt */
+/*   box-shadow: inset 2px 0 2px rgba(0, 0, 0, 0.5), inset 0 2px 2px rgba(0, 0, 0, 0.5);*/
+}
+
+.ulpunktb,
+.ulpunkta:hover .ulpunktc {
+   display: none;
+}
+
+.ulpunkta li:hover > ul,
+.ulpunkta li:hover .ulpunktb li:hover .ulpunktc {
+   display: block;
+}
+
+/* dropdownmenu slut */
+
+
+
+#footertekst {
+   padding: 10px;
 }
 
 #footertekst, #footertekst a {
@@ -185,29 +343,13 @@ img {
 }
 */
 .smaikoner {
-   display: block;
-   float: left;
-   margin-left: 5px;
+   padding-left: 5px;
 }
 
 .smaikonerlink {
-   float: left;
-   display: block;
    padding: 2px;
-   margin-right: 5px;
    border: 3px solid transparent;
-}
-
-.smaikoner span,
-.smaikonerlink {
-   vertical-align: middle;
-}
-
-.smaikoneraktuelikona a {
-   border-color: #00007f; /* fallback farve når rgba ikke virker */
-   border-color: rgba(0,0,255,0.5);
-   background: #7f7fc8; /* fallback farve når rgba ikke virker */
-   background: rgba(0,0,255,0.25);
+   float: left;
 }
 
 .smaikonerlink:hover {
@@ -237,6 +379,10 @@ img {
    display: block;
 }
 
+.highslidenoget img {
+   vertical-align: bottom;
+}
+
 .scootermodel, .producent, .highslidenoget {
    width: 187px;
    text-align: center;
@@ -247,6 +393,8 @@ img {
    background: #fff;
    border: 1px solid #fff;
    border: 1px solid transparent;
+   display: inline-block;
+   vertical-align: top;
    float: left;
 }
 
@@ -400,7 +548,7 @@ img {
    min-width: 450px;
 }
 
-.filholder a {
+.filholder {
    text-decoration: none;
 }
 
@@ -412,7 +560,7 @@ div > .filholder:nth-of-type(2n+1) {
    background-color: rgba(127, 127, 127, 0.2);
 }
 
-.filholdersub a {
+.filholdersub {
    border: 1px solid transparent;
    display: block;
    padding: 2px;
@@ -420,9 +568,6 @@ div > .filholder:nth-of-type(2n+1) {
 
 .filholdersub:hover {
    background: rgba(255, 255, 255, 0.2);
-}
-
-.filholdersub a:hover {
    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
@@ -464,6 +609,7 @@ div > .filholder:nth-of-type(2n+1) {
 }
 
 .upload_brugermanual, .upload_servicemanual, .upload_eldiagram, .upload_reservedele {
+   float: left;
    text-align: center;
    width: 20px;
    display: block;
@@ -949,7 +1095,8 @@ form {
 }
 
 #underholdningholder {
-   width: 711px;
+   width: 100%;
+   max-width: 711px;
    margin: 0 auto;
 }
 
@@ -969,14 +1116,24 @@ form {
 }
 
 #underholdningbeskrivelseholder {
-   float: left;
-   width: 645px;
+   width: 100%;
+   max-width: 100%;
    text-align: center;
-   padding-top: 7px; /* midlertidig løsning fordi kan ikke finde ud af at centere i midten lodret */
+   /*margin: 0 -33px; /* bredde på en grafik : så wrapper det hele ikke på 3 linier når skærmen er smal */
+   /*padding: 0 -33px; /* bredde på en grafik : så wrapper det hele ikke på 3 linier når skærmen er smal */
+   padding-top: 7px; /* font-size - grafikhøjde / 2 : så teksten står i midten lodret cirka men ikke optimalt hvis skifter skriftstørrelse */
+   /*font-size: 18px;*/
+}
+
+#underholdningbeskrivelsetekst {
+   /*min-height: 37px; /* samme højde som grafik */
+   margin: 0 43px; /* bredde på grafik + lidt ekstra så teksten ikke står helt op af grafikken : trækker grafikbredde fra i siderne */
+   overflow: hidden; /* for at teksten ikke skal kunne stå over pilen så man ikke så godt kan klikke på linket, kan ses med stor tekst også marker alt*/
+   text-overflow: ellipsis; /* viser brikker... når ord klippes */
 }
 
 #underholdningpilhojre a {
-   float: left;
+   float: right;
    background: url(../billeder/ikoner/pilhojre3.png) no-repeat top left;
    width: 33px;
    height: 37px;
@@ -995,6 +1152,10 @@ form {
    text-align: center;
    margin: 0 auto;
    display: block;
+}
+
+#underholdningholder #sjove_sendknap {
+   max-width: 100%; /* så det også ser ok ud på lille skærm */
 }
 
 .video {
@@ -1180,7 +1341,7 @@ form {
 .kategorilinkvalgt a {
    color: #fff;
    background: #666;
-   border: 1px solid #666;
+   border: 1px solid #000;
 }
 
 .kategorilinkholder a:hover {
@@ -1234,162 +1395,6 @@ button img {
    display: block;
 }
 
-
-
-/* dropdown menu start */
-
-.dropdownmenu {
-   padding-right: 160px; /* så submenu ikke går ude til højre så man skal scrolle vandret for at se submenuen */
-   position: relative;
-   z-index: 10;
-/*   padding-left: 10px;
-   padding-right: 10px;*/
-
-
-
-/*   background: rgba(0, 0, 0, 0.7);*/
-/* ligner lort
-   background-image: -webkit-repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.2) 4px)
-                    ,-webkit-repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.2) 4px);
-*/
-/*   background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.1) 4px)
-                    ,repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 0px, rgba(0, 0, 0, 0.2) 2px, rgba(255, 255, 255, 0.1) 4px);
-*/
-   /*background: lightgrey;*/
-/*   background: black;*/
-/*
-   background: -moz-linear-gradient(center top , rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)) repeat scroll 0% 0% transparent;
-   background: -webkit-linear-gradient(-90deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)) repeat scroll 0% 0% transparent;
-   background: -ms-linear-gradient(-90deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)) repeat scroll 0% 0% transparent;
-   background: linear-gradient(center top , rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)) repeat scroll 0% 0% transparent;
-*/
-/*
-   border-width: 1px 0px;
-   border-style: solid;
-   border-color: black;
-   border-image: none;
-   box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1) inset;
-*/
-}
-
-.dropdownmenu .sub {
-   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAJCAIAAACe+MrKAAAABnRSTlMA/wD/AP83WBt9AAAACXBIWXMAAAsSAAALEgHS3X78AAAAJ0lEQVR42mNgAIP/SADEQROFspBFkSRhoqimoBuBpgrdLKzKUUwEAMzKa5UodiyuAAAAAElFTkSuQmCC") right center no-repeat;
-   display: block;
-   cursor: pointer;
-   padding-right: 16px; /* billedets bredde + padding/margin */
-}
-
-.dropdownmenu ul {
-   padding: 0;
-   margin: 0;
-   list-style-type: none;
-   z-index: 11; /* så dropdown kommer over eventuel underliggende ting */
-}
-
-.dropdownmenu li {
-   position: relative;
-   float: left;
-}
-
-.dropdownmenu a {
-   display: block;
-   text-decoration: none;
-/*               height: 31px;*/
-
-
-   border: 0 solid #2C5463;
-/*
-   padding-left: 10px;
-   padding-right: 10px;
-*/
-padding: 1em;
-
-   /*line-height: 29px;*/
-   cursor: pointer;
-
-   /* for at undgå at langeordudenmellem ikke går ud over kanten */
-/*            overflow: hidden;*/
-   text-overflow: ellipsis;
-
-           padding: 5px 10px;
-}
-
-.ulpunktb,
-.ulpunktc {
-   cursor: pointer;
-}
-
-.ulpunkta ul {
-   position: absolute;
-/*          top: 31px;*/
-   left: 0;
-   width: 158px;
-}
-
-ul.ulpunktc {
-   left: 158px;
-   top: -1px; /* eventuel border skal trækkes fra her */
-   width: 158px;
-}
-
-.ulpunktb a {
-   height: auto;
-/*             line-height: 1em;*/
-         /*   padding: 5px 10px;*/
-   width: 138px;
-}
-
-.dropdownmenu li a {
-   color: #000;
-}
-
-.ulpunkta > li > a {
-/*   color: #fff;*/
-}
-
-.ulpunktb > li:hover .sub {
-   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAJCAIAAACe+MrKAAAABnRSTlMA/wAAAP+JwC+QAAAACXBIWXMAAAsSAAALEgHS3X78AAAAMElEQVR42mP8//8/AxAwMsAB438GEEQWZYQKIInChJBEkYRgonhUoZuFaiMTGh8IAHqzGPpr2CG5AAAAAElFTkSuQmCC") right center no-repeat;
-}
-
-.dropdownmenu > li a {
-   color: white;
-/*   background: #3B424C;*/
-}
-
-.dropdownmenu li:hover > a {
-   color: white;
-/*   background: #3B424C;*/
-}
-
-.ulpunkta li:hover > a,
-.ulpunktb li:hover > a,
-.ulpunktc li:hover > a {
-   color: white;
-/*   box-shadow: inset 2px 0 2px rgba(0, 0, 0, 0.5), inset 0 2px 2px rgba(0, 0, 0, 0.5);*/
-
-   background: #666; /* fallback */
-   background: rgba(0, 0, 0, 0.5);
-}
-
-.ulpunkta > li:hover > a {
-   /* øverst menu punkt */
-/*   box-shadow: inset 2px 0 2px rgba(0, 0, 0, 0.5), inset 0 2px 2px rgba(0, 0, 0, 0.5);*/
-}
-
-.ulpunktb,
-.ulpunkta:hover .ulpunktc {
-   display: none;
-}
-
-.ulpunkta li:hover > ul,
-.ulpunkta li:hover .ulpunktb li:hover .ulpunktc {
-   display: block;
-}
-
-/* dropdown menu slut */
-
-
-
 .tagetafunderbillede {
    display: block;
    text-align: center;
@@ -1404,7 +1409,10 @@ ul.ulpunktc {
 .flag a {
    margin-left: 2px;
    margin-right: 2px;
-   /* der skal ikke være så meget margin (kun 2 px fordi google translate tilføjer fejlagtigt ekstra margin */
+}
+
+.fjernbetjeningknapper {
+   margin-top: 10px;
 }
 
 .fjernbetjeningknapper button {
@@ -1420,64 +1428,101 @@ ul.ulpunktc {
    margin-right: 0;
 }
 
-.linkknapholder {
-   text-align: center;
+.fjernbetjeningvolumerange {
+   vertical-align: baseline;
+   width: 110px;
+   height: 22px;
+   padding: 0;
+   margin: 0;
+   background-image: url(../billeder/afspiller/volume_range_baggrund.png);
+   background-size: 100% 100%;
+   background-position: center center;
+   background-repeat: no-repeat;
 }
 
-.linkknapholder a {
+/* midlertidig kode til at lege med udseendet på type="range" */
+.fjernbetjeningvolumerange::-moz-range-track { background: transparent; border: none; }
+.fjernbetjeningvolumerange::-moz-range-thumb { background: black; border: 1px solid gold; width: 11px; height: 11px; border-radius: 20px; }
+.fjernbetjeningvolumerange:hover::-moz-range-track { }
+.fjernbetjeningvolumerange:hover::-moz-range-thumb { background: red; border-radius: 0; }
+.fjernbetjeningvolumerange:active::-moz-range-track { background: green; border: none; }
+.fjernbetjeningvolumerange:active::-moz-range-thumb { background: gold; border: 1px solid red; }
+
+.fjernbetjeningvolumerange::-webkit-slider-track { background: transparent; border: none; }
+.fjernbetjeningvolumerange { -webkit-appearance: none; }
+
+.fjernbetjeningvolumerange::-ms-track { background: transparent; border: none; }
+.fjernbetjeningvolumerange::-ms-thumb { background: red; border: 1px solid gold; }
+.fjernbetjeningvolumerange:active::-ms-track { background: green; border: none; }
+.fjernbetjeningvolumerange:active::-ms-thumb { background: gold; border: 1px solid red; }
+.fjernbetjeningvolumerange::-ms-ticks-before { background: brown; }
+.fjernbetjeningvolumerange::-ms-ticks-after { background: orange; }
+.fjernbetjeningvolumerange::-ms-fill-upper { background: green; }
+.fjernbetjeningvolumerange::-ms-fill-lower { background: red; }
+
+.fjernbetjeningvolumetekst {
+   vertical-align: middle;
+   padding: 0;
+   margin: 0;
+   border: none;
+   text-align: right;
+}
+
+.linkknap {
+   display: block;
+   text-align: center;
    width: 30%;
    text-align: center;
    font-weight: bold;
    text-decoration: none;
 }
 
-.linkknap a {
+.linkknap {
    display: block;
-   margin: 0 auto;
    text-transform: uppercase;
    padding: 1em;
+   margin: 1em auto;
    line-height: 2em;
 }
 
-.linkknap a,
-.linkknap a:link,
-.linkknap a:visited {
+.linkknap,
+.linkknap:link,
+.linkknap:visited {
    color: #fff;
 }
 
-.linkknap a:hover {
+.linkknap:hover {
    background: #4D63fA;
    background-image: -webkit-linear-gradient(180deg, #4D63fA 0%, #3B42bC 100%);
    background-image: linear-gradient(180deg, #4D63fA 0%, #3B42bC 100%);
    text-decoration: underline;
 }
 
-.linkknapholder2 {
+.linkknap2 {
+   display: block;
    text-align: center;
    white-space: nowrap;
-}
-
-.linkknapholder2 a {
    text-align: center;
    font-weight: bold;
    background: #4D637A;
    text-decoration: none;
 }
 
-.linkknap2 a {
-   padding: 5px;
+.linkknap2 {
+   display: block;
    text-transform: uppercase;
-   background-image: -webkit-linear-gradient(180deg, #4D637A 0%, #3B424C 100%);
-   background-image: linear-gradient(180deg, #4D637A 0%, #3B424C 100%);
+   padding: .5em;
+   margin: .5em auto;
+   line-height: 1em;
 }
 
-.linkknap2 a,
-.linkknap2 a:link,
-.linkknap2 a:visited {
+.linkknap2,
+.linkknap2:link,
+.linkknap2:visited {
    color: #FFFFFF;
 }
 
-.linkknap2 a:hover {
+.linkknap2:hover {
    background: #929BB1;
    box-shadow: 2px 2px 1px 0 rgba(146,155,177,0.3);
    background-image: -webkit-linear-gradient(180deg, #4D63fA 0%, #3B42bC 100%);
@@ -1521,9 +1566,9 @@ ul.ulpunktc {
 }
 
 .spotlysholderholderb {
-   padding: 4px;
-   margin: 0 auto;
-   width: 800px;
+   white-space: nowrap;
+   margin: 0 0 0 8px;
+   text-align: center;
 }
 
 .spotlysholderholderb a,
@@ -1533,16 +1578,18 @@ ul.ulpunktc {
 }
 
 .spotlysholder {
+   vertical-align: top; /* tilføje lodret scrollbar i ie */
    text-align: center;
    width: 180px;
-   float: left;
-   margin: 4px;
+   margin: 8px 8px 8px 0;
    padding: 5px;
    text-decoration: none;
 
    /* for at undgå at langeordudenmellem ikke går ud over kanten */
    overflow: hidden;
    text-overflow: ellipsis;
+   display: inline-block;
+   white-space: normal;
 }
 
 .spotlysholder:hover {
@@ -1648,6 +1695,14 @@ ul.ulpunktc {
    display: none;
 }
 
+.displayblock {
+   display: block;
+}
+
+.displayinline {
+   display: inline;
+}
+
 .visibilityhidden {
    visibility: hidden;
 }
@@ -1709,10 +1764,17 @@ ul.ulpunktc {
    border: none; /* fjern eventuel border i nogle browsere så elementet ikke fylder mere end 100% */
 }
 
-.harstemt {
+.harstemtfor {
    text-align: center;
    margin: 0 auto;
    background: red;
+   color: white;
+}
+
+.harikkestemtfor {
+   text-align: center;
+   margin: 0 auto;
+   background: darkgreen;
    color: white;
 }
 
@@ -1752,7 +1814,7 @@ ul.ulpunktc {
 }
 
 .navigationsknapper {
-   display: none;
+   /*display: none;*/
 }
 
 
@@ -1782,6 +1844,11 @@ ul.ulpunktc {
    white-space: nowrap;
 }
 
+.menugenvejpil {
+   margin-left: 3px;
+   margin-right: 3px;
+}
+
 .box_shadow_1 {
    box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.4), inset -2px 0 2px rgba(0, 0, 0, 0.2), inset 0 -2px 2px rgba(0, 0, 0, 0.2), inset 2px 0 2px rgba(255, 255, 255, 0.4);
 }
@@ -1798,6 +1865,10 @@ ul.ulpunktc {
    border: 1px solid #7c7c7c; /* fallback farve når rgba ikke virker */
    border: 1px solid rgba(0,0,0,0.5);
    border: 1px solid rgba(0,0,0,0.25);
+}
+
+.bordertype1transparent {
+   border: 1px solid transparent;
 }
 
 .bordertype2 {
@@ -2091,7 +2162,7 @@ font-family: palatino, "big caslon medium", corbel, serif;
 }
 
 .scooterfarveefter {
-   padding-right: .5em;
+   margin-right: .5em;
 }
 
 .xcols {
@@ -2282,13 +2353,18 @@ font-family: palatino, "big caslon medium", corbel, serif;
    position: relative;
    max-width: 100%;
    height: auto !IMPORTANT; /* behold aspect ratio */
-   /* et eller andet margin problem med <figure> */
-   margin: 0;
+   margin: 0; /* <figure> har åbenbart noget margin som standard */
    vertical-align: bottom;
 }
 
 /*.nywebgldemoholder > a > figure > img {*/
 .nywebgldemoholder_a_figure_img {
+
+   /* box-sizing løser problem hvor border er udover det man ønsker, det er vist noget med box-sizing bestemmer om border tykkelsen skal regnes med i størrelsen på indholdet */
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+
    box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.4);
    /* giver problemer */
       border: 10px solid gray; /* fallback */
@@ -2377,6 +2453,10 @@ font-family: palatino, "big caslon medium", corbel, serif;
 @media
 screen and (max-device-width: 960px),
 screen and (max-width: 960px) {
+
+   .push {
+      height: 0;
+   }
 
    html {
       background: none;
@@ -2496,7 +2576,9 @@ screen and (max-width: 960px) {
       max-width: 100% !IMPORTANT;
    }
 
-   .delbilled img {
+   .delbilled img,
+   .scooterbilledholder img,
+   #reklame img {
       max-width: 100%;
       height: auto !IMPORTANT; /* behold aspect ratio */
    }
@@ -2710,7 +2792,7 @@ padding-bottom: 2em;
    }
 
    #underholdningpilvenstre a {
-      display: none; /* nødløsning */
+      /*display: none; /* nødløsning */
    }
 
    #underholdningbeskrivelseholder {
@@ -2718,7 +2800,7 @@ padding-bottom: 2em;
    }
 
    #underholdningpilhojre a {
-      display: none; /* nødløsning */
+      /*display: none; /* nødløsning */
    }
 
    #spasholder {
@@ -2784,59 +2866,13 @@ padding-bottom: 2em;
 
 /* NYT vvvvvv ----------------------------------------------------------------------------------------------------------------------*/
 
-.gammel_tableholder {
-   margin: 1em auto;
-   overflow-x: auto; /* så bredde tabeller kan scrolle vandret på smalle skærme */
-   border-spacing: 0;
-}
-
-.gammel_tableholderselvetablenogetfindetnytnavn {
-   margin: 0 auto;
-   border: 5px solid #333762;
-   padding: 0;
-   border-spacing: 0;
-   border-collapse: separate;
-}
-
-.gammel_tableholder tr {
-   background: #333762;
-}
-
-.gammel_tableholder .gammel_tableoverskrift,
-.gammel_tableholder .gammel_tableoverskriftone {
-   border-bottom: 5px solid #333762;
-   background: #333762;
-   color: #eee;
-   font-weight: bold;
-}
-
-.gammel_tableholder .gammel_tableunderskrift {
-   background: #333762;
-   color: #eee;
-   font-weight: bold;
-   text-align: center;
-}
-
-.gammel_tableholder tr:nth-child(even) {
-   background-color: rgba(127, 127, 127, 0.3);
-}
-
-.gammel_tableholder tr:nth-child(odd) {
-   background-color: rgba(127, 127, 127, 0.2);
-}
-
-.gammel_tableholder td {
-   vertical-align: top;
-}
-
-
-
 .tableholder {
-   margin: 1em auto;
+   width: 100%;
+/*   margin: 1em auto;*/
    overflow-x: auto; /* så bredde tabeller kan scrolle vandret på smalle skærme */
    border-spacing: 0;
 
-   border: 5px solid #333762;
+/*   border: 5px solid #333762;*/
    padding: 0;
    border-collapse: separate;
 }
@@ -2874,6 +2910,10 @@ padding-bottom: 2em;
 
 .tableholder td {
    vertical-align: top;
+}
+
+.margintype0 {
+   margin-top: 10px;
 }
 
 .margintype1 {
@@ -2964,170 +3004,6 @@ padding-bottom: 2em;
    z-index: 1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.cubecontainer {
-/*   overflow: hidden;*/
-   margin: 0 auto;
-   text-align: center;
-  width: 64px;
-  height: 64px;
-  position: relative;
-/*  border: 1px solid #CCC;*/
-  -webkit-perspective: 1000px;
-      -ms-perspective: 1000px;
-       -o-perspective: 1000px;
-          perspective: 1000px;
-
-}
-
-#cubeb {
-  z-index: 0; /* for at komme oven på kodeboksen */
-  width: 100%;
-  height: 100%;
-  position: absolute;
-
-  -webkit-transform-style: preserve-3d;
-       -o-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-
-         -ms-transition: 0s;
-         -o-transition: 0s;
-         -webkit-transition: 0s;
-         transition: 0s;
-}
-
-#cubeb figure {
-  display: block;
-  position: absolute;
-  width: 64px; /* ønskede størrelse - border på begge ender (hvis border er 2px så træk 4 fra her) */
-  height: 64px; /* ønskede størrelse - border på begge ender (hvis border er 2px så træk 4 fra her) */
-  /*border: 2px solid black;*/
-
-   margin: 0; /* hmm eller roter kuben ikke i midten */
-
-}
-
-#cubeb.panels-backface-invisible figure {
-  -webkit-backface-visibility: hidden;
-     -moz-backface-visibility: hidden;
-       -o-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-/*
-#cubeb .front  { background: hsla(   0, 100%, 50%, 0.7 ); }
-#cubeb .back   { background: hsla(  60, 100%, 50%, 0.7 ); }
-#cubeb .right  { background: hsla( 120, 100%, 50%, 0.7 ); }
-#cubeb .left   { background: hsla( 180, 100%, 50%, 0.7 ); }
-#cubeb .top    { background: hsla( 240, 100%, 50%, 0.7 ); }
-#cubeb .bottom { background: hsla( 300, 100%, 50%, 0.7 ); }
-*/
-#cubeb .front  {
-  -webkit-transform: translateZ( 32px );
-       -o-transform: translateZ( 32px );
-          transform: translateZ( 32px );
-}
-#cubeb .back   {
-  -webkit-transform: rotateY( -180deg ) translateZ( 32px );
-       -o-transform: rotateY( -180deg ) translateZ( 32px );
-          transform: rotateY( -180deg ) translateZ( 32px );
-}
-#cubeb .right {
-  -webkit-transform: rotateY(   90deg ) translateZ( 32px );
-       -o-transform: rotateY(   90deg ) translateZ( 32px );
-          transform: rotateY(   90deg ) translateZ( 32px );
-}
-#cubeb .left {
-  -webkit-transform: rotateY(  -90deg ) translateZ( 32px );
-       -o-transform: rotateY(  -90deg ) translateZ( 32px );
-          transform: rotateY(  -90deg ) translateZ( 32px );
-}
-#cubeb .top {
-  -webkit-transform: rotateX(   90deg ) translateZ( 32px );
-       -o-transform: rotateX(   90deg ) translateZ( 32px );
-          transform: rotateX(   90deg ) translateZ( 32px );
-}
-#cubeb .bottom {
-  -webkit-transform: rotateX(  -90deg ) translateZ( 32px );
-       -o-transform: rotateX(  -90deg ) translateZ( 32px );
-          transform: rotateX(  -90deg ) translateZ( 32px );
-}
-
-#cubeb.show-front {
-  -webkit-transform: translateZ( -32px );
-       -o-transform: translateZ( -32px );
-          transform: translateZ( -32px );
-}
-#cubeb.show-back {
-  -webkit-transform: translateZ( -32px ) rotateX( -180deg );
-       -o-transform: translateZ( -32px ) rotateX( -180deg );
-          transform: translateZ( -32px ) rotateX( -180deg );
-}
-#cubeb.show-right {
-  -webkit-transform: translateZ( -32px ) rotateY(  -90deg );
-       -o-transform: translateZ( -32px ) rotateY(  -90deg );
-          transform: translateZ( -32px ) rotateY(  -90deg );
-}
-#cubeb.show-left {
-  -webkit-transform: translateZ( -32px ) rotateY(   90deg );
-       -o-transform: translateZ( -32px ) rotateY(   90deg );
-          transform: translateZ( -32px ) rotateY(   90deg );
-}
-#cubeb.show-top {
-  -webkit-transform: translateZ( -32px ) rotateX(  -90deg );
-       -o-transform: translateZ( -32px ) rotateX(  -90deg );
-          transform: translateZ( -32px ) rotateX(  -90deg );
-}
-#cubeb.show-bottom {
-  -webkit-transform: translateZ( -32px ) rotateX(   90deg );
-       -o-transform: translateZ( -32px ) rotateX(   90deg );
-          transform: translateZ( -32px ) rotateX(   90deg );
-}
-
-@-webkit-keyframes octocatspinner {
-   0%   { -webkit-transform: rotatey(-180deg); }
-   50%  { -webkit-transform: rotatey(0deg);    }
-   100% { -webkit-transform: rotatey(-180deg); }
-}
-
-@keyframes octocatspinner {
-   0%   { transform: rotatey(-180deg); }
-   50%  { transform: rotatey(0deg);    }
-   100% { transform: rotatey(-180deg); }
-}
-
-#spruttekat, #octocatlinkholder {
-   display: inline-block;
-
-   -webkit-animation-name: octocatspinner;
-   -webkit-animation-timing-function: linear;
-   -webkit-animation-iteration-count: infinite;
-   -webkit-animation-duration: 4s;
-   -webkit-transform-style: preserve-3d;
-   -webkit-animation-direction: normal;
-   -webkit-transform-origin: center center;
-
-   animation-name: octocatspinner;
-   animation-timing-function: linear;
-   animation-iteration-count: infinite;
-   animation-duration: 4s;
-   transform-style: preserve-3d;
-   animation-direction: normal;
-   transform-origin: center center;
-}
-
 .breadcrumbs {
    padding: 10px;
 /*   background: rgba(0, 0, 0, 0.5);*/
@@ -3142,6 +3018,16 @@ padding-bottom: 2em;
 
 .breadcrumbs a:hover {
    text-decoration: underline;
+}
+
+.breadcrumbspacer {
+   color: rgba(0, 0, 0, 0.5);
+   margin: 0 .5em;
+}
+
+.skiftmenusprog {
+   white-space: nowrap;
+   float: right;
 }
 
 .textshadow1 {
@@ -3194,12 +3080,57 @@ padding-bottom: 2em;
    -webkit-box-sizing: border-box;
    box-sizing: border-box;
 }
-* {
-   outline: 1px solid black;
-}
+
+
+
 */
 
-.breadcrumbspacer {
-   color: rgba(0, 0, 0, 0.5);
-   margin: 0 .5em;
+.topside {
+   color: rgba(255, 0, 0, 1);
+   margin-left: .5em;
 }
+
+.textaligncenter {
+   text-align: center;
+}
+
+.dobbeltklikinfo {
+   float: right;
+   margin-right: 10px;
+}
+
+.verticalalignmiddle {
+   vertical-align: middle;
+}
+
+.overflowxauto {
+   overflow-x: auto;
+}
+
+.antispam {
+   visibility: hidden;
+   height: 0;
+   width: 0;
+}
+
+.nyscooterdatatable {
+   text-align: left;
+   width: 100%;
+/*   margin: 1em auto;*/
+   overflow-x: auto; /* så bredde tabeller kan scrolle vandret på smalle skærme */
+   border-spacing: 0;
+
+   border: 5px solid #333762;
+   padding: 0;
+   border-collapse: separate;
+}
+
+.nyscooterdatatableoverskrift {
+   background: #333762;
+   color: white;
+}
+/*
+.altdetoverste {
+   display: none;
+}
+*/

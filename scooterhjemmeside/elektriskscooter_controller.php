@@ -88,12 +88,12 @@ De store røde stik forbindes til batterierne.
 Det lille sorte stik må være til gashåndtaget.
 Det lille hvide stik er måske til instrumentpanelet så man kan se hvor meget strøm der er på batterierne og om controlleren er overophedet.
 '.visbilled('1', 'billed0650.jpg', 'EVT 4000e controller stik', false, true).'
-'.visbilled('1', 'billed3130.jpg', '2 anderson SB stik i EVT scooter', false, true).'
+'.visbilled('1', 'billed3130.jpg', 'to anderson SB stik i EVT scooter', false, true).'
 Her ses et SB50 stik som laves af anderson power products.
 SB50 kan bruges op til 50 ampere.
-'.visbilled('1', 'billed3091.jpg', '2 polet anderson SB50 ampere stik', false, true).'
+'.visbilled('1', 'billed3091.jpg', 'to polet anderson SB50 ampere stik', false, true).'
 SB stikkene er kønsløse. Det vil sige har man 2 ens stik kan de forbindes.
-'.visbilled('1', 'billed3119.jpg', '2 grå anderson SB stik', false, true).'
+'.visbilled('1', 'billed3119.jpg', 'to grå anderson SB stik', false, true).'
 
 
 Her ses en controller med noget info på.

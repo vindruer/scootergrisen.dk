@@ -8,96 +8,9 @@ $title = "sym scootere med 50 cm³ motor";
 $overskrift = "sym";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
 $databasecenter_b = array(
-
-'
-logo
-' => '
-'.visbilled('1', 'billed2698.jpg', 'sym logo', false, null, null, null, true).'
-'
-
-,'
-flere filer
-' => '
-Her er flere filer til Sym modeller som ikke er med på siden.
-'
-.visfil('1', 'scooterhjemmeside/download/sym_xs125_k_servicemanual.pdf')
-.visfil('1', 'scooterhjemmeside/download/sym_attila_rs_21_servicemanual.pdf')
-.visfil('1', 'scooterhjemmeside/download/sym_shark_rs_21_servicemanual.pdf')
-.visfil('1', 'scooterhjemmeside/download/sym_joyride_servicemanual.pdf')
-.visfil('1', 'scooterhjemmeside/download/sym_hd_servicemanual.pdf')
-.visfil('1', 'scooterhjemmeside/download/sym_gts_servicemanual.pdf')
-.'
-'
-.visfil('1', 'scooterhjemmeside/download/sym_fuel_injection_system.pdf')
-.visfil('1', 'scooterhjemmeside/download/sym_tools_manual.pdf')
-.'
-'
-
-,'
-typer
-' => '
-Allo/Cello :
-AJ05W1-6
-AJ05W2-6
-AJ05W3-6
-AC05W1-6
-AC05W2-6
-AC05W3-6
-
-Fiddle II 50 : 
-AW05W-6
-AW05W1-6
-AW05W-D
-AW05W-S
-AW05W-F
-
-Jet Euro X 50 : 
-BL05W
-
-Jet SportX 50 : 
-BK05W
-
-Mio 50 : 
-HU05
-
-Orbit 50 : 
-AV05W-6
-AV05W-8
-AV05W-A
-AV05W-F
-AV05W-T
-AV05W1-T
-AV05W1-6
-AV05W-D
-AV05W-S
-
-Orbit (2 takt) : 
-JE05W1-6
-JE05W1-F
-JE05W2-6
-JE05W3-D
-
-Orbit II TS (2 takt) (JE er vist 2 takt) : 
-JEA103CX010868    30 : (A1/03), 45 : (A1/01)
-
-Symphony : 
-AY05W-T
-
-Symphony SR 50 : 
-AZ05W1-T
-AZ05W2-6
-
-Tonik 50 : 
-FW05A3-D
-
---- over 50 cm³ ---
-
-JET 4 125 cm³ : 
-AD12W1-6
-'
 
 );
 
@@ -1233,7 +1146,7 @@ $databasecenter = array(
 ),'symorbit' => array(
 
      'specielt'            => array(
-       'besked'            => ens('besked', '', '', '', '')
+       'besked'            => ens('besked', 'Fås også med 2 takt motor (JE05W1-6, JE05W1-F, JE05W2-6, JE05W3-D)', '', '', '')
 
    ),'generelt'            => array(
        'model'             => ens('model', 'sym orbit', '', '')
@@ -2093,7 +2006,7 @@ $databaseright = array(
    ,'mio brugermanual (dansk)'         => 'sym_mio_brugermanual_dk.pdf'
    ,'mio servicemanual'                => 'sym_mio_servicemanual.pdf'
    ,'mio reservedele'                  => 'sym_mio_reservedele.pdf'
-   ,'orbit 2T brugermanual (JE05W1-6JE05W1-FJE05W2-6JE05W3-D)'                 => 'sym_orbit_2t_brugermanual.pdf'
+   ,'orbit 2T brugermanual (JE05W1-6 JE05W1-F JE05W2-6 JE05W3-D)'                 => 'sym_orbit_2t_brugermanual.pdf'
    ,'orbit 4T brugermanual'            => 'sym_orbit_brugermanual.pdf'
    ,'orbit 4T brugermanual (dansk)'    => 'sym_orbit_brugermanual_dk.pdf'
    ,'orbit 4T servicemanual'           => 'sym_orbit_servicemanual.pdf'
@@ -2102,6 +2015,16 @@ $databaseright = array(
    ,'symphony SR brugermanual'         => 'sym_symphony_sr_brugermanual.pdf'
    ,'tonik brugermanual'               => 'sym_tonik_brugermanual.pdf'
    ,'katalog 2012'                     => 'sym_katalog_2012.pdf'
+   ,'fuel injection system'            => 'sym_fuel_injection_system.pdf'
+   ,'tools manual'                     => 'sym_tools_manual.pdf'
+   // køretøjer over 50 cm³
+   ,'XS125 K servicemanual'            => 'sym_xs125_k_servicemanual.pdf'
+   ,'attila RS 21 servicemanual'       => 'sym_attila_rs_21_servicemanual.pdf'
+   ,'shark RS 21 servicemanual'        => 'sym_shark_rs_21_servicemanual.pdf'
+   ,'joyride servicemanual'            => 'sym_joyride_servicemanual.pdf'
+   ,'HD servicemanual'                 => 'sym_hd_servicemanual.pdf'
+   ,'GTS servicemanual'                => 'sym_gts_servicemanual.pdf'
+   ,'Jet 4 (125 cm³) brugermanual (dansk)'                => 'sym_jet4_brugermanual.pdf'
 
 ),'typegodkendelser' => array(
     'allo 30 km/t E19202 (e4*2002/24*2189)'          => 'typegodkendelser/SYM%20Allo%2050%20%28E19202%29%20udstedt%2013-07-2011.pdf'

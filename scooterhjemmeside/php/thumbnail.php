@@ -349,7 +349,7 @@ function lavthumbnail($valg, $filnavn, $endeligstorrelse, $baggrundsfarve){
    $baggrund = imagecolorallocate($thumbnailresource, $baggrundsfarve[0], $baggrundsfarve[1], $baggrundsfarve[2]);
    imagefill($thumbnailresource, 0, 0, $baggrund);
 
-   // kopier og ændre størrelse på del af billede med resampling
+   // kopiere og ændre størrelse på del af billede med resampling
    // imagecopyresampled() er den funktion som tager længst tid i hele scriptet. For eksempel 2,6 sekunder
    imagecopyresampled($thumbnailresource, $originalbilled_resource, 0, 0, 0, 0, $thumbnailstorrelse[0], $thumbnailstorrelse[1], $originalx, $originaly);
 
@@ -362,7 +362,7 @@ function lavthumbnail($valg, $filnavn, $endeligstorrelse, $baggrundsfarve){
    $baggrund = imagecolorallocate($endeligresource , $baggrundsfarve[0], $baggrundsfarve[1], $baggrundsfarve[2]);
    imagefill($endeligresource , 0, 0, $baggrund);
 
-   // kopier original billedet over på det nye billede i den korrekte thumbnail størrelse
+   // kopiere original billedet over på det nye billede i den korrekte thumbnail størrelse
    imagecopy($endeligresource , $thumbnailresource, $endeligstorrelse[0]/2 - $thumbnailstorrelse[0]/2, $endeligstorrelse[1]/2 - $thumbnailstorrelse[1]/2, 0, 0, $thumbnailstorrelse[0], $thumbnailstorrelse[1]);
 
 

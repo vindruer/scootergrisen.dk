@@ -20,8 +20,6 @@ Klem på for eller bagbremsen og tryk på starter knappen.
 På nogle scootere sidder der en kontakt ved side støttebenet så sidestøttebenet skal slås op.
 Starterrelæet skal sige "klik" når man trykket på starter knappen.
 Se om multimeteret kan måle noget når du holder starter knappen inde.
-
-'.visflash('0', 'http://www.youtube.com/watch?v=FSKQiO-Fyss', 'test af starterrelæ', true).'
 '
 
 ,'

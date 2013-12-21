@@ -8,7 +8,7 @@ $title = "govecs scootere med elektrisk motor";
 $overskrift = "govecs";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
 $databasecenter_b = array(
 
@@ -891,10 +891,10 @@ $databaseright = array(
 
 'download' => array(
     'Govecs GO! S1.2 brugermanual'                                      => 'govecs_go!s1.2_brugermanual.pdf'
-   ,'Govecs detaljeret typegodkendelse'                                 => 'govecs_detaljeret_typegodkendelse.pdf'
 
 ),'typegodkendelser' => array(
-    'Govecs (93 2E) 45 km/t E19844 (e11*2002/24*0961) 1'                => 'typegodkendelser/Govecs%2093%20%28E19844%29%20udstedt%2013-07-2012.pdf'
+    'Govecs detaljeret typegodkendelse'                                 => 'typegodkendelser/govecs_detaljeret_typegodkendelse.pdf'
+   ,'Govecs (93 2E) 45 km/t E19844 (e11*2002/24*0961) 1'                => 'typegodkendelser/Govecs%2093%20%28E19844%29%20udstedt%2013-07-2012.pdf'
    ,'Govecs (93 2E) 45 km/t E19844 (e11*2002/24*0961) 2'                => 'typegodkendelser/Govecs%2093%20%28E19844%29%20udstedt%2027-07-2012.pdf'
    ,'Govecs GO! S1.2 30 km/t E20176 (e11*2002/24*1251)'                 => 'typegodkendelser/GOVECS%20-%20%28E20176%29%20udstedt%2020-12-2012.pdf'
    ,'Govecs GO! T1.2 Cargo 30 km/t E20174 (e11*2002/24*1251)'           => 'typegodkendelser/GOVECS%20-%20%28E20174%29%20udstedt%2020-12-2012.pdf'

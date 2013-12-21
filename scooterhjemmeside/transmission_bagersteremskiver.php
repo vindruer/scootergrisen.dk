@@ -19,8 +19,6 @@ Her ses den bagerste del af variatoren.
 Den yderste del kaldes koblingsklokken.
 '.visbilled('1', 'billed0557.jpg', 'koblingsklokke', false, true).'
 
-'.visflash('0', "http://www.youtube.com/v/ZOnGeRYRpCQ", 'når koblingsklokken drejer rundt så drejer baghjulet også rundt', true).'
-
 '.ahref('transmission_bagersteremskiver.php#fjern_motrikken_ved_koblingsklokken', 'Fjern møtrikken ved koblingsklokken').'
 
 Her er møtrikken fjernet.

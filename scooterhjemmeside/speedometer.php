@@ -38,7 +38,6 @@ Når klipsen er fjernet kan hjulene hives til siden og drejes som skubbes på pl
 '.visbilled('1', 'billed2339.jpg', 'speedometer og kilometertæller', false, true).'
 Og vupti så har scooteren lige kørt 80000 km ekstra.
 '.visbilled('1', 'billed2340.jpg', 'speedometer og kilometertæller', false, true).'
-'.visflash('0', "http://www.youtube.com/watch?v=3zj0UjubvZY", 'speedometer kørt med boremaskine', true).'
 '
 
 ,'

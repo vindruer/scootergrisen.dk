@@ -3,13 +3,59 @@
 $data = array(
 
 '
+onsdag den 11. December 2013
+' => '
+På grund af alt balladen med youtube/google+ har jeg valgt at slette mine videoer fra youtube.
+Det betyder at der er en del videoer på hjemmesiden som er blevet fjernet.
+
+Videoen '.ahref('specielt_3hjuletscootere.php#video', 'PGO TR-3 invalideknallert på messe med C. Reinhardt').' har fået undertekster som kan ses hvis browseren understøtter det.
+
+'.ahref('http://www.speedline.dk/', 'speedline.dk').' har fået en gratis reklame med som af og til kan ses nederst på hjemmesiden.
+
+Nye køretøjer :
+'.ahref('altomgrace.php#graceone', 'Grace One').'
+'.ahref('altomlifan.php#lifanxg1500dq', 'Lifan XG1500DQ').'
+
+Nye sider :
+'.ahref('altomgrace.php', 'Grace').'
+'
+
+,'
+lørdag den 2. November 2013
+' => '
+Øverst på hjemmeside er der kommet "breadcrumbs" (scootergrisen.dk » Hovedmenu » Nyheder) så det er let at se hvor man er i menuen.
+
+Nu hvor det er ved at blive vinter er det tid til at kigge på '.ahref('vinterrad.php', 'Vinterråd').'.
+
+På '.ahref('specielt_3hjuletscootere.php', '3 hjulet scootere og knallerter').' har jeg tilføjet en video med PGO TR-3 fra en messe (nederst på siden).
+
+'.ahref('teoriprove.php', 'Teoriprøve').' virker nu bedre på mobiltelefoner og andre enheder med små skærme.
+
+Nye køretøjer :
+'.ahref('altomsolo.php#soloelectra', 'Solo Electra').'
+'.ahref('altomsolo.php#solohercules', 'Solo Hercules').'
+
+Nye sider :
+'.ahref('altombenzhouyiying.php', 'Benzhou Yiying').' (har fået sin egen side)
+'.ahref('altomsolo.php', 'Solo').'
+'.ahref('styretoj.php', 'Styretøj').'
+
+Nye Manualer, el diagrammer, reservedele, osv :
+'.ahref('download/honda_vision_nsc50wh_servicemanual_tysk.pdf', 'honda_vision_nsc50wh_servicemanual_tysk.pdf').'
+'.ahref('download/aprilia_rs_servicemanual.pdf', 'aprilia_rs_servicemanual.pdf').'
+
+Nye typegodkendelser :
+'.ahref('download/typegodkendelser/Vespa%20LX50%20%28E20703%29%20udstedt%2027-09-2013.pdf', 'Vespa LX50 (E20703) udstedt 27-09-2013.pdf').'
+'.ahref('download/typegodkendelser/govecs_detaljeret_typegodkendelse.pdf', 'govecs_detaljeret_typegodkendelse.pdf').'
+'
+
+,'
 søndag den 15. September 2013
 ' => '
 Scootergrisen har fået en '.ahref('https://www.facebook.com/scootergrisen', 'fan-side på facebook').'.
 Den er ikke lavet af mig men fan-siden kan hjælpe med at udsprede kendskabet til hjemmesiden så endnu flere kan få glæde af indholdet.
 
 På det sidste har jeg lavet nogen '.ahref('http://www.youtube.com/user/scootergrisen/videos', 'videoer på youtube').' hvor jeg køre rundt forskellige steder på scooter.
-Se for eksempel '.ahref('http://www.youtube.com/watch?v=G1FQhKEYty8', 'turen over storestrømsbroen på scooter').'.
 
 Jeg har lavet om på menuen øverst på hjemmesiden.
 Alle typer køretøjer er nu flyttet i Køretøjer menuen.
@@ -258,7 +304,7 @@ lørdag den 1. Juni 2013
 ))
 
 ,'nævneværdige ændringer og nyt indhold' => ''
-.'Nye billeder af adskildt Kymco Agility motor fra '.ahref('http://scootergrisen.dk/forum/viewtopic.php?f=3&t=1302', 'GY6 4-takt renovering').'. Tak til Kymconørden for de fine billeder. Jeg har fordelt billeder på de forskellige sider i menuen '.menugenvej(array(mb_ucfirst($GLOBALS['setup']['l_m_scooterensdele']), mb_ucfirst($GLOBALS['setup']['l_m_scooterensdele_4taktmotor']))).' også har jeg oprette den nye side '.ahref('motor_motorblok.php', 'Motorblok').' hvor jeg også har brugt nogen af billederne.
+.'Nye billeder af adskildt Kymco Agility motor fra '.ahref('http://scootergrisen.dk/forum/viewtopic.php?f=3&t=1302', 'GY6 4-takt renovering').'. Tak til Kymconørden for de fine billeder. Jeg har fordelt billeder på de forskellige sider i menuen '.menugenvej(array(my_mb_ucfirst($GLOBALS['setup']['l_m_scooterensdele']), my_mb_ucfirst($GLOBALS['setup']['l_m_scooterensdele_4taktmotor']))).' også har jeg oprette den nye side '.ahref('motor_motorblok.php', 'Motorblok').' hvor jeg også har brugt nogen af billederne.
 
 Har tilføjet '.ahref('galleri.php#puch', 'Puch i Galleri').' og lavet om på '.ahref('altompuch.php', 'Puch').' så manualerne osv nu er ude til højre under download.
 Jeg mangler dog nogen gode Puch billeder. '.kontaktmig(1).' gerne eller skriv i '.forummet().' hvis du har nogen gode Puch billeder. Gerne i høj opløsning med hvid baggrund og så orginal som mulig.
@@ -293,7 +339,7 @@ Scootergrisen.dk lukker altså <span style="text-decoration: underline;">ikke</s
 
 ,'nævneværdige ændringer og nyt indhold' => ''
  .'
-Jeg blev stoppet af politiet og havde heldigvis mit kamera tændt så jeg kan vise jer '.ahref('http://www.youtube.com/watch?v=sc3AuW2TWq0', 'denne video').'.
+Jeg blev stoppet af politiet og havde heldigvis mit kamera tændt så jeg kan vise jer [link fjernet].
 
 Følgende mærker har fået deres egen side : '.ahref('altomatala.php', 'Atala').', '.ahref('altomitaljet.php', 'Italjet').', '.ahref('altomlifan.php', 'Lifan').', '.ahref('altomsolex.php', 'Solex').', '.ahref('altomtomos.php', 'Tomos').', '.ahref('altomtrilet.php', 'Trilet').' og '.ahref('altomxingyue.php', 'Xingyue').'.
 
@@ -419,7 +465,7 @@ tirsdag den 1. Januar 2013
 
 Jeg har tilføjet det jeg kalder <span class="bold">Spotlys</span> nederst på hjemmeside for at gøre opmærksom på nogen af de mere spændende sider på hjemmesiden.
 
-Jeg har taget alle billeder fra forum emnet '.ahref('http://scootergrisen.dk/forum/viewtopic.php?f=3&t=57', 'Billeder af scootere fra gaden').' og lavet en ny side kaldet '.ahref('billederfragaden.php', 'Billeder fra gaden').' som giver en lettere og hurtigere måde at se alle billederne på.
+Jeg har taget alle billeder fra forum emnet '.ahref('http://scootergrisen.dk/forum/viewtopic.php?f=3&t=57', 'Billeder af scootere fra gaden').' og lavet en ny side kaldet '.ahref('billeder.php', 'Billeder fra gaden').' som giver en lettere og hurtigere måde at se alle billederne på.
 
 Jeg har købt domænenavnet '.ahref('http://netkoder.dk/', 'netkoder.dk').' til de sider jeg har kaldt HTMLgrisen.
 Så fremover vil '.ahref('http://scootergrisen.dk/', 'scootergrisen.dk').' kun være om scootere og '.ahref('http://netkoder.dk/', 'netkoder.dk').' vil kun være om at lave hjemmesider.
@@ -496,7 +542,7 @@ Jeg har også tilføjet nogen flere brugermanualer på '.ahref('altomyamaha.php'
 ))
 
 ))
-
+/*
 ,'
 søndag den 4. November 2012
 ' => '
@@ -512,7 +558,7 @@ søndag den 4. November 2012
 Det fås i 3 udgaver (White, Silver, Black) hvor det billigste (Silver edition) kan købes hos '.ahref('http://www.actionvideo.dk/index.php/sport-kamera/gopro-hd/gopro-hd-hero3-white-edition.html', 'actionvideo.dk').' til 1999,- kroner.
 '.visbilled('1', 'billed3641.jpg', 'GoPro Hero 3', false, true).'
 Det kunne være spændende og se jer andre lave nogen videoer.
-Jeg har jo selv lige købt GoPro Hero 2 motorsports edition og du kan se de videoer jeg har lavet indtil videre '.ahref('http://www.youtube.com/watch?v=aSaITYWYikM', 'her').', '.ahref('http://www.youtube.com/watch?v=uTmfyj5zIfE', 'her').', '.ahref('http://www.youtube.com/watch?v=l7MHhGCv_us', 'her').' og '.ahref('http://www.youtube.com/watch?v=Uvt02yBJmGg', 'her').'.
+Jeg har jo selv lige købt GoPro Hero 2 motorsports edition og du kan se de videoer jeg har lavet indtil videre [links fjernet].
 Læs mere om disse hjelmkamera under '.ahref('kamera.php', 'Kamera').'.
 
 Jeg har startet på '.ahref('indsprojtningskit.php', 'Indsprøjtningskit').' fordi brugeren Baddi i '.forummet().' har skrevet om at sætte sådan et kit på en Kymco Agility og jeg vil så samle information på en side så andre kan få glæde af det og lærer af de erfaringer Baddi har gjort sig.
@@ -735,7 +781,7 @@ I menuen "Scooterens dele" har jeg opdelt "2 takt motor" og "4 takt motor" bedre
 '
 
 ))
-/*
+
 ,'
 fredag den 6. Juli 2012
 ' => '
@@ -1360,7 +1406,7 @@ mandag den 2. Maj 2011
  'nævneværdige ændringer og nyt indhold' => ''
  .ahref('lyd.php', 'Lyd').' hvor jeg samler lydoptagelser som har noget med scootere at gøre.
 
-'.ahref('lejer.php', 'Lejer').' hvor man blandt andet kan dekode de tal og bogstaver der står på siden af kuglelejer.
+'.ahref('lejer.php', 'Kuglelejer og nålelejer').' hvor man blandt andet kan dekode de tal og bogstaver der står på siden af kuglelejer.
 
 '.ahref('ordbog.php', 'Ordbog').' forklare betydningen af diverse ikke-så-let-forståelige ord og forkortelser.
 

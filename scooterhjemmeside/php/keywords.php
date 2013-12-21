@@ -215,7 +215,7 @@ $keywords = array_unique(array(
       ,'runner'
          ,'runner DD'
          ,'runner SP'
-         ,'runner purejet'
+         ,'runner PureJet'
       ,'SMT'
       ,'stalker'
          ,'stalker naked'

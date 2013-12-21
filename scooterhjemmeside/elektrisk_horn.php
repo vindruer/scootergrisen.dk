@@ -6,7 +6,7 @@ require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "horn - Elektrisk";
 $overskrift = "horn - Elektrisk";
-$metadescription = "info om hornet i en scooter/knallert som siger dyt og den skrue der er bag på";
+$metadescription = "info om den elektriske horn i en scooter/knallert som siger dyt og den skrue der kan være bag på";
 
 $databasecenter = array(
 

@@ -129,16 +129,9 @@ For eksempel tilføjes additiver for at øge benzinens oktantal.
 Fra Juli 2010 bliver der tilføjet 5% bioethanol til den benzin der sælges i danmark.
 
 Benzin fordamper meget let.
-'.visflash('0', "http://www.youtube.com/v/3cKS8eJYXj0", 'benzin der fordamper i et glas (videoen kører hurtigt)', true).'
 
 Benzin brænder kun på overfladen hvor det har kontakt med luft.
 Derfor gælder det om at forstøve benzinen mest mulighed i luften for at få en god og komplet forbrænding i forbrændingskammeret.
-'
-
-,'
-tankning
-' => '
-'.visflash('0', "http://www.youtube.com/watch?v=_Oc0sIkZSEA", 'at tanke benzin på scooter', true).'
 '
 
 ,'
@@ -228,6 +221,9 @@ Additiver er stoffer som tilsættes benzinen for at opnå forskellige egenskaber
 Man kan for eksempel tilsætte additiver for at opnå højere oktantal, rust beskyttelse eller mindre friktion.
 
 Tetraethylbly og MTBE er additiver som blev/bliver tilsat benzinen for at øge oktantallet.
+
+Man kan købe additiver og selv blande det i benzinen.
+Det kan rense motoren for belægninger i forbrændingskammeret eller rense dyserne på motorer med brændstofindsprøjtning.
 '
 
 ,'
@@ -312,7 +308,7 @@ Min 30 km/t scooter kørte 36 km/l med begrænset variator og 46 km/l med ubegr�
 '.afsnit('dæktryk','
 Kør med korrekt dæktryk.
 Lavt dæktryk giver større rullemodstand.
-Se dæktrykket i scooterens manual eller på et klistermærke på scooteren og brug eventuelt '.ahref('omregn.php#dektryk', 'dæktryk omregner').' for at omregne mellem kg/cm², psi, bar og kpascal.
+Se dæktrykket i scooterens manual eller på et klistermærke på scooteren og brug eventuelt '.ahref('omregn.php#dektryk', 'dæktryk omregner').' for at omregne mellem Kg/cm², PSI, Bar og Kpascal.
 ').'
 
 '.afsnit('accelerationspumpe','

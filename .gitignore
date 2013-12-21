@@ -2,6 +2,7 @@
 ## scootergrisen.dk
 #################
 
+crossdomain.xml
 info.txt
 todo.txt
 forum/
@@ -11,6 +12,9 @@ temp/
 ubrugt/
 usenet/
 wp/
+
+
+
 scooterhjemmeside/billeder/
 scooterhjemmeside/download/
 scooterhjemmeside/flash/

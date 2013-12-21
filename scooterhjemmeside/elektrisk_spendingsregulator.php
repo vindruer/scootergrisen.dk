@@ -45,7 +45,7 @@ SCR betyder thyristor.
 Generatoren levere enten 1 fase eller 3 faser.
 De fleste generatorer på 50 cm³ scootere har 1 fase.
 På større scootere kan generatoren have 3 faser.
-'.visbilled('1', 'billed0405.jpg', '1 fase og 3 faser', false, true).'
+'.visbilled('1', 'billed0405.jpg', 'generator med 1 fase og generator med 3 faser', false, true).'
 ').'
 '.afsnit('ensretning','
 Spændingsregulatoren laver generatorens vekselstrøm om til jævnstrøm.
@@ -54,7 +54,7 @@ Altså strøm som kun bevæger sig i en retning.
 "Half-wave" metoden bruger 1 diode til fjerne halvdelen af vekselstrømmen.
 Her bliver den gennemsnitlige jævnstrøms værdi cirka 37 % af sinus kurvens højeste punkt.
 '.visbilled('1', 'billed0403.jpg', 'half-wave ensretning', false, true).'
-'.visbilled('1', 'billed2470.jpg', '1 diode ensretning', false, true).'
+'.visbilled('1', 'billed2470.jpg', 'Ensretning - en diode Pære 9 V ~ Skop', false, true).'
 "Full-wave" metoden bruger 4 dioder til at vende halvdelen af faserne.
 Her bliver den gennemsnitlige jævnstrøms værdi cirka 63 % af sinus kurvens højeste punkt.
 '.visbilled('1', 'billed0404.jpg', 'full-wave ensretning', false, true).'

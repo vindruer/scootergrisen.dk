@@ -6,22 +6,22 @@ require_once './php/scooterhjemmeside_funktioner.php';
 
 $title = "billede generator af knallert nummerplade";
 $overskrift = "billede generator af knallert nummerplade";
-$metadescription = "indtast registeringsnummer fra scooter/knallert og få et billede som ligner en nummerplade";
+$metadescription = "indtast registreringsnummer fra scooter/knallert og få et billede som ligner en nummerplade";
 
-$setup['nogetikon']               = 'ikoner/ikon_nummerplade2.png';
+$setup['sideikon']               = 'ikoner/ikon_nummerplade2.png';
 
-$get_registeringsnummer = '';
+$get_registreringsnummer = '';
 $get_knallert = 'lille';
 
-if(isset($_GET["registeringsnummer"]) && $_GET["registeringsnummer"] != ''){
+if(isset($_GET["registreringsnummer"]) && $_GET["registreringsnummer"] != ''){
 
-   if(mb_strlen($_GET["registeringsnummer"]) > 0 && mb_strlen($_GET["registeringsnummer"]) <= 6){
+   if(mb_strlen($_GET["registreringsnummer"]) > 0 && mb_strlen($_GET["registreringsnummer"]) <= 6){
 
-      if(preg_match('/^[a-z0-9_æøåÆØÅ\-.\/\\\]*$/i', $_GET['registeringsnummer'])){
+      if(preg_match('/^[a-z0-9_æøåÆØÅ\-.\/\\\]*$/i', $_GET['registreringsnummer'])){
 
-         $get_registeringsnummer = $_GET["registeringsnummer"];
-         $title .= ' (' . $get_registeringsnummer . ')';
-         $overskrift .= ' (' . $get_registeringsnummer . ')';
+         $get_registreringsnummer = $_GET["registreringsnummer"];
+         $title .= ' (' . $get_registreringsnummer . ')';
+         $overskrift .= ' (' . $get_registreringsnummer . ')';
 
       }
 
@@ -92,7 +92,7 @@ $GLOBALS['setup']['head'] = '
       white-space: nowrap;
    }
 
-   .nummerpladegenerator label.registeringsnummer {
+   .nummerpladegenerator label.registreringsnummer {
       background: white;
    }
 
@@ -124,10 +124,12 @@ $GLOBALS['setup']['head'] = '
 
 <script type="text/javascript">
 
-   \'use strict\';
-
    var canvas1 = null,
        context1 = null,
+       nummerpladeform = null,
+       nummerpladeselectelement = null,
+       registreringsnummerinput = null,
+       selectstorrelse = null,
        downloadlink3 = null,
        a = document.createElement(\'a\'),
        nummerpladetype = \'' . $get_knallert . '\',
@@ -144,43 +146,36 @@ $GLOBALS['setup']['head'] = '
        kant_baggrund_rod = null,
        pattern = null,
        interval1 = null,
-       registeringsnummer = \'' . $get_registeringsnummer . '\',
-       standardfilnavn = \'nummerplade.png\';
+       registreringsnummer = \'' . $get_registreringsnummer . '\',
+       standardfilnavn = \'nummerplade.png\',
+       i = 0,
+       length = 0;
 
    function velgstorrelse() {
 
-      var index = document.abc.select1.options[document.abc.select1.selectedIndex].value;
-      skiftstorrelse(index);
+      \'use strict\';
 
-   }
+      var data = document.abc.select1.options[document.abc.select1.selectedIndex].value;
 
-   function skiftstorrelse(data) {
-
-      if (data != \'\') {
+      if (data !== \'\') {
 
          canvas1.width = data;
          canvas1.height = data / 1.16; // nummerplade er 1,16 gange breddere end højere
-         tegnnummerplade(registeringsnummer, document.getElementsByName(\'knallerttype\'));
+         upupupup();
 
       }
 
    }
 
-   function skifttype(data) {
-
-      nummerpladetype = data;
-      tegnnummerplade(registeringsnummer, document.getElementsByName(\'knallerttype\'));
-
-   }
-
    function findradioverdi(radios) {
 
-      for (var i = 0, length = radios.length; i < length; i++) {
+      \'use strict\';
+
+      for (i = 0, length = radios.length; i < length; i++) {
 
          if (radios[i].checked) {
 
             return radios[i].value;
-            break; // only one radio can be logically checked, don\'t check the rest
 
          }
 
@@ -190,6 +185,8 @@ $GLOBALS['setup']['head'] = '
 
    function tegnnummerplade(data, radios) {
 
+      \'use strict\';
+
       // skal ikke udføres hvis browser ikke forstår canvas ellers giver radiogul fejl fordi den er null
       if (!canvas1.getContext) {
 
@@ -197,16 +194,17 @@ $GLOBALS['setup']['head'] = '
 
       }
 
+      standardfilnavn = data.toUpperCase() + \'.png\';
       nummerpladetype = findradioverdi(radios);
 
-      if (nummerpladetype == \'lille\') {
+      if (nummerpladetype === \'lille\') {
 
          radiogul.checked = true;
          radiohvid.checked = false;
          baggrund_baggrund = baggrund_baggrund_gul;
          kant_baggrund = kant_baggrund_sort;
 
-      } else if (nummerpladetype == \'stor\') {
+      } else if (nummerpladetype === \'stor\') {
 
          radiogul.checked = false;
          radiohvid.checked = true;
@@ -215,17 +213,15 @@ $GLOBALS['setup']['head'] = '
 
       }
 
-      var gul = "#D3C035",
-          sort = "rgba(0, 0, 0, 0.92)",
-          //font = \'Trebuchet MS\',
-          font = \'consolas\',
+      // gul = "#D3C035",
+      // sort = "rgba(0, 0, 0, 0.92)",
+
+      var font = \'consolas\',
           fontsize = canvas1.width / 2.45,
-          registeringsnummer_linie1_x = canvas1.width / 2,
-          registeringsnummer_linie1_y = 220,
-          registeringsnummer_linie1_y = canvas1.height / 2 - fontsize / 9,
-          registeringsnummer_linie2_x = canvas1.width / 2,
-          registeringsnummer_linie2_y = 434,
-          registeringsnummer_linie2_y = canvas1.height - fontsize / 3,
+          registreringsnummer_linie1_x = canvas1.width / 2,
+          registreringsnummer_linie1_y = canvas1.height / 2 - fontsize / 9,
+          registreringsnummer_linie2_x = canvas1.width / 2,
+          registreringsnummer_linie2_y = canvas1.height - fontsize / 3,
           kantstregbreddeb = canvas1.width / 24.5, // bestemmer hvor afrundede hjørnerne skal være
           highlighty = fontsize / 100, // bestemmer hvor afrundede hjørnerne skal være
           x = 1,
@@ -299,54 +295,54 @@ $GLOBALS['setup']['head'] = '
       context1.textAlign = \'center\';
       context1.textBaseline = \'alphabetic\'; // har betydning for hvor teksten bliver tegnet
 
-      if (nummerpladetype == \'lille\') {
+      if (nummerpladetype === \'lille\') {
 
-         registeringsnummer_linie1_x = canvas1.width / 2;
-         if (data[0]) { context1.fillText(data[0], registeringsnummer_linie1_x - fontsize / 1.5, registeringsnummer_linie1_y - highlighty); }
-         if (data[1]) { context1.fillText(data[1], registeringsnummer_linie1_x, registeringsnummer_linie1_y - highlighty); }
-         if (data[2]) { context1.fillText(data[2], registeringsnummer_linie1_x + fontsize / 1.5, registeringsnummer_linie1_y - highlighty); }
-         if (data[3]) { context1.fillText(data[3], registeringsnummer_linie2_x - fontsize / 1.5, registeringsnummer_linie2_y - highlighty); }
-         if (data[4]) { context1.fillText(data[4], registeringsnummer_linie2_x, registeringsnummer_linie2_y - highlighty); }
-         if (data[5]) { context1.fillText(data[5], registeringsnummer_linie2_x + fontsize / 1.5, registeringsnummer_linie2_y - highlighty); }
+         registreringsnummer_linie1_x = canvas1.width / 2;
+         if (data[0]) { context1.fillText(data[0], registreringsnummer_linie1_x - fontsize / 1.5, registreringsnummer_linie1_y - highlighty); }
+         if (data[1]) { context1.fillText(data[1], registreringsnummer_linie1_x, registreringsnummer_linie1_y - highlighty); }
+         if (data[2]) { context1.fillText(data[2], registreringsnummer_linie1_x + fontsize / 1.5, registreringsnummer_linie1_y - highlighty); }
+         if (data[3]) { context1.fillText(data[3], registreringsnummer_linie2_x - fontsize / 1.5, registreringsnummer_linie2_y - highlighty); }
+         if (data[4]) { context1.fillText(data[4], registreringsnummer_linie2_x, registreringsnummer_linie2_y - highlighty); }
+         if (data[5]) { context1.fillText(data[5], registreringsnummer_linie2_x + fontsize / 1.5, registreringsnummer_linie2_y - highlighty); }
 
-      } else if (nummerpladetype == \'stor\') {
+      } else if (nummerpladetype === \'stor\') {
 
-         registeringsnummer_linie1_x = canvas1.width / 1.55;
-         if (data[0]) { context1.fillText(data[0], registeringsnummer_linie1_x - fontsize / 1.5, registeringsnummer_linie1_y - highlighty); }
-         if (data[1]) { context1.fillText(data[1], registeringsnummer_linie1_x, registeringsnummer_linie1_y - highlighty); }
-         if (data[2]) { context1.fillText(data[2], registeringsnummer_linie2_x - fontsize / 1.5, registeringsnummer_linie2_y - highlighty); }
-         if (data[3]) { context1.fillText(data[3], registeringsnummer_linie2_x, registeringsnummer_linie2_y - highlighty); }
-         if (data[4]) { context1.fillText(data[4], registeringsnummer_linie2_x + fontsize / 1.5, registeringsnummer_linie2_y - highlighty); }
+         registreringsnummer_linie1_x = canvas1.width / 1.55;
+         if (data[0]) { context1.fillText(data[0], registreringsnummer_linie1_x - fontsize / 1.5, registreringsnummer_linie1_y - highlighty); }
+         if (data[1]) { context1.fillText(data[1], registreringsnummer_linie1_x, registreringsnummer_linie1_y - highlighty); }
+         if (data[2]) { context1.fillText(data[2], registreringsnummer_linie2_x - fontsize / 1.5, registreringsnummer_linie2_y - highlighty); }
+         if (data[3]) { context1.fillText(data[3], registreringsnummer_linie2_x, registreringsnummer_linie2_y - highlighty); }
+         if (data[4]) { context1.fillText(data[4], registreringsnummer_linie2_x + fontsize / 1.5, registreringsnummer_linie2_y - highlighty); }
 
       }
 
       pattern = context1.createPattern(tegn_baggrund, \'repeat\');
       context1.fillStyle = pattern;
 
-      if (nummerpladetype == \'lille\') {
+      if (nummerpladetype === \'lille\') {
 
-         registeringsnummer_linie1_x = canvas1.width / 2;
-         if (data[0]) { context1.fillText(data[0], registeringsnummer_linie1_x - fontsize / 1.5, registeringsnummer_linie1_y); }
-         if (data[1]) { context1.fillText(data[1], registeringsnummer_linie1_x, registeringsnummer_linie1_y); }
-         if (data[2]) { context1.fillText(data[2], registeringsnummer_linie1_x + fontsize / 1.5, registeringsnummer_linie1_y); }
-         if (data[3]) { context1.fillText(data[3], registeringsnummer_linie2_x - fontsize / 1.5, registeringsnummer_linie2_y); }
-         if (data[4]) { context1.fillText(data[4], registeringsnummer_linie2_x, registeringsnummer_linie2_y); }
-         if (data[5]) { context1.fillText(data[5], registeringsnummer_linie2_x + fontsize / 1.5, registeringsnummer_linie2_y); }
+         registreringsnummer_linie1_x = canvas1.width / 2;
+         if (data[0]) { context1.fillText(data[0], registreringsnummer_linie1_x - fontsize / 1.5, registreringsnummer_linie1_y); }
+         if (data[1]) { context1.fillText(data[1], registreringsnummer_linie1_x, registreringsnummer_linie1_y); }
+         if (data[2]) { context1.fillText(data[2], registreringsnummer_linie1_x + fontsize / 1.5, registreringsnummer_linie1_y); }
+         if (data[3]) { context1.fillText(data[3], registreringsnummer_linie2_x - fontsize / 1.5, registreringsnummer_linie2_y); }
+         if (data[4]) { context1.fillText(data[4], registreringsnummer_linie2_x, registreringsnummer_linie2_y); }
+         if (data[5]) { context1.fillText(data[5], registreringsnummer_linie2_x + fontsize / 1.5, registreringsnummer_linie2_y); }
 
-      } else if (nummerpladetype == \'stor\') {
+      } else if (nummerpladetype === \'stor\') {
 
-         registeringsnummer_linie1_x = canvas1.width / 1.55;
-         if (data[0]) { context1.fillText(data[0], registeringsnummer_linie1_x - fontsize / 1.5, registeringsnummer_linie1_y); }
-         if (data[1]) { context1.fillText(data[1], registeringsnummer_linie1_x, registeringsnummer_linie1_y); }
-         if (data[2]) { context1.fillText(data[2], registeringsnummer_linie2_x - fontsize / 1.5, registeringsnummer_linie2_y); }
-         if (data[3]) { context1.fillText(data[3], registeringsnummer_linie2_x, registeringsnummer_linie2_y); }
-         if (data[4]) { context1.fillText(data[4], registeringsnummer_linie2_x + fontsize / 1.5, registeringsnummer_linie2_y); }
+         registreringsnummer_linie1_x = canvas1.width / 1.55;
+         if (data[0]) { context1.fillText(data[0], registreringsnummer_linie1_x - fontsize / 1.5, registreringsnummer_linie1_y); }
+         if (data[1]) { context1.fillText(data[1], registreringsnummer_linie1_x, registreringsnummer_linie1_y); }
+         if (data[2]) { context1.fillText(data[2], registreringsnummer_linie2_x - fontsize / 1.5, registreringsnummer_linie2_y); }
+         if (data[3]) { context1.fillText(data[3], registreringsnummer_linie2_x, registreringsnummer_linie2_y); }
+         if (data[4]) { context1.fillText(data[4], registreringsnummer_linie2_x + fontsize / 1.5, registreringsnummer_linie2_y); }
 
       }
 
-      // Ret linket så filnavnet kommet til at hedde det samme som registeringsnummer
+      // Ret linket så filnavnet kommet til at hedde det samme som registreringsnummer
 
-      if (registeringsnummer != \'\') {
+      if (registreringsnummer !== \'\') {
 
          a.download = data + \'.png\';
 
@@ -358,17 +354,87 @@ $GLOBALS['setup']['head'] = '
 
    }
 
+   function skiftlocation() {
+
+      \'use strict\';
+
+      window.location = this.value;
+
+   }
+
+   function upupupup() {
+
+      \'use strict\';
+
+      tegnnummerplade(registreringsnummerinput.value, document.getElementsByName(\'knallerttype\'));
+
+   }
+
+   function doWhileLoading1() {
+
+      \'use strict\';
+
+      if (hand.complete &&
+          tegn_baggrund.complete &&
+          baggrund_baggrund_gul.complete &&
+          baggrund_baggrund_hvid.complete &&
+          kant_baggrund_sort.complete &&
+          kant_baggrund_rod.complete) {
+
+         clearInterval(interval1);
+
+         tegnnummerplade(registreringsnummer, document.getElementsByName(\'knallerttype\'));
+
+         if (a.download !== undefined) {
+
+            a.alt = \'Download billedet af nummerpladen\';
+            a.title = \'Download billedet af nummerpladen\';
+            a.href = \'javascript: return false;\';
+            a.setAttribute(\'onclick\', \'this.href = canvas1.toDataURL();\');
+
+            if (registreringsnummer !== \'\') {
+
+               a.download = registreringsnummer + \'.png\';
+
+            } else {
+
+               a.download = standardfilnavn;
+
+            }
+
+            a.textContent = "Gem billede";
+            downloadlink3.appendChild(a);
+
+         }
+
+      }
+
+   }
+
    function startnummerplade() {
 
-      canvas1 = document.getElementById("canvas1");
+      \'use strict\';
+
+         canvas1 = document.getElementById("canvas1");
 
       if (canvas1.getContext) {
 
-         context1 = canvas1.getContext(\'2d\'),
-         radiogul = document.getElementById(\'radiogul\'),
-         radiohvid = document.getElementById(\'radiohvid\'),
-         downloadlink3 = document.getElementById(\'downloadlink3\')
-         ;
+         context1 = canvas1.getContext(\'2d\');
+         nummerpladeform = document.getElementById(\'nummerpladeform\');
+         radiogul = document.getElementById(\'radiogul\');
+         radiohvid = document.getElementById(\'radiohvid\');
+         downloadlink3 = document.getElementById(\'downloadlink3\');
+         nummerpladeselectelement = document.getElementById(\'nummerpladeselectelement\');
+         registreringsnummerinput = document.getElementById(\'registreringsnummerinput\');
+         selectstorrelse = document.getElementById(\'selectstorrelse\');
+
+         nummerpladeselectelement.addEventListener(\'change\', skiftlocation, false);
+         nummerpladeselectelement.addEventListener(\'select\', skiftlocation, false);
+         registreringsnummerinput.addEventListener(\'keyup\', upupupup, false);
+         radiogul.addEventListener(\'click\', upupupup, false);
+         radiohvid.addEventListener(\'click\', upupupup, false);
+         selectstorrelse.addEventListener(\'change\', velgstorrelse, false);
+         nummerpladeform.addEventListener(\'submit\', function () { return false; }, false);
 
          hand = new Image(); // lav nyt image objekt
          hand.src = \'/scooterhjemmeside/billeder/nummerpladehand.png\'; // sæt original billedets sti
@@ -394,47 +460,6 @@ $GLOBALS['setup']['head'] = '
 
    }
 
-   function doWhileLoading1() {
-
-      if (hand.complete &&
-          tegn_baggrund.complete &&
-          baggrund_baggrund_gul.complete &&
-          baggrund_baggrund_hvid.complete &&
-          kant_baggrund_sort.complete &&
-          kant_baggrund_rod.complete) {
-
-         clearInterval(interval1);
-
-         tegnnummerplade(registeringsnummer, document.getElementsByName(\'knallerttype\'));
-
-         if (a.download !== undefined) {
-
-            a.alt = \'Download billedet af nummerpladen\';
-            a.title = \'Download billedet af nummerpladen\';
-            a.href = \'javascript:return false;\';
-            a.setAttribute(\'onclick\', \'this.href = canvas1.toDataURL();\');
-
-            if (registeringsnummer != \'\') {
-
-               a.download = registeringsnummer + \'.png\';
-
-            } else {
-
-               a.download = standardfilnavn;
-
-            }
-
-            a.textContent = "Gem billede";
-            downloadlink3.appendChild(a);
-
-         } else {
-
-         }
-
-      }
-
-   }
-
    if (window.addEventListener) {
 
       window.addEventListener(\'load\', startnummerplade, false);
@@ -452,38 +477,38 @@ generator
 <!--ignore-->
 <div class="nummerpladegenerator">
 
-<form onsubmit="return false;" name="abc">
+<form name="abc" id="nummerpladeform">
 
    <div>
       <label>Eksempler :
-         <select class="inputselect" name="eksempler" onchange="window.location = this.value;" onselect="window.location = this.value;">
+         <select class="inputselect" name="eksempler" id="nummerpladeselectelement">
             <option value="' . $_SERVER["PHP_SELF"] . '">[tom]</option>
             <optgroup label="Lille knallert">
-               <option value="' . $_SERVER["PHP_SELF"] . '?registeringsnummer=VS9433&amp;knallert=lille">VS9433</option>
-               <option value="' . $_SERVER["PHP_SELF"] . '?registeringsnummer=VY7258&amp;knallert=lille">VY7258</option>
-               <option value="' . $_SERVER["PHP_SELF"] . '?registeringsnummer=XM9447&amp;knallert=lille">XM9447</option>
-               <option value="' . $_SERVER["PHP_SELF"] . '?registeringsnummer=VK6145&amp;knallert=lille">VK6145</option>
+               <option value="' . $_SERVER["PHP_SELF"] . '?registreringsnummer=VS9433&amp;knallert=lille">VS9433</option>
+               <option value="' . $_SERVER["PHP_SELF"] . '?registreringsnummer=VY7258&amp;knallert=lille">VY7258</option>
+               <option value="' . $_SERVER["PHP_SELF"] . '?registreringsnummer=XM9447&amp;knallert=lille">XM9447</option>
+               <option value="' . $_SERVER["PHP_SELF"] . '?registreringsnummer=VK6145&amp;knallert=lille">VK6145</option>
             </optgroup>
             <optgroup label="Stor knallert">
-               <option value="' . $_SERVER["PHP_SELF"] . '?registeringsnummer=DD737&amp;knallert=stor">DD737</option>
-               <option value="' . $_SERVER["PHP_SELF"] . '?registeringsnummer=RD685&amp;knallert=stor">RD685</option>
-               <option value="' . $_SERVER["PHP_SELF"] . '?registeringsnummer=NS199&amp;knallert=stor">NS199</option>
+               <option value="' . $_SERVER["PHP_SELF"] . '?registreringsnummer=DD737&amp;knallert=stor">DD737</option>
+               <option value="' . $_SERVER["PHP_SELF"] . '?registreringsnummer=RD685&amp;knallert=stor">RD685</option>
+               <option value="' . $_SERVER["PHP_SELF"] . '?registreringsnummer=NS199&amp;knallert=stor">NS199</option>
             </optgroup>
          </select>
       </label>
    </div>
 
    <div>
-      <label class="registeringsnummer">Indtast registeringsnummer : <input class="inputtext" name="indtastederegisteringsnummer" type="text" size="7" value="' . $get_registeringsnummer . '" maxlength="6" onkeyup="tegnnummerplade(this.value, document.getElementsByName(\'knallerttype\'));"></label>
+      <label class="registreringsnummer">Indtast registreringsnummer : <input class="inputtext" name="indtastederegistreringsnummer" type="text" size="7" value="' . $get_registreringsnummer . '" maxlength="6" id="registreringsnummerinput"></label>
    </div>
 
    <div>
-      <label class="gul"><input class="inputradio" id="radiogul" type="radio" name="knallerttype" value="lille" onclick="tegnnummerplade(form.indtastederegisteringsnummer.value, document.getElementsByName(\'knallerttype\'));" ' . $lillechecked . '>Lille knallert</label>'.lidtplads('vandret').'<label class="hvid"><input class="inputradio" id="radiohvid" type="radio" name="knallerttype" value="stor" onclick="tegnnummerplade(form.indtastederegisteringsnummer.value, document.getElementsByName(\'knallerttype\'));" ' . $storchecked . '>Stor knallert</label>
+      <label class="gul"><input class="inputradio" id="radiogul" type="radio" name="knallerttype" value="lille" ' . $lillechecked . '>Lille knallert</label>'.lidtplads('vandret').'<label class="hvid"><input class="inputradio" id="radiohvid" type="radio" name="knallerttype" value="stor" ' . $storchecked . '>Stor knallert</label>
    </div>
 
    <div class="breddeholder">
       <label>Vælg billede størrelse :
-         <select class="inputselect" name="select1" onchange="velgstorrelse();">
+         <select class="inputselect" name="select1" id="selectstorrelse">
             <option value="16">16' . ' x ' . floor(16/1.16) . '</option>
             <option value="32">32' . ' x ' . floor(32/1.16) . '</option>
             <option value="48">48' . ' x ' . floor(48/1.16) . '</option>

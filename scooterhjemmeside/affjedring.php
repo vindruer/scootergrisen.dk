@@ -92,7 +92,7 @@ I nogle manualer står at man kan bruge ATF (Automatic Transmission Fluid) i for
 ,'
 forgaffelolie
 ' => '
-' . ahref('olie.php#forgaffelolie', 'Forgaffelolie') . '
+'.ahref('olie.php#forgaffelolie', 'Forgaffelolie').'
 '
 
 ,'

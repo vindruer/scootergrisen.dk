@@ -39,6 +39,41 @@ function lavom(valg, data) {
 
 
 
+function udregn_olieblanding(formnavn) {
+
+   'use strict';
+
+   var volumea = 0,
+       volumeb = 0,
+       dataind = formnavn.olieblanding_dataind.value;
+
+   dataind = lavom("fra", dataind);
+
+   volumea = 'x';
+   volumeb = 'x';
+
+   if (isFinite(volumea) && isFinite(volumeb)) {
+
+      volumea = lavom("til", volumea);
+      volumeb = lavom("til", volumeb);
+
+      volumea = "1:" + volumea;
+      volumeb += " %";
+
+   } else {
+
+      volumea = "";
+      volumeb = "";
+
+   }
+
+   formnavn.olieblanding_dataud1.value = volumea;
+   formnavn.olieblanding_dataud2.value = volumeb;
+
+}
+
+
+
 function udregn_volume(formnavn) {
 
    'use strict';

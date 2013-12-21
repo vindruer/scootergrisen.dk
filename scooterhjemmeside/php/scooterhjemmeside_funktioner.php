@@ -247,7 +247,7 @@ function ens($valg, $a, $b = '', $c = '', $d = '', $e = 'pladderballe'){
                $farver = explode(" ", $a);
                $a = "";
                foreach ($farver as $value){
-                  $a .= ensdethele(scooterfarve($value), $value, '', '<span style="display: block; clear: both;"></span>', '', 1, 1, 0);
+                  $a .= ensdethele(scooterfarve($value), $value, '', ''.clearboth().'', '', 1, 1, 0);
                }
             }
             $b = ensdethele('', $b, '', '', '', 1, 0, 1);
@@ -727,6 +727,385 @@ function ens($valg, $a, $b = '', $c = '', $d = '', $e = 'pladderballe'){
 
 
 
+function visscooter_gammel($scooter, $data){
+
+   $indhold = '';
+   $billedefil = '';
+
+   if(isset($data["generelt"]["model"])){
+
+      $scootermodel = $data["generelt"]["model"];
+
+   }else{
+
+      $scootermodel = 'model navn ikke valgt';
+
+   }
+
+   // $data["generelt"]["model"] kan godt nok indeholde <br> og andet fordi det er data efter ens() er udført
+   $scootermodel = str_replace('<br>', '', $scootermodel); // midlertidig ikke så god løsning
+
+   // hvis starter med '_' så er det fordi det mangler et billede
+   // og der i stedet skal vises et standard billede
+   if(isset($scooter)){
+
+      if(stripos($scooter, '_') === 0){
+
+         $billedefil = 'manglerbillede';
+
+      }else{
+
+         $billedefil = $scooter;
+
+      }
+
+      if($scooter != 'hopover'){
+
+         $info = array(
+
+            'specielt'            => array(
+               'besked'            => 'besked'
+
+            ),'generelt'            => array(
+                'model'             => 'model'
+               ,'ogsåkaldet'        => 'også kaldet'
+               ,'scootertype'       => 'scootertype'
+               ,'varianter'         => 'varianter'
+               ,'pris'              => 'pris'
+               ,'hastighed'         => 'hastighed'
+               ,'farver'            => 'farver'
+               ,'forhandlere'       => 'forhandlere'
+
+            ),'motor'               => array(
+                'motormodel'        => 'motormodel'
+               ,'motortype'         => 'motortype'
+               ,'elmotorspec'       => 'elektrisk motor specifikation'
+               ,'volume'            => 'volume'
+               ,'køling'            => 'køling'
+               ,'boring'            => 'boring'
+               ,'slaglængde'        => 'slaglængde'
+               ,'ventiler'          => 'ventiler'
+               ,'ventiljustering'   => 'ventil justering'
+               ,'kompression'       => 'kompression'
+               ,'tomgang'           => 'tomgang'
+               ,'nomieffektogheste' => 'nominel ydelse'
+               ,'maxeffektogheste'  => 'maksimal ydelse'
+               ,'moment'            => 'moment'
+               ,'karburator'        => 'karburator'
+               ,'brændstof indsp..' => 'brændstof indsprøjtning'
+               ,'smøring'           => 'smøring'
+               ,'tændrør'           => 'tændrør'
+
+            ),'dimensioner'         => array(
+                'længde'            => 'længde'
+               ,'bredde'            => 'bredde'
+               ,'højde'             => 'højde'
+               ,'sædehøjde'         => 'sædehøjde'
+               ,'frihøjde'          => 'frihøjde'
+               ,'akselafstand'      => 'akselafstand'
+
+            ),'brændstof'           => array(
+                'benzin'            => 'benzin'
+               ,'benzintank'        => 'benzintank'
+               ,'forbrug'           => 'forbrug'
+
+            ),'hjul'                => array(
+                'fælgfor'           => 'fælg for'
+               ,'fælgbag'           => 'fælg bag'
+               ,'dækfor'            => 'dæk for'
+               ,'dækbag'            => 'dæk bag'
+               ,'dæktrykfor'        => 'dæktryk for'
+               ,'dæktrykbag'        => 'dæktryk bag'
+               ,'affjedringfor'     => 'affjedring for'
+               ,'affjedringbag'     => 'affjedring bag'
+               ,'bremserfor'        => 'forbremse'
+               ,'bremserbag'        => 'bagbremse'
+               ,'eger'              => 'eger'
+               ,'castervinkel'      => 'castervinkel'
+               ,'efterløb'          => 'efterløb'
+               ,'drejevinkel'       => 'drejevinkel'
+               ,'venderadius'       => 'venderadius'
+
+            ),'elektrisk'           => array(
+                'starterbatteri'    => 'batteri' // på de modeller som ikke har el start vil det være forkert at kalde det et starterbatteri
+               ,'batterispec1'      => 'batteri specifikationer'
+               ,'batterispec2'      => 'batteri specifikationer 2'
+               ,'batterivægt'       => 'batteri vægt'
+               ,'batterilevetid'    => 'batteri levetid'
+               ,'generator'         => 'generator'
+               ,'sikring'           => 'sikring'
+               ,'tændingssystem'    => 'tændingssystem'
+               ,'elstart'           => 'elstart'
+               ,'kickstart'         => 'kickstart'
+               ,'lysfor'            => 'lys - for'
+               ,'lysbagbremse'      => 'lys - bag/bremse'
+               ,'lysbag'            => 'lys - bag'
+               ,'lysbremse'         => 'lys - bremse'
+               ,'lyspositions'      => 'lys - positions'
+               ,'lysblink'          => 'lys - blink'
+               ,'lyskontrolblink'   => 'lys - kontrolblink'
+               ,'lyskontrollangt'   => 'lys - kontrollangt'
+               ,'lysnummerplade'    => 'lys - nummerplade'
+               ,'lysinstrument'     => 'lys - instrument'
+               ,'oplader'           => 'oplader'
+               ,'ladetid'           => 'ladetid'
+               ,'rækkevidde'        => 'rækkevidde'
+               ,'controller'        => 'controller'
+
+            ),'olie og væsker'      => array(
+                'motor'             => 'motorolie'
+               ,'gear'              => 'gearolie'
+               ,'forgaffel'         => 'forgaffelolie'
+               ,'kølervæske'        => 'kølervæske'
+
+            ),'transmission'        => array(
+                'transmissiontype'  => 'transmissiontype'
+               ,'kobling'           => 'kobling'
+               ,'antalgear'         => 'antalgear'
+               ,'gearratio'         => 'gear ratio'
+               ,'tandhjulfor'       => 'tandhjul - for'
+               ,'tandhjulbag'       => 'tandhjul - bag'
+               ,'reduktionsratio'   => 'reduktions ratio'
+
+            ),'ekstra'              => array(
+                'stel'              => 'stel'
+               ,'stelnummer'        => 'stelnummer'
+               ,'udstødning'        => 'udstødning'
+               ,'euroemission'      => 'euro emission'
+               ,'vægttør'           => 'vægt tør'
+               ,'vægtkørerklar'     => 'vægt kørerklar'
+               ,'vægttotal'         => 'vægt total'
+               ,'bæreevne'          => 'bæreevne'
+               ,'luftfiltertype'    => 'luftfilter'
+               ,'stigeevne'         => 'stigeevne'
+               ,'medfølger'         => 'medfølger'
+               ,'bremsevæske'       => 'bremsevæske'
+               ,'støj'              => 'støj (standmåling)'
+               ,'bagagevolume'      => 'bagagevolume'
+               ,'bakgear'           => 'bakgear'
+               ,'importør'          => 'importør / Ansøger'
+               ,'producent'         => 'producent'
+               ,'andet'             => 'andet'
+
+            ),'begrænsninger'       => array(
+                'begrænstransmis'   => 'transmission'
+               ,'begrænstænding'    => 'tændingssystem'
+               ,'begrænskarburator' => 'karburator'
+               ,'begrænsluftfilter' => 'luftfilter'
+               ,'begrænscontroller' => 'controller'
+               ,'begrænsruller'     => 'ruller'
+               ,'begrænsindsug'     => 'indsugning'
+               ,'begrænsudstødning' => 'udstødning'
+               ,'begrænsstelnum'    => 'stelnummer og hastighed'
+               ,'begrænsandet'      => 'andet'
+
+            ),'efterlyst'           => array(
+                'efterlyst_nummer'          => 'efterlysnings nummer'
+               ,'efterlyst_region'          => 'region / landsdel'
+               ,'efterlyst_indrykdato'      => 'indryknings dato'
+               ,'efterlyst_besked'          => 'besked fra ejer'
+               ,'efterlyst_producent'       => 'producent'
+               ,'efterlyst_model'           => 'model'
+               ,'efterlyst_farve'           => 'farve'
+               ,'efterlyst_argang'          => 'årgang'
+               ,'efterlyst_kendetegn'       => 'kendetegn'
+               ,'efterlyst_stelnummer'      => 'stelnummer'
+               ,'efterlyst_motornummer'     => 'motornummer'
+               ,'efterlyst_nummerplade'     => 'nummerplade'
+               ,'efterlyst_politikreds'     => 'anmeldt i politikreds'
+               ,'efterlyst_kontakt'         => 'kontakt oplysninger'
+
+            )
+
+         );
+
+         $indhold .= '      <div class="scooterbilledholder">';
+
+         if($GLOBALS['setup']['loggetind']){
+
+            $filnavn = basename($_SERVER["PHP_SELF"]);
+
+            $indhold .= '<div>';
+            $indhold .= ahref($GLOBALS['setup']['domainogdatamappe'] . '/' . 'php/thumbnail.php?filnavn=' . $GLOBALS['setup']['datamappe'] . '/' . $GLOBALS['setup']['billedmappe'] . '/' . $billedefil . '.jpg&storrelse=mellem', 'mellem');
+            $indhold .= lidtplads('vandret');
+            $indhold .= ahref($GLOBALS['setup']['domainogdatamappe'] . '/' . 'php/thumbnail.php?filnavn=' . $GLOBALS['setup']['datamappe'] . '/' . $GLOBALS['setup']['billedmappe'] . '/' . $billedefil . '.jpg&storrelse=lille&sidelink=' . $billedefil . '&filurl=' . $filnavn, 'lille');
+            $indhold .= '</div>';
+
+         }
+
+         if($GLOBALS['setup']['lavthumbnailslille']){
+
+            $billed  = '';
+            $billed .= $GLOBALS['setup']['datamappe'] . '/' . 'php/thumbnail.php?';
+            $billed .= "filurl=$filurl&amp;";
+            $billed .= "sidelink=$sidelink&amp;";
+            if($kmt == "25"){ $billed .= "kmt=25&amp;"; }
+            if($kmt == "25"){ $billed .= "kmt=25&amp;"; }
+            if($kmt == "2545"){ $billed .= "kmt=2545&amp;"; }
+            if($kmt == "30"){ $billed .= "kmt=30&amp;"; }
+            if($kmt == "45"){ $billed .= "kmt=45&amp;"; }
+            if($kmt == "3045"){ $billed .= "kmt=3045&amp;"; }
+            if($kmt == "253045"){ $billed .= "kmt=253045&amp;"; }
+            if($type == "elektrisk"){ $billed .= "type=elektrisk&amp;"; }
+            if($type == "hybrid"){ $billed .= "type=hybrid&amp;"; }
+            $billed .= 'filnavn=' . $GLOBALS['setup']['datamappe'] . '/' . $GLOBALS['setup']['billedmappe'] . '/' . $billedefil . '.jpg&amp;';
+            $billed .= 'storrelse=lille';
+
+            $indhold .= '<div class="scootermodel borderradius5px">';
+            $indhold .= ahref($filurl . '#' . $billedefil, visbilled('0', $billed, $alttekst, '', null, null, null, null, '180', '160'));
+
+            $indhold .= '<div class="thumbnailtekst fontsize_small">';
+            $indhold .= ahref($filurl . '#' . $billedefil, my_mb_ucfirst($tekst));
+            $indhold .= '</div>';
+
+            $indhold .= '<div class="clearboth"></div>';
+
+            $indhold .= '</div>';
+
+         }
+
+         ($GLOBALS['setup']['lavthumbnailsmellem'])
+            ? $indhold .= visbilled('0', $GLOBALS['setup']['datamappe'] . '/' . 'php/thumbnail.php?filnavn=' . $GLOBALS['setup']['datamappe'] . '/' . $GLOBALS['setup']['billedmappe'] . '/' . $billedefil . '.jpg&storrelse=mellem', $billedefil, '', null, null, null, '550', '400')
+            : $indhold .= ahref(
+                 $GLOBALS['setup']['billedmappe'] . '/' . $billedefil . '.jpg'
+               , visbilled('1', 'thumbnails/mellem/' . $billedefil . '.jpg', $scootermodel, null, null, null, null, null, null, null, null, true)
+               , 'class="highslide" onclick="return hs.expand(this, { captionEval: \'this.thumb.alt\' })"'
+               )
+               . '<div class="highslide-caption">' . '</div>'
+               ;
+
+/*
+            $indhold .= ahref('billeder/' . $sidelink . '.jpg',
+               visbilled('1', 'thumbnails/' . $sidelink . '.jpg', $alttekst, '', null, null, null, null, '180', '160', null, null, null, null, 'vertical-align: bottom;'),
+                  'class="highslide" onclick="return hs.expand(this, { captionEval: \'this.thumb.alt\' })"'
+            );
+            $indhold .= '<div class="highslide-caption">' . $tekst . '</div>';
+*/
+
+         $indhold .= '</div>';
+         $indhold .= "\r\n";
+
+      }
+
+      foreach($data as $afsnitnavn => $afsnit){
+
+         $tom = true;
+
+         foreach($afsnit as $key => $value){
+
+            if($value){
+
+               $tom = false;
+
+            }
+
+         }
+
+         if(isset($afsnitnavn) && !$tom){
+
+            $indhold .= '      <div class="overskriftfordatascooter fontsize_medium">' . my_mb_ucfirst($afsnitnavn) . '</div>';
+            $indhold .= "\r\n";
+
+         }
+
+         foreach($afsnit as $key => $value){
+
+            if($value != ''){
+
+               if(array_key_exists($key, $info[$afsnitnavn])){
+
+/*
+                  if($GLOBALS['setup']['loggetind']){
+
+                     $indhold .= '<div class="cols">'. "\r\n";
+                     $indhold .= '<span class="colleft">' . my_mb_ucfirst($info[$afsnitnavn][$key]) . ' </span>'. "\r\n";
+                     $indhold .= '<span class="colright">';
+                     $indhold .= input('0', 'text', 'noget', my_mb_ucfirst(htmlspecialchars($value)), '50');
+                     $indhold .= '</span>'. "\r\n";
+                     $indhold .= '<div class="clearboth"></div>'. "\r\n";
+                     $indhold .= '</div>'. "\r\n";
+
+                  }else{
+*/
+                     $indhold .= '         <div class="xcols"';
+
+                     // rich snippet noget test
+                     if ($key == 'model') {
+
+                        $indhold .= ' itemscope itemtype="http://schema.org/Offer"';
+
+                     }
+
+                     $indhold .= '>'. "\r\n";
+
+                     $indhold .= '            <span class="xcolleft">' . my_mb_ucfirst($info[$afsnitnavn][$key]) . '</span>'. "\r\n";
+
+
+                     $indhold .= '            <span class="xcolright"';
+
+                     // rich snippet noget test
+                     if ($key == 'model') {
+
+                        $indhold .= ' itemprop="name"';
+
+                     }
+
+                     $indhold .= '>' . my_mb_ucfirst($value) . '</span>'. "\r\n";
+
+                     $indhold .= '            <div class="clearboth"></div>'. "\r\n";
+
+                     $indhold .= '         </div>'. "\r\n";
+/*
+                  }
+*/
+               }else{
+
+                  trigger_error('scooter data afsnit ( ' . $key . ' = ' . $value . ' ) ikke fundet i hovedlisten');
+
+               }
+
+            }
+
+         }
+
+         if(isset($afsnitnavn) && !$tom){
+
+            $indhold .= '         <div class="xcolunder"></div>';
+            $indhold .= "\r\n";
+            $indhold .= "\r\n";
+
+         }
+
+      }
+
+      if(false){
+      //if($GLOBALS['setup']['loggetind']){
+
+         $indhold .= '<div class="overskriftfordatascooter fontsize_medium">Administrator værktøjer</div>';
+         $indhold .= "\r\n";
+
+         $indhold .= '<div class="xcols">'. "\r\n";
+         $indhold .= '<span class="xcolleft">' . '</span>'. "\r\n";
+         $indhold .= '<span class="xcolright">';
+         $indhold .= input('1', 'button', 'noget_gemknap', 'Gem data');
+         $indhold .= '</span>'. "\r\n";
+         $indhold .= '<div class="clearboth"></div>'. "\r\n";
+         $indhold .= '</div>'. "\r\n";
+
+         $indhold .= '<div class="xcolunder"></div>';
+         $indhold .= "\r\n";
+         $indhold .= "\r\n";
+
+      }
+
+      return visdel($scooter, $indhold, false, $scootermodel);
+
+   }
+
+}
+
+
+
 function visscooter($scooter, $data){
 
    $indhold = '';
@@ -955,7 +1334,7 @@ function visscooter($scooter, $data){
             $indhold .= ahref($filurl . '#' . $billedefil, visbilled('0', $billed, $alttekst, '', null, null, null, null, '180', '160'));
 
             $indhold .= '<div class="thumbnailtekst fontsize_small">';
-            $indhold .= ahref($filurl . '#' . $billedefil, mb_ucfirst($tekst));
+            $indhold .= ahref($filurl . '#' . $billedefil, my_mb_ucfirst($tekst));
             $indhold .= '</div>';
 
             $indhold .= '<div class="clearboth"></div>';
@@ -987,6 +1366,18 @@ function visscooter($scooter, $data){
 
       }
 
+      $indhold .= '      <table class="fontsize_small tablesorter tablesorter-default">';
+      $indhold .= "\r\n";
+
+      //$indhold .= '      <caption>' . 'køretøjets data' . '</caption>';
+      //$indhold .= "\r\n";
+      //$indhold .= '      <thead>';
+      //$indhold .= "\r\n";
+      //$indhold .= '         <tr><th style="width: 20%;">' . 'a' . '</th><th>' . 'b' . '</th></tr>';
+      //$indhold .= "\r\n";
+      //$indhold .= '      </thead>';
+      //$indhold .= "\r\n";
+
       foreach($data as $afsnitnavn => $afsnit){
 
          $tom = true;
@@ -1003,10 +1394,20 @@ function visscooter($scooter, $data){
 
          if(isset($afsnitnavn) && !$tom){
 
-            $indhold .= '      <div class="overskriftfordatascooter fontsize_medium">' . mb_ucfirst($afsnitnavn) . '</div>';
+            $indhold .= '      <tbody>';
+            $indhold .= "\r\n";
+            $indhold .= '      <tr><td colspan="2" class="bold fontsize_larger">' . my_mb_ucfirst($afsnitnavn) . '</td></tr>';
+            $indhold .= "\r\n";
+            $indhold .= '      </tbody>';
             $indhold .= "\r\n";
 
+            //$indhold .= '      <div class="overskriftfordatascooter fontsize_medium">' . my_mb_ucfirst($afsnitnavn) . '</div>';
+            //$indhold .= "\r\n";
+
          }
+
+                     $indhold .= '      <tbody>';
+      $indhold .= "\r\n";
 
          foreach($afsnit as $key => $value){
 
@@ -1018,51 +1419,61 @@ function visscooter($scooter, $data){
                   if($GLOBALS['setup']['loggetind']){
 
                      $indhold .= '<div class="cols">'. "\r\n";
-                     $indhold .= '<span class="colleft">' . mb_ucfirst($info[$afsnitnavn][$key]) . ' </span>'. "\r\n";
+                     $indhold .= '<span class="colleft">' . my_mb_ucfirst($info[$afsnitnavn][$key]) . ' </span>'. "\r\n";
                      $indhold .= '<span class="colright">';
-                     $indhold .= input('0', 'text', 'noget', mb_ucfirst(htmlspecialchars($value)), '50');
+                     $indhold .= input('0', 'text', 'noget', my_mb_ucfirst(htmlspecialchars($value)), '50');
                      $indhold .= '</span>'. "\r\n";
                      $indhold .= '<div class="clearboth"></div>'. "\r\n";
                      $indhold .= '</div>'. "\r\n";
 
                   }else{
 */
-                     $indhold .= '         <div class="xcols"';
+                     $indhold .= '         <tr>';
+
+                     //$indhold .= '         <div class="xcols"';
 
                      // rich snippet noget test
-                     if ($key == 'model') {
+                     //if ($key == 'model') {
 
-                        $indhold .= ' itemscope itemtype="http://schema.org/Offer"';
+                        //$indhold .= ' itemscope itemtype="http://schema.org/Offer"';
 
-                     }
+                     //}
 
-                     $indhold .= '>'. "\r\n";
+                     //$indhold .= '>'. "\r\n";
 
-                     $indhold .= '            <span class="xcolleft">' . mb_ucfirst($info[$afsnitnavn][$key]) . '</span>'. "\r\n";
+                     $indhold .= '<td>' . my_mb_ucfirst($info[$afsnitnavn][$key]) . '</td>';
+                     //$indhold .= '            <span class="xcolleft">' . my_mb_ucfirst($info[$afsnitnavn][$key]) . '</span>'. "\r\n";
 
 
-                     $indhold .= '            <span class="xcolright"';
+                     $indhold .= '<td>' . my_mb_ucfirst($value) . '</td>';
+
+                     //$indhold .= '            <span class="xcolright"';
 
                      // rich snippet noget test
-                     if ($key == 'model') {
+                     //if ($key == 'model') {
 
-                        $indhold .= ' itemprop="name"';
+                        //$indhold .= ' itemprop="name"';
 
-                     }
+                     //}
 
-                     $indhold .= '>' . mb_ucfirst($value) . '</span>'. "\r\n";
+                     //$indhold .= '>' . my_mb_ucfirst($value) . '</span>'. "\r\n";
 
-                     $indhold .= '            <div class="clearboth"></div>'. "\r\n";
+                     //$indhold .= '            <div class="clearboth"></div>'. "\r\n";
 
-                     $indhold .= '         </div>'. "\r\n";
+                     //$indhold .= '         </div>'. "\r\n";
 /*
                   }
 */
+
+                     $indhold .= '</tr>';
+      $indhold .= "\r\n";
+
                }else{
 
                   trigger_error('scooter data afsnit ( ' . $key . ' = ' . $value . ' ) ikke fundet i hovedlisten');
 
                }
+
 
             }
 
@@ -1070,13 +1481,19 @@ function visscooter($scooter, $data){
 
          if(isset($afsnitnavn) && !$tom){
 
-            $indhold .= '         <div class="xcolunder"></div>';
-            $indhold .= "\r\n";
-            $indhold .= "\r\n";
+            //$indhold .= '         <div class="xcolunder"></div>';
+            //$indhold .= "\r\n";
+            //$indhold .= "\r\n";
 
          }
 
       }
+                     $indhold .= '      </tbody>';
+      $indhold .= "\r\n";
+
+
+      $indhold .= '      </table>';
+      $indhold .= "\r\n";
 
       if(false){
       //if($GLOBALS['setup']['loggetind']){
@@ -1114,7 +1531,7 @@ function fejlfinding($handling, $tekst, $meretekst = "", $pil = 1){
 
       case 'a' :
          if($tekst != ""){
-            $indhold .= '<div class="fejlfinding_a borderradius5px">' . mb_ucfirst($tekst) . '</div>';
+            $indhold .= '<div class="fejlfinding_a borderradius5px">' . my_mb_ucfirst($tekst) . '</div>';
          }
          break;
 
@@ -1124,10 +1541,10 @@ function fejlfinding($handling, $tekst, $meretekst = "", $pil = 1){
          if($tekst == ''){
             $indhold .= '<div></div>';
          }else{
-            $indhold .= '<div class="fejlfinding_et borderradius5px">' . mb_ucfirst($tekst) . '</div>';
+            $indhold .= '<div class="fejlfinding_et borderradius5px">' . my_mb_ucfirst($tekst) . '</div>';
          }
 
-         $indhold .= '<div class="fejlfinding_to borderradius5px">' . mb_ucfirst($meretekst) . '</div>';
+         $indhold .= '<div class="fejlfinding_to borderradius5px">' . my_mb_ucfirst($meretekst) . '</div>';
          $indhold .= '<div class="clearboth"></div>';
          $indhold .= '</div>';
          break;
@@ -1144,7 +1561,7 @@ function fejlfinding($handling, $tekst, $meretekst = "", $pil = 1){
          $indhold .= '<div class="fejlfinding_d">';
          foreach ($tekst as $key){
 
-            $indhold .= mb_ucfirst($key);
+            $indhold .= my_mb_ucfirst($key);
             $indhold .= "\r\n";
 
          }
@@ -1152,7 +1569,7 @@ function fejlfinding($handling, $tekst, $meretekst = "", $pil = 1){
 
          $indhold .= '<div class="clearboth"></div>';
          $indhold .= '</div>';
-         $indhold .= '<div style="height: 30px;"></div>';
+         $indhold .= lidtplads('lodret');
          break;
 
    }
@@ -1308,7 +1725,7 @@ function scooterfarve($tekst){
 
       if(isset($hexfarve)){
 
-         $indhold .= '<span class="scooterfarve" style="background: #' . $hexfarve . ';">';
+         $indhold .= '<span class="scooterfarve scooterfarveefter" style="background: #' . $hexfarve . ';">';
 
          if(isset($blevikkefundet)){
 
@@ -1317,92 +1734,11 @@ function scooterfarve($tekst){
          }
 
          $indhold .= '</span>';
-         $indhold .= '<span class="scooterfarveefter"></span>';
 
       }
 
    }
 
-   return $indhold;
-
-}
-
-
-
-function stederidanmark($bredde, $hojde){
-
-   // For at exportere google maps kortet skriv "&output=kml" til sidst i urlen.
-   // http://maps.google.dk/maps/ms?ie=UTF8&hl=da&msa=0&msid=114241181508189917491.00048307d8a0034e1af84&t=h&output=kml
-
-   $indhold = '';
-
-   $url = ''
-      . 'http://maps.google.dk/maps/ms'
-      . '?'
-      . 'ie=UTF8'
-      . '&hl=da'
-      . '&msa=0'
-      . '&msid=215658291799303280221.0004b74ecd608111ed8cb'
-      . '&t=h'
-      . '&ll=56.057176,11.693905'
-      . '&spn=2.791225,6.836578'
-      ;
-
-   $urlamp = ''
-      . 'http://maps.google.dk/maps/ms'
-      . '?'
-      . 'ie=UTF8'
-      . '&amp;hl=da'
-      . '&amp;msa=0'
-      . '&amp;msid=215658291799303280221.0004b74ecd608111ed8cb'
-      . '&amp;t=h'
-      . '&amp;ll=56.057176,11.693905'
-      . '&amp;spn=2.791225,6.836578'
-      ;
-
-   // $urla giver fejl i xenu : http://localhost/%22http://maps.google.dk/maps/ms?ie=UTF8&amp;hl=da&amp;msa=0&amp;msid=114241181508189917491.00048307d8a0034e1af84&amp;t=h&amp;ll=56.057176,11.693905&amp;spn=2.791225,6.836578&amp;output=embed"></iframe></div>"
-   $urla = $url . '&output=embed';
-   $urlb = $url . '&source=embed';
-
-   $iframekode = ''
-      . '<div style="margin: auto; text-align: center;">'
-      . '<iframe'
-      . ' width="' . $bredde . '"'
-      . ' height="' . $hojde . '"'
-      . ' style="margin: auto;"'
-      . ' frameborder="0"'
-      . ' scrolling="no"'
-      . ' marginheight="0"'
-      . ' marginwidth="0"'
-      . ' src="' . $urla . '"'
-      . '></iframe>'
-      . '</div>'
-      ;
-
-   $indhold .= '<div style="text-align: center;">';
-
-   $indhold .= $iframekode;
-
-   $indhold .= '<div>';
-   $indhold .= ahref($urla, 'Vis i fuld størrelse', null, true);
-   $indhold .= lidtplads('vandret');
-   $indhold .= ' | ';
-   $indhold .= lidtplads('vandret');
-   $indhold .= ahref($urlb, 'Vis i google maps', null, true);
-   $indhold .= '</div>';
-   $indhold .= "\r\n";
-
-   $indhold .= '<div>';
-   $indhold .= 'Du kan vise kortet på din egen hjemmeside ved at bruge følgende kode.';
-   $indhold .= '</div>';
-
-   $indhold .= '</div>';
-   $indhold .= "\r\n";
-
-   // xenu linksleuth giver forbidden request her (http://localhost/"http://maps.google..... men det må være en fejl i xenu programmet
-   $indhold .= input('1', 'text', 'stederidanmarkembedkode', str_replace('&amp;', '&amp;amp;', htmlspecialchars($iframekode)), '40', 'embed kode', 'stederidanmarkembedkode', '', '', '');
-/*
-*/
    return $indhold;
 
 }
@@ -1445,7 +1781,7 @@ function vudering($data){
                $indhold .= $billed;
 
                $indhold .= '<span class="plusogminustekst">';
-               $indhold .= mb_ucfirst($value[1]);
+               $indhold .= my_mb_ucfirst($value[1]);
                $indhold .= '</span>';
 
                $indhold .= '<div class="clearboth"></div>';
@@ -1498,7 +1834,7 @@ function visdermanglernoget(){
       $indhold .= ''
          . formbox('1', '', 'mangler der noget ?', $_SERVER['PHP_SELF'], 'post', '', ''
             . input('0', 'hidden', 'funktion', 'manglerdernoget')
-            . input('1', 'email', 'afsender', '', '30', 'Afsender (din e-mail)', 'nogetmedafsender', '', '')
+            . input('1', 'email', 'afsender', '', '30', $GLOBALS['setup']['l_contactform_from'], 'nogetmedafsender', '', '')
             . input('1', 'text', 'kommentar', '', '30', 'hvad mangler der ?', 'tekst', '', '', '', '100')
             . input('1', 'submit', 'sog_manglerdernogetknap', 'Send', '', 'rykind', 'mangler_sendknap_c')
          );
@@ -1589,7 +1925,7 @@ function ensdethele(
 
    if($ucfirst){
 
-      $indhold = mb_ucfirst($indhold);
+      $indhold = my_mb_ucfirst($indhold);
 
    }
 
@@ -1772,7 +2108,7 @@ function vinfindland($data){
                if(!is_numeric($key) && $value!==''){
 
                   $indhold .= ' (';
-                  $indhold .= mb_ucfirst(
+                  $indhold .= my_mb_ucfirst(
                                  str_replace('_', ' ', 
                                  str_replace('eeeee', 'æ',
                                  str_replace('ooooo', 'ø',

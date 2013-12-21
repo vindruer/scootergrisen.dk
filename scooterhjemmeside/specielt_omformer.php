@@ -35,7 +35,7 @@ Når den 5 watt sparepære er tændt bruges der 0,71 ampere fra batteriet.
 Når en 15 watt (108mA) sparepære er tændt bruges der 1,50 ampere fra batteriet.
 
 Her er det en 28 watt glødetrådspære.
-'.visbilled('1', 'billed2898.jpg', '28 watt glødetråd', false, true).'
+'.visbilled('1', 'billed2898.jpg', 'Philips 28 watt glødetrådspære', false, true).'
 Når den 28 watt glødetrådspære er tændt bruges der 2,94 ampere fra batteriet.
 
 Når en 60 watt glødetrådspære er tændt bruges der 5,97 ampere fra batteriet.

@@ -41,12 +41,6 @@ Her ses en baotian udstødning med 2 løse bøjler der sættes omkring udstødni
 '.visbilled('1', 'billed2973.jpg', 'udstødning', false, true).'
 '
 
-,'
-video
-' => '
-'.visflash('0', "http://www.youtube.com/watch?v=IjjDsibPff8", 'Her skiftes udstødningspakningen (Video lavet af Anders Bruun Nørring)', true).'
-'
-
 );
 
 $databaseright = array(

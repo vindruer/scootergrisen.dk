@@ -8,7 +8,7 @@ $title = "trilet 3 hjulet invalideknallert med 50 cm³ motor";
 $overskrift = "trilet";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
 /*
 '.afsnit('reservedele til Trilet med Puch motor kan muligvis findes her', '

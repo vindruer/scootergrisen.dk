@@ -8,7 +8,7 @@ $title = "vinterråd til scootere og knallerter";
 $overskrift = "vinterråd til scootere og knallerter";
 $metadescription = "råd der specielt er brugbare om vinteren til scootere og knallerter så man kan komme til at køre godt og ikke fryse alt for meget";
 
-$setup['nogetikon']               = 'ikoner/ikon_vinterrad2.png';
+$setup['sideikon']               = 'ikoner/ikon_vinterrad2.png';
 
 $databasecenter = array(
 
@@ -96,7 +96,7 @@ vanter
 Her ses nogen vanter og tynde undervanter.
 '.
 galleriholder(array(
-    galleri('highslide', '', 'billed2230.jpg', array('2 par vanter', ''))
+    galleri('highslide', '', 'billed2230.jpg', array('to par vanter', ''))
    ,galleri('highslide', '', 'billed2878.jpg', array('tynde vanter', 'til at have indenunder andre vanter for at holde ekstra på varmen'))
 ))
 .'
@@ -457,7 +457,7 @@ Opvaskemiddel skulle også virke som antidug middel (poler det tørre visir med 
 '.afsnit('voks','
 I videoen frarådes det at bruge en klude som at blevet vasket med skyllemiddel til at polere med.
 
-'.visflash('0', 'http://www.youtube.com/watch?v=1M4rfTNGi_8', '').'
+'.visflash('0', 'http://www.youtube.com/watch?v=1M4rfTNGi_8', 'Motorcycle No Fog Tip from America Rides Maps').'
 ').'
 
 '.afsnit('afspændingsmiddel','
@@ -496,7 +496,7 @@ galleriholder(array(
     galleri('highslide', '', 'billed2416.jpg', array('visir med pinlock system', ''))
 ))
 .'
-'.visflash('0', 'http://www.youtube.com/watch?v=W4Ic-UYBo7I', '').'
+'.visflash('0', 'http://www.youtube.com/watch?v=W4Ic-UYBo7I', 'Capacete VAZ VGP Pinlock Anti-Fog').'
 ').'
 '
 

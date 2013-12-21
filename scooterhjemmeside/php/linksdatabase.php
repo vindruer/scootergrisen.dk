@@ -110,7 +110,7 @@ forhandlere
 ,array('http://www.mchns.dk/', 'www.mchns.dk', 'MC hjørnet nordsjælland') // http://www.mchjoernet.dk/ viderestiller til http://www.mchns.dk/
 ,array('http://www.mc-center.dk/', 'www.mc-center.dk', 'Køge MC og båd center')
 ,array('http://www.scooterdele.dk/', 'www.scooterdele.dk', 'Scooterdele.dk')
-,array('http://scooter-power.dk/', 'scooter-power.dk', 'Scooter-power.dk')
+,array('http://scooter-power.dk/', 'scooter-power.dk', 'Scooter-power.dk') // 17-12-2013 "This site has been temporarily disabled, please try again later."
 ,array('http://www.lindvedknallertcenter.dk/', 'www.lindvedknallertcenter.dk', 'Lindved Knallertcenter')
 ,array('http://www.kmsc.dk/', 'www.kmsc.dk', 'kolding MC og scooter center')
 ,array('http://outgear.dk/', 'outgear.dk', 'OutGear motorcykler')
@@ -126,6 +126,7 @@ forhandlere
 ,array('http://www.specialmc.dk/', 'www.specialmc.dk', 'Special Motorcykler ApS')
 ,array('http://www.scoot-r.dk/', 'www.scoot-r.dk', 'Scoot-R')
 ,array('http://koge-autocenter.dk/', 'koge-autocenter.dk', 'køge autocenter')
+,array('http://smartmove.dk/', 'smartmove.dk', 'smartmove')
 )
 
 ,'
@@ -183,6 +184,7 @@ producenter
 ,array('http://www.tante-paula.de/', 'www.tante-paula.de', 'Tante Paula DE')
 ,array('http://www.tantepaula.dk/', 'www.tantepaula.dk', 'Tante Paula DK')
 ,array('http://www.longjia.com.cn/', 'www.longjia.com.cn', 'Longjia COM CN')
+,array('http://www.grace-bikes.com/', 'www.grace-bikes.com', 'grace')
 )
 
 ,'
@@ -319,12 +321,8 @@ foreach($data as $key => $value){
 
    foreach($value as $linie){
 
-      //$randomindex = array_rand($kaninbilleder, 1);
-      //$randomkanin = $kaninbilleder[$randomindex];
-
       $nydata[$key][$i][0] = str_replace('&', '&amp;', $linie[0]);
-      //$nydata[$key][$i][1] = $randomkanin;
-      $i++;
+      ++$i;
 
    }
 

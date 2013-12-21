@@ -4,11 +4,14 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_kontakt2.png';
+$setup['sideikon']               = 'ikoner/ikon_kontakt2.png';
 
 $title = "kontakt scootergrisen (mig som laver hjemmesiden)";
 $overskrift = "kontakt scootergrisen (mig som laver hjemmesiden)";
 $metadescription = "her kan du stille spørgsmål eller komme med forslag til hjemmesiden eller hvad du ellers har lyst til at skrive til mig";
+
+$setup['visspotlys']             = 0;
+$setup['visreklame']             = 0;
 
 $GLOBALS['setup']['head'] = '
 <style type="text/css">
@@ -26,7 +29,7 @@ $databasecenter = array(
 '
 kontakt formular
 ' => '
-' . viskontakt(true, $GLOBALS['setup']['l_contactme_c']) . '
+'.viskontakt(true, $GLOBALS['setup']['l_contactme_c']).'
 '
 
 ,'

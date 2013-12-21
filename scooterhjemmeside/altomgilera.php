@@ -8,7 +8,7 @@ $title = "gilera scootere og offroader med 50 cm³ motor";
 $overskrift = "gilera";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
 $databasecenter = array(
 
@@ -438,7 +438,8 @@ $databasecenter = array(
 
      'specielt'            => array(
        'besked'            => ens('besked', '
-Det er noget værre rod det her fordi der er så mange Gilera Runner udgaver.<br>
+<mark>Data er ikke korrekt da jeg er ved at rette det</mark>
+her skal kun være data for de modeller der ikke er PureJet<br>
 <br>
 Gilera Runner : 1997-2001<br>
 Gilera Runner DD (Double Disc) : 1998(1999)-2001<br>
@@ -450,8 +451,6 @@ Gilera Runner SP (SP50) : 1999-2004 - (nye farver)<br>
 <br>
 Gilera Runner LC DD (Gammel model)<br>
 Gilera Runner AC DD (Ny model)<br>
-<br>
-Gilera Runner Purejet (PJ50) (indsprøjtning) : 2003-2004
 ', '', '', '')
 
    ),'generelt'            => array(
@@ -462,7 +461,6 @@ Gilera Runner Purejet (PJ50) (indsprøjtning) : 2003-2004
 gilera runner SD (Single Disc)<br>
 gilera runner DD (Double Disc)<br>
 gilera runner SP<br>
-gilera runner PureJet (med brændstof indsprøjtning)
 ', '', '', '')
       ,'pris'              => ens('pris', '15995', '19995', '', '')
       ,'hastighed'         => ens('hastighed', '30 og 45', '', '', '')
@@ -484,63 +482,53 @@ C362M
 C364M
 C365M
 <br>
-indsprøjtning :
-C361M
-C451M
-C452M
-<br>
-alle undtaget purejet :
+alle undtaget PureJet :
 stel : ZAPC140
 motor : C141M
-<br>
-purejet :
-stel : ZAPC30100
-stel : ZAPC3610
-motor : ZAPC361M
 <br>
 ', '', '', '')
       ,'motortype'         => ens('motortype', '2 takt', '', '', '')
       ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
-      ,'volume'            => ens('volume', '49,3', '', '', '(SD)') . ens('volume', '49,4', '', '', '(purejet)')
+      ,'volume'            => ens('volume', '49,3', '', '', '(SD)')
       ,'køling'            => ens('køling', 'blæse', '', '', '') . ' eller ' . ens('køling', 'væske', '', '', '')
       ,'boring'            => ens('boring', '40,0', '', '', '')
       ,'slaglængde'        => ens('slaglængde', '39,3', '', '', '')
       ,'ventiler'          => ens('ventiler', '', '', '', '')
       ,'ventiljustering'   => ens('ventiljustering', '', '', '', '')
-      ,'kompression'       => ens('kompression', '11,8-12 (SD) 11,5 (purejet)', '0,7 (SD) 0,9 (purejet)', '', '')
-      ,'tomgang'           => ens('tomgang', '(1800 SD)-2000', '(100 SD)', '', '(ikke purejet)') . ens('tomgang', '2000', '', '', '(purejet)')
+      ,'kompression'       => ens('kompression', '11,8-12 (SD)', '0,7 (SD)', '', '')
+      ,'tomgang'           => ens('tomgang', '(1800 SD)-2000', '(100 SD)', '', '')
       ,'nomieffektogheste' => ens('nomieffektogheste', '', '', '', '')
       ,'maxeffektogheste'  => ens('maxeffektogheste', '', '', '', '')
 //SD: 2,1kw 5500
 //3,3 kw 7250
-//sp : 4,5cv 7250, purejet : 6 CV 7750
+//sp : 4,5cv 7250
       ,'moment'            => ens('moment', '', '', '', '')
 //SD: 3,3 kw 5500
 //4,6 nm 6250
-//sp : 4,7 nm 6000, purejet : 5,5 nm 7500
+//sp : 4,7 nm 6000
       ,'karburator'        => ens('karburator', 'Dell\'Orto PHVA', '17,5', '', '(på alle modeller undtaget PureJet og SD) - c141m - zapc140') . ens('karburator', 'Dell\'Orto PHVA', '12', '', '(SD)') . ens('karburator', 'Weber', '12', 'OM (eller 120M ?) med hoveddyse 68', '(SD)')
-      ,'brændstof indsp..' => ens('brændstof indsp..', 'PureJet : ASDI (Gasspjældshus : Bing 71/20/104)', '', '', '(På Purejet) - 361m - zapc3610')
+      ,'brændstof indsp..' => ens('brændstof indsp..', '', '', '', '')
       ,'smøring'           => ens('smøring', '', '', '', '')
-      ,'tændrør'           => ens('tændrør', 'Champion (SD : N84, N1C) eller RN1C', '', '', '(ikke purejet)') . ens('tændrør', 'Champion RG6YCA', '', '', '(kun purejet)')
+      ,'tændrør'           => ens('tændrør', 'Champion (SD : N84, N1C) eller RN1C', '', '', '(ikke PureJet)')
 
    ),'dimensioner'         => array(
-       'længde'            => ens('længde', '(1780 SD + purejet)-1800-1840(purejet+sp)-1880-1884', '', '', '')
-      ,'bredde'            => ens('bredde', '715-(720 SD + purejet)-750(purejet+sp)', '', '', '')
-      ,'højde'             => ens('højde', '(830 purejet)', '', '', '')
-      ,'sædehøjde'         => ens('sædehøjde', '810(purejet+sp)-(815 SD)', '', '', '')
+       'længde'            => ens('længde', '(1780 SD)-1800-1840(sp)-1880-1884', '', '', '')
+      ,'bredde'            => ens('bredde', '715-(720 SD)-750(sp)', '', '', '')
+      ,'højde'             => ens('højde', '(830)', '', '', '')
+      ,'sædehøjde'         => ens('sædehøjde', '810(sp)-(815 SD)', '', '', '')
       ,'frihøjde'          => ens('frihøjde', '', '', '', '')
-      ,'akselafstand'      => ens('akselafstand', '1270(purejet+sp)-1280-(1290 SD + purejet)', '', '', '')
+      ,'akselafstand'      => ens('akselafstand', '1270(sp)-1280-(1290 SD)', '', '', '')
 
    ),'brændstof'           => array(
        'benzin'            => ens('benzin', '', '', '', '')
-      ,'benzintank'        => ens('benzintank', '7', '', '', '(SP + purejet)') . ens('benzintank', '8,5', '', '', '(SD)') . ens('benzintank', '12', '', '', '(SP + purejet)')
+      ,'benzintank'        => ens('benzintank', '7', '', '', '(SP)') . ens('benzintank', '8,5', '', '', '(SD)') . ens('benzintank', '12', '', '', '(SP)')
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '3.00', '14', '', '(ZAPC46 - C463) 2005-') . ens('fælg', '3.50', '12', 'letmetal', '(C36 - c14 - C146M - C141M - ZAPC140 - C361M - C362M - C364M) purejet')
-      ,'fælgbag'           => ens('fælg', '3.50', '13', '', '(ZAPC46 - C463) 2005-') . ens('fælg', '3.50', '12', 'letmetal', '(C36 - c14 - C146M - C141M - ZAPC140 - C361M - C362M - C364M) purejet')
-      ,'dækfor'            => ens('dæk1', '120', '70', '14', '(ZAPC46 - C463) 2005-') . ens('dæk1', '120', '70', '12', '(C36 - c14 - C146M - C141M - ZAPC140 - C361M - C362M - C364M) purejet')
-      ,'dækbag'            => ens('dæk1', '140', '60', '13', '(ZAPC46 - C463) 2005-') . ens('dæk1', '130', '70', '12', '(C36 - c14 - C146M - C141M - ZAPC140 - C361M - C362M - C364M) purejet')
+       'fælgfor'           => ens('fælg', '3.00', '14', '', '(ZAPC46 - C463) 2005-')
+      ,'fælgbag'           => ens('fælg', '3.50', '13', '', '(ZAPC46 - C463) 2005-')
+      ,'dækfor'            => ens('dæk1', '120', '70', '14', '(ZAPC46 - C463) 2005-')
+      ,'dækbag'            => ens('dæk1', '140', '60', '13', '(ZAPC46 - C463) 2005-')
 /*
 RC scooter : Min Runner SP er den her ZAPC463 og den er fra 2008....
 RC scooter : Alle Runner SP fra 2005 kører med 14" foran og 13" bag på
@@ -556,12 +544,12 @@ RC scooter : ZAPC36 det havde min gamle Runner og den var fra 03 og havde 12" hj
 23-11-2006 - C36  - 12"
 */
 
-      ,'dæktrykfor'        => ens('dæktryk', '1,6', 'bar', '', '(purejet)')
-      ,'dæktrykbag'        => ens('dæktryk', '1,8', 'bar', '', '(purejet)')
+      ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
+      ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
       ,'affjedringfor'     => ens('affjedringfor', 'upside-down teleskopgaffel', '30', '', '')
       ,'affjedringbag'     => ens('affjedringbag', 'svingarm med 1 hydraulisk støddæmper', '', '', '')
-      ,'bremserfor'        => ens('bremser', 'skive', '220(purejet)', 'hydraulisk', 'hånd')
-      ,'bremserbag'        => ens('bremser', 'skive', '110-175(purejet)-220', 'hydraulisk', 'hånd (på senere modeller end SD. DD : Double Disc)') . ens('bremser', 'tromle', '', '', '(kun på SD : Single Disc)')
+      ,'bremserfor'        => ens('bremser', 'skive', '', 'hydraulisk', 'hånd')
+      ,'bremserbag'        => ens('bremser', 'skive', '', 'hydraulisk', 'hånd (på senere modeller end SD. DD : Double Disc)') . ens('bremser', 'tromle', '', '', '(kun på SD : Single Disc)')
       ,'eger'              => ens('eger', '', '', '')
       ,'castervinkel'      => ens('castervinkel', '', '', '')
       ,'efterløb'          => ens('efterløb', '', '', '')
@@ -575,10 +563,10 @@ RC scooter : ZAPC36 det havde min gamle Runner og den var fra 03 og havde 12" hj
       ,'batterivægt'       => ens('batterivægt', '', '', '', '')
       ,'batterilevetid'    => ens('batterilevetid', '', '', '', '')
       ,'generator'         => ens('generator', '', '', '', '')
-      ,'sikring'           => ens('sikring', '7,5', '', '', '(SD)') . ens('sikring', '2 x 15 + 2 x 7,5', '', '', '(Purejet) ved batteri og underkølergitter foran')
+      ,'sikring'           => ens('sikring', '7,5', '', '', '(SD)')
       ,'tændingssystem'    => ens('tændingssystem', '', '', '', '')
       ,'elstart'           => ens('elstart', 'ja', '', '', '')
-      ,'kickstart'         => ens('kickstart', 'ja', '', '', '(bortset fra Purejet)')
+      ,'kickstart'         => ens('kickstart', 'ja', '', '', '')
       ,'lysfor'            => ens('lys', '', '', '', '')
       ,'lysbagbremse'      => ens('lys', '', '', '', '')
       ,'lysbag'            => ens('lys', '', '', '', '')
@@ -595,7 +583,7 @@ RC scooter : ZAPC36 det havde min gamle Runner og den var fra 03 og havde 12" hj
       ,'controller'        => ens('controller', '', '', '', '')
 
    ),'olie og væsker'      => array(
-       'motor'             => ens('olie', '', '', '1,8', '(Purejet : API TC++ eller bedre)')
+       'motor'             => ens('olie', '', '', '1,8', '')
       ,'gear'              => ens('olie', '80W90', 'API GL3', '0,075', '')
       ,'forgaffel'         => ens('olie', '', '', '', '')
       ,'kølervæske'        => ens('kølervæske', '', '', 'cirka 0,9', '')
@@ -614,20 +602,194 @@ SP Dell\'Orto
 
 C365M :
 
-C361M : indsprøjtning Bing 71/20/104
 C362M : Dell\'Orto PHVA 17,5 eller Weber 18 OM.
 C364M : Dell\'Orto PHVA 17,5 eller Weber 18 OM.
 
 C451M : 3,3 kw
-C452M : 4,4 kw - purejet
 */
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'ZAP', 'ZAPC3610 : purejet', 'ZAPC140 : SD', 'ZAPC463 : ? ZAPC46100, ZAPC1400000, ZAPC4620000 (2006), ZAPC1400003 (2000)') . ' ZAPC4630000 (SP) ZAPC3650000001'
-      ,'udstødning'        => ens('udstødning', '(ekspansion + absorbering + katalysator - purejet)', '', '', '')
+      ,'stelnummer'        => ens('stelnummer', 'ZAP', '', 'ZAPC140 : SD', 'ZAPC463 : ? ZAPC46100, ZAPC1400000, ZAPC4620000 (2006), ZAPC1400003 (2000)') . ' ZAPC4630000 (SP) ZAPC3650000001'
+      ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '2', '', '', '(SP)')
       ,'vægttør'           => ens('vægttør', '', '', '', '')
-      ,'vægtkørerklar'     => ens('vægtkørerklar', '98', '', '', '(SD + purejet)') . ens('vægtkørerklar', '93', '', '', '(DD og SP)') . ens('vægtkørerklar', '103', '', '', '(SP)')
+      ,'vægtkørerklar'     => ens('vægtkørerklar', '98', '', '', '(SD)') . ens('vægtkørerklar', '93', '', '', '(DD og SP)') . ens('vægtkørerklar', '103', '', '', '(SP)')
+      ,'vægttotal'         => ens('vægttotal', '', '', '', '')
+      ,'bæreevne'          => ens('bæreevne', '', '', '', '')
+      ,'luftfiltertype'    => ens('luftfiltertype', '', '', '', '')
+      ,'stigeevne'         => ens('stigeevne', '', '', '', '')
+      ,'medfølger'         => ens('medfølger', '', '', '', '')
+      ,'bremsevæske'       => ens('bremsevæske', 'DOT4', '', '', '')
+      ,'støj'              => ens('støj', '', '', '', '')
+      ,'bagagevolume'      => ens('bagagevolume', '', '', '', '')
+      ,'bakgear'           => ens('bakgear', '', '', '', '')
+      ,'importør'          => ens('importør', 'PG Danmark A/S', 'C. Reinhardt A/S', 'Bjarne Egedesø A/S', '')
+      ,'producent'         => ens('producent', '', '', '', '')
+      ,'andet'             => ens('andet', 'stelnummer : ZAPC1400000001001', 'motornummer : C141M / 1001', 'ved benene er 2 gitre som kan blæse varm luft fra radioationen hen på føren som vist er rart i koldt vejr.', '')
+
+   ),'begrænsninger'       => array(
+       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+      ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
+      ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
+      ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
+      ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
+      ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
+      ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
+      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
+      ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
+      ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
+
+   )
+
+),'gilerarunnerpurejet' => array(
+
+     'specielt'            => array(
+       'besked'            => ens('besked', '
+<mark>Data er ikke korrekt da jeg er ved at rette det</mark>
+her skal kun være data for PureJet
+Gilera Runner PureJet (PJ50) (indsprøjtning) : 2003-2004
+', '', '', '')
+
+   ),'generelt'            => array(
+       'model'             => ens('model', 'gilera runner PureJet', '', '', '')
+      ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'PJ50', '', '', '')
+      ,'varianter'         => ens('varianter', '
+gilera runner PureJet (med brændstof indsprøjtning)
+', '', '', '')
+      ,'pris'              => ens('pris', '15995', '19995', '', '')
+      ,'hastighed'         => ens('hastighed', '45', '', '', '')
+      ,'farver'            => ens('farver', '', '', '', '(rød : Rosso Dragon, hvid : Bianco Fusion, mørkgrå : Nero Opaco (Special Series – Black Soul))')
+      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
+
+   ),'motor'               => array(
+       'motormodel'        => ens('motormodel', '
+indsprøjtning :
+C361M
+C451M
+C452M
+<br>
+PureJet :
+stel : ZAPC30100
+stel : ZAPC3610
+motor : ZAPC361M
+<br>
+', '', '', '')
+      ,'motortype'         => ens('motortype', '2 takt', '', '', '')
+      ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
+      ,'volume'            => ens('volume', '49,4', '', '', '')
+      ,'køling'            => ens('køling', 'blæse', '', '', '') . ' eller ' . ens('køling', 'væske', '', '', '')
+      ,'boring'            => ens('boring', '40,0', '', '', '')
+      ,'slaglængde'        => ens('slaglængde', '39,3', '', '', '')
+      ,'ventiler'          => ens('ventiler', '', '', '', '')
+      ,'ventiljustering'   => ens('ventiljustering', '', '', '', '')
+      ,'kompression'       => ens('kompression', '11,5', '0,9', '', '')
+      ,'tomgang'           => ens('tomgang', '2000', '', '', '')
+      ,'nomieffektogheste' => ens('nomieffektogheste', '', '', '', '')
+      ,'maxeffektogheste'  => ens('maxeffektogheste', '', '', '', '')
+//3,3 kw 7250
+//PureJet : 6 CV 7750
+      ,'moment'            => ens('moment', '', '', '', '')
+//4,6 nm 6250
+//PureJet : 5,5 nm 7500
+      ,'karburator'        => ens('karburator', '', '', '', '')
+      ,'brændstof indsp..' => ens('brændstof indsp..', 'ASDI (Gasspjældshus : Bing 71/20/104)', '', '', ' - 361m - zapc3610')
+      ,'smøring'           => ens('smøring', '', '', '', '')
+      ,'tændrør'           => ens('tændrør', 'Champion RG6YCA', '', '', '')
+
+   ),'dimensioner'         => array(
+       'længde'            => ens('længde', '(1780 PureJet)-1800-1840(PureJet)-1880-1884', '', '', '')
+      ,'bredde'            => ens('bredde', '715-(720 PureJet)-750(PureJet)', '', '', '')
+      ,'højde'             => ens('højde', '(830 PureJet)', '', '', '')
+      ,'sædehøjde'         => ens('sædehøjde', '810(PureJet)-(815 SD)', '', '', '')
+      ,'frihøjde'          => ens('frihøjde', '', '', '', '')
+      ,'akselafstand'      => ens('akselafstand', '1270(PureJet)-1280-(1290 PureJet)', '', '', '')
+
+   ),'brændstof'           => array(
+       'benzin'            => ens('benzin', '', '', '', '')
+      ,'benzintank'        => ens('benzintank', '7', '', '', '(PureJet)') . ens('benzintank', '12', '', '', '(PureJet)')
+      ,'forbrug'           => ens('forbrug', '', '', '', '')
+
+   ),'hjul'                => array(
+       'fælgfor'           => ens('fælg', '3.00', '14', '', '(ZAPC46 - C463) 2005-') . ens('fælg', '3.50', '12', 'letmetal', '(C36 - c14 - C146M - C141M - ZAPC140 - C361M - C362M - C364M) PureJet')
+      ,'fælgbag'           => ens('fælg', '3.50', '13', '', '(ZAPC46 - C463) 2005-') . ens('fælg', '3.50', '12', 'letmetal', '(C36 - c14 - C146M - C141M - ZAPC140 - C361M - C362M - C364M) PureJet')
+      ,'dækfor'            => ens('dæk1', '120', '70', '14', '(ZAPC46 - C463) 2005-') . ens('dæk1', '120', '70', '12', '(C36 - c14 - C146M - C141M - ZAPC140 - C361M - C362M - C364M) PureJet')
+      ,'dækbag'            => ens('dæk1', '140', '60', '13', '(ZAPC46 - C463) 2005-') . ens('dæk1', '130', '70', '12', '(C36 - c14 - C146M - C141M - ZAPC140 - C361M - C362M - C364M) PureJet')
+/*
+RC scooter : Min Runner SP er den her ZAPC463 og den er fra 2008....
+RC scooter : Alle Runner SP fra 2005 kører med 14" foran og 13" bag på
+RC scooter : ZAPC36 det havde min gamle Runner og den var fra 03 og havde 12" hjul både for og bag
+
+26-8-2005  - C46  - 1413"
+27-6-2006  - C463 - 1413"
+26-2-2008  - C463 - 1413"
+12-4-2010  - C46  - 1413"
+28-5-2010  - C463 - 1413"
+28-7-1997  - c14  - 12"
+7-7-2006   - C36  - 12"
+23-11-2006 - C36  - 12"
+*/
+
+      ,'dæktrykfor'        => ens('dæktryk', '1,6', 'bar', '', '')
+      ,'dæktrykbag'        => ens('dæktryk', '1,8', 'bar', '', '')
+      ,'affjedringfor'     => ens('affjedringfor', 'upside-down teleskopgaffel', '30', '', '')
+      ,'affjedringbag'     => ens('affjedringbag', 'svingarm med 1 hydraulisk støddæmper', '', '', '')
+      ,'bremserfor'        => ens('bremser', 'skive', '220', 'hydraulisk', 'hånd')
+      ,'bremserbag'        => ens('bremser', 'skive', '110-175', 'hydraulisk', 'hånd (på senere modeller end SD. DD : Double Disc)') . ens('bremser', 'tromle', '', '', '(kun på SD : Single Disc)')
+      ,'eger'              => ens('eger', '', '', '')
+      ,'castervinkel'      => ens('castervinkel', '', '', '')
+      ,'efterløb'          => ens('efterløb', '', '', '')
+      ,'drejevinkel'       => ens('drejevinkel', '', '', '', '')
+      ,'venderadius'       => ens('venderadius', '', '', '', '')
+
+   ),'elektrisk'           => array(
+       'starterbatteri'    => ens('starterbatteri', '12', '4', '', '(SD)')
+      ,'batterispec1'      => ens('batterispec1', '', '', '', '')
+      ,'batterispec2'      => ens('batterispec2', '', '', '', '')
+      ,'batterivægt'       => ens('batterivægt', '', '', '', '')
+      ,'batterilevetid'    => ens('batterilevetid', '', '', '', '')
+      ,'generator'         => ens('generator', '', '', '', '')
+      ,'sikring'           => ens('sikring', '2 x 15 + 2 x 7,5', '', '', ' ved batteri og underkølergitter foran')
+      ,'tændingssystem'    => ens('tændingssystem', '', 'synerject 325-024', '', '(C361M)')
+      ,'elstart'           => ens('elstart', 'ja', '', '', '')
+      ,'kickstart'         => ens('kickstart', 'nej', '', '', '')
+      ,'lysfor'            => ens('lys', '', '', '', '')
+      ,'lysbagbremse'      => ens('lys', '', '', '', '')
+      ,'lysbag'            => ens('lys', '', '', '', '')
+      ,'lysbremse'         => ens('lys', '', '', '', '')
+      ,'lyspositions'      => ens('lys', '', '', '', '')
+      ,'lysblink'          => ens('lys', '', '', '', '')
+      ,'lyskontrolblink'   => ens('lys', '', '', '', '')
+      ,'lyskontrollangt'   => ens('lys', '', '', '', '')
+      ,'lysnummerplade'    => ens('lys', '', '', '', '')
+      ,'lysinstrument'     => ens('lys', '', '', '', '')
+      ,'oplader'           => ens('oplader', '', '', '', '')
+      ,'ladetid'           => ens('ladetid', '', '', '', '')
+      ,'rækkevidde'        => ens('rækkevidde', '', '', '', '')
+      ,'controller'        => ens('controller', '', '', '', '')
+
+   ),'olie og væsker'      => array(
+       'motor'             => ens('olie', '', '', '1,8', 'API TC++ eller bedre')
+      ,'gear'              => ens('olie', '80W90', 'API GL3', '0,075', '')
+      ,'forgaffel'         => ens('olie', '', '', '', '')
+      ,'kølervæske'        => ens('kølervæske', '', '', 'cirka 0,9', '')
+
+   ),'transmission'        => array(
+       'transmissiontype'  => ens('transmissiontype', 'CVT', '', '', '')
+      ,'kobling'           => ens('kobling', '', '', '', '')
+      ,'antalgear'         => ens('antalgear', '', '', '', '')
+      ,'gearratio'         => ens('gearratio', '', '', '', '')
+      ,'tandhjulfor'       => ens('tandhjulfor', '', '', '', '')
+      ,'tandhjulbag'       => ens('tandhjulbag', '', '', '', '')
+      ,'reduktionsratio'   => ens('reduktionsratio', '', '', '', '')
+
+   ),'ekstra'              => array(
+       'stel'              => ens('stel', '', '', '', '')
+      ,'stelnummer'        => ens('stelnummer', 'ZAP', 'ZAPC3610', '', 'ZAPC463 : ? ZAPC46100, ZAPC1400000, ZAPC4620000 (2006), ZAPC1400003 (2000)') . ' ZAPC3650000001'
+      ,'udstødning'        => ens('udstødning', 'ekspansion + absorbering + katalysator', '', '', '')
+      ,'euroemission'      => ens('euroemission', '2', '', '', '(SP)')
+      ,'vægttør'           => ens('vægttør', '', '', '', '')
+      ,'vægtkørerklar'     => ens('vægtkørerklar', '98', '', '', '') . ens('vægtkørerklar', '93', '', '', '(DD og SP)') . ens('vægtkørerklar', '103', '', '', '(SP)')
       ,'vægttotal'         => ens('vægttotal', '', '', '', '')
       ,'bæreevne'          => ens('bæreevne', '', '', '', '')
       ,'luftfiltertype'    => ens('luftfiltertype', '', '', '', '')
@@ -1102,7 +1264,7 @@ $databaseright = array(
    ,'RCR SMT brugermanual (finsk)'                 => 'gilera_rcr_smt_brugermanual.pdf'
    ,'RCR reservedele'                              => 'gilera_rcr_reservedele.pdf'
    ,'SMT reservedele'                              => 'gilera_smt_reservedele.pdf'
-   ,'runner Purejet brugermanual'                  => 'gilera_runner_purejet_brugermanual.pdf'
+   ,'runner PureJet brugermanual'                  => 'gilera_runner_purejet_brugermanual.pdf'
    ,'runner servicemanual tysk'                    => 'gilera_runner_servicemanual_tysk.pdf'
    ,'runner SP brugermanual (finsk)'               => 'gilera_runner_sp_brugermanual.pdf'
    ,'runner SP (ZAPC461) reservedele'              => 'gilera_runner_sp_zapc461_reservedele.pdf'

@@ -4,8 +4,8 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "rating oversigt";
-$overskrift = "rating oversigt";
+$title = "stemmer";
+$overskrift = "stemmer";
 $metadescription = "se de sider der er blevet stemt på med ratingsystemet og hvor mange stemmer de har fået i gennemsnit osv";
 
 $deloverskrift = '';
@@ -56,8 +56,8 @@ if ($db->connect_errno > 0) {
 
    if ($tableindhold != '') {
 
-      $oversigtindhold .= '<div style="overflow-x: auto;">';
-      $oversigtindhold .= '<table class="tableholder fontsize_small tablesorter">';
+      $oversigtindhold .= '<div class="overflowxauto">';
+      $oversigtindhold .= '<table class="fontsize_small tablesorter tablesorter-default">';
 
       $oversigtindhold .= '<thead>';
       $oversigtindhold .= '<tr>';

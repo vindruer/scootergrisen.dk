@@ -2,91 +2,83 @@
 
 $flerekeywords = array_unique(array(
    // stavefejl
-    'tændingsbanken'
-   ,'piaggio' // piaggo
-   ,'giantco g-buddy'
-   ,'spændingsregulator'
-   ,'cylinder'
-   ,'katalysator'
-   ,'blinklysrelæ'
-   ,'begrænsning' // begrinsenier
-   ,'choker'
-   ,'fejlfinding'
-   ,'sikring'
-   ,'gear'
-   ,'gearing'
-   ,'variator'
-   ,'variomatic'
-   ,'trykfjeder'
-   ,'texas flash'
-   ,'starterrelæ'
-   ,'reed valve'
-   ,'kompression'
-   ,'e-buddy'
+    'aprilia' // aprilla
+   ,'automatisk benzinhane' // automatisk benzinhave
    ,'automatisk choker' // automatisk chooker
-   ,'madass' // badass
-   ,'ciao' // caio
-   ,'giantco venus' // gianco venus
-   ,'giantco' // giantko, giganco, giganto
-   ,'venus'
-   ,'kymco' // kymko
-   ,'orion' // origon
-   ,'pickup' // pick up
-   ,'sekundært luftfilter' // sekundärt luftfilter
-   ,'skjolde' // skjole
-   ,'starterkobling' // starter kobling
-   ,'tuning' // tunning
-   ,'starterrelæ' // starter relæ
    ,'baotian' // bation, botian, baotain, baotania
-   ,'fælge' // Fälgar
-   ,'gilera' // galera
-   ,'gilera' // gelera
-   ,'gilera' // gelira
-   ,'ventiler' // Vantiler
+   ,'begrænsning' // begræning
+   ,'begrænsning' // begrinsenier
    ,'benzin' // bensin
    ,'benzinhane' // benzin hane
-   ,'puch maxi' // puck maxi
-   ,'pgo hot' // pgo hot 50
-   ,'automatisk benzinhane' // automatisk benzinhave
-   ,'krumtap' // krumptap
-   ,'stelnummer' // stel nummer
-   ,'stelforbindelse' // stelfobindelse
-   ,'vakuumslange' // vakumslange
    ,'benzinmåler' // benzinnmåler
+   ,'blinklysrelæ'
+   ,'choker'
+   ,'ciao' // caio
+   ,'cylinder' // sylender / sylinder
+   ,'ditech' // dietech
+   ,'dysser' // dyser
+   ,'e-buddy'
+   ,'fælge' // Fälgar
+   ,'fejlfinding'
    ,'g-buddy' // g-boddy / g-body / g buddy
-   ,'slutseddel' // slutsedel
-   ,'giantco' // gigantco / gianco / gigatico
-   ,'baotian' // botian
    ,'gaskabel' // gasabel
+   ,'gear'
+   ,'gearing'
+   ,'giantco g-buddy'
+   ,'giantco venus' // gianco venus
+   ,'giantco' // giantko / giganco / giganto / gigantco / gianco / gigatico
+   ,'gilera' // galera gelira gelera
+   ,'hjelm' // hjælm
+   ,'karburator' // kaburator
+   ,'katalysator'
+   ,'kickstarter' // kikstarter
+   ,'kompression'
+   ,'krumtap' // krumptap
+   ,'kymco' // kymko
+   ,'madass' // badass
    ,'membran' // menbran
    ,'olie' // olje
-   ,'kickstarter' // kikstarter
-   ,'svinghjul' // svindhjul
-   ,'simson albatros' // simson albetros
-   ,'peugeot' // peogeut, pegout, peugoet
-   ,'peugeot buxy' // peogeut boxy
-   ,'begrænsning' // begræning
    ,'oliepumpe' // oilpumpe 
-   ,'cylinder' // sylinder
-   ,'cylinder' // sylender
-   ,'dysser' // dyser
-   ,'vakuum' // vacum / vaccum
-   ,'speedometerdrev' // spidometerdrev
-   ,'yamasaki' // yhamasaki 
-   ,'karburator' // kaburator
-   ,'tændingslås' // tændningslås
-   ,'speedometerkabel' // spedometerkabel
-   ,'starterrelæ' // starterelæ
-   ,'ditech' // dietech
-   ,'reservedele' // resavedele
-   ,'sidespejle' // siddespejle
-   ,'styrthjelm' // styrthjælm
-   ,'hjelm' // hjælm
-   ,'typhoon' // thypoon
+   ,'orion' // origon
+   ,'peugeot buxy' // peogeut boxy
+   ,'peugeot' // peogeut, pegout, peugoet
+   ,'pgo hot' // pgo hot 50
+   ,'piaggio' // piaggo
+   ,'pickup' // pick up
+   ,'puch maxi' // puck maxi
+   ,'reed valve'
    ,'relæ' // relæg
+   ,'reservedele' // resavedele
+   ,'sekundært luftfilter' // sekundärt luftfilter
+   ,'sidespejle' // siddespejle
+   ,'sikring'
    ,'simmerring' // simmering
-   ,'aprilia' // aprilla
-   ,'' // 
+   ,'simson albatros' // simson albetros
+   ,'skjolde' // skjole
+   ,'slutseddel' // slutsedel
+   ,'spændingsregulator'
+   ,'speedometerdrev' // spidometerdrev
+   ,'speedometerkabel' // spedometerkabel
+   ,'starterkobling' // starter kobling
+   ,'starterrelæ' // starter relæ / starterelæ
+   ,'stelforbindelse' // stelfobindelse
+   ,'stelnummer' // stel nummer
+   ,'styrthjelm' // styrthjælm
+   ,'svinghjul' // svindhjul
+   ,'tændingslås' // tændningslås
+   ,'texas flash'
+   ,'trykfjeder'
+   ,'tuning' // tunning
+   ,'typhoon' // thypoon
+   ,'tændingsbanken'
+   ,'vakuum' // vacum / vaccum
+   ,'vakuumslange' // vakumslange
+   ,'variator'
+   ,'variomatic'
+   ,'ventiler' // Vantiler
+   ,'venus'
+   ,'yamasaki' // yhamasaki 
+   //,'' // 
 ));
 
 return $flerekeywords;

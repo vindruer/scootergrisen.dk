@@ -4,13 +4,11 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_kamera2.png';
+$setup['sideikon']               = 'ikoner/ikon_kamera2.png';
 
 $title = "kamera (hjelmkamera / actionkamera)";
 $overskrift = "kamera (hjelmkamera / actionkamera)";
 $metadescription = "kamera der kan bruges til at optage video og lyd mens man køre på scooter/cykel/ski/svømmer/osv så man kan dele sine oplevelser med andre";
-
-$setup['nogetikon']               = 'ikoner/ikon_kamera2.png';
 
 $databasecenter = array(
 
@@ -587,7 +585,7 @@ Tryk så 3 gange på tænd knappen.
 På kameradisplayet ses så et logo og et versionstal.
 Kameraet slukker når opdateringen er færdig.
 
-Når opdateringen er færdig så slet '.high('HD2-firmware.bin').' filen fra hukommelseskortet, ellers tror jeg nok opdateringen kan gå igang igen.
+Når opdateringen er færdig så slet '.high('HD2-firmware.bin').' filen fra hukommelseskortet, ellers tror jeg nok opdateringen kan gå i gang igen.
 
 Der stod V50 (den gamle version) første gang jeg opdaterede.
 Lidt efter stod der V198 (den nye version).
@@ -702,13 +700,14 @@ iMovie
 Premiere Elements
 Windows Movie Maker
 
-Avidemux kan klipper i en video uden er reencode videoen.
+Avidemux 2.6.0 kan klipper i en video uden er reencode videoen (vælg Output format : MP4 Muxer).
+Så kan man klippe starten og slutningen uden at miste kvalitet.
 '
 
 ,'
 overførselshastighed
 ' => '
-Her skriver jeg lidt op de overførselshastigheder jeg oplever når jeg skal kopier fra hukommelseskortet til computeren.
+Her skriver jeg lidt op de overførselshastigheder jeg oplever når jeg skal kopiere fra hukommelseskortet til computeren.
 
 Hvis jeg sætter micro SD hukommelseskortet direkte i computer så bliver der overført med 16,7 MByte/sekund.
 
@@ -731,20 +730,13 @@ Jo større synsvinkel man bruger jo mindre vigtigt er det at kameraet peger præ
 fokus under vand
 ' => '
 Hvis man tager mit GoPro Hero 2 kamera under vand i det vandtætte hus med den buede linse så er billedet ud af fokus.
-'.visflash('0', 'http://www.youtube.com/watch?v=vCBEvcO59CY', 'GoPro Hero 2 goes for a little swim', true).'
+
 For at få fokus kan man placer en flad linse foran sådan at vandet ikke kommer i kontakt med den buede linse.
 Linsen skal være ret stor sådan at kanten af linsen (metalringen) ikke kommer med i billedet når man bruger wide synsvinkel.
 
 Man kunne også lave en lille boks eller noget af gennemsigtig plexiglas så hele kameraet er inden i boksen.
 
 Jeg har endnu ikke selv prøvet dette men kan være jeg prøver det på et tidspunkt.
-'
-
-,'
-video eksempel
-' => '
-Her er en video jeg har optaget mens jeg køre på scooter med kameraet monteret på hjelmen. Se flere på '.ahref('videoer.php', 'videoer').'.
-'.visflash('0', 'http://www.youtube.com/watch?v=aSaITYWYikM', 'My first GoPro Hero 2 video upload', true).'
 '
 
 ,'

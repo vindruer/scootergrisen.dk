@@ -8,7 +8,7 @@ $title = "e-max scootere med elektrisk motor";
 $overskrift = "e-max";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_emax.png';
+$setup['sideikon']               = 'logoer/logo_emax.png';
 
 /*
 produceret i wuxi ved shanghai i kina

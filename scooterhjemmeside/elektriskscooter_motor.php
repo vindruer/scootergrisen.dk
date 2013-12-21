@@ -216,9 +216,9 @@ Altså hvordan baghjulet er drejet.
 Her ses en hall sensor.
 '.visbilled('1', 'billed1302.jpg', 'hall sensor', false, true).'
 Her ses 3 hall sensorer i en motor.
-'.visbilled('1', 'billed1303.jpg', '3 hall sensorer i motor', false, true).'
+'.visbilled('1', 'billed1303.jpg', 'tre hall sensorer i motor', false, true).'
 Her ses 3 hall sensorer i en anden motor.
-'.visbilled('1', 'billed3117.jpg', '3 hall sensorer i motor', false, true).'
+'.visbilled('1', 'billed3117.jpg', 'tre hall sensorer i motor', false, true).'
 Det ser ud til at der altid er 3 styks hall sensorer hvis det er en børsteløs motor.
 
 Efter hvad jeg kan forstå får alle 3 hall sensorer +5 volt (rød) og stelforbindelse (sort) fra controlleren.
@@ -235,6 +235,9 @@ Her ses 2 signaler.
 Nederst ses signalet fra en af hall sensorene som tænder og slukker hårdt.
 Øverst er strømmen til den motor fase som trigges af hall sensoren og den tænder og slukker med en "kurve".
 '.visbilled('1', 'billed3132.jpg', 'hall sensor og motor fase signaler', false, true).'
+
+Her er et billede jeg fik tilsendt om at teste hallsensorer med LED men jeg forstår det ikke helt.
+'.visbilled('1', 'billed3912.jpg', 'simple circuit, Hall sensors monitoring.', false, true).'
 '
 
 );

@@ -42,10 +42,6 @@ if ($_GET && isset($_GET['rating']) && isset($_GET['url'])) {
 
 }
 
-//var_dump(filter_var($sidsteip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4));
-//var_dump(filter_var('http://netkoder/daasdasdas/dasdas/d//a' . $url, FILTER_VALIDATE_URL, FILTER_FLAG_PATH_REQUIRED));
-//exit;
-
 
 
 //

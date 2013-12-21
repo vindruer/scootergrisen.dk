@@ -98,7 +98,7 @@ stalker naked
 runner
 runner dd (double disc)
 runner sp
-runner purejet (indsprøjtning)
+runner PureJet (indsprøjtning)
 dna
 storm
 touring
@@ -258,6 +258,57 @@ AXIS50 (YA 50R) type 4 S J
    )
 )
 .'
+Her er lidt ekstra...
+
+Suzuki TS50
+Suzuki RV50 : '.ahref('http://www.scootergalleri.dk/galleri/315307-suzuki_rv_50').'
+
+Adly Jet 50/100
+Adly Cat 50/100
+Adly Silver Fox
+Adly Thunderbike 50
+Adly Super Sonic 50
+Adly Pista 50
+
+cady
+ciao
+ciao automatic
+fantic motor gt
+garelli aureka
+honda amigo
+honda camino (PA50)
+kreidler florett
+ktm sachs
+nsu
+peugeot 103
+puch 50
+puch automat 50
+puch flagskib
+puch grand prix
+puch maxi 1
+puch maxi 2
+puch maxi k
+puch maxi p
+puch ms
+puch pioner
+puch scooter
+puch standard
+puch super
+puch super 50
+puch vz
+sco
+suzuki k50
+suzuki k50s
+tomos
+velo solex 3300
+velo solex 3800
+velo solex 4600
+velo solex 5000
+velo solex 6000
+yamaha fs/dx
+yamaha fs/k
+yamaha ss
+zündapp
 '
 
 );

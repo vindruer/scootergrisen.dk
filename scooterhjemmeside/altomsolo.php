@@ -8,7 +8,7 @@ $title = "solo scootere med elektrisk motor";
 $overskrift = "solo";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
 $databasecenter = array(
 
@@ -16,13 +16,16 @@ $databasecenter = array(
 
      'specielt'            => array(
        'besked'            => ens('besked', '
-SOLO-Kleinmotoren GmbH
-typ: 720
-Baujahr: 1974
-Fahrgestell-Nr:
-?
-zul. Ges. Gewicht:
-TUV182 kg 1995 ?
+Set på plade på stellet:
+"SOLO-Kleinmotoren"
+"GmbH"
+"Sindelfingen 6"
+"typ: 720"
+"Baujahr: 1974"
+"Fahrgestell-Nr:"
+"???????????????"
+"zul. Ges. Gewicht:"
+"TUV182 kg 1??"
 ', '', '', '')
 
    ),'generelt'            => array(
@@ -89,7 +92,7 @@ TUV182 kg 1995 ?
        'starterbatteri'    => ens('starterbatteri', '', '', '', '')
       ,'batterispec1'      => ens('batterispec1', '12', '50', '', '2 styks')
       ,'batterispec2'      => ens('batterispec2', '', '', '', '')
-      ,'batterivægt'       => ens('batterivægt', '', '', '', '')
+      ,'batterivægt'       => ens('batterivægt', '30', '', '', '')
       ,'batterilevetid'    => ens('batterilevetid', '', '', '', '')
       ,'generator'         => ens('generator', '', '', '', '')
       ,'sikring'           => ens('sikring', '', '', '', '')
@@ -108,7 +111,7 @@ TUV182 kg 1995 ?
       ,'lysinstrument'     => ens('lys', '', '', '', '')
       ,'oplader'           => ens('oplader', '', '', '', '')
       ,'ladetid'           => ens('ladetid', '', '', '', '')
-      ,'rækkevidde'        => ens('rækkevidde', '40', '', '', '')
+      ,'rækkevidde'        => ens('rækkevidde', '', '40', '', '')
       ,'controller'        => ens('controller', '', '', '', '')
 
    ),'olie og væsker'      => array(
@@ -131,8 +134,8 @@ TUV182 kg 1995 ?
       ,'stelnummer'        => ens('stelnummer', '', '', '', '')
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
-      ,'vægttør'           => ens('vægttør', '', '', '', '')
-      ,'vægtkørerklar'     => ens('vægtkørerklar', '', '', '', '')
+      ,'vægttør'           => ens('vægttør', '37', '', '', '(uden batteri)')
+      ,'vægtkørerklar'     => ens('vægtkørerklar', '67', '', '', '')
       ,'vægttotal'         => ens('vægttotal', '', '', '', '')
       ,'bæreevne'          => ens('bæreevne', '', '', '', '')
       ,'luftfiltertype'    => ens('luftfiltertype', '', '', '', '')

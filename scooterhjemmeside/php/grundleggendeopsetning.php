@@ -14,9 +14,9 @@
 #                                                                             #
 ###############################################################################
 
-require_once './php/checkipreferer.php';
-checkip(); // exit hvis IP adresse har spammet
-checkreferer();
+//require_once './php/checkipreferer.php';
+//checkip(); // exit hvis IP adresse har spammet
+//checkreferer();
 
 ini_set("date.timezone", "Europe/Copenhagen"); // for at undgå ...It is not safe to rely on the system's timezone settings... advarsel
 //  [phpBB Debug] PHP Warning: in file /customers/c/e/1/scootergrisen.dk/httpd.www/scooterhjemmeside/php/grundleggendeopsetning.php on line 21: ini_set(): Cannot change zlib.output_compression - headers already sent
@@ -38,7 +38,7 @@ if($setup['loggetind']){
 
 if($setup['loggetind']){
 
-   error_reporting(-1); // error_reporting(-1) = viser alle fejl også dem der tilføjes i fremtiden
+   error_reporting(-1); // "-1" viser alle fejl også dem der tilføjes i fremtiden
    ini_set('display_startup_errors', 'on');
    ini_set('display_errors', true);
    ini_set('html_errors', 'false');
@@ -59,7 +59,9 @@ $setup['dialogsymlinkfil'] = "download/dialog/hent"; // uden / til sidst fordi d
 $setup['tempmappe']      = "temp";
 $setup['besogfilnavn']   = "besog.txt";
 
+$setup['domain']         = "//$_SERVER[SERVER_NAME]"; // påvirker socialemedier
 $setup['domain']         = "http://$_SERVER[SERVER_NAME]";
+// $_SERVER['SERVER_PROTOCOL']
 
 require_once './php/config_login.php';
 

@@ -7,17 +7,17 @@ var datamappe = 'scooterhjemmeside';
 
 
 // dummy kode for at undgå "'console' is undefined" fejl når bruger console.log() og browseren ikke har den
-if (!(window.console && console.log)) {
-
-   console = {
-      log: function() {},
-      debug: function() {},
-      info: function() {},
-      warn: function() {},
-      error: function() {}
-   };
-
-}
+//if (!(window.console && console.log)) {
+//
+//   console = {
+//      log: function() {},
+//      debug: function() {},
+//      info: function() {},
+//      warn: function() {},
+//      error: function() {}
+//   };
+//
+//}
 
 
 
@@ -156,13 +156,169 @@ function visemailadresse() {
 
 
 
+function tilbagelinkclick(event) {
+
+   'use strict';
+
+   event.preventDefault();
+   history.back();
+
+}
+
+
+
+function opdaterlinkclick(event) {
+
+   'use strict';
+
+   event.preventDefault();
+   location.reload(true);
+
+}
+
+
+
+function languageformsubmit() {
+
+   'use strict';
+
+   this.form.submit();
+
+}
+
+
+function stemop(event) {
+
+   'use strict';
+
+   event.preventDefault();
+   rate('5', window.location.pathname);
+
+}
+
+
+
+function stemned(event) {
+
+   'use strict';
+
+   event.preventDefault();
+   rate('1', window.location.pathname);
+
+}
+
+
+function init_hjemmeside_addeventlistener() {
+
+   'use strict';
+
+   var tilbagelink,
+       opdaterlink,
+       languageselect,
+       stemoplink,
+       stemnedlink;
+
+   visemailadresse();
+
+   if (document.getElementById('tilbagelink')) {
+
+      tilbagelink = document.getElementById('tilbagelink');
+      tilbagelink.addEventListener('click', tilbagelinkclick, false);
+
+   }
+
+   if (document.getElementById('opdaterlink')) {
+
+      opdaterlink = document.getElementById('opdaterlink');
+      opdaterlink.addEventListener('click', opdaterlinkclick, false);
+
+   }
+
+   if (document.getElementById('languageselect')) {
+
+      languageselect = document.getElementById('languageselect');
+      languageselect.addEventListener('change', languageformsubmit, false);
+
+   }
+
+   if (document.getElementById('stemoplink')) {
+
+      stemoplink = document.getElementById('stemoplink');
+      stemoplink.addEventListener('click', stemop, false);
+
+   }
+
+   if (document.getElementById('stemnedlink')) {
+
+      stemnedlink = document.getElementById('stemnedlink');
+      stemnedlink.addEventListener('click', stemned, false);
+
+   }
+
+
+}
+
+
+
+function init_hjemmeside_attachevent() {
+
+   'use strict';
+
+   var tilbagelink,
+       opdaterlink,
+       languageselect,
+       stemoplink,
+       stemnedlink;
+
+   visemailadresse();
+
+   if (document.getElementById('tilbagelink')) {
+
+      tilbagelink = document.getElementById('tilbagelink');
+      tilbagelink.attachEvent('onclick', tilbagelinkclick);
+
+   }
+
+   if (document.getElementById('opdaterlink')) {
+
+      opdaterlink = document.getElementById('opdaterlink');
+      opdaterlink.attachEvent('onclick', opdaterlinkclick);
+
+   }
+
+   if (document.getElementById('languageselect')) {
+
+      languageselect = document.getElementById('languageselect');
+      languageselect.attachEvent('onchange', languageformsubmit);
+
+   }
+
+   if (document.getElementById('stemoplink')) {
+
+      stemoplink = document.getElementById('stemoplink');
+      stemoplink.attachEvent('onclick', stemop);
+
+   }
+
+   if (document.getElementById('stemnedlink')) {
+
+      stemnedlink = document.getElementById('stemnedlink');
+      stemnedlink.attachEvent('onclick', stemned);
+
+   }
+
+
+}
+
+
+
 if (window.addEventListener) {
 
-   window.addEventListener('load', visemailadresse, false);
+   window.addEventListener('load', init_hjemmeside_addeventlistener, false);
 
 } else if (window.attachEvent) {
 
-   window.attachEvent('onload', visemailadresse);
+   window.attachEvent('onload', init_hjemmeside_attachevent);
 
 }
 
@@ -208,24 +364,27 @@ function supports_track() {
 
 
 
-function volumemutexxx(afspillerid, mutebilledeid, volumestatusid) {
+function volumemutexxx(afspillerid, mutebilledeid, volumestatusid, nyvolumeid) {
 
    'use strict';
 
    var xxx_afspiller = document.getElementById(afspillerid),
        xxx_mutebilledeid = document.getElementById(mutebilledeid),
-       xxx_volumestatus = document.getElementById(volumestatusid);
+       xxx_volumestatus = document.getElementById(volumestatusid),
+       xxx_nyvolumeid = document.getElementById(nyvolumeid);
 
    if (xxx_afspiller.muted) {
 
       xxx_afspiller.muted = false;
-      xxx_volumestatus.innerHTML = 'Muted';
+      /*xxx_volumestatus.innerHTML = 'Muted';*/
+      xxx_volumestatus.value = 'Muted';
       xxx_mutebilledeid.src = '/' + datamappe + '/billeder/afspiller/afspiller_volume_muted.png';
 
    } else {
 
       xxx_afspiller.muted = true;
-      xxx_volumestatus.innerHTML = xxx_afspiller.volume.toFixed(1) * 100 + ' %';
+      /*xxx_volumestatus.innerHTML = xxx_afspiller.volume.toFixed(1) * 100 + ' %';*/
+      xxx_volumestatus.value = xxx_afspiller.volume.toFixed(1) * 100 + ' %';
       xxx_mutebilledeid.src = '/' + datamappe + '/billeder/afspiller/afspiller_volume_unmuted.png';
 
    }
@@ -566,246 +725,3 @@ function rate(rating, url) {
    xhr.send();
 
 }
-
-
-
-function menu_skift_dims() {
-
-   'use strict';
-
-   document.getElementById('dropdownmenu').style.display = 'block';
-   document.getElementById('dropdownmenu_dims').style.display = 'none';
-
-}
-
-
-
-function cubenoget() {
-
-   // Note: at the time of writing, only Mozilla and WebKit support Pointer Lock.
-   
-   // The element well make fullscreen and pointer locked.
-   
-   var sdfsdsdff = 0,
-       sdfsdsdffb = 0,
-       scalesdfsdsdff = 1,
-       cubeb = document.getElementById('cubeb');
-       cubeb_value = null;
-
-   document.addEventListener('mousemove', function(e) {
-   
-      var movementX = e.movementX       ||
-                      e.mozMovementX    ||
-                      e.webkitMovementX ||
-                      0,
-          movementY = e.movementY       ||
-                      e.mozMovementY    ||
-                      e.webkitMovementY ||
-                      0;
-   
-      sdfsdsdff += movementX / 2;
-      sdfsdsdffb -= movementY / 2;
-
-      cubeb_value = ''
-         +  'rotatex(' + sdfsdsdffb + 'deg)'
-         + ' rotatey(' + sdfsdsdff + 'deg)'
-         //+ ' scalex(' + scalesdfsdsdff + ')'
-         //+ ' scaley(' + scalesdfsdsdff + ')'
-         //+ ' scalez(' + scalesdfsdsdff + ')'
-         ;
-   
-      if(cubeb) {
-
-         if(cubeb.style.MozTransform !== undefined) {
-            cubeb.style.MozTransform = cubeb_value;
-         }else if(cubeb.style.OTransform !== undefined) {
-            cubeb.style.OTransform = cubeb_value;
-         }else if(cubeb.style.webkitTransform !== undefined) {
-            cubeb.style.webkitTransform = cubeb_value;
-         }else if(cubeb.style.msTransform !== undefined) {
-            cubeb.style.msTransform = cubeb_value;
-         }else if(cubeb.style.Transform !== undefined) {
-            cubeb.style.Transform = cubeb_value;
-         }
-
-      }
-
-   }, false);
-
-}
-
-
-/*
-if (window.addEventListener) {
-
-   var elemb = null;
-
-   window.addEventListener('load', function() {
-
-      cubenoget();
-
-      elemb = document.getElementById('cubeholder');
-
-      if(elemb) {
-
-         if(elemb.style.MozTransform !== undefined
-         || elemb.style.OTransform !== undefined
-         || elemb.style.webkitTransform !== undefined
-         //|| elemb.style.msTransform !== undefined
-         || elemb.style.Transform !== undefined
-         ) {
-            document.getElementById('dugnasivaivcmaismcasdcoumdso').style.display = 'none';
-            elemb.style.display = 'block';
-         }
-
-      }
-
-   }, false);
-
-}
-*/
-
-
-function global_fullscreenon(element) {
-
-   'use strict';
-
-   if (element.requestFullScreen !== undefined) {
-
-      element.requestFullScreen();
-
-   } else if (element.requestFullscreen !== undefined) {
-
-      element.requestFullscreen();
-
-   } else if (element.mozRequestFullScreen !== undefined) {
-
-      element.mozRequestFullScreen();
-
-   } else if (element.webkitRequestFullScreen !== undefined) {
-
-      element.webkitRequestFullScreen();
-
-   } else if (element.msRequestFullscreen !== undefined) {
-
-      document.body.msRequestFullscreen();
-
-   } else {
-
-      alert("Din browser ser ikke ud til at understøtte fuldskærm API.");
-
-   }
-
-}
-
-function global_fullscreenoff(element) {
-
-   'use strict';
-
-   if (element.cancelFullScreen) {
-
-      element.cancelFullScreen();
-
-   } else if (element.exitFullscreen) {
-
-      element.exitFullscreen();
-
-   } else if (element.mozCancelFullScreen) {
-
-      element.mozCancelFullScreen();
-
-   } else if (element.webkitCancelFullScreen) {
-
-      element.webkitCancelFullScreen();
-
-   } else if (element.msExitFullscreen) {
-
-      element.msExitFullscreen();
-
-   } else {
-
-      //alert("Din browser ser ikke ud til at understøtte fuldskærm API.");
-
-   }
-
-}
-
-function global_togglefullscreen() {
-
-   'use strict';
-
-   var element = null;
-
-   if (!document.mozFullScreen &&
-       !document.webkitIsFullScreen &&
-       !document.msFullscreenElement &&
-       !document.fullscreenElement) {
-
-      element = document.documentElement;
-      global_fullscreenon(element);
-
-   } else {
-
-      element = document;
-      global_fullscreenoff(element);
-   }
-
-}
-
-
-/*
-if (window.addEventListener) {
-
-   window.addEventListener('load', function() {
-
-      var element = document.documentElement,
-          knap = document.getElementById('global_fullscreentoggleknap');
-
-      if (knap) {
-
-         if (element.requestFullScreen ||
-             element.requestFullscreen ||
-             element.mozRequestFullScreen ||
-             element.webkitRequestFullScreen ||
-             element.msRequestFullscreen) {
-
-            knap.style.visibility = 'visible';
-
-         }
-
-      }
-
-   }, false);
-
-}
-*/
-
-
-function opdaterfullscreenknapbillede(id_button, id_img) {
-
-   'use strict';
-
-   var button = document.getElementById(id_button),
-       img = document.getElementById(id_img);
-
-   if (document.mozFullScreen ||
-       document.webkitIsFullScreen ||
-       document.msFullscreenElement ||
-       document.fullscreenElement) {
-
-      button.title = 'Forlad fuldskærm';
-      img.title = 'Forlad fuldskærm';
-      img.src = '/' + datamappe + '/billeder/afspiller/afspiller_fuldskerm_forlad.png';
-
-   } else {
-
-      button.title = 'Aktiver fuldskærm';
-      img.title = 'Aktiver fuldskærm';
-      img.src = '/' + datamappe + '/billeder/afspiller/afspiller_fuldskerm.png';
-
-   }
-
-}
-
-
-

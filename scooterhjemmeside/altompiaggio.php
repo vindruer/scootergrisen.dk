@@ -8,7 +8,7 @@ $title = "piaggio scootere med 50 cm³ motor";
 $overskrift = "piaggio";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
 $databasecenter = array(
 
@@ -478,7 +478,7 @@ Udvendige lad/kasselængde :<br>
        'model'             => ens('model', 'piaggio fly 4T', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '')
       ,'scootertype'       => ens('scootertype', 'C44', '', '')
-      ,'varianter'         => ens('varianter', '', '', '')
+      ,'varianter'         => ens('varianter', 'Piaggio New Fly 50 4T 4V (4 ventiler)', '', '')
       ,'pris'              => ens('pris', '9995', '13995', '')
       ,'hastighed'         => ens('hastighed', '30 og 45', '', '')
       ,'farver'            => ens('farver', 'sort sølv rød', '', '')

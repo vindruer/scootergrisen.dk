@@ -11,12 +11,6 @@ $metadescription = "info, billeder og filer om Malossi Multivar som er et reserv
 $databasecenter = array(
 
 '
-montering af Malossi Multivar
-' => '
-'.visflash('0', "http://www.youtube.com/watch?v=wv_RCsz-tlw", 'Montering af Malossi Multivar 5113790 på Kymco Super 8', true).'
-'
-
-,'
 hæfte
 ' => '
 Her er hæftet som følger med i Malossi multivar pakken.

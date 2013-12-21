@@ -4,7 +4,7 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_begrensninger2.png';
+$setup['sideikon']               = 'ikoner/ikon_begrensninger2.png';
 
 $title = "begrænsninger på scootere og knallerter som nedsætter topfarten";
 $overskrift = "begrænsninger på scootere og knallerter som nedsætter topfarten";
@@ -280,7 +280,6 @@ galleriholder(array(
 .'
 
 På nogle CDI bokse kan kan fjerne begrænsningen ved at fjerne en ledning fra stikket hvor der går en ledning ud fra CDI boksen og ind igen.
-'.ahref('http://www.youtube.com/watch?v=fDGauzkqaDA', 'Video - Fjern begræsning på CDI boks').'
 '.
 galleriholder(array(
     galleri('highslide', '', 'billed0196.jpg', array('CDI begrænsning ledning på Kymco Super 8', ''))

@@ -14,7 +14,7 @@ $databasecenter = array(
 introduktion
 ' => '
 Her ses en 2 takt 50 cm³ motor.
-'.visbilled('1', 'billed2377.jpg', '2 takt motor', false, true).'
+'.visbilled('1', 'billed2377.jpg', '2 takt 50 cm³ tvunget blæsekølet forbrændingsmotor til PGO scooter', false, true).'
 '
 
 ,'

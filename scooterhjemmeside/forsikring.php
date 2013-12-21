@@ -14,6 +14,9 @@ $linksarray = $linksarray['forsikringsselskaber'];
 if(isset($linksarray)){
 
       $noget = '';
+
+      $noget .= '<!--ignore-->';
+
       $noget .= galleri('start');
 
       foreach($linksarray as $link){
@@ -23,6 +26,9 @@ if(isset($linksarray)){
       }
 
       $noget .= galleri('slut');
+
+      $noget .= '<!--ignore-->';
+
       $forsikringsselskaberkode = $noget;
 
 }

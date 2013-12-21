@@ -8,7 +8,7 @@ $title = "baotian scootere med 50 cm³ og elektrisk motor";
 $overskrift = "baotian";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
 $databasecenter = array(
 
@@ -805,7 +805,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'L82TCAP9681', 'L82TCAP9781 (BT49QT-9 SUPERMOTO lille knallert)', 'L82TCAP9491 (30 km/t)', 'L82TCAP9181017') . 'L82TCAP9X81017 (lille BT49QT-9 SUPERMOTO) L82TCAP98A1001600 (lille BAOTIAN BT49QT 9D1)'
+      ,'stelnummer'        => ens('stelnummer', 'L82TCAP9681', 'L82TCAP9781 (BT49QT-9 SUPERMOTO lille knallert)', 'L82TCAP9491 (30 km/t)', 'L82TCAP9181017') . 'L82TCAP9X81017 (lille BT49QT-9 SUPERMOTO) L82TCAP98A1001600 (lille BAOTIAN BT49QT 9D1) LX6TCAP9161518241 (BT49QT-9D30 E15727-01)'
       ,'udstødning'        => ens('udstødning', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '')
       ,'vægttør'           => ens('vægttør', '85', '', '')

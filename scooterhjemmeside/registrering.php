@@ -4,7 +4,7 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_registrering2.png';
+$setup['sideikon']               = 'ikoner/ikon_registrering2.png';
 
 $title = "registrering af scootere og knallerter";
 $overskrift = "registrering af scootere og knallerter";
@@ -24,7 +24,7 @@ Jeg har endnu ikke så meget info om dette da jeg ikke selv har prøvet det.
 nummerplade til lille knallert
 ' => '
 En lille knallert som højst må køre 30 km/t kan have en gul nummerplade med 2 bogstaver, 4 tal og en sort ramme.
-'.visbilled('1', 'billed0154.jpg', '30 km/t nummerplade', false, true).'
+'.visbilled('1', 'billed0154.jpg', 'nummerplade til lille knallert med 2 bogstaver, 4 tal, gul baggrund og sort ramme', false, true).'
 Når der sælges en ny 30 km/t scooter så skal der monteres en gul nummerplade.
 Det gælder dog ikke for 30 km/t invalideknallert (med 3 hjul).
 
@@ -40,10 +40,13 @@ den 1. juli 2006 eller senere. En invalideknallert skal ikke registreres.
 Kigge man på nummerpladen lige på eller tager et billede af nummerpladen med blitz lige på så kan man måske se nogle symboler med et øje i en hånd.
 Jeg går ud fra at symbolerne er til for at sikre sig mod hjemmelavede nummerplader.
 Læs mere om argusøje symbolet på '.ahref('http://www.denstoredanske.dk/Sprog,_religion_og_filosofi/Religion_og_mystik/Guder_i_antik_litteratur/Argos', 'denstoredanske.dk/.../Argos').'.
-'.visbilled('1', 'billed1253.jpg', '30 km/t nummerplade med argusøje symbol øje i hånd', false, true).'
+'.visbilled('1', 'billed1253.jpg', 'nummerplade til lille knallert med argusøje symbol øje i hånd', false, true).'
 
-Tidligere kostede det kun 90 kroner for en nummerplade til lille knallert som dengang kun kunne købes hos skat men det er lavet om.
-En gul nummerplade til lille knallert koster 590,- kroner. Men de steder som nu må sælge nummerplade må muligvis selv bestemme hvad pris det vil sælge nummerpladen for.
+En gul nummerplade til lille knallert koster 590,- kroner hos skats motorcentre.
+Derudover kan de også købes hos synshaller (nummerpladeoperatør) som vist nok selv må bestemme hvad pris det vil sælge nummerpladen for.
+Læse mere på '.ahref('http://www.skat.dk/SKAT.aspx?oId=1817298', 'skat.dk').'.
+
+Tidligere kostede en gul nummerplade til lille knallert kun 90 kroner hos skats motorcentre som dengang var de eneste steder man kunne få dem, men det er lavet om nu så prisen er højere og man kan få købe nummerplade hos skats motorcentre og i synshaller (nummerpladeoperatør).
 
 Bogstaverne på gul nummerplade til lille knallert starter fra VB.
 Tallene på gul nummerplade til lille knallert går fra 5500 til 9999.
@@ -55,7 +58,7 @@ Nummerpladen er 145 mm bred og 125 mm høj.
 nummerplade til stor knallert
 ' => '
 En stor knallert som højst må køre 45 km/t har en hvid nummerplade med 2 bogstaver, 3 tal og en rød ramme.
-'.visbilled('1', 'billed0092.jpg', '45 km/t nummerplade', false, true).'
+'.visbilled('1', 'billed0092.jpg', 'nummerplade til stor knallert med 2 bogstaver, 3 tal, hvid baggrund og rød ramme', false, true).'
 En 45 km/t nummerplade koster 590,- kroner.
 
 Tallene på hvid nummerplade til stor knallert går fra 001 til 699.
@@ -67,7 +70,7 @@ Nummerpladen er 145 mm bred og 125 mm høj.
 motorcykel nummerplade
 ' => '
 For at sammenligne er en motorcykel nummerplade hvid, har 2 bogstaver, 5 tal og en rød ramme.
-'.visbilled('1', 'billed0006.jpg', 'motorcykel nummerplade', false, true).'
+'.visbilled('1', 'billed0006.jpg', 'nummerplade til motorcykel med 2 bogstaver, 5 tal, hvid baggrund og rød ramme', false, true).'
 '
 
 ,'
@@ -80,10 +83,10 @@ VIN står for Vehicle Identification Number.
 
 Et VIN kan kendes på at det er 17 tegn langt og kan bestå af både tal og bogstaver.
 Her ses et VIN. De to stjerner i starteren og slutning er ikke en del af VIN.
-'.visbilled('1', 'billed0350.jpg', 'stelnummer', false, true).'
+'.visbilled('1', 'billed0350.jpg', 'stelnummer på scooter', false, true).'
 
 Stelnummeret kan ofte ses ved at fjerne et stykke plastik over fodbrættet.
-'.visbilled('1', 'billed0348.jpg', 'stelnummer', false, true).'
+'.visbilled('1', 'billed0348.jpg', 'stelnummer på scooter', false, true).'
 Stelnummeret kan også stå på en '.ahref('#fabrikationsplade', 'fabrikationsplade').'.
 
 Stelnummeret kan nogle gange bruges til at finde ud af om scooteren er godkendt som 30 km/t eller 45 km/t scooter ved at sammenligne med scooterens typegodkendelse.
@@ -476,7 +479,7 @@ Den gang jeg købte min scooter mener jeg ikke at jeg fik nogen registreringsatt
 
 Jeg har ikke helt styr på hvordan det forgår med registreringsattest.
 
-Der fås vist kun registeringsattest til de køretøjer som skal have nummerplade på. Så de fås vist ikke til lille knallert solgt fra ny før 1. Juli 2006 eller til lille invalideknallert som ikke skal have nummerplade på.
+Der fås vist kun registreringsattest til de køretøjer som skal have nummerplade på. Så de fås vist ikke til lille knallert solgt fra ny før 1. Juli 2006 eller til lille invalideknallert som ikke skal have nummerplade på.
 
 Men her er en midlertidig registreringsattest som man vist får hos synshallen/forhandleren.
 '.visbilled('1', 'billed3467.jpg', 'midlertidig registreringsattest', false, true).'
@@ -542,11 +545,13 @@ Der findes fire forskellige former af typegodkendelser, og hvilken godkendelse, 
 '
 
 ,'
-statestik
+statistik
 ' => '
-På '.high('http://www.mclf.dk/statistikmff/').' kunne man tidligere se noget statestik om nyregisteret scootere og hvilke modeller der er solgt, hvor mange og hvor i landet de er solgt (siden er lukket nu).
+På '.high('http://www.mclf.dk/statistikmff/').' kunne man tidligere se noget statistik om nyregisteret scootere og hvilke modeller der er solgt, hvor mange og hvor i landet de er solgt (siden er lukket nu).
 
 Jeg fik dog downloadet noget data og her er eksempler på data sorteret efter hvilke modeller der sælges flest af.
+
+'.visfil('1', 'scooterhjemmeside/download/knallert_statistik.zip').'
 
 Lille knallerter : Uge 1 - 31 (2012)
 '.

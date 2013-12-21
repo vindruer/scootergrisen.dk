@@ -26,9 +26,8 @@ Variatoren består af en kilerem i midten og 2 remskiver foran og 2 remskiver ba
 Her ses en kilerem som også kaldes et bælte.
 '.visbilled('1', 'billed1991.jpg', 'kilerem bælte', false, true).'
 Her er nogle videoer med variatorer i funktion.
-'.visflash('0', "http://www.youtube.com/watch?v=-YLd8LWvqPA", '', true).'
-'.visflash('0', "http://www.youtube.com/v/pjmv-dX2PWs", '', true).'
-'.visflash('0', "http://www.youtube.com/watch?v=X5rU2J09wXc", '', true).'
+'.visflash('0', "http://www.youtube.com/v/pjmv-dX2PWs", 'how the cvt works', true).'
+'.visflash('0', "http://www.youtube.com/watch?v=X5rU2J09wXc", 'CVT Operation (139QMB And 1E40QMB)', true).'
 '.visflash('1', 'flash0002.swf', 'her kan du prøve en variator (Klik på Go! knappen og brug pile tasterne til at ændre motorens hastighed)', true).'
 De 6 grønne firkanter er ruller som bliver slynget ud af centrifugalkraften og dermed skubber den ene remskive tættere på den anden remskive. Kileremmen kører mellem remskiverne og bliver presset længere og længere ud.
 

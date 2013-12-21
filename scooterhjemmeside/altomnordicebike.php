@@ -8,7 +8,7 @@ $title = "nordic E-bike scootere med elektrisk motor";
 $overskrift = "nordic E-bike";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_nordicebike.png';
+$setup['sideikon']               = 'logoer/logo_nordicebike.png';
 
 $databasecenter = array(
 

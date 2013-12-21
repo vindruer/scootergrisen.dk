@@ -18,7 +18,7 @@ $databasecenter = array(
 vælg sprog
 ' => '
 <!--ignore-->
-'.mb_ucfirst($GLOBALS['setup']['l_changelanguage']).'
+'.my_mb_ucfirst($GLOBALS['setup']['l_changelanguage']).'
  : 
 <span class="skiftmenusprog" style="white-space: nowrap;">
 '.lidtplads('vandret', true).'
@@ -28,8 +28,8 @@ vælg sprog
 '.lidtplads('vandret', true).'
 '.ahref(
  $language_da_automatisk
- ,mb_ucfirst($GLOBALS['setup']['l_changelanguage_automatic'])
- ,'title="' . mb_ucfirst($GLOBALS['setup']['l_changelanguage_automatic_description']) . '"'
+ ,my_mb_ucfirst($GLOBALS['setup']['l_changelanguage_automatic'])
+ ,'title="' . my_mb_ucfirst($GLOBALS['setup']['l_changelanguage_automatic_description']) . '"'
 ).'
 </span>
 
@@ -37,7 +37,7 @@ vælg sprog
 <span style="color: rgba(0, 0, 0, 0.5); margin: 0 .5em;">|</span>
 '.lidtplads('vandret', true).'
 <span style="white-space: nowrap;">
-'.mb_ucfirst($GLOBALS['setup']['l_changelanguage_current']).'
+'.my_mb_ucfirst($GLOBALS['setup']['l_changelanguage_current']).'
  : 
 '.$GLOBALS['setup']['languageinuse'].'
 </span>

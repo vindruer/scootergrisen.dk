@@ -14,7 +14,7 @@ $filer_der_ikke_skal_vises = array(
    ,'sog.php'
    ,'ratingoversigt.php'
    ,'sogningerfejlbesog.php'
-   ,'statestik.php'
+   ,'statistik.php'
    ,'specielt_2taktscootere.php'
    ,'specielt_elektriskescootere.php'
    ,'test.php'

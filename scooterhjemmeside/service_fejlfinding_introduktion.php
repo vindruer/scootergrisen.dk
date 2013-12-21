@@ -8,7 +8,7 @@ $title = "Introduktion til fejlfinding af scootere og knallerter";
 $overskrift = "Introduktion til fejlfinding af scootere og knallerter";
 $metadescription = "find og ret fejl på scootere/knallerter der for eksempel ikke vil starte eller køre dårligt";
 
-$setup['nogetikon']               = 'ikoner/ikon_fejlfinding2.png';
+$setup['sideikon']               = 'ikoner/ikon_fejlfinding2.png';
 
 $databasecenter = array(
 

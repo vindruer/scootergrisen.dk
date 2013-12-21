@@ -4,7 +4,7 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_stederidanmark2.png';
+$setup['sideikon']               = 'ikoner/ikon_stederidanmark2.png';
 
 $title = "danmarkskort med forhandlere af scootere og reservedele";
 $overskrift = "danmarkskort med forhandlere af scootere og reservedele";
@@ -85,7 +85,7 @@ var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
       //map.mapTypes.set(\'map_style\', styledMap);
       //map.setMapTypeId(\'map_style\');
 
-      kmlurl = "http://scootergrisen.dk/scooterhjemmeside/kml/kml.php";
+      kmlurl = "http://scootergrisen.dk/scooterhjemmeside/kml/kml.php"; // skal vist være på webhotel kan ikke være localhost så vises det ikke på kortet
 
       kmlurl += "?rand=" + (new Date()).valueOf(); // tilføj noget i URLen så google maps ikke cacher kml filen
       ctaLayer = new google.maps.KmlLayer(
@@ -151,20 +151,20 @@ if ($db->connect_errno > 0) {
 
          while ($stmt->fetch()) {
 
-            $navn = mb_ucfirst($navn);
+            $navn = my_mb_ucfirst($navn);
 
             ($adresse == '')
                ? $adresseeventuelt = ''
-               : $adresseeventuelt = '<a href="javascript:void(0);" onclick="skiftplacering(' . $lat . ',' . $lng . ');">' . $adresse . '</a>';
+               : $adresseeventuelt = '<a href="javascript:skiftplacering(' . $lat . ',' . $lng . ');">' . $adresse . '</a>';
 
-            $by = mb_ucfirst($by);
+            $by = my_mb_ucfirst($by);
 
             ($hjemmeside == '')
                ? $eventueltlink = ''
                : $eventueltlink = ahref($hjemmeside, $hjemmeside, '', true);
 
-            $besked = mb_ucfirst($besked);
-            $type = mb_ucfirst($type);
+            $besked = my_mb_ucfirst($besked);
+            $type = my_mb_ucfirst($type);
 
             $tableindhold .= '<tr>';
             //$tableindhold .= '<td>' . $id . '</td>';
@@ -190,8 +190,8 @@ if ($db->connect_errno > 0) {
 
    if ($tableindhold != '') {
 
-      $oversigtindhold .= '<div style="overflow-x: auto;">';
-      $oversigtindhold .= '<table class="tableholder fontsize_small tablesorter">';
+      $oversigtindhold .= '<div class="overflowxauto">';
+      $oversigtindhold .= '<table class="fontsize_small tablesorter tablesorter-default">';
 
       $oversigtindhold .= '<thead>';
       $oversigtindhold .= '<tr>';

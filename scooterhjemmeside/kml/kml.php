@@ -1,27 +1,13 @@
 <?php
 
-/*
-
-ret ? tegn
-
-PNG transparent virker ikke på google maps men gif trans gør
-
-<ExtendedData>
-   <Data name="Address">
-      <value>Generatorvej 33  2730 Herlev, Denmark</value>
-   </Data>
-      <Data name="Website">
-      <value>http://søborgmc.dk/</value>
-   </Data>
-</ExtendedData>
-*/
+// validator : http://feedvalidator.org/check.cgi?url=http%3A//scootergrisen.dk/scooterhjemmeside/kml/kml.php
 
 chdir('..');
 require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-header("Content-Type: text/plain; charset=UTF-8");
+header("Content-Type: application/xml; charset=UTF-8");
 
 $tablenavn = 'stederidanmark';
 $indhold = '';
@@ -107,16 +93,16 @@ if ($db->connect_errno > 0) {
 
             $description = '';
 
-            if($adresse != ''){  $description .= '<div>' . mb_ucfirst($adresse) . '</div>'; }
-            if($postnummer != '' && $by != ''){ $description .= '<div>' . $postnummer . ' ' . mb_ucfirst($by) . '</div>'; }
+            if($adresse != ''){  $description .= '<div>' . my_mb_ucfirst($adresse) . '</div>'; }
+            if($postnummer != '' && $by != ''){ $description .= '<div>' . $postnummer . ' ' . my_mb_ucfirst($by) . '</div>'; }
             if($hjemmeside != ''){   $description .= '<div>' . ahref($hjemmeside, rtrim(str_replace('http://', '', $hjemmeside), '/')) . '</div>'; }
-            if($besked != ''){   $description .= '<div>' . mb_ucfirst($besked) . '</div>'; }
-            if($type != ''){     $description .= '<div>' . mb_ucfirst($type) . '</div>'; }
+            if($besked != ''){   $description .= '<div>' . my_mb_ucfirst($besked) . '</div>'; }
+            if($type != ''){     $description .= '<div>' . my_mb_ucfirst($type) . '</div>'; }
             if($id != ''){       $description .= '<div class="description_id">' . 'ID nummer : ' . $id  . '</div>'; }
 
             $indhold_placemark .= ''
-               . '   <Placemark>' . "\r\n"
-               . '      <name>' . mb_ucfirst($navn) . '</name>' . "\r\n"
+               . '   <Placemark id="' . $id . '">' . "\r\n"
+               . '      <name>' . my_mb_ucfirst($navn) . '</name>' . "\r\n"
                . '      <Snippet>' . 'x' . '</Snippet>' . "\r\n"
                . '      <description><![CDATA[' . $description . ']]></description>' . "\r\n"
                . '      <styleUrl>' . $style . '</styleUrl>' . "\r\n"
@@ -154,7 +140,7 @@ $indhold .= ''
    . '   <atom:author>' . "\r\n"
    . '      <atom:name>Scootergrisen</atom:name>' . "\r\n"
    . '   </atom:author>' . "\r\n"
-   . '   <atom:link href="http://' . $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME']. '" />' . "\r\n"
+   . '   <atom:link href="' . $GLOBALS['setup']['domain'] . $_SERVER['SCRIPT_NAME']. '" />' . "\r\n"
    . '   <description><![CDATA[Butikker, værksteder, forhandlere og andre steder som kan have interesse for scooter/knallert-folket.' . "\r\n"
    . '' . "\r\n"
    . 'Kontakt mig hvis du kender et sted som skal med på kortet eller hvis du har en rettelse :' . "\r\n"

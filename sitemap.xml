@@ -4,17 +4,22 @@
  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
- xmlns:geo="http://www.google.com/geo/schemas/sitemap/1.0"
 >
 
-<url><loc>http://scootergrisen.dk/sitemap_video.xml</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/php/rss.php</loc><priority>1.0</priority><changefreq>daily</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/kml/kml.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 
 <url><loc>http://scootergrisen.dk/forum/</loc><priority>1.0</priority><changefreq>always</changefreq></url>
+
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/index.php</loc><priority>0.5</priority><changefreq>daily</changefreq></url>
+<url><loc>http://scootergrisen.dk/scooterhjemmeside/introduktion.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/start.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/nyheder.php</loc><priority>0.5</priority><changefreq>daily</changefreq></url>
+<url><loc>http://scootergrisen.dk/scooterhjemmeside/todo.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
+<url><loc>http://scootergrisen.dk/scooterhjemmeside/login.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
+<url><loc>http://scootergrisen.dk/scooterhjemmeside/ratingoversigt.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
+<url><loc>http://scootergrisen.dk/scooterhjemmeside/sog.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
+<url><loc>http://scootergrisen.dk/scooterhjemmeside/gratisreklame.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/kontakt.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/forsikring.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
@@ -122,7 +127,7 @@
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/service_fejlfinding_elektrisk.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/service_fejlfinding_karburator.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/service_fejlfinding_kendteproblemer.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
-<url><loc>http://scootergrisen.dk/scooterhjemmeside/service_fejlfinding_luftfilterogudstodning.ph</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
+<url><loc>http://scootergrisen.dk/scooterhjemmeside/service_fejlfinding_luftfilterogudstodning.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/service_fejlfinding_motor.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/service_fejlfinding_starter.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/service_fejlfinding_styretoj.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
@@ -188,6 +193,7 @@
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/specielt_giantcoebuddy.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/altomgilera.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/altomgovecs.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
+<url><loc>http://scootergrisen.dk/scooterhjemmeside/altomgrace.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/altomheromajestic.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/altomhonda.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/altomitaljet.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
@@ -246,17 +252,15 @@
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/2takt_modellermed2taktmotor.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/elektriskescootere.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 
-<url><loc>http://scootergrisen.dk/scooterhjemmeside/teoriprove.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/nummerplade.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/billeder.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/videoer.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/spil.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/lyd.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 
+<url><loc>http://scootergrisen.dk/scooterhjemmeside/teoriprove.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
+
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/links.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 <url><loc>http://scootergrisen.dk/scooterhjemmeside/stederidanmark.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
-
-<url><loc>http://scootergrisen.dk/scooterhjemmeside/introduktion.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
-<url><loc>http://scootergrisen.dk/scooterhjemmeside/gratisreklame.php</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
 
 </urlset>

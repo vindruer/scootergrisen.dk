@@ -48,7 +48,7 @@ T. Hansens mekaniker 120 ml. olie i hvert forgaffelrør.
 ,'
 forgaffelolie
 ' => '
-' . ahref('olie.php#forgaffelolie', 'Forgaffelolie') . '
+'.ahref('olie.php#forgaffelolie', 'Forgaffelolie').'
 '
 
 );

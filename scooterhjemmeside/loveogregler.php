@@ -4,7 +4,7 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_loveogregler2.png';
+$setup['sideikon']               = 'ikoner/ikon_loveogregler2.png';
 
 $title = "love og regler til scootere og knallerter";
 $overskrift = "love og regler til scootere og knallerter";
@@ -105,7 +105,6 @@ med højst 5%.
 på 30 km/h for en lille knallert og 45 km/h for en stor knallert ikke kunne
 overskrides med mere end 20 %.
 ').'
-I '.ahref('http://www.youtube.com/watch?v=sc3AuW2TWq0', 'denne video').' kan du se hvordan det kan se ud når man bliver stopper for at køre for hurtigt på scooter.
 ').'
 '
 

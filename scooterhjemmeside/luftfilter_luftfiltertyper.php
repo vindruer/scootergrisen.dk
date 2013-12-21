@@ -11,7 +11,7 @@ $metadescription = "forklaring af forskellige luftfiltertyper der findes på sco
 $databasecenter = array(
 
 '
-luftfilter typer
+luftfiltertyper
 ' => '
 '.afsnit('vådt papir typen','
 Lavet af vådt papir med lim som er bukket for at opnå en større overflade.

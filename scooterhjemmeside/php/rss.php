@@ -9,14 +9,14 @@ require_once './php/scooterhjemmeside_funktioner.php';
 
 $nyheder = require_once './php/nyhederdatabase.php';
 
+$httpservername = 'http://' . $_SERVER['SERVER_NAME'];
 $servername = $_SERVER['SERVER_NAME'];
-$channeltitle = "Scootergrisen nyt"; // Det som kommer til at slå i Bookmarks toolbar når man tilføjer det i en browser
-$description = "Nyheder fra Scootergrisen";
-$logo = 'http://' . $_SERVER['SERVER_NAME'] . '/' . $GLOBALS['setup']['dataogbilledmappe'] . '/ikoner/' . 'rsschannellogo.png';
+
+$logo = $httpservername . '/' . $GLOBALS['setup']['dataogbilledmappe'] . '/ikoner/' . 'rsschannellogo.png';
 $logo_width = '111';
 $logo_height = '41';
-$self = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER["SCRIPT_NAME"];
-$itemlink = 'http://' . $servername . '/' . $GLOBALS['setup']['datamappe'] . '/nyheder.php';
+$self = $httpservername . $_SERVER["SCRIPT_NAME"];
+$itemlink = $httpservername . '/' . $GLOBALS['setup']['datamappe'] . '/nyheder.php';
 $language = 'da';
 $tegnfra_title =       array("<"     ,"&lt;"  , ">"     , "&gt;" , "\""    , "/"     );
 $tegntil_title =       array("&#x3C;","&#x3C;", "&#x3E;","&#x3E;", "&#034;", "&#047;");
@@ -35,7 +35,7 @@ if(isset($nyheder)){
 
          $nydato = explode(" ", $dato);
 
-         $dato = mb_ucfirst($dato);
+         $dato = my_mb_ucfirst($dato);
 
          $nyhed = trim($nyhed);
          $nyhed = str_replace("\r\n", "<br>", $nyhed);
@@ -103,7 +103,7 @@ if(isset($nyheder)){
 $indhold  = ''
    . '<?xml version="1.0" encoding="UTF-8" ?>' . "\r\n"
    . "\r\n"
-   . '<!-- Dette er RSS feed nyhederne for http://' . $servername . ' -->' . "\r\n"
+   . '<!-- Dette er RSS feed nyhederne for ' . $httpservername . ' -->' . "\r\n"
    . '<!-- Med dette RSS feed kan du automatisk modtage nyheder fra hjemmesiden -->' . "\r\n"
    . '<!-- Hvis du ser denne tekst i en browser betyder det måske at din browser ikke understøtter RSS feed eller også kan RSS feed funktionen være slået fra -->' . "\r\n"
    . "\r\n"
@@ -113,9 +113,9 @@ $indhold  = ''
    . "\r\n"
    . '<atom:link href="' . $self . '" rel="self" type="application/rss+xml"/>' . "\r\n"
    . "\r\n"
-   . '   <title>' . $channeltitle . '</title>' . "\r\n"
-   . '   <link>http://' . $servername . '/</link>' . "\r\n" // skal være samme som <image>s <link>
-   . '   <description>' . $description . '</description>' . "\r\n"
+   . '   <title>' . $GLOBALS['setup']['rsschanneltitle'] . '</title>' . "\r\n"
+   . '   <link>' . $httpservername . '/</link>' . "\r\n" // skal være samme som <image>s <link>
+   . '   <description>' . $GLOBALS['setup']['rsschanneldescription'] . '</description>' . "\r\n"
    . '   <language>' . $language . '</language>' . "\r\n"
    . '   <webMaster>SLETDETMEDSTORT' . $GLOBALS['setup']['minemail'] . ' (' . $servername . ')</webMaster>' . "\r\n"
    . '   <managingEditor>SLETDETMEDSTORT' . $GLOBALS['setup']['minemail'] . ' (' . $servername . ')</managingEditor>' . "\r\n"
@@ -124,8 +124,8 @@ $indhold  = ''
    . '   <generator>Notepad++ PHP Apache</generator>' . "\r\n"
    . "\r\n"
    . '   <image>' . "\r\n"
-   . '      <title>' . $channeltitle . '</title>' . "\r\n" // skal være samme som channel title
-   . '      <link>http://' . $servername . '/</link>' . "\r\n" // skal være samme som <channel>s <link>
+   . '      <title>' . $GLOBALS['setup']['rsschanneltitle'] . '</title>' . "\r\n" // skal være samme som channel title
+   . '      <link>' . $httpservername . '/</link>' . "\r\n" // skal være samme som <channel>s <link>
    . '      <url>' . $logo . '</url>' . "\r\n"
    . '      <width>' . $logo_width . '</width>' . "\r\n"
    . '      <height>' . $logo_height . '</height>' . "\r\n"
@@ -140,7 +140,7 @@ $indhold  = ''
 
 header("Content-Type: application/rss+xml; charset=UTF-8");
 
-print $indhold;
+echo $indhold;
 
 /*
 

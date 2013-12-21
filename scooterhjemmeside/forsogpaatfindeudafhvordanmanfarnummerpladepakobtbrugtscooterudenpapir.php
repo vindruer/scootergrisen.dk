@@ -13,10 +13,10 @@ $databasecenter = array(
 '
 forsøg på at finde ud af hvordan man får nummerplade på købt brugt scooter uden papir
 ' => '
-'.visbilled('1', 'billed3621.jpg', 'ansøgning om registeringsattest', false, true).'
+'.visbilled('1', 'billed3621.jpg', 'ansøgning om registreringsattest', false, true).'
 '.visfil('1', 'scooterhjemmeside/download/ansogning_om_ny_registreringsattest.pdf').'
 
-Køb af scooter uden typeattest/registerings attest
+Køb af scooter uden typeattest/registreringsattest.
 Kan fås hos CRM (Centralregisteret for motorkøretøjer) selvom man ikke er sidste registeret ejer af køretøjet. Selvom der vist er en del bøvl hos CRM.
 
 '.citat('

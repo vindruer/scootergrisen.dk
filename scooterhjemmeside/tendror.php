@@ -4,7 +4,7 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_tendror2.png';
+$setup['sideikon']               = 'ikoner/ikon_tendror2.png';
 
 $title = "tændrør";
 $overskrift = "tændrør";
@@ -453,7 +453,7 @@ lær mere om tændrør
 '
 
 ,'
-eksempler på tændrør brugt i scootere
+eksempler på tændrør brugt i scootere med 50 ccm motor
 ' => '
 NGK BPR6HS
 NGK BPR7HS

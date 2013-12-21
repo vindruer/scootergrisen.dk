@@ -20,10 +20,6 @@ function checkip(){
             exit;
             break;
 
-         case '83.93.215.225' : // en eller anden der skrev "fuck dig" gennem orphus stavekontrol fra http://scootergrisen.dk/uv/111/5-ting-der-bare-ikke-ma-ske-hvis-du-moder-politiet-pa-scooter
-            exit;
-            break;
-
          // 2-3-4 besøg på samme sekund med refere fra .ru sider mest
          case '176.102.219.6' :
          case '46.118.126.194' :
@@ -235,12 +231,6 @@ function checkip(){
             exit;
             break;
 
-         // person skrev fra begrensninger.php siden med afsender : dårlig (besked : så dårlig)
-         // hvis personen syns det er dårligt så behøver personen vel ikke se hjemmesiden
-         case '79.161.250.145' :
-            exit;
-            break;
-
          case '202.3.66.95' :
          case '46.43.64.71' :
          case '195.251.250.244' :
@@ -312,7 +302,6 @@ function checkreferer(){
          case 'http://housemilan.ru/news.php?readmore=354' : header("Location: http://housemilan.ru/news.php?readmore=354"); exit; break;
          case 'http://rieltor-pro.ru/' : header("Location: http://rieltor-pro.ru/"); exit; break;
          case 'http://dlm.dn.ua/' : header("Location: http://dlm.dn.ua/"); exit; break;
-         case 'http://google.com/search?q=anonymous' : header("Location: http://google.com/search?q=anonymous"); exit; break;
          case 'http://bulgaria.bbeasy.ru/' : header("Location: http://bulgaria.bbeasy.ru/"); exit; break;
          case 'http://penfriends-international.com/' : header("Location: http://penfriends-international.com/"); exit; break;
 

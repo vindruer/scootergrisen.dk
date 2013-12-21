@@ -8,7 +8,7 @@ $title = "giantco scootere med 50 cm³ og elektrisk motor";
 $overskrift = "giantco";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
 // giantcohk.com virker ikke mere (checket den 12-01-2012 ... sjovt nok efter T Hansen er holdt op med det mærke).
 
@@ -861,7 +861,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'LNGTGBDL89C LNGTGBDL79C304', 'LNGTGBDL38C', 'LBX (1999)', 'LNGTGBDL48C, LNGTGBDL77C (lille knallert), LNGTGBDL46C (lille knallert), LNGTGBDL87C LNGTGBDL99C303 LNGTGBDL17C309 (lille knallert) LNGTGBDL37C302235 (SPRINT SE, 3 SE D23 E15465-01)')
+      ,'stelnummer'        => ens('stelnummer', 'LNGTGBDL89C LNGTGBDL79C304', 'LNGTGBDL38C', 'LBX (1999)', 'LNGTGBDL48C, LNGTGBDL77C (lille knallert), LNGTGBDL46C (lille knallert), LNGTGBDL87C LNGTGBDL99C303 LNGTGBDL17C309 (lille knallert) LNGTGBDL37C302235 (SPRINT SE, 3 SE D23 E15465-01) LNGTGBDL38C304021 (GIANTCO, SPRINT SE, 3 SE D23)')
       ,'udstødning'        => ens('udstødning', '', '', '')
       ,'euroemission'      => ens('euroemission', '2', '', '')
       ,'vægttør'           => ens('vægttør', '73-80', '', '')

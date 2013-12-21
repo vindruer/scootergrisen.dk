@@ -4,7 +4,7 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_links2.png';
+$setup['sideikon']               = 'ikoner/ikon_links2.png';
 
 $title = "links til scooterrelaterede hjemmesider";
 $overskrift = "links til scooterrelaterede hjemmesider";
@@ -12,20 +12,17 @@ $metadescription = "links til andre scooterrelaterede hjemmesider som forum, for
 
 $linksarray = require_once './php/linksdatabase.php';
 
-$databasecenter = array(
-
-'
-foreslå en hjemmeside formular
-' => '
-' . visforeslalink('foreslå en hjemmeside')
-
-);
+$databasecenter = array();
 
 if(isset($linksarray)){
 
    foreach($linksarray as $deloverskrift => $links){
 
-      $noget = galleri('start');
+      $noget = '';
+
+      $noget .= '<!--ignore-->';
+
+      $noget .= galleri('start');
 
       foreach($links as $link){
 
@@ -34,6 +31,8 @@ if(isset($linksarray)){
       }
 
       $noget .= galleri('slut');
+
+      $noget .= '<!--ignore-->';
 
       $databasecenter[$deloverskrift] = $noget;
 

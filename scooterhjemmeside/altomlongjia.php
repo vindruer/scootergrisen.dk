@@ -8,7 +8,7 @@ $title = "longjia (VGA) scootere med 50 cm³ motor";
 $overskrift = "longjia (VGA)";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_longjia.png';
+$setup['sideikon']               = 'logoer/logo_longjia.png';
 
 $databasecenter = array(
 
@@ -584,7 +584,7 @@ Se også forum emnet : '.ahref('http://scootergrisen.dk/forum/viewtopic.php?f=3&
 '.ahref('http://www.thansen.dk/product.asp?c=7803453770&n=-879358269&pn=-778409204', 'Beslag for avistaske til frontmontering (499,-)').'<br>
 '.ahref('http://www.thansen.dk/product.asp?c=6865671661&n=-879358269&pn=-879350574', 'Bagagebærer, STOR, Foran (499,-) (sat ned fra 899,- til 499,- som restsalg)').'<br>
 <br>
-De kalder boksen for "isoleret transportboks" fordi det ikke er godkendt til mad. Men det kan være den bliver godkendt.
+De kalder boksen for "isoleret transportboks" fordi den vist ikke er godkendt til mad.
 ')
 
    ),'begrænsninger'       => array(

@@ -4,8 +4,8 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "lejer";
-$overskrift = "lejer";
+$title = "kuglelejer og nålelejer";
+$overskrift = "kuglelejer og nålelejer";
 $metadescription = "information om lejer der sidder i scootere og dekodning af lejekoder";
 
 $databasecenter = array(

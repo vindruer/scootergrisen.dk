@@ -8,7 +8,7 @@ $title = "jincheng knallerter med 50 cm³ motor";
 $overskrift = "jincheng";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
 $databasecenter = array(
 
@@ -120,7 +120,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'LJCPCBLC051001189', '', '', '')
+      ,'stelnummer'        => ens('stelnummer', 'LJCPCBLC051001189', 'LJCPCBLCX11000237', '', '')
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '74', '', '', '')

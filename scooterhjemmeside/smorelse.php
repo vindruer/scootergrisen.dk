@@ -136,12 +136,11 @@ Karburatorvæsken blander sig med vandet og gør at vandet får et lavere frysep
 '.visbilled('1', 'billed0958.jpg', 'karburatorvæske', false, true).'
 Som det ses i videoen blander benzinen sig ikke med vandet og karburatorvæsken.
 Selvom der i databladet fra Q8 står at det er fuld blandbart med benzin og vand.
-'.visflash('0', "http://www.youtube.com/v/f5ugAnhbcJE", 'karburatorvæske og vand', true).'
+
 Her er vandet i bunden af flasken frosset efter at flasken har stået udendørs i frostvejr.
 Hvis dette skete i benzintanken ville der formodentligt ikke kunne løbe benzin ned til karburatoren.
 '.visbilled('1', 'billed1083.jpg', 'karburatorvæske med frosset vand', false, true).'
-Her har jeg haft rimeligt meget vand i flasken og ik så meget karburatorvæske så derfor har vand og karburatorvæske kunne fryse.
-'.visflash('0', "http://www.youtube.com/v/EZod3L7LRTg", 'karburatorvæske og vand udsat for frost', true).'
+
 På denne beholder står at karburatorvæsken indeholder ethanol/isopropylalkohol.
 '.visbilled('1', 'billed2009.jpg', 'karburatorvæske ethanol/isopropylalkohol', false, true).'
 
@@ -240,8 +239,6 @@ Vand i bremsevæsken giver et lavere kogepunkt.
 Jo mere vand jo lavere kogepunkt.
 
 Når bremsevæsken har optaget 2-3% vand bør den skiftes.
-
-'.visflash('0', "http://www.youtube.com/watch?v=jYPTZCEJ718", 'her kan man se hvordan vand og bremsevæske blander sig med hinanden', true).'
 ').'
 
 '.afsnit('angriber','
@@ -580,7 +577,7 @@ Hvis boret bliver for varmt så er det åbenbart ikke godt også skal man bruge 
 ,'
 forgaffelolie
 ' => '
-' . ahref('olie.php#forgaffelolie', 'Forgaffelolie') . '
+'.ahref('olie.php#forgaffelolie', 'Forgaffelolie').'
 '
 
 );

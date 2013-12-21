@@ -71,10 +71,8 @@ Jeg har haft nogle problemer på min Kymco Super 8 4T som bare slukker forlyset 
 Grunden til dette er fordi CDI boksen er defekt og kun nogle gange laver det pulserende signal som lys kontrol boksen skal bruge for at tænde forlyset.
 Strømmen til positionslyset går ikke igennem lys kontrol boksen så positionslyset påvirkes ikke.
 
-'.visflash('0', "http://www.youtube.com/v/D4Ahihd5Y7E", 'lys kontrol boksen er forbundet ligesom den ville være på scooteren bortset fra ledningen til CDI boksen', true).'
-'.visflash('0', "http://www.youtube.com/v/udwYtSV_7D0", '12 volt transformer er forbundet i stedet for scooterens batteri som strømkilde. Transformatoren kan ikke få begge pære til at lyse. Sikkert fordi den ikke kan levere nok ampere. Den levere vist omkring 1,2 ampere', true).'
 Se og lyt til hvordan den analoge viser pulsere. Dette pulserende signal er det som får forlyset til at blive ved med at lyse.
-'.visflash('0', "http://www.youtube.com/v/TVwcQtX2DZI", 'analog måler forbundet og digital multimeter mellem batteriets minus terminal (stel) og benet i CDI boksen som går til lys kontrol boksen', true).'
+
 Min CDI boks var defekt for når jeg slukker motoren og tænder den igen sender CDI boksen ikke noget pulserende signal.
 
 Der er en anden bruger som har haft nøjagtigt det samme problem og hans CDI boks blev også defekt efter cirka 20-24 måneder ligesom min.

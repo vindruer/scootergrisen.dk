@@ -13,10 +13,9 @@ $databasecenter = array(
 '
 forreste remskiver
 ' => '
-'.visflash('0', "http://www.youtube.com/watch?v=VqwrFMF6s4U", 'Her ses at det kun er den inderste remskive som bevæger sig ind og ud', true).'
 For at tage de forreste remskiver af skal møtrikken forrest i variatoren fjernes.
 '.visbilled('1', 'billed0993.jpg', 'variator', false, true).'
-' . ahref('transmission_forresteremskiver.php#fjern_motrikken_ved_de_forreste_remskiver', 'Fjern møtrikken ved de forreste remskiver') . '
+'.ahref('transmission_forresteremskiver.php#fjern_motrikken_ved_de_forreste_remskiver', 'Fjern møtrikken ved de forreste remskiver').'
 
 Under møtrikken er en skive, en "griber", blæserhjulet og den yderste remskive som kan tages af.
 '.visbilled('1', 'billed0173.jpg', 'variator forreste remskive kilerem gliderør', false, true).'
@@ -166,7 +165,7 @@ Det kan dog virke lidt voldsomt.
 Du kan også kile en lille gaffelnøgle fast mellem remskivens tænder og motorblokken.
 Denne metode bruger jeg selv og jeg kan godt anbefale den.
 '.visbilled('1', 'billed1490.jpg', 'afmontering af remskive møtrik', false, true).'
-'.visflash('0', 'http://www.youtube.com/watch?v=zYCasW5pY24', 'video der viser hvordan man kan kile en lille gaffelnøgle fast og fjerne møtrikken', true).'
+
 Du kan også bruge en oliefiltertang.
 '.visbilled('1', 'billed0182.jpg', 'afmontering af remskive', false, true).'
 Du kan også købe et specielt stykke metal du spænder fast i de samme huller som holdt variatordækslet med de samme skruer som bruges til variatordækslet.

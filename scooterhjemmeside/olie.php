@@ -4,22 +4,58 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "motorolie, gearolie, hydrauliskolie";
-$overskrift = "motorolie, gearolie, hydrauliskolie";
-$metadescription = "forklaring af olie til motorer, hvor olien kommer fra, om den er mineralsk, syntetisk, gearolie, motorolie, forgaffelolie, standarder, SAE, API, JASO, viskositet";
+$title = "motorolie, gearolie, hydraulikolie";
+$overskrift = "motorolie, gearolie, hydraulikolie";
+$metadescription = "forklaring af olie til motorer, hvor olien kommer fra, om den er mineralsk, syntetisk eller semisyntetisk, gearolie, motorolie, forgaffelolie, standarder, SAE, API, JASO, viskositet";
 
 $databasecenter = array(
 
 '
-introduktion
+motoroliedunke til 4 takt motor
 ' => '
-Olie bruges i motoren, reduktionsgearet og i hydrauliske støddæmperne.
+Her ses nogle dunke med motorolie til 4 takt motorer.
 '.visbilled('1', 'billed0384.jpg', 'oliedunk castrol power rs r4 4t sae 5w-40 ultimate power and performance full synthetic motor oil trizone 5W40 W5 carcare supertech engine oil synthetic hi-tech oil for modern engines', false, true).'
-Olien lægger sig som en tynd film mellem delene så de ikke kommer i direkte kontakt med hinanden.
+
+Her ses nogle af de motorolier jeg har brugt i min scooter med 4 takt motor.
+'.visbilled('1', 'billed2171.jpg', 'forskellige motorolie dunke', false, true).'
+'.
+box(array('260', '150', '80', '60', '120')
+   ,array(
+       array('motorolie',                      'butik',                   'kroner', 'liter', 'kroner/liter')
+      ,array('IQ-X EXTRA 10W-40',              'T-Hansen',                '69',   '1',     '69')
+      ,array('Shell Helix Plus 10W-40',        'Bilka',                   '169',  '4',     '42,25')
+      ,array('Castrol Power1 GPS 10W-40',      'scooter forhandler',      '156',  '1',     '156')
+      ,array('Mobil Super 2000 X1 10W-40',     'Bilka',                   '199',  '4',     '49,75')
+      ,array('Motul 5100 ester 10W-40',        'Enghave motor',           '140',  '1',     '140')
+      ,array('W5 supertech 5W-40',             'Lidl',                    '35',   '1',     '35')
+   )
+)
+.'
+Castrol\'s 1 liter dunk har en smal indbygget tragt som passer ned i hullet ved oliepinden og gør det meget lettere at fylde olie på i forhold til de andre dunke hvor man skal bruge en tragt.
+Det kan anbefales og købe en dunk med indbygget smal tragt også kan man fylde olie i den dunk fra andre dunke som ikke har denne tragt.
+'.visbilled('1', 'billed0786.jpg', 'motorolie påfyldning kymco super 8 4T', false, true).'
 '
 
 ,'
-mineralsk og syntetisk
+motoroliedunke til 2 takt motor
+' => '
+Her ses nogle dunke med motorolie til 2 takt motorer.
+'.visbilled('1', 'billed0925.jpg', 'motorolie til 2 takt motor', false, true).'
+Nogle dunke har et langt plastikrør man kan hives ud så det er lettere at fylde olie på olietanken uden at spilde.
+
+På nyere 2 takt scootere hældes motorolien i en olietank.
+
+På ældre 2 takt knallerter (som Puch Maxi) blandes motorolien i benzinen inden blandingen fyldes i benzintanken.
+Blandingsforholdet kan for eksempel være 2 % olie i benzinen.
+Eller skrevet på en anden måde 1:50 (1 del olie til 50 dele benzin).
+Det vil sige 0,02 liter (samme som 20 ml) olie per liter benzin.
+
+Motorolien på 2 takt scootere genbruges ikke men kommer igennem motoren og ud af udstødningen.
+Det er derfor udstødningen fra en 2 takt motor ofte stinker meget og laver røg.
+'
+
+,'
+mineralsk, syntetisk og semi syntetisk
 ' => '
 '.afsnit('mineralsk','
 Raffineret olie som for eksempel kommer fra undergrunden.
@@ -29,7 +65,7 @@ Billigt.
 ').'
 
 '.afsnit('syntetisk','
-Menneskeskabt på fabrik ud fra mineralsk olie som er blevet kemisk bearbejdet for at gøre den ensartet.
+Menneskeskabt på fabrik fra mineralsk olie som er blevet kemisk bearbejdet for at gøre den ensartet.
 Kan bruges ved et bredt temperaturområde.
 Kan holde i længere tid mellem olieskift.
 Tåler højere temperature.
@@ -46,7 +82,7 @@ motorolie
 ' => '
 Motorolie beskytter, rengøre og køler motorens dele.
 
-Motorolie bruges til at smøre og køle motorens bevægelige dele som krumtap lejer, plejlstangs lejer, cylindervæg, knastkæde, knastaksel, vippearmaksler og på nogle scootere også koblingen.
+Motorolie bruges til at smøre og køle motorens bevægelige dele som krumtaplejer, plejlstangslejer, cylindervæg, knastkæde, knastaksel, vippearmsaksler og på nogle modeller også koblingen.
 
 Her ses noget Castrol GPS motorolie.
 '.visbilled('1', 'billed2492.jpg', 'rød motorolie castrol', false, true).'
@@ -58,44 +94,44 @@ Her ses ned i en W5 carcare oliedunk.
 '.afsnit('motorolie passage','
 Her ses motoroliens vej fra bunden af motoren gennem oliesien til oliepumpen og videre til højre krumtapleje og det nederste plejlstangsleje og op langs den ene pindbolt gennem cylinder og topstykke til vippearmakslerne og knastakslen og tilbage til bunden af motoren i venstre side ned langs knastkæden.
 '.visbilled('1', 'billed0397.jpg', 'olie passage', false, true).'
-Jeg er ikke sikker men jeg tror måske der er et hul gennem plejlstangen så olien kan komme op til den øverste del af plejlstangen og nålelejet der.
-Jeg ved ikke hvordan det venstre krumtapleje bliver smurt.
-Der er noget med at olien kan plaske op nede fra krumtappen når den drejer rundt og dermed kan sprøjte op på cylinderen og indersiden af stemplet for at køle det.
+Det er noget med at olien plasker op nede fra krumtappen når den drejer rundt og dermed kan sprøjte op på cylinderen og indersiden af stemplet for smørre og køle der.
 ').'
 
 '.afsnit('olie forbrug','
 En smule af den olie som findes i motoren passere forbi stempelringene, ind i forbrændingskammeret og ud gennem udstødningsventilen til udstødningen.
 Olie forbruget stiger ved høje omdrejninger.
+Hvis stempelringe og cylindervæg er skadet på grund af en ridse i vægen så kan olie forbruget stige.
 ').'
 
 '.afsnit('ny og brugt motorolie','
 Her ses forskellen mellem ny og brugt motorolie.
 Den nye motorolie er klar og den brugte motorolie er meget sort.
+Lugten er også anderledes.
 '.visbilled('1', 'billed1837.jpg', 'ny og brugt motorolie', false, true).'
 '.visbilled('1', 'billed1838.jpg', 'brugt motorolie', false, true).'
 Her hældes brugt motorolie over i en større beholder inden det afleveres på genbrugspladsen.
 '.visbilled('1', 'billed1839.jpg', 'brugt motorolie', false, true).'
 ').'
 
-'.afsnit('motorolie beregnet til biler','
-Kan man bruge motorolie beregnet til biler i en scooter ?.
+'.afsnit('Kan man bruge motorolie beregnet til biler i en scooter ?','
+Det korte svar er ja hvis koblingen ikke er i kontakt med motorolien.
 
-Bil motorolie kan indeholde additiver som nedsætter friktionen og dermed nedsætte brændstof forbruget.
-Hvis man har en scooter hvor koblingen er i motorolie så vil koblingen komme til at glide.
+Motorolie til biler kan indeholde additiver som nedsætter friktionen og dermed nedsætte brændstofforbruget.
+Hvis man har en scooter hvor koblingen er i motorolie så kan koblingen komme til at glide.
 På de fleste scooter er koblingen ikke i motorolie.
 Sachs Madass har dog koblingen i motorolie og der står i manualen at man ikke skal bruge motorolie beregnet til biler med tilføjet additiver som nedsætter friktion.
 Motorolie med additiver som nedsætter friktionen kaldes også "energy conserving", energi besparende eller letløbsolie.
 
 Det skulle muligvis også være et problem hvis gearne er i motorolie da olien vist så ikke vil beskytte gearne godt nok.
-De fleste scootere har ikke gear.
+De fleste scootere har dog ikke gear.
 
-Jeg har selv brugt bil motorolie i min scooter og det lader til at virke fint. Dog har jeg nogle gange haft problemer med kompression men jeg ved ikke om det kan skyldes olien.
-Da jeg prøvede med en motorolie til motorcykler så syntes jeg af den virkede mere tyk i det. Motoren kørte på en lidt anden måde. Det som om at med bil motorolien løb motoren lettere hvilket passer meget godt med at der er tilføjet additiver som nedsætter friktionen.
+Jeg har selv brugt motorolie til biler i min scooter og det lader til at virke fint. Dog har jeg nogle gange haft problemer med kompression men jeg ved ikke om det kan skyldes olien.
+Da jeg prøvede med en motorolie til motorcykler så syntes jeg af den virkede mere tyk i det. Motoren kørte på en lidt anden måde. Det er som om at med motorolien til biler løb motoren lettere hvilket passer meget godt med at der er tilføjet additiver som nedsætter friktionen.
 
 Så hvis scooteren har tør kobling (som de fleste scootere har) så vil jeg mene at man godt kan bruge motorolie beregnet til biler.
 ').'
 '.afsnit('motorolie emballage','
-Her følger nogle eksempler på hvad der kan står på motorolie emballage.
+Her følger nogle eksempler på hvad der kan stå på motorolie emballage.
 ').'
 '.afsnit('Mobil Super 2000 X1','
 '.visbilled('1', 'billed2172.jpg', 'Mobil Super 2000 X1', false, true).'
@@ -164,10 +200,10 @@ Viskositeten kan for eksempel være SAE 2,5W til SAE 30.
 5W er meget tyndtflydende og giver en blød affjedring.
 Jo højere tal jo hårdere bliver dæmpningen.
 Støddæmperens hårdhed bestemmes også af hvor meget olie er i rørene.
-Jo mere olie jo hårdere. Jo mindre olie (og dermed mere luft over olien) jo blødere, da luften kan trykkes sammen.
+Jo mere olie jo hårdere. Jo mindre olie (og dermed mere luft over olien) jo blødere, da luften lettere kan trykkes sammen.
 '.visbilled('1', 'billed1507.jpg', 'forgaffel olie', false, true).'
 
-Hos enghave motor fik jeg en kopi af følgende skema som de bruger til at finde ud af hvad slags motul gaffelolie der passer til de forskellige producenters data.
+Hos enghave motor fik jeg en kopi af et skema som de bruger til at finde ud af hvad slags motul gaffelolie der passer til de forskellige producenters data.
 '.
 box(array('120', '120', '120', '120', '220')
    ,array(
@@ -363,7 +399,7 @@ SAE 5W-40 motorolie kan også bruges og skulle give lettere motorstart om vinter
 hvor kommer olien fra ?
 ' => '
 Olien kan for eksempel hentes op af undergrunden af en boreplatform.
-Denne olie kaldes råolie. På engelsk kaldes råolie for "crude oil".
+Denne olie kaldes råolie. På engelsk kaldet "crude oil".
 
 Råolie kan for eksempel bestå af...
 46,2 % benzin
@@ -383,33 +419,6 @@ Her ses et laboratorie hos Motul som fremstiller syntetisk olie.
 Her ses Motorex i Østrig.
 '.visbilled('1', 'billed2444.jpg', 'Motorex', false, true).'
 '.visbilled('1', 'billed2445.jpg', 'Motorex', false, true).'
-'
-
-,'
-egne erfaringer
-' => '
-Her ses nogle af de motorolier jeg har brugt i min scooter.
-'.visbilled('1', 'billed2171.jpg', 'forskellige motorolie dunke', false, true).'
-'.
-box(array('260', '150', '80', '60', '120')
-   ,array(
-       array('motorolie',                      'butik',                   'kroner', 'liter', 'kroner/liter')
-      ,array('IQ-X EXTRA 10W-40',              'T-Hansen',                '69',   '1',     '69')
-      ,array('Shell Helix Plus 10W-40',        'Bilka',                   '169',  '4',     '42,25')
-      ,array('Castrol Power1 GPS 10W-40',      'scooter forhandler',      '156',  '1',     '156')
-      ,array('Mobil Super 2000 X1 10W-40',     'Bilka',                   '199',  '4',     '49,75')
-      ,array('Motul 5100 ester 10W-40',        'Enghave motor',           '140',  '1',     '140')
-      ,array('W5 supertech 5W-40',             'Lidl',                    '35',   '1',     '35')
-   )
-)
-.'
-Castrol\'s 1 liter dunk har en smal indbygget tragt som passer ned i hullet ved oliepinden og gør det meget lettere at fylde olie på i forhold til de andre dunke hvor man skal bruge en tragt.
-'.visbilled('1', 'billed0786.jpg', 'motorolie påfyldning kymco super 8 4T', false, true).'
-Hvis man køber en dunk med smal indbygget traget så kan man bruge den igen ved at fylde andre olier på fra dunke som ikke har smal tragt. Kan anbefales.
-
-Da jeg kørte med Shell Helix Plus olien kom der et hvidt lag på næsen af tændrøret som jeg har læst muligvis stammer fra additiver som er tilsat olien.
-'.visbilled('1', 'billed0492.jpg', 'Hvid belægning på tændrør', false, true).'
-Jeg er dog ikke helt sikker på at det hvide lag på tændrøret er på grund af olie da der var nogle problemer med den motor.
 '
 
 ,'
@@ -441,26 +450,6 @@ Giver mindre fiktion i motoren.
 Ikke egnet til motorer med våd kobling da koblingen så vil glide.
 Det friktionsnedsættende stof kan for eksempel være molybdenum.
 ').'
-Man kan også købe additiver og selv blande det i olien eller benzinen.
-For eksempel kan man købe "octane booster" som øger oktantallet i benzinen.
-Man kan også købe additiver som renser motoren for belægninger i forbrændingskammeret eller renser dyserne på motorer med brændstofindsprøjtning.
-'
-
-,'
-motorolie til 2 takt motor
-' => '
-Her ses nogle forskellige dunke med motorolie til 2 takt motorer.
-'.visbilled('1', 'billed0925.jpg', '2 takt motorolie', false, true).'
-Nogle dunke har et langt plastikrør man kan hives ud så det er lettere at fylde olie på uden at spilde.
-
-På nyere 2 takt scootere hældes motorolien i en olietank.
-
-På ældre 2 takt knallerter som Puch Maxi blandes motorolien i benzinen inden den fyldes i benzintanken.
-Blandingsforholdet kan for eksempel være 2 % olie i benzinen.
-Eller skrevet på en anden måde 1:50 (1 del olie til 50 dele benzin).
-
-Motorolien på 2 takt scootere genbruges ikke men kommer igennem motoren og ud af udstødningen.
-Det er derfor udstødningen fra en 2 takt motor ofte stinker meget.
 '
 
 );

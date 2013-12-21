@@ -32,13 +32,13 @@ Når man trykker ned hvor der står PASSING så kommer knappen selv op igen.
 ,'
 bremsekontakt
 ' => '
-' . ahref('bremser.php#bremsekontakt', 'Bremsekontakt') . '
+'.ahref('bremser.php#bremsekontakt', 'Bremsekontakt').'
 '
 
 ,'
 støttebenskontakt
 ' => '
-' . ahref('stotteben.php#stottebenskontakt', 'Støttebenskontakt') . '
+'.ahref('stotteben.php#stottebenskontakt', 'Støttebenskontakt').'
 '
 
 ,'

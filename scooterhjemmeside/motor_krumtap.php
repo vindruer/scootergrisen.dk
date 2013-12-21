@@ -39,10 +39,6 @@ galleriholder(array(
 
 ))
 .'
-
-'.visflash('0', 'http://www.youtube.com/watch?v=bf07DxbENR0', 'krumtappen skal åbenbart kunne bevæge sig sidelæns sådan her på en 4 takt motor', true).'
-'.visflash('0', 'http://www.youtube.com/watch?v=iNj3VbBCRRM', 'krumtappen kan let sættes i og tages ud på denne 4 takt motor, sådan skal det vist være', true).'
-
 '
 
 );

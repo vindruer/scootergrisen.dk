@@ -4,7 +4,7 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_start2.png';
+$setup['sideikon']               = 'ikoner/ikon_start2.png';
 
 $title = "start (menu med billeder)";
 $overskrift = "start (menu med billeder)";
@@ -106,6 +106,8 @@ foreach($leftcontentmenuer as $menuoverskrift => $menudata){
 
    $indholdb = '';
 
+   $indholdb .= '<!--ignore-->';
+
    $indholdb .= galleri('start');
 
       foreach($menudata as $normalmenuoverskrift => $value){
@@ -114,7 +116,7 @@ foreach($leftcontentmenuer as $menuoverskrift => $menudata){
          //if($menuoverskrift != $GLOBALS['setup']['l_m_scootermerker']){
 
             // hent normal menu
-            $normalmenuoverskrifttitle = mb_ucfirst($value[key($value)]);
+            $normalmenuoverskrifttitle = my_mb_ucfirst($value[key($value)]);
 
             if($value['thumbnail'] != ''){
 
@@ -148,18 +150,18 @@ foreach($leftcontentmenuer as $menuoverskrift => $menudata){
 
                      if(isset($GLOBALS['setup']['l_m_scootermerker']) && $menuoverskrift == $GLOBALS['setup']['l_m_scootermerker']){
 
-                           $submenutitle = mb_ucfirst($submenuvalue[key($submenuvalue)]);
+                           $submenutitle = my_mb_ucfirst($submenuvalue[key($submenuvalue)]);
                            $thumb = $submenuvalue['logo'];
                            $navn = $submenukey;
                            $url = key($submenuvalue);
-                           //$indhold .= '<li>' . ahref(key($submenuvalue), mb_ucfirst($submenutekst), 'title="' . $submenutitle . '"') . '</li>' . "\r\n";
+                           //$indhold .= '<li>' . ahref(key($submenuvalue), my_mb_ucfirst($submenutekst), 'title="' . $submenutitle . '"') . '</li>' . "\r\n";
 
                         $indholdb .= galleri('logob', $url,  $thumb, $navn);
 
                      }else{
 
                            // undermenuoverskrifter
-                           $submenutitle = mb_ucfirst($submenuvalue[key($submenuvalue)]);
+                           $submenutitle = my_mb_ucfirst($submenuvalue[key($submenuvalue)]);
 
                            if(isset($submenuvalue['thumbnail'])){
 
@@ -190,6 +192,8 @@ foreach($leftcontentmenuer as $menuoverskrift => $menudata){
       }
 
    $indholdb .= galleri('slut');
+
+   $indholdb .= '<!--ignore-->';
 
    $del[$menuoverskrift] = $indholdb;
 

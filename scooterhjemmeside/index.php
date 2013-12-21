@@ -9,11 +9,18 @@ $overskrift = "scootergrisen.dk - En hjemmeside om scootere og knallerter";
 $metadescription = "her finder du info om scootere og knallerter som findes i Danmark, der må køre 25, 30 og 45 km/t";
 
 $setup['visreklame']             = 0;
-$setup['visspotlys']             = 0;
+$setup['visspotlys']             = 1;
+$setup['spotlysantal']           = count($setup['spotlys']);
 $setup['counterogsocialemedier'] = 1;
 
 $GLOBALS['setup']['head'] = '
 <style type="text/css">
+
+.mobileenhederoverskrift {
+   margin: 1em auto;
+   padding: 1em;
+   text-align: center;
+}
 
 html {
    height: 100%; /* css footer and stay down */

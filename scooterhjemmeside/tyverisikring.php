@@ -181,7 +181,7 @@ Knappen afbryder forbindelsen mellem pickup og CDI.
 .'</div>
 <div class="clearboth"></div>
 Bruger mobiltelefonnettet til at sende SMS beskeder med koordinationer fra GPS satellitterne om hvor den befinder sig.
-Positionen kan man så indtaste på for eksempel en GPS navigator eller google maps for at se hvor trackeren befinder sig.
+Positionen kan man så indtaste på for eksempel en GPS navigator eller kortsystem på nettet for at se hvor trackeren befinder sig.
 Der skal indsættes et SIM kort i trackeren som man selv skal købe.
 Du kan også ringe til trackeren som har en indbygget mikrofon så du eventuelt kan høre hvad tyven siger.
 Trackerens nøjagtighed er på under 5 meter.
@@ -304,7 +304,7 @@ Jeg bruger ikke denne lås på min scooter mere efter jeg fandt ud af hvor let d
 ,'
 tændingslås
 ' => '
-' . ahref('elektrisk_kontakter.php#tendingslas', 'Tændingslås') . '
+'.ahref('elektrisk_kontakter.php#tendingslas', 'Tændingslås').'
 '
 
 ,'

@@ -8,7 +8,7 @@ $title = "derbi scootere med 50 cm³ motor";
 $overskrift = "derbi";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
 $databasecenter_b = array(
 
@@ -904,7 +904,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', 'stål', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'VTHSR__1A', 'VTHSR1D1A', 'VTHSDR1', 'ZDPABG01XBH ZDPABG011BH ZDPABG018BH') . ' ZDPABG015BH (lille knallert), ZDPABG012BH (lille knallert) VTHSENDARVH065 (stor 1997) VTHSDR1EBYH139600 (E10501)'
+      ,'stelnummer'        => ens('stelnummer', 'VTHSR__1A', 'VTHSR1D1A', 'VTHSDR1', 'ZDPABG01XBH ZDPABG011BH ZDPABG018BH') . ' ZDPABG015BH (lille knallert), ZDPABG012BH (lille knallert) VTHSENDARVH065 (stor 1997) VTHSDR1EBYH139600 (E10501) ZDPABG013BH487545 (lille knallert E18242-01)'
       ,'udstødning'        => ens('udstødning', 'med katalysator', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '97', '', '', '(bare angivet som vægt)') . ens('vægttør', '90', '', '', '(i følge typegodkendelserne)')

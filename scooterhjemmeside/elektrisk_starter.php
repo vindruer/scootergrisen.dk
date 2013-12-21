@@ -77,7 +77,6 @@ Tager man huset af starterrelæet kan man se hvordan relæet virker.
 '.visbilled('1', 'billed1763.jpg', 'starterrelæ adskilt', false, true).'
 Den øverste plade bliver tiltrukket af den magnetiske kerne i midten af spolen når der sættes strøm til spolen.
 '.visbilled('1', 'animation0020.gif', 'starterrelæ animation', false, true).'
-'.visflash('0', 'http://www.youtube.com/watch?v=FSKQiO-Fyss', 'se og hør relæet slå til og fra', true).'
 
 Man skal bremse på for eller bagbremsen før starter knappen kan bruges.
 Desuden sidder der på nogle scootere en kontakt ved sidestøttebenet så man kun kan starte når sidestøttebenet er slået op.

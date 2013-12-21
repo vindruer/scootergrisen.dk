@@ -20,7 +20,6 @@ Når du suger skal der komme benzin ud i af benzinslangen og når du stopper med
 I denne video er kun benzinslangen taget af ved karburatoren.
 Her kan man se hvordan benzinflowet er når motoren ikke kan starte (tændrørshætten er taget af).
 Og benzinflowet mens motoren køre.
-'.visflash('0', "http://www.youtube.com/watch?v=wQ6p3rRVqMo", 'test af benzinflow', true).'
 '
 
 ,'

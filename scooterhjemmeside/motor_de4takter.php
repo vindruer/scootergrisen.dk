@@ -4,11 +4,11 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'animation0002.gif';
+$setup['sideikon']               = 'animation0002.gif';
 
 $title = "de 4 takter - 4 takt motor";
 $overskrift = "de 4 takter - 4 takt motor";
-$metadescription = "forklaring af de 4 takter på en 4 takt motor. Indsugning, kompression, forbrænding, udstødning på en 4 takt motor og animation af motorgangen";
+$metadescription = "forklaring af de 4 takter på en 4 takt motor. Indsugning, kompression, forbrænding, udstødning og animation af motorgangen";
 
 $databasecenter = array(
 

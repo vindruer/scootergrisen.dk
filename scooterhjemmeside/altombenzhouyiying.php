@@ -8,7 +8,7 @@ $title = "benzhou yiying scootere med 50 cm³ motor";
 $overskrift = "benzhou yiying";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 //http://www.benzhougroup.com/product.html
 //stranger : VT7824 LD5GY0BCB7B010212 YY50QT-B
 $databasecenter = array(

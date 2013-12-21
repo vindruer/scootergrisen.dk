@@ -8,7 +8,7 @@ $title = "norsjö vareknallert med 50 cm³ og elektrisk motor";
 $overskrift = "norsjö";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_norsjo.png';
+$setup['sideikon']               = 'logoer/logo_norsjo.png';
 
 $databasecenter = array(
 

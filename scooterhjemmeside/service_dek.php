@@ -266,13 +266,13 @@ Og her ses dækket indefra.
 
 Hvis du ikke kan finde hullet kan du gøre følgende.
 
-'.visflash('0', 'http://www.youtube.com/watch?v=3wLJn7xJth0', 'gør dækket vådt med vand og kig efter små bobler', true).'
+Gør dækket vådt med vand og kig efter små bobler
 
 Sæt scooteren på centerstøtteben udover et trin og sæt noget tungt på fodbrættet sådan at scooteren ikke kan vælter bagover.
 '.visbilled('1', 'billed1234.jpg', 'kymco super 8 4T find hul i dæk med en spand vand', false, true).'
 Bagenden kan så bevæges op og ned så det passer med spanden.
 '.visbilled('1', 'billed1235.jpg', 'kymco super 8 4T find hul i dæk med en spand vand', false, true).'
-'.visflash('0', 'http://www.youtube.com/watch?v=I0vq_PZC_Do', 'ved at holde dækket nede i spanden med vand vil man kunne se luftbobler komme op der hvor hullet er', true).'
+Ved at holde dækket nede i spanden med vand vil man kunne se luftbobler komme op der hvor hullet er.
 Når hullet er fundet og lappet kan man igen checke om der kommer bobler op ved lapningen og andre steder.
 
 Man skulle også kunne lappe et slangeløst dæk indefra.

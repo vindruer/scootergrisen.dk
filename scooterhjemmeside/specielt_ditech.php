@@ -13,12 +13,8 @@ $databasecenter = array(
 '
 introduktion
 ' => '
-På denne side vil jeg samle det jeg kan finde om DITech motoren som kan findes i nogle modeller af Aprilia SR og Scarabeo.
+Her ses en DITech motor.
 '.visbilled('1', 'billed2677.jpg', 'Aprilia DITech motor', false, true).'
-
-Jeg har lavet denne side fordi jeg havde nogen filer liggende og tænkte det ville være bedre at lægge dem på hjemmesiden så andre kan have glæde af dem.
-
-Se også '.ahref('brandstofindsprojtning.php', 'Brændstofindsprøjtning').' og '.ahref('service_elektrisk.php#service_af_ecu', 'Service af ECU').'.
 '
 
 ,'
@@ -60,8 +56,7 @@ videoer
 </video>
 <!--ignore-->
 
-Videoen kan hentes i følgende formater : 
-   '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_removal_of_the_injection_system.wmv', 'wmv')
+Videoen kan hentes i følgende formater : '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_removal_of_the_injection_system.wmv', 'wmv')
 .' '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_removal_of_the_injection_system.ogv', 'ogv')
 .' '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_removal_of_the_injection_system.mp4', 'mp4')
 .'
@@ -77,8 +72,7 @@ Videoen kan hentes i følgende formater :
 </video>
 <!--ignore-->
 
-Videoen kan hentes i følgende formater : 
-   '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_changing_the_injector_ring_seal.wmv', 'wmv')
+Videoen kan hentes i følgende formater : '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_changing_the_injector_ring_seal.wmv', 'wmv')
 .' '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_changing_the_injector_ring_seal.ogv', 'ogv')
 .' '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_changing_the_injector_ring_seal.mp4', 'mp4')
 .'
@@ -94,8 +88,7 @@ Videoen kan hentes i følgende formater :
 </video>
 <!--ignore-->
 
-Videoen kan hentes i følgende formater : 
-   '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_refitting_the_injection_system.wmv', 'wmv')
+Videoen kan hentes i følgende formater : '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_refitting_the_injection_system.wmv', 'wmv')
 .' '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_refitting_the_injection_system.ogv', 'ogv')
 .' '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_refitting_the_injection_system.mp4', 'mp4')
 .'
@@ -111,8 +104,7 @@ Videoen kan hentes i følgende formater :
 </video>
 <!--ignore-->
 
-Videoen kan hentes i følgende formater : 
-   '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_checking_the_compressor_unit.wmv', 'wmv')
+Videoen kan hentes i følgende formater : '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_checking_the_compressor_unit.wmv', 'wmv')
 .' '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_checking_the_compressor_unit.ogv', 'ogv')
 .' '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_checking_the_compressor_unit.mp4', 'mp4')
 .'
@@ -128,8 +120,7 @@ Videoen kan hentes i følgende formater :
 </video>
 <!--ignore-->
 
-Videoen kan hentes i følgende formater : 
-   '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_fitting_a_new_crankshaft.wmv', 'wmv')
+Videoen kan hentes i følgende formater : '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_fitting_a_new_crankshaft.wmv', 'wmv')
 .' '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_fitting_a_new_crankshaft.ogv', 'ogv')
 .' '.ahref($GLOBALS['setup']['domainogdatamappe'] . '/videoer/ditech_fitting_a_new_crankshaft.mp4', 'mp4')
 .'
@@ -138,11 +129,11 @@ Videoen kan hentes i følgende formater :
 <!--ignore-->
 <script type="text/javascript">
 
-   video1 = document.getElementById("ditechvideo1");
-   video2 = document.getElementById("ditechvideo2");
-   video3 = document.getElementById("ditechvideo3");
-   video4 = document.getElementById("ditechvideo4");
-   video5 = document.getElementById("ditechvideo5");
+   var video1 = document.getElementById("ditechvideo1"),
+       video2 = document.getElementById("ditechvideo2"),
+       video3 = document.getElementById("ditechvideo3"),
+       video4 = document.getElementById("ditechvideo4"),
+       video5 = document.getElementById("ditechvideo5");
 
    video1.volume = 0.5;
    video2.volume = 0.5;
@@ -210,10 +201,10 @@ Kan vel bruges til at lave sit eget kabel.
 ,'
 aprilia SR typer
 ' => '
-Der findes vist en del forskellige Aprilia SR både med karburator og med Purejet og med Ditech motor.
+Der findes vist en del forskellige Aprilia SR både med karburator og med PureJet og med Ditech motor.
 
 Motormodellen C364M er med karburator og angives også som C 364.
-Motormodellen C361M er med Purejet motor og angives også som IE 361.
+Motormodellen C361M er med PureJet motor og angives også som IE 361.
 Motormodellen med ditech motor angives også som IE 50.
 
 IE står for electronic injection.
@@ -257,6 +248,12 @@ Her ses en luft injector før rengøring.
 '.visbilled('1', 'billed2891.jpg', 'aprilia DITech luft injector rengjort', false, true).'
 Her ses luft injectoren som sidder monteret i topstykket.
 '.visbilled('1', 'billed2892.jpg', 'aprilia DITech luft injector rengjort', false, true).'
+'
+
+,'
+se også
+' => '
+'.ahref('brandstofindsprojtning.php', 'Brændstofindsprøjtning').' og '.ahref('service_elektrisk.php#service_af_ecu', 'Service af ECU').'.
 '
 
 );

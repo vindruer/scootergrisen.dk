@@ -15,7 +15,6 @@ videoer
 ' => '
 Her er nogen videoer hvor man kan se diverse ting på en elektrisk scooter.
 
-'.visflash('0', "http://www.youtube.com/watch?v=HEpggpBroWg", 'Giantco E-buddy 45 km/t', true).'
 '.visflash('0', "http://www.youtube.com/watch?v=6S7OmqlUq-c", 'Begrænser stik på controller (40 km/t eller 20 km/t)', true).'
 
 <div style="text-align: center;">

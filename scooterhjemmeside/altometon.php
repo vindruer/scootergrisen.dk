@@ -8,7 +8,7 @@ $title = "e-ton scootere med elektrisk motor";
 $overskrift = "e-ton";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_eton.png';
+$setup['sideikon']               = 'logoer/logo_eton.png';
 
 $databasecenter = array(
 

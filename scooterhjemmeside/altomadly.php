@@ -8,14 +8,14 @@ $title = "adly scootere med 50 cm³ motor";
 $overskrift = "adly";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
 $databasecenter = array(
 
 'adlybaboon' => array(
 
      'specielt'            => array(
-       'besked'            => ens('besked', '', '', '', '')
+       'besked'            => ens('besked', 'silverfox er vist med 130/60-13" for og bag (9995,-)', ''.ahref('http://www.yndgaardauto.dk/adly.htm').'', '', '')
 
    ),'generelt'            => array(
        'model'             => ens('model', 'adly baboon', '', '', '')
@@ -57,7 +57,7 @@ $databasecenter = array(
 
    ),'brændstof'           => array(
        'benzin'            => ens('benzin', '', '', '', '')
-      ,'benzintank'        => ens('benzintank', '', '', '', '')
+      ,'benzintank'        => ens('benzintank', '5,7', '', '', '')
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
@@ -104,7 +104,7 @@ $databasecenter = array(
       ,'controller'        => ens('controller', '', '', '', '')
 
    ),'olie og væsker'      => array(
-       'motor'             => ens('olie', '', '', '', '')
+       'motor'             => ens('olie', '', '', '1,4', '')
       ,'gear'              => ens('olie', '', '', '', '')
       ,'forgaffel'         => ens('olie', '', '', '', '')
       ,'kølervæske'        => ens('kølervæske', '', '', '', '')
@@ -299,7 +299,7 @@ $databasecenter = array(
 
    ),'generelt'            => array(
        'model'             => ens('model', 'adly gazelle', '', '', '')
-      ,'ogsåkaldet'        => ens('ogsåkaldet', 'noble ?', '', '', '')
+      ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
       ,'scootertype'       => ens('scootertype', 'TB-50', '', '', '')
       ,'varianter'         => ens('varianter', 'TB-50 I (en skrivebremse for, noget med dæk)', 'TB-50 II (dobbelt skivebremse for, noget med dæk)', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
@@ -541,6 +541,146 @@ $databasecenter = array(
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '', '')
       ,'stelnummer'        => ens('stelnummer', 'RFLATJT50VA001098 (45 km/t S07813-01)', 'RFLATJT50VA001017 (HD858)', '', '')
+      ,'udstødning'        => ens('udstødning', '', '', '', '')
+      ,'euroemission'      => ens('euroemission', '', '', '', '')
+      ,'vægttør'           => ens('vægttør', '', '', '', '')
+      ,'vægtkørerklar'     => ens('vægtkørerklar', '', '', '', '')
+      ,'vægttotal'         => ens('vægttotal', '', '', '', '')
+      ,'bæreevne'          => ens('bæreevne', '', '', '', '')
+      ,'luftfiltertype'    => ens('luftfiltertype', '', '', '', '')
+      ,'stigeevne'         => ens('stigeevne', '', '', '', '')
+      ,'medfølger'         => ens('medfølger', '', '', '', '')
+      ,'bremsevæske'       => ens('bremsevæske', '', '', '', '')
+      ,'støj'              => ens('støj', '', '', '', '')
+      ,'bagagevolume'      => ens('bagagevolume', '', '', '', '')
+      ,'bakgear'           => ens('bakgear', '', '', '', '')
+      ,'importør'          => ens('importør', '', '', '', '')
+      ,'producent'         => ens('producent', '', '', '', '')
+      ,'andet'             => ens('andet', '', '', '', '')
+
+   ),'begrænsninger'       => array(
+       'begrænstransmis'   => ens('begrænstransmis', '', '', '', '')
+      ,'begrænstænding'    => ens('begrænstænding', '', '', '', '')
+      ,'begrænskarburator' => ens('begrænskarburator', '', '', '', '')
+      ,'begrænsluftfilter' => ens('begrænsluftfilter', '', '', '', '')
+      ,'begrænscontroller' => ens('begrænscontroller', '', '', '', '')
+      ,'begrænsruller'     => ens('begrænsruller', '', '', '', '')
+      ,'begrænsindsug'     => ens('begrænsindsug', '', '', '', '')
+      ,'begrænsudstødning' => ens('begrænsudstødning', '', '', '', '')
+      ,'begrænsstelnum'    => ens('begrænsstelnum', '', '', '', '')
+      ,'begrænsandet'      => ens('begrænsandet', '', '', '', '')
+
+   )
+
+),'adlynoble' => array(
+
+     'specielt'            => array(
+       'besked'            => ens('besked', ''.ahref('http://www.yndgaardauto.dk/adly.htm').'', '', '', '')
+
+   ),'generelt'            => array(
+       'model'             => ens('model', 'adly noble', '', '', '')
+      ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
+      ,'scootertype'       => ens('scootertype', '', '', '', '')
+      ,'varianter'         => ens('varianter', '', '', '', '')
+      ,'pris'              => ens('pris', '11995', '', '', '')
+      ,'hastighed'         => ens('hastighed', '30', '', '', '')
+      ,'farver'            => ens('farver', '', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
+
+   ),'motor'               => array(
+       'motormodel'        => ens('motormodel', '', '', '', '')
+      ,'motortype'         => ens('motortype', '2 takt', '', '', '')
+      ,'elmotorspec'       => ens('elmotorspec', '', '', '', '')
+      ,'volume'            => ens('volume', '', '', '', '')
+      ,'køling'            => ens('køling', '', '', '', '')
+      ,'boring'            => ens('boring', '', '', '', '')
+      ,'slaglængde'        => ens('slaglængde', '', '', '', '')
+      ,'ventiler'          => ens('ventiler', '', '', '', '')
+      ,'ventiljustering'   => ens('ventiljustering', '', '', '', '')
+      ,'kompression'       => ens('kompression', '', '', '', '')
+      ,'tomgang'           => ens('tomgang', '', '', '', '')
+      ,'nomieffektogheste' => ens('nomieffektogheste', '', '', '', '')
+      ,'maxeffektogheste'  => ens('maxeffektogheste', '', '', '', '')
+      ,'moment'            => ens('moment', '', '', '', '')
+      ,'karburator'        => ens('karburator', '', '', '', '')
+      ,'brændstof indsp..' => ens('brændstof indsp..', '', '', '', '')
+      ,'smøring'           => ens('smøring', '', '', '', '')
+      ,'tændrør'           => ens('tændrør', '', '', '', '')
+
+   ),'dimensioner'         => array(
+       'længde'            => ens('længde', '', '', '', '')
+      ,'bredde'            => ens('bredde', '', '', '', '')
+      ,'højde'             => ens('højde', '', '', '', '')
+      ,'sædehøjde'         => ens('sædehøjde', '', '', '', '')
+      ,'frihøjde'          => ens('frihøjde', '', '', '', '')
+      ,'akselafstand'      => ens('akselafstand', '', '', '', '')
+
+   ),'brændstof'           => array(
+       'benzin'            => ens('benzin', '', '', '', '')
+      ,'benzintank'        => ens('benzintank', '7', '', '', '')
+      ,'forbrug'           => ens('forbrug', '', '', '', '')
+
+   ),'hjul'                => array(
+       'fælgfor'           => ens('fælg', '', '', '', '')
+      ,'fælgbag'           => ens('fælg', '', '', '', '')
+      ,'dækfor'            => ens('dæk1', '120', '70', '12', '')
+      ,'dækbag'            => ens('dæk1', '120', '70', '12', '')
+      ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
+      ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
+      ,'affjedringfor'     => ens('affjedringfor', '', '', '', '')
+      ,'affjedringbag'     => ens('affjedringbag', '', '', '', '')
+      ,'bremserfor'        => ens('bremser', '', '', '', '')
+      ,'bremserbag'        => ens('bremser', '', '', '', '')
+      ,'eger'              => ens('eger', '', '', '')
+      ,'castervinkel'      => ens('castervinkel', '', '', '')
+      ,'efterløb'          => ens('efterløb', '', '', '')
+      ,'drejevinkel'       => ens('drejevinkel', '', '', '', '')
+      ,'venderadius'       => ens('venderadius', '', '', '', '')
+
+   ),'elektrisk'           => array(
+       'starterbatteri'    => ens('starterbatteri', '', '', '', '')
+      ,'batterispec1'      => ens('batterispec1', '', '', '', '')
+      ,'batterispec2'      => ens('batterispec2', '', '', '', '')
+      ,'batterivægt'       => ens('batterivægt', '', '', '', '')
+      ,'batterilevetid'    => ens('batterilevetid', '', '', '', '')
+      ,'generator'         => ens('generator', '', '', '', '')
+      ,'sikring'           => ens('sikring', '', '', '', '')
+      ,'tændingssystem'    => ens('tændingssystem', '', '', '', '')
+      ,'elstart'           => ens('elstart', '', '', '', '')
+      ,'kickstart'         => ens('kickstart', '', '', '', '')
+      ,'lysfor'            => ens('lys', '', '', '', '')
+      ,'lysbagbremse'      => ens('lys', '', '', '', '')
+      ,'lysbag'            => ens('lys', '', '', '', '')
+      ,'lysbremse'         => ens('lys', '', '', '', '')
+      ,'lyspositions'      => ens('lys', '', '', '', '')
+      ,'lysblink'          => ens('lys', '', '', '', '')
+      ,'lyskontrolblink'   => ens('lys', '', '', '', '')
+      ,'lyskontrollangt'   => ens('lys', '', '', '', '')
+      ,'lysnummerplade'    => ens('lys', '', '', '', '')
+      ,'lysinstrument'     => ens('lys', '', '', '', '')
+      ,'oplader'           => ens('oplader', '', '', '', '')
+      ,'ladetid'           => ens('ladetid', '', '', '', '')
+      ,'rækkevidde'        => ens('rækkevidde', '', '', '', '')
+      ,'controller'        => ens('controller', '', '', '', '')
+
+   ),'olie og væsker'      => array(
+       'motor'             => ens('olie', '', '', '', '')
+      ,'gear'              => ens('olie', '', '', '', '')
+      ,'forgaffel'         => ens('olie', '', '', '', '')
+      ,'kølervæske'        => ens('kølervæske', '', '', '', '')
+
+   ),'transmission'        => array(
+       'transmissiontype'  => ens('transmissiontype', '', '', '', '')
+      ,'kobling'           => ens('kobling', '', '', '', '')
+      ,'antalgear'         => ens('antalgear', '', '', '', '')
+      ,'gearratio'         => ens('gearratio', '', '', '', '')
+      ,'tandhjulfor'       => ens('tandhjulfor', '', '', '', '')
+      ,'tandhjulbag'       => ens('tandhjulbag', '', '', '', '')
+      ,'reduktionsratio'   => ens('reduktionsratio', '', '', '', '')
+
+   ),'ekstra'              => array(
+       'stel'              => ens('stel', '', '', '', '')
+      ,'stelnummer'        => ens('stelnummer', '', '', '', '')
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '', '', '', '')

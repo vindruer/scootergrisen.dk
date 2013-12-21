@@ -15,6 +15,9 @@ $kobogsalgarray = $linksarray['køb og salg'];
 if(isset($forsikringsselskaberarray)){
 
       $forsikringsselskaberkode = '';
+
+      $forsikringsselskaberkode .= '<!--ignore-->';
+
       $forsikringsselskaberkode .= galleri('start');
 
       foreach($forsikringsselskaberarray as $link){
@@ -25,11 +28,16 @@ if(isset($forsikringsselskaberarray)){
 
       $forsikringsselskaberkode .= galleri('slut');
 
+      $forsikringsselskaberkode .= '<!--ignore-->';
+
 }
 
 if(isset($kobogsalgarray)){
 
       $kobogsalgkode = '';
+
+      $kobogsalgkode .= '<!--ignore-->';
+
       $kobogsalgkode .= galleri('start');
 
       foreach($kobogsalgarray as $link){
@@ -39,6 +47,8 @@ if(isset($kobogsalgarray)){
       }
 
       $kobogsalgkode .= galleri('slut');
+
+      $kobogsalgkode .= '<!--ignore-->';
 
 }
 
@@ -114,7 +124,7 @@ Virker alle lys (kort/langt, bag, bremse, blink, position, instrument, nummerpla
 Virker bremserne.
 
 Jo flere km den har kørt jo mere slidt er den.
-Spørg sælgeren om at se papir som typeattest/registerings attest og kvitteringer.
+Spørg sælgeren om at se papir som typeattest/registreringsattest og kvitteringer.
 Få en snak med ejeren og spørg om alt er originalt eller om der er skiftet nogle dele på den.
 Spørg om den har været udsat ulykker så stellet eller andre dele eventuelt er skæve.
 Spørg ejeren hvor hurtigt den kan køre og prøv det selv.
@@ -187,7 +197,7 @@ Hvis det er en 30 km/t scooter som er købt fra ny før den 1. Juli 2006 så ska
 Men det kunne også være en 45 km/t scooter som har haft nummerplade på men hvor den er blevet taget af.
 For eksempel hvis forsikringen er blevet afmeldt.
 
-Der er vist også noget med at det kan give problemer hvis der ikke er nogen typeattest/registerings attest med til scooteren.
+Der er vist også noget med at det kan give problemer hvis der ikke er nogen typeattest/registreringsattest med til scooteren.
 
 Man kan måske ud fra stelnummeret se om det er en 30 eller 45 km/t.
 I nogle typegodkendelser kan stå "Tegn 8 og 9 i stelnummeret er 30 el. 60 og angiver den maksimale hastighed = 30 km/t".

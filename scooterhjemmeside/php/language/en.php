@@ -6,6 +6,8 @@ $setup['setlocalreturn'] = setlocale(LC_ALL, 'en_GB.UTF-8', 'English_United King
 
 $setup['l_sidetopbesked_dennesidevarretstor'] = 'This page was rather large and took a long time to load.<br><br>So i split the the page into several smaller pages that a faster to load.<br><br>Use the menu called';
 
+$setup['l_kodeboks_dobbeltklik'] = 'double-click the textbox to select all';
+
 $setup['l_login_youareloggedin'] = 'you are logged in';
 
 $setup['l_login_username'] = 'username';
@@ -50,7 +52,7 @@ $setup['l_smaikoner_kamera'] = 'camera';
 $setup['l_smaikoner_vinchecker'] = 'VIN checker';
 $setup['l_smaikoner_links'] = 'links';
 $setup['l_smaikoner_stederidanmark'] = 'places in denmark';
-$setup['l_smaikoner_billeder'] = 'images from the streets';
+$setup['l_smaikoner_billeder'] = 'images';
 $setup['l_smaikoner_vinterrad'] = 'winter tips';
 $setup['l_smaikoner_karburator'] = 'carburettor';
 $setup['l_smaikoner_nummerplade'] = 'licenseplate image generator til make a image that looks like a licenseplate from a small moped og large moped';
@@ -60,6 +62,18 @@ $setup['l_smaikoner_loveogregler'] = 'laws and rules';
 $setup['l_smaikoner_registrering'] = 'registration';
 $setup['l_smaikoner_tendror'] = 'sparkplug';
 
+$setup['l_spotlys_reservedelstegninger'] = 'spareparts-catalogue';
+$setup['l_spotlys_reservedelstegninger_description'] = 'se how parts sits on different models and enginetypes';
+$setup['l_spotlys_vinterrad'] = 'winter tips';
+$setup['l_spotlys_vinterrad_description'] = 'about being warm, frozen locks, hard to start engines and visor fog';
+$setup['l_spotlys_service_fejlfinding_introduktion'] = 'troubleshoot your scooter';
+$setup['l_spotlys_service_fejlfinding_introduktion_description'] = 'start here when the scooter can\'t start or runs poorly';
+$setup['l_spotlys_download'] = 'download manuals';
+$setup['l_spotlys_download_description'] = 'usermanuals, servicemanuals, electrical diagrams, sparepartscatalogue';
+$setup['l_spotlys_registrering'] = 'registration';
+$setup['l_spotlys_registrering_description'] = 'licenseplate, framenumber, enginenumber, typeattest, registreringsattest, typapproval';
+$setup['l_spotlys_tendror'] = 'spark plug';
+$setup['l_spotlys_tendror_description'] = 'everything about spark plug codes and type, etc.';
 $setup['l_spotlys_begrensninger'] = 'restrictions';
 $setup['l_spotlys_begrensninger_description'] = 'can be removed if you wish to drive faster or get lower fuel consumption';
 $setup['l_spotlys_teoriprove'] = 'try the theory test';
@@ -68,11 +82,9 @@ $setup['l_spotlys_karburator'] = 'carburettor';
 $setup['l_spotlys_karburator_description'] = 'is one of the best pages on the whole website, if not the best';
 $setup['l_spotlys_vinchecker'] = 'check frame number';
 $setup['l_spotlys_vinchecker_description'] = 'takes 17 digit VIN and returns info about the scooter (maybe)';
-$setup['l_spotlys_vinterrad'] = 'winter tips';
-$setup['l_spotlys_vinterrad_description'] = 'about being warm, frozen locks, hard to start engines and visor fog';
 $setup['l_spotlys_lyd'] = 'listen to music+audio';
 $setup['l_spotlys_lyd_description'] = '<span class="bold" style="font-family: consolas, monospace;">L Ron Harald</span><br><span class="bold" style="font-family: consolas, monospace;">Zanger Rinus</span><br><span class="bold" style="font-family: consolas, monospace;">Halløj i betalingsringen</span>';
-$setup['l_spotlys_billeder'] = 'images from the streets';
+$setup['l_spotlys_billeder'] = 'images';
 $setup['l_spotlys_billeder_description'] = 'is images i primarily took my self of scooters and other vehicles';
 $setup['l_spotlys_forum'] = 'forum (board)';
 $setup['l_spotlys_forum_description'] = 'is the place we write with each other about scooters';
@@ -93,7 +105,7 @@ $setup['l_m_hovedmenu_forum_description'] = 'is the place we write with each oth
 $setup['l_m_hovedmenu_forsiden'] = 'front page';
 $setup['l_m_hovedmenu_forsiden_description'] = 'go to the front page';
 $setup['l_m_hovedmenu_start'] = 'start (menu with images)';
-$setup['l_m_hovedmenu_start_description'] = 'here you can see the menu with images so its easy to see what the different pages is about';
+$setup['l_m_hovedmenu_start_description'] = 'shows the website menu with little images so its easy to understand what the different pages are about';
 $setup['l_m_hovedmenu_nyheder'] = 'news';
 $setup['l_m_hovedmenu_nyheder_description'] = 'her you can see about the latest changes/additions on the website';
 $setup['l_m_hovedmenu_tilfeldig'] = 'visit a random page';
@@ -102,7 +114,7 @@ $setup['l_m_hovedmenu_todo'] = 'todo';
 $setup['l_m_hovedmenu_todo_description'] = 'plans for the future of this website';
 $setup['l_m_hovedmenu_login'] = 'login';
 $setup['l_m_hovedmenu_login_description'] = 'here i can login on the website, its not meant for others to register and login';
-$setup['l_m_hovedmenu_ratingoversigt'] = 'ratings overview';
+$setup['l_m_hovedmenu_ratingoversigt'] = 'votes';
 $setup['l_m_hovedmenu_ratingoversigt_description'] = 'see which pages the users things are espacially good and bad';
 $setup['l_m_hovedmenu_sog'] = 'seach';
 $setup['l_m_hovedmenu_sog_description'] = 'search through the websites pages for sertant texts';
@@ -296,7 +308,7 @@ $setup['l_m_scooterensdele_kickstarter'] = 'kickstarter';
 $setup['l_m_scooterensdele_kickstarter_description'] = 'kickstarterarm, kickstarteraxel, ?gribehjul?';
 $setup['l_m_scooterensdele_koling'] = 'cooling';
 $setup['l_m_scooterensdele_koling_description'] = 'passiv aircooling, forced aircooling, liquidcooling, oilcooler';
-$setup['l_m_scooterensdele_lejer'] = 'bearings';
+$setup['l_m_scooterensdele_lejer'] = 'ballbearings and needlebearings';
 $setup['l_m_scooterensdele_lejer_description'] = 'decoding off letters and number on bearings';
 $setup['l_m_scooterensdele_reservedelstegninger'] = 'sparepart drawings';
 $setup['l_m_scooterensdele_reservedelstegninger_description'] = 'exploding drawings off scooter parts';
@@ -404,6 +416,75 @@ $setup['l_m_tilbehorekstraudstyr_kamera'] = 'camera';
 $setup['l_m_tilbehorekstraudstyr_kamera_description'] = 'info about cameras and helmet mounting so you can record while you ride';
 
 $setup['l_m_specielt'] = 'special / Mess box';
+$setup['l_m_specielt_manglerdata'] = '[ A - Z ] (missing data)';
+$setup['l_m_specielt_manglerdata_benelli491gt'] = 'benelli 491 GT';
+$setup['l_m_specielt_manglerdata_benelli491gt_description'] = 'watch benelli 491 GT ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_daelimsfive'] = 'daelim s-five';
+$setup['l_m_specielt_manglerdata_daelimsfive_description'] = 'watch daelim s-five ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_fanticchopper'] = 'fantic chopper';
+$setup['l_m_specielt_manglerdata_fanticchopper_description'] = 'watch fantic chopper ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_futongft50qt3'] = 'futong FT50QT-3';
+$setup['l_m_specielt_manglerdata_futongft50qt3_description'] = 'watch futong FT50QT-3 ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_huasahs50qt7'] = 'huasa HS50QT-7';
+$setup['l_m_specielt_manglerdata_huasahs50qt7_description'] = 'watch huasa HS50QT-7 ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_jmstarjsd50qt27'] = 'jmstar JSD50QT-27';
+$setup['l_m_specielt_manglerdata_jmstarjsd50qt27_description'] = 'watch jmstar JSD50QT-27 ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_jomanitrogt4'] = 'joma nitro gt4';
+$setup['l_m_specielt_manglerdata_jomanitrogt4_description'] = 'watch joma nitro gt4 ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_kyburzdxp'] = 'Kyburz DXP';
+$setup['l_m_specielt_manglerdata_kyburzdxp_description'] = 'watch Kyburz DXP ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_lyrick525'] = 'lyric K525';
+$setup['l_m_specielt_manglerdata_lyrick525_description'] = 'watch lyric K525 ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_mgbdelivery'] = 'MGB Delivery';
+$setup['l_m_specielt_manglerdata_mgbdelivery_description'] = 'watch MGB Delivery ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_qunshenge808'] = 'Qunsheng E808';
+$setup['l_m_specielt_manglerdata_qunshenge808_description'] = 'watch Qunsheng E808 ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_rmcspiga'] = 'RMC spiga';
+$setup['l_m_specielt_manglerdata_rmcspiga_description'] = 'watch RMC spiga ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_simsonalbatros'] = 'Simson Albatros';
+$setup['l_m_specielt_manglerdata_simsonalbatros_description'] = 'watch Simson Albatros ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_socaflea'] = 'soca flea 0.5';
+$setup['l_m_specielt_manglerdata_socaflea_description'] = 'watch soca flea 0.5 ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_standardmotoeasyrider'] = 'standard moto easy rider';
+$setup['l_m_specielt_manglerdata_standardmotoeasyrider_description'] = 'watch standard moto easy rider ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_thumpstarroadripper'] = 'Thumpstar Road Ripper';
+$setup['l_m_specielt_manglerdata_thumpstarroadripper_description'] = 'watch Thumpstar Road Ripper ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_transportel1200combi'] = 'Transportel 1200 combi';
+$setup['l_m_specielt_manglerdata_transportel1200combi_description'] = 'watch Transportel 1200 combi ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_tugger'] = 'Tugger';
+$setup['l_m_specielt_manglerdata_tugger_description'] = 'watch Tugger ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_xiaofeiluhrtk122'] = 'xiaofeilu HRTK122-1';
+$setup['l_m_specielt_manglerdata_xiaofeiluhrtk122_description'] = 'watch xiaofeilu HRTK122-1 ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_yadeaem05'] = 'yadea em05';
+$setup['l_m_specielt_manglerdata_yadeaem05_description'] = 'watch yadea em05 ' . $scootergentag;
+$setup['l_m_specielt_manglerdata__baotianswitch'] = 'baotian switch';
+$setup['l_m_specielt_manglerdata__baotianswitch_description'] = 'watch baotian switch ' . $scootergentag;
+$setup['l_m_specielt_manglerdata__baotianv4'] = 'baotian v4';
+$setup['l_m_specielt_manglerdata__baotianv4_description'] = 'watch baotian v4 ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_dongfangcrane'] = 'dong fang crane';
+$setup['l_m_specielt_manglerdata_dongfangcrane_description'] = 'watch dong fang crane ' . $scootergentag;
+$setup['l_m_specielt_manglerdata__eastdragon'] = 'east dragon';
+$setup['l_m_specielt_manglerdata__eastdragon_description'] = 'watch east dragon ' . $scootergentag;
+$setup['l_m_specielt_manglerdata_hmnoget'] = 'HM noget';
+$setup['l_m_specielt_manglerdata_hmnoget_description'] = 'watch HM noget ' . $scootergentag;
+$setup['l_m_specielt_manglerdata__jensenchopper'] = 'jensen chopper';
+$setup['l_m_specielt_manglerdata__jensenchopper_description'] = 'watch jensen chopper ' . $scootergentag;
+$setup['l_m_specielt_manglerdata__jonwayfreedom'] = 'jonway freedom';
+$setup['l_m_specielt_manglerdata__jonwayfreedom_description'] = 'watch jonway freedom ' . $scootergentag;
+$setup['l_m_specielt_manglerdata__macalcity'] = 'Macal PJ 50 city';
+$setup['l_m_specielt_manglerdata__macalcity_description'] = 'watch Macal PJ 50 city ' . $scootergentag;
+$setup['l_m_specielt_manglerdata__pgobubu'] = 'PGO bubu';
+$setup['l_m_specielt_manglerdata__pgobubu_description'] = 'watch PGO bubu ' . $scootergentag;
+$setup['l_m_specielt_manglerdata__sanilisl50qt5'] = 'sanili SL50QT-5';
+$setup['l_m_specielt_manglerdata__sanilisl50qt5_description'] = 'watch sanili SL50QT-5 ' . $scootergentag;
+$setup['l_m_specielt_manglerdata__sanilisl50qt8'] = 'sanili SL50QT-8';
+$setup['l_m_specielt_manglerdata__sanilisl50qt8_description'] = 'watch sanili SL50QT-8 ' . $scootergentag;
+$setup['l_m_specielt_manglerdata__tobiliner50tq'] = 'TobiLiner 50TQ';
+$setup['l_m_specielt_manglerdata__tobiliner50tq_description'] = 'watch TobiLiner 50TQ ' . $scootergentag;
+$setup['l_m_specielt_manglerdata__yadeaouhu'] = 'yadea OUHU';
+$setup['l_m_specielt_manglerdata__yadeaouhu_description'] = 'watch yadea OUHU ' . $scootergentag;
+$setup['l_m_specielt_manglerdata__yibensport'] = 'Danscooter Yiben Sport';
+$setup['l_m_specielt_manglerdata__yibensport_description'] = 'watch Danscooter Yiben Sport ' . $scootergentag;
 $setup['l_m_specielt_rodekassen'] = 'mess box';
 $setup['l_m_specielt_rodekassen_andet'] = 'other';
 $setup['l_m_specielt_rodekassen_andet_description'] = 'different unfinished subjects';
@@ -471,6 +552,8 @@ $setup['l_m_scootermerker_2_gilera'] = 'gilera';
 $setup['l_m_scootermerker_2_gilera_description'] = 'watch Gilera' . $scootergentag;
 $setup['l_m_scootermerker_2_govecs'] = 'govecs';
 $setup['l_m_scootermerker_2_govecs_description'] = 'watch Govecs' . $scootergentag;
+$setup['l_m_scootermerker_2_grace'] = 'grace';
+$setup['l_m_scootermerker_2_grace_description'] = 'watch Grace' . $scootergentag;
 $setup['l_m_scootermerker_2_heromajestic'] = 'hero majestic';
 $setup['l_m_scootermerker_2_heromajestic_description'] = 'watch Hero majestic' . $scootergentag;
 $setup['l_m_scootermerker_2_honda'] = 'honda';
@@ -627,7 +710,6 @@ $setup['l_m_hovedmenu_gratisreklame_description'] = 'get a free commercial on th
 
 $setup['language_lastupdate'] = 'page was last updated';
 $setup['language_rssnews'] = 'RSS news feed';
-$setup['language_youtubechannel'] = 'Youtube channel';
 $setup['language_github'] = 'view/edit source code on GitHub';
 $setup['language_translate'] = 'translate';
 $setup['language_contact'] = 'contact';
@@ -649,7 +731,7 @@ $setup['l_uniholder_translate'] = 'translate';
 $setup['l_uniholder_deleteandcreate'] = 'delete and create';
 
 $setup['l_contactform_title'] = 'your comment about the page';
-$setup['l_contactform_legend'] = 'write your comment about the page';
+$setup['l_contactform_legend'] = 'ask me anything';
 $setup['l_contactform_from'] = 'from (your e-mail)';
 $setup['l_contactform_message'] = 'message';
 $setup['l_contactform_submit'] = 'submit message';
@@ -667,8 +749,8 @@ $setup['l_contact_d'] = 'enable Javascript to view e-mail';
 /*
 
 GLOBALS['setup']
-mb_ucfirst()
-mb_ucfirst($GLOBALS['setup'][''])
+my_mb_ucfirst()
+my_mb_ucfirst($GLOBALS['setup'][''])
 
 */
 

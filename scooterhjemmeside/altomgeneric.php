@@ -8,7 +8,7 @@ $title = "generic scootere med 50 cm³ motor";
 $overskrift = "generic";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
 $databasecenter_b = array(
 
@@ -700,7 +700,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'LBBD01', 'VA4D01', '', '')
+      ,'stelnummer'        => ens('stelnummer', 'LBBD01', 'VA4D01', 'VA4D01327CB211602 (E19156-01)', '')
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '94', '', '', '') . '<br>' . ens('vægttør', '96', '', '', '(ifølge genericeurope.com)')

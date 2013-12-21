@@ -8,7 +8,7 @@ $title = "PGO scootere med 50 cm³ og elektrisk motor";
 $overskrift = "PGO";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
 /*
 PGO - UOPLYST :
@@ -109,8 +109,15 @@ Måske betyder P at det er en 50 cm³ motor men P9 er vist en 82 cm³ motor.
 '.visbilled('1', 'billed3404.jpg', 'pgo motortype motornummer P0', false, true).'
 
 100, 125 og 150 cm³ motorer er set med startende med C.
-For eksempel C1E5.
-'.visbilled('1', 'billed3180.jpg', 'pgo motortype motornummer', false, true).'
+For eksempel C1 og C2.
+C1M er måske 124,9 ccm.
+C2 er måske 124,9 ccm.
+C3 er måske 101 ccm.
+C5M er måske 150,1 ccm.
+F3 er måske 150,1 ccm.
+SH50D er måske 249,1 ccm.
+'.visbilled('1', 'billed3911.jpg', 'pgo motortype motornummer C1M', false, true).'
+'.visbilled('1', 'billed3180.jpg', 'pgo motortype motornummer C2', false, true).'
 
 '.afsnit('under modeller','
 P1 (Big Max PS 21-4-1999)

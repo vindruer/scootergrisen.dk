@@ -94,12 +94,6 @@ Her ses benzinmåleren i sin laveste og højeste position.
 '
 
 ,'
-video
-' => '
-'.visflash('0', "http://www.youtube.com/watch?v=qSyCjcKTyBM", 'her ses hvordan benzinmåleren og benzinviseren virker sammen', true).'
-'
-
-,'
 benzinfilter
 ' => '
 Her ses et benzinfilter.

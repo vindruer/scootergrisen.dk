@@ -8,7 +8,7 @@ $title = "honda knallerter og scootere med 50 cm³ motor";
 $overskrift = "honda";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
 $databasecenter = array(
 
@@ -397,7 +397,7 @@ $databasecenter = array(
 
    ),'ekstra'              => array(
        'stel'              => ens('stel', '', '', '', '')
-      ,'stelnummer'        => ens('stelnummer', 'VTMAF37G0TE012418 S07785-01', '', '', '')
+      ,'stelnummer'        => ens('stelnummer', 'VTMAF37G0TE012418 S07785-01', 'VTMAF37G0TE015377 (S07785-01)', '', '')
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '71', '', '', '')

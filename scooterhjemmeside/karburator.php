@@ -4,7 +4,7 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_karburator2.png';
+$setup['sideikon']               = 'ikoner/ikon_karburator2.png';
 
 $title = "karburator";
 $overskrift = "karburator";
@@ -42,7 +42,6 @@ CV typen kan kendes på låget øverst og gaskablet som er monteret i siden.
 ,'
 dele
 ' => '
-'.visflash('0', 'http://www.youtube.com/watch?v=YnzzUOcXqLY', 'adskildelse af 18,5 mm CV karburator', true).'
 '.
 galleriholder(array(
     galleri('highslide', '', 'billed1785.jpg', array('karburatorens dele', 'CV karburator fra Kymco Super 8 4T'))
@@ -129,13 +128,13 @@ Der sidder altså en clip i enden a nålen som kan sætte i nogle hak og her ska
 ,'
 benzinfilter
 ' => '
-' . ahref('benzintank.php#benzinfilter', 'Benzinfilter') . '
+'.ahref('benzintank.php#benzinfilter', 'Benzinfilter').'
 '
 
 ,'
 benzinhane
 ' => '
-' . ahref('benzintank.php#benzinhane', 'Benzinhane') . '
+'.ahref('benzintank.php#benzinhane', 'Benzinhane').'
 '
 
 ,'
@@ -336,8 +335,6 @@ galleriholder(array(
 .'
 '.afsnit('videoer','
 '.ahref('http://www.youtube.com/watch?v=5p8qluBZqhI', 'Accelerator pumpen sprøjter benzin', false, true).'
-
-'.ahref('http://www.youtube.com/watch?v=hOF1s5jlB9Q', 'Accelerator pumpen presses ned når man drejer gashåndtaget/vippegasspjældet', false, true).'
 ').'
 '
 
@@ -575,8 +572,6 @@ galleriholder(array(
     galleri('highslide', '', 'billed3102.jpg', array('automatisk choker', ''))
 ))
 .'
-'.ahref('http://www.youtube.com/watch?v=RhVK-u-LyjA', 'Video : her ses den automatisk choker når den tilsluttes strøm (videoen kører hurtigere end normalt)', false, true).'
-
 Her ses hvordan nålen lukker for benzin hullet og ventilen lukker for luft gennemstrømningen.
 '.visbilled('1', 'animation0018.gif', 'automatisk choker animation', false, true).'
 

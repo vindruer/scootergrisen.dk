@@ -216,13 +216,13 @@ links
 Her er links til hjemmesider der har relation til 3 hjulet scootere og knallerter.
 <!-- Server not found '.ahref('http://www.sahva-knallert.dk/', 'www.sahva-knallert.dk').' -->
 '.listemedgrafik(array(
-    ''.ahref('http://www.power-wheels.dk', 'www.power-wheels.dk').''
-   ,''.ahref('http://www.sportster.dk', 'www.sportster.dk').''
-   ,''.ahref('http://www.cr-mobility.dk', 'www.cr-mobility.dk').''
-   ,''.ahref('http://www.mediconord.dk', 'www.mediconord.dk').''
-   ,''.ahref('http://bike-shoppen.dk/Scootere/Handicapscooter.aspx', 'bike-shoppen.dk').''
-   ,''.ahref('http://3hjulede.cordes.dk/', '3hjulede.cordes.dk').''
-   ,''.ahref('http://www.hmi-basen.dk/', 'hmi-basen.dk').''
+    ahref('http://www.power-wheels.dk', 'www.power-wheels.dk')
+   ,ahref('http://www.sportster.dk', 'www.sportster.dk')
+   ,ahref('http://www.cr-mobility.dk', 'www.cr-mobility.dk')
+   ,ahref('http://www.mediconord.dk', 'www.mediconord.dk')
+   ,ahref('http://bike-shoppen.dk/Scootere/Handicapscooter.aspx', 'bike-shoppen.dk')
+   ,ahref('http://3hjulede.cordes.dk/', '3hjulede.cordes.dk')
+   ,ahref('http://www.hmi-basen.dk/', 'hmi-basen.dk')
 ))
 .'
 '
@@ -234,10 +234,12 @@ video
 <div style="text-align: center; margin: 0 auto;">
 <div style="margin-bottom: 1em;">PGO TR-3 invalideknallert på messe med C. Reinhardt</div>
 <div style="margin-bottom: 1em;">
-<video width="320" height="240" controls preload="metadata" poster="/scooterhjemmeside/billeder/posters/pgotr3pamesse.png" onloadedmetadata="this.volume=0.5;">
+<video width="320" height="240" style="width: 640px; height: 480px;" controls preload="metadata" poster="/scooterhjemmeside/billeder/posters/pgotr3pamesse.png" onloadedmetadata="this.volume=0.5;">
    <source src="/scooterhjemmeside/videoer/pgotr3pamesse.ogv" type="video/ogg">
    <source src="/scooterhjemmeside/videoer/pgotr3pamesse.mp4" type="video/mp4">
    <source src="/scooterhjemmeside/videoer/pgotr3pamesse.webm" type="video/webm">
+   <track kind="subtitles" src="/scooterhjemmeside/track/pgotr3pamesse_da.vtt" srclang="da" label="Dansk VTT" default>
+   <track kind="subtitles" src="/scooterhjemmeside/track/pgotr3pamesse_da.srt" srclang="da" label="Dansk SRT">
    Da din browser ikke understøtter HTML 5 &lt;video&gt; kan videoen ikke afspilles her.
    '.visbilled('1', 'posters/pgotr3pamesse.png', 'PGO TR-3 invalideknallert på messe').'
 </video>

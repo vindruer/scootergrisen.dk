@@ -118,13 +118,6 @@ De tilspændings moment som oplyses gælder muligvis kun for et nyt tændrør ud
 '
 
 ,'
-video
-' => '
-'.visflash('0', "http://www.youtube.com/watch?v=JlW2zvkyU00", 'Her renses tændrøret fra en 4 takt 50 ccm motor', true).'
-'.visflash('0', "http://www.youtube.com/watch?v=0SEcgCycJDc", 'Her skiftes tændrøret i en 2 takt horisontal motor (Video lavet af Anders Bruun Nørring)', true).'
-'
-
-,'
 hvornår skal tændrøret renses, justeres og udskiftes ?
 ' => '
 Det svinger fra manual til manual hvornår man skal rense og udskifte tændrøret.

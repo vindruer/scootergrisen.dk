@@ -107,7 +107,6 @@ G: Giv langsomt slip på bremsegrebet.
 ').'
 
 '.visbilled('1', 'billed1207.jpg', 'skivebremse caliper udluftning', false, true).'
-'.visflash('0', "http://www.youtube.com/watch?v=eys5oerqkEg", 'her kan man se hvordan man skal åbne og lukke for udluftningsventilen', true).'
 Undgå at presse og give slip hurtigt på bremsegrebet da der kan komme tilbagesprøjt op af bremsevæskebeholderen.
 
 Når der ikke kommer mere flere luftbobler ud i slangen spænder du udluftningsskruen rigtig fast og skruer låget på bremsevæskebeholderen og bremser på bremsegrebet nogle gange indtil det føles hårdt.
@@ -193,10 +192,14 @@ For eksempel kan det være minimum 3,0 mm.
 ,'
 rens bremsecaliper
 ' => '
-Hvis der kommer for meget snavs og vejsalt ind ved gummi ringene omkring stemplet kan det presse gummi ringene så hårdt ind på stemplet at stemplet ikke glider tilbage når man giver slip på bremsegrebet.
-Det vil betyde at bremsen blive ved med at bremse og dermed slide bremsebelægning og bremseskive unødigt og scooterens topfart nedsættes.
-'.visbilled('1', 'billed0142.jpg', 'bremsecaliper stempel gummi ring', false, true).'
+Mellem gummiringene og bremsecaliperen kan med tiden kommer noget hvidt pulver som kan gøre at gummiringene presser så hårdt ind på stemplet at det ikke trækker sig tilbage når man giver slip på bremsegrebet.
+
+Det vil betyde at bremsen blive ved med at bremse og dermed slides bremsebelægning og bremseskive unødigt og scooterens topfart nedsættes.
+
+Man kan opdage det ved at hjulet ikke kan dreje frit rundt selvom det er løftet fra jorden, ved at den er tung at skubbe og ved at den drejer mærkeligt når man køre.
+
 For at rense caliperen indvendigt er det nødvendigt at dræne alt bremsevæsken og fjerne stempel og gummi ringe.
+'.visbilled('1', 'billed0142.jpg', 'bremsecaliper stempel gummi ring', false, true).'
 
 Bemærk hvordan gummiringere vender inden de tages ud.
 

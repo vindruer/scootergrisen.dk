@@ -243,7 +243,7 @@ Gilera DNA
 Gilera Ice
 Gilera Runner (AC)
 Gilera Runner (LC)
-Gilera Runner Purejet
+Gilera Runner PureJet
 Gilera SMT &lt;2006
 Gilera Stalker
 Gilera Storm
@@ -292,7 +292,7 @@ Piaggio NRG (AC)
 Piaggio NRG (LC)
 Piaggio NRG Mc3
 Piaggio NRG Power DT
-Piaggio NRG Purejet
+Piaggio NRG PureJet
 Piaggio Typhoon
 Piaggio Typhoon new
 Piaggio Zip
@@ -495,7 +495,7 @@ Fartbegrænser til 4 takt (og 2 takt) motorer kan købes hos '.ahref('http://www
 
 '.afsnit('de har opdelt deres fartbegrænsere i 4 kategorier', '
 Standard (motor med karburator)
-DITech/Purejet/TSDI (motor med indsprøjtning)
+DITech/PureJet/TSDI (motor med indsprøjtning)
 Motor med pickup ved koblingsklokken
 Motor uden pickup ved koblingsklokken
 ').'

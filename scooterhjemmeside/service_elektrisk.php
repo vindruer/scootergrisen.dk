@@ -260,8 +260,6 @@ Monter først det positive (+) kabel.
 Monter derefter det negative (-) kabel.
 Smør terminalerne med et tyndt lag vaseline eller fedt for at undgå korrision.
 
-Jeg har lavet denne video der viser hvordan man gør.
-'.visflash('0', "http://www.youtube.com/watch?v=bJVqdOsVHig", 'ibrugtagning af nyt vedligeholdelsesfrit bly-syre batteri', true).'
 Se også '.ahref('http://repvideo.lars-mc.dk/repvideo/view.repair_video.php?id=22', 'Klargøring af servicefri batteri (repvideo.lars-mc.dk)').'.
 Se også '.ahref('http://repvideo.lars-mc.dk/repvideo/view.repair_video.php?id=7', 'Påmontering af nyt batteri (repvideo.lars-mc.dk)').'.
 
@@ -304,9 +302,9 @@ Her ses "Yamaha FI diagnostic tool" som viser o/min, motor temperatur og fejlkod
 En fejlkode "39" fortæller at ECU\'en har problemer med brændstof injectoren eller forbindelsen hertil.
 ').'
 
-'.afsnit('Piaggio / Gilera (Purejet)','
-På en Gilera Runner med Purejet er der sådan et stik her.
-'.visbilled('1', 'billed3283.jpg', 'gilera runner purejet stik', false, true).'
+'.afsnit('Piaggio / Gilera (PureJet)','
+På en Gilera Runner med PureJet er der sådan et stik her.
+'.visbilled('1', 'billed3283.jpg', 'gilera runner PureJet stik', false, true).'
 I manualen står bare at stikket er "forbeholdt de Autoiseret Piaggio-Gilera Serviceværksteder".
 ').'
 

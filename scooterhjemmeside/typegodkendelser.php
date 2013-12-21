@@ -4,13 +4,15 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_typegodkendelser2.png';
+$setup['sideikon']               = 'ikoner/ikon_typegodkendelser2.png';
 
 $title = "typegodkendelser til scootere og knallerter";
 $overskrift = "typegodkendelser til scootere og knallerter";
 $metadescription = "typegodkendelser fra trafikstyrelsen til scootere/knallerter som højst må køre 25, 30 og 45 km/t";
 
 /*
+http://www.fstyr.biltorvet.dk/WebForm1.aspx
+
 Der er noget galt ved nogen datoer står at der ikke er nogen men det burde der være. Set ved Axxxx'ere omkring 1997-1999
 
 udstederlsesdato :
@@ -1512,8 +1514,13 @@ Det variere hvor meget information der er i typegodkendelserne og det er ikke al
 
 For det meste er der separate typegodkendelse for en 25, 30 km/t (lille knallert) og 45 km/t (stor knallert) selvom de næsten indeholder samme information.
 
-Der findes vist kun typegodkendelser til de scootere/knallerter der skal have nummerplade, jeg har vist aldrig fundet nogen til 30 km/t 3 hjulet invaldeknallert som ikke skal have nummerplade. Jeg har heller aldrig fundet nogen typegodkendelser til 30 km/t knallert fra før 2006. For 45 km/t er de tidligste typegodkendelser jeg har fundet fra 1997.
+Der findes vist kun typegodkendelser til de scootere/knallerter der skal have nummerplade, jeg har vist aldrig fundet nogen til 30 km/t 3 hjulet invaldeknallert som ikke skal have nummerplade. Jeg har heller aldrig fundet nogen typegodkendelser til 25/30 km/t knallert fra før 2006. For 45 km/t er de tidligste typegodkendelser jeg har fundet fra 1997.
 <div class="clearboth"></div>
+Tidligste udstedelsesdatoer jeg har fundet :
+
+Tidligste 25 km/t : 10-05-2006
+Tidligste 30 km/t : 03-04-2006
+Tidligste 45 km/t : 17-02-1997
 </div>
 '
 

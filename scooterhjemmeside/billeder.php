@@ -4,7 +4,7 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_billeder2.png';
+$setup['sideikon']               = 'ikoner/ikon_billeder2.png';
 
 $title = "billeder med scootere og knallerter - Underholdning";
 $overskrift = "billeder med scootere og knallerter - Underholdning";
@@ -140,7 +140,7 @@ scootere
    ,galleri('highslide', '', 'billed3699.jpg', array('Kymco Agility'))
    ,galleri('highslide', '', 'billed3700.jpg', array('Piaggio Vespa 150'))
    ,galleri('highslide', '', 'billed3701.jpg', array('Vespa x 2 (foran Vespa Riders en café på Frederiksberg... det er vist lavet om til Vespa Cafe (http://vespabusiness.dk/)'))
-   ,galleri('highslide', '', 'billed3702.jpg', array('2 Vespaer (+ 1 inden bag ruden)'))
+   ,galleri('highslide', '', 'billed3702.jpg', array('To Vespaer (+ en inden bag ruden)'))
    ,galleri('highslide', '', 'billed3703.jpg', array('Motor Mania Speedy. Læg mærke til kickstarteren som bruges som støtteben'))
    ,galleri('highslide', '', 'billed3704.jpg', array('Baotian Rebel (BT49QT-12)'))
    ,galleri('highslide', '', 'billed3705.jpg', array('En eller anden italiensk model'))
@@ -272,9 +272,9 @@ andet
 ' => '
 '
 .galleriholder(array(
-    galleri('highslide', '', 'billed3595.jpg', array('Pendel. Man kan køre op i den i en kørestol'))
-   ,galleri('highslide', '', 'billed3689.jpg', array('Butik...'))
-   ,galleri('highslide', '', 'billed3690.jpg', array('...med en masse ældre Piaggio Vespaer'))
+    galleri('highslide', '', 'billed3595.jpg', array('HUKA Pendel. Man kan køre op i den i en kørestol'))
+   ,galleri('highslide', '', 'billed3689.jpg', array('Butik med gamle Piaggio Vespaer 1'))
+   ,galleri('highslide', '', 'billed3690.jpg', array('Butik med gamle Piaggio Vespaer 2'))
    ,galleri('highslide', '', 'billed3684.jpg', array('Mini Crosser'))
    ,galleri('highslide', '', 'billed3669.jpg', array('Måske en Giantco G-Buddy. Billedet viser meget godt fordelingen af antal cykler, scootere og biler i københavnsområdet'))
    ,galleri('highslide', '', 'billed1590.jpg', array('Reklame scootere'))

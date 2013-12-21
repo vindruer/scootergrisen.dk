@@ -4,7 +4,7 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/ikon_information2.png';
+$setup['sideikon']               = 'ikoner/ikon_information2.png';
 
 $title = "introduktion til hjemmesiden";
 $overskrift = "introduktion til hjemmesiden";

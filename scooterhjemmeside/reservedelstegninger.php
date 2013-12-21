@@ -4,9 +4,9 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$title = "reservedelstegninger";
-$overskrift = "reservedelstegninger";
-$metadescription = "reservedelstegninger til diverse 2 takt og 4 takt scootere og knallerter";
+$title = "reservedelstegninger til scootere og knallerter";
+$overskrift = "reservedelstegninger til scootere og knallerter";
+$metadescription = "reservedelstegninger til diverse scootere og knallerter med forskellige motortyper så man kan se hvordan delene sidder";
 
 $databasecenter = array(
 
@@ -15,7 +15,7 @@ introduktion
 ' => '
 Her på siden er en del reservedelstegninger fra forskellige manualer.
 
-Du kan finde flere reservedelstegninger i manualerne under '.ahref('download.php', 'download').'.
+Du kan finde flere reservedelstegninger i reservedelskataloger under '.ahref('download.php', 'download').'.
 '
 
 ,'

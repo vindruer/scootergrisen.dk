@@ -16,11 +16,11 @@ function visreklamer(){
 
       $reklamer = $GLOBALS['setup']['reklamer'];
 
-      $indhold .= '<div style="text-align: center;">';
+      $indhold .= '<div class="textaligncenter">';
 
       foreach($reklamer as $reklame){
 
-         $indhold .= ahref($reklame[1], visbilled('1', 'reklamer/' . $reklame[2], mb_ucfirst($GLOBALS['setup']['l_gratisreklame_klikpabilledet']) . ' ' . $reklame[0], false, false));
+         $indhold .= ahref($reklame[1], visbilled('1', 'reklamer/' . $reklame[2], my_mb_ucfirst($GLOBALS['setup']['l_gratisreklame_klikpabilledet']) . ' ' . $reklame[0], false, false));
          $indhold .= lidtplads('lodret');
          $indhold .= "\r\n";
 
@@ -46,7 +46,7 @@ gratis reklame
 ' => '
 Jeg vil gerne give gratis reklame til scooter relaterede hjemmesider, butikker, værksteder, træf, messer og lignende i form af et billede med link på hjemmesiden.
 
-'.afsnit('eksempler på hvad jeg vil reklamer for','
+'.afsnit('eksempler på hvad jeg vil reklamere for','
 Hjemmeside om scootere.
 Butik som sælger scootere og/eller reservedele til scootere.
 Scooter værksted.
@@ -81,6 +81,7 @@ Hvis du senere ønsker at ændre din reklame eller få den slettet så bare skri
 '.visbilled('1', 'reklamer/www.scooterklubben.dk.png', 'gratis reklame for www.scooterklubben.dk', false, true).'
 '.visbilled('1', 'reklamer/knallert-scooter.dk.png', 'gratis reklame for knallert-scooter.dk', false, true).'
 '.visbilled('1', 'reklamer/scooterfreak.tk.png', 'gratis reklame for scooterfreak.tk', false, true).'
+'.visbilled('1', 'reklamer/www.fantombike.dk.png', 'gratis reklame for www.fantombike.dk', false, true).'
 ').'
 '
 

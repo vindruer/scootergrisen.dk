@@ -67,7 +67,43 @@ Her på siden kan du omregne for eksempel dæktryk fra PSI til bar eller tilspæ
 
 Ved tilspændingsmoment opgives for eksempel "kgf m" eller "kg m". Begge enheder betyder det samme. F\'et er bare for at understrege at der er tale om en kraft og ikke en vægt.
 '
+/*
+,'
+olieblanding
+' => '
 
+Jeg arbejder på at lave en olieblandingsudregner.
+Den er ikke færdig endnu...
+
+
+olieblingsforhold udregner til 2 takt motor på omregn siden
+
+blandingssmøring 1:25 = 4 % eller 1:50 = 2% ved anvendelse af specialolie
+
+På ældre 2 takt knallerter (som Puch Maxi) blandes motorolien i benzinen inden blandingen fyldes i benzintanken.
+Blandingsforholdet kan for eksempel være 2 % olie i benzinen.
+Eller skrevet på en anden måde 1:50 (1 del olie til 50 dele benzin).
+Det vil sige 0,02 liter (samme som 20 ml) olie per liter benzin.
+
+forhold : 1:25
+procent : 2%
+liter   : 0,02 liter olie per liter benzin
+
+
+'
+. formbox('1', '', 'udregn hvor meget olie der skal i benzinen', '#', 'get', '', ''
+   . input('1', 'number', 'dataind', '', '16', 'Indtast 1:X forhold eller procent', 'olieblanding_dataind', '', 'onkeyup="udregn_olieblanding(this.form);" onchange="udregn_olieblanding(this.form);" onkeypress="return disableEnterKey(event);"', '', '6', '')
+   . input('1', 'select', 'fraogtil', 
+       '<optgroup label="x">'
+      .'<option value="forhold" selected="selected">1:X (forhold) ---&gt;</option>'
+      .'<option value="procent"                   >% (procent) -----&gt;</option>'
+      .'</optgroup>'
+      , '3', 'Vælg fra enhed', 'fratil_olieblanding', 'omregnerq', 'onchange="udregn_olieblanding(this.form);" onkeypress="return disableEnterKey(event);"', '', '', '')
+   . input('1', 'text', 'dataud', '', '16', 'Resultat 1', 'olieblanding_dataud1', 'omregnudregnresultat1', '', '', '', 'readonly')
+   . input('1', 'text', 'dataud', '', '16', 'Resultat 2', 'olieblanding_dataud2', 'omregnudregnresultat2', '', '', '', 'readonly')
+)
+. '<div class="formomregnerinfo">' . musover('a', 'TagToTip', visbilled('2', 'ikoner/info.png', 'hold markør her for info'), 'x') . '</div>'
+*/
 ,'
 tilspændingsmoment
 ' => ''
@@ -96,10 +132,10 @@ tilspændingsmoment
 ,'
 dæktryk
 ' => ''  
-. formbox('1', '', 'omregn dæktryk mellem kg/cm², psi, bar og kpascal', '#', 'get', '', ''
+. formbox('1', '', 'omregn dæktryk mellem Kg/cm², PSI, Bar og Kpascal', '#', 'get', '', ''
    . input('1', 'number', 'dataind', '', '18', 'Indtast dæktryk', 'daktryk_dataind', '', 'onkeyup="konverter(this.form, \'daktryk\');" onchange="konverter(this.form, \'daktryk\');" onkeypress="return disableEnterKey(event);"', '', '6', '')
    . input('1', 'select', 'fraogtil', 
-       '<optgroup label="Kg-m">'
+       '<optgroup label="Kg/cm²">'
       .'<option value="kgcm2tilpsi" selected="selected">Kg/cm² -&gt; PSI</option>'
       .'<option value="kgcm2tilbar"          >Kg/cm² -&gt; Bar</option>'
       .'<option value="kgcm2tilkpascal"      >Kg/cm² -&gt; Kpascal</option>'
@@ -130,27 +166,27 @@ dæktryk
 ,'
 benzinforbrug
 ' => ''
-. formbox('1', '', 'omregn benzinforbrug mellem km/l og mpg', '#', 'get', '', ''
+. formbox('1', '', 'omregn benzinforbrug mellem MPG, KM/L og L/100 km', '#', 'get', '', ''
    . input('1', 'number', 'dataind', '', '25', 'Indtast MPG, KM/L eller L/100 km', 'benzin_dataind', '', 'onkeyup="omregn_benzinforbrug(this.form);" onchange="omregn_benzinforbrug(this.form);" onkeypress="return disableEnterKey(event);"', '', '6')
    . input('1', 'select', 'fraogtil', 
        '<optgroup label="MPG">'
-      .'<option value="mpgimptilmpgus" selected="selected">mpg (imperial) &gt; mpg (us)</option>'
-      .'<option value="mpgimptilkml"                      >mpg (imperial) &gt; Km/l</option>'
-      .'<option value="mpgimptill100km"                   >mpg (imperial) &gt; L/100 km</option>'
-      .'<option value="mpgustilmpgimp"                    >mpg (us) ------&gt; mpg (imperial)</option>'
-      .'<option value="mpgustilkml"                       >mpg (us) ------&gt; Km/l</option>'
-      .'<option value="mpgustill100km"                    >mpg (us) ------&gt; L/100 km</option>'
+      .'<option value="mpgimptilmpgus" selected="selected">MPG (imperial) &gt; MPG (us)</option>'
+      .'<option value="mpgimptilkml"                      >MPG (imperial) &gt; Km/l</option>'
+      .'<option value="mpgimptill100km"                   >MPG (imperial) &gt; L/100 km</option>'
+      .'<option value="mpgustilmpgimp"                    >MPG (us) ------&gt; MPG (imperial)</option>'
+      .'<option value="mpgustilkml"                       >MPG (us) ------&gt; Km/l</option>'
+      .'<option value="mpgustill100km"                    >MPG (us) ------&gt; L/100 km</option>'
       .'</optgroup>'
 
       .'<optgroup label="KM/L">'
-      .'<option value="kmltilmpgimp"                      >Km/l ----------&gt; mpg (imperial)</option>'
-      .'<option value="kmltilmpgus"                       >Km/l ----------&gt; mpg (us)</option>'
+      .'<option value="kmltilmpgimp"                      >Km/l ----------&gt; MPG (imperial)</option>'
+      .'<option value="kmltilmpgus"                       >Km/l ----------&gt; MPG (us)</option>'
       .'<option value="kmltill100km"                      >Km/l ----------&gt; L/100 km</option>'
       .'</optgroup>'
 
       .'<optgroup label="L/100 km">'
-      .'<option value="l100kmtilmpgimp"                   >L/100 km ------&gt; mpg (imperial)</option>'
-      .'<option value="l100kmtilmpgus"                    >L/100 km ------&gt; mpg (us)</option>'
+      .'<option value="l100kmtilmpgimp"                   >L/100 km ------&gt; MPG (imperial)</option>'
+      .'<option value="l100kmtilmpgus"                    >L/100 km ------&gt; MPG (us)</option>'
       .'<option value="l100kmtilkml"                      >L/100 km ------&gt; Km/l</option>'
       .'</optgroup>'
 
@@ -158,7 +194,7 @@ benzinforbrug
    . lidtplads('lodret')
    . input('1', 'text', 'dataud_resultat1', '', '25', 'Resultat', 'benzin_dataud1', 'omregnudregnresultat', '', '', '', 'readonly')
 )
-. '<div class="formomregnerinfo">' . musover('c', 'TagToTip', visbilled('2', 'ikoner/info.png', 'hold markør her for info'), 'mpg = Miles Per Gallon<br>Km/l = Kilo Meter per Liter<br><br>gpm = Gallons Per Mile<br>l/km = Liter per Kilo Meter<br>L/100 km = Liter per 100 Kilo Meter<br><br>Imperial gallons bruges blandt andet i england<br>Us gallons bruges blandet andet i usa') . '</div>'
+. '<div class="formomregnerinfo">' . musover('c', 'TagToTip', visbilled('2', 'ikoner/info.png', 'hold markør her for info'), 'MPG = Miles Per Gallon<br>Km/l = Kilo Meter per Liter<br><br>gpm = Gallons Per Mile<br>l/km = Liter per Kilo Meter<br>L/100 km = Liter per 100 Kilo Meter<br><br>Imperial gallons bruges blandt andet i england<br>Us gallons bruges blandet andet i usa') . '</div>'
 
 ,'
 slagvolume
@@ -170,7 +206,7 @@ slagvolume
 )
 . '<div class="formomregnerinfo">' . musover('d', 'TagToTip', visbilled('2', 'ikoner/info.png', 'hold markør her for info'), 'Boring = Cylinderens indre diameter. Målt fra væg til væg<br>Slaglængde = Den længde som stemplet bevæger sig fra det højeste punkt til det laveste punkt<br>mm = Milimeter<br>cm³ = kubik centimeter') . '</div>'
 . '
-Slagvolume = (cylinder diameter i cm i anden x PI) / 4 x slaglængde i cm.
+Slagvolume i cm³ = (cylinder diameter i cm i anden x PI) / 4 x slaglængde i cm.
 '.visbilled('1', 'billed2175.jpg', 'cylinder volume', false, true).'
 '
 
@@ -217,7 +253,7 @@ Kompression = (forbrændingskammer volume + slagvolume) / forbrændingskammer vo
 ,'
 effekt
 ' => ''
-. formbox('1', '', 'omregn effekt mellem Kw (Kilo Watt) og Hk (Heste Kræfter)', '#', 'get', '', ''
+. formbox('1', '', 'omregn effekt mellem Kw og Hk', '#', 'get', '', ''
    . input('1', 'number', 'dataind', '', '16', 'Indtast Kw eller HK', 'effekt_dataind', '', 'onkeyup="konverter(this.form, \'effekt\');" onchange="konverter(this.form, \'effekt\');" onkeypress="return disableEnterKey(event);"', '', '6', '')
    . input('1', 'select', 'fraogtil', 
        '<optgroup label="Kw">'
@@ -237,20 +273,20 @@ effekt
 ,'
 hastighed
 ' => ''
-. formbox('1', '', 'omregn hastighed mellem Km/t (Kilo Meter / Time) og mph (Miles Per Hour)', '#', 'get', '', ''
-   . input('1', 'number', 'dataind', '', '16', 'Indtast Km/t eller mph', 'hastighed_dataind', '', 'onkeyup="konverter(this.form, \'hastighed\');" onchange="konverter(this.form, \'hastighed\');" onkeypress="return disableEnterKey(event);"', '', '6', '')
+. formbox('1', '', 'omregn hastighed mellem Km/t og MPH', '#', 'get', '', ''
+   . input('1', 'number', 'dataind', '', '16', 'Indtast Km/t eller MPH', 'hastighed_dataind', '', 'onkeyup="konverter(this.form, \'hastighed\');" onchange="konverter(this.form, \'hastighed\');" onkeypress="return disableEnterKey(event);"', '', '6', '')
    . input('1', 'select', 'fraogtil', 
        '<optgroup label="Km/t">'
-      .'<option value="kmttilmph" selected="selected">Km/t &gt; mph</option>'
+      .'<option value="kmttilmph" selected="selected">Km/t &gt; MPH</option>'
       .'</optgroup>'
 
       .'<optgroup label="MPH">'
-      .'<option value="mphtilkmt"                    >mph -&gt; Km/t</option>'
+      .'<option value="mphtilkmt"                    >MPH -&gt; Km/t</option>'
       .'</optgroup>'
       , '4', 'Vælg fra og til enheder', 'fratil_hastighed', 'omregnerq', 'onchange="konverter(this.form, \'hastighed\');" onkeypress="return disableEnterKey(event);"', '', '', '')
    . input('1', 'text', 'dataud', '', '16', 'Resultat', 'hastighed_dataud', 'omregnudregnresultat', '', '', '', 'readonly')
 )
-. '<div class="formomregnerinfo">' . musover('h', 'TagToTip', visbilled('2', 'ikoner/info.png', 'hold markør her for info'), 'Km/t = Kilo Meter per Time<br>mph = Miles Per Hour = Mil Per Time') . '</div>'
+. '<div class="formomregnerinfo">' . musover('h', 'TagToTip', visbilled('2', 'ikoner/info.png', 'hold markør her for info'), 'Km/t = Kilo Meter per Time<br>MPH = Miles Per Hour = Mil Per Time') . '</div>'
 
 ,'
 konverterings tabeller
@@ -327,7 +363,7 @@ konverterings tabeller
 
 . box(array('140', '30', '140', '30', '140')
    ,array(
-       array('brændstof forbrug')
+       array('brændstofforbrug')
       ,array('km/l',      '*', '2,825',    '=', 'mpg (imp)')
       ,array('km/l',      '*', '2,352',    '=', 'mpg (us)')
       ,array('mpg (imp)', '*', '0,354',    '=', 'km/l')

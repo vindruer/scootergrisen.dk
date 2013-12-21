@@ -20,6 +20,8 @@ function bygsiden(
    , $br = true // 15
    ){
 
+   // sider som bruger denne funktion på en speciel måde : generelt_fejl index spas visbilled fejl links
+
    $indhold = '';
    $delen = '';
    $htmlekstraattributter = '';
@@ -32,6 +34,8 @@ function bygsiden(
    $footertekst = '';
    $footer_reklame_spotlys_counterogsocialemedier = '';
    $emnerpasidenoverskrift = $GLOBALS['setup']['l_uniholder_subjetsonpage'];
+   $socialemedierscriptkode = '';
+   //$analyticsscriptkode = '';
 
    $nymetadescription = '';
    //$metadescription = array();
@@ -39,7 +43,6 @@ function bygsiden(
    // få "emnerpasidenoverskrift" til at være øverst
    if(array_key_exists($emnerpasidenoverskrift, $databaseright)){
 
-      $tempasasdasdadasd = $databaseright[$emnerpasidenoverskrift];
       unset($databaseright[$emnerpasidenoverskrift]);
       $databaseright = array_merge(array($emnerpasidenoverskrift => ''), $databaseright);
 
@@ -79,10 +82,10 @@ function bygsiden(
 
       foreach($databasecenter as $key => $value){
          $databaseright[$emnerpasidenoverskrift][trim($value["generelt"]["model"])] = $key;
-         $modelarray[] = str_ireplace("$overskrift ", '', ($value["generelt"]["model"]));
+         $modelarray[] = str_ireplace("$overskrift ", '', (str_replace('"', '&quot;', $value["generelt"]["model"])));
       }
 
-      $metadescription = implode(" - ", $modelarray) . ' | ' . mb_ucfirst($metadescription);
+      $metadescription = implode(" - ", $modelarray) . ' | ' . my_mb_ucfirst($metadescription);
 
       foreach($databasecenter as $overskrift_x => $indhold_x){
          $delen .= visscooter($overskrift_x, $indhold_x);
@@ -96,19 +99,19 @@ function bygsiden(
 
    }
 
+   if($GLOBALS['setup']['lokalt']){
+
+      //$htmlekstraattributter .= ' contenteditable="true" spellcheck="true"';
+
+   }
+
    if(isset($GLOBALS['setup']['bodyparameter']) && $GLOBALS['setup']['bodyparameter'] != ''){
 
       $bodyekstraattributter .= ' ' . $GLOBALS['setup']['bodyparameter'];
 
    }
 
-   if(!$GLOBALS['setup']['lokalt']){
-
-      $ekstra_lige_efter_body_start .= googleanalyticsscriptkode();
-
-   }
-
-   $ekstra_lige_efter_body_start .= '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/highslide/highslide.js"></script>'."\r\n";
+   //$ekstra_lige_efter_body_start .= '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/highslide/highslide.js"></script>'."\r\n";
 
    // bruges på sider som omregn/udregn med kode som kun bruge på en eller få sider
    if(isset($GLOBALS['setup']['body']) && $GLOBALS['setup']['body'] != ''){
@@ -129,10 +132,10 @@ function bygsiden(
 
    }
 
-   if($GLOBALS['setup']['vispilop']){
+   if($GLOBALS['setup']['visnavigationsknapper']){
 
-      $tilbagelink = "javascript:history.back();";
-      $opdaterlink = "javascript:location.reload(true);";
+      $tilbagelink = "/";
+      $opdaterlink = "/";
       (isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING'] != '')
          ? $toplink = $GLOBALS['setup']['domain'] . $_SERVER['PHP_SELF'] . '?' . htmlspecialchars($_SERVER['QUERY_STRING']) . '#toppen'
          : $toplink = $GLOBALS['setup']['domain'] . $_SERVER['PHP_SELF'] . '#toppen';
@@ -228,11 +231,11 @@ function bygsiden(
 
          if($GLOBALS['setup']['eftertitle'] != ''){
 
-            $title = mb_ucfirst($sidetitle) . ' - ' . $GLOBALS['setup']['eftertitle'];
+            $title = my_mb_ucfirst($sidetitle) . ' - ' . $GLOBALS['setup']['eftertitle'];
 
          }else{
 
-            $title = mb_ucfirst($sidetitle);
+            $title = my_mb_ucfirst($sidetitle);
 
          }
 
@@ -323,6 +326,14 @@ function bygsiden(
 
    }
 
+   if(!$GLOBALS['setup']['lokalt']){
+
+      $socialemedierscriptkode .= ''
+         . '   <script type="text/javascript" src="//connect.facebook.net/da_DK/all.js#xfbml=1" id="facebook-jssdk"></script>'."\r\n"
+         ;
+
+   }
+
    $indhold .= ''
       . clearboth()
       . newline(3)
@@ -335,15 +346,20 @@ function bygsiden(
 
       . $footertekst
 
-      . $slutbodyekstra
       . $navigationsknapper
-      . clearboth() // clear før </body> eller rækker <body> ikke hele siden ned som <html>
+
+      . $slutbodyekstra // for eksempel syntaxhighlighter script
 
       // placer deferable javascript sidst, ellers kan de bloker for parrallel downloads
+      . '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/highslide/highslide.js"></script>'."\r\n"
+      . '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/orphus2.js"></script>'."\r\n"
       . '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/jquery-1.8.2.min.js"></script>'."\r\n"
-      . '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/jquery.tablesorter.js"></script>'."\r\n"
+      . '   <script type="text/javascript" src="/tablesorter/js/jquery.tablesorter.js"></script>'."\r\n"
+      . $socialemedierscriptkode
+      //. $analyticsscriptkode
       . "\r\n"
-
+      . clearboth() // clear før </body> eller rækker <body> ikke hele siden ned som <html>
+      . "\r\n"
       . '</body>'."\r\n"
       . "\r\n"
       . '</html>' // sidste output til HTML siden hvis alt går efter planen
@@ -365,72 +381,27 @@ function toplinks($vistop, $metadescription, $toplinks, $title, $menuer, $smaiko
 
          if($GLOBALS['setup']['en_eller_anden_besked_overst_pa_siden']){
 
-            $indhold .= '<div class="en_eller_anden_besked_overst_pa_siden fontsize_xsmall margintype8 background_color_2">';
-            $indhold .= mb_ucfirst($GLOBALS['setup']['en_eller_anden_besked_overst_pa_siden']);
-            $indhold .= '</div>'."\r\n";
-            $indhold .= "\r\n";
+            $indhold .= ''
+               . '<div class="en_eller_anden_besked_overst_pa_siden fontsize_xsmall margintype8 background_color_2">'
+               . my_mb_ucfirst($GLOBALS['setup']['en_eller_anden_besked_overst_pa_siden'])
+               . '</div>'."\r\n"
+               . "\r\n"
+               ;
 
          }
 
-if($_SERVER['REQUEST_METHOD'] == "POST"){
-if(isset($_POST['funktion'])){
-if($_POST['funktion'] == "gembillede"){
-   gembilledeifiltilunderoverskrift('gem', '', $_POST['filnavn'] . "\r\n");
-}
-}
-}
-
-if (0){
-
-   $filnavne = glob("billeder/*.*");
-   shuffle($filnavne);
-   $filnavn = array_shift($filnavne);
-
-}else{
-
-   $filnavne = $GLOBALS['setup']['top_random_billeder'];
-   $tilfeldigindex = array_rand($filnavne, 1);
-   $filnavn = $filnavne[$tilfeldigindex];
-
-}
-
-//$indhold .= ''
-//   . formbox('0', '', '', $_SERVER['PHP_SELF'], 'post', '', ''
-//      . input('0', 'hidden', 'funktion', 'gembillede')
-//      . input('1', 'text', 'filnavn', $filnavn)
-//      . input('1', 'submit', '', 'Godt baggrundsbillede ! gem til fil')
-//   );
-
-
-//echo '<input value="' . basename($filnavn) . '">'. "<br>\r\n";
-//echo visbilled('1', basename($filnavn)) . "<br>\r\n";
-$altdetoversteekstra = '';
-/*
-         $altdetoversteekstra = ' style="
-background-image: url(/' . $GLOBALS['setup']['datamappe'] . '/' . $filnavn . ');
- background-position: center bottom;
- background-position: center center;
- background-repeat: repeat;
- background-size: auto 100%;
- background-size: 100% auto;
-"';
-*/
-//         $altdetoversteekstra = '';
-
-         $indhold .= '   <div' . $altdetoversteekstra . ' class="altdetoverste background_color_8 bordertype5 borderradius5pxbottom margintype6">'."\r\n";
-         //$indhold .= '   <div' . $altdetoversteekstra . ' class="altdetoverste margintype6">'."\r\n";
-         //$indhold .= '   <div class="borderradius5pxbottom" style="background: rgba(0, 0, 0, 0.5);">'."\r\n";
-         $indhold .= '   <div class="altdetoversteb borderradius5pxbottom">'."\r\n";
-         //$indhold .= '   <div>'."\r\n";
-         $indhold .= "\r\n";
-         $indhold .= breadcrumbs();
-         $indhold .= dropdownmenu($menuer);
-         $indhold .= titlebar($title, $metadescription);
-         $indhold .= smaikonerbar($smaikoner);
-         $indhold .= '   </div>'."\r\n";
-         $indhold .= '   </div>'."\r\n";
-         $indhold .= "\r\n";
-         //$indhold .= hrbar();
+         $indhold .= ''
+            . '   <div class="altdetoverste background_color_8 bordertype5 borderradius5pxbottom margintype6">'."\r\n"
+            . '   <div class="altdetoversteb borderradius5pxbottom">'."\r\n"
+            . "\r\n"
+            . breadcrumbs()
+            . dropdownmenu($menuer)
+            . titlebar($title, $metadescription)
+            . smaikonerbar($smaikoner)
+            . '   </div>'."\r\n"
+            . '   </div>'."\r\n"
+            . "\r\n"
+            ;
 
       }else{
 
@@ -462,8 +433,7 @@ function smaikonerbar($smaikoner){
    $indhold .= "\r\n";
 
    $indhold .= '         <div class="col1wrap">' . "\r\n";
-   $indhold .= '            <div class="col1top">' . "\r\n";
-   $indhold .= '               <span class="smaikoner">'."\r\n";
+   $indhold .= '            <div class="col1top smaikoner">' . "\r\n";
 
    if(isset($smaikoner)){
 
@@ -476,16 +446,14 @@ function smaikonerbar($smaikoner){
    foreach($smaikonerlinks as $noget){
 
       $indhold .= '                  ';
-      $indhold .= '<span title="' . mb_ucfirst($noget[0]) . '"';
-      $indhold .= ' class="smaikoneraktuelikona"';
-      $indhold .= '>';
+      //$indhold .= '<span title="' . my_mb_ucfirst($noget[0]) . '"';
+      //$indhold .= ' class="smaikoneraktuelikona"';
+      //$indhold .= '>';
       $indhold .= ahref($noget[1], visbilled('2', $noget[2], $noget[0], null, null, null, 'class="smaikonerlink borderradius5px"', null, $noget[3], $noget[4]));
-      $indhold .= '</span>';
+      //$indhold .= '</span>';
       $indhold .= "\r\n";
 
    }
-
-   $indhold .= '               </span>'."\r\n";
 
    $indhold .= '            </div>'."\r\n"; // col1top
    $indhold .= '         </div>'."\r\n"; // col1wrap
@@ -501,8 +469,8 @@ function smaikonerbar($smaikoner){
    $indhold .= '            ';
    $indhold .= '<form action="/' . $GLOBALS['setup']['datamappe'] . '/' . 'sog.php' . '" method="post" enctype="multipart/form-data" class="sogeform">';
    $indhold .= clearboth();
-   $indhold .= '<div style="display: none;"><input type="hidden" name="funktion" value="sog"></div>';
-   $indhold .= '<label for="sogetekst" class="displaynone"></label><input type="text" maxlength="100" id="sogetekst" name="sogetekst" value="' . $sogetekst . '" size="20" class="inputtext sogesogefelt borderradius5px fontsize_11px fontfamily_2" onfocus="if(this.value==\'' . $GLOBALS['setup']['language_search'] . '\')this.value=\'\';" ondrop="if(this.value==\'' . $GLOBALS['setup']['language_search'] . '\')this.value=\'\';" onblur="if(this.value==\'\')this.value=\'' . $GLOBALS['setup']['language_search'] . '\';">';
+   $indhold .= '<input type="hidden" name="funktion" value="sog">';
+   $indhold .= '<label for="sogetekst" class="displaynone"></label><input type="text" maxlength="100" id="sogetekst" name="sogetekst" size="20" class="inputtext sogesogefelt borderradius5px fontsize_11px fontfamily_2" placeholder="' . $sogetekst . '">';
    $indhold .= '<input type="submit" name="sog_sendbilled" value="" class="inputknap sogesogesubmit fontsize_11px fontfamily_2">';
    $indhold .= '</form>';
    $indhold .= "\r\n";
@@ -533,32 +501,17 @@ function titlebar($title, $metadescription){
 
    $indhold = '';
 
-   if(isset($GLOBALS['setup']['nogetikon'])){
+   if(isset($GLOBALS['setup']['sideikon'])){
 
-      $billede = $GLOBALS['setup']['nogetikon'];
+      $billede = $GLOBALS['setup']['sideikon'];
 
    }
-
-   $cubekode = ''
-      . '<section id="cubeholder" class="cubecontainer displaynone">'."\r\n"
-      . '   <div id="cubeb" class="show-front">'."\r\n"
-      . '      <figure class="front" style="background: url(/' . $GLOBALS['setup']['dataogbilledmappe'] . '/' . $GLOBALS['setup']['nogetikon'] . ') no-repeat center center; background-size: 100% 100%;"></figure>'."\r\n"
-      . '      <figure class="back" style="background: url(/' . $GLOBALS['setup']['dataogbilledmappe'] . '/' . $GLOBALS['setup']['nogetikon'] . ') no-repeat center center; background-size: 100% 100%;"></figure>'."\r\n"
-      . '      <figure class="right" style="background: url(/' . $GLOBALS['setup']['dataogbilledmappe'] . '/' . $GLOBALS['setup']['nogetikon'] . ') no-repeat center center; background-size: 100% 100%;"></figure>'."\r\n"
-      . '      <figure class="left" style="background: url(/' . $GLOBALS['setup']['dataogbilledmappe'] . '/' . $GLOBALS['setup']['nogetikon'] . ') no-repeat center center; background-size: 100% 100%;"></figure>'."\r\n"
-      . '      <figure class="top" style="background: url(/' . $GLOBALS['setup']['dataogbilledmappe'] . '/' . $GLOBALS['setup']['nogetikon'] . ') no-repeat center center; background-size: 100% 100%;"></figure>'."\r\n"
-      . '      <figure class="bottom" style="background: url(/' . $GLOBALS['setup']['dataogbilledmappe'] . '/' . $GLOBALS['setup']['nogetikon'] . ') no-repeat center center; background-size: 100% 100%;"></figure>'."\r\n"
-      . '   </div>'."\r\n"
-      . '</section>'."\r\n"
-      . "\r\n"
-      ;
 
    $indhold .= '   <div class="sideoverskriftholder margintype8">'."\r\n";
    $indhold .= "\r\n";
 
    $indhold .= '      ';
-   $indhold .= ahref('http://' . $_SERVER['SERVER_NAME'] . '/', visbilled('2', $billede, mb_ucfirst($GLOBALS['setup']['l_cube']), null, null, null, 'class="sideoverskriftlogobillede"', null, '64', '64'), 'class="sideoverskriftlogo" id="dugnasivaivcmaismcasdcoumdso"', false) . "\r\n";
-//   $indhold .= ahref('http://' . $_SERVER['SERVER_NAME'] . '/', $cubekode, 'class="sideoverskriftlogo" title="' . mb_ucfirst($GLOBALS['setup']['l_cube']) . '"', false) . "\r\n";
+   $indhold .= ahref($GLOBALS['setup']['domain'] . '/', visbilled('2', $billede, my_mb_ucfirst($GLOBALS['setup']['l_cube']), null, null, null, 'class="sideoverskriftlogobillede"', null, '64', '64'), 'class="sideoverskriftlogo" id="dugnasivaivcmaismcasdcoumdso"', false) . "\r\n";
    $indhold .= "\r\n";
 
    $indhold .= '      ';
@@ -567,12 +520,12 @@ function titlebar($title, $metadescription){
    $nytitle = $title;
    $nytitle = str_replace('<', '&lt;', $nytitle);
    $nytitle = str_replace('>', '&gt;', $nytitle);
-   $nytitle = mb_ucfirst($nytitle);
+   $nytitle = my_mb_ucfirst($nytitle);
 
    $nymetadescription = $metadescription;
    $nymetadescription = str_replace('<', '&lt;', $nymetadescription);
    $nymetadescription = str_replace('>', '&gt;', $nymetadescription);
-   $nymetadescription = mb_ucfirst($nymetadescription);
+   $nymetadescription = my_mb_ucfirst($nymetadescription);
 
    $indhold .= '         ';
 
@@ -627,14 +580,14 @@ function titlebar($title, $metadescription){
          . '         </div>'."\r\n"
 
          . '         <div id="loginhoverform" class="loginhoverform bordertype1 borderradius5px displaynone">'."\r\n"
-         . '            <form method="post" action="/' . $GLOBALS['setup']['datamappe'] . '/' . 'statestik.php" enctype="multipart/form-data" name="loginhoverformular">'."\r\n"
-         . '               <div><input type="submit" name="login" value="' . mb_ucfirst($GLOBALS['setup']['l_knap_login']) . '" class="inputknap fontsize_xsmall"></div>'."\r\n"
-         . '               <div><input type="button" name="login" value="' . mb_ucfirst($GLOBALS['setup']['l_knap_luk']) . '" class="inputknap fontsize_xsmall" style="margin-right: .5em;" onClick="visskjulloginformular(0, \'loginhoverform\', \'loginhover\');"></div>'."\r\n"
+         . '            <form method="post" action="/' . $GLOBALS['setup']['datamappe'] . '/' . 'statistik.php" enctype="multipart/form-data" name="loginhoverformular">'."\r\n"
+         . '               <div><input type="submit" name="login" value="' . my_mb_ucfirst($GLOBALS['setup']['l_knap_login']) . '" class="inputknap fontsize_xsmall"></div>'."\r\n"
+         . '               <div><input type="button" name="login" value="' . my_mb_ucfirst($GLOBALS['setup']['l_knap_luk']) . '" class="inputknap fontsize_xsmall" style="margin-right: .5em;" onClick="visskjulloginformular(0, \'loginhoverform\', \'loginhover\');"></div>'."\r\n"
          . '               <div class="megetlidtpladslodret clearboth"></div>'."\r\n"
          . '               <input type="hidden" name="funktion" value="login">'."\r\n"
-         . '               <div><label>' . mb_ucfirst($GLOBALS['setup']['l_login_username']) . ': <input type="text" name="login_brugernavn" size="15" value="" placeholder="Brugernavn" class="inputtext fontsize_xsmall borderradius5px"></label></div>'."\r\n"
+         . '               <div><label>' . my_mb_ucfirst($GLOBALS['setup']['l_login_username']) . ': <input type="text" name="login_brugernavn" size="15" value="" placeholder="Brugernavn" class="inputtext fontsize_xsmall borderradius5px"></label></div>'."\r\n"
          . '               <div class="megetlidtpladslodret clearboth"></div>'."\r\n"
-         . '               <div><label>' . mb_ucfirst($GLOBALS['setup']['l_login_password']) . ': <input type="password" name="bareetfelt" size="15" value="" placeholder="Kodeord" class="inputtext fontsize_xsmall borderradius5px"></label></div>'."\r\n"
+         . '               <div><label>' . my_mb_ucfirst($GLOBALS['setup']['l_login_password']) . ': <input type="password" name="bareetfelt" size="15" value="" placeholder="Kodeord" class="inputtext fontsize_xsmall borderradius5px"></label></div>'."\r\n"
          . '            </form>'."\r\n"
          . '         </div>'."\r\n"
          ;
@@ -644,11 +597,11 @@ function titlebar($title, $metadescription){
       $indhold .= ''
          . '<div class="loginhoverform bordertype2 borderradius5px">'."\r\n"
          . formbox('0', '', '', $_SERVER["PHP_SELF"], 'post', '', ''
-            . '<div style="float: left;">' . mb_ucfirst($GLOBALS['setup']['l_login_youareloggedin']) . '</div>'
+            . '<div style="float: left;">' . my_mb_ucfirst($GLOBALS['setup']['l_login_youareloggedin']) . '</div>'
             . input('0', 'hidden', 'funktion', 'logud')
             . input('0', 'button', '1', '*', '', '', '', 'kodeord_bogstav logudknap inputknap fontsize_0 fontfamily_2', 'onfocus="blur();" onclick="form.submit();"')
          )
-         . '<div>' . ahref($GLOBALS['setup']['domain'] . '/' . $GLOBALS['setup']['datamappe'] . '/' . 'statestik.php', 'Statestik') . '</div>'
+         . '<div>' . ahref($GLOBALS['setup']['domain'] . '/' . $GLOBALS['setup']['datamappe'] . '/' . 'statistik.php', 'Statistik') . '</div>'
          . '<div>' . ahref($GLOBALS['setup']['domain'] . '/' . $GLOBALS['setup']['datamappe'] . '/php/' . 'phpinfo.php', 'PHPinfo()') . '</div>'
          . '</div>'."\r\n"
          ;
@@ -692,13 +645,11 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
 
    $indhold .= '<head>'."\r\n";
    $indhold .= "\r\n";
-   $indhold .= '   <!-- Bare fordi man er tyk kan man altså godt ha tynd mave : Robert Dølhus -->'."\r\n";
-   $indhold .= "\r\n";
-   $indhold .= '   <!-- http://' . $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'] . ' -->'."\r\n";
-   $indhold .= "\r\n";
+//   $indhold .= '   <!-- Bare fordi man er tyk kan man altså godt ha tynd mave : Robert Dølhus -->'."\r\n";
+//   $indhold .= "\r\n";
+//   $indhold .= '   <!-- ' . $GLOBALS['setup']['domain'] . $_SERVER['SCRIPT_NAME'] . ' -->'."\r\n";
+//   $indhold .= "\r\n";
 
-   //$indhold .= '   <base href="http://' . $_SERVER['SERVER_NAME'] . '/">'."\r\n";
-   //$indhold .= "\r\n";
 /*
    if(isset($GLOBALS['setup']['keywords']) && is_array($GLOBALS['setup']['keywords'])){
 
@@ -713,7 +664,7 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
    if(isset($nymetadescription)){
 
       //$keywords = array_merge($keywords, $metadescription);
-      $nymetadescription = mb_ucfirst($nymetadescription);
+      $nymetadescription = my_mb_ucfirst($nymetadescription);
 
    }
 
@@ -724,7 +675,7 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
    $nytitle = $title;
    $nytitle = str_replace('<', '&lt;', $nytitle);
    $nytitle = str_replace('>', '&gt;', $nytitle);
-   $nytitle = mb_ucfirst($nytitle);
+   $nytitle = my_mb_ucfirst($nytitle);
 
    $indhold .= '   <title>' . $nytitle . '</title>'."\r\n";
    $indhold .= "\r\n";
@@ -747,8 +698,6 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
 
    if(basename($_SERVER['SCRIPT_NAME']) == "index.php"){
 
-      $indhold .= '   <meta name="google-site-verification" content="' . $GLOBALS['setup']['googlesiteverification'] . '">'."\r\n";
-      //$indhold .= '   <meta name="y_key" content="98a1c6387842ba6e">'."\r\n";
       $indhold .= '   <meta name="msvalidate.01" content="' . $GLOBALS['setup']['msvalidate'] . '">'."\r\n";
       $indhold .= "\r\n";
 
@@ -757,7 +706,7 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
    $indhold .= '   <meta http-equiv="default-style" content="text/css">'."\r\n";
    $indhold .= "\r\n";
 
-   $indhold .= '   <link rel="alternate" type="application/rss+xml" title="RSS nyheder" href="/' . $GLOBALS['setup']['datamappe'] . '/' . 'php/rss.php' . '">'."\r\n";
+   $indhold .= '   <link rel="alternate" type="application/rss+xml" title="RSS nyheder" href="' . $GLOBALS['setup']['rssfeed'] . '">'."\r\n";
    $indhold .= "\r\n";
 
    ($GLOBALS['setup']['lokalt'])
@@ -776,22 +725,16 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
    if(basename($_SERVER['SCRIPT_NAME']) != "index.php"){
 
       $indhold .= '   <link rel="stylesheet" type="text/css" href="/' . $GLOBALS['setup']['datamappe'] . '/javascript/highslide/highslide.css">'."\r\n";
-      $indhold .= '   <link rel="stylesheet" type="text/css" href="/' . $GLOBALS['setup']['datamappe'] . '/css/theme.default.css">'."\r\n";
-      $indhold .= '   <link rel="stylesheet" type="text/css" href="/' . $GLOBALS['setup']['datamappe'] . '/css/theme.blue.css">'."\r\n";
+      $indhold .= '   <link rel="stylesheet" type="text/css" href="/tablesorter/css/theme.default.css">'."\r\n";
 
    }
 
    $indhold .= "\r\n";
 
    // Javascript
-   $cachecontrol = '?v=' . filemtime($GLOBALS['setup']['rodenogdatamappe'] . '/javascript/windowerror6.js');
-   $indhold .= '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/windowerror6.js' . $cachecontrol . '"></script>'."\r\n";
+   $indhold .= '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/windowerror6.js' . '?v=' . filemtime($GLOBALS['setup']['rodenogdatamappe'] . '/javascript/windowerror6.js') . '"></script>'."\r\n";
    $indhold .= "\r\n";
-
-   $cachecontrol = '?v=' . filemtime($GLOBALS['setup']['rodenogdatamappe'] . '/javascript/javascript8.js');
-   $indhold .= '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/javascript8.js' . $cachecontrol . '"></script>'."\r\n";
-   $indhold .= "\r\n";
-
+   $indhold .= '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/javascript8.js' . '?v=' . filemtime($GLOBALS['setup']['rodenogdatamappe'] . '/javascript/javascript8.js') . '"></script>'."\r\n";
    $indhold .= "\r\n";
 
    if(basename($_SERVER['SCRIPT_NAME']) != "index.php"){
@@ -824,7 +767,7 @@ function htmlhead($title, $overskrift, $keywords, $nymetadescription){
 
    $indhold .= ''
       //. '   <script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/jquery.tablesorter.widgets.js"></script>'."\r\n" // tablesorter widgets (optional)
-      . "\r\n"
+      //. "\r\n"
       //. '   <script type="text/javascript">'."\r\n"
       //. "\r\n"
       //. '   $(document).ready(function() {'."\r\n"
@@ -949,9 +892,10 @@ function breadcrumbs(){
    $nogetindhold = '';
    $breadcrumbsindhold = '';
    $GLOBALS['setup']['breadcrumbs'] = array();
+   $link = '';
 
    $GLOBALS['setup']['breadcrumbs'][] = array(
-       'http://' . $_SERVER['SERVER_NAME']
+       $GLOBALS['setup']['domain']
       ,'<span itemprop="title">' . $_SERVER['SERVER_NAME'] . '</span>'
       ,'itemprop="url"'
    );
@@ -963,16 +907,17 @@ function breadcrumbs(){
          foreach($valueb as $keyc => $valuec){
    
             if(is_array($valuec)){
-   
+
+               // submenuer
                foreach($valuec as $keyd => $valued){
  
                   foreach($valued as $keye => $valuee){
 
-                     if($keye != 'thumbnail'){
+                     if($keye != 'thumbnail' && $keye != 'logo'){
                      if(basename($_SERVER["PHP_SELF"]) == basename($keye)){
-                        $GLOBALS['setup']['breadcrumbs'][] = array('start.php#' . strtolower(byttegn($keya)), '<span itemprop="title">' . mb_ucfirst($keya) . '</span>', 'itemprop="url"');
-                        $GLOBALS['setup']['breadcrumbs'][] = array('start.php#' . strtolower(byttegn($keya)), '<span itemprop="title">' . mb_ucfirst($keyc) . '</span>', 'itemprop="url"');
-                        $GLOBALS['setup']['breadcrumbs'][] = array($keye, '<span itemprop="title">' . mb_ucfirst($keyd) . '</span>', 'itemprop="url"');
+                        $GLOBALS['setup']['breadcrumbs'][] = array('start.php#' . strtolower(byttegn($keya)), '<span itemprop="title">' . my_mb_ucfirst($keya) . '</span>', 'itemprop="url"');
+                        $GLOBALS['setup']['breadcrumbs'][] = array('start.php#' . strtolower(byttegn($keya)), '<span itemprop="title">' . my_mb_ucfirst($keyc) . '</span>', 'itemprop="url"');
+                        $GLOBALS['setup']['breadcrumbs'][] = array($keye, '<span itemprop="title">' . my_mb_ucfirst($keyd) . '</span>', 'itemprop="url"');
                      }
                      }
    
@@ -981,20 +926,28 @@ function breadcrumbs(){
                }
    
             }else{
-   
+
+               // ikke submenuer
                if($keyc != 'thumbnail'){
-               if(basename($_SERVER["PHP_SELF"]) == basename($keyc)){
-                  $GLOBALS['setup']['breadcrumbs'][] = array('start.php#' . strtolower(byttegn($keya)), '<span itemprop="title">' . mb_ucfirst($keya) . '</span>', 'itemprop="url"');
-                  $GLOBALS['setup']['breadcrumbs'][] = array($keyc, '<span itemprop="title">' . mb_ucfirst($keyb) . '</span>', 'itemprop="url"');
+
+                  (isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING'] != '')
+                     ? $link = $_SERVER['PHP_SELF'] . '?' . htmlspecialchars($_SERVER['QUERY_STRING'])
+                     : $link = $_SERVER['PHP_SELF'];
+
+                  if($link == $keyc){
+
+                     $GLOBALS['setup']['breadcrumbs'][] = array('start.php#' . strtolower(byttegn($keya)), '<span itemprop="title">' . my_mb_ucfirst($keya) . '</span>', 'itemprop="url"');
+                     $GLOBALS['setup']['breadcrumbs'][] = array($keyc, '<span itemprop="title">' . my_mb_ucfirst($keyb) . '</span>', 'itemprop="url"');
+                  }
+
                }
-               }
-   
+
             }
-   
+
          }
-   
+
       }
-   
+
    }
 
 if(1){
@@ -1004,9 +957,9 @@ if(1){
    $language_da_automatisk = $GLOBALS['setup']['domainogdatamappe'] . '/php/language.php?language=';
 
    $nogetindhold .= ''
-      . '      <form action="' . $GLOBALS['setup']['domainogdatamappe'] . '/php/language.php" method="get" class="skiftmenusprog" style="white-space: nowrap; float: right; margin-right: 10px;">'."\r\n"
-      . '         <label>' . mb_ucfirst($GLOBALS['setup']['l_changelanguage']) . ' : '."\r\n"
-      . '            <select class="inputselect fontsize_xsmall" name="language" size="1" onchange="form.submit();" onselect="form.submit();">'."\r\n"
+      . '      <form name="skiftsprog" action="/' . $GLOBALS['setup']['datamappe'] . '/php/language.php" method="get" class="skiftmenusprog">'."\r\n"
+      . '         <label>' . my_mb_ucfirst($GLOBALS['setup']['l_changelanguage']) . ' : '."\r\n"
+      . '            <select class="inputselect fontsize_xsmall" name="language" size="1" id="languageselect">'."\r\n"
       . '               <option value="da"' . ((
          mb_strtolower($GLOBALS['setup']['languageinuse']) == 'da' ||
          mb_strtolower($GLOBALS['setup']['languageinuse']) == 'da-dk'
@@ -1017,113 +970,15 @@ if(1){
          mb_strtolower($GLOBALS['setup']['languageinuse']) == 'en-us'
          ) ? ' selected' : '') . '>English (en)</option>'."\r\n"
       . '               <option value=""' . ((mb_strtolower($GLOBALS['setup']['languageinuse']) == ''
-         ) ? ' selected' : '') . '>' . mb_ucfirst($GLOBALS['setup']['l_changelanguage_automatic']) . '</option>'."\r\n"
+         ) ? ' selected' : '') . '>' . my_mb_ucfirst($GLOBALS['setup']['l_changelanguage_automatic']) . '</option>'."\r\n"
       . '            </select>'."\r\n"
       . '         </label>'."\r\n"
       . '      </form>'."\r\n"
+      . "\r\n"
       . '      ' . clearboth()."\r\n"
       . "\r\n"
       ;
 
-/*
-   $nogetindhold .= ''
-      . '<script type="text/javascript">' . "\r\n"
-
-      . 'function opdaterfuldskermknap() {' . "\r\n"
-
-      . '   opdaterfullscreenknapbillede(\'global_fullscreentoggleknap\', \'global_fullscreentoggleknap_img\');' . "\r\n"
-
-      . '}' . "\r\n"
-
-      . 'if (window.addEventListener) {' . "\r\n"
-
-      . '   window.addEventListener(\'load\', function(){' . "\r\n"
-
-      . '      if(document.addEventListener) {' . "\r\n"
-
-      . '         document.addEventListener("mozfullscreenchange", opdaterfuldskermknap, false);' . "\r\n"
-      . '         document.addEventListener("webkitfullscreenchange", opdaterfuldskermknap, false);' . "\r\n"
-      . '         document.addEventListener("MSFullscreenChange", opdaterfuldskermknap, false);' . "\r\n"
-      . '         document.addEventListener("fullscreenchange", opdaterfuldskermknap, false);' . "\r\n"
-
-      . '      }' . "\r\n"
-
-      . '   }, false);' . "\r\n"
-
-      . '}' . "\r\n"
-
-      . '</script>' . "\r\n"
-
-      . '<style type="text/css">' . "\r\n"
-      . '#global_fullscreentoggleknap{' . "\r\n"
-      . '   float: right;' . "\r\n"
-      . '   vertical-align: middle; margin-left: 10px;' . "\r\n"
-      . '} ' . "\r\n"
-      . '#global_fullscreentoggleknap_img{' . "\r\n"
-      . '   vertical-align: middle;' . "\r\n"
-      . '} ' . "\r\n"
-      . '</style>' . "\r\n"
-      ;
-*/
-
-/*
-if($GLOBALS['setup']['vissprog']){
-
-   $nogetindhold .= ''
-      . '<button style="float: right; margin: 0; padding: 0;" id="global_fullscreentoggleknap" class="visibilityhidden" onclick="global_togglefullscreen();" title="' . mb_ucfirst($GLOBALS['setup']['button_fullscreentoggle']) . '">'
-      . visbilled('2', 'afspiller/afspiller_fuldskerm.png', mb_ucfirst($GLOBALS['setup']['button_fullscreentoggle']), false, null, null, 'id="global_fullscreentoggleknap_img"', null, '20', '20')
-      . '</button>'
-      ;
-
-   $nogetindhold .= '         '
-      //. '<span class="ekstraundersmaikoner fontsize_small" style="background-color: rgba(255, 255, 255, 0.6); padding: 1em; border-radius: 5px; float: right;">'
-      . '<span style="float: right; margin-right: 10px;">'
-      . "\r\n"
-      ;
-
-   $nogetindhold .= '            '
-      . mb_ucfirst($GLOBALS['setup']['l_changelanguage'])
-      . ' : '
-      . '<span class="skiftmenusprog" style="white-space: nowrap;">'
-      . lidtplads('vandret', true)
-      . ahref($language_en_uk, visbilled('2', 'ikoner/united_kingdom_great_britain.png', $GLOBALS['setup']['l_flag_english'], '', null, null, 'class="ikon16x16"', null, '16', '16'))
-      . lidtplads('vandret', true)
-      . ahref($language_da_dk, visbilled('2', 'ikoner/denmark.png', $GLOBALS['setup']['l_flag_dansk'], '', null, null, 'class="ikon16x16"', null, '16', '16'))
-      . lidtplads('vandret', true)
-      . ahref(
-         $language_da_automatisk
-         ,mb_ucfirst($GLOBALS['setup']['l_changelanguage_automatic'])
-         ,'title="' . mb_ucfirst($GLOBALS['setup']['l_changelanguage_automatic_description']) . '"'
-        )
-      . '</span>'
-      ;
-
-   if(isset($GLOBALS['setup']['languageinuse'])){
-
-      $nogetindhold .= ''
-         . lidtplads('vandret', true)
-         . '<span style="color: rgba(0, 0, 0, 0.5); margin: 0 .5em;">|</span>'
-         . lidtplads('vandret', true)
-         . '<span style="white-space: nowrap;">'
-         . mb_ucfirst($GLOBALS['setup']['l_changelanguage_current'])
-         . ' : '
-         . $GLOBALS['setup']['languageinuse']
-         . '</span>'
-         ;
-
-   }
-
-   $nogetindhold .= ''
-
-      . "\r\n"
-      . '         </span>'."\r\n"
-      . "\r\n"
-      . '         ' . clearboth()
-      . "\r\n"
-      ;
-
-}
-*/
 }
 
    $breadcrumbs_noget = array();
@@ -1137,13 +992,14 @@ if($GLOBALS['setup']['vissprog']){
 
    }
 
-   $tegn = '         <span class="breadcrumbspacer">&#187;</span>' . "\r\n";
+   //$tegn = '         <span class="breadcrumbspacer">&#187;</span>' . "\r\n";
+   $tegn = '         <span class="breadcrumbspacer">»</span>' . "\r\n";
 
    $breadcrumbsindhold .= implode($tegn, $breadcrumbs_noget) . "\r\n";
 
    $indhold .= ''
       . '      <div class="breadcrumbs fontsize_xsmall">' . "\r\n"
-      //. mb_ucfirst($GLOBALS['setup']['l_youarehere']) . "\r\n"
+      //. my_mb_ucfirst($GLOBALS['setup']['l_youarehere']) . "\r\n"
       . $breadcrumbsindhold
       . $nogetindhold
       . '      </div>' . "\r\n"
@@ -1195,23 +1051,24 @@ function vispost($visrightcontent = true, $visfooter = true){
          $spotmenu[$GLOBALS['setup']['l_uniholder_voteonpage']] = ''
             . '      <div id="stemholder">' . "\r\n"
             . "\r\n"
-            . '         <a href="javascript:void(0);" class="stemop" id="stemoplink" onclick="rate(\'5\', \'' . $_SERVER['SCRIPT_NAME'] . '\');"></a>'
+            . '         <a href="/" class="stemop" id="stemoplink"></a>' . "\r\n"
             . "\r\n"
-            . '         <div class="stemtalholder fontsize_large background_color_5 borderradius5px">'
-            . '            <span id="stemtal">' . $tilbage[1] . '</span>'
-            . '            ' . clearboth()
+            . '         <div class="stemtalholder fontsize_large background_color_5 borderradius5px">' . "\r\n"
+            . '            <span id="stemtal">' . $tilbage[1] . '</span>' . "\r\n"
+            //. '            ' . clearboth()
             . '         </div>' . "\r\n"
             . "\r\n"
-            . '         <a href="javascript:void(0);" class="stemned" id="stemnedlink" onclick="rate(\'1\', \'' . $_SERVER['SCRIPT_NAME'] . '\');"></a>'
+            . '         <a href="/" class="stemned" id="stemnedlink"></a>' . "\r\n"
             . "\r\n"
-            . '         <div class="stemmeterholder bordertype1 borderradius5px">'
-            . '            <meter class="ratemeter borderradius5px" id="ratemeter" min="20" low="45" high="60" max="100" optimum="100" value="' . $tilbage[0] . '"></meter>'
+            . '         <div class="stemmeterholder bordertype1 borderradius5px">' . "\r\n"
+            . '            <meter class="ratemeter borderradius5px" id="ratemeter" min="20" low="45" high="60" max="100" optimum="100" value="' . $tilbage[0] . '"></meter>' . "\r\n"
             . '         </div>' . "\r\n"
-            . '         <div id="stemekstrabesked" style="margin: 10px auto; text-align: center;">' . $maskenoget . '</div>' . "\r\n"
+            . "\r\n"
+            . '         <div id="stemekstrabesked" class="margintype2 textaligncenter">' . $maskenoget . '</div>' . "\r\n"
             . "\r\n"
             . '      </div>' . "\r\n"
             . "\r\n"
-            . '      <div style="margin: 10px auto; text-align: center;">'.ahref('ratingoversigt.php', mb_ucfirst($GLOBALS['setup']['l_uniholder_voteonpage_seeallvotes'])).'</div>' . "\r\n"
+            . '      <div class="margintype2 textaligncenter">'.ahref('/' . $GLOBALS['setup']['datamappe'] . '/' . 'ratingoversigt.php', my_mb_ucfirst($GLOBALS['setup']['l_uniholder_voteonpage_seeallvotes'])).'</div>' . "\r\n"
             . "\r\n"
             ;
 
@@ -1254,6 +1111,12 @@ function vispost($visrightcontent = true, $visfooter = true){
 
          $menuer[$GLOBALS['setup']['l_uniholder_deleteandcreate']] = ''
             . '<div class="adminnoget">'
+            . '<div>'.ahref('/' . $GLOBALS['setup']['datamappe'] . '/' . 'statistik.php', 'Statistik').'</div>'
+            . '<div>'.ahref('/' . $GLOBALS['setup']['datamappe'] . '/php/' . 'phpinfo.php', 'PHPinfo()').'</div>'
+            . formbox('0', '', '', $_SERVER["PHP_SELF"], 'post', '', ''
+               . input('0', 'hidden', 'funktion', 'logud')
+               . input('1', 'submit', 'logud', 'Log ud')
+            )
             . formbox('0', '', '', $_SERVER["PHP_SELF"], 'post', '', ''
                . input('0', 'hidden', 'funktion', 'sletdatafiler')
                . input('1', 'submit', 'filer', 'Slet midlertidige')
@@ -1297,10 +1160,10 @@ function vispost($visrightcontent = true, $visfooter = true){
          // orphus virker ikke når er logget ind.
 
          $menuer[$GLOBALS['setup']['l_uniholder_foundaerror']] = ''
-            . mb_ucfirst($GLOBALS['setup']['l_uniholder_foundaerror_message'])
+            . my_mb_ucfirst($GLOBALS['setup']['l_uniholder_foundaerror_message'])
             . '<br>'
-            . '<script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/orphus2.js"></script>'
-            . noscript('<div class="noscript bordertype2 borderradius5px">Javascript er ikke aktiv - orphus</div>')
+            //. '<script type="text/javascript" src="/' . $GLOBALS['setup']['datamappe'] . '/javascript/orphus2.js"></script>'
+            //. noscript('<div class="noscript bordertype2 borderradius5px">Javascript er ikke aktiv - orphus</div>')
             . '<div class="orphusogrssholder">'
             . ahref('http://www.orphus.ru', visbilled('2', 'ikoner/orphus.gif', 'orphus system', null, null, null, null, null, '121', '21'), 'id="orphus"')
             . '</div>'
@@ -1311,10 +1174,10 @@ function vispost($visrightcontent = true, $visfooter = true){
             ;
 
          $menuer[$GLOBALS['setup']['l_uniholder_rssnewsfeed']] = ''
-            . mb_ucfirst($GLOBALS['setup']['l_uniholder_rssnewsfeed_message']) . '.'
+            . my_mb_ucfirst($GLOBALS['setup']['l_uniholder_rssnewsfeed_message']) . '.'
             . ' '
             . '<div class="orphusogrssholder">'
-            . ahref('http://' . $_SERVER['SERVER_NAME'] . '/' . $GLOBALS['setup']['datamappe'] . '/php/rss.php', visbilled('2', 'ikoner/rss_nyheder.png', 'RSS feed', null, null, null, null, null, '101', '20', null, null, null, null, 'vertical-align: middle;'), 'type="application/rss+xml"')
+            . ahref($GLOBALS['setup']['rssfeed'], visbilled('2', 'ikoner/rss_nyheder.png', 'RSS feed', null, null, null, 'class="verticalalignmiddle"', null, '101', '20'), 'type="application/rss+xml"')
             . '</div>'
             ;
 
@@ -1345,11 +1208,11 @@ function vispost($visrightcontent = true, $visfooter = true){
                . '<br>'
                . '<br>'
                // nogen browsere kan ikke vise kinesiske tegn direkte og viser firkanter i stedet
-               //. ahref($translatelink . '&tl=zh-TW', visbilled('2', 'ikoner/china.png', 'chinese traditional', '', null, null, 'class="ikon16x16"', null, '16', '16')) . '中國'
-               //. lidtplads('vandret')
-               //. ahref($translatelink . '&tl=zh-CN', visbilled('2', 'ikoner/china.png', 'chinese simplified', '', null, null, 'class="ikon16x16"', null, '16', '16')) . '中国'
-               //. '<br>'
-               //. '<br>'
+               . ahref($translatelink . '&tl=zh-TW', visbilled('2', 'ikoner/china.png', '中國 (chinese traditional)', '', null, null, 'class="ikon16x16"', null, '16', '16')) . '中國'
+               . lidtplads('vandret')
+               . ahref($translatelink . '&tl=zh-CN', visbilled('2', 'ikoner/china.png', '中国 (chinese simplified)', '', null, null, 'class="ikon16x16"', null, '16', '16')) . '中国'
+               . '<br>'
+               . '<br>'
                . ahref($translatelink . '&tl=en', 'More languages')
                . '</div>'
                ;
@@ -1419,12 +1282,12 @@ function visfootertag($visreklame = true, $visspotlys = true, $viscounterogsocia
             . '   <div id="reklamebaggrund">'
             . "\r\n"
             . "\r\n"
-            . '      <div id="reklameoverskrift" class="fontsize_small">' . mb_ucfirst($GLOBALS['setup']['l_gratisreklamefor']) . ' ' . ahref($reklamer[$tilfeldigreklame][1], mb_ucfirst($reklamer[$tilfeldigreklame][0])) . ' <span id="reklamemindreskrift" class="fontsize_smaller">'.ahref('gratisreklame.php', mb_ucfirst($GLOBALS['setup']['l_gratisreklame_fadinegenreklame'])).'</span></div>'
+            . '      <div id="reklameoverskrift" class="fontsize_small">' . my_mb_ucfirst($GLOBALS['setup']['l_gratisreklamefor']) . ' ' . ahref($reklamer[$tilfeldigreklame][1], my_mb_ucfirst($reklamer[$tilfeldigreklame][0])) . ' <span id="reklamemindreskrift" class="fontsize_smaller">'.ahref('gratisreklame.php', my_mb_ucfirst($GLOBALS['setup']['l_gratisreklame_fadinegenreklame'])).'</span></div>'
             . "\r\n"
             . "\r\n"
             . '      <div id="reklame">'
             . "\r\n"
-            . '         '.ahref($reklamer[$tilfeldigreklame][1], visbilled('1', 'reklamer/' . $reklamer[$tilfeldigreklame][2], mb_ucfirst($GLOBALS['setup']['l_gratisreklame_klikpabilledet']) . ' ' . $reklamer[$tilfeldigreklame][0], '', null, null, null, null, null, null, null, true))
+            . '         '.ahref($reklamer[$tilfeldigreklame][1], visbilled('1', 'reklamer/' . $reklamer[$tilfeldigreklame][2], my_mb_ucfirst($GLOBALS['setup']['l_gratisreklame_klikpabilledet']) . ' ' . $reklamer[$tilfeldigreklame][0], '', null, null, null, null, null, null, null, true))
             . "\r\n"
             . '      </div>'
             . "\r\n"
@@ -1440,7 +1303,7 @@ function visfootertag($visreklame = true, $visspotlys = true, $viscounterogsocia
 
       if($visspotlys && $GLOBALS['setup']['spotlys']){
 
-         $indhold .= spotlysholder($GLOBALS['setup']['spotlys']);
+         $indhold .= spotlysholder($GLOBALS['setup']['spotlys'], $GLOBALS['setup']['spotlysantal']);
 
       }
 
@@ -1493,55 +1356,49 @@ function visfootertag($visreklame = true, $visspotlys = true, $viscounterogsocia
 */
 
          $indhold .= ''
-            . '   <div id="fb-root"></div>'."\r\n"
-            . '   <script type="text/javascript">(function(d, s, id) {'."\r\n"
-            . '      var js, fjs = d.getElementsByTagName(s)[0];'."\r\n"
-            . '      if (d.getElementById(id)) return;'."\r\n"
-            . '      js = d.createElement(s); js.id = id;'."\r\n"
-            . '      js.src = "//connect.facebook.net/da_DK/all.js#xfbml=1";'."\r\n"
-            . '      fjs.parentNode.insertBefore(js, fjs);'."\r\n"
-            . '   }(document, \'script\', \'facebook-jssdk\'));'."\r\n"
-            . '   </script>'."\r\n"
-            . "\r\n"
+//            . '   <div id="fb-root"></div>'."\r\n"
+//            . '   <script type="text/javascript">'."\r\n"
+//            . '      (function(d, s, id) {'."\r\n"
+//            . '         var js, fjs = d.getElementsByTagName(s)[0];'."\r\n"
+//            . '         if (d.getElementById(id)) return;'."\r\n"
+//            . '         js = d.createElement(s); js.id = id;'."\r\n"
+//            . '         js.src = "//connect.facebook.net/da_DK/all.js#xfbml=1";'."\r\n"
+//            . '         fjs.parentNode.insertBefore(js, fjs);'."\r\n"
+//            . '      }(document, \'script\', \'facebook-jssdk\'));'."\r\n"
+//            . '   </script>'."\r\n"
+//            . "\r\n"
             ;
 
-         $indhold .= ''
-            . '   <script async type="text/javascript" src="https://apis.google.com/js/plusone.js">'."\r\n"
-            //. '      {lang: \'da\'}'."\r\n" // validere ikke med src
-            . '   </script>'."\r\n"
-            . "\r\n"
-            ;
-
+/*
          $indhold .= ''
             . '   <script type="text/javascript">'."\r\n"
             . '      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+\'://platform.twitter.com/widgets.js\';fjs.parentNode.insertBefore(js,fjs);}}(document, \'script\', \'twitter-wjs\');'."\r\n"
             . '   </script>'."\r\n"
             . "\r\n"
             ;
-
+*/
          $indhold .= ''
             . '   <div class="counterosv margintype4 fontsize_0">'."\r\n"
+
             . '<span class="socialmedieholder chartcounter">'
-            //. '<span id="chartdkcounter">'
-            //. '</span>'
-            //. '<script type="text/javascript">'
-            //. '   if(typeof track_visitor_hjemmelavet == \'function\') {'
-            //. '      track_visitor_hjemmelavet(\'chartdkcounter\', ' . $GLOBALS['setup']['chartid'] . ');'
-            //. '   }'
-            //. '</script>'
             . '<a href="http://www.chart.dk/ref.asp?id=' . $GLOBALS['setup']['chartid'] . '" target="_blank">'
-            . '   <img src="http://cluster.chart.dk/chart.asp?id=' . $GLOBALS['setup']['chartid'] . '" alt="Chart.dk">'
+            . '<img src="http://cluster.chart.dk/chart.asp?id=' . $GLOBALS['setup']['chartid'] . '" alt="Chart.dk">'
             . '</a>'
             . '</span>'
+
             . '<span class="socialmedieholder">'
+            . '<span id="fb-root" class="displaynone"></span>' // lavede scrollbar da den var inline
             . '<span class="fb-like" data-href="' . $GLOBALS['setup']['domain']  . '/" data-send="false" data-layout="box_count" data-width="97" data-height="88" data-show-faces="false" data-font="verdana"></span>'
             . '</span>'
-            . '<span class="socialmedieholder">'
-            . '<span class="g-plusone" data-size="tall" data-href="' . $GLOBALS['setup']['domain']  . '" data-recommendations="false"></span>'
-            . '</span>'
-            . '<span class="socialmedieholder">'
-            . '<a href="https://twitter.com/share" class="twitter-share-button" data-url="' . $GLOBALS['setup']['domain'] . $_SERVER['PHP_SELF']  . '" data-lang="da" data-count="vertical">Tweet</a>'
-            . '</span>'."\r\n"
+
+            //. '<span class="socialmedieholder">'
+            //. '<span class="g-plusone" data-size="tall" data-href="' . $GLOBALS['setup']['domain']  . '" data-recommendations="false"></span>'
+            //. '</span>'
+
+            //. '<span class="socialmedieholder">'
+            //. '<a href="https://twitter.com/share" class="twitter-share-button" data-url="' . $GLOBALS['setup']['domain'] . $_SERVER['PHP_SELF']  . '" data-lang="da" data-count="vertical">Tweet</a>'
+            //. '</span>'."\r\n"
+
             . "\r\n"
             . '   ' . clearboth()
             . '   </div>'."\r\n"
@@ -1583,8 +1440,6 @@ function visfootertekst($visrightcontent = true, $visfooter = true){
       . '&sl=da'
       ;
 
-   //$bidder[] = ahref('http://' . $_SERVER['SERVER_NAME'], $_SERVER['SERVER_NAME']);
-
    if($visrightcontent){
 
       // vis ikke "sidst opdateret" ved nyheder
@@ -1603,11 +1458,11 @@ function visfootertekst($visrightcontent = true, $visfooter = true){
 
                $bidder[] = ''
                   . '<span>'
-                  . mb_ucfirst($GLOBALS['setup']['language_lastupdate'])
+                  . my_mb_ucfirst($GLOBALS['setup']['language_lastupdate'])
                   . ' '
-                  . mb_ucfirst(utf8_encode(strftime("%A ", $filendringunixtimestamp)))
-                  . mb_ucfirst(utf8_encode(ltrim(strftime("%d. ", $filendringunixtimestamp), '0'))) // ltrim sletter eventuelt 0 foran fordi windows og unix ikke begge kan bruge %d eller %#d
-                  . mb_ucfirst(utf8_encode(strftime("%B %Y", $filendringunixtimestamp)))
+                  . my_mb_ucfirst(utf8_encode(strftime("%A ", $filendringunixtimestamp)))
+                  . my_mb_ucfirst(utf8_encode(ltrim(strftime("%d. ", $filendringunixtimestamp), '0'))) // ltrim sletter eventuelt 0 foran fordi windows og unix ikke begge kan bruge %d eller %#d
+                  . my_mb_ucfirst(utf8_encode(strftime("%B %Y", $filendringunixtimestamp)))
                   . '</span>'
                   ;
 
@@ -1623,28 +1478,21 @@ function visfootertekst($visrightcontent = true, $visfooter = true){
 
    }
 
-   $bidder[] = ahref('http://' . $_SERVER['SERVER_NAME'] . '/' . $GLOBALS['setup']['datamappe'] . '/php/rss.php', visbilled('2', 'ikoner/rss.png', mb_ucfirst($GLOBALS['setup']['language_rssnews']), '', null, false, null, null, '16', '16', null, true, null, null, 'vertical-align: middle;'), 'type="application/rss+xml"');
+   $bidder[] = ahref($GLOBALS['setup']['rssfeed'], visbilled('2', 'ikoner/rss.png', my_mb_ucfirst($GLOBALS['setup']['language_rssnews']), '', null, false, 'class="verticalalignmiddle"', null, '16', '16'), 'type="application/rss+xml"');
 
-   $bidder[] = ahref('http://www.youtube.com/user/scootergrisen', visbilled('2', 'ikoner/youtube.png', mb_ucfirst($GLOBALS['setup']['language_youtubechannel']), '', null, false, null, null, '16', '16', null, true, null, null, 'vertical-align: middle;'), '');
+   $bidder[] = ahref($githublink, visbilled('2', 'ikoner/blacktocat-16.png', my_mb_ucfirst($GLOBALS['setup']['language_github']), '', null, false, 'class="verticalalignmiddle"', null, '16', '16'));
 
-   $bidder[] = ''
-      //. '<span id="octocatlinkholder">'
-      . ahref($githublink, visbilled('2', 'ikoner/blacktocat-16.png', mb_ucfirst($GLOBALS['setup']['language_github']), '', null, false, null, null, '16', '16', null, true, null, null, 'vertical-align: middle;'))
-      //. '</span>';
-      ;
+//   $bidder[] = ''
+//      . '<span class="flag">'
+//      . ahref($translatelink . '&tl=en', my_mb_ucfirst($GLOBALS['setup']['language_translate']))
+//      . '</span>'
+//      ;
 
-   $bidder[] = ''
-      . '<span class="flag">'
-      . ahref($translatelink . '&tl=en', mb_ucfirst($GLOBALS['setup']['language_translate']))
-      . '</span>'
-      ;
-
-   $bidder[] = ahref('kontakt.php', mb_ucfirst($GLOBALS['setup']['language_contact']));
+   $bidder[] = ahref('kontakt.php', my_mb_ucfirst($GLOBALS['setup']['language_contact']));
 
    $bidder[] = visminemail();
 
-   $indhold .= '   <div id="footertekst" class="margintype10 background_color_8 bordertype6 borderradius5pxtop fontsize_small" style="padding: 10px;">';
-   //$indhold .= '   <div id="footertekst" class="margintype10 borderradius5pxtop fontsize_small" style="padding: 10px;">';
+   $indhold .= '   <div id="footertekst" class="margintype10 background_color_8 bordertype6 borderradius5pxtop fontsize_small">';
    $indhold .= implode($adskiller, $bidder);
    $indhold .= '</div>'."\r\n";
    $indhold .= "\r\n";
@@ -1769,7 +1617,7 @@ function visoverskrift($overskrift, $bredcentercontent = false, $visoverskrift =
 
          }else{
 
-            $redigerindhold .= '<div style="font-size: small;">filen <span class="bold">"' . $fil . '"</span> findes ikke.</div>';
+            $redigerindhold .= '<div class="fontsize_small">filen <span class="bold">"' . $fil . '"</span> findes ikke.</div>';
 
          }
 
@@ -1842,8 +1690,8 @@ function visdel($overskrift, $data, $br = true, $scootermodel = ''){
          $indhold .= '      <h3 class="overskriftfordatacenter fontsize_xlarge fontfamily_7">';
 
          ($scootermodel != '')
-            ? $indhold .= mb_ucfirst($scootermodel)
-            : $indhold .= mb_ucfirst($overskrift);
+            ? $indhold .= my_mb_ucfirst($scootermodel)
+            : $indhold .= my_mb_ucfirst($overskrift);
 
          $indhold .= '</h3>'."\r\n";
 
@@ -1939,8 +1787,8 @@ function visslut($visrightcontent = true, $visdinkommentar = true){
                $indhold .=
                     '<div class="sidstendret">'
                   . 'Sidst opdateret : '
-                  . mb_ucfirst(utf8_encode(strftime("%A %#d. ", $filendringunixtimestamp)))
-                  . mb_ucfirst(utf8_encode(strftime("%B %Y", $filendringunixtimestamp)))
+                  . my_mb_ucfirst(utf8_encode(strftime("%A %#d. ", $filendringunixtimestamp)))
+                  . my_mb_ucfirst(utf8_encode(strftime("%B %Y", $filendringunixtimestamp)))
                   . '</div>'
                   ;
 
@@ -2024,7 +1872,7 @@ function uniholder($overskrift, $data){
 
    $indhold .= '   <div class="uniholder margintype1'; if($menu){ $indhold .= ' unimenu'; } $indhold .= '">' . "\r\n";
    $indhold .= '      <div class="uniindhold fontsize_xsmall fontfamily_1 background_color_8 bordertype1 borderradius5px">'."\r\n";
-   $indhold .= '      <div class="unioverskrift fontsize_small fontfamily_1">' . mb_ucfirst($overskrift) . '</div>'."\r\n";
+   $indhold .= '      <div class="unioverskrift fontsize_small fontfamily_1">' . my_mb_ucfirst($overskrift) . '</div>'."\r\n";
 
    if($overskrift == $GLOBALS['setup']['l_uniholder_subjetsonpage']){
 
@@ -2120,8 +1968,8 @@ function uniholder($overskrift, $data){
             if($overskrift == $GLOBALS['setup']['l_uniholder_subjetsonpage']){
 
                // htmlentities fucker op i tegn som æøå
-               //$titletekst = "hop til &quot;" . mb_ucfirst(htmlentities($key, ENT_COMPAT, 'UTF-8')) . "&quot; på denne side";
-               $titletekst = "hop til &quot;" . mb_ucfirst($key) . "&quot; på denne side";
+               //$titletekst = "hop til &quot;" . my_mb_ucfirst(htmlentities($key, ENT_COMPAT, 'UTF-8')) . "&quot; på denne side";
+               $titletekst = "hop til &quot;" . my_mb_ucfirst($key) . "&quot; på denne side";
 
             }elseif($overskrift == "download"){
 
@@ -2135,7 +1983,7 @@ function uniholder($overskrift, $data){
 
             if(isset($titletekst)){
 
-               $ahreftag_ekstra = 'title="' . mb_ucfirst($titletekst) . '"';
+               $ahreftag_ekstra = 'title="' . my_mb_ucfirst($titletekst) . '"';
 
             } else {
 
@@ -2143,7 +1991,7 @@ function uniholder($overskrift, $data){
 
             }
 
-            $indhold .= ahref(htmlentities($ahreftag, null, 'UTF-8'), mb_ucfirst($key), $ahreftag_ekstra);
+            $indhold .= ahref(htmlentities($ahreftag, null, 'UTF-8'), my_mb_ucfirst($key), $ahreftag_ekstra);
 
             $indhold .= '</div>';
             $indhold .= "\r\n";
@@ -2177,8 +2025,10 @@ function topmenu($overskrift, $data){
 
    $indhold = '';
    $overskrift = trim($overskrift);
+   $link = '';
+
    $indhold .= '            <li>'."\r\n";
-   $indhold .= '               <a>' . mb_ucfirst($overskrift) . '</a>'."\r\n";
+   $indhold .= '               <a class="bordertype1transparent">' . my_mb_ucfirst($overskrift) . '</a>'."\r\n";
    $indhold .= '               <ul class="ulpunktb background_color_9 bordertype1">'."\r\n";
 
       foreach($data as $normalmenuoverskrift => $value){
@@ -2188,17 +2038,21 @@ function topmenu($overskrift, $data){
          if($normalmenuoverskrift != '0'){
 
             // hent normal menu
-            $normalmenuoverskrifttitle = mb_ucfirst($value[key($value)]);
+            $normalmenuoverskrifttitle = my_mb_ucfirst($value[key($value)]);
             $normalmenuoverskrifttitle = trim($normalmenuoverskrifttitle); // fjern eventuelle mellerum før og efter pga validering
             $normalmenutekst = key($value);
 
-            if(basename($_SERVER["PHP_SELF"]) == basename($normalmenutekst)){
+            (isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING'] != '')
+               ? $link = $_SERVER['PHP_SELF'] . '?' . htmlspecialchars($_SERVER['QUERY_STRING'])
+               : $link = $_SERVER['PHP_SELF'];
+
+            if($link == $normalmenutekst){
 
                $ekstra = ' id="aktuelside"';
 
             }
 
-            $indhold .= '                  <li>' . ahref($normalmenutekst, mb_ucfirst($normalmenuoverskrift), 'title="' . $normalmenuoverskrifttitle . '"'.$ekstra.'') . '</li>' . "\r\n";
+            $indhold .= '                  <li>' . ahref($normalmenutekst, my_mb_ucfirst($normalmenuoverskrift), 'title="' . $normalmenuoverskrifttitle . '"'.$ekstra.'') . '</li>' . "\r\n";
 
          }else{
 
@@ -2210,7 +2064,7 @@ function topmenu($overskrift, $data){
                   if(is_array($noget)){
 
                      $indhold .= '               <li>' . "\r\n";
-                     $indhold .= '                  <a><span class="sub">' . mb_ucfirst($undermenuoverskrift) . '</span></a>' . "\r\n";
+                     $indhold .= '                  <a><span class="sub">' . my_mb_ucfirst($undermenuoverskrift) . '</span></a>' . "\r\n";
                      $indhold .= '                  <ul class="ulpunktc background_color_9 bordertype1">'."\r\n";
 
                      foreach($noget as $submenukey => $submenuvalue){
@@ -2219,17 +2073,17 @@ function topmenu($overskrift, $data){
 
                         if($submenukey != 'logo' && $submenukey != 'thumbnail'){
 
-                           $submenutitle = mb_ucfirst($submenuvalue[key($submenuvalue)]);
+                           $submenutitle = my_mb_ucfirst($submenuvalue[key($submenuvalue)]);
                            $submenutekst = $submenukey;
                            $linknoget = key($submenuvalue);
 
-                           if(basename($_SERVER["PHP_SELF"]) == basename($linknoget)){
+                           if($_SERVER["PHP_SELF"] == $linknoget){
 
                               $ekstra = ' id="aktuelside"';
 
                            }
 
-                           $indhold .= '                     <li>' . ahref($linknoget, mb_ucfirst($submenutekst), 'title="' . $submenutitle . '"'.$ekstra.'') . '</li>' . "\r\n";
+                           $indhold .= '                     <li>' . ahref($linknoget, my_mb_ucfirst($submenutekst), 'title="' . $submenutitle . '"'.$ekstra.'') . '</li>' . "\r\n";
 
                         }
 
@@ -2370,6 +2224,7 @@ function vismappe_element(
          case "wav" :
          case "m4a" :
          case "wma" :
+         case "weba" :
             $ikon = "sound.png";
             break;
 
@@ -2392,6 +2247,7 @@ function vismappe_element(
          case "txt" :
          case "srt" :
          case "vtt" :
+         case "ttml" :
             $ikon = "page_white_text.png";
             break;
 
@@ -2448,7 +2304,7 @@ function vismappe_element(
 
    }
 
-   $filikon            = visbilled('2', 'ikoner/' . $ikon, '*', '', null, null, 'class="ikon16x16"', null, '16', '16');
+   $filikon            = visbilled('2', 'ikoner/' . $ikon, '*', '', null, null, 'class="upload_ikonholder upload_ikon ikon16x16"', null, '16', '16');
    $dialogikonhtmlkode = visbilled('2', 'ikoner/' . $dialogikon, 'åbn/gem dialog...', '', null, null, 'class="ikon16x16"', null, '16', '16');
 
    if($visbilledpopup){
@@ -2472,7 +2328,7 @@ function vismappe_element(
    $b = "Brugermanual";
    $s = "Servicemanual";
    $e = "El diagram";
-   $r = "Reservedels katalog";
+   $r = "Reservedelskatalog";
 
    if(strpos($filnavn, "brugermanual")){
       $typeb = '<span title="' . $b . '">B</span>';
@@ -2509,61 +2365,64 @@ function vismappe_element(
 
 
    // ikon
-   $venstre .= '<span class="upload_ikonholder">';
-   $venstre .= '<span class="upload_ikon">';
+   //$venstre .= '<span class="">';
+   //$venstre .= '<span class="upload_ikonholder upload_ikon">';
    $venstre .= $filikon;
-   $venstre .= '</span>';
-   $venstre .= '</span>';
+   //$venstre .= '</span>';
+   //$venstre .= '</span>';
 
    $venstre .= ' '; // så der er et mellemrum mellem ikon og tekst i RSS.php
 
    // tekst eller filnavn
-   $venstre .= '<span class="upload_filnavnholder">';
-   $venstre .= '<span class="upload_filnavn">';
+   //$venstre .= '<span class="">';
+   $venstre .= '<span class="upload_filnavnholder upload_filnavn">';
    $venstre .= $tekst;
    $venstre .= '</span>';
-   $venstre .= '</span>';
+   //$venstre .= '</span>';
 
    $venstre .= ' '; // så der er et mellem rum så tekst og B ikke står helt op hinanden i RSS.php
 
 
    $hojre .= '<span class="filhojreholder">';
 
-   // B S E R
-   $hojre .= '<span class="manualholder">';
-   $hojre .= '<span class="upload_brugermanual upload_brugermanualfarve">';
-   $hojre .= $typeb;
-   $hojre .= '</span>';
-   $hojre .= '</span>';
+   if($typeb == $tomtfelt &&
+      $types == $tomtfelt &&
+      $typee == $tomtfelt &&
+      $typer == $tomtfelt){
 
-   $hojre .= '<span class="manualholder">';
-   $hojre .= '<span class="upload_servicemanual upload_servicemanualfarve">';
-   $hojre .= $types;
-   $hojre .= '</span>';
-   $hojre .= '</span>';
+   }else{
 
-   $hojre .= '<span class="manualholder">';
-   $hojre .= '<span class="upload_eldiagram upload_eldiagramfarve">';
-   $hojre .= $typee;
-   $hojre .= '</span>';
-   $hojre .= '</span>';
+      // B S E R
+      $hojre .= ''
+         . '<span class="upload_brugermanual upload_brugermanualfarve">'
+         . $typeb
+         . '</span>'
 
-   $hojre .= '<span class="manualholder">';
-   $hojre .= '<span class="upload_reservedele upload_reservedelefarve">';
-   $hojre .= $typer;
-   $hojre .= '</span>';
-   $hojre .= '</span>';
+         . '<span class="upload_servicemanual upload_servicemanualfarve">'
+         . $types
+         . '</span>'
+
+         . '<span class="upload_eldiagram upload_eldiagramfarve">'
+         . $typee
+         . '</span>'
+
+         . '<span class="upload_reservedele upload_reservedelefarve">'
+         . $typer
+         . '</span>'
+         ;
+
+   }
 
    $hojre .= ' '; // så der er et mellem rum så R ikke står helt op af 1234KB i RSS.php
 
 
 
    // filstørrelse
-   $hojre .= '<span class="upload_filstorrelseholder">';
-   $hojre .= '<span class="upload_filstorrelse">';
+   //$hojre .= '<span class="">';
+   $hojre .= '<span class="upload_filstorrelseholder upload_filstorrelse">';
    $hojre .= $storrelse;
    $hojre .= '</span>';
-   $hojre .= '</span>';
+   //$hojre .= '</span>';
 
    $hojre .= '</span>';
 
@@ -2571,35 +2430,39 @@ function vismappe_element(
 
    $linie .= $venstre;
    $linie .= $hojre;
-   $linie .= clearboth();
+//   $linie .= clearboth();
 
 //   ($visbilledpopup)
 //      ? $www .= ahref($GLOBALS['setup']['domainogdatamappe'] . '/' . $mappe . '/' . $rawurlencodedfilnavn, $linie, 'onmouseover="TagToTip(\'' . $idnummer . '\');" onmouseout="UnTip();"')
 //      : $www .= ahref($GLOBALS['setup']['domainogdatamappe'] . '/' . $mappe . '/' . $rawurlencodedfilnavn, $linie);
 
+//   ($visbilledpopup)
+//      ? $www .= ahref($GLOBALS['setup']['domain'] . '/' . $mappe . '/' . $rawurlencodedfilnavn, $linie, 'onmouseover="TagToTip(\'' . $idnummer . '\');" onmouseout="UnTip();"')
+//      : $www .= ahref($GLOBALS['setup']['domain'] . '/' . $mappe . '/' . $rawurlencodedfilnavn, $linie);
+
    ($visbilledpopup)
-      ? $www .= ahref($GLOBALS['setup']['domain'] . '/' . $mappe . '/' . $rawurlencodedfilnavn, $linie, 'onmouseover="TagToTip(\'' . $idnummer . '\');" onmouseout="UnTip();"')
-      : $www .= ahref($GLOBALS['setup']['domain'] . '/' . $mappe . '/' . $rawurlencodedfilnavn, $linie);
+      ? $www .= ahref('/' . $mappe . '/' . $rawurlencodedfilnavn, $linie, 'class="filholder filholdersub fontfamily_2 fontsize_small" onmouseover="TagToTip(\'' . $idnummer . '\');" onmouseout="UnTip();"')
+      : $www .= ahref('/' . $mappe . '/' . $rawurlencodedfilnavn, $linie, 'class="filholder filholdersub fontfamily_2 fontsize_small"');
 
    $indhold .= $popupbilled;
 
-   $indhold .= '<div class="filholder">';
-   $indhold .= '<div class="filholdersub fontfamily_2 fontsize_small">';
+//   $indhold .= '<div class="filholder filholdersub fontfamily_2 fontsize_small">';
+//   $indhold .= '<div class="">';
 
    if(isset($dialog)){
 
-      $indhold .= '<span class="abngemdialogikonholder">';
-      $indhold .= '<span class="abngemdialogikon">';
+      $indhold .= '<span class="abngemdialogikonholder abngemdialogikon">';
+      //$indhold .= '<span class="">';
       $indhold .= $dialog;
-      $indhold .= '</span>';
+      //$indhold .= '</span>';
       $indhold .= '</span>';
 
    }
 
    $indhold .= $www;
 
-   $indhold .= '</div>';
-   $indhold .= '</div>';
+//   $indhold .= '</div>';
+//   $indhold .= '</div>';
 //   $indhold .= "\r\n";
 
    return $indhold;
@@ -2628,7 +2491,8 @@ function vismappe($mappe = ''){
 
    }
 
-   $indhold .= '<div class="fillisteholder">';
+   $indhold .= '<!--ignore-->' . "\r\n";
+   $indhold .= '<div class="fillisteholder">' . "\r\n";
 
    //if(substr($mappe, 0, strlen($standardmappe)) == $standardmappe){
 
@@ -2658,7 +2522,8 @@ function vismappe($mappe = ''){
 
    //}
 
-   $indhold .= '</div>';
+   $indhold .= '</div>' . "\r\n";
+   $indhold .= '<!--ignore-->' . "\r\n";
 
    return $indhold;
 
@@ -2669,6 +2534,8 @@ function vismappe($mappe = ''){
 function visforeslalink($overskrift){
 
    $indhold = "";
+
+   $indhold .= "<!--ignore-->";
 
    if(isset($_POST["funktion"]) && $_POST["funktion"] == 'sendlinkforeslag'){
 
@@ -2693,6 +2560,8 @@ function visforeslalink($overskrift){
 
    }
 
+   $indhold .= "<!--ignore-->";
+
    return $indhold;
 
 }
@@ -2715,11 +2584,11 @@ function sendemail($emne, $besked, $fra = ''){
 
       }
 
-      $headers .= "Content-type: text/plain; charset=utf-8\r\n";
+      $headers .= "Content-type: text/plain; charset=utf-8\r\n"; // sæt til samme encoding som HTML siden hvor formular sendes
 
       $til = $GLOBALS['setup']['minemail'];
 
-      //$besked = wordwrap($besked, 70); // må åbenbart kun være 70 tegn bred
+      $besked = wordwrap($besked, 70, "\r\n"); // linier må ikke være større end 70 tegn i følge PHP manualen
       $besked = str_replace("\r\n", "\n", $besked); // skal åbenbart kun have \n som linieskift
       $besked = str_replace("\n.", "\n..", $besked); // windows fjerner linier som begynder med punktum
       $besked = str_replace("<br>", "\r\n", $besked); // lav <br> om til linieskift
@@ -2777,7 +2646,7 @@ function beskedenblevsendt($handling){
 
    if($handling){
 
-      $indhold .= '<div style="text-align: center;">';
+      $indhold .= '<div class="textaligncenter">';
       $indhold .= visbilled('2', 'ikoner/brevsendt.png', 'brev sendt', null, null, null, 'class="margintype1"') . "\r\n";
       //$indhold .= lidtplads('lodret');
       $indhold .= 'Beskeden blev sendt.';
@@ -2785,11 +2654,13 @@ function beskedenblevsendt($handling){
 
    }else{
 
-      $indhold .= '<div style="text-align: center;">';
-      $indhold .= 'Ups' . "\r\n";
+      $indhold .= '<div class="textaligncenter">';
       $indhold .= visbilled('2', 'status/udrabstegn.png', 'udråbstegn', null, null, null, 'class="margintype1"') . "\r\n";
+      $indhold .= 'Ups' . "\r\n";
+      $indhold .= "\r\n";
       //$indhold .= lidtplads('lodret');
       $indhold .= 'Beskeden blev af en eller anden grund ikke sendt.' . "\r\n";
+      $indhold .= "\r\n";
       $indhold .= 'Kontakt mig eventuelt direkte på ' . visminemail() . '.';
       $indhold .= '</div>';
 
@@ -2836,12 +2707,10 @@ function viskontakt($billed = true, $overskrift = ''){
             }else{
 
                $indhold .= beskedenblevsendt(false);
-               $indhold .= '<!--ignore-->';
                $indhold .= ''
                   . formbox('1', '', $overskrift, $_SERVER['PHP_SELF'], 'post', '', ''
                   . input('0', 'textarea', 'kommentar', $_POST["kommentar"], '40x14', 'Besked', 'kontakt_besked_b')
                );
-               $indhold .= '<!--ignore-->';
 
             }
 
@@ -2870,12 +2739,10 @@ function viskontakt($billed = true, $overskrift = ''){
 
          $indhold .= 'Måske en fejl i formularen.';
 
-         $indhold .= '<!--ignore-->';
          $indhold .= ''
             . formbox('1', '', $overskrift, $_SERVER['PHP_SELF'], 'post', '', ''
             . input('0', 'textarea', 'kommentar', $_POST["kommentar"], '40x14', 'Besked', 'kontakt_besked_b')
          );
-         $indhold .= '<!--ignore-->';
 
          sendemail($GLOBALS['setup']['email_emne_kontakt'] . ' - message er ikke sat', 'HTTP_X_FORWARDED_FOR : ' . $spamip_HTTP_X_FORWARDED_FOR . "\r\n\r\n" . 'REMOTE_ADDR : ' . $spamip_REMOTE_ADDR . "\r\n\r\n" . $_POST["kommentar"] . "\r\n\r\n" . 'Sendt fra : ' . basename($_SERVER['PHP_SELF']), $_POST["afsender"]);
 
@@ -2885,7 +2752,7 @@ function viskontakt($billed = true, $overskrift = ''){
 
       if($billed){
 
-         $indhold .= visbilled('2', 'ikoner/kontaktdyranimation.gif', 'dyr på blyant', null, null, null, 'class="kontaktdyr"', null, null, '68', '57');
+         $indhold .= visbilled('2', 'ikoner/kontaktdyranimation.gif', 'dyr på blyant', null, null, null, 'class="kontaktdyr"', null, '68', '57');
 
       }
 
@@ -2894,15 +2761,13 @@ function viskontakt($billed = true, $overskrift = ''){
             . input('0', 'hidden', 'funktion', 'kontakt')
             . input('1', 'email', 'afsender', '', '40', $GLOBALS['setup']['l_contactform_from'], 'kontakt_afsender_c', '', 'required')
             . input('1', 'textarea', 'kommentar', '', '40x5', $GLOBALS['setup']['l_contactform_message'], 'kontakt_besked_c', '', 'required')
-            // bruges mod spam. linien skal være der
-            //. input('1', 'text', 'message', '', '', '', '', '', 'style="visibility: hidden; display: none;"')
-            . input('1', 'text', 'message', '', '', '', '', '', 'style="visibility: hidden; height: 0; width: 0;"')
+            . input('1', 'text', 'message', '', '', '', '', 'antispam') // bruges mod spam. linien skal være der
             . input('1', 'submit', 'kontakt_sendknap_b', $GLOBALS['setup']['l_contactform_submit'], '', 'rykind', 'kontakt_sendknap_c')
-            . '<div style="text-align: center; margin-top: 1em;">' . mb_ucfirst($GLOBALS['setup']['l_contactform_alternative']) .' ' . visminemail() . '</div>'
+            . '<div class="textaligncenter margintype0">' . my_mb_ucfirst($GLOBALS['setup']['l_contactform_alternative']) .' ' . visminemail() . '</div>'
          );
 
       $indhold .= ''
-         //. '<div style="text-align: center;">' . mb_ucfirst($GLOBALS['setup']['l_contactform_alternative']) .' ' . visminemail() . '</div>'
+         //. '<div class="textaligncenter">' . my_mb_ucfirst($GLOBALS['setup']['l_contactform_alternative']) .' ' . visminemail() . '</div>'
          ;
 
    }
@@ -2937,7 +2802,7 @@ function galleri(
 
          }
 
-         $tekstb[] = mb_ucfirst($value);
+         $tekstb[] = my_mb_ucfirst($value);
 
       }
 
@@ -2945,7 +2810,7 @@ function galleri(
 
    }else{
 
-      $tekst = mb_ucfirst($tekst);
+      $tekst = my_mb_ucfirst($tekst);
 
    }
 
@@ -2978,7 +2843,7 @@ function galleri(
          $indhold .= '<div class="producent borderradius5px">';
 
          $indhold .= ahref($filurl
-            , visbilled('1', 'logoer/' . $sidelink . '.png', 'Hop til &quot;' . mb_ucfirst($tekst) . '&quot; på denne side', false, null, null, null, null, '90', '67')
+            , visbilled('1', 'logoer/' . $sidelink . '.png', 'Hop til &quot;' . my_mb_ucfirst($tekst) . '&quot; på denne side', false, null, null, null, null, '90', '67')
             );
 
          $indhold .= '</div>';
@@ -2989,7 +2854,7 @@ function galleri(
          $indhold .= '<div class="producent borderradius5px">';
 
          $indhold .= ahref($filurl
-            , visbilled('1', 'logoer/' . $sidelink, 'Gå til &quot;' . mb_ucfirst($tekst) . '&quot; siden', false, null, null, null, null, '90', '67')
+            , visbilled('1', 'logoer/' . $sidelink, 'Gå til &quot;' . my_mb_ucfirst($tekst) . '&quot; siden', false, null, null, null, null, '90', '67')
             );
 
          $indhold .= '</div>';
@@ -3032,7 +2897,7 @@ function galleri(
                $indhold .= ahref($filurl . '#' . $sidelink, visbilled('0', $billed, $alttekst, '', null, null, null, null, '180', '160'));
 
                $indhold .= '<div class="thumbnailtekst fontsize_small">';
-               $indhold .= ahref($filurl . '#' . $sidelink, mb_ucfirst($tekst));
+               $indhold .= ahref($filurl . '#' . $sidelink, my_mb_ucfirst($tekst));
                $indhold .= '</div>';
 
                $indhold .= clearboth();
@@ -3066,7 +2931,7 @@ $filurl . '#' . $sidelink
 , '160'));
 
             $indhold .= '<div class="thumbnailtekst fontsize_small">';
-            $indhold .= ahref($filurl . '#' . $sidelink, mb_ucfirst($tekst));
+            $indhold .= ahref($filurl . '#' . $sidelink, my_mb_ucfirst($tekst));
             $indhold .= '</div>';
 
             $indhold .= '</div>';
@@ -3140,10 +3005,8 @@ $filurl . '#' . $sidelink
 
             $indhold .= '<div class="highslidenoget borderradius5px">';
 
-//            $indhold .= ahref('billeder/' . $sidelink . '.jpg',
-//               visbilled('1', 'thumbnails/' . $sidelink . '.jpg', $alttekst, '', null, null, null, null, '180', '160', null, null, null, null, 'vertical-align: bottom;'),
             $indhold .= ahref('billeder/' . $sidelink,
-               visbilled('1', 'thumbnails/' . $sidelink, $alttekst, '', null, null, null, null, '180', '160', null, null, null, null, 'vertical-align: bottom;'),
+               visbilled('1', 'thumbnails/' . $sidelink, $alttekst, '', null, null, null, null, '180', '160'),
                   'class="highslide" onclick="return hs.expand(this, { captionEval: \'this.thumb.alt\' })"'
             );
             $indhold .= '<div class="highslide-caption">' . '</div>';
@@ -3191,7 +3054,7 @@ $filurl . '#' . $sidelink
          if($tekst != ""){
 
             $indhold .= '<div class="thumbnailtekst fontsize_small">';
-            $indhold .= ahref($filurl, mb_ucfirst($tekst));
+            $indhold .= ahref($filurl, my_mb_ucfirst($tekst));
             $indhold .= '</div>';
 
          }
@@ -3216,8 +3079,9 @@ $filurl . '#' . $sidelink
 
    }
 
+   $indhold .= "\r\n";
+
    return $indhold;
-   return "\r\n";
 
 }
 
@@ -3359,6 +3223,7 @@ function formbox(
    ){
 
    $indhold = '';
+   $indhold .= '<!--ignore-->';
 
    if($method != 'get' && $method != 'post'){
 
@@ -3370,7 +3235,7 @@ function formbox(
    if(isset($overskrift) && $overskrift != ''){
 
       $indhold .= '<div class="formoverskrift">';
-      $indhold .= mb_ucfirst($overskrift);
+      $indhold .= my_mb_ucfirst($overskrift);
       $indhold .= '</div>';
 
    }
@@ -3388,7 +3253,7 @@ function formbox(
 
       $indhold .= '<fieldset class="background_color_2 box_shadow_2 borderradius5px">';
       $indhold .= '<legend class="background_color_2 box_shadow_3">';
-      $indhold .= mb_ucfirst($overskrift);
+      $indhold .= my_mb_ucfirst($overskrift);
       $indhold .= '</legend>';
 
    }
@@ -3409,6 +3274,7 @@ function formbox(
 
    }
 
+   $indhold .= '<!--ignore-->';
    return $indhold;
 
 }
@@ -3541,13 +3407,11 @@ function input(
    $indhold .= '<div';
 
    if($type == "hidden"){
-      $indhold .= ' style="display: none;"';
+      $indhold .= ' class="displaynone"';
    }elseif($block == "0"){
-      $indhold .= ' style="display: inline;"';
-      $indhold .= ' class="inputinline"';
+      $indhold .= ' class="displayinline inputinline"';
    }elseif($block == "1"){
-      $indhold .= ' style="display: block;"';
-      $indhold .= ' class="inputblock"';
+      $indhold .= ' class="displayblock inputblock"';
    }
 
    $indhold .= '>';
@@ -3563,14 +3427,14 @@ function input(
          }else{
             if($labelplacering == "" || $labelplacering == "før"){
                $indhold .= '<span class="labelholderright">';
-               //$indhold .= mb_ucfirst($label) . " :";
-               $indhold .= mb_ucfirst($label) . " :<br>";
+               //$indhold .= my_mb_ucfirst($label) . " :";
+               $indhold .= my_mb_ucfirst($label) . " :<br>";
             }elseif($labelplacering == "over"){
                $indhold .= '<span class="labelholderleft">';
-               $indhold .= mb_ucfirst($label) . " :<br>";
+               $indhold .= my_mb_ucfirst($label) . " :<br>";
             }elseif($labelplacering == "nej"){
                $indhold .= '<span class="labelholderleft displaynone">';
-               $indhold .= mb_ucfirst($label) . " :<br>";
+               $indhold .= my_mb_ucfirst($label) . " :<br>";
             }
          }
          if($label != ""){
@@ -3612,7 +3476,7 @@ function input(
          if(isset($value) && $type != "image"){
             // w3c siger : Attribute value not allowed on element input at this point. (image)
             if($type == "button" || $type == "submit" || $type == "file" || $type == "reset"){
-               $indhold .= ' value="' . mb_ucfirst($value) . '"';
+               $indhold .= ' value="' . my_mb_ucfirst($value) . '"';
             }else{
                $indhold .= ' value="' . $value . '"';
             }
@@ -3666,7 +3530,7 @@ function input(
          if($id != ""){
             if($labelplacering == "efter"){
                $indhold .= '<label for="' . $id . '">';
-                  $indhold .= " " . mb_ucfirst($label);
+                  $indhold .= " " . my_mb_ucfirst($label);
                $indhold .= '</label>';
             }
          }
@@ -4109,15 +3973,15 @@ function box($breddearray, $tekstarray, $kodeibunden = ''){
    $tekstarrayhead = array_shift($tekstarray); // tag og fjern den først som til overskriften
 
    $indhold .= '   <!--ignore-->'."\r\n";
-   $indhold .= '   <div style="overflow-x: auto;">'."\r\n"; // gør at en bred table kan scrolles vandret på en lille skærm så man kan se hele tabellen selvom skærmen er for lille til at vise den på en gang
-   $indhold .= '   <table class="tableholder fontsize_small tablesorter" style="max-width: ' . $totalbredde . 'px; margin: 1em auto;">'."\r\n";
+   $indhold .= '   <div class="overflowxauto">'."\r\n"; // gør at en bred table kan scrolles vandret på en lille skærm så man kan se hele tabellen selvom skærmen er for lille til at vise den på en gang
+   $indhold .= '   <table class="fontsize_small tablesorter tablesorter-default" style="max-width: ' . $totalbredde . 'px; margin: 1em auto;">'."\r\n";
 
    $indhold .= '      <thead>'."\r\n";
    $indhold .= '         <tr>'."\r\n";
 
    if(count($tekstarrayhead) == 1){
 
-      $indhold .= '            <th colspan="' . $count . '">' . mb_ucfirst($tekstarrayhead[0]) . '</th>'."\r\n";
+      $indhold .= '            <th colspan="' . $count . '">' . my_mb_ucfirst($tekstarrayhead[0]) . '</th>'."\r\n";
 
    }else{
 
@@ -4127,7 +3991,7 @@ function box($breddearray, $tekstarray, $kodeibunden = ''){
 
          $data = str_replace("\r\n", "<br>", $data);
 
-         $indhold .= '            <th style="width: ' . $width . 'px;">' . mb_ucfirst($data) . '</th>'."\r\n";
+         $indhold .= '            <th style="width: ' . $width . 'px;">' . my_mb_ucfirst($data) . '</th>'."\r\n";
 
       }
 
@@ -4165,7 +4029,7 @@ function box($breddearray, $tekstarray, $kodeibunden = ''){
 
       $indhold .= '      <tfoot>'."\r\n";
       $indhold .= '         <tr>'."\r\n";
-      $indhold .= '            <td colspan="' . $count . '" class="tableunderskrift">' . mb_ucfirst($kodeibunden) . '</td>'."\r\n";
+      $indhold .= '            <td colspan="' . $count . '" class="tableunderskrift">' . my_mb_ucfirst($kodeibunden) . '</td>'."\r\n";
       $indhold .= '         </tr>'."\r\n";
       $indhold .= '      </tfoot>'."\r\n";
 
@@ -4174,110 +4038,6 @@ function box($breddearray, $tekstarray, $kodeibunden = ''){
    $indhold .= '   </table>'."\r\n";
    $indhold .= '   </div>'."\r\n";
    $indhold .= '   <!--ignore-->'."\r\n";
-   $indhold .= "\r\n";
-
-   return $indhold;
-
-}
-
-
-
-function box_gammel($breddearray, $tekstarray, $overskrift = true, $kodeibunden = ''){
-
-   $indhold = '';
-
-   $talc = 0;
-   $elementpadding = 3;
-
-   $totalbredde = array_sum($breddearray) + (count($breddearray) * ($elementpadding * 2));
-
-   if($totalbredde > $GLOBALS['setup']['maxbredde']){
-
-      //trigger_error("boxen der starter med \"" . $tekstarray[0][0] . "\" og \"" . $tekstarray[0][1] . "\" har en total bredde på \"$totalbredde\" som er over maksimum bredden på \"{$GLOBALS['setup']['maxbredde']}\"");
-
-   }
-
-   $overskriftwidth = $totalbredde - ($elementpadding * 2);
-
-   $indhold .= '<div class="tableholder">';
-   $indhold .= '<table class="tableholderselvetablenogetfindetnytnavn fontfamily_1 borderradius5px" style="width: ' . $totalbredde . 'px;">';
-
-   foreach($tekstarray as $liniearray){
-
-      $indhold .= '<tr>';
-
-      $tala = 0;
-
-      if(count($liniearray) <= count($breddearray)){
-
-         foreach($liniearray as $value){
-
-            $width = $breddearray[$tala++];
-
-            if($talc == 0){
-
-               if(count($liniearray) == 1){
-
-                  if($overskrift){
-
-                     $indhold .= '<td class="tableoverskriftone" colspan="' . count($breddearray) . '" style="padding: ' . $elementpadding . 'px;">' . mb_ucfirst($value) . '</td>';
-
-                  }else{
-
-                     $indhold .= '<td class="boxelement" style="width: ' . $width . 'px; padding: ' . $elementpadding . 'px;">' . mb_ucfirst($value) . '</td>';
-
-                  }
-
-               }else{
-
-                  if($overskrift){
-
-                     $indhold .= '<td class="tableoverskrift" style="width: ' . $width . 'px; padding: ' . $elementpadding . 'px;">' . mb_ucfirst($value) . '</td>';
-
-                  }else{
-
-                     $indhold .= '<td class="boxelement" style="width: ' . $width . 'px; padding: ' . $elementpadding . 'px;">' . mb_ucfirst($value) . '</td>';
-
-                  }
-
-               }
-
-            }else{
-
-               $indhold .= '<td class="boxelement" style="width: ' . $width . 'px; padding: ' . $elementpadding . 'px;">' . $value . '</td>';
-
-            }
-
-         }
-
-      }else{
-
-         trigger_error('index er for stort i ' . __FUNCTION__ . '()');
-
-      }
-
-      $indhold .= '</tr>';
-      $talc++;
-/*
-
-      if(($talc != 1) && ($talc != count($tekstarray)) || !$overskrift){
-
-         $indhold .= '<tr><td colspan="' . count($breddearray). '"><div class="tablelinie"></div></td></tr>';
-
-      }
-*/
-   }
-
-   if($kodeibunden != ''){
-
-      $indhold .= '<tr>';
-      $indhold .= '<td colspan="' . count($breddearray) . '" class="tableunderskrift">' . mb_ucfirst($kodeibunden) . '</td>';
-      $indhold .= '</tr>';
-
-   }
-
-   $indhold .= '</table>';
-   $indhold .= '</div>'; // slut på tableholder
    $indhold .= "\r\n";
 
    return $indhold;
@@ -4695,9 +4455,9 @@ function visflash(
 
       $url = "http://media1.break.com/break/swf/player12.swf";
 
-      $urlparameterarray[] = 'async=true';
+      //$urlparameterarray[] = 'async=true';
 
-      $flashvarsarray[] = 'icon=1B608EE7AFCE3765E176F3C6FBB98002B3D18C64572F2307D76EA476A27DF3B9E352';
+      $flashvarsarray[] = 'icon=1B608EE7AFCE3765E176F3C6FBB98002B3D18C64572F2307D76EA476A272F8BD12E8' . mt_rand(1, 100000);
       $flashvarsarray[] = 'autoplay=0';
 
       if($autoplay){
@@ -4915,9 +4675,7 @@ function visflash(
    // $indhold .= '<embed src="' . $url . '" style="width: ' . $width . 'px; height: ' . $height . 'px;" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>';
    // $indhold .= '<param name="codebase" value="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0">';
 
-   $indhold .= '<div class="video" style="width: ' . $width . 'px; height: ' . $height . 'px;">';
-
-   $indhold .= '<object type="application/x-shockwave-flash" data="' . $url_ferdig .'" width="' . $width . '" height="' . $height . '">';
+   $indhold .= '<object class="video" type="application/x-shockwave-flash" data="' . $url_ferdig .'" width="' . $width . '" height="' . $height . '">';
    $indhold .= '<param name="movie" value="' . $url_ferdig . '">';
 
    //$indhold .= '<param name="flashvars" value="' . $flashvars . '">';
@@ -4932,7 +4690,7 @@ function visflash(
                                                                   // Kan rettes med <object id="noget">
                                                                   // skal bruge på for eksempel funny og die når skal vælge video efter afspilling stopper
    $indhold .= '<param name="allowFullScreen" value="true">';
-   $indhold .= '<param name="wmode" value="transparent">'; // skal have wmode transparent fordi ellers går dropdown menus border bag om videoen i IE9
+   $indhold .= '<param name="wmode" value="transparent">'; // skal have wmode transparent fordi ellers går dropdownmenus border bag om videoen i IE9
 
 /*
 Element param not allowed as child of element object in this context. (Suppressing further errors from this subtree.)
@@ -4941,13 +4699,13 @@ Element param not allowed as child of element object in this context. (Suppressi
    $indhold .= '<div>';
    $indhold .= 'Det kræver Adobe Flash Player for at kunne se indholdet.';
    $indhold .= "\r\n";
-   $indhold .= 'Hvis du allerede har Flash installeret så kan det være fordi der ikke er forbindelse eller flash indholdet på anden måde ikke kunne hentes.';
+   $indhold .= "\r\n";
+   $indhold .= 'Hvis du allerede har Flash installeret så kan det være fordi der ikke er forbindelse eller flash indholdet på anden måde ikke kunne hentes eller fordi flash er blokeret.';
    $indhold .= "\r\n";
    $indhold .= '<div style="margin: 10px; padding: 10px;"><span style="background: #fff; border: 10px solid #fff;">' . ahref('http://get.adobe.com/flashplayer/', 'Hent Adobe Flash Player', null, true) . '</span></div>';
    $indhold .= '</div>';
 
    $indhold .= '</object>';
-   $indhold .= '</div>';
 
 
 
@@ -4967,7 +4725,7 @@ Element param not allowed as child of element object in this context. (Suppressi
 
       if(is_string($tekst)){
 
-         $indhold = '<div class="visdelflashoverskrift">' . mb_ucfirst($tekst) . '</div>' . $indhold;
+         $indhold = '<div class="visdelflashoverskrift">' . my_mb_ucfirst($tekst) . '</div>' . $indhold;
 
       }else{
 
@@ -5030,28 +4788,37 @@ function byttegn($data){
 
 
 function visbilled(
-     $lokalbilledmappe
-   , $fil
-   , $tekst = ''
-   , $tagetaf = false
-   , $midten = false
-   , $linktilstortbilled = false
-   , $ekstrakode = ''
-   , $bruges_ikke_mere = null
-   , $width = ''
-   , $height = ''
-   , $margin = false
-   , $visoriginalbilled = false
-   , $scooterbilled = false
-   , $aldriglinkpabilled = false
-   , $ekstrastylekode = ''
+     $lokalbilledmappe // 1
+   , $fil // 2
+   , $tekst = '' // 3
+   , $tagetaf = false // 4
+   , $midten = false // 5
+   , $linktilstortbilled = false // 6
+   , $ekstrakode = '' // 7
+   , $bruges_ikke_mere = null // 8
+   , $width = '' // 9
+   , $height = '' // 10
+   , $margin = false // 11
+   , $visoriginalbilled = false // 12
+   , $scooterbilled = false // 13
+   , $aldriglinkpabilled = false // 14
+   , $ekstrastylekode = '' // 15
    ){
 
    $indhold = '';
    $billedtag = '';
+   $billedtagstyle = '';
    $maxwidth = $GLOBALS['setup']['maxbredde'];
    $billedetblevikkefundetlokal = $GLOBALS['setup']['roden'] . '/' . $GLOBALS['setup']['dataogbilledmappe'] . '/ikoner/' . 'ukendtbilled.png';
    $billedetblevikkefundetweb = $GLOBALS['setup']['domain'] . '/' . $GLOBALS['setup']['dataogbilledmappe'] . '/ikoner/' . 'ukendtbilled.png';
+
+   if($bruges_ikke_mere != null && $margin != false){
+   if(!is_numeric($bruges_ikke_mere) || !is_numeric($margin)){
+
+      trigger_error('fejl ved (8:' . print_r($bruges_ikke_mere, true) . ',11:' . print_r($margin, true) . ') : ' . $fil . ' - ' . $tekst);
+
+   }
+   }
 
    if($lokalbilledmappe == '0'){
 
@@ -5063,7 +4830,8 @@ function visbilled(
       }else{
 
          $billedsrclokal = $GLOBALS['setup']['roden'] . '/' . $fil;
-         $billedsrcweb   = $GLOBALS['setup']['domain'] . '/' . $fil;
+         //$billedsrcweb   = $GLOBALS['setup']['domain'] . '/' . $fil;
+         $billedsrcweb   = '/' . $fil;
 
          // fjerner ? og det der er efter i forbindelse med brug af thumbnail.php?filnavn=dsfsdfdsfosv
          if(strstr($billedsrclokal, '?')){
@@ -5087,7 +4855,8 @@ function visbilled(
    }elseif($lokalbilledmappe == '1'){
 
       $billedsrclokal = $GLOBALS['setup']['roden'] . '/' . $GLOBALS['setup']['dataogbilledmappe'] . '/' . $fil;
-      $billedsrcweb   = $GLOBALS['setup']['domain'] . '/' . $GLOBALS['setup']['dataogbilledmappe'] . '/' . $fil;
+      //$billedsrcweb   = $GLOBALS['setup']['domain'] . '/' . $GLOBALS['setup']['dataogbilledmappe'] . '/' . $fil;
+      $billedsrcweb   = '/' . $GLOBALS['setup']['dataogbilledmappe'] . '/' . $fil;
 
       if(strstr($billedsrclokal, '?')){
 
@@ -5107,7 +4876,8 @@ function visbilled(
    }elseif($lokalbilledmappe == '2'){
 
       $billedsrclokal = $GLOBALS['setup']['roden'] . '/' . $GLOBALS['setup']['dataogbilledmappe'] . '/' . $fil;
-      $billedsrcweb   = $GLOBALS['setup']['domain'] . '/' . $GLOBALS['setup']['dataogbilledmappe'] . '/' . $fil;
+      //$billedsrcweb   = $GLOBALS['setup']['domain'] . '/' . $GLOBALS['setup']['dataogbilledmappe'] . '/' . $fil;
+      $billedsrcweb   = '/' . $GLOBALS['setup']['dataogbilledmappe'] . '/' . $fil;
 
       if(strstr($billedsrclokal, '?')){
 
@@ -5171,7 +4941,7 @@ function visbilled(
    $alttekst = str_replace('& ', '&amp; ', $tekst);
    $alttekst = str_replace('&nbsp;', '', $alttekst);
    $alttekst = trim($alttekst);
-   $alttekst = mb_ucfirst($alttekst); // fucker kina tegn op
+   $alttekst = my_mb_ucfirst($alttekst);
    $alttekst = str_replace('"', '', $alttekst);
 
    $titletekst = $alttekst;
@@ -5184,8 +4954,6 @@ function visbilled(
             .' title="' . $titletekst . '"'
             ;
 
-   $billedtag .= ' style="';
-
    if(file_exists($billedsrclokal)){
 
       if(!$linktilstortbilled){
@@ -5194,13 +4962,13 @@ function visbilled(
 
             if($width){
 
-               $billedtag .= 'width: ' . $width .'px;';
+               $billedtag .= ' width="' . $width . '"';
 
             }
 
             if($height){
 
-               $billedtag .= 'height: ' . $height . 'px;';
+               $billedtag .= ' height="' . $height . '"';
 
             }
 
@@ -5208,7 +4976,7 @@ function visbilled(
 
             if($billedinfo = getimagesize($billedsrclokal)){
 
-               $billedtag .= 'width: ' . $billedinfo[0] .'px; height: ' . $billedinfo[1] . 'px;';
+               $billedtag .= ' width="' . $billedinfo[0] .'" height="' . $billedinfo[1] . '"';
 
             }else{
 
@@ -5222,9 +4990,45 @@ function visbilled(
 
    }
 
+   if(file_exists($billedsrclokal)){
+
+      if(!$linktilstortbilled){
+
+         if($width || $height){
+/*
+            if($width){
+
+               $billedtagstyle .= 'width: ' . $width . 'px;';
+
+            }
+
+            if($height){
+
+               $billedtagstyle .= 'height: ' . $height . 'px;';
+
+            }
+*/
+         }else{
+/*
+            if($billedinfo = getimagesize($billedsrclokal)){
+
+               $billedtagstyle .= 'width: ' . $billedinfo[0] .'px; height: ' . $billedinfo[1] . 'px;';
+
+            }else{
+
+               trigger_error('Kunne ikke bruge getimagesize() på filen "' . $billedsrclokal . '".');
+
+            }
+*/
+         }
+
+      }
+
+   }
+
    if($margin){
 
-      $billedtag .= ' margin-top: 10px; margin-bottom: 10px;';
+      $billedtagstyle .= 'margin-top: 10px; margin-bottom: 10px;';
 
    }
 
@@ -5236,17 +5040,17 @@ function visbilled(
 
          if($width){
 
-            $billedtag .= 'width: ' . $width .'px;';
+            $billedtagstyle .= 'width: ' . $width .'px;';
 
          }
 
          if($height){
 
-            $billedtag .= 'height: ' . $height . 'px;';
+            $billedtagstyle .= 'height: ' . $height . 'px;';
 
          }
 
-         $billedtag .= 'border: 3px dotted blue;';
+         $billedtagstyle .= 'border: 3px dotted blue;';
 
       }else{
 
@@ -5278,7 +5082,7 @@ function visbilled(
             $billedwidth = $thumbnailstorrelse[0];
             $billedheight = $thumbnailstorrelse[1];
 
-            $billedtag .= 'width: ' . $billedwidth . 'px; height: ' . $billedheight . 'px; border: 3px dotted blue;';
+            $billedtagstyle .= 'width: ' . $billedwidth . 'px; height: ' . $billedheight . 'px; border: 3px dotted blue;';
 
          }else{
 
@@ -5294,11 +5098,15 @@ function visbilled(
 
    if($ekstrastylekode != ''){
 
-      $billedtag .= ' ' . $ekstrastylekode;
+      $billedtagstyle .= ' ' . $ekstrastylekode;
 
    }
 
-   $billedtag .= '"';
+   if($billedtagstyle != ''){
+
+      $billedtag .= ' style="' . $billedtagstyle . '"';
+
+   }
 
    if($ekstrakode != ''){
 
@@ -5335,7 +5143,7 @@ function visbilled(
 
    }
 
-   if($tagetaf === true){
+   if($tagetaf){
 
       $downloadikon = visbilled('2', 'ikoner/information.png', '*', '', null, null, 'class="ikon16x16"', null, '16', '16');
       $tagetaftekst = 'Billedet må meget gerne kopieres og bruges som du har lyst.' . "<br>"
@@ -5380,7 +5188,7 @@ function visfil($valgafmappe, $sti, $tekst = ''){
 
       ($tekst == '')
          ? $tekst = $filnavn
-         : $tekst = mb_ucfirst($tekst);
+         : $tekst = my_mb_ucfirst($tekst);
 
       if($valgafmappe == "1"){
 
@@ -5423,7 +5231,7 @@ function kontaktmig($medstort = false){
    $linktekst = $GLOBALS['setup']['l_contactme_a'];
 
    ($medstort)
-      ? $linktekst = mb_ucfirst($linktekst)
+      ? $linktekst = my_mb_ucfirst($linktekst)
       : $linktekst = $linktekst;
 
    $indhold .= ahref($GLOBALS['setup']['domainogdatamappe'] . '/' . 'kontakt.php', $linktekst);
@@ -5441,7 +5249,7 @@ function kontaktemig($medstort = false){
    $linktekst = $GLOBALS['setup']['l_contactme_b'];
 
    ($medstort)
-      ? $linktekst = mb_ucfirst($linktekst)
+      ? $linktekst = my_mb_ucfirst($linktekst)
       : $linktekst = $linktekst;
 
    $indhold .= ahref($GLOBALS['setup']['domainogdatamappe'] . '/' . 'kontakt.php', $linktekst);
@@ -5459,7 +5267,7 @@ function forum($medstort = false){
    $linktekst = 'forum';
 
    ($medstort)
-      ? $linktekst = mb_ucfirst($linktekst)
+      ? $linktekst = my_mb_ucfirst($linktekst)
       : $linktekst = $linktekst;
 
    $indhold .= ahref('http://scootergrisen.dk/forum/', $linktekst);
@@ -5477,7 +5285,7 @@ function forummet($medstort = false){
    $linktekst = 'forummet';
 
    ($medstort)
-      ? $linktekst = mb_ucfirst($linktekst)
+      ? $linktekst = my_mb_ucfirst($linktekst)
       : $linktekst = $linktekst;
 
    $indhold .= ahref('http://scootergrisen.dk/forum/', $linktekst);
@@ -5495,7 +5303,7 @@ function dinkommentar($medstort = false){
    $linktekst = 'din kommentar om siden';
 
    ($medstort)
-      ? $linktekst = mb_ucfirst($linktekst)
+      ? $linktekst = my_mb_ucfirst($linktekst)
       : $linktekst = $linktekst;
 
    $indhold .= ahref('#din_kommentar_til_siden', $linktekst);
@@ -5527,6 +5335,8 @@ function ahref($link, $tekst = '', $ekstrakode = '', $abninytab = false){
       || stripos($link, 'ftp://') === 0
       || stripos($link, 'mailto:') === 0
       || stripos($link, 'javascript:') === 0
+      || stripos($link, '//') === 0
+      || stripos($link, '/') === 0
       ){
 
          $url .= $link;
@@ -5596,7 +5406,7 @@ function listemedgrafik($array){
 
    foreach($array as $value){
 
-      $value = mb_ucfirst($value);
+      $value = my_mb_ucfirst($value);
 
       $indhold .= '<div class="listeprik">';
       $indhold .= '<div class="listetekst">' . $value  . '</div>';
@@ -5635,7 +5445,7 @@ function afsnit($overskrift = '', $data = ''){
 
    $indhold = '';
 
-   $overskrift = mb_ucfirst($overskrift);
+   $overskrift = my_mb_ucfirst($overskrift);
    $data = trim($data, "\r\n");
 
    if($overskrift != ''){
@@ -5680,7 +5490,20 @@ function citat($data){
 function mb_ucfirst($tekst){
 
    // hvis € (euro tegn) er med så laves det om til et ? (spørgsmåls tegn)
+   // utf8_decode eller utf8_encode fucker unicode op
    return utf8_encode(ucfirst(utf8_decode($tekst)));
+
+}
+
+
+
+function my_mb_ucfirst($str){
+
+    // funktion som ikke fucker unicode tegn i stedet for gamle mb_ucfirst
+
+    $fc = mb_strtoupper(mb_substr($str, 0, 1));
+
+    return $fc . mb_substr($str, 1);
 
 }
 
@@ -5777,6 +5600,7 @@ function visstatusform($vissogefterdet = true){
 
          $faildatabase = array(
                                'fejl/fail0007.gif'
+                              ,'fejl/fail0012.gif'
                               ,'fejl/fejl0006.jpg'
                               ,'fejl/fejl0018.jpg'
                               );
@@ -5798,6 +5622,9 @@ function visstatusform($vissogefterdet = true){
                               ,'fejl/fail0008.gif'
                               ,'fejl/fail0009.gif'
                               ,'fejl/fail0010.gif'
+                              ,'fejl/fail0011.gif'
+                              ,'fejl/fail0012.gif'
+                              ,'fejl/fail0013.gif'
                               );
 
          $failrandom = array_rand($faildatabase,1);
@@ -5826,7 +5653,7 @@ function visstatusform($vissogefterdet = true){
 
    $indhold .= '<div class="fejlstatusholder">';
    $indhold .= '<div class="fejlstatuskode fontsize_xxlarge">' . $statuskode . '</div>';
-   $indhold .= '<div class="fejlstatustekst fontsize_large">' . mb_ucfirst($besked) . '</div>';
+   $indhold .= '<div class="fejlstatustekst fontsize_large">' . my_mb_ucfirst($besked) . '</div>';
    $indhold .= clearboth();
 
    $indhold .= '</div>';
@@ -6085,7 +5912,7 @@ function kode($array, $original_kode){
             $a = highlight_string($original_kode, true);
             $a = str_replace('<?php', '&lt;?php', $a);
             $a = str_replace('?>', '?&gt;', $a);
-            // Når man marker alt i kode feltet og kopier det så kommer der et ekstra mellem til sidst.
+            // Når man marker alt i kode feltet og kopiere det så kommer der et ekstra mellem til sidst.
             // Det mellemrum bliver fjernet med de næste linier.
             //$a = str_replace("</span>\n</span>\n</code>", "</span></span></code>", $a);
             //$a = str_replace("</span>\n</span></code>", "</span></span></code>", $a);
@@ -6231,7 +6058,7 @@ function kode($array, $original_kode){
 
          }
 
-         $indhold .= '<span style="float: right; margin-right: 10px;">(Dobbelt-klik i kodefeltet for at marker alt)</span>';
+         $indhold .= '<span class="dobbeltklikinfo">(' . my_mb_ucfirst($GLOBALS['setup']['l_kodeboks_dobbeltklik']) . ')</span>';
 /*
          $indhold .= '<button class="markeralt" onClick="VisAllByParent(this);">';
          $indhold .= 'Vis';
@@ -6509,7 +6336,7 @@ function vissogeresultater(){
       $sogetekstudenspecialtegn = str_replace('>', '&gt;', $sogetekstudenspecialtegn);
       $sogetekstudenspecialtegn = $sogetekstudenspecialtegn;
 
-      if($sogetekst == $GLOBALS['setup']['language_search'] || $sogetekst == ''){
+      if($sogetekst == ''){
 
          $indhold .= "Søgningen er tom.\r\n";
          //$indhold .= "\r\n";
@@ -6532,7 +6359,7 @@ function vissogeresultater(){
                || $v[0] == "visbilled.php"
                || $v[0] == "fejl.php"
                || $v[0] == "sogningerfejlbesog.php"
-               || $v[0] == "statestik.php"
+               || $v[0] == "statistik.php"
                || $v[0] == "tilfeldig.php"
                || $v[0] == ".htaccess"
                || $v[0] == "elektrisk.php"
@@ -6543,7 +6370,6 @@ function vissogeresultater(){
                || $v[0] == "transmission.php"
                || $v[0] == "ratingoversigt.php"
                || $v[0] == "windows7.php"
-               || $v[0] == "kode_mysql.php"
                || $v[0] == "kode_get.php"
                || $v[0] == "forum.php"
             ){
@@ -6565,7 +6391,7 @@ function vissogeresultater(){
                $nytitle = $v[1];
                $nytitle = str_replace('<', '&lt;', $nytitle);
                $nytitle = str_replace('>', '&gt;', $nytitle);
-               $nytitle = mb_ucfirst($nytitle);
+               $nytitle = my_mb_ucfirst($nytitle);
 
                if(substr($v[0], 0, 5) == 'altom'){
 
@@ -6605,7 +6431,7 @@ function vissogeresultater(){
 
       }else{
 
-         if($sogetekst != $GLOBALS['setup']['language_search'] && $sogetekst != ''){
+         if($sogetekst != ''){
 
             $indhold .= 'Teksten <span class="bold">"' . $sogetekstudenspecialtegn . '"</span> blev ikke fundet.' . "\r\n";
             $indhold .= "\r\n";
@@ -6896,11 +6722,9 @@ function linkknap($link, $tekst, $abninytab = false){
    // skal ikke break så knapper står på 2 linier men hvordan ?
    //$indhold .= "\r\n";
    //$indhold .= lidtplads('lodret');
-   $indhold .= '<div class="linkknapholder margintype2">';
-   $indhold .= '<span class="linkknap fontsize_small">';
-   $indhold .= ahref($link, mb_ucfirst($tekst), 'class="baggrundlinearogskygge1 textshadow1 borderradius5px"', $abninytab);
-   $indhold .= '</span>';
-   $indhold .= '</div>';
+   //$indhold .= '<div class="linkknapholder margintype2 linkknap fontsize_small">';
+   $indhold .= ahref($link, my_mb_ucfirst($tekst), 'class="linkknap margintype2 fontsize_small baggrundlinearogskygge1 textshadow1 borderradius5px"', $abninytab);
+   //$indhold .= '</div>';
    //$indhold .= lidtplads('lodret');
    //$indhold .= "\r\n";
 
@@ -6917,11 +6741,14 @@ function linkknap2($link, $tekst, $abninytab = false){
    // skal ikke break så knapper står på 2 linier men hvordan ?
    //$indhold .= "\r\n";
    //$indhold .= lidtplads('lodret');
-   $indhold .= '<div class="linkknapholder2 margintype3">';
-   $indhold .= '<span class="linkknap2 fontsize_xxsmall">';
-   $indhold .= ahref($link, mb_ucfirst($tekst), 'class="baggrundlinear1 borderradius5px"', $abninytab);
-   $indhold .= '</span>';
-   $indhold .= '</div>';
+   //$indhold .= '<div class="">';
+   $indhold .= ahref($link, my_mb_ucfirst($tekst), 'class="linkknap2 margintype3 fontsize_xxsmall baggrundlinear1 borderradius5px"', $abninytab);
+   //$indhold .= '</div>';
+
+   //$indhold .= '<div class="linkknapholder2 margintype3 linkknap2 fontsize_xxsmall">';
+   //$indhold .= ahref($link, my_mb_ucfirst($tekst), 'class="baggrundlinear1 borderradius5px"', $abninytab);
+   //$indhold .= '</div>';
+
    //$indhold .= lidtplads('lodret');
    //$indhold .= "\r\n";
 
@@ -6940,12 +6767,12 @@ function menugenvej($data){
       foreach($data as $key => $value){
 
          $indhold .= '<span class="menugenvej background_color_2">';
-         $indhold .= mb_ucfirst($value);
+         $indhold .= my_mb_ucfirst($value);
          $indhold .= '</span>';
 
          if(count($data)-1 != $key){
 
-            $indhold .= visbilled('2', 'ikoner/menupil.png', '&gt;', null, null, null, null, null, '11', '11', null, null, null, null, 'margin-left: 3px; margin-right: 3px;');
+            $indhold .= visbilled('2', 'ikoner/menupil.png', '→', null, null, null, 'class="menugenvejpil"', null, '11', '11');
 
          }
 
@@ -7143,7 +6970,7 @@ function underholdning_henttitle($database){
 
    $data             = $database[$idindex];
    $idnoget          = $data[0];
-   $beskrivelse      = mb_ucfirst($data[3]);
+   $beskrivelse      = my_mb_ucfirst($data[3]);
 
    if($beskrivelse == ""){
 
@@ -7251,7 +7078,7 @@ function underholdning($deloverskrift, $bredde, $hojde, $database){
    $data             = $database[$idindex];
    $adresse          = $data[1];
    $flashvars        = $data[2];
-   $beskrivelse      = mb_ucfirst($data[3]);
+   $beskrivelse      = my_mb_ucfirst($data[3]);
    $beskrivelselink  = strtolower(byttegn(($data[3])));
    $kategorier       = explode('+', $data[4]);
 
@@ -7428,7 +7255,7 @@ Måske bedre ikke at vise beskeden da den indeholder alle mulige data.
             . formbox('0', '', '', $_SERVER['PHP_SELF'] . '?' . $nummer, 'post', '', ''
                . input('0', 'hidden', 'funktion', 'videovirkerikke')
                . input('0', 'hidden', 'emne', 'video virker ikke')
-               . input('0', 'hidden', 'kommentar', $GLOBALS['setup']['domain'] . $_SERVER['REQUEST_URI'] . ' blev markeret som virker ikke.' . "<br>" . 'Link : ' . $adresse . "<br>" . 'Info om brugerens computer : ' . $infoombrugerenscomputer)
+               . input('0', 'hidden', 'kommentar', $GLOBALS['setup']['domain'] . htmlspecialchars($_SERVER['REQUEST_URI']) . ' blev markeret som virker ikke.' . "<br>" . 'Link : ' . $adresse . "<br>" . 'Info om brugerens computer : ' . $infoombrugerenscomputer)
                . input('1', 'submit', 'videovirkerikke_sendknap', 'Send besked hvis videoen ikke længere virker', '', '', 'sjove_sendknap', '', '')
             );
 
@@ -7448,7 +7275,7 @@ Måske bedre ikke at vise beskeden da den indeholder alle mulige data.
 
       $etnummer         = $value[0];
       $adresse          = $value[1];
-      $beskrivelseb     = mb_ucfirst($value[3]);
+      $beskrivelseb     = my_mb_ucfirst($value[3]);
       $beskrivelselinkc = strtolower(byttegn(($value[3])));
 
       if($beskrivelseb == ""){
@@ -7495,7 +7322,7 @@ Måske bedre ikke at vise beskeden da den indeholder alle mulige data.
 
       $etnummer         = $databasevalue[0];
       $adresse          = $databasevalue[1];
-      $beskrivelseb     = mb_ucfirst($databasevalue[3]);
+      $beskrivelseb     = my_mb_ucfirst($databasevalue[3]);
       $beskrivelselinkb = strtolower(byttegn(($databasevalue[3])));
       $kategorierfradata  = explode('+', $databasevalue[4]);
 
@@ -7621,12 +7448,12 @@ Måske bedre ikke at vise beskeden da den indeholder alle mulige data.
 
       foreach($valueppp as $aaa){
 
-         //$qwqwqw = ahref($GLOBALS['setup']['domain'] . $_SERVER["PHP_SELF"] . '?' . $aaa[0], mb_ucfirst($aaa[3]));
+         //$qwqwqw = ahref($GLOBALS['setup']['domain'] . $_SERVER["PHP_SELF"] . '?' . $aaa[0], my_mb_ucfirst($aaa[3]));
 
          $denherbeskrivelse         = urlencode(kortfinurl($aaa[3]));
 
          ($aaa[3] != '')
-            ? $nogetteksttillinket = mb_ucfirst($aaa[3])
+            ? $nogetteksttillinket = my_mb_ucfirst($aaa[3])
             : $nogetteksttillinket = '[mangler tekst]';
 
          $qwqwqw = ahref($GLOBALS['setup']['domain'] . '/' . $korturl . '/' . $aaa[0] . '/' . $denherbeskrivelse, $nogetteksttillinket);
@@ -7685,16 +7512,18 @@ Måske bedre ikke at vise beskeden da den indeholder alle mulige data.
    $indhold .= ahref($GLOBALS['setup']['domain'] . '/' . $korturl . '/' . $forrigeindex . '/' . $forrigebeskrivelse, null, 'title="Forrige"');
    $indhold .= '</div>';
 
-   $indhold .= '<div id="underholdningbeskrivelseholder">';
-   //$indhold .= ahref($GLOBALS['setup']['domain'] . $_SERVER["PHP_SELF"] . '?' . $beskrivelselink, $beskrivelse);
-   $indhold .= $beskrivelse;
-   $indhold .= '</div>';
-
    $indhold .= '<div id="underholdningpilhojre">';
    //$indhold .= ahref($GLOBALS['setup']['domain'] . $_SERVER["PHP_SELF"] . '?' . $nesteindex, visbilled('2', 'pilhojre.png', 'næste', false, null, null, null, null, null, null, false));
    //$indhold .= ahref($GLOBALS['setup']['domain'] . '/' . $korturl . '/' . $nesteindex . '/' . $nestebeskrivelse, visbilled('2', 'pilhojre.png', 'næste', false, null, null, null, null, null, null, false));
 //   $indhold .= ahref($GLOBALS['setup']['domain'] . '/' . $korturl . '/' . $nesteindex . '/' . $nestebeskrivelse, visbilled('2', 'pilhojre2.png', 'næste', false, null, null, null, null, null, null, false));
    $indhold .= ahref($GLOBALS['setup']['domain'] . '/' . $korturl . '/' . $nesteindex . '/' . $nestebeskrivelse, null, 'title="Næste"');
+   $indhold .= '</div>';
+
+   $indhold .= '<div id="underholdningbeskrivelseholder">';
+   //$indhold .= ahref($GLOBALS['setup']['domain'] . $_SERVER["PHP_SELF"] . '?' . $beskrivelselink, $beskrivelse);
+   $indhold .= '<div id="underholdningbeskrivelsetekst">';
+   $indhold .= $beskrivelse;
+   $indhold .= '</div>';
    $indhold .= '</div>';
 
    $indhold .= clearboth();
@@ -7709,7 +7538,7 @@ Måske bedre ikke at vise beskeden da den indeholder alle mulige data.
 
    $indhold .= '<div style="height: 10px; clear: both;"></div>';
 
-   $indhold .= '<div style="text-align: center;">';
+   $indhold .= '<div class="textaligncenter">';
    $indhold .= $footer;
    $indhold .= '</div>';
 
@@ -7720,7 +7549,7 @@ Måske bedre ikke at vise beskeden da den indeholder alle mulige data.
 /*
 
    $indhold .= '<div>';
-   $indhold .= mb_ucfirst($deloverskrift) . ' (nyeste tilføjet øverst) :';
+   $indhold .= my_mb_ucfirst($deloverskrift) . ' (nyeste tilføjet øverst) :';
    $indhold .= '</div>';
 
    $indhold .= '<div>';
@@ -7771,6 +7600,8 @@ function galleriholder($data){
 
    $indhold = '';
 
+   $indhold .= '<!--ignore-->';
+
    $indhold .= galleri('start');
 
    foreach($data as $linkarray){
@@ -7781,26 +7612,32 @@ function galleriholder($data){
 
    $indhold .= galleri('slut');
 
+   $indhold .= '<!--ignore-->';
+
    return $indhold;
 
 }
 
 
 
-function spotlysholder($data){
+function spotlysholder($data, $spotlysantal){
 
    $indhold = '';
+   //$width = 180;
+   //$height = 160;
 
    $tilfeldigspotlys = array_rand(
 
       $data
 
-   , 4);
+   , $spotlysantal);
 
-   shuffle($tilfeldigspotlys);
+   //shuffle($tilfeldigspotlys);
+
+   $widthtotal = 200 * $spotlysantal;
 
    $indhold .= '   <div class="spotlysholderholder baggrundlinear1 bordertype1 borderradius5px margintype4">'."\r\n";
-   $indhold .= '      <div class="spotlysholderholderb">'."\r\n";
+   $indhold .= '      <div class="spotlysholderholderb fontsize_0">'."\r\n";
 
    foreach($tilfeldigspotlys as $noget){
 
@@ -7813,8 +7650,11 @@ function spotlysholder($data){
       $ekstratekst = $value[3];
 
       $indhold .= '         <a href="' . $aurl . '" class="spotlysholder background_color_2 fontsize_xsmall fontfamily_1 bordertype1 borderradius5px">';
-      $indhold .= '<img src="' . $imgurl . '" alt="' . $imgalt . '" class="spotlysbillede">';
-      $indhold .= '<span class="spotlyoverskrift fontsize_xlarge fontfamily_6">' . mb_strtoupper($overskrift) . '</span>';
+
+      //$indhold .= visbilled('0', $imgurl, $imgalt, false, false, null, '" class="spotlysbillede"', null, $width, $height);
+      $indhold .= visbilled('1', $imgurl, $imgalt, false, false, null, 'class="spotlysbillede"');
+
+      $indhold .= '<div class="spotlyoverskrift fontsize_xlarge fontfamily_6">' . mb_strtoupper($overskrift) . '</div>';
       $indhold .= $ekstratekst;
       $indhold .= '</a>';
       $indhold .= "\r\n";
@@ -7842,9 +7682,9 @@ function clearboth($newline = true){
 
    if($newline){
 
-      $indhold .= '<!--ignore-->';
+      //$indhold .= '<!--ignore-->';
       $indhold .= "\r\n";
-      $indhold .= '<!--ignore-->';
+      //$indhold .= '<!--ignore-->';
 
    }
 
@@ -7999,7 +7839,7 @@ PRIMARY KEY (`id`)
       if ($stmt = $db->prepare("INSERT INTO $tablenavn (tid, ip, sogetekst, referer, antalfundnesider) VALUES (?, ?, ?, ?, ?)")) {
 
          $stmt->bind_param('sssss', $tid, $ip, $sogetekst, $referer, $antalfundnesider);
-         $stmt->execute();
+         $stmt->execute(); // [ Array to string conversion ]
 
          if($stmt->affected_rows != -1){
 
@@ -8008,7 +7848,7 @@ PRIMARY KEY (`id`)
          }else{
 
             $indhold .= '<div style="color: red;">Fejl ! Ser ud til der gik noget galt ved forsøg på at gemme søgtekst i databasen</div>';
-            trigger_error('Fejl ! Ser ud til der gik noget galt ved forsøg på at gemme søgtekst i databasen');
+            trigger_error('Fejl ! Ser ud til der gik noget galt ved forsøg på at gemme søgtekst i databasen' . ' : ' . $tid . ' : ' . $ip . ' : ' . $sogetekst . ' : ' . $referer . ' : ' . $antalfundnesider);
 
          }
 
@@ -8063,8 +7903,8 @@ function vissogningeridatabase($visantalsogninger){
                   . '<td>' . $id . '</td>'
                   . '<td>' . $tid . '</td>'
                   . '<td>' . $ip . '</td>'
-                  . '<td>' . $sogetekst . '</td>'
-                  . '<td>' . $referer . '</td>'
+                  . '<td>' . htmlentities($sogetekst, ENT_QUOTES, 'UTF-8') . '</td>' // søgetekst som "<style>" skal laves om så HTML koden på hjemmesiden ikke ødelægges
+                  . '<td>' . htmlentities($referer, ENT_QUOTES, 'UTF-8') . '</td>' // søgetekst som "<style>" skal laves om så HTML koden på hjemmesiden ikke ødelægges
                   . '<td>' . $antalfundnesider . '</td>'
                   . '</tr>'
                   ;
@@ -8088,8 +7928,8 @@ function vissogningeridatabase($visantalsogninger){
             . 'Seneste '.$visantalsogninger.' søgninger'
             . '</div>'
 
-            . '<div style="overflow-x: auto;">'
-            . '<table class="tableholder fontsize_small tablesorter">'
+            . '<div class="overflowxauto">'
+            . '<table class="fontsize_small tablesorter tablesorter-default">'
 
             . '<thead>'
             . '<tr>'
@@ -8124,36 +7964,12 @@ function vissogningeridatabase($visantalsogninger){
 
 
 
-function googleanalyticsscriptkode(){
-
-   $indhold = '';
-
-   $indhold .= ''
-         .'   <script type="text/javascript">'."\r\n"
-         ."\r\n"
-         ."      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){"."\r\n"
-         ."      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),"."\r\n"
-         ."      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)"."\r\n"
-         ."      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');"."\r\n"
-         ."\r\n"
-         ."      ga('create', '" . $GLOBALS['setup']['googleanalytics1'] . "', '" . $GLOBALS['setup']['googleanalytics2'] . "');"."\r\n"
-         ."      ga('send', 'pageview');"."\r\n"
-         ."\r\n"
-         .'   </script>'."\r\n"
-         ."\r\n";
-
-   return $indhold;
-
-}
-
-
-
 function nogenmisser() {
 
    $indhold = '';
 
    $indhold .= ''
-      .'<div class="ratingoversigtingendata borderradius5px" style="background: rgba(255, 255, 255, 0.5)">'
+      .'<div class="ratingoversigtingendata borderradius5px background_color_10">'
       .'<h1>Wut! No data ?</h1>'
       .'<h2>Her er nogen misser i stedet</h2>'
       .'<img src="http://placekitten.com/40/160" alt="Miau 1" width="40" height="160" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;">'

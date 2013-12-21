@@ -16,10 +16,7 @@ introduktion
 OptiMate 4 er en automatisk batterioplader fra '.ahref('http://www.tecmate-int.com', 'TecMate').'.
 '.galleriholder(array(galleri('highslidestandard', 'billed1178.jpg', 'billed1178.jpg', 'TecMate OptiMate 4 batterioplader'))). '
 
-'.visflash('0', 'http://www.youtube.com/watch?v=NpDW8W_6JXo', 'OptiMate 4 oplader batteri', true).'
-'.visflash('0', 'http://www.youtube.com/watch?v=bJVqdOsVHig', 'Ibrugtagning af nyt vedligeholdelsesfrit bly-syre batteri med opladning af OptiMate 4', true).'
-
-OptiMate 4 har ingen knapper.
+ptiMate 4 har ingen knapper.
 OptiMate 4 har beskyttelse mod forkert tilsluttet kabler.
 OptiMate 4 stopper selv med at oplade.
 

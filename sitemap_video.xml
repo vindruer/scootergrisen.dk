@@ -37,6 +37,8 @@
    </video:video>
 </url>
 
+<!--
+
 <url>
    <loc>
       http://scootergrisen.dk/scooterhjemmeside/karburator.php
@@ -210,35 +212,6 @@
       </video:category>
    </video:video>
 </url>
-<!--url>
-   <loc>
-      Enter the page URL your video is embedded on here
-   </loc>
-   <video:video>
-      <video:thumbnail_loc>
-         http://i.ytimg.com/vi/l5yz7xmJ03U/0.jpg
-      </video:thumbnail_loc>
-      <video:title>
-         Anti close pass device
-      </video:title>
-      <video:description>
-         On some roads car drivers and other vehicles driver quite close when overtaking
-         me. So I'm trying to figure out some device so i can avoid these close passes.
-      </video:description>
-      <video:content_loc>
-         http://www.youtube.com/v/l5yz7xmJ03U?version=3&amp;f=videos&amp;app=youtube_gdata
-      </video:content_loc>
-      <video:player_loc allow_embed="yes">
-         http://www.youtube.com/watch?v=l5yz7xmJ03U&amp;feature=youtube_gdata_player
-      </video:player_loc>
-      <video:duration>
-         142
-      </video:duration>
-      <video:category>
-         Autos
-      </video:category>
-   </video:video>
-</url-->
 <url>
    <loc>
       http://scootergrisen.dk/scooterhjemmeside/benzin.php
@@ -268,35 +241,6 @@
       </video:category>
    </video:video>
 </url>
-<!--url>
-   <loc>
-      Enter the page URL your video is embedded on here
-   </loc>
-   <video:video>
-      <video:thumbnail_loc>
-         http://i.ytimg.com/vi/s6kJv1PEDI0/0.jpg
-      </video:thumbnail_loc>
-      <video:title>
-         Kamera i styrthjelm 3 (inden i københavn)
-      </video:title>
-      <video:description>
-         Tur på scooter i københavn ved istedgade, hovedbanegården, rådhuset, tivoli, vesterbrogade
-         Forum - Kamera i styrthjelm : http://scootergrisen.dk/forum/viewto...
-      </video:description>
-      <video:content_loc>
-         http://www.youtube.com/v/s6kJv1PEDI0?version=3&amp;f=videos&amp;app=youtube_gdata
-      </video:content_loc>
-      <video:player_loc allow_embed="yes">
-         http://www.youtube.com/watch?v=s6kJv1PEDI0&amp;feature=youtube_gdata_player
-      </video:player_loc>
-      <video:duration>
-         1563
-      </video:duration>
-      <video:category>
-         Autos
-      </video:category>
-   </video:video>
-</url-->
 <url>
    <loc>
       http://scootergrisen.dk/scooterhjemmeside/service_bremser.php
@@ -319,93 +263,6 @@
       </video:player_loc>
       <video:duration>
          240
-      </video:duration>
-      <video:category>
-         Autos
-      </video:category>
-   </video:video>
-</url>
-<!--url>
-   <loc>
-      Enter the page URL your video is embedded on here
-   </loc>
-   <video:video>
-      <video:thumbnail_loc>
-         http://i.ytimg.com/vi/uZNytkDxE0k/0.jpg
-      </video:thumbnail_loc>
-      <video:title>
-         Kamera i styrthjelm 2 (test)
-      </video:title>
-      <video:description>
-         Test video hvor jeg har sat mit kamera i hjelmen også for at se hvor godt det blev
-         og høre om lyden er god. Hvis du har nogen gode ideer til hvad jeg kan lav...
-      </video:description>
-      <video:content_loc>
-         http://www.youtube.com/v/uZNytkDxE0k?version=3&amp;f=videos&amp;app=youtube_gdata
-      </video:content_loc>
-      <video:player_loc allow_embed="yes">
-         http://www.youtube.com/watch?v=uZNytkDxE0k&amp;feature=youtube_gdata_player
-      </video:player_loc>
-      <video:duration>
-         985
-      </video:duration>
-      <video:category>
-         Autos
-      </video:category>
-   </video:video>
-</url-->
-<url>
-   <loc>
-      http://scootergrisen.dk/scooterhjemmeside/speedometer.php
-   </loc>
-   <video:video>
-      <video:thumbnail_loc>
-         http://i.ytimg.com/vi/3zj0UjubvZY/0.jpg
-      </video:thumbnail_loc>
-      <video:title>
-         Speedometer driven by powertool
-      </video:title>
-      <video:description>
-         This is a speedometer from a Kymco super 8 scooter (moped, gas scooter). Pictures
-         : http://scootergrisen.dk/scooterhjemmeside/speedometer.php
-      </video:description>
-      <video:content_loc>
-         http://www.youtube.com/v/3zj0UjubvZY?version=3&amp;f=videos&amp;app=youtube_gdata
-      </video:content_loc>
-      <video:player_loc allow_embed="yes">
-         http://www.youtube.com/watch?v=3zj0UjubvZY&amp;feature=youtube_gdata_player
-      </video:player_loc>
-      <video:duration>
-         75
-      </video:duration>
-      <video:category>
-         Autos
-      </video:category>
-   </video:video>
-</url>
-<url>
-   <loc>
-      http://scootergrisen.dk/scooterhjemmeside/smorelse.php
-   </loc>
-   <video:video>
-      <video:thumbnail_loc>
-         http://i.ytimg.com/vi/EZod3L7LRTg/0.jpg
-      </video:thumbnail_loc>
-      <video:title>
-         Gasoline, ice and anti freeze in bottle
-      </video:title>
-      <video:description>
-         petrol (gasoline) on top of the bottle and mostly water with a little bit of anti-freeze
-         liquid in it. The water is frozen in the bottom so imagen this happe...
-      </video:description>
-      <video:content_loc>
-         http://www.youtube.com/v/EZod3L7LRTg?version=3&amp;f=videos&amp;app=youtube_gdata
-      </video:content_loc>
-      <video:player_loc allow_embed="yes">
-         http://www.youtube.com/watch?v=EZod3L7LRTg&amp;feature=youtube_gdata_player
-      </video:player_loc>
-      <video:duration>
-         71
       </video:duration>
       <video:category>
          Autos
@@ -499,35 +356,6 @@
       </video:category>
    </video:video>
 </url>
-<!--url>
-   <loc>
-      Enter the page URL your video is embedded on here
-   </loc>
-   <video:video>
-      <video:thumbnail_loc>
-         http://i.ytimg.com/vi/MmwDS4foJRc/0.jpg
-      </video:thumbnail_loc>
-      <video:title>
-         Cycling in Fakse Ladeplads
-      </video:title>
-      <video:description>
-         No i didn't get a electric scooter. It's me riding a bike. Weee it's fun and quiet,
-         but my ass hurts.
-      </video:description>
-      <video:content_loc>
-         http://www.youtube.com/v/MmwDS4foJRc?version=3&amp;f=videos&amp;app=youtube_gdata
-      </video:content_loc>
-      <video:player_loc allow_embed="yes">
-         http://www.youtube.com/watch?v=MmwDS4foJRc&amp;feature=youtube_gdata_player
-      </video:player_loc>
-      <video:duration>
-         349
-      </video:duration>
-      <video:category>
-         Autos
-      </video:category>
-   </video:video>
-</url-->
 <url>
    <loc>
       http://scootergrisen.dk/scooterhjemmeside/malossimultivar.php
@@ -586,35 +414,6 @@
       </video:category>
    </video:video>
 </url>
-<!--url>
-   <loc>
-      Enter the page URL your video is embedded on here
-   </loc>
-   <video:video>
-      <video:thumbnail_loc>
-         http://i.ytimg.com/vi/0bIWzL5050g/0.jpg
-      </video:thumbnail_loc>
-      <video:title>
-         Lighthouse (Stevns fyr)
-      </video:title>
-      <video:description>
-         Lighthouse located in denmark. Area was used in cold war and had HAWK missiles.
-         Old danish video about HAWK system : http://www.luftvet.dk/images/video/hawk/...
-      </video:description>
-      <video:content_loc>
-         http://www.youtube.com/v/0bIWzL5050g?version=3&amp;f=videos&amp;app=youtube_gdata
-      </video:content_loc>
-      <video:player_loc allow_embed="yes">
-         http://www.youtube.com/watch?v=0bIWzL5050g&amp;feature=youtube_gdata_player
-      </video:player_loc>
-      <video:duration>
-         576
-      </video:duration>
-      <video:category>
-         Autos
-      </video:category>
-   </video:video>
-</url-->
 <url>
    <loc>
       http://scootergrisen.dk/uv/225/driving-around-tappernoje-city-on-scooter-np-motor
@@ -728,5 +527,7 @@
       </video:category>
    </video:video>
 </url>
+
+-->
 
 </urlset>

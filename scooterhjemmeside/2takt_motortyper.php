@@ -14,7 +14,7 @@ $databasecenter = array(
 introduktion
 ' => '
 Mange scootere med 2 takt 50 cm³ motor har en motor af Motori Minarelli typen. Ofte blot kaldt en Minarelli motor.
-Det kan være en original eller en kopi som er baseret på en Motori Minarelli motoren så den ligner den meget.
+Det kan være en original eller en kopi som er baseret på en Motori Minarelli motor så den ligner den meget.
 
 Tit bliver der skrevet om kort eller lang Minarelli som hentyder til længden om motorblokken.
 
@@ -31,7 +31,7 @@ Kort minarelli kan muligvis kendes på støddæmper ophæng og at der sidder lej
 '
 
 ,'
-luftkølet 2 takt motortyper
+tvunget blæsekølet 2 takt motortyper
 ' => '
 Her ses Motori Minarelli CY 50.
 2 takt tvunget blæsekølet.
@@ -40,8 +40,8 @@ Variatordækslet er dybt ?.
 Gearolie kapacitet : 100 ml.
 Elektrisk system : 60 W - 12 V / 120 w – 12 v.
 Sidder oliepumpen i højre side ?
-'.visbilled('1', 'billed3861.jpg', 'Motori Minarelli CY', false, true).'
-'.visbilled('1', 'billed0802.jpg', '2 takt motor CY 50', false, true).'
+'.visbilled('1', 'billed3861.jpg', 'Motori Minarelli CY 2 takt 50 cm³ tvunget blæsekølet forbrændingsmotor til scooter', false, true).'
+'.visbilled('1', 'billed0802.jpg', 'CY 50 2 takt 50 cm³ tvunget blæsekølet forbrændingsmotor til scooter', false, true).'
 
 Her ses Motori Minarelli MY 50.
 2 takt tvunget blæsekølet.
@@ -50,8 +50,8 @@ Variatordækslet er ret fladt ?.
 Gearolie kapacitet : 110 ml.
 Elektrisk system : 60 W - 12 V / 120 w – 12 v.
 Sidder oliepumpen i venstre side ?
-'.visbilled('1', 'billed3862.jpg', 'Motori Minarelli MY', false, true).'
-'.visbilled('1', 'billed0801.jpg', '2 takt motor MY 50', false, true).'
+'.visbilled('1', 'billed3862.jpg', 'Motori Minarelli MY 2 takt 50 cm³ tvunget blæsekølet forbrændingsmotor til scooter', false, true).'
+'.visbilled('1', 'billed0801.jpg', 'MY 50 2 takt 50 cm³ tvunget blæsekølet forbrændingsmotor til scooter', false, true).'
 
 Her ses Motori Minarelli CW 50.
 2 takt lodret tvunget blæsekølet.
@@ -59,14 +59,14 @@ Gearolie drænskrue sidder på en skæv måde.
 Gearolie kapacitet : 110 ml.
 Elektrisk system : 60 W - 12 V / 120 W – 12 V
 Skulle findes i tidlige udgave af diverse Yamaha scootere. Jog og BWS.
-'.visbilled('1', 'billed3858.jpg', 'Motori Minarelli CW', false, true).'
+'.visbilled('1', 'billed3858.jpg', 'Motori Minarelli CW 2 takt 50 cm³ tvunget blæsekølet forbrændingsmotor til scooter', false, true).'
 
 Her ses motortypen LJ1PE40QMB-2. Det er vist en kinesiske kopi af en Motori Minarelli motor type. Det ligner CY 50 bortset fra støddæmper ophænget siddet øverst på motorblokken men jeg ved ikke om det er en kopi af den.
 2 takt motor tvunget blæsekølet.
-'.visbilled('1', 'billed3286.jpg', 'LJ1PE40QMB-2 motor', false, true).'
+'.visbilled('1', 'billed3286.jpg', 'LJ1PE40QMB-2 2 takt 50 cm³ tvunget blæsekølet forbrændingsmotor til scooter', false, true).'
 
 Her ses Peugeot HA1.
-'.visbilled('1', 'billed3868.jpg', 'peugeot horisontal luftkølet HA1 motor', false, true).'
+'.visbilled('1', 'billed3868.jpg', 'peugeot horisontal HA1 2 takt 50 cm³ tvunget blæsekølet forbrændingsmotor til scooter', false, true).'
 '
 
 ,'
@@ -108,21 +108,21 @@ Rieju RS2
 Rieju RS3
 
 Yamaha TZR (Minarelli A136E).
-'.visbilled('1', 'billed3859.jpg', 'Motori Minarelli AM', false, true).'
+'.visbilled('1', 'billed3859.jpg', 'Motori Minarelli AM 2 takt 50 cm³ væskekølet forbrændingsmotor til offroader typer', false, true).'
 
 Her ses Motori Minarelli MA 50.
 2 takt væskekølet.
 Gearolie kapacitet :  110 ml.
 Elektrisk system : 60 W - 12 V / 120 W – 12 V.
-'.visbilled('1', 'billed3860.jpg', 'Motori Minarelli MA', false, true).'
-'.visbilled('1', 'billed0803.jpg', '2 takt motor MA 50', false, true).'
+'.visbilled('1', 'billed3860.jpg', 'Motori Minarelli MA 2 takt 50 cm³ væskekølet forbrændingsmotor til scooter', false, true).'
+'.visbilled('1', 'billed0803.jpg', 'MA 50 2 takt 50 cm³ væskekølet forbrændingsmotor til scooter', false, true).'
 
 Her ses Peugeot HL2.
-'.visbilled('1', 'billed3869.jpg', 'peugeot horisontal væskekølet HL2 motor', false, true).'
+'.visbilled('1', 'billed3869.jpg', 'peugeot horisontal HL2 2 takt 50 cm³ væskekølet forbrændingsmotor til scooter', false, true).'
 
 Her ses Peugeot HL1.
 Direkte brændstofindsprøjtning.
-'.visbilled('1', 'billed3870.jpg', 'peugeot horisontal væskekølet indsprøjtning HL1 motor', false, true).'
+'.visbilled('1', 'billed3870.jpg', 'peugeot horisontal indsprøjtning HL1 motor 2 takt 50 cm³ væskekølet forbrændingsmotor til scooter', false, true).'
 '
 
 ,'

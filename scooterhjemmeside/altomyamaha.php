@@ -8,24 +8,41 @@ $title = "yamaha scootere med 50 cm³ og elektrisk motor";
 $overskrift = "yamaha";
 $metadescription = "specifikationer, download og typegodkendelser";
 
-$setup['nogetikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
+$setup['sideikon']               = 'logoer/logo_' . strtolower(str_replace(' ', '', $overskrift)) . '.png';
 
 $databasecenter = array(
 
 'yamahaaerox' => array(
 
      'specielt'            => array(
-       'besked'            => ens('besked', '', '', '', '')
+       'besked'            => ens('besked', '
+aerox
+   VG5 5BR
+aerox racing replica
+   VG5 SA141
+Aerox R
+   NS50
+   VG5 SA421
+Aerox R Naked
+   NS50N
+   VG5 SA424
+Aerox R Special Version
+   NS50SP
+Aerox R
+   YQ50
+   YQ50L
+
+', '', '', '')
 
    ),'generelt'            => array(
        'model'             => ens('model', 'yamaha aerox', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
       ,'scootertype'       => ens('scootertype', 'YQ50', '', '', '')
-      ,'varianter'         => ens('varianter', '', '', '', '')
-      ,'pris'              => ens('pris', '17998', '', '', '(i følge 45scooter.dk)')
+      ,'varianter'         => ens('varianter', '', 'r', 'r naked', '')
+      ,'pris'              => ens('pris', '17998', '', '', '')
       ,'hastighed'         => ens('hastighed', '45', '', '', '')
       ,'farver'            => ens('farver', 'rød-hvid gul-sølv blå-sølv', '', '', '')
-      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', 'http://www.yamaha-motor.eu/dk/forhandlere/index.aspx', '', '', '')
 
    ),'motor'               => array(
        'motormodel'        => ens('motormodel', 'Minarelli A123E', '', '', '') . ' eller ' . ens('motormodel', 'Yamaha 5BR', '', '', '(ældre model)')
@@ -57,7 +74,7 @@ $databasecenter = array(
 
    ),'brændstof'           => array(
        'benzin'            => ens('benzin', '', '', '', '')
-      ,'benzintank'        => ens('benzintank', '4,5', '', '', '')
+      ,'benzintank'        => ens('benzintank', '4,5', '', '', '(muligvis på ældre modeller)') . ' eller ' .ens('benzintank', '7', '', '', '(muligvis på nye modeller 2013)')
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
@@ -295,7 +312,15 @@ $databasecenter = array(
 ),'yamahabws' => array(
 
      'specielt'            => array(
-       'besked'            => ens('besked', '', '', '', '')
+       'besked'            => ens('besked', '
+BWS
+   CW50RS
+BWS 12 R Naked
+   CW50
+   CW50L
+   CW50N
+
+', '', '', '')
 
    ),'generelt'            => array(
        'model'             => ens('model', 'yamaha BWS', '', '', '')
@@ -852,17 +877,26 @@ $databasecenter = array(
 ),'yamahajog' => array(
 
      'specielt'            => array(
-       'besked'            => ens('besked', '', '', '', '')
+       'besked'            => ens('besked', '
+jog
+   CY50
+jog r
+jog rr
+   CS50
+   CS50M
+   CS50Z
+
+', '', '', '')
 
    ),'generelt'            => array(
        'model'             => ens('model', 'yamaha jog', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
       ,'scootertype'       => ens('scootertype', 'SC50', 'SC50M', 'SA48', '')
       ,'varianter'         => ens('varianter', 'yamaha jog', 'yamaha jog r', '', '')
-      ,'pris'              => ens('pris', '', '', '', '')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'pris'              => ens('pris', '12998', '16998', '', '')
+      ,'hastighed'         => ens('hastighed', '30 45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
-      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', 'http://www.yamaha-motor.eu/dk/forhandlere/index.aspx', '', '', '')
 
    ),'motor'               => array(
        'motormodel'        => ens('motormodel', 'A132E (SA48)', '', '', '')
@@ -898,16 +932,16 @@ $databasecenter = array(
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '2.75', '12', '', '')
-      ,'fælgbag'           => ens('fælg', '3.00', '12', '', '')
+       'fælgfor'           => ens('fælg', '2.75', '12', '', 'aluminium')
+      ,'fælgbag'           => ens('fælg', '3.00', '12', '', 'aluminium')
       ,'dækfor'            => ens('dæk1', '110', '70', '12', '')
       ,'dækbag'            => ens('dæk1', '130', '70', '12', '')
       ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
       ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
       ,'affjedringfor'     => ens('affjedringfor', '', '', '', '')
       ,'affjedringbag'     => ens('affjedringbag', '', '', '', '')
-      ,'bremserfor'        => ens('bremser', '', '', '', '')
-      ,'bremserbag'        => ens('bremser', '', '', '', '')
+      ,'bremserfor'        => ens('bremser', 'skive', '190', '', '')
+      ,'bremserbag'        => ens('bremser', 'tromle', '', '', '')
       ,'eger'              => ens('eger', '', '', '')
       ,'castervinkel'      => ens('castervinkel', '', '', '')
       ,'efterløb'          => ens('efterløb', '', '', '')
@@ -992,12 +1026,21 @@ $databasecenter = array(
 ),'yamahaneos2t' => array(
 
      'specielt'            => array(
-       'besked'            => ens('besked', '', '', '', '')
+       'besked'            => ens('besked', '
+YN50M, 1P94; 2004; Deep purplish blue metallic c (0564)
+YN50M, 1P9A; 2005; Light grayish blue metallic 6 (0639)
+YN50M, 1P9E; 2006; Dark bluish gray metallic 8 (0919)
+YN50R, 5AD3; 1997; Dark purplish blue candy 3 (0514)
+YN50M, 5C24; 2008; Fine silver (00LK)
+YN50M, 5C29; 2009; Dark bluish gray metallic 8 (0919)
+YN50,MOFFA, 5RNL;2002; Sweet heart red (000M)
+YN50M, 5RNT; 2003; Bluish black cocktail 2 (0703)
+', '', '', '')
 
    ),'generelt'            => array(
        'model'             => ens('model', 'yamaha neos 2T', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
-      ,'scootertype'       => ens('scootertype', '', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'YN50', 'YN50M', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
       ,'pris'              => ens('pris', '', '', '', '')
       ,'hastighed'         => ens('hastighed', '', '', '', '')
@@ -1139,7 +1182,7 @@ $databasecenter = array(
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
       ,'scootertype'       => ens('scootertype', '', '', '', '')
       ,'varianter'         => ens('varianter', '', '', '', '')
-      ,'pris'              => ens('pris', '9998', '', '', '')
+      ,'pris'              => ens('pris', '8990', '9998', '', '')
       ,'hastighed'         => ens('hastighed', '', '', '', '')
       ,'farver'            => ens('farver', 'sort', '', '', '')
       ,'forhandlere'       => ens('forhandlere', 'http://www.koehler-knallerter.dk/epages/koehler.sf/en_GB/?ObjectPath=/Shops/scooter/Products/%22Yamaha%20Neos%20easy%22', '', '', '')
@@ -1274,12 +1317,12 @@ $databasecenter = array(
    'generelt'              => array(
        'model'             => ens('model', 'yamaha neos 4T', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '')
-      ,'scootertype'       => ens('scootertype', 'YN50F', 'YN50FM', '')
+      ,'scootertype'       => ens('scootertype', 'YN50F', 'YN50FM', 'YN50FU')
       ,'varianter'         => ens('varianter', '', '', '')
       ,'pris'              => ens('pris', '11998', '14998', '', '')
       ,'hastighed'         => ens('hastighed', '30 og 45', '', '')
       ,'farver'            => ens('farver', 'hvid blå sort', '', '')
-      ,'forhandlere'       => ens('forhandlere', 'http://www.yamaha-motor.eu/dk/', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', 'http://www.yamaha-motor.eu/dk/forhandlere/index.aspx', '', '', '')
 
    ),'motor'               => array(
        'motormodel'        => ens('motormodel', '', '', '')
@@ -1414,12 +1457,12 @@ $databasecenter = array(
    ),'generelt'            => array(
        'model'             => ens('model', 'yamaha slider', '', '', '')
       ,'ogsåkaldet'        => ens('ogsåkaldet', '', '', '', '')
-      ,'scootertype'       => ens('scootertype', '', '', '', '')
+      ,'scootertype'       => ens('scootertype', 'EW50 naked', '', '', '')
       ,'varianter'         => ens('varianter', 'yamaha slider naked', '', '', '')
       ,'pris'              => ens('pris', '14998', '', '', '(naked 14,998)')
-      ,'hastighed'         => ens('hastighed', '', '', '', '')
+      ,'hastighed'         => ens('hastighed', '45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
-      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', 'http://www.yamaha-motor.eu/dk/forhandlere/index.aspx', '', '', '')
 
    ),'motor'               => array(
        'motormodel'        => ens('motormodel', '', '', '', '')
@@ -1451,20 +1494,20 @@ $databasecenter = array(
 
    ),'brændstof'           => array(
        'benzin'            => ens('benzin', '', '', '', '')
-      ,'benzintank'        => ens('benzintank', '', '', '', '')
+      ,'benzintank'        => ens('benzintank', '6,5', '', '', '')
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
-       'fælgfor'           => ens('fælg', '', '', '', '')
-      ,'fælgbag'           => ens('fælg', '', '', '', '')
-      ,'dækfor'            => ens('dæk1', '', '', '', '')
-      ,'dækbag'            => ens('dæk1', '', '', '', '')
+       'fælgfor'           => ens('fælg', '', '12', '', '')
+      ,'fælgbag'           => ens('fælg', '', '12', '', '')
+      ,'dækfor'            => ens('dæk1', '120', '80', '12', '')
+      ,'dækbag'            => ens('dæk1', '130', '90', '12', '')
       ,'dæktrykfor'        => ens('dæktryk', '', '', '', '')
       ,'dæktrykbag'        => ens('dæktryk', '', '', '', '')
       ,'affjedringfor'     => ens('affjedringfor', '', '', '', '')
       ,'affjedringbag'     => ens('affjedringbag', '', '', '', '')
-      ,'bremserfor'        => ens('bremser', '', '', '', '')
-      ,'bremserbag'        => ens('bremser', '', '', '', '')
+      ,'bremserfor'        => ens('bremser', 'skive', '190', '', '')
+      ,'bremserbag'        => ens('bremser', 'tromle', '110', '', '')
       ,'eger'              => ens('eger', '', '', '')
       ,'castervinkel'      => ens('castervinkel', '', '', '')
       ,'efterløb'          => ens('efterløb', '', '', '')
@@ -1479,7 +1522,7 @@ $databasecenter = array(
       ,'batterilevetid'    => ens('batterilevetid', '', '', '', '')
       ,'generator'         => ens('generator', '', '', '', '')
       ,'sikring'           => ens('sikring', '', '', '', '')
-      ,'tændingssystem'    => ens('tændingssystem', '', '', '', '')
+      ,'tændingssystem'    => ens('tændingssystem', 'cdi', '', '', '')
       ,'elstart'           => ens('elstart', '', '', '', '')
       ,'kickstart'         => ens('kickstart', '', '', '', '')
       ,'lysfor'            => ens('lys', '', '', '', '')
@@ -1559,7 +1602,7 @@ $databasecenter = array(
       ,'pris'              => ens('pris', '23998', '', '', '')
       ,'hastighed'         => ens('hastighed', '45', '', '', '')
       ,'farver'            => ens('farver', '', '', '', '')
-      ,'forhandlere'       => ens('forhandlere', '', '', '', '')
+      ,'forhandlere'       => ens('forhandlere', 'http://www.yamaha-motor.eu/dk/forhandlere/index.aspx', '', '', '')
 
    ),'motor'               => array(
        'motormodel'        => ens('motormodel', 'Minarelli A136E', '', '', '')
@@ -1591,7 +1634,7 @@ $databasecenter = array(
 
    ),'brændstof'           => array(
        'benzin'            => ens('benzin', '', '', '', '')
-      ,'benzintank'        => ens('benzintank', '', '', '', '')
+      ,'benzintank'        => ens('benzintank', '14', '', '', '')
       ,'forbrug'           => ens('forbrug', '', '', '', '')
 
    ),'hjul'                => array(
@@ -1619,7 +1662,7 @@ $databasecenter = array(
       ,'batterilevetid'    => ens('batterilevetid', '', '', '', '')
       ,'generator'         => ens('generator', '', '', '', '')
       ,'sikring'           => ens('sikring', '', '', '', '')
-      ,'tændingssystem'    => ens('tændingssystem', 'tci', '', '', '')
+      ,'tændingssystem'    => ens('tændingssystem', '', '', '', 'tci eller cdi ?')
       ,'elstart'           => ens('elstart', '', '', '', '')
       ,'kickstart'         => ens('kickstart', '', '', '', '')
       ,'lysfor'            => ens('lys', '', '', '', '')
@@ -1658,7 +1701,7 @@ $databasecenter = array(
       ,'udstødning'        => ens('udstødning', '', '', '', '')
       ,'euroemission'      => ens('euroemission', '', '', '', '')
       ,'vægttør'           => ens('vægttør', '', '', '', '')
-      ,'vægtkørerklar'     => ens('vægtkørerklar', '', '', '', '')
+      ,'vægtkørerklar'     => ens('vægtkørerklar', '128', '', '', '')
       ,'vægttotal'         => ens('vægttotal', '', '', '', '')
       ,'bæreevne'          => ens('bæreevne', '', '', '', '')
       ,'luftfiltertype'    => ens('luftfiltertype', '', '', '', '')

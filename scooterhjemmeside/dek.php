@@ -371,6 +371,9 @@ Her ses et dæk på en Kymco Super 8 4T.
 '.visbilled('1', 'billed0057.jpg', 'dæk mønstre kymco super 8 4T', false, true).'
 Her ses et brugt sheng shin 120/80-14 og et nyt horng fortune 130/70-14 med det mønster de kalder 952.
 '.visbilled('1', 'billed2222.jpg', 'dæk mønstre kymco super 8 4T cheng shin tire 120/80-14 horng fortune motorcycle tire 130/70-14 8pr 952', false, true).'
+Her ses et Sava MC32 win scoot 100/70-14 vinterdæk.
+Vinterdæk har gerne sådan nogen zig-zag revner som vist nok gør at de er bedre og køre med i sne.
+'.visbilled('1', 'billed3909.jpg', 'Sava MC32 win scoot 100/70-14 vinterdæk på kymco super 8 4T', false, true).'
 '
 
 ,'

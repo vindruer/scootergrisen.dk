@@ -4,13 +4,11 @@ require_once './php/opsetning_scooterhjemmeside.php';
 require_once './php/generelt_funktioner.php';
 require_once './php/scooterhjemmeside_funktioner.php';
 
-$setup['nogetikon']               = 'ikoner/go_down.png';
+$setup['sideikon']               = 'ikoner/ikon_download2.png';
 
 $title = "Manualer, el diagrammer, reservedele og andre filer";
 $overskrift = "Manualer, el diagrammer, reservedele og andre filer";
 $metadescription = "Download filer til scootere/knallerter som brugermanualer, servicemanualer, el diagrammer, reservedele og andre filer";
-
-$setup['nogetikon']               = 'ikoner/ikon_download2.png';
 
 $databasecenter = array(
 

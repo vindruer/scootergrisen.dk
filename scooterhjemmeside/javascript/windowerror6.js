@@ -1,5 +1,7 @@
 // http://www.the-art-of-web.com/javascript/ajax-onerror/
 
+// Uncaught TypeError: Cannot read property 'documentElement' of null
+
 function AjaxRequest()
 {var req;var method="GET";var nocache=false;var handler;this.loadXMLDoc=function(url,params)
 {if(window.XMLHttpRequest){try{req=new XMLHttpRequest();}catch(e){req=false;}}else if(window.ActiveXObject){try{req=new ActiveXObject("Msxml2.XMLHTTP");}catch(e){try{req=new ActiveXObject("Microsoft.XMLHTTP");}catch(e){req=false;}}}
@@ -79,7 +81,8 @@ function gemnogetmederror(msg, url, line) {
        ],
        // ignorer disse uderagents. bots osv
        ignoreruseragents = [
-          'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
+          'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+          'Mozilla/5.0 AppleWebKit/537.4 (KHTML, like Gecko; compatible; Googlebot/2.1;  http://www.google.com/bot.html) Safari/537.4'
        ];
 
    if (msg !== undefined && url !== undefined && line !== undefined) {
